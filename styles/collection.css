@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(66, 132, 207);
+}
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited {
+    color: #141618;
+}
+
+#header-nav a:hover {
+    color: rgb(201, 234, 244);
+}
+
+.hamburger-nav {
+    color: #141618;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.category-item {
+    padding: 20px;
+    border: 2px solid #24160b;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #352315;
+    font-size: 20px;
+}
+.category-item:hover {
+    background-color: #e7e4e4;
+    border: 2px solid #e7e4e4;
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f2733;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #0a0704;
+}
+
+h2 {
+    text-align: center; 
+    font-size: 30px;
+    margin: initial;
+    color: rgb(38, 106, 233);
+}
+
+h3 {
+    margin-left: 15px;
+    font-size: 21px;
+    color: rgb(230, 226, 226);
+}
+
+p {
+    font-size: 21px;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(230, 226, 226);
+}
+
+ul {
+    list-style: none;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0 0 0 30px;
+    color: rgb(230, 226, 226);
+}
+
+ul li::before {
+    left: -1em;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #header-nav {
+        background-color: #141618;  
+    }
+
+    #header-nav,
+    #header-nav a,
+    #header-nav a:link,
+    #header-nav a:visited {
+        color: rgb(149, 192, 226);
+    }
+} 

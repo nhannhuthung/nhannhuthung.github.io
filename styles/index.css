@@ -1,0 +1,55 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #E1DCD3;
+}
+
+.intro {
+    background: #E1DCD3;
+    height: 100vh;
+    margin: auto;
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+     ". . ."
+     ". intro-logo ."
+     ". . .";
+}
+
+.intro-logo {
+    grid-area: intro-logo;
+}
+
+.nav-menu-home nav a:visited:hover {
+    color: #f7af20;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0ede8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f7af20;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas:
+        ". . ."
+        "intro-logo intro-logo intro-logo"
+        ". . .";
+    }
+}

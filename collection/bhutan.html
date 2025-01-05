@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Nhan Nhựt Hưng</title>
+
+    <meta name="og:title" content="Nhan Nhựt Hưng">
+    <meta name="og:description" content="Welcome to my website! You can check out my money collection around the world.">
+    <meta name="keywords" content="Nhan Nhựt Hưng, Nhan Nhut Hung, Nhut Hung Nhan, Hung Nhut Nhan, Howl, Howl Nhan, Harry, Harry Nhan">
+    <meta name="description" content="Nhan Nhựt Hưng">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="128x128" href="../images/logo/icon.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/collection-item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script charset="utf-8" src="../scripts/collection-item.js" defer></script>
+    <script src="../data/bhutan.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+    </script>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <header>
+        <nav id="header-nav">
+            <a href="../home.html">Home</a>
+            <a href="../collection.html">Collection</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
+        <nav id="header-nav-media">
+            <a href="../home.html">Home</a>
+            <a href="javascript:void(0);" onclick="toggleCollection(event)">Collection</a>
+            <div id="collection-dropdown" class="collection-content">
+                <div id="SideBarCollection"></div>
+            </div>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="SideBar"></div>
+        <div id= "main-to-top" class="main-content">
+            <button id="back-to-top" onclick="scrollToTop()">Top</button>
+            <h1 style="text-align: center;">Banknotes</h1>
+
+            <div id="slideshow1" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide1"></div>
+                <div id="info1"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+
+    <script charset="utf-8" src="../script.js"></script>
+
+</html>

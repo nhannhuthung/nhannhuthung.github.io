@@ -1,0 +1,145 @@
+.fa:not(.fa-bars) {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0%;
+    background: transparent;
+}
+
+.fa:not(.fa-bars):hover {
+    opacity: 0.5;
+}
+
+.hamburger-nav .fa-bars {
+    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    font-weight: var(--fa-style, 900);
+}  
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited {
+    color: #283033;
+}
+
+#header-nav a:hover {
+    color: rgb(110, 105, 105);
+}
+
+.hamburger-nav {
+    color: #283033;
+}
+
+body {
+    background-color: #4b628d;
+}
+
+#media {
+    height: 40vh;
+    position: relative;
+    background-color: #c8d9fa;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#media nav {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#media .title {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 40px;
+}
+
+#work {
+    height: 40vh;
+    position:relative;
+    background-color: #4b628d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work nav {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#work .title {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d1e5ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(142, 139, 139);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #header-nav {
+        background-color: rgb(40,48,51);   
+    }
+
+    #header-nav,
+    #header-nav a,
+    #header-nav a:link,
+    #header-nav a:visited {
+        color: #c8d9fa;
+    }
+
+    body {
+        background-color: #AFCBFF;
+    }
+
+    #about {
+        padding: 10px;
+    }
+
+    #media .title {
+        top: 20px;
+        gap: 3px;
+        font-size: 33px;
+    }
+
+    #work .title {
+        top: 20px;
+        gap: 3px;
+        font-size: 33px;
+    }
+
+    #media {
+        height: 45vh;
+    }
+
+    #work {
+        height: 45vh;
+    }
+}

@@ -1,0 +1,134 @@
+.page {
+  min-height: 20vh;
+  padding: 40px 40px;
+}
+
+body {
+  background-color: #E6DAC6;
+}
+
+.fa:not(.fa-bars) {
+  padding: 10px;
+  font-size:36px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0%;
+  background: transparent;
+}
+
+.fa:not(.fa-bars):hover {
+  opacity: 0.5;
+}
+
+.hamburger-nav .fa-bars {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+}
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited {
+    color: #283033;
+}
+
+#header-nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.hamburger-nav {
+    color: #283033;
+}
+
+.page {
+  background-color: #E6DAC6;
+}
+
+#about {
+  padding: 60px;
+}
+
+#about p {
+  text-align: left; /* Keeps the text left-aligned */
+  margin-bottom: 5px;
+  color: #0E4749;
+}
+
+#about p2 {
+  font-size: 24px;
+  color: #0E4749;
+  margin-left: 30px;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 100%;           /* Set this to a specific height if necessary */
+}
+
+iframe {
+  border: none; /* Optional: Removes the border for a cleaner look */
+  border-radius: 10px;
+}
+
+.iframe-container-media {
+  display: none;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  height: 100%;           /* Set this to a specific height if necessary */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffefd1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #283033;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #c4b69c;
+  }
+
+  .iframe-container {
+    display: none;
+  }
+
+  .iframe-container-media {
+    display: flex;
+  }
+
+  #about p {
+    font-size: 20px;
+  }
+
+  #about p2 {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .fa:not(.fa-bars) {
+    padding: 5px;
+    font-size:25px;
+    width: 25px;
+  }
+  
+  #header-nav {
+    background-color: #283033;   
+}
+
+  #header-nav,
+  #header-nav a,
+  #header-nav a:link,
+  #header-nav a:visited {
+      color: #E6DAC6;
+  }
+}

@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/ /*center the menu navigator*/
+}
+
+footer {
+    height: 15px;
+}
+
+.intro-logo img {
+    width: 100%
+}
+
+nav {
+    grid-column: col-start/span 12;
+    grid-row: 1;
+}
+
+.nav-pos {
+    grid-area: nav-pos;
+}
+
+.nav-pos-menu {
+    grid-area: nav-pos;
+}
+
+.nav-menu-home {
+    height: 100vh;
+    background-image: url(../images/background/sunflower-background.png);
+    background-size: cover;
+    background-position-y: 80%;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    text-align: center;
+}
+
+.nav-menu-home nav,
+.nav-menu-home nav a,
+.nav-menu-home nav a:link,
+.nav-menu-home nav a:visited {
+    color: #283033;
+    padding: 9px;
+    letter-spacing: 5px;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited {
+    padding: 9px;
+    letter-spacing: 5px;
+    font-size: 36px;
+    display: flex;
+    text-decoration: none;
+}
+
+#header-nav a {
+    transition: color 0.3s ease;
+}
+
+#header-nav {
+    margin-bottom: 4px;
+}
+
+#header-nav.show {
+    display: flex; /* Display the menu */
+    opacity: 1; /* Fully visible */
+}
+
+.hamburger-nav {
+    display: none;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+.big-title {
+    text-align: center;
+    font-size: 50px;
+    padding: 30px; 
+    letter-spacing: 5px;
+    position: relative;
+    margin: 0;
+}
+
+b {
+    font-size: 27px;
+}
+
+p {
+    font-size: 27px;
+}
+
+#top_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#top_btn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    body {
+        padding-top: 45px;
+    }
+
+    .nav-menu-home {
+        background-image: url(../images/background/sunflower-background-media.png);
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .nav-pos-menu {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 20px; /* Add some spacing between the links */
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 300px;
+    }
+
+    .nav-menu-home nav,
+    .nav-menu-home nav a,
+    .nav-menu-home nav a:link,
+    .nav-menu-home nav a:visited {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .nav-pos-menu a {
+        text-align: left;
+        display: block;
+    }
+
+    .hamburger-nav {
+        display: block;
+        margin-left: 10px;
+    }
+
+    #header-nav,
+    #header-nav a,
+    #header-nav a:link,
+    #header-nav a:visited {
+        font-size: 27px;
+    }
+
+    #header-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 10;
+    }
+
+    #header-nav a {
+        padding: 10px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .big-title {
+        font-size: 36px;
+        padding: 15px; 
+        letter-spacing: 3px;
+    }
+
+    b {
+        font-size: 21px;
+    }
+    
+    p {
+        font-size: 21px;
+    }
+}

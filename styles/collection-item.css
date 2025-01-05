@@ -1,0 +1,376 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a5acaa;
+    border-radius: 10px;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited {
+    color: #283033;
+}
+
+#header-nav a:hover {
+    color: rgb(66, 132, 207);
+}
+
+.hamburger-nav {
+    color: #283033;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #5789be;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#back-to-top:hover {
+    background-color: #356ca7;
+}
+
+
+.container {
+    display: grid;
+    height: calc(100vh - 60px);
+    margin-top: 0;
+    grid-template-columns: 0.5fr 3.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar main-contain";
+}
+
+.sidebar {
+    max-width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: rgb(123, 153, 141);
+    cursor: pointer;
+}
+
+.sidebar h2:hover {
+    color: rgb(29, 81, 141);
+    transition: color 0.3s ease;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(143, 175, 162);
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    color: rgb(52, 157, 189);
+}
+
+.main-content {
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.main-content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.main-content p {
+    font-size: 16px;
+}
+
+#SideBar {
+    overflow-y: auto;
+}
+
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
+
+.mySlides img {
+    height: 250px;
+}
+
+img {vertical-align: middle;}
+
+.slideshow-wrapper {
+    margin-top: 25px;
+    display: grid;
+    align-items: center;
+    gap: 30px;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "empty-box slideshow-container slideshow-info .";
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+}
+
+#slideshow1 {
+    margin-bottom: 15px;
+}
+
+.description {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  border-radius: 10px;
+  left: 45%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 6px 9px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slideshow-info {
+    width: 500px;
+    height: 250px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-info h3 {
+    font-size: 25px;
+    margin-left: 15px;
+}
+.slideshow-info p {
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+#collection-dropdown {
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0px;
+}
+
+#collection-dropdown h2 {
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#collection-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#collection-dropdown ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    color: rgb(128, 156, 145);
+    transition: color 0.3s ease;
+}
+
+#collection-dropdown ul li:hover {
+    color: rgb(52, 157, 189);
+}
+
+#header-nav-media {
+    display: none;
+    margin-bottom: 4px;
+}
+
+
+#header-nav-media,
+#header-nav-media a,
+#header-nav-media a:link,
+#header-nav-media a:visited {
+    padding: 9px;
+    letter-spacing: 5px;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+#header-nav-media.show {
+    display: flex;
+    opacity: 1;
+}
+
+#collection-dropdown {
+    overflow-y: auto;
+}
+
+#collection-dropdown::-webkit-scrollbar {
+    width: 3px;
+}
+
+#collection-dropdown::-webkit-scrollbar-track {
+    background: rgba(40,48,51, 0.75);
+}
+
+#collection-dropdown::-webkit-scrollbar-thumb {    
+    border-radius: 10px;
+}
+
+/* On smaller screens, decrease text size */
+@media (max-width: 768px) {
+    .text {font-size: 15px}
+
+    .slideshow-wrapper {
+        margin-top: 5px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "slideshow-container" 
+                             "slideshow-info";
+    }
+
+    .mySlides {
+        width: 100%;
+    }
+
+    .mySlides img {
+        height: auto;
+        width: 100%;
+    }
+
+    .slideshow-info {
+        width: 100%;
+    }
+
+    .container #SideBar {
+        display: none;
+        width: 0px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main-content";
+        margin: 0;
+    }
+
+    .main-content {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .description {
+        font-size: 15px;
+        padding: 8px 10px;
+        position: absolute;
+        bottom: 5px;
+        border-radius: 10px;
+        left: 45%;
+    }
+
+    #header-nav {
+        display: none;
+    }
+
+    #header-nav-media {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(40,48,51);
+        padding: 10px 0;
+        z-index: 10;
+        overflow-y: auto;
+        display: none;
+    }
+
+    #header-nav-media,
+    #header-nav-media a,
+    #header-nav-media a:link,
+    #header-nav-media a:visited {
+        font-size: 27px;
+    }
+
+    #header-nav-media a {
+        color: rgb(66, 132, 207);
+    }
+
+    #collection-dropdown {
+        display: block;
+        background-color: rgb(40,48,51);
+    }
+
+    #SideBarCollection {
+        overflow-y: auto;
+    }
+
+    #SideBarCollection .sidebar li {
+        font-size: 15px;
+    }
+
+    #SideBarCollection .sidebar h2 {
+        font-size: 20px;
+    }
+
+    #collection-dropdown h2:hover {
+        color: rgb(123, 153, 141);
+    }
+}
