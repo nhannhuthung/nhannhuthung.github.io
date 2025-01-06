@@ -1,12 +1,3 @@
-.page {
-  min-height: 20vh;
-  padding: 40px 40px;
-}
-
-body {
-  background-color: #E6DAC6;
-}
-
 .fa:not(.fa-bars) {
   padding: 10px;
   font-size:36px;
@@ -42,23 +33,32 @@ body {
 }
 
 .page {
-  background-color: #E6DAC6;
+  min-height: 20vh;
+  padding: 40px 40px;
 }
 
 #about {
   padding: 60px;
+  background-color: #E6DAC6;
 }
 
 #about p {
-  text-align: left; /* Keeps the text left-aligned */
-  margin-bottom: 5px;
   color: #0E4749;
 }
 
-#about p2 {
+#math {
+  padding: 60px;
+  background-color: 	#d8c8a8;
+}
+
+#math p {
+  color: #333333;
+}
+
+p2 {
   font-size: 24px;
-  color: #0E4749;
   margin-left: 30px;
+  color: #333333;
 }
 
 .iframe-container {
@@ -106,11 +106,16 @@ iframe {
     display: flex;
   }
 
-  #about p {
+  #about,
+  #math {
+    padding: 30px;
+  }
+
+  p {
     font-size: 20px;
   }
 
-  #about p2 {
+  p2 {
     font-size: 20px;
     margin-left: 20px;
   }
