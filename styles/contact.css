@@ -142,4 +142,8 @@ body {
     #work {
         height: 45vh;
     }
+
+    b {
+        padding: 15px;
+    }
 }

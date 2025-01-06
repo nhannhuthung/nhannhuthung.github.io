@@ -1,6 +1,5 @@
 .fa:not(.fa-bars) {
-  padding: 10px;
-  font-size:36px;
+  font-size:33px;
   width: 50px;
   text-align: center;
   text-decoration: none;
@@ -51,14 +50,13 @@
   background-color: 	#d8c8a8;
 }
 
-#math p {
+#math p, 
+#math text {
   color: #333333;
 }
 
-p2 {
+#math text {
   font-size: 24px;
-  margin-left: 30px;
-  color: #333333;
 }
 
 .iframe-container {
@@ -89,7 +87,7 @@ iframe {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #283033;
+  background: #0E4749;
   border-radius: 10px;
 }
 
@@ -111,18 +109,17 @@ iframe {
     padding: 30px;
   }
 
-  p {
+  p{
     font-size: 20px;
   }
 
-  p2 {
-    font-size: 20px;
-    margin-left: 20px;
+  #math text{
+    font-size: 18px;
   }
 
   .fa:not(.fa-bars) {
-    padding: 5px;
-    font-size:25px;
+    padding: 0px;
+    font-size:21px;
     width: 25px;
   }
   
