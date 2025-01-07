@@ -15,44 +15,9 @@ footer {
     height: 15px;
 }
 
-.intro-logo img {
-    width: 100%
-}
-
 nav {
     grid-column: col-start/span 12;
     grid-row: 1;
-}
-
-.nav-pos {
-    grid-area: nav-pos;
-}
-
-.nav-pos-menu {
-    grid-area: nav-pos;
-}
-
-.nav-menu-home {
-    height: 100vh;
-    background-image: url(../images/background/sunflower-background.png);
-    background-size: cover;
-    background-position-y: 80%;
-    background-repeat: no-repeat;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    text-align: center;
-}
-
-.nav-menu-home nav,
-.nav-menu-home nav a,
-.nav-menu-home nav a:link,
-.nav-menu-home nav a:visited {
-    color: #283033;
-    padding: 9px;
-    letter-spacing: 5px;
-    font-size: 36px;
-    text-decoration: none;
 }
 
 #header-nav,
@@ -138,34 +103,6 @@ p {
 
     body {
         padding-top: 45px;
-    }
-
-    .nav-menu-home {
-        background-image: url(../images/background/sunflower-background-media.png);
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 15px;
-    }
-
-    .nav-pos-menu {
-        display: flex;
-        flex-direction: column; /* Stack links vertically */
-        gap: 20px; /* Add some spacing between the links */
-        font-size: 24px; /* Adjust font size for mobile */
-        margin-bottom: 300px;
-    }
-
-    .nav-menu-home nav,
-    .nav-menu-home nav a,
-    .nav-menu-home nav a:link,
-    .nav-menu-home nav a:visited {
-        padding: 10px;
-        font-size: 30px;
-    }
-
-    .nav-pos-menu a {
-        text-align: left;
-        display: block;
     }
 
     .hamburger-nav {

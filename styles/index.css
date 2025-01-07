@@ -26,7 +26,35 @@ body {
     grid-area: intro-logo;
 }
 
-.nav-menu-home nav a:visited:hover {
+.intro-logo img {
+    width: 100%
+}
+
+.nav-menu-box {
+    height: 100vh;
+    background-image: url(../images/background/sunflower-background.png);
+    background-size: cover;
+    background-position-y: 80%;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    background-color: #c4bbac;
+}
+
+.nav-menu-box nav,
+.nav-menu-box nav a,
+.nav-menu-box nav a:link,
+.nav-menu-box nav a:visited {
+    color: #283033;
+    padding: 9px;
+    letter-spacing: 5px;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.nav-menu-box nav a:visited:hover {
     color: #f7af20;
 }
 
@@ -35,7 +63,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f0ede8;
+    background: #ccc9c4;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -51,5 +79,33 @@ body {
         ". . ."
         "intro-logo intro-logo intro-logo"
         ". . .";
+    }
+
+    .nav-menu-box {
+        background-image: url(../images/background/sunflower-background-media.png);
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    .nav-pos-menu {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 20px; /* Add some spacing between the links */
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 300px;
+    }
+
+    .nav-menu-box nav,
+    .nav-menu-box nav a,
+    .nav-menu-box nav a:link,
+    .nav-menu-box nav a:visited {
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .nav-pos-menu a {
+        text-align: left;
+        display: block;
     }
 }
