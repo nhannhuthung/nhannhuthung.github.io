@@ -147,7 +147,7 @@ img {vertical-align: middle;}
 }
 
 #slideshow1 {
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 .description {
@@ -372,5 +372,9 @@ img {vertical-align: middle;}
 
     #collection-dropdown h2:hover {
         color: rgb(123, 153, 141);
+    }
+
+    #slideshow1 {
+        margin-bottom: 60px;
     }
 }
