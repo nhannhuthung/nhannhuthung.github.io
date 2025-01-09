@@ -20,15 +20,15 @@
 #header-nav a,
 #header-nav a:link,
 #header-nav a:visited {
-    color: #283033;
+    color: #0E4749;
 }
 
 #header-nav a:hover {
-    color: rgb(0, 0, 0);
+    color: #1b8284;
 }
 
 .hamburger-nav {
-    color: #283033;
+    color: #0E4749;
 }
 
 .page {
@@ -42,7 +42,7 @@
 }
 
 #about p {
-  color: #0E4749;
+  color: #043e40;
 }
 
 #math {
@@ -52,7 +52,7 @@
 
 #math p, 
 #math text {
-  color: #333333;
+  color: #125a5d;
 }
 
 #math text {
@@ -131,6 +131,6 @@ iframe {
   #header-nav a,
   #header-nav a:link,
   #header-nav a:visited {
-      color: #E6DAC6;
+      color: #1b8284;
   }
 }
