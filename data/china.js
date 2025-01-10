@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/china/2/1-jiao-f.jpg",
-        alt: "Front of the 1 Jiao Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/china/2/1-jiao-b.jpg",
-        alt: "Back of the 1 Jiao Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/china/2/1-jiao-f.jpg",
+            alt: "Front of the 1 Jiao Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/china/2/1-jiao-b.jpg",
+            alt: "Back of the 1 Jiao Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Chinese 1 Jiao",
     "1980",
     "Out of circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/china/3/1-yuan-f.jpg",
         alt: "Front of the 1 Yuan Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Chinese 1 Yuan",
     "1999",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     "Mao Zedong (1893-1976)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/china/3/5-yuan-f.jpg",
         alt: "Front of the 5 Yuan Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Chinese 5 Yuan",
     "2005",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     "Mao Zedong (1893-1976)"
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/china/3/50-yuan-f.jpg",
         alt: "Front of the 50 Yuan Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Chinese 50 Yuan",
     "2005",
     "In circulation",

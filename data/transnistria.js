@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/transnistria/2007/1-ruble-f.jpg",
-        alt: "Front of the 1 Ruble Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/transnistria/2007/1-ruble-b.jpg",
-        alt: "Back of the 1 Ruble Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/transnistria/2007/1-ruble-f.jpg",
+            alt: "Front of the 1 Ruble Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/transnistria/2007/1-ruble-b.jpg",
+            alt: "Back of the 1 Ruble Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Transnistrian 1 Ruble",
     "2007",
     "In circulation",

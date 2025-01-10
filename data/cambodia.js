@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/cambodia/500-series/2004-f.jpg",
-        alt: "Front of the 500 Riel Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/cambodia/500-series/2004-b.jpg",
-        alt: "Back of the 500 Riel Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+        [`${index}`]: [
+        {
+            src: "../images/collection/cambodia/500-series/2004-f.jpg",
+            alt: "Front of the 500 Riel Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/cambodia/500-series/2004-b.jpg",
+            alt: "Back of the 500 Riel Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Cambodian 500 Riels",
     "2004",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/cambodia/1000-series/2007-f.jpg",
         alt: "Front of the 1000 Riel Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Cambodian 1000 Riels",
     "2007",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/cambodia/100-series/2014-f.jpg",
         alt: "Front of the 100 Riel Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Cambodian 100 Riels",
     "2014",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     "Norodom Sihanouk (1941-1955)"
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/cambodia/500-series/2014-f.jpg",
         alt: "Front of the 500 Riel Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Cambodian 500 Riels",
     "2014",
     "In circulation",

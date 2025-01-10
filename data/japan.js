@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/japan/d/2000-yen-f.jpg",
-        alt: "Front of the 2000 Yen Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/japan/d/2000-yen-b.jpg",
-        alt: "Back of the 2000 Yen Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/japan/d/2000-yen-f.jpg",
+            alt: "Front of the 2000 Yen Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/japan/d/2000-yen-b.jpg",
+            alt: "Back of the 2000 Yen Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Japanese 2,000 Yen",
     "",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/japan/e/1000-yen-f.jpg",
         alt: "Front of the 1000 Yen Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Japanese 1,000 Yen",
     "",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     "Noguchi Hideyo (1876-1928)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/japan/e/5000-yen-f.jpg",
         alt: "Front of the 5000 Yen Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Japanese 5,000 Yen",
     "",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     "Higuchi Ichiyō (1872-1896)"
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/japan/f/1000-yen-f.jpg",
         alt: "Front of the 1000 Yen Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Japanese 1,000 Yen",
     "",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     "Kitasato Shibasaburō (1853-1931)"
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/japan/f/5000-yen-f.jpg",
         alt: "Front of the 5000 Yen Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Japanese 5,000 Yen",
     "",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     "Tsuda Umeko (1864-1929)"
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/japan/f/10000-yen-f.jpg",
         alt: "Front of the 10000 Yen Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Japanese 10,000 Yen",
     "",
     "In circulation",

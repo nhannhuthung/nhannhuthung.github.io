@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/kenya/2019/100-shilling-f.jpg",
-        alt: "Front of the 100 Shilling Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/kenya/2019/100-shilling-b.jpg",
-        alt: "Back of the 100 Shilling Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/kenya/2019/100-shilling-f.jpg",
+            alt: "Front of the 100 Shilling Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/kenya/2019/100-shilling-b.jpg",
+            alt: "Back of the 100 Shilling Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Kenyan 100 Shillings",
     "2019",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/200-shilling-f.jpg",
         alt: "Front of the 200 Shilling Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Kenyan 200 Shillings",
     "2019",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/500-shilling-f.jpg",
         alt: "Front of the 500 Shilling Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Kenyan 500 Shillings",
     "2019",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/1000-shilling-f.jpg",
         alt: "Front of the 1000 Shilling Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Kenyan 1,000 Shillings",
     "2019",
     "In circulation",

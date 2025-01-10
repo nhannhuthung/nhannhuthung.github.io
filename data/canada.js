@@ -1,4 +1,80 @@
-const images1 = [
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/canada/1954/1-dollar-1954-f.jpg",
+            alt: "Front of the 1 Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/canada/1954/1-dollar-1954-b.jpg",
+            alt: "Back of the 1 Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Canadian 1 Dollars",
+    "1954",
+    "Out of circulation",
+    "153 $\\times$ 70 mm",
+    "Elizabeth II (1952-2022)"
+);
+
+index = index + 1; //index = 2
+images[`${index}`] = [
+    {
+        src: "../images/collection/canada/1954/1-dollar-1967-f.jpg",
+        alt: "Front of the 1 Dollar Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/canada/1954/1-dollar-1967-b.jpg",
+        alt: "Back of the 1 Dollar Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Canadian 1 Dollars (Commemorative)",
+    "1967",
+    "Out of circulation",
+    "153 $\\times$ 70 mm",
+    "Elizabeth II (1952-2022)"
+);
+
+index = index + 1; //index = 3
+images[`${index}`] = [
+    {
+        src: "../images/collection/canada/1954/2-dollar-f.jpg",
+        alt: "Front of the 2 Dollar Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/canada/1954/2-dollar-b.jpg",
+        alt: "Back of the 2 Dollar Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Canadian 2 Dollars",
+    "1954",
+    "Out of circulation",
+    "153 $\\times$ 70 mm",
+    "Elizabeth II (1952-2022)"
+);
+
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/canada/1954/10-dollar-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -10,10 +86,10 @@ const images1 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Canadian 10 Dollars",
     "1954",
     "Out of circulation",
@@ -21,7 +97,8 @@ generateSlideShowInfo(
     "Elizabeth II (1952-2022)"
 );
 
-const images2 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/canada/1969-1979/2-dollar-f.jpg",
         alt: "Front of the 2 Dollar Bill",
@@ -33,10 +110,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Canadian 2 Dollars",
     "1974",
     "Out of circulation",
@@ -44,7 +121,8 @@ generateSlideShowInfo(
     "Elizabeth II (1952-2022)"
 );
 
-const images3 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/canada/1969-1979/5-dollar-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -56,10 +134,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Canadian 5 Dollars",
     "1972",
     "Out of circulation",
@@ -67,7 +145,8 @@ generateSlideShowInfo(
     "Wilfrid Laurier (1841-1919)"
 );
 
-const images4 = [
+index = index + 1; //index = 7
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2001-2006/5-dollar-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -79,10 +158,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Canadian 5 Dollars",
     "2010",
     "In circulation",
@@ -90,7 +169,8 @@ generateSlideShowInfo(
     "Wilfrid Laurier (1841-1919)"
 );
 
-const images5 = [
+index = index + 1; //index = 8
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2001-2006/20-dollar-f.jpg",
         alt: "Front of the 20 Dollar Bill",
@@ -102,10 +182,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Canadian 20 Dollars",
     "2005",
     "In circulation",
@@ -113,7 +193,8 @@ generateSlideShowInfo(
     "Elizabeth II (1952-2022)"
 );
 
-const images6 = [
+index = index + 1; //index = 9
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/5-dollar-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -125,10 +206,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Canadian 5 Dollars",
     "2013",
     "In circulation",
@@ -136,7 +217,8 @@ generateSlideShowInfo(
     "Wilfrid Laurier (1841-1919)"
 );
 
-const images7 = [
+index = index + 1; //index = 10
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/10-dollar-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -148,10 +230,10 @@ const images7 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide7", images7);
-new Slideshow("slideshow7");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info7",
+    "info" + index,
     "Canadian 10 Dollars",
     "2013",
     "In circulation",
@@ -159,7 +241,8 @@ generateSlideShowInfo(
     "John A. Macdonald (1815-1891)"
 );
 
-const images8 = [
+index = index + 1; //index = 11
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/20-dollar-f.jpg",
         alt: "Front of the 20 Dollar Bill",
@@ -171,10 +254,10 @@ const images8 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide8", images8);
-new Slideshow("slideshow8");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info8",
+    "info" + index,
     "Canadian 20 Dollars",
     "2015",
     "In circulation",
@@ -182,7 +265,8 @@ generateSlideShowInfo(
     "Elizabeth II (1952-2022)"
 );
 
-const images9 = [
+index = index + 1; //index = 12
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/50-dollar-f.jpg",
         alt: "Front of the 50 Dollar Bill",
@@ -194,10 +278,10 @@ const images9 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide9", images9);
-new Slideshow("slideshow9");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info9",
+    "info" + index,
     "Canadian 50 Dollars",
     "2012",
     "In circulation",
@@ -205,7 +289,8 @@ generateSlideShowInfo(
     "W. L. Mackenzie King (1874-1950)"
 );
 
-const images10 = [
+index = index + 1; //index = 13
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -217,10 +302,10 @@ const images10 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide10", images10);
-new Slideshow("slideshow10");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info10",
+    "info" + index,
     "Canadian 100 Dollars",
     "2011",
     "In circulation",
@@ -228,7 +313,8 @@ generateSlideShowInfo(
     "Robert L. Borden (1854-1937)"
 );
 
-const images11 = [
+index = index + 1; //index = 14
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2017/10-dollar-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -240,10 +326,10 @@ const images11 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide11", images11);
-new Slideshow("slideshow11");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info11",
+    "info" + index,
     "Canadian 10 Dollars (Commemorative)",
     "2017",
     "In circulation",
@@ -251,7 +337,8 @@ generateSlideShowInfo(
     "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)"
 );
 
-const images12 = [
+index = index + 1; //index = 15
+images[`${index}`] = [
     {
         src: "../images/collection/canada/2018/10-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -263,10 +350,10 @@ const images12 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide12", images12);
-new Slideshow("slideshow12");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info12",
+    "info" + index,
     "Canadian 10 Dollars",
     "2018",
     "In circulation",

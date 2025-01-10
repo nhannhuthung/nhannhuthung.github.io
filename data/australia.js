@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/australia/1992-2016/20-dollar-f.jpg",
-        alt: "Front of the 20 Dollar Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/australia/1992-2016/20-dollar-b.jpg",
-        alt: "Back of the 20 Dollar Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/australia/1992-2016/20-dollar-f.jpg",
+            alt: "Front of the 20 Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/australia/1992-2016/20-dollar-b.jpg",
+            alt: "Back of the 20 Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Australian 20 Dollars",
     "",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     "Mary Reibey (1777-1855)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/australia/1992-2016/50-dollar-f.jpg",
         alt: "Front of the 50 Dollar Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Australian 50 Dollars",
     "",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     "David Unaipon (1872-1967)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/australia/1992-2016/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Australian 100 Dollars",
     "",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     "Nellie Melba (1861-1931)"
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/australia/2016/5-dollar-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Australian 5 Dollars",
     "",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     "Elizabeth II (1952-2022)"
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/australia/2016/10-dollar-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Australian 10 Dollars",
     "",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     "Banjo Paterson (1864-1941)"
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/australia/2016/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Australian 100 Dollars",
     "",
     "In circulation",

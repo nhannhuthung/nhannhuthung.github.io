@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/indonesia/2000-2014/1000-rupiah-f.jpg",
-        alt: "Front of the 1000 Rupiah Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/indonesia/2000-2014/1000-rupiah-b.jpg",
-        alt: "Back of the 1000 Rupiah Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/indonesia/2000-2014/1000-rupiah-f.jpg",
+            alt: "Front of the 1000 Rupiah Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/indonesia/2000-2014/1000-rupiah-b.jpg",
+            alt: "Back of the 1000 Rupiah Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Indonesian 1,000 Rupiah",
     "2009",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     "Kapitan Pattimura (1783-1817)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/indonesia/2000-2014/2000-rupiah-f.jpg",
         alt: "Front of the 2000 Rupiah Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Indonesian 2,000 Rupiah",
     "2015",
     "In circulation",

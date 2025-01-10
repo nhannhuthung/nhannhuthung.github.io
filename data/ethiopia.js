@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/ethiopia/2020/10-birr-f.jpg",
-        alt: "Front of the 10 Birr Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/ethiopia/2020/10-birr-b.jpg",
-        alt: "Back of the 10 Birr Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/ethiopia/2020/10-birr-f.jpg",
+            alt: "Front of the 10 Birr Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/ethiopia/2020/10-birr-b.jpg",
+            alt: "Back of the 10 Birr Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Ethiopian 10 Birr",
     "2012 (2020)",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/ethiopia/2020/50-birr-f.jpg",
         alt: "Front of the 50 Birr Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Ethiopian 50 Birr",
     "2012 (2020)",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/ethiopia/2020/100-birr-f.jpg",
         alt: "Front of the 50 Birr Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Ethiopian 100 Birr",
     "2015 (2023)",
     "In circulation",

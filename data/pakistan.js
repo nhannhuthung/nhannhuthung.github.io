@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/pakistan/2005/100-rupee-f.jpg",
-        alt: "Front of the 100 Rupee Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/pakistan/2005/100-rupee-b.jpg",
-        alt: "Back of the 100 Rupee Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/pakistan/2005/100-rupee-f.jpg",
+            alt: "Front of the 100 Rupee Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/pakistan/2005/100-rupee-b.jpg",
+            alt: "Back of the 100 Rupee Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Pakistani 100 Rupees",
     "2015",
     "In circulation",

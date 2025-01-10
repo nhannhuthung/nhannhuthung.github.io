@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/usa/1-series/2013-f.jpg",
-        alt: "Front of the 1 Dollar Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/usa/1-series/2013-b.jpg",
-        alt: "Back of the 1 Dollar Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/usa/1-series/2013-f.jpg",
+            alt: "Front of the 1 Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/usa/1-series/2013-b.jpg",
+            alt: "Back of the 1 Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "American 1 Dollars",
     "2013",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     "George Washington (1732-1799)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/usa/2-series/2013-f.jpg",
         alt: "Front of the 2 Dollar Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "American 2 Dollars",
     "2013",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     "Thomas Jefferson (1743-1826)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/usa/5-series/1988A-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "American 5 Dollars",
     "1988",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     "Abraham Lincoln (1809-1865)"
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/usa/5-series/2013-f.jpg",
         alt: "Front of the 5 Dollar Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "American 5 Dollars",
     "2013",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     "Abraham Lincoln (1809-1865)"
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/usa/10-series/2013-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "American 10 Dollars",
     "2013",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     "Alexander Hamilton (1757-1804)"
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/usa/20-series/2013-f.jpg",
         alt: "Front of the 20 Dollar Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "American 20 Dollars",
     "2013",
     "In circulation",
@@ -136,7 +145,8 @@ generateSlideShowInfo(
     "Andrew Jackson (1767-1845)"
 );
 
-const images7 = [
+index = index + 1; //index = 7
+images[`${index}`] = [
     {
         src: "../images/collection/usa/50-series/2013-f.jpg",
         alt: "Front of the 50 Dollar Bill",
@@ -148,10 +158,10 @@ const images7 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide7", images7);
-new Slideshow("slideshow7");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info7",
+    "info" + index,
     "American 50 Dollars",
     "2013",
     "In circulation",
@@ -159,7 +169,8 @@ generateSlideShowInfo(
     "Ulysses S. Grant (1822-1885)"
 );
 
-const images8 = [
+index = index + 1; //index = 8
+images[`${index}`] = [
     {
         src: "../images/collection/usa/100-series/2009A-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -171,10 +182,10 @@ const images8 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide8", images8);
-new Slideshow("slideshow8");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info8",
+    "info" + index,
     "American 100 Dollars",
     "2009",
     "In circulation",

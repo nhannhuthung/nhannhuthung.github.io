@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/ghana/2007/1-cedi-f.jpg",
-        alt: "Front of the 1 Cedi Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/ghana/2007/1-cedi-b.jpg",
-        alt: "Back of the 1 Cedi Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/ghana/2007/1-cedi-f.jpg",
+            alt: "Front of the 1 Cedi Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/ghana/2007/1-cedi-b.jpg",
+            alt: "Back of the 1 Cedi Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Ghanaian 1 Cedi",
     "2019",
     "In circulation",

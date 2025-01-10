@@ -1,19 +1,21 @@
-const images1 = [
-    {
-        src: "../images/collection/moldova/2015/1-leu-f.jpg",
-        alt: "Front of the 1 Leu Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/moldova/2015/1-leu-b.jpg",
-        alt: "Back of the 1 Leu Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/moldova/2015/1-leu-f.jpg",
+            alt: "Front of the 1 Leu Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/moldova/2015/1-leu-b.jpg",
+            alt: "Back of the 1 Leu Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Moldovan 1 Leu",
     "2015",
     "In circulation",

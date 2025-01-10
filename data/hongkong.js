@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/hongkong/10-series/2002-f.jpg",
-        alt: "Front of the 10 Dollar Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/hongkong/10-series/2002-b.jpg",
-        alt: "Back of the 10 Dollar Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/hongkong/10-series/2002-f.jpg",
+            alt: "Front of the 10 Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/hongkong/10-series/2002-b.jpg",
+            alt: "Back of the 10 Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Hongkongese 10 Dollars",
     "2002",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/10-series/2014-f.jpg",
         alt: "Front of the 10 Dollar Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Hongkongese 10 Dollars",
     "2014",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2003/bank-of-china/50-dollar-f.jpg",
         alt: "Front of the 50 Dollar Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Hongkongese 50 Dollars - Bank of China",
     "2007",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/bank-of-china/20-dollar-f.jpg",
         alt: "Front of the 20 Dollar Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Hongkongese 20 Dollars - Bank of China",
     "2014",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/bank-of-china/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Hongkongese 100 Dollars - Bank of China",
     "2014",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/hsbc/20-dollar-f.jpg",
         alt: "Front of the 20 Dollar Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Hongkongese 20 Dollars - HSBC",
     "2013",
     "In circulation",
@@ -136,7 +145,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images7 = [
+index = index + 1; //index = 7
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/hsbc/50-dollar-f.jpg",
         alt: "Front of the 50 Dollar Bill",
@@ -148,10 +158,10 @@ const images7 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide7", images7);
-new Slideshow("slideshow7");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info7",
+    "info" + index,
     "Hongkongese 50 Dollars - HSBC",
     "2012",
     "In circulation",
@@ -159,7 +169,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images8 = [
+index = index + 1; //index = 8
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/hsbc/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -171,10 +182,10 @@ const images8 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide8", images8);
-new Slideshow("slideshow8");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info8",
+    "info" + index,
     "Hongkongese 100 Dollars - HSBC",
     "2012",
     "In circulation",
@@ -182,7 +193,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images9 = [
+index = index + 1; //index = 9
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/hsbc/500-dollar-f.jpg",
         alt: "Front of the 500 Dollar Bill",
@@ -194,10 +206,10 @@ const images9 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide9", images9);
-new Slideshow("slideshow9");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info9",
+    "info" + index,
     "Hongkongese 500 Dollars - HSBC",
     "2014",
     "In circulation",
@@ -205,7 +217,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images10 = [
+index = index + 1; //index = 10
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2010/standard-chartered-bank/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -217,10 +230,10 @@ const images10 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide10", images10);
-new Slideshow("slideshow10");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info10",
+    "info" + index,
     "Hongkongese 100 Dollars - Standard Chartered Bank",
     "2016",
     "In circulation",
@@ -228,7 +241,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images11 = [
+index = index + 1; //index = 11
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2018/hsbc/100-dollar-f.jpg",
         alt: "Front of the 100 Dollar Bill",
@@ -240,10 +254,10 @@ const images11 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide11", images11);
-new Slideshow("slideshow11");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info11",
+    "info" + index,
     "Hongkongese 100 Dollars - HSBC",
     "2018",
     "In circulation",
@@ -251,7 +265,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images12 = [
+index = index + 1; //index = 12
+images[`${index}`] = [
     {
         src: "../images/collection/hongkong/2018/standard-chartered-bank/500-dollar-f.jpg",
         alt: "Front of the 500 Dollar Bill",
@@ -263,10 +278,10 @@ const images12 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide12", images12);
-new Slideshow("slideshow12");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info12",
+    "info" + index,
     "Hongkongese 500 Dollars - Standard Chartered Bank",
     "2020",
     "In circulation",

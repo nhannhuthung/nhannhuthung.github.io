@@ -1,19 +1,21 @@
-const images1 = [
-    {
-        src: "../images/collection/norway/7/50-kroner-f.jpg",
-        alt: "Front of the 50 Kroner Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/norway/7/50-kroner-b.jpg",
-        alt: "Back of the 50 Kroner Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/norway/7/50-kroner-f.jpg",
+            alt: "Front of the 50 Kroner Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/norway/7/50-kroner-b.jpg",
+            alt: "Back of the 50 Kroner Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Norweigian 50 Kroner",
     "2005",
     "Out of circulation",

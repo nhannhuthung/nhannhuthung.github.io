@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/italy/1971/500-lire-f.jpg",
-        alt: "Front of the 500 Lire Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/italy/1971/500-lire-b.jpg",
-        alt: "Back of the 500 Lire Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/italy/1971/500-lire-f.jpg",
+            alt: "Front of the 500 Lire Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/italy/1971/500-lire-b.jpg",
+            alt: "Back of the 500 Lire Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Italian 500 Lire",
     "1966",
     "Out of circulation",

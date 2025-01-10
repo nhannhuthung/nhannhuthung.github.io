@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/mongolia/1993/10-mongo-f.jpg",
-        alt: "Front of the 10 Möngö Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/mongolia/1993/10-mongo-b.jpg",
-        alt: "Back of the 10 Möngö Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/mongolia/1993/10-mongo-f.jpg",
+            alt: "Front of the 10 Möngö Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/mongolia/1993/10-mongo-b.jpg",
+            alt: "Back of the 10 Möngö Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Mongolian 10 Möngö",
     "",
     "Out of circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/20-mongo-f.jpg",
         alt: "Front of the 20 Möngö Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Mongolian 20 Möngö",
     "",
     "Out of circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/50-mongo-f.jpg",
         alt: "Front of the 50 Möngö Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Mongolian 50 Möngö",
     "",
     "Out of circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/1-togrog-f.jpg",
         alt: "Front of the 1 Tögrög Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Mongolian 1 Tögrög",
     "",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/10-togrog-f.jpg",
         alt: "Front of the 10 Tögrög Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Mongolian 10 Tögrög",
     "2017",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     "Damdin Sükhbaatar (1893-1923)"
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/20-togrog-f.jpg",
         alt: "Front of the 20 Tögrög Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Mongolian 20 Tögrög",
     "2017",
     "In circulation",
@@ -136,7 +145,8 @@ generateSlideShowInfo(
     "Damdin Sükhbaatar (1893-1923)"
 );
 
-const images7 = [
+index = index + 1; //index = 7
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/50-togrog-f.jpg",
         alt: "Front of the 50 Tögrög Bill",
@@ -148,10 +158,10 @@ const images7 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide7", images7);
-new Slideshow("slideshow7");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info7",
+    "info" + index,
     "Mongolian 50 Tögrög",
     "2016",
     "In circulation",
@@ -159,7 +169,8 @@ generateSlideShowInfo(
     "Damdin Sükhbaatar (1893-1923)"
 );
 
-const images8 = [
+index = index + 1; //index = 8
+images[`${index}`] = [
     {
         src: "../images/collection/mongolia/1993/100-togrog-f.jpg",
         alt: "Front of the 100 Tögrög Bill",
@@ -171,10 +182,10 @@ const images8 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide8", images8);
-new Slideshow("slideshow8");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info8",
+    "info" + index,
     "Mongolian 100 Tögrög",
     "2014",
     "In circulation",

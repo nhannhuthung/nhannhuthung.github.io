@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/mauritius/1999/25-rupee-f.jpg",
-        alt: "Front of the 25 Rupee Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/mauritius/1999/25-rupee-b.jpg",
-        alt: "Back of the 25 Rupee Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/mauritius/1999/25-rupee-f.jpg",
+            alt: "Front of the 25 Rupee Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/mauritius/1999/25-rupee-b.jpg",
+            alt: "Back of the 25 Rupee Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Mauritian 25 Rupees",
     "2003",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     "Moilin Jean Ah-Chuen (1911-1991)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/mauritius/1999/50-rupee-f.jpg",
         alt: "Front of the 50 Rupee Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Mauritian 50 Rupees",
     "2001",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     "Joseph Maurice Paturau (1916-1996)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/mauritius/1999/100-rupee-f.jpg",
         alt: "Front of the 100 Rupee Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Mauritian 100 Rupees",
     "2004",
     "In circulation",

@@ -274,6 +274,10 @@ img {vertical-align: middle;}
     border-radius: 10px;
 }
 
+hr {
+    margin-top: 25px;
+}
+
 /* On smaller screens, decrease text size */
 @media (max-width: 768px) {
     .text {font-size: 15px}
@@ -281,6 +285,7 @@ img {vertical-align: middle;}
     .slideshow-wrapper {
         margin-top: 5px;
         width: 100%;
+        gap: 15px;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: "slideshow-container" 

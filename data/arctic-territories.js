@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/arctic-territories/2010/1-polar-dollar-f.jpg",
-        alt: "Front of the 1 Polar Dollar Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/arctic-territories/2010/1-polar-dollar-b.jpg",
-        alt: "Back of the 1 Polar Dollar Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/arctic-territories/2010/1-polar-dollar-f.jpg",
+            alt: "Front of the 1 Polar Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/arctic-territories/2010/1-polar-dollar-b.jpg",
+            alt: "Back of the 1 Polar Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Arctic Territories' 1 Polar Dollars",
     "2012",
     "Non-circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/2-polar-dollar-f.jpg",
         alt: "Front of the 2 Polar Dollar Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Arctic Territories' 2 Polar Dollars",
     "2010",
     "Non-circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/3-polar-dollar-f.jpg",
         alt: "Front of the 3 Polar Dollar Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Arctic Territories' 3 Polar Dollars",
     "2011",
     "Non-circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/5-polar-dollar-f.jpg",
         alt: "Front of the 5 Polar Dollar Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Arctic Territories' 5 Polar Dollars",
     "2012",
     "Non-circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/6-polar-dollar-f.jpg",
         alt: "Front of the 6 Polar Dollar Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Arctic Territories' 6 Polar Dollars",
     "2013",
     "Non-circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/8-polar-dollar-f.jpg",
         alt: "Front of the 8 Polar Dollar Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Arctic Territories' 8 Polar Dollars",
     "2011",
     "Non-circulation",
@@ -136,7 +145,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images7 = [
+index = index + 1; //index = 7
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/9-polar-dollar-f.jpg",
         alt: "Front of the 9 Polar Dollar Bill",
@@ -148,10 +158,10 @@ const images7 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide7", images7);
-new Slideshow("slideshow7");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info7",
+    "info" + index,
     "Arctic Territories' 9 Polar Dollars",
     "2012",
     "Non-circulation",
@@ -159,7 +169,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images8 = [
+index = index + 1; //index = 8
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/10-polar-dollar-f.jpg",
         alt: "Front of the 10 Polar Dollar Bill",
@@ -171,10 +182,10 @@ const images8 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide8", images8);
-new Slideshow("slideshow8");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info8",
+    "info" + index,
     "Arctic Territories' 10 Polar Dollars",
     "2010",
     "Non-circulation",
@@ -182,7 +193,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images9 = [
+index = index + 1; //index = 9
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2010/15-polar-dollar-f.jpg",
         alt: "Front of the 15 Polar Dollar Bill",
@@ -194,10 +206,10 @@ const images9 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide9", images9);
-new Slideshow("slideshow9");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info9",
+    "info" + index,
     "Arctic Territories' 15 Polar Dollars",
     "2011",
     "Non-circulation",
@@ -205,7 +217,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images10 = [
+index = index + 1; //index = 10
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2017/25-polar-dollar-f.jpg",
         alt: "Front of the 25 Polar Dollar Bill",
@@ -217,10 +230,10 @@ const images10 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide10", images10);
-new Slideshow("slideshow10");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info10",
+    "info" + index,
     "Arctic Territories' 25 Polar Dollars",
     "2017",
     "Non-circulation",
@@ -228,7 +241,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images11 = [
+index = index + 1; //index = 11
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2017/50-polar-dollar-f.jpg",
         alt: "Front of the 50 Polar Dollar Bill",
@@ -240,10 +254,10 @@ const images11 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide11", images11);
-new Slideshow("slideshow11");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info11",
+    "info" + index,
     "Arctic Territories' 50 Polar Dollars",
     "2017",
     "Non-circulation",
@@ -251,7 +265,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images12 = [
+index = index + 1; //index = 12
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2017/100-polar-dollar-f.jpg",
         alt: "Front of the 100 Polar Dollar Bill",
@@ -263,10 +278,10 @@ const images12 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide12", images12);
-new Slideshow("slideshow12");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info12",
+    "info" + index,
     "Arctic Territories' 100 Polar Dollars",
     "2017",
     "Non-circulation",
@@ -274,7 +289,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images13 = [
+index = index + 1; //index = 13
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2017/250-polar-dollar-f.jpg",
         alt: "Front of the 250 Polar Dollar Bill",
@@ -286,10 +302,10 @@ const images13 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide13", images13);
-new Slideshow("slideshow13");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info13",
+    "info" + index,
     "Arctic Territories' 250 Polar Dollars",
     "2017",
     "Non-circulation",
@@ -297,7 +313,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images14 = [
+index = index + 1; //index = 14
+images[`${index}`] = [
     {
         src: "../images/collection/arctic-territories/2017/500-polar-dollar-f.jpg",
         alt: "Front of the 500 Polar Dollar Bill",
@@ -309,10 +326,10 @@ const images14 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide14", images14);
-new Slideshow("slideshow14");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info14",
+    "info" + index,
     "Arctic Territories' 500 Polar Dollars",
     "2017",
     "Non-circulation",

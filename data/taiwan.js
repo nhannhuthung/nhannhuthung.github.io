@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/taiwan/1999/100-dollar-f.jpg",
-        alt: "Front of the 100 Dollar Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/taiwan/1999/100-dollar-b.jpg",
-        alt: "Back of the 100 Dollar Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/taiwan/1999/100-dollar-f.jpg",
+            alt: "Front of the 100 Dollar Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/taiwan/1999/100-dollar-b.jpg",
+            alt: "Back of the 100 Dollar Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Taiwanese 100 Dollars",
     "2000",
     "In circulation",

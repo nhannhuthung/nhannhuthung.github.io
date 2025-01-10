@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/ukraine/3/1-hryvnia-f.jpg",
-        alt: "Front of the 1 Hryvnia Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/ukraine/3/1-hryvnia-b.jpg",
-        alt: "Back of the 1 Hryvnia Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/ukraine/3/1-hryvnia-f.jpg",
+            alt: "Front of the 1 Hryvnia Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/ukraine/3/1-hryvnia-b.jpg",
+            alt: "Back of the 1 Hryvnia Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Ukrainian 1 Hryvnia",
     "2014",
     "In circulation",

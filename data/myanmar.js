@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/myanmar/1990/5-kyat-f.jpg",
-        alt: "Front of the 5 Kyat Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/myanmar/1990/5-kyat-b.jpg",
-        alt: "Back of the 5 Kyat Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/myanmar/1990/5-kyat-f.jpg",
+            alt: "Front of the 5 Kyat Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/myanmar/1990/5-kyat-b.jpg",
+            alt: "Back of the 5 Kyat Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Myanma 5 Kyats",
     "",
     "In circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/myanmar/1990/50-kyat-f.jpg",
         alt: "Front of the 50 Kyat Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Myanma 50 Kyats",
     "",
     "In circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/myanmar/1990/100-kyat-f.jpg",
         alt: "Front of the 100 Kyat Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Myanma 100 Kyats",
     "",
     "In circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/myanmar/1990/200-kyat-f.jpg",
         alt: "Front of the 200 Kyat Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Myanma 200 Kyats",
     "",
     "In circulation",
@@ -90,7 +97,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images5 = [
+index = index + 1; //index = 5
+images[`${index}`] = [
     {
         src: "../images/collection/myanmar/1990/500-kyat-f.jpg",
         alt: "Front of the 500 Kyat Bill",
@@ -102,10 +110,10 @@ const images5 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide5", images5);
-new Slideshow("slideshow5");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info5",
+    "info" + index,
     "Myanma 500 Kyats",
     "",
     "In circulation",
@@ -113,7 +121,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images6 = [
+index = index + 1; //index = 6
+images[`${index}`] = [
     {
         src: "../images/collection/myanmar/1990/1000-kyat-f.jpg",
         alt: "Front of the 1000 Kyat Bill",
@@ -125,10 +134,10 @@ const images6 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide6", images6);
-new Slideshow("slideshow6");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info6",
+    "info" + index,
     "Myanma 1,000 Kyat",
     "",
     "In circulation",

@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/belarius/2000/50-ruble-f.jpg",
-        alt: "Front of the 50 Ruble Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/belarius/2000/50-ruble-b.jpg",
-        alt: "Back of the 50 Ruble Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/belarius/2000/50-ruble-f.jpg",
+            alt: "Front of the 50 Ruble Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/belarius/2000/50-ruble-b.jpg",
+            alt: "Back of the 50 Ruble Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Belarusian 50 Rubles",
     "2000",
     "Out of circulation",
@@ -21,7 +25,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/belarius/2000/100-ruble-f.jpg",
         alt: "Front of the 100 Ruble Bill",
@@ -33,10 +38,10 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Belarusian 100 Rubles",
     "2000",
     "Out of circulation",
@@ -44,7 +49,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/belarius/2000/500-ruble-f.jpg",
         alt: "Front of the 500 Ruble Bill",
@@ -56,10 +62,10 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Belarusian 500 Rubles",
     "2000",
     "Out of circulation",
@@ -67,7 +73,8 @@ generateSlideShowInfo(
     ""
 );
 
-const images4 = [
+index = index + 1; //index = 4
+images[`${index}`] = [
     {
         src: "../images/collection/belarius/2000/1000-ruble-f.jpg",
         alt: "Front of the 1,000 Ruble Bill",
@@ -79,10 +86,10 @@ const images4 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide4", images4);
-new Slideshow("slideshow4");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info4",
+    "info" + index,
     "Belarusian 1000 Rubles",
     "2000",
     "Out of circulation",

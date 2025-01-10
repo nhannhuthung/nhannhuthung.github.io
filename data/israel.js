@@ -14,7 +14,7 @@ createSlideshow("slide1", images1);
 new Slideshow("slideshow1");
 generateSlideShowInfo(
     "info1",
-    "Iranian 20 Shekels",
+    "Israeli 20 Shekels",
     "2017",
     "In circulation",
     "129 $\\times$ 71 mm",
@@ -37,7 +37,7 @@ createSlideshow("slide2", images2);
 new Slideshow("slideshow2");
 generateSlideShowInfo(
     "info2",
-    "Iranian 50 Shekels",
+    "Israeli 50 Shekels",
     "2014",
     "In circulation",
     "136 $\\times$ 71 mm",
@@ -60,7 +60,7 @@ createSlideshow("slide3", images3);
 new Slideshow("slideshow3");
 generateSlideShowInfo(
     "info3",
-    "Iranian 50,000 Rials",
+    "Israeli 200 Shekels",
     "2015",
     "In circulation",
     "150 $\\times$ 71 mm",

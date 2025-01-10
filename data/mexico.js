@@ -1,19 +1,23 @@
-const images1 = [
-    {
-        src: "../images/collection/mexico/1994-1999/20-peso-f.jpg",
-        alt: "Front of the 20 Peso Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/mexico/1994-1999/20-peso-b.jpg",
-        alt: "Back of the 20 Peso Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/mexico/d/20-peso-f.jpg",
+            alt: "Front of the 20 Peso Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/mexico/d/20-peso-b.jpg",
+            alt: "Back of the 20 Peso Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Mexican 20 Pesos",
     "1998",
     "Out of circulation",
@@ -21,22 +25,23 @@ generateSlideShowInfo(
     "Benito Juárez (1858-1872)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
-        src: "../images/collection/mexico/1994-1999/50-peso-f.jpg",
+        src: "../images/collection/mexico/d/50-peso-f.jpg",
         alt: "Front of the 50 Peso Bill",
         description: "Obverse"
     },
     {
-        src: "../images/collection/mexico/1994-1999/50-peso-b.jpg",
+        src: "../images/collection/mexico/d/50-peso-b.jpg",
         alt: "Back of the 50 Peso Bill",
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Mexican 50 Pesos",
     "1998",
     "Out of circulation",
@@ -44,25 +49,98 @@ generateSlideShowInfo(
     "José María Morelos (1765-1815)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
-        src: "../images/collection/mexico/2021/20-peso-f.jpg",
+        src: "../images/collection/mexico/f/50-peso-f.jpg",
+        alt: "Front of the 50 Peso Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/mexico/f/50-peso-b.jpg",
+        alt: "Back of the 50 Peso Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Mexican 50 Pesos",
+    "2015",
+    "In circulation",
+    "127 $\\times$ 66 mm",
+    "José María Morelos (1765-1815)"
+);
+
+index = index + 1; //index = 4
+images[`${index}`] = [
+    {
+        src: "../images/collection/mexico/g/20-peso-f.jpg",
         alt: "Front of the 20 Peso Bill",
         description: "Obverse"
     },
     {
-        src: "../images/collection/mexico/2021/20-peso-b.jpg",
+        src: "../images/collection/mexico/g/20-peso-b.jpg",
         alt: "Back of the 20 Peso Bill",
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Mexican 20 Pesos (Commemorative)",
     "2021",
     "In circulation",
-    "120 $\\times$ 66 mm",
+    "120 $\\times$ 65 mm",
     ""
+);
+
+index = index + 1; //index = 5
+images[`${index}`] = [
+    {
+        src: "../images/collection/mexico/g/50-peso-f.jpg",
+        alt: "Front of the 50 Peso Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/mexico/g/50-peso-b.jpg",
+        alt: "Back of the 50 Peso Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Mexican 50 Pesos",
+    "2023",
+    "In circulation",
+    "65 $\\times$ 125 mm",
+    ""
+);
+
+index = index + 1; //index = 6
+images[`${index}`] = [
+    {
+        src: "../images/collection/mexico/g/100-peso-f.jpg",
+        alt: "Front of the 100 Peso Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/mexico/g/100-peso-b.jpg",
+        alt: "Back of the 100 Peso Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Mexican 100 Pesos",
+    "2023",
+    "In circulation",
+    "65 $\\times$ 132 mm",
+    "Juana Inés de la Cruz (1651-1695)"
 );
