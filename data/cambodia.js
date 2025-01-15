@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Cambodian 500 Riels",
     "2004",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 64 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Cambodian 1000 Riels",
     "2007",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 64 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Cambodian 100 Riels",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 64 mm",
     "Norodom Sihanouk (1941-1955)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Cambodian 500 Riels",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 64 mm",
     "Norodom Sihamoni (1953-Present)"
 );

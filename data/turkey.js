@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Turkish 20 Lira",
     "2009",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 68 mm",
     "Mustafa Kemal Atatürk (1881?-1938)"
 );

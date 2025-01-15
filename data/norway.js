@@ -18,7 +18,7 @@ generateSlideShowInfo(
     "info" + index,
     "Norweigian 50 Kroner",
     "2005",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "128 $\\times$ 60 mm",
     "Peter Christen Asbjørnsen (1812-1885)"
 );

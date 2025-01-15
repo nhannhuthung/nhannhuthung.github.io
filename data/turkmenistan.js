@@ -16,7 +16,7 @@ generateSlideShowInfo(
     "info1",
     "Turkmen 5 Manat",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "126 $\\times$ 63 mm",
     "Ahmad Sanjar (1086-1157)"
 );
@@ -39,7 +39,7 @@ generateSlideShowInfo(
     "info2",
     "Turkmen 10 Manat",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "132 $\\times$ 66 mm",
     "Magtymguly Pyragy (1724?-1807?)"
 );
@@ -62,7 +62,7 @@ generateSlideShowInfo(
     "info3",
     "Turkmen 1 Manat",
     "2020",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 60 mm",
     "Tughril I (993?-1063)"
 );

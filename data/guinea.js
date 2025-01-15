@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Guinean 100 Franc",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "124 $\\times$ 64 mm",
     ""
 );

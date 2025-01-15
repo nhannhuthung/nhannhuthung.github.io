@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Irish 5 Pounds",
     "1995",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "120 $\\times$ 64 mm",
     "Catherine McAuley (1778-1841)"
 );

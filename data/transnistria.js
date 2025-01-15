@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Transnistrian 1 Ruble",
     "2007",
-    "In circulation",
+    "Circulating Standard Banknote",
     "129 $\\times$ 55 mm",
     "Alexander Suvorov (1730-1800)"
 );

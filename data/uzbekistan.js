@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Uzbekistani 100 Sum",
     "1994",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 69 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Uzbekistani 200 Sum",
     "1997",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 77 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Uzbekistani 500 Sum",
     "1999",
-    "In circulation",
+    "Circulating Standard Banknote",
     "144 $\\times$ 78 mm",
     ""
 );

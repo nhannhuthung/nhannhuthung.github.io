@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Ethiopian 10 Birr",
     "2012 (2020)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 67 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Ethiopian 50 Birr",
     "2012 (2020)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Ethiopian 100 Birr",
     "2015 (2023)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "147 $\\times$ 72 mm",
     ""
 );

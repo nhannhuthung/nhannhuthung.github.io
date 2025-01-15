@@ -198,7 +198,7 @@ function createSlideshow(containerId, images) {
 //--// function to display banknote //--//
 
 //--// function to display information of banknote //--//
-function generateSlideShowInfo(containerId, title, year, status, size, figure) {
+function generateSlideShowInfo(containerId, title, year, type, size, figure) {
     // Create the container div
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
@@ -213,10 +213,10 @@ function generateSlideShowInfo(containerId, title, year, status, size, figure) {
     yearElement.innerHTML = `<strong>Year:</strong> ${year}`;
     infoDiv.appendChild(yearElement);
 
-    // Create the status paragraph
-    const statusElement = document.createElement("p");
-    statusElement.innerHTML = `<strong>Status:</strong> ${status}`;
-    infoDiv.appendChild(statusElement);
+    // Create the type paragraph
+    const typeElement = document.createElement("p");
+    typeElement.innerHTML = `<strong>Type:</strong> ${type}`;
+    infoDiv.appendChild(typeElement);
 
     // Create the size paragraph
     const sizeElement = document.createElement("p");

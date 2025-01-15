@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "English 10 Pounds",
     "2016",
-    "In circulation",
+    "Circulating Standard Banknote",
     "132 $\\times$ 69 mm",
     "Elizabeth II (1952-2022)"
 );

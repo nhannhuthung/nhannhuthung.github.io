@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 1 Dollars",
     "1954",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -42,9 +42,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Canadian 1 Dollars (Commemorative)",
+    "Canadian 1 Dollars",
     "1967",
-    "Out of circulation",
+    "Non-circulating Commemorative Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 2 Dollars",
     "1954",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 10 Dollars",
     "1954",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 2 Dollars",
     "1974",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 5 Dollars",
     "1972",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Wilfrid Laurier (1841-1919)"
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 5 Dollars",
     "2010",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Wilfrid Laurier (1841-1919)"
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 20 Dollars",
     "2005",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -212,7 +212,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 5 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Wilfrid Laurier (1841-1919)"
 );
@@ -236,7 +236,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 10 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "John A. Macdonald (1815-1891)"
 );
@@ -260,7 +260,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 20 Dollars",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -284,7 +284,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 50 Dollars",
     "2012",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "W. L. Mackenzie King (1874-1950)"
 );
@@ -308,7 +308,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 100 Dollars",
     "2011",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
     "Robert L. Borden (1854-1937)"
 );
@@ -330,9 +330,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Canadian 10 Dollars (Commemorative)",
+    "Canadian 10 Dollars",
     "2017",
-    "In circulation",
+    "Circulating Commemorative Banknote",
     "153 $\\times$ 70 mm",
     "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)"
 );
@@ -356,7 +356,7 @@ generateSlideShowInfo(
     "info" + index,
     "Canadian 10 Dollars",
     "2018",
-    "In circulation",
+    "Circulating Standard Banknote",
     "70 $\\times$ 153 mm",
     "Viola Desmond (1914-1965)"
 );

@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 20 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "144 $\\times$ 65 mm",
     "Mary Reibey (1777-1855)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 50 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "151 $\\times$ 65 mm",
     "David Unaipon (1872-1967)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 100 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "158 $\\times$ 65 mm",
     "Nellie Melba (1861-1931)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 5 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "130 $\\times$ 65 mm",
     "Elizabeth II (1952-2022)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 10 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "137 $\\times$ 65 mm",
     "Banjo Paterson (1864-1941)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Australian 100 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "158 $\\times$ 65 mm",
     "Nellie Melba (1861-1931)"
 );

@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 10 Dollars",
     "2002",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 69 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 10 Dollars",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 69 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 50 Dollars - Bank of China",
     "2007",
-    "In circulation",
+    "Circulating Standard Banknote",
     "148 $\\times$ 74 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 20 Dollars - Bank of China",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "143 $\\times$ 72 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 100 Dollars - Bank of China",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 77 mm",
     ""
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 20 Dollars - HSBC",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "143 $\\times$ 72 mm",
     ""
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 50 Dollars - HSBC",
     "2012",
-    "In circulation",
+    "Circulating Standard Banknote",
     "143 $\\times$ 74 mm",
     ""
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 100 Dollars - HSBC",
     "2012",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 77 mm",
     ""
 );
@@ -212,7 +212,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 500 Dollars - HSBC",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "158 $\\times$ 79 mm",
     ""
 );
@@ -236,7 +236,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 100 Dollars - Standard Chartered Bank",
     "2016",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 77 mm",
     ""
 );
@@ -260,7 +260,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 100 Dollars - HSBC",
     "2018",
-    "In circulation",
+    "Circulating Standard Banknote",
     "153 $\\times$ 77 mm",
     ""
 );
@@ -284,7 +284,7 @@ generateSlideShowInfo(
     "info" + index,
     "Hongkongese 500 Dollars - Standard Chartered Bank",
     "2020",
-    "In circulation",
+    "Circulating Standard Banknote",
     "158 $\\times$ 79 mm",
     ""
 );

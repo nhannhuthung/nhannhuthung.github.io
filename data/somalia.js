@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Somali 50 Shillings",
     "1991",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "140 $\\times$ 70 mm",
     ""
 );

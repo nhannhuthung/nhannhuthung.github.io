@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Congolese 50 Francs",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 70 mm",
     ""
 );

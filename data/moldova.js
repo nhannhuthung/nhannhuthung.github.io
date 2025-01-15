@@ -18,7 +18,7 @@ generateSlideShowInfo(
     "info" + index,
     "Moldovan 1 Leu",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "114 $\\times$ 58 mm",
     "Stephen III ((1433-1440)?-1504)"
 );

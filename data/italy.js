@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Italian 500 Lire",
     "1966",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "110 $\\times$ 55 mm",
     ""
 );

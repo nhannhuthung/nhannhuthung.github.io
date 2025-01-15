@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Rwandan 1,000 Francs",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 65 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Rwandan 2,000 Francs",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "143 $\\times$ 72 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Rwandan 5,000 Francs",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "155 $\\times$ 85 mm",
     ""
 );

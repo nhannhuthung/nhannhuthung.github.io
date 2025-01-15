@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Taiwanese 100 Dollars",
     "2000",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     "Sun Yat-sen (1866-1925)"
 );

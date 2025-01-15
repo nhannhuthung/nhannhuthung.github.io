@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Scottish 5 Pounds - Clydesdale Bank",
     "2016",
-    "In circulation",
+    "Circulating Standard Banknote",
     "125 $\\times$ 65 mm",
     "William Arol (1839-1913)"
 );

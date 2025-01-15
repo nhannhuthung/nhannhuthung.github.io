@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Belarusian 50 Rubles",
     "2000",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "150 $\\times$ 69 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Belarusian 100 Rubles",
     "2000",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "150 $\\times$ 69 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Belarusian 500 Rubles",
     "2000",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "150 $\\times$ 74 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Belarusian 1000 Rubles",
     "2000",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "150 $\\times$ 74 mm",
     ""
 );

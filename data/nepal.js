@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Nepalese 5 Rupees",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 70 mm",
     ""
 );

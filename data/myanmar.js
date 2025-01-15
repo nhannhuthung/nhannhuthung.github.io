@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 5 Kyats",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "110 $\\times$ 55 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 50 Kyats",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 100 Kyats",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 200 Kyats",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 70 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 500 Kyats",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 70 mm",
     ""
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Myanma 1,000 Kyat",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 70 mm",
     ""
 );

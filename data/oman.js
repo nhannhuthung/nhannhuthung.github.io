@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Omani 100 Baisa",
     "1416 (1995)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 72 mm",
     "Qaboos bin Said (1940-2020)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Omani 1 Rial",
     "1441 (2020)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 75 mm",
     ""
 );

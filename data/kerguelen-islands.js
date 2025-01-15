@@ -18,9 +18,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Kerguelenian 100 Francs (Commemorative)",
+    "Kerguelenian 100 Francs",
     "2012",
-    "Non-circulation",
+    "Fantasy Banknote",
     "159 $\\times$ 80 mm",
     "Yves-Joseph de Kerguelen-Tremarec (1734-1797)"
 );

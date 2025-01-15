@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "South Korean 1,000 Won",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "136 $\\times$ 68 mm",
     "Yi Hwang (1501-1570)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "South Korean 5,000 Won",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 68 mm",
     "Yi I (1536-1584)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "South Korean 10,000 Won",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "148 $\\times$ 68 mm",
     "Sejong the Great (1397-1450)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "South Korean 50,000 Won",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "154 $\\times$ 68 mm",
     "Shin Saimdang (1504-1551)"
 );

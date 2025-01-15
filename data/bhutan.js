@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Bhutanese 1 Ngultrum",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 60 mm",
     ""
 );

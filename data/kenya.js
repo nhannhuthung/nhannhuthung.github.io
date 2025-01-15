@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Kenyan 100 Shillings",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "128 $\\times$ 64 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Kenyan 200 Shillings",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "133 $\\times$ 67 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Kenyan 500 Shillings",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 68 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Kenyan 1,000 Shillings",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "143 $\\times$ 70 mm",
     ""
 );

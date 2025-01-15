@@ -1,27 +1,32 @@
-const images1 = [
-    {
-        src: "../images/collection/israel/c/20-shekel-f.jpg",
-        alt: "Front of the 20 Shekel Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/israel/c/20-shekel-b.jpg",
-        alt: "Back of the 20 Shekel Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/israel/c/20-shekel-f.jpg",
+            alt: "Front of the 20 Shekel Bill",
+            description: "Obverse"
+        },
+        {
+            src: "../images/collection/israel/c/20-shekel-b.jpg",
+            alt: "Back of the 20 Shekel Bill",
+            description: "Reverse"
+        }
+    ]
+};
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info1",
+    "info" + index,
     "Israeli 20 Shekels",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "129 $\\times$ 71 mm",
     "Rachel Bluwstein (1890-1931)"
 );
 
-const images2 = [
+index = index + 1; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/israel/c/50-shekel-f.jpg",
         alt: "Front of the 50 Shekel Bill",
@@ -33,18 +38,19 @@ const images2 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info2",
+    "info" + index,
     "Israeli 50 Shekels",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "136 $\\times$ 71 mm",
     "Shaul Tchernichovsky (1875-1943)"
 );
 
-const images3 = [
+index = index + 1; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/israel/c/200-shekel-f.jpg",
         alt: "Front of the 50000 Rial Bill",
@@ -56,13 +62,13 @@ const images3 = [
         description: "Reverse"
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
 generateSlideShowInfo(
-    "info3",
+    "info" + index,
     "Israeli 200 Shekels",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 71 mm",
     "Nathan Alterman (1910-1970)"
 );

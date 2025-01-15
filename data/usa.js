@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 1 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "George Washington (1732-1799)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 2 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Thomas Jefferson (1743-1826)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 5 Dollars",
     "1988",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Abraham Lincoln (1809-1865)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 5 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Abraham Lincoln (1809-1865)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 10 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Alexander Hamilton (1757-1804)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 20 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Andrew Jackson (1767-1845)"
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 50 Dollars",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Ulysses S. Grant (1822-1885)"
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "American 100 Dollars",
     "2009",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
     "Benjamin Franklin (1706-1790)"
 );

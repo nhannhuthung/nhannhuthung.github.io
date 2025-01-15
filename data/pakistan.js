@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Pakistani 100 Rupees",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "139 $\\times$ 65 mm",
     "Muhammad Ali Jinnah (1876-1948)"
 );

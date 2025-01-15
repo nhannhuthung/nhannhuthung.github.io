@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 2,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "154 $\\times$ 76 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 1,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 76 mm",
     "Noguchi Hideyo (1876-1928)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 5,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 76 mm",
     "Higuchi Ichiyō (1872-1896)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 1,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 76 mm",
     "Kitasato Shibasaburō (1853-1931)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 5,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "156 $\\times$ 76 mm",
     "Tsuda Umeko (1864-1929)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Japanese 10,000 Yen",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "160 $\\times$ 76 mm",
     "Shibusawa Eiichi (1840-1931)"
 );

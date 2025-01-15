@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 1 Polar Dollars",
     "2012",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 2 Polar Dollars",
     "2010",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 3 Polar Dollars",
     "2011",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 5 Polar Dollars",
     "2012",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 6 Polar Dollars",
     "2013",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 8 Polar Dollars",
     "2011",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 9 Polar Dollars",
     "2012",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 9 mm",
     ""
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 10 Polar Dollars",
     "2010",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -212,7 +212,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 15 Polar Dollars",
     "2011",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -236,7 +236,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 25 Polar Dollars",
     "2017",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -260,7 +260,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 50 Polar Dollars",
     "2017",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -284,7 +284,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 100 Polar Dollars",
     "2017",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -308,7 +308,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 250 Polar Dollars",
     "2017",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );
@@ -332,7 +332,7 @@ generateSlideShowInfo(
     "info" + index,
     "Arctic Territories' 500 Polar Dollars",
     "2017",
-    "Non-circulation",
+    "Fantasy Banknote",
     "160 $\\times$ 80 mm",
     ""
 );

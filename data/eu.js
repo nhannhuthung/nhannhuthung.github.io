@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "European Union's 5 Euros",
     "2002",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 62 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "European Union's 20 Euros",
     "2002",
-    "In circulation",
+    "Circulating Standard Banknote",
     "133 $\\times$ 72 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "European Union's 5 Euros",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 62 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "European Union's 10 Euros",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "127 $\\times$ 67 mm",
     ""
 );

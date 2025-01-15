@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Singaporean 2 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "126 $\\times$ 63 mm",
     "Yusof Ishak (1910-1970)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Singaporean 5 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "133 $\\times$ 66 mm",
     "Yusof Ishak (1910-1970)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Singaporean 10 Dollars",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "141 $\\times$ 69 mm",
     "Yusof Ishak (1910-1970)"
 );

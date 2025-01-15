@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Ghanaian 1 Cedi",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "137 $\\times$ 65 mm",
     "Kwame Nkrumah (1909-1972), Emmanuel Odarkwei Obetsebi Lamptey (1902-1963), William Ofori Atta (1910-1988), Ebenezer Ako Adjei (1916-2002), Joseph Boakye Danquah (1895-1965), Edward Akufo-Addo (1906-1979)"
 );

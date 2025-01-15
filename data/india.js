@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 5 Rupees",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "117 $\\times$ 63 mm",
     "Mahatma Gandhi (1869-1948)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 10 Rupees",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "117 $\\times$ 63 mm",
     "Mahatma Gandhi (1869-1948)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 100 Rupees",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "157 $\\times$ 73 mm",
     "Mahatma Gandhi (1869-1948)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 10 Rupees",
     "2018",
-    "In circulation",
+    "Circulating Standard Banknote",
     "123 $\\times$ 63 mm",
     "Mahatma Gandhi (1869-1948)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 100 Rupees",
     "2019",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 66 mm",
     "Mahatma Gandhi (1869-1948)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indian 1 Rupee",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "97 $\\times$ 63 mm",
     ""
 );

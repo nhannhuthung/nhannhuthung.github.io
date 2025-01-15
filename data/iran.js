@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Iranian 5,000 Rials",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "154 $\\times$ 75 mm",
     "Ruhollah Khomeini ((1900/1902)?-1989)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Iranian 10,000 Rials",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "160 $\\times$ 77 mm",
     "Ruhollah Khomeini ((1900/1902)?-1989)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Iranian 50,000 Rials",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "166 $\\times$ 79 mm",
     "Ruhollah Khomeini ((1900/1902)?-1989)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Iranian 100,000 Rials",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "166 $\\times$ 79 mm",
     "Ruhollah Khomeini ((1900/1902)?-1989)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Iranian 500,000 Rials",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 71 mm",
     ""
 );

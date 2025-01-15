@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malawian 20 Kwacha",
     "2016",
-    "In circulation",
+    "Circulating Standard Banknote",
     "128 $\\times$ 64 mm",
     "Inkosi Ya Makhosi M'mbelwa II (1860-1959)"
 );

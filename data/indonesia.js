@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indonesian 1,000 Rupiah",
     "2009",
-    "In circulation",
+    "Circulating Standard Banknote",
     "141 $\\times$ 65 mm",
     "Kapitan Pattimura (1783-1817)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Indonesian 2,000 Rupiah",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "141 $\\times$ 65 mm",
     "Pangeran Antasari (1797-1862)"
 );

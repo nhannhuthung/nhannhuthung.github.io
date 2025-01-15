@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Thai 20 Baht",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 72 mm",
     "Rama IX (1927-2016)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Thai 100 Baht",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 72 mm",
     "Rama IX (1927-2016)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Thai 20 Baht",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "138 $\\times$ 72 mm",
     "Rama IX (1927-2016)"
 );

@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 1 Jiao",
     "1980",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "115 $\\times$ 52 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 1 Yuan",
     "1999",
-    "In circulation",
+    "Circulating Standard Banknote",
     "131 $\\times$ 63 mm",
     "Mao Zedong (1893-1976)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 5 Yuan",
     "2005",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 63 mm",
     "Mao Zedong (1893-1976)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 50 Yuan",
     "2005",
-    "In circulation",
+    "Circulating Standard Banknote",
     "150 $\\times$ 70 mm",
     "Mao Zedong (1893-1976)"
 );

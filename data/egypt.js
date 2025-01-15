@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 50 Plastres",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 70 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 5 Pounds",
     "2021",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 20 Pounds",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "155 $\\times$ 70 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 50 Pounds",
     "2022",
-    "In circulation",
+    "Circulating Standard Banknote",
     "160 $\\times$ 70 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 100 Pounds",
     "2023",
-    "In circulation",
+    "Circulating Standard Banknote",
     "165 $\\times$ 70 mm",
     ""
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 200 Pounds",
     "2018",
-    "In circulation",
+    "Circulating Standard Banknote",
     "165 $\\times$ 72 mm",
     ""
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 10 Pounds",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "132 $\\times$ 69 mm",
     ""
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "Egyptian 20 Pounds",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "137 $\\times$ 69 mm",
     ""
 );

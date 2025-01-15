@@ -16,7 +16,7 @@ generateSlideShowInfo(
     "info1",
     "Saudi 1 Riyals",
     "1433 (2012)",
-    "In circulation",
+    "Circulating Standard Banknote",
     "133 $\\times$ 63 mm",
     "Abdullah bin Abdulaziz Al Saud  (1924-2015)"
 );

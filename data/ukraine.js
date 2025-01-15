@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Ukrainian 1 Hryvnia",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "118 $\\times$ 63 mm",
     "Volodymyr I Sviatoslavych (958?-1015)"
 );

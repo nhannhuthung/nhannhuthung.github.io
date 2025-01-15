@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Vietnamese 1,000 Dong",
     "1988",
-    "In circulation",
+    "Circulating Standard Banknote",
     "134 $\\times$ 65 mm",
     "Ho Chi Minh (1890-1969)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Vietnamese 2,000 Dong",
     "1988",
-    "In circulation",
+    "Circulating Standard Banknote",
     "134 $\\times$ 65 mm",
     "Ho Chi Minh (1890-1969)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Vietnamese 5,000 Dong",
     "1991",
-    "In circulation",
+    "Circulating Standard Banknote",
     "134 $\\times$ 65 mm",
     "Ho Chi Minh (1890-1969)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Vietnamese 10,000 Dong",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 68 mm",
     "Ho Chi Minh (1890-1969)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Vietnamese 20,000 Dong",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 68 mm",
     "Ho Chi Minh (1890-1969)"
 );

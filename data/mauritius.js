@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mauritian 25 Rupees",
     "2003",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 65 mm",
     "Moilin Jean Ah-Chuen (1911-1991)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mauritian 50 Rupees",
     "2001",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 68 mm",
     "Joseph Maurice Paturau (1916-1996)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mauritian 100 Rupees",
     "2004",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 70 mm",
     "Renganaden Seeneevassen (1910-1958)"
 );

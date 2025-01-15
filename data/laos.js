@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Lao 2,000 Kip",
     "2011",
-    "In circulation",
+    "Circulating Standard Banknote",
     "141 $\\times$ 65 mm",
     "Kaysone Phomvihane (1920-1992)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Lao 5,000 Kip",
     "2003",
-    "In circulation",
+    "Circulating Standard Banknote",
     "152 $\\times$ 68 mm",
     "Kaysone Phomvihane (1920-1992)"
 );

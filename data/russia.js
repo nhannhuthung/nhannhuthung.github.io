@@ -18,9 +18,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Russian 100 Rubles (Commemorative)",
+    "Russian 100 Rubles",
     "2018",
-    "In circulation",
+    "Circulating Commemorative Banknote",
     "65 $\\times$ 150 mm",
     ""
 );

@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mexican 20 Pesos",
     "1998",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "129 $\\times$ 65 mm",
     "Benito Juárez (1858-1872)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mexican 50 Pesos",
     "1998",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "129 $\\times$ 65 mm",
     "José María Morelos (1765-1815)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mexican 50 Pesos",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "127 $\\times$ 66 mm",
     "José María Morelos (1765-1815)"
 );
@@ -90,9 +90,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Mexican 20 Pesos (Commemorative)",
+    "Mexican 20 Pesos",
     "2021",
-    "In circulation",
+    "Circulating Standard/Commemorative Banknote",
     "120 $\\times$ 65 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mexican 50 Pesos",
     "2023",
-    "In circulation",
+    "Circulating Standard Banknote",
     "65 $\\times$ 125 mm",
     ""
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mexican 100 Pesos",
     "2023",
-    "In circulation",
+    "Circulating Standard Banknote",
     "65 $\\times$ 132 mm",
     "Juana Inés de la Cruz (1651-1695)"
 );

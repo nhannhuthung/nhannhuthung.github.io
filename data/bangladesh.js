@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Bangladeshi 2 Taka",
     "2013",
-    "In circulation",
+    "Circulating Standard Banknote",
     "100 $\\times$ 60 mm",
     "Bangabandhu Sheikh Mujibur Rahman (1920-1975)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Bangladeshi 5 Taka",
     "2015",
-    "In circulation",
+    "Circulating Standard Banknote",
     "142 $\\times$ 68 mm",
     "Bangabandhu Sheikh Mujibur Rahman (1920-1975)"
 );

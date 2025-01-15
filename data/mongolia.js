@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 10 Möngö",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "45 $\\times$ 90 mm",
     ""
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 20 Möngö",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "45 $\\times$ 90 mm",
     ""
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 50 Möngö",
     "",
-    "Out of circulation",
+    "Non-circulating Standard Banknote",
     "45 $\\times$ 90 mm",
     ""
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 1 Tögrög",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "115 $\\times$ 57 mm",
     ""
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 10 Tögrög",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "125 $\\times$ 61 mm",
     "Damdin Sükhbaatar (1893-1923)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 20 Tögrög",
     "2017",
-    "In circulation",
+    "Circulating Standard Banknote",
     "130 $\\times$ 64 mm",
     "Damdin Sükhbaatar (1893-1923)"
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 50 Tögrög",
     "2016",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 66 mm",
     "Damdin Sükhbaatar (1893-1923)"
 );
@@ -188,7 +188,7 @@ generateSlideShowInfo(
     "info" + index,
     "Mongolian 100 Tögrög",
     "2014",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 68 mm",
     "Damdin Sükhbaatar (1893-1923)"
 );

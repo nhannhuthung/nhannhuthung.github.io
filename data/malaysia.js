@@ -20,7 +20,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 1 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -44,7 +44,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 10 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -68,7 +68,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 1 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "120 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -92,7 +92,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 5 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "135 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 10 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "140 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -140,7 +140,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 20 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 65 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
@@ -164,7 +164,7 @@ generateSlideShowInfo(
     "info" + index,
     "Malaysian 50 Ringgit",
     "",
-    "In circulation",
+    "Circulating Standard Banknote",
     "145 $\\times$ 69 mm",
     "Tunku Abdul Rahman (1895-1960)"
 );
