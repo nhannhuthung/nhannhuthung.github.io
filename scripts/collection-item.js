@@ -21,6 +21,7 @@ function insertSidebarHTML(id) {
                 <li onclick="navigateTo('mauritius.html')">Mauritius</li>
                 <li onclick="navigateTo('rwanda.html')">Rwanda</li>
                 <li onclick="navigateTo('somalia.html')">Somalia</li>
+                <li onclick="navigateTo('west-africa.html')">West Africa</li>
             </ul>
 
             <h2 onclick="toggleCategories('europe')">Europe</h2>
@@ -52,6 +53,7 @@ function insertSidebarHTML(id) {
                 <li onclick="navigateTo('israel.html')">Israel</li>
                 <li onclick="navigateTo('japan.html')">Japan</li>
                 <li onclick="navigateTo('laos.html')">Laos</li>
+                <li onclick="navigateTo('lebanon.html')">Lebanon</li>
                 <li onclick="navigateTo('malaysia.html')">Malaysia</li>
                 <li onclick="navigateTo('mogolia.html')">Mongolia</li>
                 <li onclick="navigateTo('myanmar.html')">Myanmar</li>
