@@ -72,6 +72,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 0;
+    }
     .intro {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 1fr 2fr 1fr;
