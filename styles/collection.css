@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(66, 132, 207);
+    background-color: #8CC1FE;
 }
 
 #header-nav,
@@ -29,16 +29,17 @@ body {
 }
 .category-item {
     padding: 20px;
-    border: 2px solid #24160b;
+    border: 2px solid #b7d7fc;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
-    color: #352315;
+    color: #b7d7fc;
     font-size: 20px;
 }
 .category-item:hover {
     background-color: #e7e4e4;
+    color: #8aa1bb;
     border: 2px solid #e7e4e4;
     transform: scale(1.05);
 }
@@ -48,10 +49,10 @@ body {
     margin: auto;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(248, 248, 248, 0.3);
+    margin-top: 25px;
     backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(7, 47, 95, 0.5);
 }
 
 ::-webkit-scrollbar {
@@ -70,20 +71,20 @@ body {
 h1 {
     text-align: center; 
     font-size: 42px; 
-    color: #0a0704;
+    color: #b7d7fc;
 }
 
 h2 {
     text-align: center; 
     font-size: 33px;
-    color: #0a0704;
+    color: #b7d7fc;
 }
 
 h3 {
     text-align: center; 
     font-size: 30px;
     margin: initial;
-    color: rgb(38, 106, 233);
+    color: #468fcb;
 }
 
 h4 {
@@ -127,7 +128,7 @@ ul li::before {
     #header-nav a,
     #header-nav a:link,
     #header-nav a:visited {
-        color: rgb(149, 192, 226);
+        color: #b7d7fc;
     }
 
     h1 {
