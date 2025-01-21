@@ -24,7 +24,8 @@ body {
     gap: 20px;
     justify-content: center;
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
 }
 .category-item {
     padding: 20px;
@@ -68,21 +69,29 @@ body {
 
 h1 {
     text-align: center; 
-    font-size: 36px; 
+    font-size: 42px; 
     color: #0a0704;
 }
 
 h2 {
+    text-align: center; 
+    font-size: 33px;
+    color: #0a0704;
+}
+
+h3 {
     text-align: center; 
     font-size: 30px;
     margin: initial;
     color: rgb(38, 106, 233);
 }
 
-h3 {
+h4 {
     margin-left: 15px;
     font-size: 21px;
     color: rgb(230, 226, 226);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -128,8 +137,12 @@ ul li::before {
     h2 {
         font-size: 27px;
     }
-    
+
     h3 {
+        font-size: 27px;
+    }
+    
+    h4 {
         font-size: 18px;
         margin: 15px;
     }

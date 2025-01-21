@@ -6,6 +6,7 @@ section {
 
 body {
     background-color: #E1DCD3;
+    overflow-y: hidden;
 }
 
 .intro {
@@ -24,6 +25,8 @@ body {
 
 .intro-logo {
     grid-area: intro-logo;
+    position: relative;
+    text-decoration: none;
 }
 
 .intro-logo img {
@@ -71,16 +74,32 @@ body {
     border-radius: 10px;
 }
 
+#bottom {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+
+#owl-text {
+    text-align: center;
+}
+
+#owl-text p {
+    margin: 0;
+    color: #283033;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 0;
     }
     .intro {
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 0.25fr 2fr 0.25fr;
+        grid-template-rows: 0.5fr 3fr 0.5fr;
         grid-template-areas:
         ". . ."
-        "intro-logo intro-logo intro-logo"
+        ". intro-logo ."
         ". . .";
     }
 
@@ -111,4 +130,9 @@ body {
         text-align: left;
         display: block;
     }
+
+    #bottom {
+        top: 60%;
+        font-size: 10px;
+    } 
 }

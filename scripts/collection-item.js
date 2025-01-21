@@ -2,9 +2,10 @@
 function insertSidebarHTML(id) {
     const sidebarHTML = `
         <div class="sidebar">
-            <h2 onclick="toggleCategories('north-america')">North America</h2>
-            <ul id="north-america">
+            <h2 onclick="toggleCategories('america')">America</h2>
+            <ul id="america">
                 <li onclick="navigateTo('canada.html')">Canada</li>
+                <li onclick="navigateTo('costa-rica.html')">Costa Rica</li>
                 <li onclick="navigateTo('mexico.html')">Mexico</li>
                 <li onclick="navigateTo('usa.html')">United States of America</li>
             </ul>
