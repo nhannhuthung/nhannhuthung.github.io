@@ -119,6 +119,15 @@ ul li::before {
     position: relative;
 }
 
+#top_btn {
+    color: rgb(103, 129, 248);
+}
+
+#top_btn:hover {
+    background-color: rgb(89, 127, 223);
+    color: whitesmoke;
+}
+
 @media (max-width: 768px) {
     #header-nav {
         background-color: #141618;  
