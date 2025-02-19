@@ -19,10 +19,10 @@ new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
     "North Korean 200 Won",
-    "",
+    "2005",
     "Circulating Standard Banknote",
     "140 $\\times$ 72 mm",
-    "2005"
+    ""
 );
 
 index = index + 1; //index = 2
