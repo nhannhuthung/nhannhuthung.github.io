@@ -96,3 +96,27 @@ generateSlideShowInfo(
     "154 $\\times$ 68 mm",
     "Shin Saimdang (1504-1551)"
 );
+
+index = index + 1; //index = 5
+images[`${index}`] = [
+    {
+        src: "../images/collection/south-korea/2018/2000-won-f.jpg",
+        alt: "Front of the 2000 Won Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/south-korea/2018/2000-won-b.jpg",
+        alt: "Back of the 2000 Won Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "South Korean 2,000 Won",
+    "2018",
+    "Circulating Commemorative Banknote",
+    "140 $\\times$ 75 mm",
+    ""
+);

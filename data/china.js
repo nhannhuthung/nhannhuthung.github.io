@@ -96,3 +96,51 @@ generateSlideShowInfo(
     "150 $\\times$ 70 mm",
     "Mao Zedong (1893-1976)"
 );
+
+index = index + 1; //index = 5
+images[`${index}`] = [
+    {
+        src: "../images/collection/china/2022/20-yuan-paper-f.jpg",
+        alt: "Front of the 20 Yuan Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/china/2022/20-yuan-paper-b.jpg",
+        alt: "Back of the 20 Yuan Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Chinese 20 Yuan",
+    "2022",
+    "Commemorative Banknote",
+    "70 $\\times$ 145 mm",
+    ""
+);
+
+index = index + 1; //index = 6
+images[`${index}`] = [
+    {
+        src: "../images/collection/china/2022/20-yuan-plastic-f.jpg",
+        alt: "Front of the 20 Yuan Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/china/2022/20-yuan-plastic-b.jpg",
+        alt: "Back of the 20 Yuan Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Chinese 20 Yuan",
+    "2022",
+    "Commemorative Banknote",
+    "70 $\\times$ 145 mm",
+    ""
+);
