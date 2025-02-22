@@ -19,7 +19,7 @@ new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
     "North Korean 200 Won",
-    "2005",
+    "1994 (2005)",
     "Circulating Standard Banknote",
     "140 $\\times$ 72 mm",
     ""
@@ -43,7 +43,7 @@ new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
     "North Korean 500 Won",
-    "2007",
+    "1996 (2007)",
     "Circulating Standard Banknote",
     "156 $\\times$ 75 mm",
     ""
@@ -67,7 +67,7 @@ new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
     "North Korean 5,000 Wons",
-    "2006",
+    "1995 (2006)",
     "Circulating Standard Banknote",
     "156 $\\times$ 75 mm",
     "Kim Il Sung (1912-1994)"

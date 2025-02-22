@@ -3,13 +3,13 @@ let index = 1;
 const images = {
     [`${index}`]: [
         {
-            src: "../images/collection/moldova/2015/1-leu-f.jpg",
-            alt: "Front of the 1 Leu Bill",
+            src: "../images/collection/zambia/1980/50-kwacha-f.jpg",
+            alt: "Front of the 50 Kwacha Bill",
             description: "Obverse"
         },
         {
-            src: "../images/collection/moldova/2015/1-leu-b.jpg",
-            alt: "Back of the 1 Leu Bill",
+            src: "../images/collection/zambia/1980/50-kwacha-b.jpg",
+            alt: "Back of the 50 Kwacha Bill",
             description: "Reverse"
         }
     ]
@@ -18,9 +18,9 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Moldovan 1 Leu",
-    "2015",
+    "Zambian 50 Kwacha",
+    "",
     "Circulating Standard Banknote",
-    "114 $\\times$ 58 mm",
-    "Stephen III ((1433-1440)?-1504)"
+    "153 $\\times$ 75 mm",
+    "Kenneth Kaunda (1924-2021)"
 );

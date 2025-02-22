@@ -26,7 +26,6 @@ function toTop() {
   
     function init() {
       top_button = document.getElementById("top_btn");
-  
     }
   
   })(window, document, undefined);

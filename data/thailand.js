@@ -72,3 +72,27 @@ generateSlideShowInfo(
     "138 $\\times$ 72 mm",
     "Rama IX (1927-2016)"
 );
+
+index = index + 1; //index = 4
+images[`${index}`] = [
+    {
+        src: "../images/collection/thailand/17/100-baht-f.jpg",
+        alt: "Front of the 100 Baht Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/thailand/17/100-baht-b.jpg",
+        alt: "Back of the 100 Baht Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Thai 100 Baht",
+    "",
+    "Circulating Standard Banknote",
+    "150 $\\times$ 72 mm",
+    "Rama X (1952-Present)"
+);

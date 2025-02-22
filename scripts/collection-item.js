@@ -1,93 +1,102 @@
 //--// function to print out code for sidebar //--//
+function createCategory(title, id, items) {
+    let categoryHTML = `<h2 onclick="toggleCategories('${id}')">${title}</h2>`;
+    categoryHTML += `<ul id="${id}">`;
+    items.forEach(item => {
+        categoryHTML += `<li onclick="navigateTo('${item.link}')">${item.name}</li>`;
+    });
+    categoryHTML += `</ul>`;
+    return categoryHTML;
+}
+
 function insertSidebarHTML(id) {
     const sidebarHTML = `
         <div class="sidebar">
-            <h2 onclick="toggleCategories('america')">America</h2>
-            <ul id="america">
-                <li onclick="navigateTo('canada.html')">Canada</li>
-                <li onclick="navigateTo('costa-rica.html')">Costa Rica</li>
-                <li onclick="navigateTo('mexico.html')">Mexico</li>
-                <li onclick="navigateTo('usa.html')">United States of America</li>
-            </ul>
+            ${createCategory("America", "america", [
+                { name: "Canada", link: "canada.html" },
+                { name: "Costa Rica", link: "costa-rica.html" },
+                { name: "Mexico", link: "mexico.html" },
+                { name: "United States of America", link: "usa.html" },
+                { name: "Venezuela", link: "venezuela.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('africa')">Africa</h2>
-            <ul id="africa">
-                <li onclick="navigateTo('drc.html')">Democratic Republic of the Congo</li>
-                <li onclick="navigateTo('egypt.html')">Egypt</li>
-                <li onclick="navigateTo('ethiopia.html')">Ethiopia</li>
-                <li onclick="navigateTo('ghana.html')">Ghana</li>
-                <li onclick="navigateTo('guinea.html')">Guinea</li>
-                <li onclick="navigateTo('kenya.html')">Kenya</li>
-                <li onclick="navigateTo('malawi.html')">Malawi</li>
-                <li onclick="navigateTo('mauritius.html')">Mauritius</li>
-                <li onclick="navigateTo('rwanda.html')">Rwanda</li>
-                <li onclick="navigateTo('somalia.html')">Somalia</li>
-                <li onclick="navigateTo('west-africa.html')">West Africa</li>
-            </ul>
+            ${createCategory("Africa", "africa", [
+                { name: "Democratic Republic of the Congo", link: "drc.html" },
+                { name: "Egypt", link: "egypt.html" },
+                { name: "Ethiopia", link: "ethiopia.html" },
+                { name: "Ghana", link: "ghana.html" },
+                { name: "Guinea", link: "guinea.html" },
+                { name: "Kenya", link: "kenya.html" },
+                { name: "Malawi", link: "malawi.html" },
+                { name: "Mauritius", link: "mauritius.html" },
+                { name: "Rwanda", link: "rwanda.html" },
+                { name: "Somalia", link: "somalia.html" },
+                { name: "West Africa", link: "west-africa.html" },
+                { name: "Zambia", link: "zambia.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('europe')">Europe</h2>
-            <ul id="europe">
-                <li onclick="navigateTo('belarus.html')">Belarus</li>
-                <li onclick="navigateTo('england.html')">England</li>
-                <li onclick="navigateTo('eu.html')">European Union</li>
-                <li onclick="navigateTo('ireland.html')">Ireland</li>
-                <li onclick="navigateTo('italy.html')">Italy</li>
-                <li onclick="navigateTo('moldova.html')">Moldova</li>
-                <li onclick="navigateTo('norway.html')">Norway</li>
-                <li onclick="navigateTo('russia.html')">Russia</li>
-                <li onclick="navigateTo('scotland.html')">Scotland</li>
-                <li onclick="navigateTo('transnistria.html')">Transnistria</li>
-                <li onclick="navigateTo('turkey.html')">Turkey</li>
-                <li onclick="navigateTo('ukraine.html')">Ukraine</li>
-            </ul>
+            ${createCategory("Europe", "europe", [
+                { name: "Belarus", link: "belarus.html" },
+                { name: "Croatia", link: "croatia.html" },
+                { name: "England", link: "england.html" },
+                { name: "European Union", link: "eu.html" },
+                { name: "Ireland", link: "ireland.html" },
+                { name: "Italy", link: "italy.html" },
+                { name: "Moldova", link: "moldova.html" },
+                { name: "Norway", link: "norway.html" },
+                { name: "Russia", link: "russia.html" },
+                { name: "Scotland", link: "scotland.html" },
+                { name: "Transnistria", link: "transnistria.html" },
+                { name: "Turkey", link: "turkey.html" },
+                { name: "Ukraine", link: "ukraine.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('asia')">Asia</h2>
-            <ul id="asia">
-                <li onclick="navigateTo('bangladesh.html')">Bangladesh</li>
-                <li onclick="navigateTo('bhutan.html')">Bhutan</li>
-                <li onclick="navigateTo('cambodia.html')">Cambodia</li>
-                <li onclick="navigateTo('china.html')">China</li>
-                <li onclick="navigateTo('hongkong.html')">Hongkong</li>
-                <li onclick="navigateTo('india.html')">India</li>
-                <li onclick="navigateTo('indonesia.html')">Indonesia</li>
-                <li onclick="navigateTo('iran.html')">Iran</li>
-                <li onclick="navigateTo('israel.html')">Israel</li>
-                <li onclick="navigateTo('japan.html')">Japan</li>
-                <li onclick="navigateTo('laos.html')">Laos</li>
-                <li onclick="navigateTo('lebanon.html')">Lebanon</li>
-                <li onclick="navigateTo('malaysia.html')">Malaysia</li>
-                <li onclick="navigateTo('mogolia.html')">Mongolia</li>
-                <li onclick="navigateTo('myanmar.html')">Myanmar</li>
-                <li onclick="navigateTo('nepal.html')">Nepal</li>
-                <li onclick="navigateTo('north-korea.html')">North Korea</li>
-                <li onclick="navigateTo('oman.html')">Oman</li>
-                <li onclick="navigateTo('pakistan.html')">Pakistan</li>
-                <li onclick="navigateTo('saudi-arabia.html')">Saudi Arabia</li>
-                <li onclick="navigateTo('singapore.html')">Singapore</li>
-                <li onclick="navigateTo('south-korea.html')">South Korea</li>
-                <li onclick="navigateTo('taiwan.html')">Taiwan</li>
-                <li onclick="navigateTo('thailand.html')">Thailand</li>
-                <li onclick="navigateTo('turkmenistan.html')">Turkmenistan</li>
-                <li onclick="navigateTo('uzbekistan.html')">Uzbekistan</li>
-                <li onclick="navigateTo('vietnam.html')">Vietnam</li>
-            </ul>
+            ${createCategory("Asia", "asia", [
+                { name: "Bangladesh", link: "bangladesh.html" },
+                { name: "Bhutan", link: "bhutan.html" },
+                { name: "Cambodia", link: "cambodia.html" },
+                { name: "China", link: "china.html" },
+                { name: "Hongkong", link: "hongkong.html" },
+                { name: "India", link: "india.html" },
+                { name: "Indonesia", link: "indonesia.html" },
+                { name: "Iran", link: "iran.html" },
+                { name: "Israel", link: "israel.html" },
+                { name: "Japan", link: "japan.html" },
+                { name: "Kyrgyzstan", link: "kyrgyzstan.html" },
+                { name: "Laos", link: "laos.html" },
+                { name: "Lebanon", link: "lebanon.html" },
+                { name: "Malaysia", link: "malaysia.html" },
+                { name: "Mongolia", link: "mogolia.html" },
+                { name: "Myanmar", link: "myanmar.html" },
+                { name: "Nepal", link: "nepal.html" },
+                { name: "North Korea", link: "north-korea.html" },
+                { name: "Oman", link: "oman.html" },
+                { name: "Pakistan", link: "pakistan.html" },
+                { name: "Saudi Arabia", link: "saudi-arabia.html" },
+                { name: "Singapore", link: "singapore.html" },
+                { name: "South Korea", link: "south-korea.html" },
+                { name: "Taiwan", link: "taiwan.html" },
+                { name: "Tajikistan", link: "tajikistan.html" },
+                { name: "Thailand", link: "thailand.html" },
+                { name: "Turkmenistan", link: "turkmenistan.html" },
+                { name: "Uzbekistan", link: "uzbekistan.html" },
+                { name: "Vietnam", link: "vietnam.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('oceania')">Oceania</h2>
-            <ul id="oceania">
-                <li onclick="navigateTo('australia.html')">Australia</li>
-            </ul>
+            ${createCategory("Oceania", "oceania", [
+                { name: "Australia", link: "australia.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('arctic')">Arctic</h2>
-            <ul id="arctic">
-                <li onclick="navigateTo('arctic-territories.html')">Arctic Territories</li>
-            </ul>
+            ${createCategory("Arctic", "arctic", [
+                { name: "Arctic Territories", link: "arctic-territories.html" }
+            ])}
 
-            <h2 onclick="toggleCategories('antartica')">Antartica</h2>
-            <ul id="antartica">
-                <li onclick="navigateTo('kerguelen-islands.html')">Kerguelen Islands</li>
-            </ul>
+            ${createCategory("Antarctica", "antarctica", [
+                { name: "Kerguelen Islands", link: "kerguelen-islands.html" }
+            ])}
         </div>
     `;
+
     document.getElementById(id).innerHTML = sidebarHTML;
 }
 
@@ -206,30 +215,26 @@ function generateSlideShowInfo(containerId, title, year, type, size, figure) {
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
 
-    // Create the title (h3)
-    const titleElement = document.createElement("h3");
-    titleElement.textContent = title;
-    infoDiv.appendChild(titleElement);
+    // Helper function to create and append an element if the value is not empty
+    function addInfoElement(label, value) {
+        if (value) {
+            const element = document.createElement("p");
+            element.innerHTML = `<strong>${label}:</strong> ${value}`;
+            infoDiv.appendChild(element);
+        }
+    }
 
-    // Create the year paragraph
-    const yearElement = document.createElement("p");
-    yearElement.innerHTML = `<strong>Year:</strong> ${year}`;
-    infoDiv.appendChild(yearElement);
+    // Create and append elements only if they have values
+    if (title) {
+        const titleElement = document.createElement("h3");
+        titleElement.textContent = title;
+        infoDiv.appendChild(titleElement);
+    }
 
-    // Create the type paragraph
-    const typeElement = document.createElement("p");
-    typeElement.innerHTML = `<strong>Type:</strong> ${type}`;
-    infoDiv.appendChild(typeElement);
-
-    // Create the size paragraph
-    const sizeElement = document.createElement("p");
-    sizeElement.innerHTML = `<strong>Size:</strong> ${size}`;
-    infoDiv.appendChild(sizeElement);
-
-    // Create the figure paragraph
-    const figureElement = document.createElement("p");
-    figureElement.innerHTML = `<strong>Figure:</strong> ${figure}`;
-    infoDiv.appendChild(figureElement);
+    addInfoElement("Year", year);
+    addInfoElement("Type", type);
+    addInfoElement("Size", size);
+    addInfoElement("Figure", figure);
 
     // Append the created infoDiv to the specified container
     const container = document.getElementById(containerId);
