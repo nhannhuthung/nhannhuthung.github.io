@@ -141,7 +141,7 @@ generateSlideShowInfo(
     "Vietnamese 10,000 Dong",
     "",
     "Circulating Standard Banknote",
-    "140 $\\times$ 68 mm",
+    "132 $\\times$ 60 mm",
     "Ho Chi Minh (1890-1969)"
 );
 
@@ -165,6 +165,6 @@ generateSlideShowInfo(
     "Vietnamese 20,000 Dong",
     "",
     "Circulating Standard Banknote",
-    "140 $\\times$ 68 mm",
+    "138 $\\times$ 66 mm",
     "Ho Chi Minh (1890-1969)"
 );
