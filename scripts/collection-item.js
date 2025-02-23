@@ -14,6 +14,7 @@ function insertSidebarHTML(id) {
         <div class="sidebar">
             ${createCategory("America", "america", [
                 { name: "Canada", link: "canada.html" },
+                { name: "Colombia", link: "colombia.html" },
                 { name: "Costa Rica", link: "costa-rica.html" },
                 { name: "Mexico", link: "mexico.html" },
                 { name: "United States of America", link: "usa.html" },
