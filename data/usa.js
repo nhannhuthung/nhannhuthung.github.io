@@ -18,7 +18,7 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "American 1 Dollars",
+    "American 1 Dollar",
     "2013",
     "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
