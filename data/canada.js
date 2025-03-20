@@ -190,7 +190,8 @@ generateSlideShowInfo(
     "2005",
     "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
-    "Elizabeth II (1952-2022)"
+    "Elizabeth II (1952-2022)",
+    'Banknote of 2004 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 9
@@ -358,5 +359,6 @@ generateSlideShowInfo(
     "2018",
     "Circulating Standard Banknote",
     "70 $\\times$ 153 mm",
-    "Viola Desmond (1914-1965)"
+    "Viola Desmond (1914-1965)",
+    'Banknote of 2018 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

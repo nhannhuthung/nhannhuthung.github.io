@@ -118,7 +118,8 @@ generateSlideShowInfo(
     "2023",
     "Circulating Standard Banknote",
     "65 $\\times$ 125 mm",
-    ""
+    "",
+    'Banknote of 2021 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 6
@@ -142,5 +143,6 @@ generateSlideShowInfo(
     "2023",
     "Circulating Standard Banknote",
     "65 $\\times$ 132 mm",
-    "Juana Inés de la Cruz (1651-1695)"
+    "Juana Inés de la Cruz (1651-1695)",
+    'Banknote of 2020 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

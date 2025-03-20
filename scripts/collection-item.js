@@ -57,7 +57,7 @@ function insertSidebarHTML(id) {
                 { name: "Bhutan", link: "bhutan.html" },
                 { name: "Cambodia", link: "cambodia.html" },
                 { name: "China", link: "china.html" },
-                { name: "Hongkong", link: "hongkong.html" },
+                { name: "Hong Kong", link: "hongkong.html" },
                 { name: "India", link: "india.html" },
                 { name: "Indonesia", link: "indonesia.html" },
                 { name: "Iran", link: "iran.html" },
@@ -211,7 +211,7 @@ function createSlideshow(containerId, images) {
 //--// function to display banknote //--//
 
 //--// function to display information of banknote //--//
-function generateSlideShowInfo(containerId, title, year, type, size, figure) {
+function generateSlideShowInfo(containerId, title, year, type, size, figure, note) {
     // Create the container div
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
@@ -236,6 +236,14 @@ function generateSlideShowInfo(containerId, title, year, type, size, figure) {
     addInfoElement("Type", type);
     addInfoElement("Size", size);
     addInfoElement("Figure", figure);
+
+    // Add note at the end in italic
+    if (note) {
+        const noteElement = document.createElement("p");
+        noteElement.innerHTML = `<em>${note}</em>`;
+        noteElement.style.fontSize = "16px";
+        infoDiv.appendChild(noteElement);
+    }
 
     // Append the created infoDiv to the specified container
     const container = document.getElementById(containerId);

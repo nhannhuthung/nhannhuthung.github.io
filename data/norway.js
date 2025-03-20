@@ -42,7 +42,7 @@ createSlideshow("slide" + index, images[index]);
 new Slideshow("slideshow" + index);
 generateSlideShowInfo(
     "info" + index,
-    "Omani 200 Kroner",
+    "Norweigian 200 Kroner",
     "2016",
     "Circulating Standard Banknote",
     "140 $\\times$ 70 mm",

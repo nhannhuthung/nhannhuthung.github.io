@@ -168,3 +168,27 @@ generateSlideShowInfo(
     "138 $\\times$ 66 mm",
     "Ho Chi Minh (1890-1969)"
 );
+
+index = index + 1; //index = 8
+images[`${index}`] = [
+    {
+        src: "../images/collection/vietnam/2016/100-dong-f.jpg",
+        alt: "Front of the 100 Dong Bill",
+        description: "Obverse"
+    },
+    {
+        src: "../images/collection/vietnam/2016/100-dong-b.jpg",
+        alt: "Back of the 100 Dong Bill",
+        description: "Reverse"
+    }
+];
+createSlideshow("slide" + index, images[index]);
+new Slideshow("slideshow" + index);
+generateSlideShowInfo(
+    "info" + index,
+    "Vietnamese 100 Dong",
+    "2016",
+    "Commemorative Banknote",
+    "163 $\\times$ 83 mm",
+    "Ho Chi Minh (1890-1969)"
+);
