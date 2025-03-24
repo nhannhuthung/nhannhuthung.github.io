@@ -239,7 +239,9 @@ generateSlideShowInfo(
     "2013",
     "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
-    "John A. Macdonald (1815-1891)"
+    "John A. Macdonald (1815-1891)",
+    '2013\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
+
 );
 
 index = index + 1; //index = 11
@@ -287,7 +289,8 @@ generateSlideShowInfo(
     "2012",
     "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
-    "W. L. Mackenzie King (1874-1950)"
+    "W. L. Mackenzie King (1874-1950)",
+    '2012\'s Top 13 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 13
@@ -311,7 +314,8 @@ generateSlideShowInfo(
     "2011",
     "Circulating Standard Banknote",
     "153 $\\times$ 70 mm",
-    "Robert L. Borden (1854-1937)"
+    "Robert L. Borden (1854-1937)",
+    '2011\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 14
@@ -335,7 +339,8 @@ generateSlideShowInfo(
     "2017",
     "Circulating Commemorative Banknote",
     "153 $\\times$ 70 mm",
-    "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)"
+    "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)",
+    '2017\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 15

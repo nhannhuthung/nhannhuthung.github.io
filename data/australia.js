@@ -118,7 +118,8 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "130 $\\times$ 65 mm",
-    "Elizabeth II (1952-2022)"
+    "Elizabeth II (1952-2022)",
+    '2016\'s Top 19 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 6
@@ -142,7 +143,8 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "137 $\\times$ 65 mm",
-    "Banjo Paterson (1864-1941)"
+    "Banjo Paterson (1864-1941)",
+    '2017\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 7
@@ -166,5 +168,6 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "158 $\\times$ 65 mm",
-    "Nellie Melba (1861-1931)"
+    "Nellie Melba (1861-1931)",
+    '2020\'s Top 24 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

@@ -94,7 +94,8 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "135 $\\times$ 65 mm",
-    "Tunku Abdul Rahman (1895-1960)"
+    "Tunku Abdul Rahman (1895-1960)",
+    '2012\'s Top 13 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 5

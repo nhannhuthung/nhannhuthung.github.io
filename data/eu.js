@@ -70,7 +70,8 @@ generateSlideShowInfo(
     "2013",
     "Circulating Standard Banknote",
     "120 $\\times$ 62 mm",
-    ""
+    "",
+    '2013\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 4

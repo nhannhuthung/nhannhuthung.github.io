@@ -190,5 +190,6 @@ generateSlideShowInfo(
     "2009",
     "Circulating Standard Banknote",
     "156 $\\times$ 67 mm",
-    "Benjamin Franklin (1706-1790)"
+    "Benjamin Franklin (1706-1790)",
+    '2013\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

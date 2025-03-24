@@ -135,7 +135,7 @@ class Slideshow {
         }
 
         // Show the current slide
-        //this.slideIndex = (this.slideIndex + 1) % this.slides.length;
+        //this.slideIndex = (this.slideIndex + 1) % this.slides.length;     // display the second image first
         this.slides[this.slideIndex].style.display = "block";
 
         // Automatically transition to the next slide

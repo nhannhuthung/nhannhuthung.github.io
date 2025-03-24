@@ -22,5 +22,6 @@ generateSlideShowInfo(
     "2018",
     "Circulating Commemorative Banknote",
     "65 $\\times$ 150 mm",
-    ""
+    "",
+    '2018\'s Top 16 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

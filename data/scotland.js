@@ -46,5 +46,6 @@ generateSlideShowInfo(
     "2016",
     "Circulating Standard Banknote",
     "125 $\\times$ 65 mm",
-    "William Arol (1839-1913)"
+    "William Arol (1839-1913)",
+    '2015\'s Top 20 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

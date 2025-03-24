@@ -94,7 +94,8 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "154 $\\times$ 68 mm",
-    "Shin Saimdang (1504-1551)"
+    "Shin Saimdang (1504-1551)",
+    '2009\'s Top 9 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 5

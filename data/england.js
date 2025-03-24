@@ -22,5 +22,6 @@ generateSlideShowInfo(
     "2016",
     "Circulating Standard Banknote",
     "132 $\\times$ 69 mm",
-    "Elizabeth II (1952-2022)"
+    "Elizabeth II (1952-2022)",
+    '2017\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

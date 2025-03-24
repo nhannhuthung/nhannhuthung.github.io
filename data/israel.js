@@ -46,7 +46,8 @@ generateSlideShowInfo(
     "2014",
     "Circulating Standard Banknote",
     "136 $\\times$ 71 mm",
-    "Shaul Tchernichovsky (1875-1943)"
+    "Shaul Tchernichovsky (1875-1943)",
+    '2014\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 3
@@ -70,5 +71,6 @@ generateSlideShowInfo(
     "2015",
     "Circulating Standard Banknote",
     "150 $\\times$ 71 mm",
-    "Nathan Alterman (1910-1970)"
+    "Nathan Alterman (1910-1970)",
+    '2015\'s Top 20 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

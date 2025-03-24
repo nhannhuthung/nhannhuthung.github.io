@@ -116,7 +116,7 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 20 Yuan",
     "2022",
-    "Commemorative Banknote",
+    "Circulating Commemorative Banknote",
     "70 $\\times$ 145 mm",
     ""
 );
@@ -140,7 +140,8 @@ generateSlideShowInfo(
     "info" + index,
     "Chinese 20 Yuan",
     "2022",
-    "Commemorative Banknote",
+    "Circulating Commemorative Banknote",
     "70 $\\times$ 145 mm",
-    ""
+    "",
+    '2021\'s Top 20 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );

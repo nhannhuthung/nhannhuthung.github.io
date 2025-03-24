@@ -70,7 +70,8 @@ generateSlideShowInfo(
     "2019",
     "Circulating Standard Banknote",
     "138 $\\times$ 68 mm",
-    ""
+    "",
+    '2019\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 4

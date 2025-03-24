@@ -142,7 +142,8 @@ generateSlideShowInfo(
     "2018",
     "Circulating Standard Banknote",
     "165 $\\times$ 72 mm",
-    ""
+    "",
+    '2007\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 7
@@ -166,7 +167,8 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "132 $\\times$ 69 mm",
-    ""
+    "",
+    '2022\'s Top 19 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
 
 index = index + 1; //index = 8
@@ -190,5 +192,6 @@ generateSlideShowInfo(
     "",
     "Circulating Standard Banknote",
     "137 $\\times$ 69 mm",
-    ""
+    "",
+    '2023\'s Top 15 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
 );
