@@ -33,11 +33,17 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter page name...">
+            <button class="search-button" onclick="searchPage()">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </div>
     </header>
 
     <button onclick="toTop()" id="top_btn" title="Go to top">Top</button>
 
-    <div class="container" style="backdrop-filter: blur(0px); background-color: rgba(12, 12, 12, 0.8); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+    <div class="container-top">
         <h3>Acknowledgment</h3>
         <p>I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.</p>
         <h3>Remark</h3>
@@ -130,7 +136,6 @@
         <div class="category">
             <div class="category-item" onclick="navigateTo('collection/croatia.html')">Croatia</div>
             <div class="category-item" onclick="navigateTo('collection/italy.html')">Italy</div>
-            <div class="category-item" onclick="navigateTo('collection/turkey.html')">Turkey</div>
         </div>
     </div>
 
@@ -143,6 +148,7 @@
             <div class="category-item" onclick="navigateTo('collection/lebanon.html')">Lebanon</div>
             <div class="category-item" onclick="navigateTo('collection/oman.html')">Oman</div>
             <div class="category-item" onclick="navigateTo('collection/saudi-arabia.html')">Saudi Arabia</div>
+            <div class="category-item" onclick="navigateTo('collection/turkey.html')">Turkey</div>
         </div>
         <h2>Central Asia</h2>
         <div class="category">
@@ -173,7 +179,7 @@
         <h2>East Asia</h2>
         <div class="category">
             <div class="category-item" onclick="navigateTo('collection/china.html')">China</div>
-            <div class="category-item" onclick="navigateTo('collection/hongkong.html')">Hong Kong</div>
+            <div class="category-item" onclick="navigateTo('collection/hong-kong.html')">Hong Kong</div>
             <div class="category-item" onclick="navigateTo('collection/japan.html')">Japan</div>
             <div class="category-item" onclick="navigateTo('collection/mogolia.html')">Mongolia</div>
             <div class="category-item" onclick="navigateTo('collection/north-korea.html')">North Korea</div>                                   

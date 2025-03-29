@@ -48,7 +48,6 @@ function insertSidebarHTML(id) {
                 { name: "Russia", link: "russia.html" },
                 { name: "Scotland", link: "scotland.html" },
                 { name: "Transnistria", link: "transnistria.html" },
-                { name: "Turkey", link: "turkey.html" },
                 { name: "Ukraine", link: "ukraine.html" }
             ])}
 
@@ -57,7 +56,7 @@ function insertSidebarHTML(id) {
                 { name: "Bhutan", link: "bhutan.html" },
                 { name: "Cambodia", link: "cambodia.html" },
                 { name: "China", link: "china.html" },
-                { name: "Hong Kong", link: "hongkong.html" },
+                { name: "Hong Kong", link: "hong-kong.html" },
                 { name: "India", link: "india.html" },
                 { name: "Indonesia", link: "indonesia.html" },
                 { name: "Iran", link: "iran.html" },
@@ -79,6 +78,7 @@ function insertSidebarHTML(id) {
                 { name: "Taiwan", link: "taiwan.html" },
                 { name: "Tajikistan", link: "tajikistan.html" },
                 { name: "Thailand", link: "thailand.html" },
+                { name: "Turkey", link: "turkey.html" },
                 { name: "Turkmenistan", link: "turkmenistan.html" },
                 { name: "Uzbekistan", link: "uzbekistan.html" },
                 { name: "Vietnam", link: "vietnam.html" }

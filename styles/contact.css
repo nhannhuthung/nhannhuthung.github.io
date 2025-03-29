@@ -22,6 +22,7 @@
 #header-nav a:link,
 #header-nav a:visited {
     color: #283033;
+    z-index: 1000;
 }
 
 #header-nav a:hover {
@@ -30,6 +31,48 @@
 
 .hamburger-nav {
     color: #283033;
+}
+
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: #F2F3F4;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    z-index: 999;
+}
+
+::placeholder {
+    background: #F2F3F4;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    background: #F2F3F4;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-button i {
+    margin-right: 5px;
 }
 
 body {
@@ -113,6 +156,29 @@ body {
     #header-nav a:link,
     #header-nav a:visited {
         color: #c8d9fa;
+    }
+
+    .search-container {
+        width: 90%;
+        max-width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60px;
+        right: 10px;
+        padding: auto;
+    }
+
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+
+    .big-title {
+        margin-top: 55px;
     }
 
     body {
