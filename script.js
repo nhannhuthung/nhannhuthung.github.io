@@ -155,7 +155,7 @@ function searchPage() {
     inputField.value = ""; // Clear input field
     window.location.href = foundPage;
   } else {
-    alert("Page not found. Please enter a valid page name.");
+    alert("There is no such page existed in Howl's website. Please enter a different page name or check the spelling.");
   }
 }
 

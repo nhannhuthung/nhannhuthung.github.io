@@ -21,7 +21,7 @@
 #header-nav a:link,
 #header-nav a:visited {
     color: #0E4749;
-    z-index: 1000;
+    z-index: 998;
 }
 
 #header-nav a:hover {
@@ -135,6 +135,9 @@ iframe {
 }
 
 @media (max-width: 768px) {
+  #header-nav {   
+    z-index: 1000;
+  }
   .search-container {
     width: 90%;
     max-width: 300px;
