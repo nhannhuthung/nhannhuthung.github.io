@@ -165,7 +165,7 @@ function searchPage() {
   }
 }
 
-// 🔄 Attach event listener for Enter key press
+// Attach event listener for Enter key press
 document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.getElementById("searchInput");
   inputField.addEventListener("keypress", function (event) {
