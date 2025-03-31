@@ -160,13 +160,10 @@ body {
     }
 
     .search-container {
-        width: 90%;
-        max-width: 300px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 60px;
+        max-width: 225px;
+        height: 30px;
+        transform: translateY(-25%);
         right: 10px;
-        padding: auto;
     }
 
     input {
@@ -179,7 +176,7 @@ body {
     }
 
     .big-title {
-        margin-top: 55px;
+        margin-top: 10px;
     }
 
     body {

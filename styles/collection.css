@@ -330,13 +330,10 @@ ul li::before {
     }
 
     .search-container {
-        width: 90%;
-        max-width: 300px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 60px;
+        max-width: 225px;
+        height: 30px;
+        transform: translateY(-25%);
         right: 10px;
-        padding: auto;
     }
 
     input {
@@ -355,12 +352,9 @@ ul li::before {
 
     .overlay {
         bottom: 5px;
-        padding: 5px 10px;
-        font-size: 7px;
-    }
-
-    .container-top {
-        margin-top: 90px;
+        padding: 5px 4px;
+        font-size: 9px;
+        border-radius: 6px;
     }
 
     h1 {
