@@ -240,7 +240,8 @@ h2 {
 h3 {
     text-align: center; 
     font-size: 30px;
-    margin: initial;
+    margin-top: 35px;
+    margin-bottom: 5px;
     color: #468fcb;
 }
 
@@ -319,6 +320,7 @@ ul li::before {
 
     h3 {
         font-size: 27px;
+        margin-top: 25px;
     }
     
     h4 {

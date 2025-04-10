@@ -306,8 +306,8 @@ hr {
 /* On smaller screens, decrease text size */
 @media (max-width: 768px) {
     .search-container {
-        max-width: 250px;
-        height: 45px;
+        max-width: 200px;
+        height: 40px;
     }
 
     .text {font-size: 15px}

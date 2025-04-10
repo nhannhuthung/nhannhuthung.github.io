@@ -75,14 +75,14 @@ const main_trans = {
     },
     vi: {
         acknowledge: `Lời Cảm Ơn`,
-        acknowledge_para: `Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của tôi. Nếu không có mỗi người trong các bạn, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Sự ủng hộ và đóng góp của các bạn đã tạo nên sự khác biệt.`,
+        acknowledge_para: `Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
 
         remark: `Nhận Xét`,
-        remark_para_1: `Mình bắt đầu bộ sưu tập của mình chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến nay. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu, mình không thể đưa tất cả lên đây.`,
+        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu, mình không thể đưa tất cả lên đây.`,
         remark_para_2: `Một vài tiêu điểm về bộ sưu tập tiền xu của mình:`,
         remark_subpara_1: `<span>&#9757;</span> Có khoảng 60 khu vực, bao gồm những khu vực không còn tồn tại (Yugoslavia, Czechslovakia, Liên Bang Đông Dương, vân vân).`,
         remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902).`,
-        remark_para_3: `Mình mở rộng bộ sưu tập với các tiền giấy. Mình không nhớ chính xác có tổng cộng bao nhiêu khu vực trong bộ sưu tập của mình.`,
+        remark_para_3: `Mình mở rộng bộ sưu tập với các tiền giấy. Mình không nhớ chính xác có tổng cộng bao nhiêu khu vực trong bộ sưu tập.`,
 
         collect_update: `Cập Nhật Bộ Sưu Tập`,
         last_update: `Cập Nhật Lần Cuối: ngày 17 tháng 3 năm 2025`,
