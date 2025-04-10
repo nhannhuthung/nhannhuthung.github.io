@@ -4,71 +4,85 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/uzbekistan/1994-2019/100-sum-f.jpg",
-            alt: "Front of the 100 Sum Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 100 Sum Bill", vi: "Mặt Trước Tờ 100 Sum"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/uzbekistan/1994-2019/100-sum-b.jpg",
-            alt: "Back of the 100 Sum Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 100 Sum Bill", vi: "Mặt Sau Tờ 100 Sum"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Uzbekistani 100 Sum",
-    "1994",
-    "Circulating Standard Banknote",
-    "142 $\\times$ 69 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Uzbekistani 100 Sum", 
+            vi: "100 Sum Uzbekistan" 
+        },
+        year: "1994",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "142 $\\times$ 69 mm",
+        figure: null,
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/uzbekistan/1994-2019/200-sum-f.jpg",
-        alt: "Front of the 200 Sum Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 200 Sum Bill", vi: "Mặt Trước Tờ 200 Sum"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/uzbekistan/1994-2019/200-sum-b.jpg",
-        alt: "Back of the 200 Sum Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 200 Sum Bill", vi: "Mặt Sau Tờ 200 Sum"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Uzbekistani 200 Sum",
-    "1997",
-    "Circulating Standard Banknote",
-    "145 $\\times$ 77 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Uzbekistani 200 Sum", 
+        vi: "200 Sum Uzbekistan" 
+    },
+    year: "1997",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "145 $\\times$ 77 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 3
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/uzbekistan/1994-2019/500-sum-f.jpg",
-        alt: "Front of the 500 Sum Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 500 Sum Bill", vi: "Mặt Trước Tờ 500 Sum"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/uzbekistan/1994-2019/500-sum-b.jpg",
-        alt: "Back of the 500 Sum Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 500 Sum Bill", vi: "Mặt Sau Tờ 500 Sum"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Uzbekistani 500 Sum",
-    "1999",
-    "Circulating Standard Banknote",
-    "144 $\\times$ 78 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Uzbekistani 500 Sum", 
+        vi: "500 Sum Uzbekistan" 
+    },
+    year: "1999",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "144 $\\times$ 78 mm",
+    figure: null,
+    note: null
+};

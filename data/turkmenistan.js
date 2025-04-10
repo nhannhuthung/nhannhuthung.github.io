@@ -1,68 +1,97 @@
-const images1 = [
-    {
-        src: "../images/collection/turkmenistan/2/2017/5-manat-f.jpg",
-        alt: "Front of the 5 Manat Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/turkmenistan/2/2017/5-manat-b.jpg",
-        alt: "Back of the 5 Manat Bill",
-        description: "Reverse"
-    }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
-generateSlideShowInfo(
-    "info1",
-    "Turkmen 5 Manat",
-    "2017",
-    "Circulating Standard Banknote",
-    "126 $\\times$ 63 mm",
-    "Ahmad Sanjar (1086-1157)"
-);
+let index = 1;
 
-const images2 = [
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/turkmenistan/2/2017/5-manat-f.jpg",
+            alt: {en: "Front of the 5 Manat Bill", vi: "Mặt Trước Tờ 5 Manat"},
+            description: {en: "Obverse", vi: "Trước"}
+        },
+        {
+            src: "../images/collection/thailand/15/20-baht-b.jpg",
+            alt: {en: "Back of the 5 Manat Bill", vi: "Mặt Sau Tờ 5 Manat"},
+            description: {en: "Reverse", vi: "Sau"}
+        }
+    ]
+};
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Turkmen 5 Manat", 
+            vi: "5 Manat Turkmenistan" 
+        },
+        year: "2017",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "126 $\\times$ 63 mm",
+        figure: { 
+            en: "Ahmad Sanjar (1086-1157)", 
+            vi: "Ahmad Sanjar (1086-1157)" 
+        },
+        note: null
+    }
+};
+
+index++; //index = 2
+images[`${index}`] = [
     {
         src: "../images/collection/turkmenistan/2/2017/10-manat-f.jpg",
-        alt: "Front of the 10 Manat Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 10 Manat Bill", vi: "Mặt Trước Tờ 10 Manat"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/turkmenistan/2/2017/10-manat-b.jpg",
-        alt: "Back of the 10 Manat Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 10 Manat Bill", vi: "Mặt Sau Tờ 10 Manat"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide2", images2);
-new Slideshow("slideshow2");
-generateSlideShowInfo(
-    "info2",
-    "Turkmen 10 Manat",
-    "2017",
-    "Circulating Standard Banknote",
-    "132 $\\times$ 66 mm",
-    "Magtymguly Pyragy (1724?-1807?)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Turkmen 10 Manat", 
+        vi: "10 Manat Turkmenistan" 
+    },
+    year: "2017",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "132 $\\times$ 66 mm",
+    figure: { 
+        en: "Magtymguly Pyragy (1724?-1807?)", 
+        vi: "Magtymguly Pyragy (1724?-1807?)" 
+    },
+    note: null
+};
 
-const images3 = [
+index++; //index = 3
+images[`${index}`] = [
     {
         src: "../images/collection/turkmenistan/2/2020/1-manat-f.jpg",
-        alt: "Front of the 1 Manat Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 1 Manat Bill", vi: "Mặt Trước Tờ 1 Manat"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/turkmenistan/2/2020/1-manat-b.jpg",
-        alt: "Back of the 1 Manat Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 1 Manat Bill", vi: "Mặt Sau Tờ 1 Manat"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide3", images3);
-new Slideshow("slideshow3");
-generateSlideShowInfo(
-    "info3",
-    "Turkmen 1 Manat",
-    "2020",
-    "Circulating Standard Banknote",
-    "120 $\\times$ 60 mm",
-    "Tughril I (993?-1063)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Turkmen 1 Manat", 
+        vi: "1 Manat Turkmenistan" 
+    },
+    year: "2020",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "120 $\\times$ 60 mm",
+    figure: { 
+        en: "Tughril I (993?-1063)", 
+        vi: "Tughril I (993?-1063)" 
+    },
+    note: null
+};

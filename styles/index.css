@@ -9,6 +9,12 @@ body {
     overflow-y: hidden;
 }
 
+.language-toggle {
+    top: unset;
+    bottom: 1px;
+    right: 0;
+}
+
 .intro {
     background: #E1DCD3;
     height: 100vh;
@@ -50,15 +56,24 @@ body {
 .nav-menu-box nav a,
 .nav-menu-box nav a:link,
 .nav-menu-box nav a:visited {
-    color: #283033;
-    padding: 9px;
-    letter-spacing: 5px;
+    color: #412722;
+    padding: 6px;
+    letter-spacing: 2px;
     font-size: 36px;
     text-decoration: none;
 }
 
 .nav-menu-box nav a:visited:hover {
     color: #f7af20;
+}
+
+.language-toggle a {
+    font-size: 21px;
+    color: #412722;
+}
+
+.language-toggle a:hover {
+    color: #E55934;
 }
 
 ::-webkit-scrollbar {

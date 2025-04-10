@@ -20,30 +20,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script charset="utf-8" src="script.js"></script>
-
+    <script src="scripts/lang/contact.js"></script>
 </head>
 
 <body>
     <header style="background-color: #AFCBFF;">
         <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
         <nav id="header-nav">
-            <a href="index.html">Home</a>
-            <a href="collection.html">Collection</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" id="home-nav">Home</a>
+            <a href="collection.html" id="collection-nav">Collection</a>
+            <a href="about.html" id="about-nav">About</a>
+            <a href="contact.html" id="contact-nav">Contact</a>
         </nav>
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Enter page name...">
             <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i> Search
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+        </div>
+        <div class="language-toggle">
+            <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
         </div>
     </header>
 
-    <h5 class="big-title" style="background-color: #AFCBFF; color: #283033;">Contact Me</h5>
+    <h5 class="big-title" id="main-title" style="background-color: #AFCBFF; color: #283033;">Contact Me</h5>
     <div id="media" class="page">  
-        <h1 class="title" style="color: #29241E;">Social Media</h1>
-        <b style="color: #2c2927;">I am active on the following platforms. You are welcome to connect with me through any of these channels.</b>
+        <h1 class="title" id="sub-title-1" style="color: #29241E;">Social Media</h1>
+        <b id="sentence-1" style="color: #2c2927;">I am active on the following platforms. You are welcome to connect with me through any of these channels.</b>
         <nav>
             <a href="https://www.facebook.com/nhannhuthung" target="_blank" class="fa fa-facebook" style="color: #2c2927;"></a>
             <a href="https://www.instagram.com/nnh.v.nov/" target="_blank" class="fa fa-instagram" style="color: #2c2927;"></a>
@@ -53,12 +56,12 @@
     </div>
 
     <div id="work" class="page">
-        <h1 class="title" style="color: #F5FEFD;">Work</h1>
-        <b style="color: #F5FEFD;">For business inquiries, please feel free to contact me through the following platforms.</b>
+        <h1 class="title" id="sub-title-2" style="color: #F5FEFD;">Work</h1>
+        <b id="sentence-2" style="color: #F5FEFD;">For business inquiries, please feel free to contact me through the following platforms.</b>
         <nav>
             <a href="mailto: hg5ejd1mj@mozmail.com" target="_blank" class="fa fa-google" style="color: #F9FBF2;"></a>
             <a href="https://www.linkedin.com/in/howlnhan/" target="_blank" class="fa fa-linkedin" style="color: #F9FBF2;"></a>
-            <!--<a href="https://github.com/nhannhuthung" target="_blank" class="fa fa-github" style="color: #F9FBF2;"></a>-->
+            <a href="https://github.com/nhannhuthung" target="_blank" class="fa fa-github" style="color: #F9FBF2;"></a>
         </nav>
     </div>
 </body>

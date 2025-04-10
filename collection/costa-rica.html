@@ -37,10 +37,10 @@
 <body style="background-color: #f4f4f4;">
     <header>
         <nav id="header-nav">
-            <a href="../index.html">Home</a>
-            <a href="../collection.html">Collection</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
+            <a href="../index.html" id="home-nav">Home</a>
+            <a href="../collection.html" id="collection-nav">Collection</a>
+            <a href="../about.html" id="about-nav">About</a>
+            <a href="../contact.html" id="contact-nav">Contact</a>
         </nav>
         <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
         <nav id="header-nav-media">
@@ -55,10 +55,14 @@
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Enter page name...">
             <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i> Search
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
+        <div class="language-toggle">
+            <a href="#" onclick="toggleLanguage()">Eng | Vie</a>
+        </div>
     </header>
+
 
     <div class="container">
         <div id="SideBar"></div>

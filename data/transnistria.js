@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/transnistria/2007/1-ruble-f.jpg",
-            alt: "Front of the 1 Ruble Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 1 Ruble Bill", vi: "Mặt Trước Tờ 1 Rúp"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/transnistria/2007/1-ruble-b.jpg",
-            alt: "Back of the 1 Ruble Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 1 Ruble Bill", vi: "Mặt Sau Tờ 1 Rúp"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Transnistrian 1 Ruble",
-    "2007",
-    "Circulating Standard Banknote",
-    "129 $\\times$ 55 mm",
-    "Alexander Suvorov (1730-1800)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Transnistrian 1 Ruble", 
+            vi: "1 Rúp Transnistria" 
+        },
+        year: "2007",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "129 $\\times$ 55 mm",
+        figure:  { 
+            en: "Alexander Suvorov (1730-1800)", 
+            vi: "Alexander Suvorov (1730-1800)"
+        },
+        note: null
+    }
+};

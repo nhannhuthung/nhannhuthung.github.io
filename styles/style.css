@@ -25,7 +25,7 @@ nav {
 #header-nav a:link,
 #header-nav a:visited {
     padding: 9px;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     font-size: 36px;
     display: flex;
     text-decoration: none;
@@ -50,6 +50,60 @@ nav {
     position: absolute;
     left: 0;
     text-decoration: none;
+}
+
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: #F2F3F4;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    z-index: 999;
+}
+
+::placeholder {
+    background: #F2F3F4;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    background: #F2F3F4;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-button i {
+    margin-right: 5px;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 33px;
+    right: 330px;
+    z-index: 999;
+}
+
+.language-toggle a {
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .title {
@@ -126,6 +180,31 @@ p {
         padding: 10px;
         text-align: left;
         margin: 0;
+    }
+
+    .search-container {
+        max-width: 180px;
+        height: 30px;
+        transform: translateY(-25%);
+        right: 10px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .search-button {
+        font-size: 14px;
+    }
+
+    .language-toggle {
+        top: 20px;
+        right: 230px;
+    }
+
+    .language-toggle a {
+        font-size: 17px;
     }
 
     .big-title {

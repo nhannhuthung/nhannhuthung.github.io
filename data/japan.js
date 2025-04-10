@@ -4,143 +4,184 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/japan/d/2000-yen-f.jpg",
-            alt: "Front of the 2000 Yen Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 2000 Yen Bill", vi: "Mặt Trước Tờ 2000 Yen"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/japan/d/2000-yen-b.jpg",
-            alt: "Back of the 2000 Yen Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 2000 Yen Bill", vi: "Mặt Sau Tờ 2000 Yen"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 2,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "154 $\\times$ 76 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Japanese 2,000 Yen", 
+            vi: "2.000 Yên Nhật Bản" 
+        },
+        year: null,
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "154 $\\times$ 76 mm",
+        figure: null,
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/japan/e/1000-yen-f.jpg",
-        alt: "Front of the 1000 Yen Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yen"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/e/1000-yen-b.jpg",
-        alt: "Back of the 1000 Yen Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yen"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 1,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "150 $\\times$ 76 mm",
-    "Noguchi Hideyo (1876-1928)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 1,000 Yen", 
+        vi: "1.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "150 $\\times$ 76 mm",
+    figure: { 
+        en: "Noguchi Hideyo (1876-1928)", 
+        vi: "Noguchi Hideyo (1876-1928)" 
+    },
+    note: null
+};
 
-index = index + 1; //index = 3
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/japan/e/5000-yen-f.jpg",
-        alt: "Front of the 5000 Yen Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yen"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/e/5000-yen-b.jpg",
-        alt: "Back of the 5000 Yen Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yen"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 5,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "156 $\\times$ 76 mm",
-    "Higuchi Ichiyō (1872-1896)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 5,000 Yen", 
+        vi: "5.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "156 $\\times$ 76 mm",
+    figure: { 
+        en: "Higuchi Ichiyō (1872-1896)", 
+        vi: "Higuchi Ichiyō (1872-1896)" 
+    },
+    note: null
+};
 
-index = index + 1; //index = 4
+index++; //index = 4
 images[`${index}`] = [
     {
         src: "../images/collection/japan/f/1000-yen-f.jpg",
-        alt: "Front of the 1000 Yen Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yen"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/1000-yen-b.jpg",
-        alt: "Back of the 1000 Yen Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yen"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 1,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "150 $\\times$ 76 mm",
-    "Kitasato Shibasaburō (1853-1931)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 1,000 Yen", 
+        vi: "1.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "150 $\\times$ 76 mm",
+    figure: { 
+        en: "Kitasato Shibasaburō (1853-1931)", 
+        vi: "Kitasato Shibasaburō (1853-1931)" 
+    },
+    note: null
+};
 
-index = index + 1; //index = 5
+index++; //index = 5
 images[`${index}`] = [
     {
         src: "../images/collection/japan/f/5000-yen-f.jpg",
-        alt: "Front of the 5000 Yen Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yen"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/5000-yen-b.jpg",
-        alt: "Back of the 5000 Yen Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yen"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 5,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "156 $\\times$ 76 mm",
-    "Tsuda Umeko (1864-1929)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 5,000 Yen", 
+        vi: "5.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "156 $\\times$ 76 mm",
+    figure: { 
+        en: "Tsuda Umeko (1864-1929)", 
+        vi: "Tsuda Umeko (1864-1929)" 
+    },
+    note: null
+};
 
-index = index + 1; //index = 6
+index++; //index = 6
 images[`${index}`] = [
     {
         src: "../images/collection/japan/f/10000-yen-f.jpg",
-        alt: "Front of the 10000 Yen Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 10000 Yen Bill", vi: "Mặt Trước Tờ 10000 Yen"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/10000-yen-b.jpg",
-        alt: "Back of the 10000 Yen Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 10000 Yen Bill", vi: "Mặt Sau Tờ 10000 Yen"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Japanese 10,000 Yen",
-    "",
-    "Circulating Standard Banknote",
-    "160 $\\times$ 76 mm",
-    "Shibusawa Eiichi (1840-1931)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 10,000 Yen", 
+        vi: "10.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "160 $\\times$ 76 mm",
+    figure: { 
+        en: "Shibusawa Eiichi (1840-1931)", 
+        vi: "Shibusawa Eiichi (1840-1931)" 
+    },
+    note: null
+};

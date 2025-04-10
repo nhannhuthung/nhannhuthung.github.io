@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/ukraine/3/1-hryvnia-f.jpg",
-            alt: "Front of the 1 Hryvnia Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 1 Hryvnia Bill", vi: "Mặt Trước Tờ 1 Hryvnia"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/ukraine/3/1-hryvnia-b.jpg",
-            alt: "Back of the 1 Hryvnia Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 1 Hryvnia Bill", vi: "Mặt Sau Tờ 1 Hryvnia"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Ukrainian 1 Hryvnia",
-    "2014",
-    "Circulating Standard Banknote",
-    "118 $\\times$ 63 mm",
-    "Volodymyr I Sviatoslavych (958?-1015)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Ukrainian 1 Hryvnia", 
+            vi: "1 Hryvnia Ukraine" 
+        },
+        year: "2014",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "118 $\\times$ 63 mm",
+        figure:  { 
+            en: "Volodymyr I Sviatoslavych (958?-1015)", 
+            vi: "Volodymyr I Sviatoslavych (958?-1015)"
+        },
+        note: null
+    }
+};

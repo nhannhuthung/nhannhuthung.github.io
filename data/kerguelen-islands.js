@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/kerguelen-islands/100-franc-f.jpg",
-            alt: "Front of the 100 Franc Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 100 Franc Bill", vi: "Mặt Trước Tờ 100 Franc"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/kerguelen-islands/100-franc-b.jpg",
-            alt: "Back of the 100 Franc Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 100 Franc Bill", vi: "Mặt Sau Tờ 100 Franc"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kerguelenian 100 Francs",
-    "2012",
-    "Fantasy Banknote",
-    "159 $\\times$ 80 mm",
-    "Yves-Joseph de Kerguelen-Tremarec (1734-1797)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Kerguelenian 100 Francs", 
+            vi: "100 Franc Quần Đảo Kerguelen" 
+        },
+        year: "2012",
+        type: { 
+            en: "Fantasy Banknote", 
+            vi: "Tiền Sưu Tầm" 
+        },
+        size: "159 $\\times$ 80 mm",
+        figure: { 
+            en: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)", 
+            vi: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)" 
+        },
+        note: null
+    }
+};

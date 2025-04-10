@@ -46,10 +46,10 @@ function toggleMenu() {
 function searchPage() {
   // Define pages with multiple keywords
   const pages = {
-    "index": ["home", "homepage", "index"],
-    "collection": ["collection", "collections", "collect"],
-    "about": ["about", "information", "info"],
-    "contact": ["contact", "contanct us"]
+    "index": ["home", "homepage", "index", "trang chủ"],
+    "collection": ["collection", "collections", "collect", "sưu tầm", "bộ sưu tậm"],
+    "about": ["about", "information", "info", "thông tin", "giới thiệu"],
+    "contact": ["contact", "contanct us", "liên hệ", "liên lạc"]
   };
 
   // Define country pages with multiple keywords

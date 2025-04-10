@@ -4,96 +4,116 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/kenya/2019/100-shilling-f.jpg",
-            alt: "Front of the 100 Shilling Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 100 Shilling Bill", vi: "Mặt Trước Tờ 100 Shilling"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/kenya/2019/100-shilling-b.jpg",
-            alt: "Back of the 100 Shilling Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 100 Shilling Bill", vi: "Mặt Sau Tờ 100 Shilling"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kenyan 100 Shillings",
-    "2019",
-    "Circulating Standard Banknote",
-    "128 $\\times$ 64 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Kenyan 100 Shillings", 
+            vi: "100 Shilling Kenya" 
+        },
+        year: "2019",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "128 $\\times$ 64 mm",
+        figure: null,
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/200-shilling-f.jpg",
-        alt: "Front of the 200 Shilling Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 200 Shilling Bill", vi: "Mặt Trước Tờ 200 Shilling"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/kenya/2019/200-shilling-b.jpg",
-        alt: "Back of the 200 Shilling Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 200 Shilling Bill", vi: "Mặt Sau Tờ 200 Shilling"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kenyan 200 Shillings",
-    "2019",
-    "Circulating Standard Banknote",
-    "133 $\\times$ 67 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Kenyan 200 Shillings", 
+        vi: "200 Shilling Kenya" 
+    },
+    year: "2019",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "133 $\\times$ 67 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 3
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/500-shilling-f.jpg",
-        alt: "Front of the 500 Shilling Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 500 Shilling Bill", vi: "Mặt Trước Tờ 500 Shilling"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/kenya/2019/500-shilling-b.jpg",
-        alt: "Back of the 500 Shilling Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 500 Shilling Bill", vi: "Mặt Sau Tờ 500 Shilling"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kenyan 500 Shillings",
-    "2019",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 68 mm",
-    "",
-    '2019\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Kenyan 500 Shillings", 
+        vi: "500 Shilling Kenya" 
+    },
+    year: "2019",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "138 $\\times$ 68 mm",
+    figure: null,
+    note: { 
+        en: `2019\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        vi: `Top 22 tờ tiền năm 2019 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
+    },
+};
 
-index = index + 1; //index = 4
+index++; //index = 4
 images[`${index}`] = [
     {
         src: "../images/collection/kenya/2019/1000-shilling-f.jpg",
-        alt: "Front of the 1000 Shilling Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 1000 Shilling Bill", vi: "Mặt Trước Tờ 1000 Shilling"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/kenya/2019/1000-shilling-b.jpg",
-        alt: "Back of the 1000 Shilling Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 1000 Shilling Bill", vi: "Mặt Sau Tờ 1000 Shilling"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kenyan 1,000 Shillings",
-    "2019",
-    "Circulating Standard Banknote",
-    "143 $\\times$ 70 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Kenyan 1,000 Shillings", 
+        vi: "1.000 Shilling Kenya" 
+    },
+    year: "2019",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "143 $\\times$ 70 mm",
+    figure: null,
+    note: null,
+};

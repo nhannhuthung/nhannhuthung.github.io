@@ -1,22 +1,35 @@
-const images1 = [
-    {
-        src: "../images/collection/saudi-arabia/2007-2016/1-riyal-f.jpg",
-        alt: "Front of the 1 Riyal Bill",
-        description: "Obverse"
-    },
-    {
-        src: "../images/collection/saudi-arabia/2007-2016/1-riyal-b.jpg",
-        alt: "Back of the 1 Riyal Bill",
-        description: "Reverse"
+let index = 1;
+
+const images = {
+    [`${index}`]: [
+        {
+            src: "../images/collection/saudi-arabia/2007-2016/1-riyal-f.jpg",
+            alt: {en: "Front of the 1 Riyal Bill", vi: "Mặt Trước Tờ 1 Riyal"},
+            description: {en: "Obverse", vi: "Trước"}
+        },
+        {
+            src: "../images/collection/saudi-arabia/2007-2016/1-riyal-b.jpg",
+            alt: {en: "Back of the 1 Riyal Bill", vi: "Mặt Sau Tờ 1 Riyal"},
+            description: {en: "Reverse", vi: "Sau"}
+        }
+    ]
+};
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Saudi 1 Riyal", 
+            vi: "1 Riyal Ả Rập Xê Út" 
+        },
+        year: "1433 (2012)",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "133 $\\times$ 63 mm",
+        figure: { 
+            en: "Abdullah bin Abdulaziz Al Saud (1924-2015)", 
+            vi: "Abdullah bin Abdulaziz Al Saud (1924-2015)" 
+        },
+        note: null
     }
-];
-createSlideshow("slide1", images1);
-new Slideshow("slideshow1");
-generateSlideShowInfo(
-    "info1",
-    "Saudi 1 Riyals",
-    "1433 (2012)",
-    "Circulating Standard Banknote",
-    "133 $\\times$ 63 mm",
-    "Abdullah bin Abdulaziz Al Saud  (1924-2015)"
-);
+};

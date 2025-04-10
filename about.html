@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <script src="script.js" defer></script>
+    <script src="scripts/lang/about.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  
     <script type="text/x-mathjax-config">
@@ -38,23 +39,26 @@
     <header style="background-color: #c4b69c;">
         <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
         <nav id="header-nav">
-            <a href="index.html">Home</a>
-            <a href="collection.html">Collection</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" id="home-nav">Home</a>
+            <a href="collection.html" id="collection-nav">Collection</a>
+            <a href="about.html" id="about-nav">About</a>
+            <a href="contact.html" id="contact-nav">Contact</a>
         </nav>
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Enter page name...">
             <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i> Search
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+        </div>
+        <div class="language-toggle">
+            <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
         </div>
     </header>
 
-    <h5 class="big-title" style="color: #0E4749; background-color: #c4b69c;">About Me</h5>
+    <h5 class="big-title" id="title" style="color: #0E4749; background-color: #c4b69c;">About Me</h5>
     <div id="about" class="page">
-        <p> Hello! 🦉😀</p>
-        <p>My name is Hưng. If you are unfamilar with that name, please call me Howl. It is the name from the movie - Howl's Moving Castle.</p>
+        <p id="greeting"> Hello! 🦉😀</p>
+        <p id="name-intro">My name is Hưng. If you are unfamiliar with that name, please call me Howl. It is the name from the movie - Howl's Moving Castle.</p>
 
         <div class="iframe-container">
             <iframe width="446" height="240" src="video/howl.gif"></iframe>
@@ -66,12 +70,12 @@
     </div>
 
     <div id="math" class="page">
-        <p>I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. Right now I am finishing my last year of my first degree - Bachelor of Mathematics: Concentration in Applied Analysis with a $``$minor$"$ in Computer Science at Carleton University.</p>
-        <p>If you are wonder what am I studying in math, here are two main papers which highlight the areas I'm interested in and pursuing right now.</p>
-        <text>The first paper is in Computational Mathematics area and is submitted to the journal - Mathematics and Computers in Simulation. <a href="pdf/math/paper_nla.pdf" class="fa fa-file-pdf-o" target="_blank" style="color: #333333;"></a></text>
+        <p id="study-intro">I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. Right now I am finishing my last year of my first degree - Bachelor of Mathematics: Concentration in Applied Analysis, with a $``$minor$"$ in Computer Science at Carleton University.</p>
+        <p id="paper-intro">If you are wonder what am I studying in math, here are two main papers which highlight the areas I'm interested in and pursuing right now.</p>
+        <text id="first-paper">The first paper is in Computational Mathematics area and is submitted to the journal - Mathematics and Computers in Simulation.</text><a href="pdf/math/paper_nla.pdf" class="fa fa-file-pdf-o" target="_blank" style="color: #333333;"></a>
         <br>
         <br>
-        <text>The second paper is in Wave Phenomena area and it is my honours project.<a href="pdf/math/honours-project.pdf" class="fa fa-file-pdf-o" target="_blank" style="color: #333333;"></a></text>
+        <text id="second-paper">The second paper is in Wave Phenomena area and it is my honours project.</text><a href="pdf/math/honours-project.pdf" class="fa fa-file-pdf-o" target="_blank" style="color: #333333;"></a>
     </div>
 
 </body>

@@ -4,287 +4,337 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/hong-kong/10-series/2002-f.jpg",
-            alt: "Front of the 10 Dollar Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 10 Dollar Bill", vi: "Mặt Trước Tờ 10 Đô La"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/hong-kong/10-series/2002-b.jpg",
-            alt: "Back of the 10 Dollar Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 10 Dollar Bill", vi: "Mặt Sau Tờ 10 Đô La"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 10 Dollars",
-    "2002",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 69 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Hongkongese 10 Dollars", 
+            vi: "10 Đô La Hồng Kông" 
+        },
+        year: "2002",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "138 $\\times$ 69 mm",
+        figure: null,
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++ //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/10-series/2014-f.jpg",
-        alt: "Front of the 10 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 10 Dollar Bill", vi: "Mặt Trước Tờ 10 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/10-series/2014-b.jpg",
-        alt: "Back of the 10 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 10 Dollar Bill", vi: "Mặt Sau Tờ 10 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 10 Dollars",
-    "2014",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 69 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 10 Dollars", 
+        vi: "10 Đô La Hồng Kông" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "138 $\\times$ 69 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 3
+index++ //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2003/bank-of-china/50-dollar-f.jpg",
-        alt: "Front of the 50 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 50 Dollar Bill", vi: "Mặt Trước Tờ 50 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2003/bank-of-china/50-dollar-b.jpg",
-        alt: "Back of the 50 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 50 Dollar Bill", vi: "Mặt Sau Tờ 50 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 50 Dollars - Bank of China",
-    "2007",
-    "Circulating Standard Banknote",
-    "148 $\\times$ 74 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 50 Dollars - Bank of China", 
+        vi: "50 Đô La Hồng Kông - Bank of China" 
+    },
+    year: "2007",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "148 $\\times$ 74 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 4
+index++ //index = 4
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/bank-of-china/20-dollar-f.jpg",
-        alt: "Front of the 20 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 20 Dollar Bill", vi: "Mặt Trước Tờ 20 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/bank-of-china/20-dollar-b.jpg",
-        alt: "Back of the 20 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 20 Dollar Bill", vi: "Mặt Sau Tờ 20 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 20 Dollars - Bank of China",
-    "2014",
-    "Circulating Standard Banknote",
-    "143 $\\times$ 72 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 20 Dollars - Bank of China", 
+        vi: "20 Đô La Hồng Kông - Bank of China" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "143 $\\times$ 72 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 5
+index++ //index = 5
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/bank-of-china/100-dollar-f.jpg",
-        alt: "Front of the 100 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/bank-of-china/100-dollar-b.jpg",
-        alt: "Back of the 100 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 100 Dollars - Bank of China",
-    "2014",
-    "Circulating Standard Banknote",
-    "153 $\\times$ 77 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 100 Dollars - Bank of China", 
+        vi: "100 Đô La Hồng Kông - Bank of China" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 77 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 6
+index++ //index = 6
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/hsbc/20-dollar-f.jpg",
-        alt: "Front of the 20 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 20 Dollar Bill", vi: "Mặt Trước Tờ 20 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/hsbc/20-dollar-b.jpg",
-        alt: "Back of the 20 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 20 Dollar Bill", vi: "Mặt Sau Tờ 20 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 20 Dollars - HSBC",
-    "2013",
-    "Circulating Standard Banknote",
-    "143 $\\times$ 72 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 20 Dollars - HSBC", 
+        vi: "20 Đô La Hồng Kông - HSBC" 
+    },
+    year: "2013",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "143 $\\times$ 72 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 7
+index++ //index = 7
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/hsbc/50-dollar-f.jpg",
-        alt: "Front of the 50 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 50 Dollar Bill", vi: "Mặt Trước Tờ 50 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/hsbc/50-dollar-b.jpg",
-        alt: "Back of the 50 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 50 Dollar Bill", vi: "Mặt Sau Tờ 50 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 50 Dollars - HSBC",
-    "2012",
-    "Circulating Standard Banknote",
-    "143 $\\times$ 74 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 50 Dollars - HSBC", 
+        vi: "50 Đô La Hồng Kông - HSBC" 
+    },
+    year: "2012",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "143 $\\times$ 74 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 8
+index++ //index = 8
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/hsbc/100-dollar-f.jpg",
-        alt: "Front of the 100 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/hsbc/100-dollar-b.jpg",
-        alt: "Back of the 100 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 100 Dollars - HSBC",
-    "2012",
-    "Circulating Standard Banknote",
-    "153 $\\times$ 77 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 100 Dollars - HSBC", 
+        vi: "100 Đô La Hồng Kông - HSBC" 
+    },
+    year: "2012",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 77 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 9
+index++ //index = 9
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/hsbc/500-dollar-f.jpg",
-        alt: "Front of the 500 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 500 Dollar Bill", vi: "Mặt Trước Tờ 500 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/hsbc/500-dollar-b.jpg",
-        alt: "Back of the 500 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 500 Dollar Bill", vi: "Mặt Sau Tờ 500 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 500 Dollars - HSBC",
-    "2014",
-    "Circulating Standard Banknote",
-    "158 $\\times$ 79 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 500 Dollars - HSBC", 
+        vi: "500 Đô La Hồng Kông - HSBC" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "158 $\\times$ 79 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 10
+index++ //index = 10
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2010/standard-chartered-bank/100-dollar-f.jpg",
-        alt: "Front of the 100 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2010/standard-chartered-bank/100-dollar-b.jpg",
-        alt: "Back of the 100 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 100 Dollars - Standard Chartered Bank",
-    "2016",
-    "Circulating Standard Banknote",
-    "153 $\\times$ 77 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 100 Dollars - Standard Chartered Bank", 
+        vi: "100 Đô La Hồng Kông - Standard Chartered Bank" 
+    },
+    year: "2016",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 77 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 11
+index++ //index = 11
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2018/hsbc/100-dollar-f.jpg",
-        alt: "Front of the 100 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2018/hsbc/100-dollar-b.jpg",
-        alt: "Back of the 100 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 100 Dollars - HSBC",
-    "2018",
-    "Circulating Standard Banknote",
-    "153 $\\times$ 77 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 100 Dollars - HSBC", 
+        vi: "100 Đô La Hồng Kông - HSBC" 
+    },
+    year: "2018",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 77 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 12
+index++ //index = 12
 images[`${index}`] = [
     {
         src: "../images/collection/hong-kong/2018/standard-chartered-bank/500-dollar-f.jpg",
-        alt: "Front of the 500 Dollar Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 500 Dollar Bill", vi: "Mặt Trước Tờ 500 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/hong-kong/2018/standard-chartered-bank/500-dollar-b.jpg",
-        alt: "Back of the 500 Dollar Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 500 Dollar Bill", vi: "Mặt Sau Tờ 500 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Hongkongese 500 Dollars - Standard Chartered Bank",
-    "2020",
-    "Circulating Standard Banknote",
-    "158 $\\times$ 79 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Hongkongese 500 Dollars - Standard Chartered Bank", 
+        vi: "500 Đô La Hồng Kông - Standard Chartered Bank" 
+    },
+    year: "2020",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "158 $\\times$ 79 mm",
+    figure: null,
+    note: null
+};

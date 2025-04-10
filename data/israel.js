@@ -4,73 +4,100 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/israel/c/20-shekel-f.jpg",
-            alt: "Front of the 20 Shekel Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 20 Shekel Bill", vi: "Mặt Trước Tờ 20 Shekel"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/israel/c/20-shekel-b.jpg",
-            alt: "Back of the 20 Shekel Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 20 Shekel Bill", vi: "Mặt Sau Tờ 20 Shekel"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Israeli 20 Shekels",
-    "2017",
-    "Circulating Standard Banknote",
-    "129 $\\times$ 71 mm",
-    "Rachel Bluwstein (1890-1931)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Israeli 20 Shekels", 
+            vi: "20 Shekel Israeli" 
+        },
+        year: "2017",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "129 $\\times$ 71 mm",
+        figure: { 
+            en: "Rachel Bluwstein (1890-1931)", 
+            vi: "Rachel Bluwstein (1890-1931)" 
+        },
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/israel/c/50-shekel-f.jpg",
-        alt: "Front of the 50 Shekel Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 50 Shekel Bill", vi: "Mặt Trước Tờ 50 Shekel"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/israel/c/50-shekel-b.jpg",
-        alt: "Back of the 50 Shekel Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 50 Shekel Bill", vi: "Mặt Sau Tờ 50 Shekel"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Israeli 50 Shekels",
-    "2014",
-    "Circulating Standard Banknote",
-    "136 $\\times$ 71 mm",
-    "Shaul Tchernichovsky (1875-1943)",
-    '2014\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Israeli 50 Shekels", 
+        vi: "50 Shekel Israel" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Commemorative Banknote", 
+        vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
+    },
+    size: "136 $\\times$ 71 mm",
+    figure: { 
+        en: "Shaul Tchernichovsky (1875-1943)", 
+        vi: "Shaul Tchernichovsky (1875-1943)" 
+    },
+    note: { 
+        en: `2014\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        vi: `Top 12 tờ tiền năm 2014 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
+    },
+};
 
-index = index + 1; //index = 3
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/israel/c/200-shekel-f.jpg",
-        alt: "Front of the 50000 Rial Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 200 Shekel Bill", vi: "Mặt Trước Tờ 200 Shekel"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/israel/c/200-shekel-b.jpg",
-        alt: "Back of the 50000 Rial Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 200 Shekel Bill", vi: "Mặt Sau Tờ 200 Shekel"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Israeli 200 Shekels",
-    "2015",
-    "Circulating Standard Banknote",
-    "150 $\\times$ 71 mm",
-    "Nathan Alterman (1910-1970)",
-    '2015\'s Top 20 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>'
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Israeli 200 Shekels", 
+        vi: "200 Shekel Israel" 
+    },
+    year: "2015",
+    type: { 
+        en: "Circulating Commemorative Banknote", 
+        vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
+    },
+    size: "150 $\\times$ 20 mm",
+    figure: { 
+        en: "Nathan Alterman (1910-1970)", 
+        vi: "Nathan Alterman (1910-1970)" 
+    },
+    note: { 
+        en: `2015\'s Top 20 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        vi: `Top 20 tờ tiền năm 2015 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
+    },
+};

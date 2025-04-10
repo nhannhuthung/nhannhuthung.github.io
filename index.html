@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
     
-    <script charset="utf-8" src="scripts/index.js"></script>
+    <script src="scripts/lang/index.js"></script>
 </head>
 
 <body>
@@ -38,17 +38,20 @@
                 </a>
             </div>
             <div id="owl-text">
-                <p>Click the owl!</p>
+                <p id="owl-message">Click the owl!</p>
+            </div>
+            <div class="language-toggle">
+                <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
             </div>
         </div>
     </section>
 
     <section id="navigator" class="nav-menu-box">
         <nav class="nav-pos-menu"> 
-            <a href="index.html">Home</a>
-            <a href="collection.html">Collection</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" id="home-nav">Home</a>
+            <a href="collection.html" id="collection-nav">Collection</a>
+            <a href="about.html" id="about-nav">About</a>
+            <a href="contact.html" id="contact-nav">Contact</a>
         </nav>
     </section>
 </body>

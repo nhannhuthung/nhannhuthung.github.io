@@ -1,98 +1,122 @@
 let index = 1;
 
 const images = {
-        [`${index}`]: [
+    [`${index}`]: [
         {
             src: "../images/collection/cambodia/500-series/2004-f.jpg",
-            alt: "Front of the 500 Riel Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 500 Riel Bill", vi: "Mặt Trước Tờ 500 Riel"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/cambodia/500-series/2004-b.jpg",
-            alt: "Back of the 500 Riel Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 500 Riel Bill", vi: "Mặt Sau Tờ 500 Riel"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Cambodian 500 Riels",
-    "2004",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 64 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Cambodian 500 Riels", 
+            vi: "500 Riel Campuchia" 
+        },
+        year: "2004",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "138 $\\times$ 64 mm",
+        figure: null,
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/cambodia/1000-series/2007-f.jpg",
-        alt: "Front of the 1000 Riel Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 1000 Riel Bill", vi: "Mặt Trước Tờ 1000 Riel"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/cambodia/1000-series/2007-b.jpg",
-        alt: "Back of the 1000 Riel Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 1000 Riel Bill", vi: "Mặt Sau Tờ 1000 Riel"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Cambodian 1000 Riels",
-    "2007",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 64 mm",
-    ""
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Cambodian 1,000 Riels", 
+        vi: "1.000 Riel Campuchia" 
+    },
+    year: "2007",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "138 $\\times$ 64 mm",
+    figure: null,
+    note: null
+};
 
-index = index + 1; //index = 3
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/cambodia/100-series/2014-f.jpg",
-        alt: "Front of the 100 Riel Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 100 Riel Bill", vi: "Mặt Trước Tờ 100 Riel"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/cambodia/100-series/2014-b.jpg",
-        alt: "Back of the 100 Riel Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 100 Riel Bill", vi: "Mặt Sau Tờ 100 Riel"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Cambodian 100 Riels",
-    "2014",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 64 mm",
-    "Norodom Sihanouk (1941-1955)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Cambodian 100 Riels", 
+        vi: "100 Riel Campuchia" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "138 $\\times$ 64 mm",
+    figure: { 
+        en: "Norodom Sihanouk (1941-1955)", 
+        vi: "Norodom Sihanouk (1941-1955)" 
+    },
+    note: null
+};
 
-index = index + 1; //index = 4
+index++; //index = 4
 images[`${index}`] = [
     {
         src: "../images/collection/cambodia/500-series/2014-f.jpg",
-        alt: "Front of the 500 Riel Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 500 Riel Bill", vi: "Mặt Trước Tờ 500 Riel"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/cambodia/500-series/2014-b.jpg",
-        alt: "Back of the 500 Riel Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 500 Riel Bill", vi: "Mặt Sau Tờ 500 Riel"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Cambodian 500 Riels",
-    "2014",
-    "Circulating Standard Banknote",
-    "138 $\\times$ 64 mm",
-    "Norodom Sihamoni (1953-Present)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Cambodian 500 Riels", 
+        vi: "500 Riel Campuchia" 
+    },
+    year: "2014",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "138 $\\times$ 64 mm",
+    figure: { 
+        en: "Norodom Sihamoni (1953-Present)", 
+        vi: "Norodom Sihamoni (1953-Present)" 
+    },
+    note: null
+};

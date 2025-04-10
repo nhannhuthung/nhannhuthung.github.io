@@ -21,50 +21,53 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <script charset="utf-8" src="script.js"></script>
+    <script src="scripts/lang/collection.js"></script>
 </head>
 
 <body>
-    <!--<Body background="images/background/hex.jpg"></Body>-->
     <header>
         <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
         <nav id="header-nav">
-            <a href="index.html">Home</a>
-            <a href="collection.html">Collection</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" id="home-nav">Home</a>
+            <a href="collection.html" id="collection-nav">Collection</a>
+            <a href="about.html" id="about-nav">About</a>
+            <a href="contact.html" id="contact-nav">Contact</a>
         </nav>
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Enter page name...">
             <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i> Search
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+        </div>
+        <div class="language-toggle">
+            <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
         </div>
     </header>
 
     <button onclick="toTop()" id="top_btn" title="Go to top">Top</button>
 
     <div class="container-top">
-        <h3>Acknowledgment</h3>
-        <p>I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.</p>
-        <h3>Remark</h3>
-        <p>I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins, I couldn't put all of them here.</p>
-        <p>A few highlights about my coin collection:
+        <h3 id="acknowledge">Acknowledgment</h3>
+        <p id="acknowledge-para">I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.</p>
+        <h3 id="remark">Remark</h3>
+        <p id="remark-para-1">I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins, I couldn't put all of them here.</p>
+        <p id="remark-para-2">A few highlights about my coin collection:
         <ul> 
             <!--customize the bullet here
             https://www.toptal.com/designers/htmlarrows/symbols/-->
-            <li><span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina etc.).</li>
-            <li><span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).</li>
+            <li id="remark-subpara-1"><span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina etc.).</li>
+            <li id="remark-subpara-2"><span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).</li>
         </ul>
-        <p>My collection is extending with banknotes. I have lost count the total number of unique regions for accounting banknotes and coins.</p>
-        <h3>Collection Update</h3>
-        <h4>Last Updated: Mar 17th 2025.</h4>
-        <p>One Vietnamese bill: 100-dong bill.</p>
-        <p>One Australian bill: 10-dollar bill.</p>
+        <p id="remark-para-3">My collection is extending with banknotes. I have lost count the total number of unique regions for accounting banknotes and coins.</p>
+        <h3 id="collect-update">Collection Update</h3>
+        <h4 id="last-update">Last Updated: Mar 17th 2025.</h4>
+        <p id="update-1">One Vietnamese bill: 100-dong bill.</p>
+        <p id="update-2">One Australian bill: 10-dollar bill.</p>
     </div>
 
     <div class="container" style="background-color: rgba(0, 0, 0, 0.9);">
-        <h1 style="color: whitesmoke;">Highlight</h1>
-        <h2 style="color: whitesmoke;">Banknote</h2>
+        <h1 id="highlight" style="color: whitesmoke;">Highlight</h1>
+        <h2 id="banknote" style="color: whitesmoke;">Banknote</h2>
         <div class="highlight-banknote">
             <div class="box" id="box-1">
                 <img src="images/collection/canada/2011-2013/10-dollar-b.jpg" alt="Canada">
@@ -72,19 +75,19 @@
             </div>
             <div class="box" id="box-2">
                 <img src="images/collection/norway/8/200-kroner-f.jpg" alt="Norway">
-                <div class="overlay">Norway</div>
+                <div id="norway" class="overlay">Norway</div>
             </div>
             <div class="box" id="box-3">
-                <img src="images/collection/south-korea/2006/10000-won-b.jpg" alt="South Korea">
-                <div class="overlay">South Korea</div>
+                <img src="images/collection/hong-kong/2010/hsbc/50-dollar-b.jpg" alt="South Korea">
+                <div id="hong-kong" class="overlay">Hong Kong</div>
             </div>
             <div class="box" id="box-4">
-                <img src="images/collection/hong-kong/2010/hsbc/500-dollar-b.jpg" alt="Hong Kong">
-                <div class="overlay">Hong Kong</div>
+                <img src="images/collection/south-korea/2006/50000-won-b.jpg" alt="Hong Kong">
+                <div id="south-korea" class="overlay">South Korea</div>
             </div>
             <div class="box" id="box-5">
                 <img src="images/collection/australia/1988/10-dollar-b.jpg" alt="Australia">
-                <div class="overlay">Australia</div>
+                <div id="australia" class="overlay">Australia</div>
             </div>
             <div class="box" id="box-6">
                 <img src="images/collection/belarus/2000/50-ruble-b.jpg" alt="Belarus">
@@ -96,155 +99,8 @@
             </div>
         </div>
     </div>
-    
 
-    <div class="container">
-        <h1>America</h1>
-        <h2>North America</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/canada.html')">Canada</div>
-            <div class="category-item" onclick="navigateTo('collection/mexico.html')">Mexico</div>
-            <div class="category-item" onclick="navigateTo('collection/usa.html')">United States of America</div>
-        </div>
-        <h2>Central America</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/costa-rica.html')">Costa Rica</div>
-        </div>
-        <h2>South America</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/colombia.html')">Colombia</div>
-            <div class="category-item" onclick="navigateTo('collection/venezuela.html')">Venezuela</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Africa</h1>
-        <h2>North Africa</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/egypt.html')">Egypt</div>
-        </div>
-        <h2>West Africa</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/ghana.html')">Ghana</div>
-            <div class="category-item" onclick="navigateTo('collection/guinea.html')">Guinea</div>
-            <div class="category-item" onclick="navigateTo('collection/west-africa.html')">West Africa</div>
-        </div>
-        <h2>Central Africa</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/drc.html')">Democratic Republic of the Congo</div>
-        </div>
-        <h2>East Africa</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/ethiopia.html')">Ethiopia</div>
-            <div class="category-item" onclick="navigateTo('collection/kenya.html')">Kenya</div>
-            <div class="category-item" onclick="navigateTo('collection/malawi.html')">Malawi</div>
-            <div class="category-item" onclick="navigateTo('collection/mauritius.html')">Maritius</div>
-            <div class="category-item" onclick="navigateTo('collection/rwanda.html')">Rwanda</div>
-            <div class="category-item" onclick="navigateTo('collection/somalia.html')">Somalia</div>
-        </div>
-        <h2>Southern Africa</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/zambia.html')">Zambia</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Europe</h1>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/eu.html')">European Union</div>
-        </div>
-        <h2>Northern Europe</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/england.html')">England</div>
-            <div class="category-item" onclick="navigateTo('collection/ireland.html')">Ireland</div>
-            <div class="category-item" onclick="navigateTo('collection/norway.html')">Norway</div>
-            <div class="category-item" onclick="navigateTo('collection/scotland.html')">Scotland</div>
-        </div>
-        <h2>Eastern Europe</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/belarus.html')">Belarus</div>
-            <div class="category-item" onclick="navigateTo('collection/moldova.html')">Moldova</div>
-            <div class="category-item" onclick="navigateTo('collection/russia.html')">Russia</div>
-            <div class="category-item" onclick="navigateTo('collection/transnistria.html')">Transnistria</div>
-            <div class="category-item" onclick="navigateTo('collection/ukraine.html')">Ukraine</div>
-        </div>
-        <h2>Southern Europe</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/croatia.html')">Croatia</div>
-            <div class="category-item" onclick="navigateTo('collection/italy.html')">Italy</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Asia</h1>
-        <h2>Middle East Asia</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/iran.html')">Iran</div>
-            <div class="category-item" onclick="navigateTo('collection/israel.html')">Israel</div>
-            <div class="category-item" onclick="navigateTo('collection/lebanon.html')">Lebanon</div>
-            <div class="category-item" onclick="navigateTo('collection/oman.html')">Oman</div>
-            <div class="category-item" onclick="navigateTo('collection/saudi-arabia.html')">Saudi Arabia</div>
-            <div class="category-item" onclick="navigateTo('collection/turkey.html')">Turkey</div>
-        </div>
-        <h2>Central Asia</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/kyrgyzstan.html')">Kyrgyzstan</div>
-            <div class="category-item" onclick="navigateTo('collection/tajikistan.html')">Tajikistan</div>
-            <div class="category-item" onclick="navigateTo('collection/turkmenistan.html')">Turkmenistan</div>
-            <div class="category-item" onclick="navigateTo('collection/uzbekistan.html')">Uzbekistan</div>
-        </div>
-        <h2>South Asia</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/bangladesh.html')">Bangladesh</div>
-            <div class="category-item" onclick="navigateTo('collection/bhutan.html')">Bhutan</div>
-            <div class="category-item" onclick="navigateTo('collection/india.html')">India</div>
-            <div class="category-item" onclick="navigateTo('collection/nepal.html')">Nepal</div>
-            <div class="category-item" onclick="navigateTo('collection/pakistan.html')">Pakistan</div>
-        </div>
-        <h2>South East Asia</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/cambodia.html')">Cambodia</div>
-            <div class="category-item" onclick="navigateTo('collection/indonesia.html')">Indonesia</div>
-            <div class="category-item" onclick="navigateTo('collection/laos.html')">Laos</div>
-            <div class="category-item" onclick="navigateTo('collection/malaysia.html')">Malaysia</div>
-            <div class="category-item" onclick="navigateTo('collection/myanmar.html')">Myanmar</div>
-            <div class="category-item" onclick="navigateTo('collection/singapore.html')">Singapore</div>
-            <div class="category-item" onclick="navigateTo('collection/thailand.html')">Thailand</div>
-            <div class="category-item" onclick="navigateTo('collection/vietnam.html')">Vietnam</div>
-        </div>
-        <h2>East Asia</h2>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/china.html')">China</div>
-            <div class="category-item" onclick="navigateTo('collection/hong-kong.html')">Hong Kong</div>
-            <div class="category-item" onclick="navigateTo('collection/japan.html')">Japan</div>
-            <div class="category-item" onclick="navigateTo('collection/mogolia.html')">Mongolia</div>
-            <div class="category-item" onclick="navigateTo('collection/north-korea.html')">North Korea</div>                                   
-            <div class="category-item" onclick="navigateTo('collection/south-korea.html')">South Korea</div>
-            <div class="category-item" onclick="navigateTo('collection/taiwan.html')">Taiwan</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Oceania:</h1>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/australia.html')">Australia</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Arctic:</h1>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/arctic-territories.html')">Arctic Territories</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <h1>Antartica:</h1>
-        <div class="category">
-            <div class="category-item" onclick="navigateTo('collection/kerguelen-islands.html')">Kerguelen Islands</div>
-        </div>
-    </div>
-
+    <div id="country-list"></div>
     
     <footer>
 

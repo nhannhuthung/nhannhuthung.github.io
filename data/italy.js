@@ -5,22 +5,29 @@ const images = {
         {
             src: "../images/collection/italy/1971/500-lire-f.jpg",
             alt: "Front of the 500 Lire Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 500 Lire Bill", vi: "Mặt Trước Tờ 500 Lire"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/italy/1971/500-lire-b.jpg",
-            alt: "Back of the 500 Lire Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 500 Lire Bill", vi: "Mặt Sau Tờ 500 Lira"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Italian 500 Lire",
-    "1966",
-    "Non-circulating Standard Banknote",
-    "110 $\\times$ 55 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Italian 500 Lire", 
+            vi: "500 Lira Ý" 
+        },
+        year: "1966",
+        type: { 
+            en: "Non-circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+        },
+        size: "110 $\\times$ 55 mm",
+        figure: null,
+        note: null
+    }
+};

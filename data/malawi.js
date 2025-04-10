@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/malawi/2012/20-kwacha-f.jpg",
-            alt: "Front of the 20 Kwacha Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 20 Kwacha Bill", vi: "Mặt Trước Tờ 20 Kwacha"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/malawi/2012/20-kwacha-b.jpg",
-            alt: "Back of the 20 Kwacha Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 20 Kwacha Bill", vi: "Mặt Sau Tờ 20 Kwacha"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Malawian 20 Kwacha",
-    "2016",
-    "Circulating Standard Banknote",
-    "128 $\\times$ 64 mm",
-    "Inkosi Ya Makhosi M'mbelwa II (1860-1959)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Malawian 20 Kwachas", 
+            vi: "20 Kwacha Malawi" 
+        },
+        year: "2016",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "128 $\\times$ 64 mm",
+        figure: { 
+            en: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)", 
+            vi: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)" 
+        },
+        note: null
+    }
+};

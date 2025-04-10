@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/zambia/1980/50-kwacha-f.jpg",
-            alt: "Front of the 50 Kwacha Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 50 Kwacha Bill", vi: "Mặt Trước Tờ 50 Kwacha"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/zambia/1980/50-kwacha-b.jpg",
-            alt: "Back of the 50 Kwacha Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 50 Kwacha Bill", vi: "Mặt Sau Tờ 50 Kwacha"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Zambian 50 Kwacha",
-    "",
-    "Circulating Standard Banknote",
-    "153 $\\times$ 75 mm",
-    "Kenneth Kaunda (1924-2021)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Zambian 50 Kwachas", 
+            vi: "50 Kwacha Zambia" 
+        },
+        year: null,
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "153 $\\times$ 75 mm",
+        figure: { 
+            en: "Kenneth Kaunda (1924-2021)", 
+            vi: "Kenneth Kaunda (1924-2021)" 
+        },
+        note: null
+    }
+};

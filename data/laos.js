@@ -4,47 +4,63 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/laos/2000-series/2011-f.jpg",
-            alt: "Front of the 2000 Kip Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 2000 Kip Bill", vi: "Mặt Trước Tờ 2000 Kip"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/laos/2000-series/2011-b.jpg",
-            alt: "Back of the 2000 Kip Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 2000 Kip Bill", vi: "Mặt Sau Tờ 2000 Kip"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Lao 2,000 Kip",
-    "2011",
-    "Circulating Standard Banknote",
-    "141 $\\times$ 65 mm",
-    "Kaysone Phomvihane (1920-1992)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Lao 2,000 Kip", 
+            vi: "2.000 Kíp Lào" 
+        },
+        year: "2011",
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "141 $\\times$ 65 mm",
+        figure: { 
+            en: "Kaysone Phomvihane (1920-1992)", 
+            vi: "Kaysone Phomvihane (1920-1992)" 
+        },
+        note: null
+    }
+};
 
-index = index + 1; //index = 2
+index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/laos/5000-series/2003-f.jpg",
-        alt: "Front of the 5000 Kip Bill",
-        description: "Obverse"
+        alt: {en: "Front of the 5000 Kip Bill", vi: "Mặt Trước Tờ 5000 Kip"},
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/laos/5000-series/2003-b.jpg",
-        alt: "Back of the 5000 Kip Bill",
-        description: "Reverse"
+        alt: {en: "Back of the 5000 Kip Bill", vi: "Mặt Sau Tờ 5000 Kip"},
+        description: {en: "Reverse", vi: "Sau"}
     }
 ];
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Lao 5,000 Kip",
-    "2003",
-    "Circulating Standard Banknote",
-    "152 $\\times$ 68 mm",
-    "Kaysone Phomvihane (1920-1992)"
-);
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Lao 5,000 Kip", 
+        vi: "5.000 Kíp Lào" 
+    },
+    year: "2003",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "152 $\\times$ 68 mm",
+    figure: { 
+        en: "Kaysone Phomvihane (1920-1992)", 
+        vi: "Kaysone Phomvihane (1920-1992)" 
+    },
+    note: null
+};

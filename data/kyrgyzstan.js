@@ -4,23 +4,29 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/kyrgyzstan/1/1-tyiyn-f.jpg",
-            alt: "Front of the 1 Tyiyn Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 1 Tyiyn Bill", vi: "Mặt Trước Tờ 1 Tyiyn"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/kyrgyzstan/1/1-tyiyn-b.jpg",
-            alt: "Back of the 1 Tyiyn Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 1 Tyiyn Bill", vi: "Mặt Sau Tờ 1 Tyiyn"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Kyrgyz 1 Tyiyn",
-    "",
-    "Non-circulating Standard Banknote",
-    "90 $\\times$ 70 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Kyrgyz 1 Tyiyn", 
+            vi: "1 Tyiyn Kyrgyzstan" 
+        },
+        year: "1954",
+        type: { 
+            en: "Non-circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+        },
+        size: "90 $\\times$ 70 mm",
+        figure: null,
+        note: null
+    }
+};

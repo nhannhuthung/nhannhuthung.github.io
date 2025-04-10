@@ -4,23 +4,32 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/colombia/2016/2000-peso-f.jpg",
-            alt: "Front of the 2000 Peso Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 2000 Peso Bill", vi: "Mặt Trước Tờ 2000 Peso"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/colombia/2016/2000-peso-b.jpg",
-            alt: "Back of the 2000 Peso Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 2000 Peso Bill", vi: "Mặt Sau Tờ 2000 Peso"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Colombian 2,000 Pesos",
-    "",
-    "Circulating Standard Banknote",
-    "128 $\\times$ 66 mm",
-    "Débora Arango Pérez (1907-2005)"
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Colombian 2,000 Pesos", 
+            vi: "2.000 Peso Colombia" 
+        },
+        year: null,
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "128 $\\times$ 66 mm",
+        figure: { 
+            en: "Débora Arango Pérez (1907-2005)", 
+            vi: "Débora Arango Pérez (1907-2005)" 
+        },
+        note: null
+    }
+};

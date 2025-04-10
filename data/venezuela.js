@@ -5,22 +5,29 @@ const images = {
         {
             src: "../images/collection/venezuela/2008/5-bolivar-f.jpg",
             alt: "Front of the 5 Bolivar Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 5 Bolivar Bill", vi: "Mặt Trước Tờ 5 Bolivar"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/venezuela/2008/5-bolivar-b.jpg",
-            alt: "Back of the 5 Bolivar Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 5 Bolivar Bill", vi: "Mặt Sau Tờ 5 Bolivar"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Venezuelan 5 Bolivar",
-    "2013",
-    "Non-circulating Standard Banknote",
-    "96 $\\times$ 156 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Venezuelan 5 Bolivar", 
+            vi: "5 Bolivar Venezuela" 
+        },
+        year: "2013",
+        type: { 
+            en: "Non-circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+        },
+        size: "96 $\\times$ 156 mm",
+        figure: null,
+        note: null
+    }
+};

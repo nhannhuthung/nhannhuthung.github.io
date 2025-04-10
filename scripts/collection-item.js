@@ -1,110 +1,201 @@
 //--// function to print out code for sidebar //--//
-function createCategory(title, id, items) {
-    let categoryHTML = `<h2 onclick="toggleCategories('${id}')">${title}</h2>`;
-    categoryHTML += `<ul id="${id}">`;
-    items.forEach(item => {
-        categoryHTML += `<li onclick="navigateTo('${item.link}')">${item.name}</li>`;
+let currentLang = localStorage.getItem("language") || "en";
+
+const fixed_trans = {
+    en: {
+        home: `Home`,
+        collection: `Collection`,
+        about: `About`,
+        contact: `Contact`,
+        search_placeholder: `Enter page name...`,
+        back_to_top: `Top`,
+    },
+    vi: {
+        home: `Trang Chủ`,
+        collection: `Bộ Sưu Tập`,
+        about: `Giới Thiệu`,
+        contact: `Liên Hệ`,
+        search_placeholder: `Nhập tên trang...`,
+        back_to_top: `Đầu`,
+    }
+};
+
+const countryData = {
+    "america": {
+        "name": { "en": "America", "vi": "Châu Mỹ" },
+        "countries": [
+            { "en": "Canada", "vi": "Canada", "link": "canada.html" },
+            { "en": "Colombia", "vi": "Colombia", "link": "colombia.html" },
+            { "en": "Costa Rica", "vi": "Costa Rica", "link": "costa-rica.html" },
+            { "en": "Mexico", "vi": "Mexico", "link": "mexico.html" },
+            { "en": "United States of America", "vi": "Hoa Kỳ", "link": "usa.html" },
+            { "en": "Venezuela", "vi": "Venezuela", "link": "venezuela.html" },
+        ]       
+    },
+    "africa": {
+        "name": { "en": "Africa", "vi": "Châu Phi" },
+        "countries": [
+            { "en": "Democratic Republic of the Congo", "vi": "Cộng Hòa Dân Chủ Congo", "link": "drc.html" },
+            { "en": "Egypt", "vi": "Ai Cập", "link": "egypt.html" },
+            { "en": "Ethiopia", "vi": "Ethiopia", "link": "ethiopia.html" },
+            { "en": "Ghana", "vi": "Ghana", "link": "ghana.html" },
+            { "en": "Guinea", "vi": "Guinea", "link": "guinea.html" },
+            { "en": "Kenya", "vi": "Kenya", "link": "kenya.html" },
+            { "en": "Malawi", "vi": "Malawi", "link": "malawi.html" },
+            { "en": "Mauritius", "vi": "Mauritius", "link": "mauritius.html" },
+            { "en": "Rwanda", "vi": "Rwanda", "link": "rwanda.html" },
+            { "en": "Somalia", "vi": "Somalia", "link": "somalia.html" },
+            { "en": "West Africa", "vi": "Tây Phi", "link": "west-africa.html" },
+            { "en": "Zambia", "vi": "Zambia", "link": "zambia.html" },
+        ]
+    },
+    "europe": {
+        "name": { "en": "Europe", "vi": "Châu Âu" },
+        "countries": [
+            { "en": "Belarus", "vi": "Belarus", "link": "belarus.html" },
+            { "en": "Croatia", "vi": "Croatia", "link": "croatia.html" },
+            { "en": "England", "vi": "Anh", "link": "england.html" },
+            { "en": "European Union", "vi": "Liên Minh Châu Âu", "link": "eu.html" },
+            { "en": "Ireland", "vi": "Ireland", "link": "ireland.html" },
+            { "en": "Italy", "vi": "Ý", "link": "italy.html" },
+            { "en": "Moldova", "vi": "Moldova", "link": "moldova.html" },
+            { "en": "Norway", "vi": "Na Uy", "link": "norway.html" },
+            { "en": "Russia", "vi": "Nga", "link": "russia.html" },
+            { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
+            { "en": "Transnistria", "vi": "Transnistria", "link": "transnistria.html" },
+            { "en": "Ukraine", "vi": "Ukraine", "link": "ukraine.html" },
+        ]
+    },
+    "asia": {
+        "name": { "en": "Asia", "vi": "Châu Á"},
+        "countries": [
+            { "en": "Bangladesh", "vi": "Bangladesh", "link": "bangladesh.html" },
+            { "en": "Bhutan", "vi": "Bhutan", "link": "bhutan.html" },
+            { "en": "Cambodia", "vi": "Campuchia", "link": "cambodia.html" },
+            { "en": "China", "vi": "Trung Quốc", "link": "china.html" },
+            { "en": "Hong Kong", "vi": "Hồng Kông", "link": "hong-kong.html" },
+            { "en": "India", "vi": "Ấn Độ", "link": "india.html" },
+            { "en": "Indonesia", "vi": "Indonesia", "link": "indonesia.html" },
+            { "en": "Iran", "vi": "Iran", "link": "iran.html" },
+            { "en": "Israel", "vi": "Israel", "link": "israel.html" },
+            { "en": "Japan", "vi": "Nhật Bản", "link": "japan.html" },
+            { "en": "Kyrgyzstan", "vi": "Kyrgyzstan", "link": "kyrgyzstan.html" },
+            { "en": "Laos", "vi": "Lào", "link": "laos.html" },
+            { "en": "Lebanon", "vi": "Liban", "link": "lebanon.html" },
+            { "en": "Malaysia", "vi": "Malaysia", "link": "malaysia.html" },
+            { "en": "Mongolia", "vi": "Mông Cổ", "link": "mogolia.html" },
+            { "en": "Myanmar", "vi": "Myanmar", "link": "myanmar.html" },
+            { "en": "Nepal", "vi": "Nepal", "link": "nepal.html" },
+            { "en": "North Korea", "vi": "Triều Tiên", "link": "north-korea.html" },
+            { "en": "Oman", "vi": "Oman", "link": "oman.html" },
+            { "en": "Pakistan", "vi": "Pakistan", "link": "pakistan.html" },
+            { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "link": "saudi-arabia.html" },
+            { "en": "Singapore", "vi": "Singapore", "link": "singapore.html" },
+            { "en": "South Korea", "vi": "Hàn Quốc", "link": "south-korea.html" },
+            { "en": "Taiwan", "vi": "Đài Loan", "link": "taiwan.html" },
+            { "en": "Tajikistan", "vi": "Tajikistan", "link": "tajikistan.html" },
+            { "en": "Thailand", "vi": "Thái Lan", "link": "thailand.html" },
+            { "en": "Turkey", "vi": "Thổ Nhĩ Kỳ", "link": "turkey.html" },
+            { "en": "Turkmenistan", "vi": "Turkmenistan", "link": "turkmenistan.html" },
+            { "en": "Uzbekistan", "vi": "Uzbekistan", "link": "uzbekistan.html" },
+            { "en": "Vietnam", "vi": "Việt Nam", "link": "vietnam.html" }
+        ]
+    },
+    "oceania": {
+        "name": { "en": "Oceania", "vi": "Châu Úc" },
+        "countries": [
+            { "en": "Australia", "vi": "Úc", "link": "australia.html" },
+        ]
+    },
+    "arctic": {
+        "name": { "en": "Arctic", "vi": "Bắc Cực" },
+        "countries": [
+            { "en": "Arctic Territories", "vi": "Các Lãnh Thổ Bắc Cực", "link": "arctic-territories.html" },
+        ]
+    },
+    "antartica": {
+        "name": { "en": "Antarctica", "vi": "Nam Cực" },
+        "countries": [
+            { "en": "Kerguelen Islands", "vi": "Quần Đảo Kerguelen", "link": "kerguelen-islands.html"},
+        ]
+    },
+};
+
+function createCategory(categoryKey) {
+    const category = countryData[categoryKey];
+    const title = category.name[currentLang];
+    const sortedCountries = category.countries.sort((a, b) => a[currentLang].localeCompare(b[currentLang]));
+    
+    let categoryHTML = `<h2 onclick="toggleCategories('${categoryKey}')">${title}</h2>`;
+    categoryHTML += `<ul id="${categoryKey}">`;
+    sortedCountries.forEach(item => {
+        categoryHTML += `<li onclick="navigateTo('${item.link}')">${item[currentLang]}</li>`;
     });
     categoryHTML += `</ul>`;
     return categoryHTML;
 }
 
 function insertSidebarHTML(id) {
-    const sidebarHTML = `
-        <div class="sidebar">
-            ${createCategory("America", "america", [
-                { name: "Canada", link: "canada.html" },
-                { name: "Colombia", link: "colombia.html" },
-                { name: "Costa Rica", link: "costa-rica.html" },
-                { name: "Mexico", link: "mexico.html" },
-                { name: "United States of America", link: "usa.html" },
-                { name: "Venezuela", link: "venezuela.html" }
-            ])}
-
-            ${createCategory("Africa", "africa", [
-                { name: "Democratic Republic of the Congo", link: "drc.html" },
-                { name: "Egypt", link: "egypt.html" },
-                { name: "Ethiopia", link: "ethiopia.html" },
-                { name: "Ghana", link: "ghana.html" },
-                { name: "Guinea", link: "guinea.html" },
-                { name: "Kenya", link: "kenya.html" },
-                { name: "Malawi", link: "malawi.html" },
-                { name: "Mauritius", link: "mauritius.html" },
-                { name: "Rwanda", link: "rwanda.html" },
-                { name: "Somalia", link: "somalia.html" },
-                { name: "West Africa", link: "west-africa.html" },
-                { name: "Zambia", link: "zambia.html" }
-            ])}
-
-            ${createCategory("Europe", "europe", [
-                { name: "Belarus", link: "belarus.html" },
-                { name: "Croatia", link: "croatia.html" },
-                { name: "England", link: "england.html" },
-                { name: "European Union", link: "eu.html" },
-                { name: "Ireland", link: "ireland.html" },
-                { name: "Italy", link: "italy.html" },
-                { name: "Moldova", link: "moldova.html" },
-                { name: "Norway", link: "norway.html" },
-                { name: "Russia", link: "russia.html" },
-                { name: "Scotland", link: "scotland.html" },
-                { name: "Transnistria", link: "transnistria.html" },
-                { name: "Ukraine", link: "ukraine.html" }
-            ])}
-
-            ${createCategory("Asia", "asia", [
-                { name: "Bangladesh", link: "bangladesh.html" },
-                { name: "Bhutan", link: "bhutan.html" },
-                { name: "Cambodia", link: "cambodia.html" },
-                { name: "China", link: "china.html" },
-                { name: "Hong Kong", link: "hong-kong.html" },
-                { name: "India", link: "india.html" },
-                { name: "Indonesia", link: "indonesia.html" },
-                { name: "Iran", link: "iran.html" },
-                { name: "Israel", link: "israel.html" },
-                { name: "Japan", link: "japan.html" },
-                { name: "Kyrgyzstan", link: "kyrgyzstan.html" },
-                { name: "Laos", link: "laos.html" },
-                { name: "Lebanon", link: "lebanon.html" },
-                { name: "Malaysia", link: "malaysia.html" },
-                { name: "Mongolia", link: "mogolia.html" },
-                { name: "Myanmar", link: "myanmar.html" },
-                { name: "Nepal", link: "nepal.html" },
-                { name: "North Korea", link: "north-korea.html" },
-                { name: "Oman", link: "oman.html" },
-                { name: "Pakistan", link: "pakistan.html" },
-                { name: "Saudi Arabia", link: "saudi-arabia.html" },
-                { name: "Singapore", link: "singapore.html" },
-                { name: "South Korea", link: "south-korea.html" },
-                { name: "Taiwan", link: "taiwan.html" },
-                { name: "Tajikistan", link: "tajikistan.html" },
-                { name: "Thailand", link: "thailand.html" },
-                { name: "Turkey", link: "turkey.html" },
-                { name: "Turkmenistan", link: "turkmenistan.html" },
-                { name: "Uzbekistan", link: "uzbekistan.html" },
-                { name: "Vietnam", link: "vietnam.html" }
-            ])}
-
-            ${createCategory("Oceania", "oceania", [
-                { name: "Australia", link: "australia.html" }
-            ])}
-
-            ${createCategory("Arctic", "arctic", [
-                { name: "Arctic Territories", link: "arctic-territories.html" }
-            ])}
-
-            ${createCategory("Antarctica", "antarctica", [
-                { name: "Kerguelen Islands", link: "kerguelen-islands.html" }
-            ])}
-        </div>
-    `;
-
+    let sidebarHTML = '<div class="sidebar">';
+    Object.keys(countryData).forEach(categoryKey => {
+        sidebarHTML += createCategory(categoryKey);
+    });
+    sidebarHTML += '</div>';
     document.getElementById(id).innerHTML = sidebarHTML;
 }
 
-window.onload = function () {
-    insertSidebarHTML('SideBar');
-    insertSidebarHTML('SideBarCollection');
-};
+function updatePageLanguage(currentLang) {
+    const foundationToUpdate = [
+        { id: "home-nav", key: "home" },
+        { id: "collection-nav", key: "collection" },
+        { id: "about-nav", key: "about" },
+        { id: "contact-nav", key: "contact" },
+        { id: "searchInput", key: "search_placeholder", attr: "placeholder" },
+        { id: "back-to-top", key: "back_to_top"},
+    ];
+
+    foundationToUpdate.forEach(({ id, key, attr }) => {
+        const element = document.getElementById(id);
+        if (element) {
+            if (attr) {
+                element.setAttribute(attr, fixed_trans[currentLang][key]);
+            } else {
+                element.textContent = fixed_trans[currentLang][key];
+            }
+        }
+    });
+}
+
+function toggleLanguage() {
+    currentLang = currentLang === "en" ? "vi" : "en"; 
+    localStorage.setItem("language", currentLang); 
+
+    updatePageLanguage(currentLang);
+    insertSidebarHTML('SideBar'); 
+    insertSidebarHTML('SideBarCollection'); 
+
+    // Remove old slideshow info before regenerating
+    document.querySelectorAll(".slideshow-info").forEach(el => el.remove());
+
+    Object.keys(images).forEach(index => {
+        generateSlideShowInfo("info" + index, slideshowInfo[index]);
+        updateSlideshowDescriptions(index, currentLang);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    currentLang = localStorage.getItem('language') || 'en';
+
+    updatePageLanguage(currentLang);
+    insertSidebarHTML('SideBar'); 
+    insertSidebarHTML('SideBarCollection'); 
+
+    Object.keys(images).forEach(index => {
+        createSlideshow("slide" + index, images[index]);
+        new Slideshow("slideshow" + index);
+        generateSlideShowInfo("info" + index, slideshowInfo[index], currentLang);
+    });
+});
 //--// function to print out code for sidebar //--//
 
 
@@ -161,97 +252,189 @@ class Slideshow {
 }
 
 function createSlideshow(containerId, images) {
-    // Find the container where the slideshow will be added
+    currentLang = localStorage.getItem("language") || "en"; 
     const container = document.getElementById(containerId);
-    if (!container) {
-        console.error(`Container with id "${containerId}" not found.`);
-        return;
-    }
+    if (!container) return;
 
-    // Create the main slideshow container
     const slideshowContainer = document.createElement("div");
     slideshowContainer.classList.add("slideshow-container");
 
-    // Loop through the images array to create slides
     images.forEach((image, index) => {
-        // Create the slide
         const slide = document.createElement("div");
         slide.classList.add("mySlides", "fade");
 
-        // Add the number text
         const numberText = document.createElement("div");
         numberText.classList.add("numbertext");
         numberText.textContent = `${index + 1} / ${images.length}`;
         slide.appendChild(numberText);
 
-        // Add the image
         const img = document.createElement("img");
         img.src = image.src;
-        img.alt = image.alt || "";
+        img.alt = image.alt[currentLang] || image.alt["en"];
         slide.appendChild(img);
 
-        // Add the description
         if (image.description) {
             const description = document.createElement("div");
             description.classList.add("description");
-            description.textContent = image.description;
+            description.textContent = image.description[currentLang] || image.description.en;
             slide.appendChild(description);
         }
 
-        // Append the slide to the slideshow container
         slideshowContainer.appendChild(slide);
     });
 
-    // Add click functionality for swapping slides
     slideshowContainer.setAttribute("onclick", "swap()");
-
-    // Append the slideshow container to the main container
     container.appendChild(slideshowContainer);
 }
 //--// function to display banknote //--//
 
 //--// function to display information of banknote //--//
-function generateSlideShowInfo(containerId, title, year, type, size, figure, note) {
-    // Create the container div
+// function generateSlideShowInfo(containerId, title, year, type, size, figure, note) {
+//     // Create the container div
+//     const infoDiv = document.createElement("div");
+//     infoDiv.className = "slideshow-info";
+
+//     // Helper function to create and append an element if the value is not empty
+//     function addInfoElement(label, value) {
+//         if (value) {
+//             const element = document.createElement("p");
+//             element.innerHTML = `<strong>${label}:</strong> ${value}`;
+//             infoDiv.appendChild(element);
+//         }
+//     }
+
+//     // Create and append elements only if they have values
+//     if (title) {
+//         const titleElement = document.createElement("h3");
+//         titleElement.textContent = title;
+//         infoDiv.appendChild(titleElement);
+//     }
+
+//     addInfoElement("Year", year);
+//     addInfoElement("Type", type);
+//     addInfoElement("Size", size);
+//     addInfoElement("Figure", figure);
+
+//     // Add note at the end in italic
+//     if (note) {
+//         const noteElement = document.createElement("p");
+//         noteElement.innerHTML = `<em>${note}</em>`;
+//         noteElement.style.fontSize = "16px";
+//         infoDiv.appendChild(noteElement);
+//     }
+
+//     // Append the created infoDiv to the specified container
+//     const container = document.getElementById(containerId);
+//     if (container) {
+//         container.appendChild(infoDiv);
+//     } else {
+//         console.error(`Container with id "${containerId}" not found.`);
+//     }
+// }
+
+// function generateSlideShowInfo(containerId, info, currentLang) {
+//     currentLang = currentLang === "en" ? "vi" : "en"; 
+//     const infoDiv = document.createElement("div");
+//     infoDiv.className = "slideshow-info";
+
+//     function addInfoElement(label, value, currentLang) {
+//         currentLang = currentLang === "en" ? "vi" : "en"; 
+//         if (value) {
+//             const element = document.createElement("p");
+//             element.innerHTML = `<strong>${label}:</strong> ${typeof value === "object" ? value[currentLang] : value}`;
+//             infoDiv.appendChild(element);
+//         }
+//     }
+
+//     // Add title
+//     if (info.title) {
+//         const titleElement = document.createElement("h3");
+//         titleElement.textContent = typeof info.title === "object" ? info.title[currentLang] : info.title;
+//         infoDiv.appendChild(titleElement);
+//     }
+
+//     // Add other information
+//     addInfoElement("Year", info.year);
+//     addInfoElement("Type", info.type);
+//     addInfoElement("Size", info.size);
+//     addInfoElement("Figure", info.figure);
+
+//     if (info.note) {
+//         const noteElement = document.createElement("p");
+//         noteElement.innerHTML = `<em>${info.note}</em>`;
+//         noteElement.style.fontSize = "16px";
+//         infoDiv.appendChild(noteElement);
+//     }
+
+//     const container = document.getElementById(containerId);
+//     if (container) {
+//         container.appendChild(infoDiv);
+//     } else {
+//         console.error(`Container with id "${containerId}" not found.`);
+//     }
+// }
+
+function generateSlideShowInfo(containerId, info, currentLang) {
+    currentLang = localStorage.getItem("language") || "en";  // Retrieve stored language
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = ""; // Clear old info
+
+    const labels = {
+        en: { year: "Year", type: "Type", size: "Size", figure: "Figure" },
+        vi: { year: "Năm", type: "Loại", size: "Kích Thước", figure: "Nhân Vật" }
+    };
+
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
 
-    // Helper function to create and append an element if the value is not empty
-    function addInfoElement(label, value) {
+    function addInfoElement(labelKey, value) {
         if (value) {
             const element = document.createElement("p");
-            element.innerHTML = `<strong>${label}:</strong> ${value}`;
+            element.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${typeof value === "object" ? value[currentLang] : value}`;
             infoDiv.appendChild(element);
         }
     }
 
-    // Create and append elements only if they have values
-    if (title) {
+    if (info.title) {
         const titleElement = document.createElement("h3");
-        titleElement.textContent = title;
+        titleElement.textContent = info.title[currentLang] || info.title["en"];
         infoDiv.appendChild(titleElement);
     }
 
-    addInfoElement("Year", year);
-    addInfoElement("Type", type);
-    addInfoElement("Size", size);
-    addInfoElement("Figure", figure);
-
-    // Add note at the end in italic
-    if (note) {
+    addInfoElement("year", info.year);
+    addInfoElement("type", info.type);
+    addInfoElement("size", info.size);
+    addInfoElement("figure", info.figure);
+    if (info.note) {
         const noteElement = document.createElement("p");
-        noteElement.innerHTML = `<em>${note}</em>`;
-        noteElement.style.fontSize = "16px";
+        const noteContent = document.createElement("em");
+        noteContent.style.fontSize = "17px";
+        noteContent.innerHTML = typeof info.note === "object" ? info.note[currentLang] : info.note;
+        noteElement.appendChild(noteContent);
         infoDiv.appendChild(noteElement);
     }
 
-    // Append the created infoDiv to the specified container
-    const container = document.getElementById(containerId);
-    if (container) {
-        container.appendChild(infoDiv);
-    } else {
-        console.error(`Container with id "${containerId}" not found.`);
+    container.appendChild(infoDiv);
+
+    if (window.MathJax) {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     }
+}
+
+
+function updateSlideshowDescriptions(slideIndex, currentLang) {
+    currentLang = localStorage.getItem("language") || "en";  // Use stored language
+    const slides = images[slideIndex];
+    const slideDivs = document.querySelectorAll(`#slide${slideIndex} .mySlides`);
+    
+    slides.forEach((slide, index) => {
+        const descriptionDiv = slideDivs[index].querySelector(".description");
+        if (descriptionDiv) {
+            descriptionDiv.textContent = slide.description[currentLang] || slide.description["en"];
+        }
+    });
 }
 //--// function to display information of banknote //--//
 

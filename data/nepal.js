@@ -4,23 +4,29 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/nepal/2007/5-rupee-f.jpg",
-            alt: "Front of the 5 Rupee Bill",
-            description: "Obverse"
+            alt: {en: "Front of the 5 Rupee Bill", vi: "Mặt Trước Tờ 5 Rupee"},
+            description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/nepal/2007/5-rupee-b.jpg",
-            alt: "Back of the 5 Rupee Bill",
-            description: "Reverse"
+            alt: {en: "Back of the 5 Rupee Bill", vi: "Mặt Sau Tờ 5 Rupee"},
+            description: {en: "Reverse", vi: "Sau"}
         }
     ]
 };
-createSlideshow("slide" + index, images[index]);
-new Slideshow("slideshow" + index);
-generateSlideShowInfo(
-    "info" + index,
-    "Nepalese 5 Rupees",
-    "",
-    "Circulating Standard Banknote",
-    "120 $\\times$ 70 mm",
-    ""
-);
+const slideshowInfo = {
+    [`${index}`]: {
+        title: { 
+            en: "Nepalese 5 Rupees", 
+            vi: "5 Rupee Nepal" 
+        },
+        year: null,
+        type: { 
+            en: "Circulating Standard Banknote", 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        },
+        size: "120 $\\times$ 70 mm",
+        figure: null,
+        note: null
+    }
+};
