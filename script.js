@@ -99,7 +99,7 @@ function searchPage() {
     "japan": ["japan", "nhật bản", "nhật"],
     "kyrgyzstan": ["kyrgyzstan", "kyrgyz republic"],
     "laos": ["laos", "lao people's democratic republic", "lào"],
-    "lebanon": ["lebanon", "republic of lebanon", "li băng"],
+    "lebanon": ["lebanon", "republic of lebanon", "liban"],
     "malaysia": ["malaysia", "malay", "mã lai", "ma lai xi a"],
     "mongolia": ["mongolia", "mông cổ"],
     "myanmar": ["myanmar", "burma", "miến điện", "mi an ma"],
