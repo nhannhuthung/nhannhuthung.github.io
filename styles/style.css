@@ -105,6 +105,12 @@ input {
 .language-toggle a {
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease-out, text-shadow 0.3s ease;
+}
+
+.language-toggle a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
 }
 
 .title {
