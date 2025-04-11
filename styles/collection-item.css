@@ -81,11 +81,13 @@ body {
     font-size: 24px;
     color: rgb(123, 153, 141);
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease-out, text-shadow 0.3s ease;
 }
 
 .sidebar h2:hover {
     color: rgb(29, 81, 141);
-    transition: color 0.3s ease;
+    font-weight: bold;
+    transform: scale(1.05);
 }
 
 .sidebar ul {
@@ -100,11 +102,13 @@ body {
     padding: 10px;
     cursor: pointer;
     color: rgb(143, 175, 162);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease-out, text-shadow 0.3s ease;
 }
 
 .sidebar ul li:hover {
     color: rgb(52, 157, 189);
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -306,7 +310,7 @@ hr {
 /* On smaller screens, decrease text size */
 @media (max-width: 768px) {
     .search-container {
-        max-width: 200px;
+        max-width: 170px;
         height: 40px;
     }
 
@@ -403,6 +407,10 @@ hr {
 
     #collection-dropdown h2:hover {
         color: rgb(123, 153, 141);
+    }
+
+    .main-content h1 {
+        font-size: 36px;
     }
 
     #slideshow1 {

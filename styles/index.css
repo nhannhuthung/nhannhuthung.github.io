@@ -118,6 +118,11 @@ body {
         ". . .";
     }
 
+    .language-toggle {
+        bottom: -30px;
+        left: 190px;
+    }
+
     .nav-menu-box {
         background-image: url(../images/background/sunflower-background-media.png);
         display: flex;

@@ -49,6 +49,7 @@ nav {
     font-size: 25px;
     position: absolute;
     left: 0;
+    top: 9px;
     text-decoration: none;
 }
 
@@ -183,7 +184,7 @@ p {
     }
 
     .search-container {
-        max-width: 180px;
+        max-width: 145px;
         height: 30px;
         transform: translateY(-25%);
         right: 10px;
@@ -191,16 +192,17 @@ p {
 
     input {
         width: 100%;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .search-button {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .language-toggle {
-        top: 20px;
-        right: 230px;
+        top: 40px;
+        right: unset;
+        left: 40px;
     }
 
     .language-toggle a {
