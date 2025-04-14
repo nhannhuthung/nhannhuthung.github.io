@@ -85,7 +85,7 @@ slideshowInfo[`${index}`] = {
     size: "138 $\\times$ 68 mm",
     figure: null,
     note: { 
-        en: `2019\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2019\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 22 tờ tiền năm 2019 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
     },
 };

@@ -314,7 +314,7 @@ slideshowInfo[`${index}`] = {
         vi: "John A. Macdonald (1815-1891)" 
     },
     note: {
-        en: `2013\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        en: `2013\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 12 tờ tiền của năm 2013 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     }
 };
@@ -379,7 +379,7 @@ slideshowInfo[`${index}`] = {
         vi: "W. L. Mackenzie King (1874-1950)" 
     },
     note: {
-        en: `2012\'s Top 13 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        en: `2012\'s top 13 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 13 tờ tiền của năm 2012 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     }
 };
@@ -413,7 +413,7 @@ slideshowInfo[`${index}`] = {
         vi: "Robert L. Borden (1854-1937)" 
     },
     note: {
-        en: `2011\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        en: `2011\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 12 tờ tiền của năm 2011 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     }
 };
@@ -447,7 +447,7 @@ slideshowInfo[`${index}`] = {
         vi: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)" 
     },
     note: {
-        en: `2017\'s Top 22 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        en: `2017\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 22 tờ tiền của năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     }
 };

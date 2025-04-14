@@ -169,7 +169,7 @@ slideshowInfo[`${index}`] = {
     size: "165 $\\times$ 72 mm",
     figure: null,
     note: { 
-        en: `2007\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2007\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 12 tờ tiền năm 2007 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     },
 };
@@ -200,7 +200,7 @@ slideshowInfo[`${index}`] = {
     size: "132 $\\times$ 69 mm",
     figure: null,
     note: { 
-        en: `2022\'s Top 19 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2022\'s top 19 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 19 tờ tiền năm 2022 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     },
 };
@@ -231,7 +231,7 @@ slideshowInfo[`${index}`] = {
     size: "137 $\\times$ 69 mm",
     figure: null,
     note: { 
-        en: `2023\'s Top 15 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2023\'s top 15 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 15 tờ tiền năm 2023 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     },
 };

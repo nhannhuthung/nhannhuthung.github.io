@@ -125,7 +125,7 @@ slideshowInfo[`${index}`] = {
         vi: "Thân Sư Nhâm Đường (1504-1551)" 
     },
     note: { 
-        en: `2009\'s Top 9 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2009\'s top 9 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 9 tờ tiền năm 2009 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
     },
 };

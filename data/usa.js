@@ -249,7 +249,7 @@ slideshowInfo[`${index}`] = {
         vi: "Benjamin Franklin (1706-1790)" 
     },
     note: {
-        en: `2013\'s Top 12 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        en: `2013\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 12 tờ tiền của năm 2013 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     }
 };

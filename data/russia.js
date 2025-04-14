@@ -28,7 +28,7 @@ const slideshowInfo = {
         size: "65 $\\times$ 150 mm",
         figure: null,
         note: { 
-            en: `2018\'s Top 16 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+            en: `2018\'s top 16 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
             vi: `Top 16 tờ tiền năm 2018 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
         },
     }

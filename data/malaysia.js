@@ -125,7 +125,7 @@ slideshowInfo[`${index}`] = {
         vi: "Tunku Abdul Rahman (1895-1960)" 
     },
     note: { 
-        en: `2012\'s Top 13 Banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        en: `2012\'s top 13 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 13 tờ tiền năm 2012 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
     },
 };
