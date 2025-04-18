@@ -133,13 +133,37 @@ body {
 
 * {box-sizing: border-box;}
 
-.mySlides {display: none;}
+.mySlides {
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
 
 .mySlides img {
+    width: 100%;
+    transition: transform 0.2s ease;
+    transform-origin: center center;
     height: 250px;
 }
 
-img {vertical-align: middle;}
+.mySlides:hover img {
+    transform: scale(3); /* Zoom factor */
+    cursor: zoom-in;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.mySlides.zooming .description {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.mySlides .description {
+    transition: opacity 0.2s ease;
+}
 
 .slideshow-wrapper {
     margin-top: 25px;
@@ -151,7 +175,6 @@ img {vertical-align: middle;}
     grid-template-areas: "empty-box slideshow-container slideshow-info .";
 }
 
-/* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
     position: relative;

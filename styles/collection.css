@@ -53,9 +53,6 @@ body {
 }
 
 .highlight-banknote {
-    justify-content: center;
-    position: relative;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
@@ -89,7 +86,6 @@ body {
 #box-3 img {
     object-position: 75%;
 }
-
 
 #box-4 img {
     object-position: 40%;
