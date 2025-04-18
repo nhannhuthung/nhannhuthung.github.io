@@ -140,10 +140,10 @@ body {
 }
 
 .mySlides img {
-    width: 100%;
+    width: 550px;
+    height: 100%;
     transition: transform 0.2s ease;
     transform-origin: center center;
-    height: 250px;
 }
 
 .mySlides:hover img {
@@ -362,6 +362,11 @@ hr {
         height: auto;
         width: 100%;
     }
+
+    .mySlides:hover img {
+        transform: none;
+        cursor: default;
+    }    
 
     .slideshow-info {
         width: 100%;
