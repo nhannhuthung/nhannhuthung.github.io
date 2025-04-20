@@ -9,14 +9,81 @@ body {
     overflow-y: hidden;
 }
 
+.howl-group-wrapper {
+    display: inline-block;
+    text-align: center;
+  }
+
+.howl-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.letter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 9px;
+}
+
+.label {
+    font-size: 45px;
+    color: #2f3537;
+    margin: 0;
+    line-height: 0.1;
+    font-family: 'Didot', serif;
+}
+
+.howl {
+    display: flex;
+    line-height: 1;
+    font-family: 'cinzelregular';
+}
+
+.howl .big-h {
+    font-size: 360px;
+    background-color: #7f9497;
+    color: #2f3537;
+    line-height: 0.9;
+}
+
+.howl .rest {
+    font-size: 300px;
+    color: #2f3537;
+    line-height: 0.9;
+}
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -20px;
+    width: 100%;
+}
+
+.divider {
+    flex: 1;
+    border-top: 4px solid #2f3537;
+    max-width: 400px;
+    z-index: 10;
+}
+
+.owl {
+    width: 150px;
+    margin: 0 30px;
+}
+
 .language-toggle {
+    position: absolute;
     top: unset;
-    bottom: 1px;
+    bottom: -30px;
     right: 0;
 }
 
 .intro {
-    background: #E1DCD3;
     height: 100vh;
     margin: auto;
     display: block;
@@ -33,10 +100,7 @@ body {
     grid-area: intro-logo;
     position: relative;
     text-decoration: none;
-}
-
-.intro-logo img {
-    width: 100%
+    text-align: center;
 }
 
 .nav-menu-box {
@@ -109,6 +173,41 @@ body {
     body {
         padding-top: 0;
     }
+
+    .letter-group {
+        margin: 0 6px;
+    }
+    
+    .label {
+        font-size: 21px;
+        line-height: 1;
+    }
+    
+    .howl .big-h {
+        font-size: 120px;
+    }
+    
+    .howl .rest {
+        font-size: 75px;
+    }
+    
+    .divider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -10px;
+    }
+    
+    .divider {
+        border-top: 2px solid #2f3537;
+        max-width: 200px;
+    }
+    
+    .owl {
+        width: 50px;
+        margin: 0 15px;
+    }
+
     .intro {
         grid-template-columns: 0.25fr 2fr 0.25fr;
         grid-template-rows: 0.5fr 3fr 0.5fr;
@@ -119,8 +218,16 @@ body {
     }
 
     .language-toggle {
-        bottom: -30px;
-        left: 190px;
+        bottom: -35px;
+        left: unset;
+    }
+
+    .language-toggle a {
+        font-size: 18px;
+    }
+
+    #owl-text p {
+        font-size: 20px;
     }
 
     .nav-menu-box {
@@ -132,9 +239,9 @@ body {
 
     .nav-pos-menu {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        gap: 20px; /* Add some spacing between the links */
-        font-size: 24px; /* Adjust font size for mobile */
+        flex-direction: column;
+        gap: 20px;
+        font-size: 24px;
         margin-bottom: 300px;
     }
 

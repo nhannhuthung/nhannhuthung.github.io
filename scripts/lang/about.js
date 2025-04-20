@@ -29,7 +29,7 @@ const main_trans = {
         title: `Bản Thân`,
         greeting: `Xin chào! 🦉😀`,
         name_intro: `Tên mình là Hưng. Mình có tên tiếng Anh là Howl và mình lấy tên này trong bộ phim - Lâu Đài Bay Của Pháp Sư Howl.`,
-        study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán ứng dụng. Mình đang hoàn thành bằng cử nhân đầu tiên - Cử Nhân Toán Học: Chuyên Phân Tích Ứng Dụng với $\`\`$chuyên ngành phụ$"$ về Khoa Học Máy Tính tại đại học Carleton.`,
+        study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán Ứng Dụng. Mình đang hoàn thành bằng cử nhân đầu tiên - Cử Nhân Toán Học: Chuyên Phân Tích Ứng Dụng với $\`\`$chuyên ngành phụ$"$ về Khoa Học Máy Tính tại đại học Carleton.`,
         paper_intro: "Nếu bạn thắc mắc mình đang học gì về toán thì đây là hai bài báo cáo chính liên quan tới các lĩnh vực bản thân mình đang quan tâm và theo đuổi hiện tại.",
         first_paper: `Bài đầu tiên thuộc lĩnh vực Toán Học Tính Toán và đã được gửi đến tạp chí - Mathematics and Computers in Simulation.`,
         second_paper: `Bài thứ hai thuộc lĩnh vực Hiện Tượng Sóng và là đồ án tốt nghiệp của mình.`,

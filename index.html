@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head style="background-color: #E1DCD3;">
@@ -19,29 +19,43 @@
     
     <script src="scripts/lang/index.js"></script>
 </head>
-
 <body>
-    <header>
-        
-    </header>
-    
     <section class="intro">
         <div class="intro-logo">
-            <a><img src="images/logo/logo2.png"></a>
-            <div id="bottom">
-                <a style="text-decoration: none;" href="#navigator">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </a>
-            </div>
-            <div id="owl-text">
-                <p id="owl-message">Click the owl!</p>
-            </div>
-            <div class="language-toggle">
-                <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
+            <div class="howl-group-wrapper">
+                <div class="howl-group">
+                    <div class="letter-group">
+                        <div class="label" style="visibility: hidden;">.</div>
+                    <div class="howl"><span class="big-h">H</span></div>
+                    </div>
+                    <div class="letter-group">
+                        <div class="label">Nhan</div>
+                    <div class="howl"><span class="rest">o</span></div>
+                    </div>
+                    <div class="letter-group">
+                        <div class="label">Nhựt</div>
+                    
+                    <div class="howl"><span class="rest">w</span></div>
+                    </div>
+                    <div class="letter-group">
+                        <div class="label">Hưng</div>
+                    <div class="howl"><span class="rest">l</span></div>
+                    </div>
+                </div>
+
+                <div class="divider-container">
+                    <div class="divider"></div>
+                        <a href="#navigator">
+                            <img src="images/logo/owl.png" class="owl">
+                        </a>
+                    <div class="divider"></div>
+                </div>
+                <div id="owl-text">
+                    <p id="owl-message">Click the owl!</p>
+                </div>
+                <div class="language-toggle">
+                    <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
+                </div>
             </div>
         </div>
     </section>
@@ -55,7 +69,5 @@
         </nav>
     </section>
 </body>
-
-    <script charset="utf-8" src="script.js"></script>
 
 </html>
