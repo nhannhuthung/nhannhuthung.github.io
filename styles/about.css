@@ -5,10 +5,11 @@
   text-decoration: none;
   border-radius: 0%;
   background: transparent;
+  color: #e74646;
 }
 
 .fa:not(.fa-bars):hover {
-  opacity: 0.5;
+  color: #ca2525;
 }
 
 .hamburger-nav .fa-bars {
@@ -25,7 +26,7 @@
 }
 
 #header-nav a:hover {
-    color: #1b8284;
+    color: #B7090A;
 }
 
 .hamburger-nav {
@@ -37,7 +38,7 @@
 }
 
 .language-toggle a:hover {
-  color: #14aa58;
+  color: #B7090A;
 }
 
 .page {
@@ -64,8 +65,20 @@
   color: #125a5d;
 }
 
-#math text {
+#first-paper-1,
+#first-paper-2,
+#second-paper {
   font-size: 24px;
+  margin: 0;
+}
+
+#first-paper-2 a {
+  color: #e93131; 
+  text-decoration: none;
+}
+
+#first-paper-2 a:hover {
+  color: #ca2525;
 }
 
 .iframe-container {
@@ -130,6 +143,11 @@ iframe {
     font-size: 20px;
   }
 
+  #first-paper-1,
+  #first-paper-2,
+  #second-paper {
+    font-size: 18px;
+  }
   #math text{
     font-size: 18px;
   }

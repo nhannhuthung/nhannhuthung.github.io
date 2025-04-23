@@ -11,18 +11,6 @@
 }
 
 @font-face {
-    font-family: 'cormorant_infantlight';
-    src: url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.eot');
-    src: url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.woff2') format('woff2'),
-        url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.woff') format('woff'),
-        url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.ttf') format('truetype'),
-        url('../font/cormorant/cormorantinfant_light_macroman/CormorantInfant-Light-webfont.svg#cormorant_infantlight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'cinzelregular';
     src: url('../font/cinzel/cinzel_regular_macroman/Cinzel-Regular-webfont.eot');
     src: url('../font/cinzel/cinzel_regular_macroman/Cinzel-Regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -77,8 +65,8 @@ nav {
 }
 
 #header-nav.show {
-    display: flex; /* Display the menu */
-    opacity: 1; /* Fully visible */
+    display: flex;
+    opacity: 1;
 }
 
 .hamburger-nav {
@@ -236,10 +224,12 @@ p {
     input {
         width: 100%;
         font-size: 13px;
+        padding: 10px 5px;
     }
 
     .search-button {
         font-size: 13px;
+        padding: 1px 3px;
     }
 
     .language-toggle {

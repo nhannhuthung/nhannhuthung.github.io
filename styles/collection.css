@@ -1,5 +1,5 @@
 body {
-    background-color: #8CC1FE;
+    background-color: #2573c0;
 }
 
 #header-nav,
@@ -35,6 +35,7 @@ body {
     margin-bottom: 30px;
 
 }
+
 .category-item {
     padding: 20px;
     border: 2px solid #b7d7fc;
@@ -45,10 +46,15 @@ body {
     color: #b7d7fc;
     font-size: 20px;
 }
+
 .category-item:hover {
     background-color: #e7e4e4;
     color: #8aa1bb;
+    box-shadow: 0 0 20px #e7e4e4,
+                0 0 80px #e7e4e4,
+                0 0 160px #e7e4e4;
     border: 2px solid #e7e4e4;
+    transition-delay: .2s;
     transform: scale(1.05);
 }
 
@@ -186,26 +192,43 @@ body {
     transform: translateY(0);
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(248, 248, 248, 0.3);
-    margin-top: 25px;
-    backdrop-filter: blur(3px);
-    background-color: rgba(7, 47, 95, 0.5);
-}
-
 .container-top {
     max-width: 1200px;
     margin: auto;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px #8CC1FE,
+                0 0 20px #8CC1FE,
+                0 0 30px #8CC1FE;
     margin-top: 25px;
     backdrop-filter: blur(0px);
     background-color: rgba(12, 12, 12, 0.8);
+}
+
+.container-highlight {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8CC1FE,
+                0 0 20px #8CC1FE,
+                0 0 30px #8CC1FE;
+    margin-top: 25px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #B6D8FF,
+                0 0 20px #B6D8FF,
+                0 0 30px #B6D8FF;
+    margin-top: 25px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(7, 47, 95, 0.5);
 }
 
 ::-webkit-scrollbar {
@@ -274,11 +297,11 @@ ul li::before {
 }
 
 #top_btn {
-    color: rgb(103, 129, 248);
+    color: #072F5F;
 }
 
 #top_btn:hover {
-    background-color: rgb(89, 127, 223);
+    background-color: #072F5F;
     color: whitesmoke;
 }
 
@@ -291,11 +314,11 @@ ul li::before {
     #header-nav a,
     #header-nav a:link,
     #header-nav a:visited {
-        color: #b7d7fc;
+        color: whitesmoke;
     }
 
     .highlight-banknote {
-        height: 200px;
+        height: 175px;
         gap: 2px;
     }
 
@@ -308,10 +331,12 @@ ul li::before {
 
     h1 {
         font-size: 33px; 
+        margin: 18px 0px;
     }
     
     h2 {
         font-size: 27px;
+        margin: 15px 0px;
     }
 
     h3 {

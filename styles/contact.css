@@ -8,8 +8,20 @@
     background: transparent;
 }
 
-.fa:not(.fa-bars):hover {
-    opacity: 0.5;
+#media .fa {
+    color: #2c2927;
+}
+
+#media .fa:hover {
+    color: #3d4e77;
+}
+
+#work .fa {
+    color: #F9FBF2;
+}
+
+#work .fa:hover {
+    color: #919597;
 }
 
 .hamburger-nav .fa-bars {
@@ -26,7 +38,7 @@
 }
 
 #header-nav a:hover {
-    color: rgb(110, 105, 105);
+    color: #1a4aa8;
 }
 
 .hamburger-nav {
@@ -122,7 +134,7 @@ body {
     #header-nav a,
     #header-nav a:link,
     #header-nav a:visited {
-        color: #c8d9fa;
+        color: #657fc0;
     }
 
     .big-title {
@@ -135,6 +147,11 @@ body {
 
     #about {
         padding: 10px;
+    }
+
+    .fa:not(.fa-bars) {
+        padding: 15px;
+        font-size: 27px;
     }
 
     #media .title {

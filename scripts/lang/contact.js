@@ -26,7 +26,7 @@ const main_trans = {
     vi: {
         title: `Liên Hệ Mình`,
         sub_title_1: `Mạng Xã Hội`,
-        sentence_1: `Mình hoạt động trên các nền tảng sau. Bạn có thể kết nối với mình qua bất kỳ kênh nào trong số này.`,
+        sentence_1: `Mình hoạt động trên các nền tảng sau. Bạn có thể kết nối với mình qua bất kỳ nền tảng nào trong số này.`,
         sub_title_2: `Công Việc`,
         sentence_2: `Đối với các yêu cầu công việc, xin vui lòng liên hệ với mình qua các nền tảng sau.`,
     }
