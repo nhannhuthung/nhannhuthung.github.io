@@ -20,7 +20,7 @@ const slideshowInfo = {
             en: "Costa Rican 2,000 Colones", 
             vi: "2.000 Colon Costa Rica" 
         },
-        year: 2018,
+        year: "2018",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -32,4 +32,35 @@ const slideshowInfo = {
         },
         note: null
     }
+};
+
+index++; //index = 2
+images[`${index}`] = [
+    {
+        src: "../images/collection/costa-rica/2018-2019/1000-colon-f.jpg",
+        alt: {en: "Front of the 2000 Peso Colon", vi: "Mặt Trước Tờ 1000 Colon"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/costa-rica/2018-2019/1000-colon-b.jpg",
+        alt: {en: "Back of the 2000 Colon Bill", vi: "Mặt Sau Tờ 1000 Colon"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Costa Rican 1,000 Colones", 
+        vi: "1.000 Colon Costa Rica" 
+    },
+    year: "2019",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "125 $\\times$ 67 mm",
+    figure: { 
+        en: "Braulio Carrillo Colina (1800-1845)", 
+        vi: "Braulio Carrillo Colina (1800-1845)" 
+    },
+    note: null
 };

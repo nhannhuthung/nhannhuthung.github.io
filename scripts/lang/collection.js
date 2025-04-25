@@ -33,8 +33,7 @@ const main_trans = {
 
         collect_update: `Collection Update`,
         last_update: `Last Updated: Mar 17th 2025.`,
-        update_1: `One Vietnamese bill: 100-dong bill.`,
-        update_2: `One Australian bill: 10-dollar bill.`,
+        update_1: `One Costa Rican bill: 1000-colon bill.`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -86,8 +85,7 @@ const main_trans = {
 
         collect_update: `Cập Nhật Bộ Sưu Tập`,
         last_update: `Cập Nhật Lần Cuối: ngày 17 tháng 3 năm 2025`,
-        update_1: `Một tờ tiền Việt Nam: tờ 100 đồng.`,
-        update_2: `Một tờ tiền Úc: tờ 10 đô.`,
+        update_1: `Một tờ tiền Costa Rica: tờ 1000 colon.`,
 
         highlight: `Điểm Nổi Bật`,
         banknote: `Tiền Giấy`,
@@ -411,7 +409,6 @@ function updatePageLanguage(currentLang) {
         { id: "collect-update", key: "collect_update" },
         { id: "last-update", key: "last_update" },
         { id: "update-1", key: "update_1" },
-        { id: "update-2", key: "update_2" },
 
         { id: "highlight", key: "highlight" },
         { id: "banknote", key: "banknote" },
