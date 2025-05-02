@@ -225,7 +225,7 @@ images[`${index}`] = [
     {
         src: "../images/collection/usa/100-series/2009A-f.jpg",
         alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
-        description: "Obverve"
+        description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/usa/100-series/2009A-b.jpg",

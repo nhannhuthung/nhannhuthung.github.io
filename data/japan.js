@@ -56,7 +56,7 @@ slideshowInfo[`${index}`] = {
     },
     size: "150 $\\times$ 76 mm",
     figure: { 
-        en: "Noguchi Hideyo (1876-1928)", 
+        en: "Hideyo Noguchi (1876-1928)", 
         vi: "Noguchi Hideyo (1876-1928)" 
     },
     note: null
@@ -87,7 +87,7 @@ slideshowInfo[`${index}`] = {
     },
     size: "156 $\\times$ 76 mm",
     figure: { 
-        en: "Higuchi Ichiyō (1872-1896)", 
+        en: "Ichiyō Higuchi (1872-1896)", 
         vi: "Higuchi Ichiyō (1872-1896)" 
     },
     note: null
@@ -118,10 +118,13 @@ slideshowInfo[`${index}`] = {
     },
     size: "150 $\\times$ 76 mm",
     figure: { 
-        en: "Kitasato Shibasaburō (1853-1931)", 
+        en: "Shibasaburō Kitasato (1853-1931)", 
         vi: "Kitasato Shibasaburō (1853-1931)" 
     },
-    note: null
+    note: { 
+        en: `2024\'s top 21 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
+        vi: `Top 21 tờ tiền năm 2024 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
+    },
 };
 
 index++; //index = 5
@@ -149,7 +152,7 @@ slideshowInfo[`${index}`] = {
     },
     size: "156 $\\times$ 76 mm",
     figure: { 
-        en: "Tsuda Umeko (1864-1929)", 
+        en: "Umeko Tsuda (1864-1929)", 
         vi: "Tsuda Umeko (1864-1929)" 
     },
     note: null
@@ -180,7 +183,7 @@ slideshowInfo[`${index}`] = {
     },
     size: "160 $\\times$ 76 mm",
     figure: { 
-        en: "Shibusawa Eiichi (1840-1931)", 
+        en: "Eiichi Shibusawa (1840-1931)", 
         vi: "Shibusawa Eiichi (1840-1931)" 
     },
     note: null
