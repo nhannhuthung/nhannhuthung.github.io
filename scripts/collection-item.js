@@ -56,6 +56,7 @@ const countryData = {
             { "en": "Croatia", "vi": "Croatia", "link": "croatia.html" },
             { "en": "England", "vi": "Anh", "link": "england.html" },
             { "en": "European Union", "vi": "Liên Minh Châu Âu", "link": "eu.html" },
+            { "en": "France", "vi": "Pháp", "link": "france.html" },
             { "en": "Ireland", "vi": "Ireland", "link": "ireland.html" },
             { "en": "Italy", "vi": "Ý", "link": "italy.html" },
             { "en": "Moldova", "vi": "Moldova", "link": "moldova.html" },

@@ -32,8 +32,8 @@ const main_trans = {
         remark_para_3: `My collection is extending with banknotes. I have lost count the total number of unique regions for accounting banknotes and coins.`,
 
         collect_update: `Collection Update`,
-        last_update: `Last Updated: Mar 17th 2025.`,
-        update_1: `One Costa Rican bill: 1000-colon bill.`,
+        last_update: `Last Updated: May 16th 2025.`,
+        update_1: `Five French bills: 20, 50, 100, 200, 500-franc.`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -41,36 +41,7 @@ const main_trans = {
         hong_kong: `Hong Kong`,
         south_korea: `South Korea`,
         australia: `Australia`,
-
-        america: `America`,
-        north_america: `North America`,
-        central_america: `Central America`,
-        south_america: `South America`,
-
-        africa: `Africa`,
-        north_africa: `North Africa`,
-        west_africa: `West Africa`,
-        central_africa: `Central Africa`,
-        east_africa: `East Africa`,
-        southern_africa: `Southern Aftica`,
-
-        europe: `Europe`,
-        northern_europe: `Northern Europe`,
-        eastern_europre: `Eastern Europe`,
-        southern_europe: `Southern Europe`,
-
-        asia: `Asia`,
-        mid_east_asia: `Middle East Asia`,
-        central_asia: `Central Asia`,
-        south_asia: `South Asia`,
-        south_east_asia: `South East Asia`,
-        east_asia: `East Asia`,
-
-        oceania: `Oceania`,
-
-        arctic: `Arctic`,
-
-        antartica: `Antartica`,
+        france: `France`,
     },
     vi: {
         acknowledge: `Lời Cảm Ơn`,
@@ -84,8 +55,8 @@ const main_trans = {
         remark_para_3: `Mình mở rộng bộ sưu tập với các tiền giấy. Mình không nhớ chính xác có tổng cộng bao nhiêu khu vực trong bộ sưu tập.`,
 
         collect_update: `Cập Nhật Bộ Sưu Tập`,
-        last_update: `Cập Nhật Lần Cuối: ngày 17 tháng 3 năm 2025`,
-        update_1: `Một tờ tiền Costa Rica: tờ 1000 colon.`,
+        last_update: `Cập Nhật Lần Cuối: ngày 16 tháng 5 năm 2025`,
+        update_1: `Năm tờ tiền Pháp: 20, 50, 100, 200, 500 franc.`,
 
         highlight: `Điểm Nổi Bật`,
         banknote: `Tiền Giấy`,
@@ -93,6 +64,7 @@ const main_trans = {
         hong_kong: `Hồng Kông`,
         south_korea: `Hàn Quốc`,
         australia: `Úc`,
+        france: `Pháp`,
     }
 };
 
@@ -176,6 +148,12 @@ const countries = {
                     { "en": "Ireland", "vi": "Ireland", "url": "collection/ireland.html" },
                     { "en": "Norway", "vi": "Na Uy", "url": "collection/norway.html" },
                     { "en": "Scotland", "vi": "Scotland", "url": "collection/scotland.html" },
+                ]
+            },
+            "western-europe": {
+                "name": {"en": "Western Europe", "vi": "Tây Âu"},
+                "countries": [
+                    { "en": "France", "vi": "Pháp", "url": "collection/france.html"},
                 ]
             },
             "eastern-europe": {
@@ -416,6 +394,7 @@ function updatePageLanguage(currentLang) {
         { id: "hong-kong", key: "hong_kong" },
         { id: "south-korea", key: "south_korea" },
         { id: "australia", key: "australia" },
+        { id: "france", key: "france"}
     ];
 
     contentsToUpdate.forEach(({ id, key }) => {
