@@ -20,7 +20,7 @@ const slideshowInfo = {
             en: "Canadian 1 Dollar", 
             vi: "1 Đô La Canada" 
         },
-        year: "1954",
+        year: null,
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
@@ -35,37 +35,6 @@ const slideshowInfo = {
 };
 
 index++; //index = 2
-images[`${index}`] = [
-    {
-        src: "../images/collection/canada/1954/1-dollar-1967-f.jpg",
-        alt: {en: "Front of the 1 Dollar Bill", vi: "Mặt Trước Tờ 1 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
-    },
-    {
-        src: "../images/collection/canada/1954/1-dollar-1967-b.jpg",
-        alt: {en: "Back of the 1 Dollar Bill", vi: "Mặt Sau Tờ 1 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
-    }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Canadian 1 Dollar", 
-        vi: "1 Đô La Canada" 
-    },
-    year: "1967",
-    type: { 
-        en: "Non-circulating Commemorative Banknote", 
-        vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
-    },
-    size: "153 $\\times$ 70 mm",
-    figure: { 
-        en: "Elizabeth II (1952-2022)", 
-        vi: "Elizabeth II (1952-2022)" 
-    },
-    note: null
-};
-
-index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/canada/1954/2-dollar-f.jpg",
@@ -83,7 +52,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 2 Dollars", 
         vi: "2 Đô La Canada" 
     },
-    year: "1954",
+    year: null,
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
@@ -96,7 +65,7 @@ slideshowInfo[`${index}`] = {
     note: null
 };
 
-index++; //index = 4
+index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/canada/1954/10-dollar-f.jpg",
@@ -114,10 +83,41 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: "1954",
+    year: null,
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+    },
+    size: "153 $\\times$ 70 mm",
+    figure: { 
+        en: "Elizabeth II (1952-2022)", 
+        vi: "Elizabeth II (1952-2022)" 
+    },
+    note: null
+};
+
+index++; //index = 4
+images[`${index}`] = [
+    {
+        src: "../images/collection/canada/1954/1-dollar-1967-f.jpg",
+        alt: {en: "Front of the 1 Dollar Bill", vi: "Mặt Trước Tờ 1 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/canada/1954/1-dollar-1967-b.jpg",
+        alt: {en: "Back of the 1 Dollar Bill", vi: "Mặt Sau Tờ 1 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Canadian 1 Dollar", 
+        vi: "1 Đô La Canada" 
+    },
+    year: null,
+    type: { 
+        en: "Non-circulating Commemorative Banknote", 
+        vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
     },
     size: "153 $\\times$ 70 mm",
     figure: { 
@@ -145,7 +145,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 2 Dollars", 
         vi: "2 Đô La Canada" 
     },
-    year: "1974",
+    year: null,
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
@@ -176,7 +176,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 5 Dollars", 
         vi: "5 Đô La Canada" 
     },
-    year: "1972",
+    year: null,
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
@@ -223,6 +223,37 @@ slideshowInfo[`${index}`] = {
 index++; //index = 8
 images[`${index}`] = [
     {
+        src: "../images/collection/canada/2001-2006/10-dollar-f.jpg",
+        alt: {en: "Front of the 10 Dollar Bill", vi: "Mặt Trước Tờ 10 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/canada/2001-2006/10-dollar-b.jpg",
+        alt: {en: "Back of the 10 Dollar Bill", vi: "Mặt Sau Tờ 10 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Canadian 10 Dollars", 
+        vi: "10 Đô La Canada" 
+    },
+    year: "2007",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 70 mm",
+    figure: { 
+        en: "John A. Macdonald (1815-1891)", 
+        vi: "John A. Macdonald (1815-1891)" 
+    },
+    note: null
+};
+
+index++; //index = 9
+images[`${index}`] = [
+    {
         src: "../images/collection/canada/2001-2006/20-dollar-f.jpg",
         alt: {en: "Front of the 20 Dollar Bill", vi: "Mặt Trước Tờ 20 Đô La"},
         description: {en: "Obverse", vi: "Trước"}
@@ -254,7 +285,7 @@ slideshowInfo[`${index}`] = {
     }
 };
 
-index++; //index = 9
+index++; //index = 10
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/5-dollar-f.jpg",
@@ -272,7 +303,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 5 Dollars", 
         vi: "5 Đô La Canada" 
     },
-    year: "2013",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -285,7 +316,7 @@ slideshowInfo[`${index}`] = {
     note: null
 };
 
-index++; //index = 10
+index++; //index = 11
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/10-dollar-f.jpg",
@@ -303,7 +334,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: "2013",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -319,7 +350,7 @@ slideshowInfo[`${index}`] = {
     }
 };
 
-index++; //index = 11
+index++; //index = 12
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/20-dollar-f.jpg",
@@ -337,7 +368,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 20 Dollars", 
         vi: "20 Đô La Canada" 
     },
-    year: "2015",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -350,7 +381,7 @@ slideshowInfo[`${index}`] = {
     note: null
 };
 
-index++; //index = 12
+index++; //index = 13
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/50-dollar-f.jpg",
@@ -368,7 +399,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 50 Dollars", 
         vi: "50 Đô La Canada" 
     },
-    year: "2012",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -384,7 +415,7 @@ slideshowInfo[`${index}`] = {
     }
 };
 
-index++; //index = 13
+index++; //index = 14
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2011-2013/100-dollar-f.jpg",
@@ -402,7 +433,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 100 Dollars", 
         vi: "100 Đô La Canada" 
     },
-    year: "2011",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -418,7 +449,38 @@ slideshowInfo[`${index}`] = {
     }
 };
 
-index++; //index = 14
+index++; //index = 15
+images[`${index}`] = [
+    {
+        src: "../images/collection/canada/2011-2013/20-dollar-com-f.jpg",
+        alt: {en: "Front of the 20 Dollar Bill", vi: "Mặt Trước Tờ 20 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/canada/2011-2013/20-dollar-com-b.jpg",
+        alt: {en: "Back of the 20 Dollar Bill", vi: "Mặt Sau Tờ 20 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Canadian 20 Dollars", 
+        vi: "20 Đô La Canada" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Commemorative Banknote", 
+        vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
+    },
+    size: "153 $\\times$ 70 mm",
+    figure: { 
+        en: "Elizabeth II (1952-2022)", 
+        vi: "Elizabeth II (1952-2022)" 
+    },
+    note: null
+};
+
+index++; //index = 16
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2017/10-dollar-f.jpg",
@@ -438,8 +500,8 @@ slideshowInfo[`${index}`] = {
     },
     year: "2017",
     type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+        en: "Circulating Commemorative Banknote", 
+        vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
     size: "153 $\\times$ 70 mm",
     figure: { 
@@ -452,7 +514,7 @@ slideshowInfo[`${index}`] = {
     }
 };
 
-index++; //index = 15
+index++; //index = 17
 images[`${index}`] = [
     {
         src: "../images/collection/canada/2018/10-dollar-f.jpg",
@@ -470,7 +532,7 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: "2018",
+    year: null,
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 

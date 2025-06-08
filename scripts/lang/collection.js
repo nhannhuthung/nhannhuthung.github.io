@@ -31,9 +31,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).`,
         remark_para_3: `My collection is extending with banknotes. I have lost count the total number of unique regions for accounting banknotes and coins.`,
 
-        collect_update: `Collection Update`,
-        last_update: `Last Updated: May 16th 2025.`,
-        update_1: `Five French bills: 20, 50, 100, 200, 500-franc.`,
+        last_update: `Last Updated:`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -54,9 +52,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902).`,
         remark_para_3: `Mình mở rộng bộ sưu tập với các tiền giấy. Mình không nhớ chính xác có tổng cộng bao nhiêu khu vực trong bộ sưu tập.`,
 
-        collect_update: `Cập Nhật Bộ Sưu Tập`,
-        last_update: `Cập Nhật Lần Cuối: ngày 16 tháng 5 năm 2025`,
-        update_1: `Năm tờ tiền Pháp: 20, 50, 100, 200, 500 franc.`,
+        last_update: `Cập Nhật Lần Cuối:`,
 
         highlight: `Điểm Nổi Bật`,
         banknote: `Tiền Giấy`,
@@ -222,7 +218,7 @@ const countries = {
                 ]
             },
             "east-asia": {
-                "name": { "en": "SouthAsia", "vi": "Nam Á" },
+                "name": { "en": "South Asia", "vi": "Nam Á" },
                 "countries": [
                     { "en": "China", "vi": "Trung Quốc", "url": "collection/china.html" },
                     { "en": "Hong Kong", "vi": "Hồng Kông", "url": "collection/hong-kong.html" },
@@ -384,9 +380,7 @@ function updatePageLanguage(currentLang) {
         { id: "remark-subpara-2", key: "remark_subpara_2" },
         { id: "remark-para-3", key: "remark_para_3" },
 
-        { id: "collect-update", key: "collect_update" },
         { id: "last-update", key: "last_update" },
-        { id: "update-1", key: "update_1" },
 
         { id: "highlight", key: "highlight" },
         { id: "banknote", key: "banknote" },
