@@ -339,8 +339,6 @@ function createSlideshow(containerId, images) {
     slideshowContainer.setAttribute("onclick", "swap()");
     container.appendChild(slideshowContainer);
 }
-
-new Slideshow(containerId); // This will handle auto + manual + pause/resume
 //--// function to display banknote //--//
 
 //--// function to display information of banknote //--//
