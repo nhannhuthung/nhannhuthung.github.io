@@ -71,7 +71,7 @@ function searchPage() {
     "mauritius": ["mauritius", "republic of mauritius"],
     "rwanda": ["rwanda", "republic of rwanda"],
     "somalia": ["somalia", "federal republic of somalia"],
-    "west-africa": ["west africa, western africa", "tây phi"],
+    "uemoa": ["uemoa", "waemu", "west african economic and monetary union", "west africa, western africa", "liên minh kinh tế và tiền tệ tây phi", "tây phi"],
     "zambia": ["zambia", "republic of zambia"],
 
     "belarus": ["belarus", "republic of belarus"],
@@ -111,6 +111,7 @@ function searchPage() {
     "saudi-arabia": ["saudi arabia", "kingdom of saudi arabia", "a rập xê út"],
     "singapore": ["singapore", "republic of singapore", "xing ga po"],
     "south-korea": ["south korea", "korea", "republic of korea", "hàn quốc", "hàn"],
+    "syria": ["syria", "syrian arab republic"],
     "taiwan": ["taiwan", "republic of china", "đài loan", "đài"],
     "tajikistan": ["tajikistan", "republic of tajikistan"],
     "thailand": ["thailand", "kingdom of thailand", "thái lan", "thái"],
