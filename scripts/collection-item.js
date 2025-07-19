@@ -45,7 +45,7 @@ const countryData = {
             { "en": "Mauritius", "vi": "Mauritius", "link": "mauritius.html" },
             { "en": "Rwanda", "vi": "Rwanda", "link": "rwanda.html" },
             { "en": "Somalia", "vi": "Somalia", "link": "somalia.html" },
-            { "en": "West Africa", "vi": "Tây Phi", "link": "west-africa.html" },
+            { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi", "link": "uemoa.html" },
             { "en": "Zambia", "vi": "Zambia", "link": "zambia.html" },
         ]
     },
@@ -93,13 +93,14 @@ const countryData = {
             { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "link": "saudi-arabia.html" },
             { "en": "Singapore", "vi": "Singapore", "link": "singapore.html" },
             { "en": "South Korea", "vi": "Hàn Quốc", "link": "south-korea.html" },
+            { "en": "Syria", "vi": "Syria", "link": "syria.html" },
             { "en": "Taiwan", "vi": "Đài Loan", "link": "taiwan.html" },
             { "en": "Tajikistan", "vi": "Tajikistan", "link": "tajikistan.html" },
             { "en": "Thailand", "vi": "Thái Lan", "link": "thailand.html" },
             { "en": "Turkey", "vi": "Thổ Nhĩ Kỳ", "link": "turkey.html" },
             { "en": "Turkmenistan", "vi": "Turkmenistan", "link": "turkmenistan.html" },
             { "en": "Uzbekistan", "vi": "Uzbekistan", "link": "uzbekistan.html" },
-            { "en": "Vietnam", "vi": "Việt Nam", "link": "vietnam.html" }
+            { "en": "Vietnam", "vi": "Việt Nam", "link": "vietnam.html" },
         ]
     },
     "oceania": {
@@ -167,11 +168,19 @@ function updatePageLanguage(currentLang) {
     });
 }
 
+function updatePageHeading(currentLang) {
+    const headingElement = document.getElementById('page-heading');
+    if (headingElement && typeof translations !== 'undefined' && translations.heading) {
+        headingElement.textContent = translations.heading[currentLang] || translations.heading.en;
+    }
+}
+
 function toggleLanguage() {
     currentLang = currentLang === "en" ? "vi" : "en"; 
     localStorage.setItem("language", currentLang); 
 
     updatePageLanguage(currentLang);
+    updatePageHeading(currentLang);
     insertSidebarHTML('SideBar'); 
     insertSidebarHTML('SideBarCollection'); 
 
@@ -188,6 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentLang = localStorage.getItem('language') || 'en';
 
     updatePageLanguage(currentLang);
+    updatePageHeading(currentLang);
     insertSidebarHTML('SideBar'); 
     insertSidebarHTML('SideBarCollection'); 
 
@@ -356,6 +366,16 @@ function generateSlideShowInfo(containerId, info, currentLang) {
 
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
+    infoDiv.style.position = "relative"; // Add this line for positioning context
+    infoDiv.style.overflow = "hidden"; // Prevent the label from overflowing
+
+    // Add NEW label if the item is marked as new
+    if (info.new) {
+        const newLabel = document.createElement("div");
+        newLabel.className = "new-label";
+        newLabel.textContent = currentLang === "en" ? "NEW" : "MỚI";        
+        infoDiv.appendChild(newLabel);
+    }
 
     function addInfoElement(labelKey, value) {
         if (value) {

@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "Saudi Arabia",
+        vi: "Ả Rập Xê Út"
+    }
+};
+
 let index = 1;
 
 const images = {

@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "Malawi",
+        vi: "Malawi"
+    }
+};
+
 let index = 1;
 
 const images = {

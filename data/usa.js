@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "United States of America",
+        vi: "Hợp Chúng Quốc Hoa Kỳ"
+    }
+};
+
 let index = 1;
 
 const images = {

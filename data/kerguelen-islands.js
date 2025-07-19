@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "Kerguelen Islands",
+        vi: "Quần Đảo Kerguelen"
+    }
+};
+
 let index = 1;
 
 const images = {

@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "Democratic Republic of the Congo",
+        vi: "Cộng Hòa Dân Chủ Congo"
+    }
+};
+
 let index = 1;
 
 const images = {

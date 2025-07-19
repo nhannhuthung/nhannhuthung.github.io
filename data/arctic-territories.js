@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "Arctic Territories",
+        vi: "Lãnh Thổ Bắc Cực"
+    }
+};
+
 let index = 1;
 
 const images = {
@@ -18,7 +25,7 @@ const slideshowInfo = {
     [`${index}`]: {
         title: { 
             en: "Arctic Territories' 1 Dollar", 
-            vi: "1 Đô La Các Lãnh Thổ Bắc Cực" 
+            vi: "1 Đô La Lãnh Thổ Bắc Cực" 
         },
         year: "2012",
         type: { 
@@ -47,7 +54,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 2 Dollar", 
-        vi: "2 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "2 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2010",
     type: { 
@@ -75,7 +82,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 3 Dollar", 
-        vi: "3 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "3 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2011",
     type: { 
@@ -103,7 +110,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 5 Dollar", 
-        vi: "5 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "5 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2012",
     type: { 
@@ -131,7 +138,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 6 Dollar", 
-        vi: "6 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "6 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2013",
     type: { 
@@ -159,7 +166,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 8 Dollar", 
-        vi: "8 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "8 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2011",
     type: { 
@@ -187,7 +194,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 9 Dollar", 
-        vi: "9 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "9 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2012",
     type: { 
@@ -215,7 +222,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 10 Dollar", 
-        vi: "10 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "10 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2010",
     type: { 
@@ -243,7 +250,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 15 Dollar", 
-        vi: "15 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "15 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2011",
     type: { 
@@ -271,7 +278,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 25 Dollar", 
-        vi: "25 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "25 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2017",
     type: { 
@@ -299,7 +306,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 50 Dollar", 
-        vi: "50 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "50 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2017",
     type: { 
@@ -327,7 +334,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 100 Dollar", 
-        vi: "100 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "100 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2017",
     type: { 
@@ -355,7 +362,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 250 Dollar", 
-        vi: "250 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "250 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2017",
     type: { 
@@ -383,7 +390,7 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Arctic Territories' 500 Dollar", 
-        vi: "500 Đô La Các Lãnh Thổ Bắc Cực" 
+        vi: "500 Đô La Lãnh Thổ Bắc Cực" 
     },
     year: "2017",
     type: { 

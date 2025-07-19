@@ -101,11 +101,11 @@ const countries = {
                 ]
             },
             "west-africa": {
-                "name": { "en": "West America", "vi": "Tây Phi" },
+                "name": { "en": "West Africa", "vi": "Tây Phi" },
                 "countries": [
                     { "en": "Ghana", "vi": "Ghana", "url": "collection/ghana.html" },
                     { "en": "Guinea", "vi": "Guinea", "url": "collection/guinea.html" },
-                    { "en": "West Africa", "vi": "Tây Phi", "url": "collection/west-africa.html" },
+                    { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi", "url": "collection/uemoa.html" },
                 ]
             },
             "central-africa": {
@@ -182,6 +182,7 @@ const countries = {
                     { "en": "Lebanon", "vi": "Liban", "url": "collection/lebanon.html" },
                     { "en": "Oman", "vi": "Oman", "url": "collection/oman.html" },
                     { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "url": "collection/saudi-arabia.html" },
+                    { "en": "Syria", "vi": "Syria", "url": "collection/syria.html" },
                     { "en": "Turkey", "vi": "Thổ Nhĩ Kỳ", "url": "collection/turkey.html" },
                 ]
             },
@@ -204,6 +205,18 @@ const countries = {
                     { "en": "Pakistan", "vi": "Pakistan", "url": "collection/pakistan.html" },
                 ]
             },
+            "east-asia": {
+                "name": { "en": "East Asia", "vi": "Đông Á" },
+                "countries": [
+                    { "en": "China", "vi": "Trung Quốc", "url": "collection/china.html" },
+                    { "en": "Hong Kong", "vi": "Hồng Kông", "url": "collection/hong-kong.html" },
+                    { "en": "Japan", "vi": "Nhật Bản", "url": "collection/japan.html" },
+                    { "en": "Mongolia", "vi": "Mông Cổ", "url": "collection/mongolia.html" },
+                    { "en": "North Korea", "vi": "Triều Tiên", "url": "collection/north-korea.html" },
+                    { "en": "South Korea", "vi": "Hàn Quốc", "url": "collection/south-korea.html" },
+                    { "en": "Taiwan", "vi": "Đài Loan", "url": "collection/taiwan.html" },
+                ]
+            },
             "south-east-asia": {
                 "name": { "en": "South East Asia", "vi": "Đông Nam Á" },
                 "countries": [
@@ -217,18 +230,6 @@ const countries = {
                     { "en": "Vietnam", "vi": "Việt Nam", "url": "collection/vietnam.html" },
                 ]
             },
-            "east-asia": {
-                "name": { "en": "South Asia", "vi": "Nam Á" },
-                "countries": [
-                    { "en": "China", "vi": "Trung Quốc", "url": "collection/china.html" },
-                    { "en": "Hong Kong", "vi": "Hồng Kông", "url": "collection/hong-kong.html" },
-                    { "en": "Japan", "vi": "Nhật Bản", "url": "collection/japan.html" },
-                    { "en": "Mongolia", "vi": "Mông Cổ", "url": "collection/mongolia.html" },
-                    { "en": "North Korea", "vi": "Triều Tiên", "url": "collection/north-korea.html" },
-                    { "en": "South Korea", "vi": "Hàn Quốc", "url": "collection/south-korea.html" },
-                    { "en": "Taiwan", "vi": "Đài Loan", "url": "collection/taiwan.html" },
-                ]
-            },
         }
     },
     "oceania": {
@@ -237,7 +238,7 @@ const countries = {
     },
     "arctic": {
         "name": { "en": "Arctic", "vi": "Bắc Cực" },
-        "arctic_territories": { "en": "Arctic Territories", "vi": "Các Lãnh Thổ Bắc Cực", "url": "collection/arctic-territories.html" },
+        "arctic_territories": { "en": "Arctic Territories", "vi": "Lãnh Thổ Bắc Cực", "url": "collection/arctic-territories.html" },
     },
     "antartica": {
         "name": { "en": "Antarctica", "vi": "Nam Cực" },

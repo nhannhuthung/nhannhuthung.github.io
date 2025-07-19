@@ -1,3 +1,10 @@
+const translations = {
+    heading: {
+        en: "West African Economic And Monetary Union",
+        vi: "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi"
+    }
+};
+
 let index = 1;
 
 const images = {

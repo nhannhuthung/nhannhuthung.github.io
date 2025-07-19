@@ -38,7 +38,6 @@ body {
     color: rgb(123, 153, 141);
 }
 
-
 #back-to-top {
     position: fixed;
     bottom: 20px;
@@ -250,6 +249,21 @@ img {
     background: repeating-linear-gradient(90deg,#000,#000 6px,transparent 6px,transparent 12px);
 }
 
+.new-label {
+    position: absolute;
+    top: 12px;
+    right: -15px;
+    background-color: #ff4444;
+    color: white;
+    padding: 3px 40px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: rotate(35deg);
+    line-height: 1.2;
+}
+
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
@@ -446,12 +460,12 @@ hr {
     }
 
     .slideshow-info h3 {
-        font-size: 21px;
+        font-size: 20px;
         margin: 18px 0px 18px 15px;
     }
 
     .slideshow-info p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .description {
@@ -462,5 +476,12 @@ hr {
     .numbertext {
         font-size: 10px;
         padding: 5px 8px;
+    }
+
+    .new-label {
+        top: 6px;
+        right: -30px;
+        padding: 3px 40px;
+        font-size: 11px;
     }
 }
