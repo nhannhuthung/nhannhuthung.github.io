@@ -38,6 +38,7 @@
             <button class="search-button" onclick="searchPage()">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            <div id="searchSuggestions" class="search-suggestions" style="display: none;"></div>
         </div>
         <div class="language-toggle">
             <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
@@ -66,6 +67,7 @@
 
     <div class="container-highlight">
         <h1 id="highlight" style="color: whitesmoke;">Highlight</h1>
+
         <h2 id="banknote" style="color: whitesmoke;">Banknote</h2>
         <div class="highlight-banknote">
             <div class="box" id="box-1">
@@ -95,6 +97,25 @@
             <div class="box" id="box-7">
                 <img src="images/collection/france/1993-1998/200-franc-b.jpg" alt="France">
                 <div id="france" class="overlay">France</div>
+            </div>
+        </div>
+
+        <h2 id="coin" style="color: whitesmoke;">Coin</h2>
+        <div class="highlight-coin">
+            <div class="coin-box" data-info="USA ~ 1881-O ~ 1 Dollar">
+                <img src="images/highlight/coin/usa-f.jpg" alt="1 Dollar Front">
+                <img src="images/highlight/coin/usa-b.jpg" alt="1 Dollar Back">
+                <div id="usa-coin" class="coin-overlay">USA ~ 1881-O ~ 1 Dollar</div>
+            </div>
+            <div class="coin-box" data-info="Indochinese Union ~ 1902 ~ 1 Piastre">
+                <img src="images/highlight/coin/indochina-f.jpg" alt="1 Piastre Front">
+                <img src="images/highlight/coin/indochina-b.jpg" alt="1 Piastre Back">
+                <div id="indochina-coin" class="coin-overlay">Indochinese Union ~ 1902 ~ 1 Piastre</div>
+            </div>
+            <div class="coin-box" data-info="Canada ~ 1967 ~ 1 Dollar">
+                <img src="images/highlight/coin/canada-f.jpg" alt="1 Dollar Front">
+                <img src="images/highlight/coin/canada-b.jpg" alt="1 Dollar Back">
+                <div id="canada-coin" class="coin-overlay">Canada ~ 1967 ~ 1 Dollar</div>
             </div>
         </div>
     </div>

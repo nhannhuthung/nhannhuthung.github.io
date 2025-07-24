@@ -40,6 +40,10 @@ const main_trans = {
         south_korea: `South Korea`,
         australia: `Australia`,
         france: `France`,
+        coin: `Coin`,
+        usa_coin: `USA ~ 1881-O ~ 1 Dollar`,
+        indochina_coin: `Indochina ~ 1902 ~ 1 Piastre`,
+        canada_coin: `Canada ~ 1967 ~ 1 Dollar`,
     },
     vi: {
         acknowledge: `Lời Cảm Ơn`,
@@ -61,6 +65,10 @@ const main_trans = {
         south_korea: `Hàn Quốc`,
         australia: `Úc`,
         france: `Pháp`,
+        coin: `Tiền Xu`,
+        usa_coin: `Mỹ ~ 1881-O ~ 1 Đô La`,
+        indochina_coin: `Đông Dương ~ 1902 ~ 1 Piastre`,
+        canada_coin: `Canada ~ 1967 ~ 1 Đô La`,
     }
 };
 
@@ -389,7 +397,11 @@ function updatePageLanguage(currentLang) {
         { id: "hong-kong", key: "hong_kong" },
         { id: "south-korea", key: "south_korea" },
         { id: "australia", key: "australia" },
-        { id: "france", key: "france"}
+        { id: "france", key: "france"},
+        { id: "coin", key: "coin" },
+        { id: "usa-coin", key: "usa_coin" },
+        { id: "indochina-coin", key: "indochina_coin" },
+        { id: "canada-coin", key: "canada_coin" },
     ];
 
     contentsToUpdate.forEach(({ id, key }) => {
