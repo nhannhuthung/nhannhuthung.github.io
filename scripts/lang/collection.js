@@ -73,15 +73,15 @@ const main_trans = {
 };
 
 const countries = {
-    "america": {
-        "name": { "en": "America", "vi": "Châu Mỹ" },
+    "americas": {
+        "name": { "en": "Americas", "vi": "Châu Mỹ" },
         "regions": {
             "north-america": {
                 "name": { "en": "North America", "vi": "Bắc Mỹ" },
                 "countries": [
                     { "en": "Canada", "vi": "Canada", "url": "collection/canada.html" },
                     { "en": "Mexico", "vi": "Mexico", "url": "collection/mexico.html" },
-                    { "en": "United States of America", "vi": "Hợp Chủng Quốc Hoa Kỳ", "url": "collection/usa.html" },
+                    { "en": "United States of America", "vi": "Hợp Chúng Quốc Hoa Kỳ", "url": "collection/usa.html" },
                 ]
             },
             "central-america": {
