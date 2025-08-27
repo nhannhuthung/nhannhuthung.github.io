@@ -63,7 +63,7 @@ body {
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
     max-width: 1200px;
-    height: 400px;
+    height: 425px;
     transition: grid-template-columns 0.6s ease-in-out;
 }
 
@@ -82,7 +82,7 @@ body {
 }
 
 #box-1 img {
-    object-position: 63%;
+    object-position: 47%;
 }
 
 #box-2 img {
@@ -90,7 +90,7 @@ body {
 }
 
 #box-3 img {
-    object-position: 75%;
+    object-position: 55%;
 }
 
 #box-4 img {
@@ -102,11 +102,11 @@ body {
 }
 
 #box-6 img {
-    object-position: 44%;
+    object-position: 50%;
 }
 
 #box-7 img {
-    object-position: 34%;
+    object-position: 40%;
 }
 
 .box:hover img {
@@ -383,6 +383,34 @@ ul li::before {
     .highlight-banknote {
         height: 200px;
         gap: 2px;
+    }
+
+    #box-1 img {
+        object-position: 47%;
+    }
+
+    #box-2 img {
+        object-position: 41%;
+    }
+
+    #box-3 img {
+        object-position: 60%;
+    }
+
+    #box-4 img {
+        object-position: 36%;
+    }
+
+    #box-5 img {
+        object-position: 62%;
+    }
+
+    #box-6 img {
+        object-position: 46%;
+    }
+
+    #box-7 img {
+        object-position: 47%;
     }
 
     .overlay {
