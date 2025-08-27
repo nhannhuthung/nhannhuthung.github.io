@@ -28,7 +28,7 @@ const countryData = {
             { "en": "Colombia", "vi": "Colombia", "link": "colombia.html" },
             { "en": "Costa Rica", "vi": "Costa Rica", "link": "costa-rica.html" },
             { "en": "Mexico", "vi": "Mexico", "link": "mexico.html" },
-            { "en": "United States of America", "vi": "Hợp Chủng Quốc Hoa Kỳ", "link": "usa.html" },
+            { "en": "United States", "vi": "Hoa Kỳ", "link": "usa.html" },
             { "en": "Venezuela", "vi": "Venezuela", "link": "venezuela.html" },
         ]       
     },
@@ -83,6 +83,7 @@ const countryData = {
             { "en": "Kyrgyzstan", "vi": "Kyrgyzstan", "link": "kyrgyzstan.html" },
             { "en": "Laos", "vi": "Lào", "link": "laos.html" },
             { "en": "Lebanon", "vi": "Liban", "link": "lebanon.html" },
+            { "en": "Macau", "vi": "Ma Cao", "link": "macau.html" },
             { "en": "Malaysia", "vi": "Malaysia", "link": "malaysia.html" },
             { "en": "Mongolia", "vi": "Mông Cổ", "link": "mogolia.html" },
             { "en": "Myanmar", "vi": "Myanmar", "link": "myanmar.html" },

@@ -11,12 +11,12 @@ const images = {
     [`${index}`]: [
         {
             src: "../images/collection/japan/d/2000-yen-f.jpg",
-            alt: {en: "Front of the 2000 Yen Bill", vi: "Mặt Trước Tờ 2000 Yen"},
+            alt: {en: "Front of the 2000 Yen Bill", vi: "Mặt Trước Tờ 2000 Yên"},
             description: {en: "Obverse", vi: "Trước"}
         },
         {
             src: "../images/collection/japan/d/2000-yen-b.jpg",
-            alt: {en: "Back of the 2000 Yen Bill", vi: "Mặt Sau Tờ 2000 Yen"},
+            alt: {en: "Back of the 2000 Yen Bill", vi: "Mặt Sau Tờ 2000 Yên"},
             description: {en: "Reverse", vi: "Sau"}
         }
     ]
@@ -42,12 +42,12 @@ index++; //index = 2
 images[`${index}`] = [
     {
         src: "../images/collection/japan/e/1000-yen-f.jpg",
-        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yen"},
+        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yên"},
         description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/e/1000-yen-b.jpg",
-        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yen"},
+        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yên"},
         description: {en: "Reverse", vi: "Sau"}
     }
 ];
@@ -73,12 +73,12 @@ index++; //index = 3
 images[`${index}`] = [
     {
         src: "../images/collection/japan/e/5000-yen-f.jpg",
-        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yen"},
+        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yên"},
         description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/e/5000-yen-b.jpg",
-        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yen"},
+        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yên"},
         description: {en: "Reverse", vi: "Sau"}
     }
 ];
@@ -103,13 +103,45 @@ slideshowInfo[`${index}`] = {
 index++; //index = 4
 images[`${index}`] = [
     {
+        src: "../images/collection/japan/e/10000-yen-f.jpg",
+        alt: {en: "Front of the 10000 Yen Bill", vi: "Mặt Trước Tờ 10000 Yên"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/japan/e/10000-yen-b.jpg",
+        alt: {en: "Back of the 10000 Yen Bill", vi: "Mặt Sau Tờ 10000 Yên"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Japanese 10,000 Yen", 
+        vi: "10.000 Yên Nhật Bản" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "160 $\\times$ 76 mm",
+    figure: { 
+        en: "Yukichi Fukuzawa (1835-1901)", 
+        vi: "Fukuzawa Yukichi (1835-1901)" 
+    },
+    note: null,
+    new: true
+};
+
+index++; //index = 5
+images[`${index}`] = [
+    {
         src: "../images/collection/japan/f/1000-yen-f.jpg",
-        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yen"},
+        alt: {en: "Front of the 1000 Yen Bill", vi: "Mặt Trước Tờ 1000 Yên"},
         description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/1000-yen-b.jpg",
-        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yen"},
+        alt: {en: "Back of the 1000 Yen Bill", vi: "Mặt Sau Tờ 1000 Yên"},
         description: {en: "Reverse", vi: "Sau"}
     }
 ];
@@ -134,16 +166,16 @@ slideshowInfo[`${index}`] = {
     },
 };
 
-index++; //index = 5
+index++; //index = 6
 images[`${index}`] = [
     {
         src: "../images/collection/japan/f/5000-yen-f.jpg",
-        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yen"},
+        alt: {en: "Front of the 5000 Yen Bill", vi: "Mặt Trước Tờ 5000 Yên"},
         description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/5000-yen-b.jpg",
-        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yen"},
+        alt: {en: "Back of the 5000 Yen Bill", vi: "Mặt Sau Tờ 5000 Yên"},
         description: {en: "Reverse", vi: "Sau"}
     }
 ];
@@ -165,16 +197,16 @@ slideshowInfo[`${index}`] = {
     note: null
 };
 
-index++; //index = 6
+index++; //index = 7
 images[`${index}`] = [
     {
         src: "../images/collection/japan/f/10000-yen-f.jpg",
-        alt: {en: "Front of the 10000 Yen Bill", vi: "Mặt Trước Tờ 10000 Yen"},
+        alt: {en: "Front of the 10000 Yen Bill", vi: "Mặt Trước Tờ 10000 Yên"},
         description: {en: "Obverse", vi: "Trước"}
     },
     {
         src: "../images/collection/japan/f/10000-yen-b.jpg",
-        alt: {en: "Back of the 10000 Yen Bill", vi: "Mặt Sau Tờ 10000 Yen"},
+        alt: {en: "Back of the 10000 Yen Bill", vi: "Mặt Sau Tờ 10000 Yên"},
         description: {en: "Reverse", vi: "Sau"}
     }
 ];

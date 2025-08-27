@@ -22,14 +22,14 @@ const fixed_trans = {
 const main_trans = {
     en: {
         acknowledge: `Acknowledgment`,
-        acknowledge_para: `I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.`,
+        acknowledge_para: `Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.`,
 
         remark: `Remark`,
         remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins, I couldn't put all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
-        remark_subpara_1: `<span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina etc.).`,
+        remark_subpara_1: `<span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
         remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).`,
-        remark_para_3: `My collection is extending with banknotes. I have lost count the total number of unique regions for accounting banknotes and coins.`,
+        remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value. 😁`,
 
         last_update: `Last Updated:`,
 
@@ -47,18 +47,18 @@ const main_trans = {
     },
     vi: {
         acknowledge: `Lời Cảm Ơn`,
-        acknowledge_para: `Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
+        acknowledge_para: `Chào mừng đến với nơi trưng bày bộ sưu tập tiền online của mình! Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
 
-        remark: `Nhận Xét`,
+        remark: `Tổng Quan`,
         remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu, mình không thể đưa tất cả lên đây.`,
         remark_para_2: `Một vài tiêu điểm về bộ sưu tập tiền xu của mình:`,
-        remark_subpara_1: `<span>&#9757;</span> Có khoảng 60 khu vực, bao gồm những khu vực không còn tồn tại (Yugoslavia, Czechslovakia, Liên Bang Đông Dương, vân vân).`,
+        remark_subpara_1: `<span>&#9757;</span> Có khoảng 60 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
         remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902).`,
-        remark_para_3: `Mình mở rộng bộ sưu tập với các tiền giấy. Mình không nhớ chính xác có tổng cộng bao nhiêu khu vực trong bộ sưu tập.`,
+        remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn. 😁`,
 
         last_update: `Cập Nhật Lần Cuối:`,
 
-        highlight: `Điểm Nổi Bật`,
+        highlight: `Nổi Bật`,
         banknote: `Tiền Giấy`,
         norway: `Na Uy`,
         hong_kong: `Hồng Kông`,
@@ -81,7 +81,7 @@ const countries = {
                 "countries": [
                     { "en": "Canada", "vi": "Canada", "url": "collection/canada.html" },
                     { "en": "Mexico", "vi": "Mexico", "url": "collection/mexico.html" },
-                    { "en": "United States of America", "vi": "Hợp Chúng Quốc Hoa Kỳ", "url": "collection/usa.html" },
+                    { "en": "United States", "vi": "Hoa Kỳ", "url": "collection/usa.html" },
                 ]
             },
             "central-america": {
@@ -219,6 +219,7 @@ const countries = {
                     { "en": "China", "vi": "Trung Quốc", "url": "collection/china.html" },
                     { "en": "Hong Kong", "vi": "Hồng Kông", "url": "collection/hong-kong.html" },
                     { "en": "Japan", "vi": "Nhật Bản", "url": "collection/japan.html" },
+                    { "en": "Macau", "vi": "Ma Cao", "url": "collection/macau.html" },
                     { "en": "Mongolia", "vi": "Mông Cổ", "url": "collection/mongolia.html" },
                     { "en": "North Korea", "vi": "Triều Tiên", "url": "collection/north-korea.html" },
                     { "en": "South Korea", "vi": "Hàn Quốc", "url": "collection/south-korea.html" },
