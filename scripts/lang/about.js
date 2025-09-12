@@ -20,21 +20,17 @@ const main_trans = {
         title: `About Me`,
         greeting: `Hello! 🦉😀`,
         name_intro: `My name is Hưng. If you are unfamiliar with that name, please call me Howl. It is the name from the movie - Howl's Moving Castle.`,
-        study_intro: `I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. Right now I am finishing my last year of my first degree - Bachelor of Mathematics: Concentration in Applied Analysis, with a $\`\`$minor$"$ in Computer Science at Carleton University.`,
-        paper_intro: `If you are wonder what am I studying in math, here are two main papers which highlight the areas I'm interested in and pursuing right now.`,
-        first_paper_1: `The first paper is in Computational Mathematics area and is submitted to the journal - Mathematics and Computers in Simulation. Here is the pre-proof version of the paper: <a href="pdf/math/paper_nla_manuscript.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`,
-        first_paper_2: `For the official version, you can visit <a href="https://doi.org/10.1016/j.matcom.2025.03.004" target="_blank">here</a>.`,
-        second_paper: `The second paper is in Wave Phenomena area and it is my honours project: <a href="pdf/math/honours-project.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`,
+        study_intro: `I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. I finished my first bachelor and I'm starting a new journey. New but old, old but new!!!`,
+        math_intro: `If you are wonder what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.`,
+        resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`
     },
     vi: {
         title: `Bản Thân`,
         greeting: `Xin chào! 🦉😀`,
         name_intro: `Tên mình là Hưng. Mình có tên tiếng Anh là Howl và mình lấy tên này trong bộ phim - Lâu Đài Bay Của Pháp Sư Howl.`,
-        study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán Ứng Dụng. Mình đang hoàn thành bằng cử nhân đầu tiên - Cử Nhân Toán Học: Chuyên Phân Tích Ứng Dụng với $\`\`$chuyên ngành phụ$"$ về Khoa Học Máy Tính tại đại học Carleton.`,
-        paper_intro: `Nếu bạn thắc mắc mình đang học gì về toán thì đây là hai bài báo cáo chính liên quan tới các lĩnh vực bản thân mình đang quan tâm và theo đuổi hiện tại.`,
-        first_paper_1: `Bài đầu tiên thuộc lĩnh vực Toán Học Tính Toán và đã được gửi đến tạp chí - Mathematics and Computers in Simulation. Đây là bản thảo đã được phê duyệt: <a href="pdf/math/paper_nla_manuscript.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`,
-        first_paper_2: `Bản chính thức thì bạn truy cập tại <a href="https://doi.org/10.1016/j.matcom.2025.03.004" target="_blank">đây</a>.`,
-        second_paper: `Bài thứ hai thuộc lĩnh vực Hiện Tượng Sóng và là đồ án tốt nghiệp của mình: <a href="pdf/math/honours-project.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`,
+        study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán Ứng Dụng. Mình đã tốt nghiệp với bằng cử nhân đầu tiên và mình bắt đầu một hình trình mới. Mới mà cũ, cũ mà mới!!!`,
+        math_intro: `Nếu bạn thắc mắc mình đang học gì về toán, bạn có thể xem ở <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">đây</a> và <a href="pdf/math/honours-project.pdf" target="_blank">đây</a>.`,
+        resume_intro: `Đây là sơ yếu lý lịch về mình đề phòng bạn thắc mắc: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`
     }
 };
 
@@ -72,10 +68,8 @@ function updatePageLanguage(currentLang) {
         { id: "greeting", key: "greeting" },
         { id: "name-intro", key: "name_intro" },
         { id: "study-intro", key: "study_intro" },
-        { id: "paper-intro", key: "paper_intro" },
-        { id: "first-paper-1", key: "first_paper_1" },
-        { id: "first-paper-2", key: "first_paper_2" },
-        { id: "second-paper", key: "second_paper" }
+        { id: "math-intro", key: "math_intro" },
+        { id: "resume-intro", key: "resume_intro" }
     ];
 
     contentsToUpdate.forEach(({ id, key }) => {

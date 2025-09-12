@@ -203,9 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSidebarHTML('SideBarCollection'); 
 
     Object.keys(images).forEach(index => {
+        // Build the slide images
         createSlideshow("slide" + index, images[index]);
-        new Slideshow("slideshow" + index);
-        generateSlideShowInfo("info" + index, slideshowInfo[index], currentLang);
+
+        // Start the slideshow, and pass info config
+        new Slideshow("slide" + index, 5000, {
+            containerId: "info" + index,
+            data: slideshowInfo[index]
+        });
     });
 });
 //--// function to print out code for sidebar //--//
@@ -213,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //--// function to display banknote //--//
 class Slideshow {
-    constructor(containerId, interval = 5000) {
+    constructor(containerId, interval = 5000, infoConfig = null) {
         this.container = document.getElementById(containerId);
         if (!this.container) {
             console.error(`Container with id "${containerId}" not found.`);
@@ -224,12 +229,24 @@ class Slideshow {
         this.interval = interval;
         this.autoSlideTimeout = null;
         this.isPausedByHover = false;
+        this.infoConfig = infoConfig;
 
         // Start the slideshow
         this.showSlides();
 
         // Add event listener for manual swapping
         this.container.addEventListener("click", () => this.swap());
+    }
+
+    updateInfo() {
+        if (this.infoConfig && this.infoConfig.containerId && this.infoConfig.data) {
+            generateSlideShowInfo(
+                this.infoConfig.containerId,
+                this.infoConfig.data,
+                localStorage.getItem("language") || "en",
+                this.slideIndex
+            );
+        }
     }
 
     addHoverListeners() {
@@ -268,6 +285,7 @@ class Slideshow {
 
         // Attach hover listeners to the current image
         this.addHoverListeners();
+        this.updateInfo();
 
         // Automatically transition to the next slide
         if (!this.isPausedByHover) {
@@ -290,6 +308,7 @@ class Slideshow {
 
         // Re-attach hover listeners to the new image
         this.addHoverListeners();
+        this.updateInfo();
 
         // Restart auto-sliding
         if (!this.isPausedByHover) {
@@ -353,7 +372,7 @@ function createSlideshow(containerId, images) {
 //--// function to display banknote //--//
 
 //--// function to display information of banknote //--//
-function generateSlideShowInfo(containerId, info, currentLang) {
+function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
     currentLang = localStorage.getItem("language") || "en";  // Retrieve stored language
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -362,7 +381,7 @@ function generateSlideShowInfo(containerId, info, currentLang) {
 
     const labels = {
         en: { year: "Year", type: "Type", size: "Size", figure: "Figure" },
-        vi: { year: "Năm", type: "Loại", size: "Kích Thước", figure: "Nhân Vật" }
+        vi: { year: "Năm", type: "Loại", size: "Kích Thước", figure: "Vĩ Nhân" }
     };
 
     const infoDiv = document.createElement("div");
@@ -379,10 +398,13 @@ function generateSlideShowInfo(containerId, info, currentLang) {
     }
 
     function addInfoElement(labelKey, value) {
-        if (value) {
-            const element = document.createElement("p");
-            element.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${typeof value === "object" ? value[currentLang] : value}`;
-            infoDiv.appendChild(element);
+        if (value !== null && value !== undefined) {
+        const localized = typeof value === "object" && !Array.isArray(value)
+            ? (value[currentLang] || value["en"])
+            : value;
+        const p = document.createElement("p");
+        p.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${localized}`;
+        infoDiv.appendChild(p);
         }
     }
 
@@ -395,7 +417,18 @@ function generateSlideShowInfo(containerId, info, currentLang) {
     addInfoElement("year", info.year);
     addInfoElement("type", info.type);
     addInfoElement("size", info.size);
-    addInfoElement("figure", info.figure);
+    
+    if (info.figure) {
+        let figureData;
+        if (Array.isArray(info.figure)) {
+            // Use slideIndex if available, fallback to first entry
+            figureData = info.figure[slideIndex] || info.figure[0] || null;
+        } else {
+            figureData = info.figure;
+        }
+        addInfoElement("figure", figureData);
+    }
+
     if (info.note) {
         const noteElement = document.createElement("p");
         const noteContent = document.createElement("em");

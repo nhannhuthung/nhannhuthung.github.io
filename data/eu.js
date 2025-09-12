@@ -63,8 +63,7 @@ slideshowInfo[`${index}`] = {
     },
     size: "127 $\\times$ 67 mm",
     figure: null,
-    note: null,
-    new: true
+    note: null
 };
 
 index++; //index = 3
@@ -152,4 +151,62 @@ slideshowInfo[`${index}`] = {
     size: "127 $\\times$ 67 mm",
     figure: null,
     note: null
+};
+
+index++; //index = 6
+images[`${index}`] = [
+    {
+        src: "../images/collection/eu/es2/20-euro-f.jpg",
+        alt: {en: "Front of the 20 Euro Bill", vi: "Mặt Trước Tờ 20 Euro"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/eu/es2/20-euro-b.jpg",
+        alt: {en: "Back of the 20 Euro Bill", vi: "Mặt Sau Tờ 20 Euro"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "European Union's 20 Euros", 
+        vi: "20 Euro Liên Minh Châu Âu" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "133 $\\times$ 72 mm",
+    figure: null,
+    note: null,
+    new: true
+};
+
+index++; //index = 7
+images[`${index}`] = [
+    {
+        src: "../images/collection/eu/es2/50-euro-f.jpg",
+        alt: {en: "Front of the 50 Euro Bill", vi: "Mặt Trước Tờ 50 Euro"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/eu/es2/50-euro-b.jpg",
+        alt: {en: "Back of the 50 Euro Bill", vi: "Mặt Sau Tờ 50 Euro"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "European Union's 50 Euros", 
+        vi: "50 Euro Liên Minh Châu Âu" 
+    },
+    year: null,
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    size: "140 $\\times$ 77 mm",
+    figure: null,
+    note: null,
+    new: true
 };

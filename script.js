@@ -52,8 +52,8 @@ const pages = {
 
 // Define country pages with multiple keywords
 const countries_list = {
-  "canada": ["canada"],
-  "colombia": ["colombia", "republic of colombia"],
+  "canada": ["canada", "ca na đa"],
+  "colombia": ["colombia", "republic of colombia", "cô lôm bi a"],
   "costa-rica": ["costa rica", "republic of costa rica"],
   "mexico": ["mexico", "united mexican states", "mê hi cô"],
   "usa": ["usa", "united states of america", "united states", "america", "mỹ", "mĩ", "hoa kì", "hợp chủng quốc hoa kì"],
@@ -70,14 +70,14 @@ const countries_list = {
   "rwanda": ["rwanda", "republic of rwanda"],
   "somalia": ["somalia", "federal republic of somalia"],
   "uemoa": ["uemoa", "waemu", "west african economic and monetary union", "west africa, western africa", "liên minh kinh tế và tiền tệ tây phi", "tây phi"],
-  "zambia": ["zambia", "republic of zambia"],
+  "zambia": ["zambia", "republic of zambia", "dăm bi a"],
 
-  "belarus": ["belarus", "republic of belarus"],
+  "belarus": ["belarus", "republic of belarus", "bê la rút"],
   "croatia": ["croatia", "republic of croatia"],
   "england": ["england", "anh", "anh quốc"],
   "eu": ["eu", "european union", "liên minh châu âu"],
   "france": ["france", "pháp"],
-  "ireland": ["ireland", "republic of ireland"],
+  "ireland": ["ireland", "republic of ireland", "ai len"],
   "italy": ["italy", "ý"],
   "moldova": ["moldova", "republic of moldova"],
   "norway": ["norway", "kingdom of norway", "na uy"],
@@ -87,7 +87,7 @@ const countries_list = {
   "ukraine": ["ukraine"],
 
   "bangladesh": ["bangladesh", "people's republic of bangladesh", "băng la đét"],
-  "bhutan": ["bhutan", "kingdom of bhutan"],
+  "bhutan": ["bhutan", "kingdom of bhutan", "bu tan"],
   "cambodia": ["cambodia", "kingdom of cambodia", "campuchia", "cam pu chia"],
   "china": ["china", "people's republic of china", "trung quốc", "trung"],
   "hong-kong": ["hong kong", "hồng kông"],
@@ -109,7 +109,7 @@ const countries_list = {
   "pakistan": ["pakistan", "islamic republic of pakistan"],
   "saudi-arabia": ["saudi arabia", "kingdom of saudi arabia", "a rập xê út"],
   "singapore": ["singapore", "republic of singapore", "xing ga po"],
-  "south-korea": ["south korea", "korea", "republic of korea", "hàn quốc", "hàn"],
+  "south-korea": ["south korea", "korea", "republic of korea", "hàn quốc", "hàn", "đại hàn", "nam hàn"],
   "syria": ["syria", "syrian arab republic"],
   "taiwan": ["taiwan", "republic of china", "đài loan", "đài"],
   "tajikistan": ["tajikistan", "republic of tajikistan"],
@@ -137,7 +137,7 @@ const displayCountry = {
   "colombia": { en: "Colombia", vi: "Colombia" },
   "costa-rica": { en: "Costa Rica", vi: "Costa Rica" },
   "mexico": { en: "Mexico", vi: "Mexico" },
-  "usa": { en: "United States of America", vi: "Hợp Chủng Quốc Hoa Kỳ"},
+  "usa": { en: "United States", vi: "Hoa Kỳ"},
   "venezuela": { en: "Venezuela", vi: "Venezuela" },
 
   "drc": { en: "Democratic Republic of the Congo", vi: "Cộng Hòa Dân Chủ Congo"},

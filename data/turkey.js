@@ -33,10 +33,16 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "142 $\\times$ 68 mm",
-        figure: { 
-            en: "Mustafa Kemal Atatürk (1881?-1938)", 
-            vi: "Mustafa Kemal Atatürk (1881?-1938)" 
-        },
+        figure: [
+            {
+                en: "Mustafa Kemal Atatürk (1881?-1938)",
+                vi: "Mustafa Kemal Atatürk (1881?-1938)"
+            },
+            {
+                en: "Mimar Kemaleddin (1870-1927)", 
+                vi: "Mimar Kemaleddin (1870-1927)" 
+            }
+        ],
         note: null
     }
 };
@@ -65,9 +71,15 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "130 $\\times$ 64 mm",
-    figure: { 
-        en: "Mustafa Kemal Atatürk (1881?-1938)", 
-        vi: "Mustafa Kemal Atatürk (1881?-1938)" 
-    },
+    figure: [
+        {
+            en: "Mustafa Kemal Atatürk (1881?-1938)",
+            vi: "Mustafa Kemal Atatürk (1881?-1938)"
+        },
+        {
+            en: "Ayd\u0131n Say\u0131l\u0131 (1913-1993)", 
+            vi: "Ayd\u0131n Say\u0131l\u0131 (1913-1993)" 
+        }
+    ],
     note: null
 };

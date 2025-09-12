@@ -67,5 +67,4 @@ slideshowInfo[`${index}`] = {
         en: "It's been through war ...",
         vi: "Nó đã sống sót qua chiến tranh ..."
     },
-    new: true,
 };

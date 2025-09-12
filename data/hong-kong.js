@@ -120,7 +120,6 @@ slideshowInfo[`${index}`] = {
     size: "148 $\\times$ 74 mm",
     figure: null,
     note: null,
-    new: true
 };
 
 index++ //index = 5
@@ -149,7 +148,7 @@ slideshowInfo[`${index}`] = {
     size: "153 $\\times$ 77 mm",
     figure: null,
     note: null,
-    new: true
+    
 };
 
 index++ //index = 6
@@ -178,7 +177,6 @@ slideshowInfo[`${index}`] = {
     size: "148 $\\times$ 74 mm",
     figure: null,
     note: null,
-    new: true
 };
 
 index++ //index = 7
@@ -403,7 +401,6 @@ slideshowInfo[`${index}`] = {
     size: "158 $\\times$ 79 mm",
     figure: null,
     note: null,
-    new: true
 };
 
 index++ //index = 15
@@ -432,7 +429,6 @@ slideshowInfo[`${index}`] = {
     size: "153 $\\times$ 77 mm",
     figure: null,
     note: null,
-    new: true
 };
 
 index++ //index = 16
@@ -518,7 +514,6 @@ slideshowInfo[`${index}`] = {
     size: "143 $\\times$ 72 mm",
     figure: null,
     note: null,
-    new: true
 };
 
 index++ //index = 19

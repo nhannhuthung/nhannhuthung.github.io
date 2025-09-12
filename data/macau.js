@@ -36,7 +36,6 @@ const slideshowInfo = {
         size: "138 $\\times$ 69 mm",
         figure: null,
         note: null,
-        new: true
     }
 };
 
@@ -66,5 +65,4 @@ slideshowInfo[`${index}`] = {
     size: "138 $\\times$ 69 mm",
     figure: null,
     note: null,
-    new: true
 };

@@ -33,10 +33,16 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "132 $\\times$ 69 mm",
-        figure: { 
-            en: "Elizabeth II (1952-2022)", 
-            vi: "Elizabeth II (1952-2022)" 
-        },
+        figure: [
+            {
+                en: "Elizabeth II (1952-2022)",
+                vi: "Elizabeth II (1952-2022)"
+            },
+            {
+                en: "Jane Austen (1775-1817)",
+                vi: "Jane Austen (1775-1817)" 
+            }
+        ],
         note: { 
             en: `2017\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
             vi: `Top 22 tờ tiền năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 

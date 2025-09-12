@@ -15,7 +15,7 @@ const images = {
             description: {en: "Obverse", vi: "Trước"}
         },
         {
-            src: "../images/collection/thailand/15/20-baht-b.jpg",
+            src: "../images/collection/turkmenistan/2/2017/5-manat-b.jpg",
             alt: {en: "Back of the 5 Manat Bill", vi: "Mặt Sau Tờ 5 Manat"},
             description: {en: "Reverse", vi: "Sau"}
         }

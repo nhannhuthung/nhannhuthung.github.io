@@ -129,7 +129,6 @@ slideshowInfo[`${index}`] = {
         vi: "Fukuzawa Yukichi (1835-1901)" 
     },
     note: null,
-    new: true
 };
 
 index++; //index = 5

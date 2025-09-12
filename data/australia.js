@@ -65,10 +65,16 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "144 $\\times$ 65 mm",
-    figure: { 
-        en: "Mary Reibey (1777-1855)", 
-        vi: "Mary Reibey (1777-1855)" 
-    },
+    figure: [
+        {
+            en: "Mary Reibey (1777-1855)", 
+            vi: "Mary Reibey (1777-1855)" 
+        },
+        {
+            en: "John Flynn (1880-1951)", 
+            vi: "John Flynn (1880-1951)" 
+        }
+    ],
     note: null
 };
 
@@ -96,10 +102,16 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "151 $\\times$ 65 mm",
-    figure: { 
-        en: "David Unaipon (1872-1967)", 
-        vi: "David Unaipon (1872-1967)" 
-    },
+    figure: [
+        {
+            en: "David Unaipon (1872-1967)", 
+            vi: "David Unaipon (1872-1967)" 
+        },
+        {
+            en: "Edith Cowan (1861-1932)", 
+            vi: "Edith Cowan (1861-1932)" 
+        }
+    ],
     note: null
 };
 
@@ -127,10 +139,16 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "158 $\\times$ 65 mm",
-    figure: { 
-        en: "Nellie Melba (1861-1931)", 
-        vi: "Nellie Melba (1861-1931)" 
-    },
+    figure: [
+        {
+            en: "Nellie Melba (1861-1931)", 
+            vi: "Nellie Melba (1861-1931)" 
+        },
+        {
+            en: "John Monash (1865-1931)", 
+            vi: "John Monash (1865-1931)" 
+        }
+    ],
     note: null
 };
 
@@ -192,10 +210,16 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "137 $\\times$ 65 mm",
-    figure: { 
-        en: "Banjo Paterson (1864-1941)", 
-        vi: "Banjo Paterson (1864-1941)" 
-    },
+    figure: [
+        {
+            en: "Banjo Paterson (1864-1941)", 
+            vi: "Banjo Paterson (1864-1941)" 
+        },
+        {
+            en: "Mary Gilmore (1865-1962)", 
+            vi: "Mary Gilmore (1865-1962)" 
+        }
+    ],
     note: { 
         en: `2017\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 22 tờ tiền năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -217,7 +241,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Australian 1000 Dollars", 
+        en: "Australian 100 Dollars", 
         vi: "100 Đô La Úc" 
     },
     year: null,
@@ -226,10 +250,16 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "158 $\\times$ 65 mm",
-    figure: { 
-        en: "Banjo Paterson (1864-1941)", 
-        vi: "Banjo Paterson (1864-1941)" 
-    },
+    figure: [
+        {
+            en: "Nellie Melba (1861-1931)", 
+            vi: "Nellie Melba (1861-1931)" 
+        },
+        {
+            en: "John Monash (1865-1931)", 
+            vi: "John Monash (1865-1931)" 
+        }
+    ],
     note: { 
         en: `2020\'s top 24 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 24 tờ tiền năm 2020 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
