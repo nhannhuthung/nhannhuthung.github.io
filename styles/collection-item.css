@@ -492,7 +492,7 @@ hr {
     }
 
     #slideshow1 {
-        margin-bottom: 60px;
+        margin-bottom: 90px;
     }
 
     .slideshow-info h3 {
@@ -523,7 +523,7 @@ hr {
 
     .page-navigation {
         right: 10px;
-        bottom: 30px;
+        bottom: 22px;
         gap: 8px;
         flex-direction: row !important;
     }

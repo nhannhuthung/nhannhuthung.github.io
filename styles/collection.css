@@ -3,7 +3,7 @@ body {
 }
 
 footer {
-    height: 50px;
+    height: 90px;
 }
 
 #header-nav,
@@ -374,18 +374,17 @@ ul li::before {
     margin: auto;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #8CC1FE, 
-                0 0 20px #8CC1FE, 
-                0 0 30px #8CC1FE;
+    box-shadow: 0 0 10px #B6D8FF, 
+                0 0 20px #B6D8FF, 
+                0 0 30px #B6D8FF;
     margin-top: 30px;
     backdrop-filter: blur(3px);
-    background: #1C3144;
+    background: rgba(7, 47, 95, 0.5);
 }
 
 .regions-heading {
     text-align: center;
     font-size: 42px;
-    color: #457ba7;
 }
 
 .regions-wrapper h2:first-of-type {
@@ -404,24 +403,24 @@ ul li::before {
 
 .continent-panel {
     padding: 30px;
-    color: #D2CBCB;
-    border: 2px solid #D2CBCB;
-    border-radius: 12px;
+    color: #b7d7fc;
+    border: 2px solid #b7d7fc;
+    border-radius: 10px;
     text-align: center;
     cursor: pointer;
     font-size: 21px;
     font-weight: bold;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .continent-panel:hover {
-    background: #D2CBCB;
-    color: #0e1d2c;
-    box-shadow: 0 0 20px #D2CBCB,
-                0 0 80px #D2CBCB,
-                0 0 160px #D2CBCB;
-    border: 2px solid #D2CBCB;
+    background: #e7e4e4;
+    color: #8aa1bb;
+    box-shadow: 0 0 20px #e7e4e4,
+                0 0 80px #e7e4e4,
+                0 0 160px #e7e4e4;
+    border: 2px solid #e7e4e4;
     transition-delay: .2s;
     transform: scale(1.05);
 }
@@ -429,8 +428,6 @@ ul li::before {
 .back-button {
     margin-bottom: 20px;
     padding: 12px 24px;
-    background: #232020;
-    color: #D2CBCB;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -440,17 +437,13 @@ ul li::before {
     z-index: 10;
     margin-left: 3%;
     margin-top: 2.5%;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .back-button:hover {
-    background: #D2CBCB;
-    color: #232020;
-    box-shadow: 0 0 20px #D2CBCB,
-                0 0 80px #D2CBCB,
-                0 0 160px #D2CBCB;
-    border: 2px solid #D2CBCB;
+    background: black;
+    color: white;
     transition-delay: .2s;
     transform: scale(1.05);
 }
