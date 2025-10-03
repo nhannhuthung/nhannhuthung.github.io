@@ -1,7 +1,7 @@
 const translations = {
     heading: {
         en: "Arctic Territories",
-        vi: "Lãnh Thổ Bắc Cực"
+        vi: "Các Lãnh Thổ Bắc Cực"
     }
 };
 

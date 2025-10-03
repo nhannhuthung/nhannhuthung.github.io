@@ -207,13 +207,16 @@ const displayCountry = {
   "kerguelen-islands": { en: "Kerguelen Islands", vi: "Quần Đảo Kerguelen" }
 };
 
-// Function for searching bar
+// Toggle the search bar
+/* -------------------------
+   Search / suggestion logic
+   ------------------------- */
+
 function searchPage() {
   const inputField = document.getElementById("searchInput");
-  let rawInput = inputField.value.trim().toLowerCase(); // Get input and normalize case
-  let modifiedInput = rawInput.replace(/-/g, " "); // Replace hyphens with spaces in a separate variable
+  let rawInput = inputField.value.trim().toLowerCase();
+  let modifiedInput = rawInput.replace(/-/g, " ");
 
-  // Get current URL path to check if we're inside "/countries/"
   const currentPath = window.location.pathname;
   const insideCountries = currentPath.includes("/collection/");
 
@@ -242,108 +245,166 @@ function searchPage() {
     vi: "Không có trang nào như vậy trong trang web của Hưng. Vui lòng nhập tên trang khác hoặc kiểm tra lại chính tả."
   };
 
-  // Get current language (default to English if not set)
   const currentLang = localStorage.getItem('language') || 'en';
 
-  // Redirect if a match is found
   if (foundPage) {
-    inputField.value = ""; // Clear input field
+    inputField.value = "";
     window.location.href = foundPage;
   } else {
     alert(alertMessages[currentLang]);
   }
 }
 
-// Attach event listener for Enter key press
-document.addEventListener("DOMContentLoaded", function () {
-  const inputField = document.getElementById("searchInput");
-  inputField.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      searchPage();
+// Toggle for mobile search icon/button (fixed behavior)
+function toggleSearch(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
     }
-  });
+
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.getElementById("searchInput");
+
+    // If container is already open
+    if (searchContainer.classList.contains("active")) {
+        // If user typed something -> perform search
+        if (searchInput.value.trim() !== "") {
+            searchPage();
+            return;
+        }
+        // If input is empty -> close (toggle off)
+        closeSearch();
+        return;
+    }
+
+    // Otherwise open the search (toggle on) and focus input
+    searchContainer.classList.add("active");
+    setTimeout(() => searchInput.focus(), 50);
+}
+
+// Close search (remove active state + clear suggestions + clear input)
+function closeSearch() {
+    const searchContainer = document.querySelector(".search-container");
+    const searchInput = document.getElementById("searchInput");
+    const suggestionBox = document.getElementById("suggestions");
+
+    if (searchContainer) searchContainer.classList.remove("active");
+    if (searchInput) searchInput.value = "";
+    if (suggestionBox) {
+        suggestionBox.style.display = "none";
+        suggestionBox.innerHTML = "";
+    }
+}
+
+// SINGLE DOMContentLoaded listener
+document.addEventListener("DOMContentLoaded", function () {
+    const inputField = document.getElementById("searchInput");
+    const suggestionBox = document.getElementById("suggestions");
+    const searchContainer = document.querySelector(".search-container");
+
+    // Build keyword-to-key map
+    const keywordMap = {};
+    for (const [key, keywords] of Object.entries(pages)) {
+        for (const kw of keywords) {
+            keywordMap[kw.toLowerCase()] = key;
+        }
+    }
+    for (const [key, keywords] of Object.entries(countries_list)) {
+        for (const kw of keywords) {
+            keywordMap[kw.toLowerCase()] = key;
+        }
+    }
+
+    // Enter key listener
+    inputField.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            searchPage();
+        }
+    });
+
+    // Escape key listener - close search
+    inputField.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            closeSearch();
+        }
+    });
+
+    // Input listener for suggestions
+    inputField.addEventListener("input", function () {
+        const input = this.value.trim().toLowerCase();
+        if (!suggestionBox) return;
+
+        if (input === "") {
+            suggestionBox.style.display = "none";
+            suggestionBox.innerHTML = "";
+            return;
+        }
+
+        const foundKeys = new Set();
+        const suggestions = [];
+
+        for (const [kw, key] of Object.entries(keywordMap)) {
+            if (kw.includes(input) && !foundKeys.has(key)) {
+                foundKeys.add(key);
+                const currentLang = localStorage.getItem('language') || 'en';
+                const label = displayCountry[key] ? (displayCountry[key][currentLang] || displayCountry[key].en) : key;
+                suggestions.push({ key, label });
+            }
+        }
+
+        if (suggestions.length > 0) {
+            suggestionBox.innerHTML = "";
+            suggestions.forEach(s => {
+                const item = document.createElement("div");
+                item.className = "suggestion-item";
+                item.textContent = s.label;
+                item.onclick = () => {
+                    inputField.value = s.label;
+                    suggestionBox.style.display = "none";
+                    navigateToMatch(s.key);
+                };
+                suggestionBox.appendChild(item);
+            });
+            suggestionBox.style.display = "block";
+        } else {
+            suggestionBox.style.display = "none";
+            suggestionBox.innerHTML = "";
+        }
+    });
+
+    // Outside click handler (won't fire when clicking inside searchContainer)
+    document.addEventListener("click", function (e) {
+        if (!searchContainer.contains(e.target)) {
+            if (suggestionBox) {
+                suggestionBox.style.display = "none";
+            }
+            // On small screens close the entire search
+            if (window.innerWidth <= 768) {
+                closeSearch();
+            }
+        }
+    });
+
+    function navigateToMatch(key) {
+        const currentPath = window.location.pathname;
+        const insideCountries = currentPath.includes("/collection/");
+        const generalPages = ["index", "collection", "about", "contact"];
+
+        let path;
+        if (generalPages.includes(key)) {
+            path = insideCountries ? `../${key}.html` : `${key}.html`;
+        } else {
+            path = insideCountries ? `${key}.html` : `collection/${key}.html`;
+        }
+
+        window.location.href = path;
+    }
+
+    // Close search on resize (mobile → desktop)
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+            closeSearch();
+        }
+    });
 });
 
-// For the search input field and suggestions box
-document.addEventListener("DOMContentLoaded", function () {
-  const inputField = document.getElementById("searchInput");
-  const suggestionBox = document.getElementById("suggestions");
-  const currentLang = localStorage.getItem('language') || 'en';
-
-  // Build keyword-to-key map
-  const keywordMap = {};
-  for (const [key, keywords] of Object.entries(pages)) {
-    for (const kw of keywords) {
-      keywordMap[kw.toLowerCase()] = key;
-    }
-  }
-  for (const [key, keywords] of Object.entries(countries_list)) {
-    for (const kw of keywords) {
-      keywordMap[kw.toLowerCase()] = key;
-    }
-  }
-
-  inputField.addEventListener("input", function () {
-    const input = inputField.value.trim().toLowerCase();
-    const currentLang = localStorage.getItem('language') || 'en';
-    if (input === "") {
-      suggestionBox.style.display = "none";
-      suggestionBox.innerHTML = "";
-      return;
-    }
-
-    const foundKeys = new Set();
-    const suggestions = [];
-
-    for (const [kw, key] of Object.entries(keywordMap)) {
-      if (kw.includes(input) && !foundKeys.has(key)) {
-        foundKeys.add(key);
-        const label = displayCountry[key][currentLang] || displayCountry[key].en;
-        suggestions.push({ key, label });
-      }
-    }
-
-    if (suggestions.length > 0) {
-      suggestionBox.innerHTML = "";
-      suggestions.forEach(s => {
-        const item = document.createElement("div");
-        item.className = "suggestion-item";
-        item.textContent = s.label;
-        item.onclick = () => {
-          inputField.value = s.label;
-          suggestionBox.style.display = "none";
-          navigateToMatch(s.key);
-        };
-        suggestionBox.appendChild(item);
-      });
-      suggestionBox.style.display = "block";
-    } else {
-      suggestionBox.style.display = "none";
-    }
-  });
-
-  // Hide box on outside click
-  document.addEventListener("click", (e) => {
-    if (!suggestionBox.contains(e.target) && e.target !== inputField) {
-      suggestionBox.style.display = "none";
-    }
-  });
-
-  function navigateToMatch(key) {
-    const currentPath = window.location.pathname;
-    const insideCountries = currentPath.includes("/collection/");
-    const generalPages = ["index", "collection", "about", "contact"];
-
-    let path;
-    if (generalPages.includes(key)) {
-      path = insideCountries ? `../${key}.html` : `${key}.html`;
-    } else {
-      path = insideCountries ? `${key}.html` : `collection/${key}.html`;
-    }
-
-    // For testing: just log the path instead of navigating
-    console.log("Navigating to:", path);
-    // Uncomment to enable navigation:
-    window.location.href = path;
-  }
-});

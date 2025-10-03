@@ -37,36 +37,47 @@
 
 <body style="background-color: #f4f4f4;">
     <header>
-        <nav id="header-nav">
-            <a href="../index.html" id="home-nav">Home</a>
-            <a href="../collection.html" id="collection-nav">Collection</a>
-            <a href="../about.html" id="about-nav">About</a>
-            <a href="../contact.html" id="contact-nav">Contact</a>
-        </nav>
-        <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
-        <nav id="header-nav-media">
-            <a href="../index.html">Home</a>
-            <a href="javascript:void(0);" onclick="toggleCollection(event)">Collection</a>
-            <div id="collection-dropdown" class="collection-content">
-                <div id="SideBarCollection"></div>
+        <div class="header-container">
+            <div class="left-group">
+                <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
+
+                <nav id="header-nav">
+                    <a href="../index.html" id="home-nav">Home</a>
+                    <a href="../collection.html" id="collection-nav">Collection</a>
+                    <a href="../about.html" id="about-nav">About</a>
+                    <a href="../contact.html" id="contact-nav">Contact</a>
+                </nav>
+
+                <nav id="header-nav-media">
+                    <a href="../index.html" id="home-nav-media">Home</a>
+                    <a href="javascript:void(0);" onclick="toggleCollection(event)" id="collection-nav-media">Collection</a>
+                    <div id="collection-dropdown" class="collection-content">
+                        <div id="SideBarCollection"></div>
+                    </div>
+                    <a href="../about.html" id="about-nav-media">About</a>
+                    <a href="../contact.html" id="contact-nav=media">Contact</a>
+                </nav>
             </div>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Enter page name...">
-            <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div id="suggestions" class="suggestions-box"></div>
-        </div>
-        <div class="language-toggle">
-            <a href="#" onclick="toggleLanguage()">Eng | Vie</a>
+
+            <div class="right-group">
+                <div class="language-toggle">
+                    <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <div id="SideBar"></div>
+        <div id="page-navigation" class="page-navigation"></div>
         <div id= "main-to-top" class="main-content">
             <button id="back-to-top" onclick="scrollToTop()">Top</button>
             <h1 style="text-align: center;" id="page-heading">Singapore</h1>

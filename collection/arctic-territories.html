@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 <html>
     
-    <head>
-        <meta charset="utf-8" />
-        
-        <title>Nhan Nhựt Hưng</title>
-        
-        <meta name="og:title" content="Nhan Nhựt Hưng">
-        <meta name="og:image" content="https://nhannhuthung.github.io/images/logo/icon.png">
-        <meta name="og:description" content="Welcome to my website! You can check out my money collection around the world.">
-        <meta name="keywords" content="Nhan Nhựt Hưng, Nhan Nhut Hung, Nhut Hung Nhan, Hung Nhut Nhan, Howl, Howl Nhan, Harry, Harry Nhan">
-        <meta name="description" content="Nhan Nhựt Hưng">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="icon" type="image/png" sizes="128x128" href="../images/logo/icon.png">
-        <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/collection-item.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Nhan Nhựt Hưng</title>
+    
+    <meta name="og:title" content="Nhan Nhựt Hưng">
+    <meta name="og:image" content="https://nhannhuthung.github.io/images/logo/icon.png">
+    <meta name="og:description" content="Welcome to my website! You can check out my money collection around the world.">
+    <meta name="keywords" content="Nhan Nhựt Hưng, Nhan Nhut Hung, Nhut Hung Nhan, Hung Nhut Nhan, Howl, Howl Nhan, Harry, Harry Nhan">
+    <meta name="description" content="Nhan Nhựt Hưng">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" sizes="128x128" href="../images/logo/icon.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/collection-item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         
     <script charset="utf-8" src="../script.js"></script>
     <script charset="utf-8" src="../scripts/collection-item.js" defer></script>
@@ -37,36 +37,49 @@
 
 <body style="background-color: #f4f4f4;">
     <header>
-        <nav id="header-nav">
-            <a href="../index.html" id="home-nav">Home</a>
-            <a href="../collection.html" id="collection-nav">Collection</a>
-            <a href="../about.html" id="about-nav">About</a>
-            <a href="../contact.html" id="contact-nav">Contact</a>
-        </nav>
-        <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
-        <nav id="header-nav-media">
-            <a href="../index.html">Home</a>
-            <a href="javascript:void(0);" onclick="toggleCollection(event)">Collection</a>
-            <div id="collection-dropdown" class="collection-content">
-                <div id="SideBarCollection"></div>
+        <div class="header-container">
+            <div class="left-group">
+                <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()">
+                    <i class="fa fa-bars"></i> <strong>MENU</strong>
+                </a>
+
+                <nav id="header-nav">
+                    <a href="../index.html" id="home-nav">Home</a>
+                    <a href="../collection.html" id="collection-nav">Collection</a>
+                    <a href="../about.html" id="about-nav">About</a>
+                    <a href="../contact.html" id="contact-nav">Contact</a>
+                </nav>
+
+                <nav id="header-nav-media">
+                    <a href="../index.html" id="home-nav-media">Home</a>
+                    <a href="javascript:void(0);" onclick="toggleCollection(event)" id="collection-nav-media">Collection</a>
+                    <div id="collection-dropdown" class="collection-content">
+                        <div id="SideBarCollection"></div>
+                    </div>
+                    <a href="../about.html" id="about-nav-media">About</a>
+                    <a href="../contact.html" id="contact-nav=media">Contact</a>
+                </nav>
             </div>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Enter page name...">
-            <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div id="suggestions" class="suggestions-box"></div>
-        </div>
-        <div class="language-toggle">
-            <a href="#" onclick="toggleLanguage()">Eng | Vie</a>
+
+            <div class="right-group">
+                <div class="language-toggle">
+                    <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <div id="SideBar"></div>
+        <div id="page-navigation" class="page-navigation"></div>
         <div id= "main-to-top" class="main-content">
             <button id="back-to-top" onclick="scrollToTop()">Top</button>
             <h1 style="text-align: center;" id="page-heading">Arctic Territories</h1>

@@ -33,35 +33,45 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/ /*center the menu navigator*/
 }
 
-footer {
-    height: 15px;
+.header-container {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;
+  padding: 10px 20px 10px 0;
+  position: relative;
 }
+
+/* footer {
+    height: 15px;
+} */
 
 nav {
     grid-column: col-start/span 12;
     grid-row: 1;
 }
 
-#header-nav,
+
+.left-group {
+  display: flex;
+  align-items: center;
+}
+
+
+#header-nav
 #header-nav a,
 #header-nav a:link,
 #header-nav a:visited {
+    gap: 20px;
     padding: 9px;
     letter-spacing: 1px;
-    font-size: 36px;
-    display: flex;
+    font-size: 33px;
     text-decoration: none;
 }
 
 #header-nav a {
     transition: color 0.3s ease;
-}
-
-#header-nav {
-    margin-bottom: 4px;
 }
 
 #header-nav.show {
@@ -71,26 +81,30 @@ nav {
 
 .hamburger-nav {
     display: none;
-    font-size: 25px;
+    font-size: 30px;
     position: absolute;
-    left: 0;
-    top: 9px;
     text-decoration: none;
+    padding: 10px;
+    text-align: left;
+    top: 6px;
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .search-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     display: flex;
+    position: relative;
     align-items: center;
     background: #F2F3F4;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 5px 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    overflow: visible;
 }
 
 ::placeholder {
@@ -98,28 +112,28 @@ nav {
 }
 
 .suggestions-box {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  max-height: 250px;
-  overflow-y: auto;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  z-index: 9999;
-  display: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
 }
 
 .suggestion-item {
-  padding: 8px;
-  cursor: pointer;
+    padding: 8px;
+    cursor: pointer;
 }
 
 .suggestion-item:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 input {
@@ -146,15 +160,12 @@ input {
 }
 
 .language-toggle {
-    position: absolute;
-    top: 33px;
-    right: 330px;
-    z-index: 999;
+  margin-left: 20px;
 }
 
 .language-toggle a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 21px;
     transition: color 0.3s ease, transform 0.3s ease-out, text-shadow 0.3s ease;
 }
 
@@ -202,18 +213,22 @@ p {
 
 @media (max-width: 768px) {
     header {
-        display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        min-height: 60px;
     }
 
-    body {
-        padding-top: 45px;
+    .header-container {
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    .left-group {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hamburger-nav {
         display: block;
-        margin-left: 10px;
     }
 
     #header-nav,
@@ -239,21 +254,53 @@ p {
         margin: 0;
     }
 
-    .search-container {
-        max-width: 145px;
-        height: 30px;
-        transform: translateY(-25%);
-        right: 10px;
+    .right-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 5px 0 0;
     }
 
-    input {
+    .language-toggle {
+        position: static;
+        margin: 0;
+    }
+
+    .search-container {
+        transition: width 0.3s ease;
+        padding: 3px;
+    }
+
+    .search-container input {
+        display: none;
+    }
+
+
+    .search-container.active {
+        width: 55%;
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        padding: 3px 10px;
+        z-index: 999;
+    }
+
+    .search-container.active input {
+        display: block;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-container.active .suggestions-box {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        font-size: 13px;
-        padding: 10px 5px;
     }
 
     .search-button {
-        font-size: 13px;
+        font-size: 21px;
         padding: 1px 3px;
     }
 
@@ -261,14 +308,9 @@ p {
         font-size: 15px;
     }
 
-    .language-toggle {
-        top: 40px;
-        right: unset;
-        left: 40px;
-    }
-
     .language-toggle a {
-        font-size: 17px;
+        font-size: 21px;
+        margin-right: 5px;
     }
 
     .big-title {

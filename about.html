@@ -37,22 +37,33 @@
 
 <body>
     <header style="background-color: #c4b69c;">
-        <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
-        <nav id="header-nav">
-            <a href="index.html" id="home-nav">Home</a>
-            <a href="collection.html" id="collection-nav">Collection</a>
-            <a href="about.html" id="about-nav">About</a>
-            <a href="contact.html" id="contact-nav">Contact</a>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Enter page name...">
-            <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div id="suggestions" class="suggestions-box"></div>
-        </div>
-        <div class="language-toggle">
-            <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
+        <div class="header-container">
+            <div class="left-group">
+                <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i> <strong>MENU</strong>
+                </a>
+
+                <nav id="header-nav">
+                    <a href="index.html" id="home-nav">Home</a>
+                    <a href="collection.html" id="collection-nav">Collection</a>
+                    <a href="about.html" id="about-nav">About</a>
+                    <a href="contact.html" id="contact-nav">Contact</a>
+                </nav>
+            </div>
+
+            <div class="right-group">
+                <div class="language-toggle">
+                    <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
         </div>
     </header>
 

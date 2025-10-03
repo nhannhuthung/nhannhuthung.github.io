@@ -35,7 +35,7 @@ const countryData = {
     "africa": {
         "name": { "en": "Africa", "vi": "Châu Phi" },
         "countries": [
-            { "en": "Democratic Republic of the Congo", "vi": "Cộng Hòa Dân Chủ Congo", "link": "drc.html" },
+            { "en": "Democratic Republic of the Congo", "vi": "Cộng Hòa Dân Chủ Congo", "short_en": "DR Congo", "short_vi": "CH Congo", "link": "drc.html" },
             { "en": "Egypt", "vi": "Ai Cập", "link": "egypt.html" },
             { "en": "Ethiopia", "vi": "Ethiopia", "link": "ethiopia.html" },
             { "en": "Ghana", "vi": "Ghana", "link": "ghana.html" },
@@ -45,7 +45,7 @@ const countryData = {
             { "en": "Mauritius", "vi": "Mauritius", "link": "mauritius.html" },
             { "en": "Rwanda", "vi": "Rwanda", "link": "rwanda.html" },
             { "en": "Somalia", "vi": "Somalia", "link": "somalia.html" },
-            { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi", "link": "uemoa.html" },
+            { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi","short_en": "WAEMU", "short_vi": "UEMOA", "link": "uemoa.html" },
             { "en": "Zambia", "vi": "Zambia", "link": "zambia.html" },
         ]
     },
@@ -55,7 +55,7 @@ const countryData = {
             { "en": "Belarus", "vi": "Belarus", "link": "belarus.html" },
             { "en": "Croatia", "vi": "Croatia", "link": "croatia.html" },
             { "en": "England", "vi": "Anh", "link": "england.html" },
-            { "en": "European Union", "vi": "Liên Minh Châu Âu", "link": "eu.html" },
+            { "en": "European Union", "vi": "Liên Minh Châu Âu", "short_en": "EU", "short_vi": "EU", "link": "eu.html" },
             { "en": "France", "vi": "Pháp", "link": "france.html" },
             { "en": "Ireland", "vi": "Ireland", "link": "ireland.html" },
             { "en": "Italy", "vi": "Ý", "link": "italy.html" },
@@ -85,7 +85,7 @@ const countryData = {
             { "en": "Lebanon", "vi": "Liban", "link": "lebanon.html" },
             { "en": "Macau", "vi": "Ma Cao", "link": "macau.html" },
             { "en": "Malaysia", "vi": "Malaysia", "link": "malaysia.html" },
-            { "en": "Mongolia", "vi": "Mông Cổ", "link": "mogolia.html" },
+            { "en": "Mongolia", "vi": "Mông Cổ", "link": "mongolia.html" },
             { "en": "Myanmar", "vi": "Myanmar", "link": "myanmar.html" },
             { "en": "Nepal", "vi": "Nepal", "link": "nepal.html" },
             { "en": "North Korea", "vi": "Triều Tiên", "link": "north-korea.html" },
@@ -149,16 +149,20 @@ function insertSidebarHTML(id) {
 
 function updatePageLanguage(currentLang) {
     const foundationToUpdate = [
-        { id: "home-nav", key: "home" },
-        { id: "collection-nav", key: "collection" },
-        { id: "about-nav", key: "about" },
-        { id: "contact-nav", key: "contact" },
-        { id: "searchInput", key: "search_placeholder", attr: "placeholder" },
-        { id: "back-to-top", key: "back_to_top"},
+        { selector: "home-nav", key: "home" },
+        { selector: "collection-nav", key: "collection" },
+        { selector: "about-nav", key: "about" },
+        { selector: "contact-nav", key: "contact" },
+        { selector: "home-nav-media", key: "home" },
+        { selector: "collection-nav-media", key: "collection" },
+        { selector: "about-nav-media", key: "about" },
+        { selector: "contact-nav-media", key: "contact" },
+        { selector: "searchInput", key: "search_placeholder", attr: "placeholder" },
+        { selector: "back-to-top", key: "back_to_top"},
     ];
 
-    foundationToUpdate.forEach(({ id, key, attr }) => {
-        const element = document.getElementById(id);
+    foundationToUpdate.forEach(({ selector, key, attr }) => {
+        const element = document.getElementById(selector);
         if (element) {
             if (attr) {
                 element.setAttribute(attr, fixed_trans[currentLang][key]);
@@ -184,6 +188,7 @@ function toggleLanguage() {
     updatePageHeading(currentLang);
     insertSidebarHTML('SideBar'); 
     insertSidebarHTML('SideBarCollection'); 
+    createNavigationButtons();
 
     // Remove old slideshow info before regenerating
     document.querySelectorAll(".slideshow-info").forEach(el => el.remove());
@@ -201,6 +206,20 @@ document.addEventListener("DOMContentLoaded", function () {
     updatePageHeading(currentLang);
     insertSidebarHTML('SideBar'); 
     insertSidebarHTML('SideBarCollection'); 
+    createNavigationButtons();
+
+    const mainContent = document.getElementById('main-to-top');
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (mainContent && backToTopButton) {
+        mainContent.addEventListener('scroll', () => {
+            if (mainContent.scrollTop > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    }
 
     Object.keys(images).forEach(index => {
         // Build the slide images
@@ -507,4 +526,56 @@ function scrollToTop() {
     mainContent.scrollTo({
         top: 0,
     });
+}
+
+function getPageNavigation() {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Flatten all countries into a single array
+    const allPages = [];
+    Object.keys(countryData).forEach(categoryKey => {
+        countryData[categoryKey].countries.forEach(country => {
+            allPages.push(country);
+        });
+    });
+    
+    // Find current page index
+    const currentIndex = allPages.findIndex(page => page.link === currentPage);
+    
+    if (currentIndex === -1) {
+        return { prev: null, next: null };
+    }
+    
+    return {
+        prev: currentIndex > 0 ? allPages[currentIndex - 1] : null,
+        next: currentIndex < allPages.length - 1 ? allPages[currentIndex + 1] : null
+    };
+}
+
+function createNavigationButtons() {
+    const nav = getPageNavigation();
+    const navContainer = document.getElementById('page-navigation');
+    
+    if (!navContainer) return;
+    
+    navContainer.innerHTML = '';
+    
+    if (nav.prev) {
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'nav-button prev-button';
+        const prevName = nav.prev['short_' + currentLang] || nav.prev[currentLang];
+        prevBtn.innerHTML = `← <span class="country-name">${prevName}</span>`;
+        prevBtn.onclick = () => window.location.href = nav.prev.link;
+        navContainer.appendChild(prevBtn);
+    }
+    
+    if (nav.next) {
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'nav-button next-button';
+        const nextName = nav.next['short_' + currentLang] || nav.next[currentLang];
+        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> →`;
+        nextBtn.onclick = () => window.location.href = nav.next.link;
+        navContainer.appendChild(nextBtn);
+    }
 }

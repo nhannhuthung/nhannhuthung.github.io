@@ -25,7 +25,7 @@ const main_trans = {
         acknowledge_para: `Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.`,
 
         remark: `Remark`,
-        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins, I couldn't put all of them here.`,
+        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins across 69 regions, I couldn't display all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
         remark_subpara_1: `<span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
         remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).`,
@@ -49,7 +49,7 @@ const main_trans = {
         acknowledge_para: `Chào mừng đến với nơi trưng bày bộ sưu tập tiền online của mình! Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
 
         remark: `Tổng Quan`,
-        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu, mình không thể đưa tất cả lên đây.`,
+        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu của 69 khu vực, mình không thể đưa tất cả lên đây.`,
         remark_para_2: `Một vài tiêu điểm về bộ sưu tập tiền xu của mình:`,
         remark_subpara_1: `<span>&#9757;</span> Có khoảng 60 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
         remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902).`,
@@ -259,114 +259,163 @@ function toggleLanguage() {
     localStorage.setItem('language', currentLang); // Save the current language in localStorage
     
     updatePageLanguage(currentLang);
-    generateCountryList(currentLang)
+    // generateCountryList(currentLang)
+
+    if (selectedContinent) {
+        showContinentDetails(selectedContinent);
+    } else {
+        showContinentPanels();
+    }
 }
 
-function generateCountryList(currentLang) {
+function showContinentPanels() {
+    selectedContinent = null;
     let container = document.getElementById("country-list");
-    container.innerHTML = "";  // Clear previous content
+    container.innerHTML = "";
 
-    Object.values(countries).forEach(continent => {
-        // Create a container div for each continent
-        let continentContainer = document.createElement("div");
-        continentContainer.className = "container";
+    // Create regions wrapper with title
+    let regionsWrapper = document.createElement("div");
+    regionsWrapper.className = "regions-wrapper";
+    
+    let regionsHeading = document.createElement("h1");
+    regionsHeading.className = "regions-heading";
+    regionsHeading.innerText = currentLang === "en" ? "Regions" : "Các Khu Vực";
+    regionsWrapper.appendChild(regionsHeading);
 
-        // Generate continent title
-        let continentTitle = document.createElement("h1");
-        continentTitle.innerText = continent.name[currentLang];
-        continentContainer.appendChild(continentTitle);
+    let panelsContainer = document.createElement("div");
+    panelsContainer.className = "continent-panels";
 
-        // Handle special cases (European Union, Australia, Arctic Territories, Kerguelen Islands)
-        if (continent.name.en === "Europe" && continent.eu) {
-            let Div = document.createElement("div");
-            Div.className = "category";
-            let Item = document.createElement("div");
-            Item.className = "category-item";
-            Item.innerText = continent.eu[currentLang];
-            Item.onclick = () => navigateTo(continent.eu.url);
-            Div.appendChild(Item);
-            continentContainer.appendChild(Div);
-        }
-
-        // Handle Oceania, Arctic, and Antarctica categories if they exist
-        if (continent.name.en === "Oceania" && continent.australia) {
-            let Div = document.createElement("div");
-            Div.className = "category";
-            let Item = document.createElement("div");
-            Item.className = "category-item";
-            Item.innerText = continent.australia[currentLang];
-            Item.onclick = () => navigateTo(continent.australia.url);
-            Div.appendChild(Item);
-            continentContainer.appendChild(Div);
-        }
-
-        if (continent.name.en === "Arctic" && continent.arctic_territories) {
-            let Div = document.createElement("div");
-            Div.className = "category";
-            let Item = document.createElement("div");
-            Item.className = "category-item";
-            Item.innerText = continent.arctic_territories[currentLang];
-            Item.onclick = () => navigateTo(continent.arctic_territories.url);
-            Div.appendChild(Item);
-            continentContainer.appendChild(Div);
-        }
-
-        if (continent.name.en === "Antarctica" && continent.kerguelen_islands) {
-            let Div = document.createElement("div");
-            Div.className = "category";
-            let Item = document.createElement("div");
-            Item.className = "category-item";
-            Item.innerText = continent.kerguelen_islands[currentLang];
-            Item.onclick = () => navigateTo(continent.kerguelen_islands.url);
-            Div.appendChild(Item);
-            continentContainer.appendChild(Div);
-        }
-
-        // Handle regions within the continent
-        if (continent.regions) {
-            Object.values(continent.regions).forEach(region => {
-                let regionTitle = document.createElement("h2");
-                regionTitle.innerText = region.name[currentLang];
-                continentContainer.appendChild(regionTitle);
-
-                let categoryDiv = document.createElement("div");
-                categoryDiv.className = "category";
-
-                // Sort countries alphabetically based on selected language
-                let countryList = [...region.countries].sort((a, b) => 
-                    a[currentLang].localeCompare(b[currentLang])
-                );
-
-                countryList.forEach(country => {
-                    let countryDiv = document.createElement("div");
-                    countryDiv.className = "category-item";
-                    countryDiv.innerText = country[currentLang];
-                    countryDiv.onclick = () => navigateTo(country.url);
-                    categoryDiv.appendChild(countryDiv);
-                });
-
-                continentContainer.appendChild(categoryDiv);
-            });
-        }
-
-        // Append the continent container to the main container
-        container.appendChild(continentContainer);
+    Object.entries(countries).forEach(([key, continent]) => {
+        let panel = document.createElement("div");
+        panel.className = "continent-panel";
+        panel.innerText = continent.name[currentLang];
+        panel.onclick = () => showContinentDetails(key);
+        panelsContainer.appendChild(panel);
     });
+
+    regionsWrapper.appendChild(panelsContainer);
+    container.appendChild(regionsWrapper);
+}
+
+function showContinentDetails(continentKey) {
+    selectedContinent = continentKey;
+    let container = document.getElementById("country-list");
+    container.innerHTML = "";
+
+    let continent = countries[continentKey];
+
+    // Continent container
+    let continentContainer = document.createElement("div");
+    continentContainer.className = "container";
+
+    // Back button inside container
+    let backBtn = document.createElement("button");
+    backBtn.className = "back-button";
+    backBtn.innerText = currentLang === "en" ? "← Back" : "← Quay Lại";
+    backBtn.onclick = showContinentPanels;
+    continentContainer.appendChild(backBtn);
+
+    // Continent title
+    let continentTitle = document.createElement("h1");
+    continentTitle.innerText = continent.name[currentLang];
+    continentContainer.appendChild(continentTitle);
+
+    // Handle special cases
+    if (continent.eu) {
+        let div = document.createElement("div");
+        div.className = "category";
+        let item = document.createElement("div");
+        item.className = "category-item";
+        item.innerText = continent.eu[currentLang];
+        item.onclick = () => navigateTo(continent.eu.url);
+        div.appendChild(item);
+        continentContainer.appendChild(div);
+    }
+
+    if (continent.australia) {
+        let div = document.createElement("div");
+        div.className = "category";
+        let item = document.createElement("div");
+        item.className = "category-item";
+        item.innerText = continent.australia[currentLang];
+        item.onclick = () => navigateTo(continent.australia.url);
+        div.appendChild(item);
+        continentContainer.appendChild(div);
+    }
+
+    if (continent.arctic_territories) {
+        let div = document.createElement("div");
+        div.className = "category";
+        let item = document.createElement("div");
+        item.className = "category-item";
+        item.innerText = continent.arctic_territories[currentLang];
+        item.onclick = () => navigateTo(continent.arctic_territories.url);
+        div.appendChild(item);
+        continentContainer.appendChild(div);
+    }
+
+    if (continent.kerguelen_islands) {
+        let div = document.createElement("div");
+        div.className = "category";
+        let item = document.createElement("div");
+        item.className = "category-item";
+        item.innerText = continent.kerguelen_islands[currentLang];
+        item.onclick = () => navigateTo(continent.kerguelen_islands.url);
+        div.appendChild(item);
+        continentContainer.appendChild(div);
+    }
+
+
+    // Handle regions
+    if (continent.regions) {
+        Object.values(continent.regions).forEach(region => {
+            let regionTitle = document.createElement("h2");
+            regionTitle.innerText = region.name[currentLang];
+            continentContainer.appendChild(regionTitle);
+
+            let categoryDiv = document.createElement("div");
+            categoryDiv.className = "category";
+
+            let countryList = [...region.countries].sort((a, b) => 
+                a[currentLang].localeCompare(b[currentLang])
+            );
+
+            countryList.forEach(country => {
+                let countryDiv = document.createElement("div");
+                countryDiv.className = "category-item";
+                countryDiv.innerText = country[currentLang];
+                countryDiv.onclick = () => navigateTo(country.url);
+                categoryDiv.appendChild(countryDiv);
+            });
+
+            continentContainer.appendChild(categoryDiv);
+        });
+    }
+
+    container.appendChild(continentContainer);
+}
+
+function navigateTo(url) {
+    window.location.href = url;
+}
+
+function updatePageLanguage(lang) {
+    console.log("Language changed to:", lang);
 }
 
 function updatePageLanguage(currentLang) {
     const foundationToUpdate = [
-        { id: "home-nav", key: "home" },
-        { id: "collection-nav", key: "collection" },
-        { id: "about-nav", key: "about" },
-        { id: "contact-nav", key: "contact" },
-        { id: "searchInput", key: "search_placeholder", attr: "placeholder" },
-        { id: "top_btn", key: "top_btn"},
-        { id: "top_btn", key: "top_title", attr: "title"}
+        { selector: "home-nav", key: "home" },
+        { selector: "collection-nav", key: "collection" },
+        { selector: "about-nav", key: "about" },
+        { selector: "contact-nav", key: "contact" },
+        { selector: "searchInput", key: "search_placeholder", attr: "placeholder" },
+        { selector: "top_btn", key: "top_btn"},
+        { selector: "top_btn", key: "top_title", attr: "title"}
     ];
 
-    foundationToUpdate.forEach(({ id, key, attr }) => {
-        const element = document.getElementById(id);
+    foundationToUpdate.forEach(({ selector, key, attr }) => {
+        const element = document.getElementById(selector);
         if (element) {
             if (attr) {
                 element.setAttribute(attr, fixed_trans[currentLang][key]);
@@ -407,5 +456,5 @@ function updatePageLanguage(currentLang) {
 
 document.addEventListener("DOMContentLoaded", function() {
     updatePageLanguage(currentLang);
-    generateCountryList(currentLang);
+    showContinentPanels();
 });

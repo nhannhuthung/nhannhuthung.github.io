@@ -38,11 +38,11 @@
 }
 
 #header-nav a:hover {
-    color: #1a4aa8;
+    color: #4131D1;
 }
 
 .hamburger-nav {
-    color: #283033;
+    color: #030027;
 }
 
 .language-toggle a {
@@ -50,7 +50,7 @@
 }
 
 .language-toggle a:hover {
-    color: #286ff5;
+    color: #4131D1;
 }
 
 body {

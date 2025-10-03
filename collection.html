@@ -20,28 +20,39 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <script charset="utf-8" src="script.js"></script>
-    <script src="scripts/lang/collection.js"></script>
+    <script charset="utf-8" src="script.js" defer></script>
+    <script src="scripts/lang/collection.js" defer></script>
 </head>
 
 <body>
     <header>
-        <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
-        <nav id="header-nav">
-            <a href="index.html" id="home-nav">Home</a>
-            <a href="collection.html" id="collection-nav">Collection</a>
-            <a href="about.html" id="about-nav">About</a>
-            <a href="contact.html" id="contact-nav">Contact</a>
-        </nav>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Enter page name...">
-            <button class="search-button" onclick="searchPage()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div id="suggestions" class="suggestions-box"></div>
-        </div>
-        <div class="language-toggle">
-            <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+        <div class="header-container">
+            <div class="left-group">
+                <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i> <strong>MENU</strong>
+                </a>
+
+                <nav id="header-nav">
+                    <a href="index.html" id="home-nav">Home</a>
+                    <a href="collection.html" id="collection-nav">Collection</a>
+                    <a href="about.html" id="about-nav">About</a>
+                    <a href="contact.html" id="contact-nav">Contact</a>
+                </nav>
+            </div>
+
+            <div class="right-group">
+                <div class="language-toggle">
+                    <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -51,7 +62,7 @@
         <h3 id="acknowledge" style="margin-top: 10px;">Acknowledgment</h3>
         <p id="acknowledge-para">Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.</p>
         <h3 id="remark">Remark</h3>
-        <p id="remark-para-1">I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins, I couldn't put all of them here.</p>
+        <p id="remark-para-1">I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins across 69 regions, I couldn't display all of them here.</p>
         <p id="remark-para-2">A few highlights about my coin collection:
         <ul> 
             <!--customize the bullet here
@@ -62,7 +73,7 @@
         <p id="remark-para-3">My collection is extending with banknotes.</p>
         <br>
         <h4 id="last-update" style="text-align: right;">Last Updated:</h4>
-        <h5 style="text-align: right;">12/09/2025</h5>
+        <h5 style="text-align: right;">02/10/2025</h5>
     </div>
 
     <div class="container-highlight">
@@ -83,12 +94,12 @@
                 <div id="hong-kong" class="overlay">Hong Kong</div>
             </div>
             <div class="box" id="box-4">
-                <img src="images/collection/venezuela/2008/5-bolivar-b.jpg" alt="Hong Kong">
-                <div class="overlay">Venezuela</div>
-            </div>
-            <div class="box" id="box-5">
                 <img src="images/collection/australia/1988/10-dollar-b.jpg" alt="Australia">
                 <div id="australia" class="overlay">Australia</div>
+            </div>
+            <div class="box" id="box-5">
+                <img src="images/collection/venezuela/2008/5-bolivar-b.jpg" alt="Hong Kong">
+                <div class="overlay">Venezuela</div>
             </div>
             <div class="box" id="box-6">
                 <img src="images/collection/rwanda/2013/5000-franc-f.jpg" alt="Rwanda">
