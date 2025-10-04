@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "128 $\\times$ 65 mm",
+        size: "128 \u00D7 65 mm",
         figure:  { 
             en: "Ilay Campbell (1734-1823)", 
             vi: "Ilay Campbell (1734-1823)"
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "125 $\\times$ 65 mm",
+    size: "125 \u00D7 65 mm",
     figure: { 
         en: "William Arol (1839-1913)", 
         vi: "William Arol (1839-1913)" 

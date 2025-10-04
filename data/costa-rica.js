@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "125 $\\times$ 67 mm",
+        size: "125 \u00D7 67 mm",
         figure: { 
             en: "Braulio Carrillo Colina (1800-1845)", 
             vi: "Braulio Carrillo Colina (1800-1845)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 $\\times$ 67 mm",
+    size: "132 \u00D7 67 mm",
     figure: { 
         en: "Mauro Fernández Acuña (1843-1905)", 
         vi: "Mauro Fernández Acuña (1843-1905)" 

@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "115 $\\times$ 52 mm",
+        size: "115 \u00D7 52 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "131 $\\times$ 63 mm",
+    size: "131 \u00D7 63 mm",
     figure: { 
         en: "Mao Zedong (1893-1976)", 
         vi: "Mao Trạch Đông (1893-1976)" 
@@ -92,7 +92,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "135 $\\times$ 63 mm",
+    size: "135 \u00D7 63 mm",
     figure: { 
         en: "Mao Zedong (1893-1976)", 
         vi: "Mao Trạch Đông (1893-1976)" 
@@ -123,7 +123,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 70 mm",
+    size: "150 \u00D7 70 mm",
     figure: { 
         en: "Mao Zedong (1893-1976)", 
         vi: "Mao Trạch Đông (1893-1976)" 
@@ -154,7 +154,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "70 $\\times$ 145 mm",
+    size: "70 \u00D7 145 mm",
     figure: null,
     note: null
 };
@@ -182,7 +182,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "70 $\\times$ 145 mm",
+    size: "70 \u00D7 145 mm",
     figure: null,
     note: { 
         en: `2021\'s top 20 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 

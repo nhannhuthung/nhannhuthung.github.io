@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "126 $\\times$ 63 mm",
+        size: "126 \u00D7 63 mm",
         figure: { 
             en: "Yusof Ishak (1910-1970)", 
             vi: "Yusof Ishak (1910-1970)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "133 $\\times$ 66 mm",
+    size: "133 \u00D7 66 mm",
     figure: { 
         en: "Yusof Ishak (1910-1970)", 
         vi: "Yusof Ishak (1910-1970)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "141 $\\times$ 69 mm",
+    size: "141 \u00D7 69 mm",
     figure: { 
         en: "Yusof Ishak (1910-1970)", 
         vi: "Yusof Ishak (1910-1970)" 

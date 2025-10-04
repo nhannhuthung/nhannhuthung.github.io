@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "136 $\\times$ 68 mm",
+        size: "136 \u00D7 68 mm",
         figure: { 
             en: "Yi Hwang (1501-1570)", 
             vi: "Lý Hoảng (1501-1570)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 $\\times$ 68 mm",
+    size: "142 \u00D7 68 mm",
     figure: { 
         en: "Yi I (1536-1584)", 
         vi: "Lý Nhị (1536-1584)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "148 $\\times$ 68 mm",
+    size: "148 \u00D7 68 mm",
     figure: { 
         en: "Sejong the Great (1397-1450)", 
         vi: "Triều Tiên Thế Tông (1397-1450)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "154 $\\times$ 68 mm",
+    size: "154 \u00D7 68 mm",
     figure: { 
         en: "Shin Saimdang (1504-1551)", 
         vi: "Thân Sư Nhâm Đường (1504-1551)" 
@@ -160,7 +160,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 75 mm",
+    size: "140 \u00D7 75 mm",
     figure: null,
     note: null
 };

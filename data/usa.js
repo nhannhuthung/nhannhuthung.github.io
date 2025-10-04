@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "156 $\\times$ 67 mm",
+        size: "156 \u00D7 67 mm",
         figure: { 
             en: "George Washington (1732-1799)", 
             vi: "George Washington (1732-1799)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Thomas Jefferson (1743-1826)", 
         vi: "Thomas Jefferson (1743-1826)"
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Abraham Lincoln (1809-1865)", 
         vi: "Abraham Lincoln (1809-1865)"
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Abraham Lincoln (1809-1865)", 
         vi: "Abraham Lincoln (1809-1865)"
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Alexander Hamilton (1757-1804)", 
         vi: "Alexander Hamilton (1757-1804)"
@@ -188,7 +188,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Andrew Jackson (1767-1845)", 
         vi: "Andrew Jackson (1767-1845)"
@@ -219,7 +219,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Ulysses S. Grant (1822-1885)", 
         vi: "Ulysses S. Grant (1822-1885)"
@@ -250,7 +250,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 67 mm",
+    size: "156 \u00D7 67 mm",
     figure: { 
         en: "Benjamin Franklin (1706-1790)", 
         vi: "Benjamin Franklin (1706-1790)" 

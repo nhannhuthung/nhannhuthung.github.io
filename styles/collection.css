@@ -66,7 +66,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-    height: 425px;
+    height: 450px;
     transition: grid-template-columns 0.6s ease-in-out;
 }
 
@@ -461,8 +461,8 @@ ul li::before {
     }
 
     .highlight-banknote {
-        height: 200px;
-        gap: 2px;
+        height: 250px;
+        gap: 3px;
     }
 
     #box-1 img {
@@ -478,11 +478,11 @@ ul li::before {
     }
 
     #box-4 img {
-        object-position: 36%;
+        object-position: 62%;
     }
 
     #box-5 img {
-        object-position: 62%;
+        object-position: 36%;
     }
 
     #box-6 img {

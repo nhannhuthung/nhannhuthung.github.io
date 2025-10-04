@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "117 $\\times$ 63 mm",
+        size: "117 \u00D7 63 mm",
         figure: { 
             en: "Mahatma Gandhi (1869-1948)", 
             vi: "Mahatma Gandhi (1869-1948)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "117 $\\times$ 63 mm",
+    size: "117 \u00D7 63 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "157 $\\times$ 73 mm",
+    size: "157 \u00D7 73 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "123 $\\times$ 63 mm",
+    size: "123 \u00D7 63 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 $\\times$ 66 mm",
+    size: "142 \u00D7 66 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
@@ -188,7 +188,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "97 $\\times$ 63 mm",
+    size: "97 \u00D7 63 mm",
     figure: null,
     note: null
 };

@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Fantasy Banknote", 
             vi: "Tiền Sưu Tầm" 
         },
-        size: "159 $\\times$ 80 mm",
+        size: "159 \u00D7 80 mm",
         figure: { 
             en: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)", 
             vi: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)" 

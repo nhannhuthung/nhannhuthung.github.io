@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "118 $\\times$ 63 mm",
+        size: "118 \u00D7 63 mm",
         figure:  { 
             en: "Volodymyr I Sviatoslavych (958?-1015)", 
             vi: "Volodymyr I Sviatoslavych (958?-1015)"

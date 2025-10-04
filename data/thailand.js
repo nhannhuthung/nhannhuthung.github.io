@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "138 $\\times$ 72 mm",
+        size: "138 \u00D7 72 mm",
         figure: { 
             en: "Rama IX (1927-2016)", 
             vi: "Rama IX (1927-2016)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 72 mm",
+    size: "150 \u00D7 72 mm",
     figure: { 
         en: "Rama IX (1927-2016)", 
         vi: "Rama IX (1927-2016)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 72 mm",
+    size: "138 \u00D7 72 mm",
     figure: { 
         en: "Rama IX (1927-2016)", 
         vi: "Rama IX (1927-2016)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 72 mm",
+    size: "150 \u00D7 72 mm",
     figure: { 
         en: "Rama X (1952-Present)", 
         vi: "Rama X (1952-Present)" 

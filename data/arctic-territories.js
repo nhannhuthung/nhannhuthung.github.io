@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Fantasy Banknote", 
             vi: "Tiền Sưu Tầm" 
         },
-        size: "160 $\\times$ 80 mm",
+        size: "160 \u00D7 80 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -117,7 +117,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -145,7 +145,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -173,7 +173,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -201,7 +201,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -229,7 +229,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -257,7 +257,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -285,7 +285,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -313,7 +313,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -341,7 +341,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -369,7 +369,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };
@@ -397,7 +397,7 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    size: "160 $\\times$ 80 mm",
+    size: "160 \u00D7 80 mm",
     figure: null,
     note: null
 };

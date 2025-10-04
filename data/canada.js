@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "153 $\\times$ 70 mm",
+        size: "153 \u00D7 70 mm",
         figure: { 
             en: "Elizabeth II (1952-2022)", 
             vi: "Elizabeth II (1952-2022)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -188,7 +188,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
@@ -219,7 +219,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
@@ -250,7 +250,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891)", 
         vi: "John A. Macdonald (1815-1891)" 
@@ -281,7 +281,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -315,7 +315,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
@@ -346,7 +346,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891)", 
         vi: "John A. Macdonald (1815-1891)" 
@@ -380,7 +380,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -411,7 +411,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "W. L. Mackenzie King (1874-1950)", 
         vi: "W. L. Mackenzie King (1874-1950)" 
@@ -445,7 +445,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Robert L. Borden (1854-1937)", 
         vi: "Robert L. Borden (1854-1937)" 
@@ -479,7 +479,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -510,7 +510,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "153 $\\times$ 70 mm",
+    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)", 
         vi: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)" 
@@ -544,7 +544,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "70 $\\times$ 153 mm",
+    size: "70 \u00D7 153 mm",
     figure: { 
         en: "Viola Desmond (1914-1965)", 
         vi: "Viola Desmond (1914-1965)" 

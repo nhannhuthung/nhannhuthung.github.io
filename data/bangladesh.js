@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "100 $\\times$ 60 mm",
+        size: "100 \u00D7 60 mm",
         figure: { 
             en: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)", 
             vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 $\\times$ 68 mm",
+    size: "142 \u00D7 68 mm",
     figure: { 
         en: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)", 
         vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 

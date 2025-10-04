@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Commemorative Banknote", 
             vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
         },
-        size: "65 $\\times$ 150 mm",
+        size: "65 \u00D7 150 mm",
         figure: null,
         note: { 
             en: `2018\'s top 16 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 

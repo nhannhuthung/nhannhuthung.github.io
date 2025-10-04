@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "129 $\\times$ 65 mm",
+        size: "129 \u00D7 65 mm",
         figure: { 
             en: "Benito Juárez (1858-1872)", 
             vi: "Benito Juárez (1858-1872)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "129 $\\times$ 65 mm",
+    size: "129 \u00D7 65 mm",
     figure: { 
         en: "José María Morelos (1765-1815)", 
         vi: "José María Morelos (1765-1815)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "127 $\\times$ 66 mm",
+    size: "127 \u00D7 66 mm",
     figure: { 
         en: "José María Morelos (1765-1815)", 
         vi: "José María Morelos (1765-1815)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard/Commemorative Banknote", 
         vi: "Tiền Tiêu Chuẩn/Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "129 $\\times$ 65 mm",
+    size: "129 \u00D7 65 mm",
     figure: null,
     note: null
 };
@@ -154,7 +154,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "65 $\\times$ 125 mm",
+    size: "65 \u00D7 125 mm",
     figure: null,
     note: { 
         en: `Banknote of 2021 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
@@ -185,7 +185,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "65 $\\times$ 132 mm",
+    size: "65 \u00D7 132 mm",
     figure: { 
         en: "Juana Inés de la Cruz (1651-1695)", 
         vi: "Juana Inés de la Cruz (1651-1695)" 

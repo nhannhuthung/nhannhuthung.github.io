@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "120 $\\times$ 64 mm",
+        size: "120 \u00D7 64 mm",
         figure: { 
             en: "Catherine McAuley (1778-1841)", 
             vi: "Catherine McAuley (1778-1841)" 

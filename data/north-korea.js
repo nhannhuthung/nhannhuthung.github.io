@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "140 $\\times$ 72 mm",
+        size: "140 \u00D7 72 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 75 mm",
+    size: "156 \u00D7 75 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 75 mm",
+    size: "156 \u00D7 75 mm",
     figure: { 
         en: "Kim Il Sung (1912-1994)", 
         vi: "Kim Il Sung (1912-1994)" 

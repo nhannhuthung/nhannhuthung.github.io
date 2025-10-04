@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "129 $\\times$ 55 mm",
+        size: "129 \u00D7 55 mm",
         figure:  { 
             en: "Alexander Suvorov (1730-1800)", 
             vi: "Alexander Suvorov (1730-1800)"

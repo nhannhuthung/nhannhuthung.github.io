@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "133 $\\times$ 63 mm",
+        size: "133 \u00D7 63 mm",
         figure: { 
             en: "Abdullah bin Abdulaziz Al Saud (1924-2015)", 
             vi: "Abdullah bin Abdulaziz Al Saud (1924-2015)" 

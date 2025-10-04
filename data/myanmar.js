@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "110 $\\times$ 55 mm",
+        size: "110 \u00D7 55 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 70 mm",
+    size: "145 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 70 mm",
+    size: "145 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -117,7 +117,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 70 mm",
+    size: "150 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -145,7 +145,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 70 mm",
+    size: "150 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -173,7 +173,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 70 mm",
+    size: "150 \u00D7 70 mm",
     figure: null,
     note: null
 };

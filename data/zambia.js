@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "153 $\\times$ 75 mm",
+        size: "153 \u00D7 75 mm",
         figure: { 
             en: "Kenneth Kaunda (1924-2021)", 
             vi: "Kenneth Kaunda (1924-2021)" 

@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "154 $\\times$ 76 mm",
+        size: "154 \u00D7 76 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 76 mm",
+    size: "150 \u00D7 76 mm",
     figure: { 
         en: "Hideyo Noguchi (1876-1928)", 
         vi: "Noguchi Hideyo (1876-1928)" 
@@ -92,7 +92,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 76 mm",
+    size: "156 \u00D7 76 mm",
     figure: { 
         en: "Ichiyō Higuchi (1872-1896)", 
         vi: "Higuchi Ichiyō (1872-1896)" 
@@ -123,7 +123,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 $\\times$ 76 mm",
+    size: "160 \u00D7 76 mm",
     figure: { 
         en: "Yukichi Fukuzawa (1835-1901)", 
         vi: "Fukuzawa Yukichi (1835-1901)" 
@@ -154,7 +154,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 76 mm",
+    size: "150 \u00D7 76 mm",
     figure: { 
         en: "Shibasaburō Kitasato (1853-1931)", 
         vi: "Kitasato Shibasaburō (1853-1931)" 
@@ -188,7 +188,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 $\\times$ 76 mm",
+    size: "156 \u00D7 76 mm",
     figure: { 
         en: "Umeko Tsuda (1864-1929)", 
         vi: "Tsuda Umeko (1864-1929)" 
@@ -219,7 +219,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 $\\times$ 76 mm",
+    size: "160 \u00D7 76 mm",
     figure: { 
         en: "Eiichi Shibusawa (1840-1931)", 
         vi: "Shibusawa Eiichi (1840-1931)" 

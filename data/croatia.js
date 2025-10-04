@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "105 $\\times$ 55 mm",
+        size: "105 \u00D7 55 mm",
         figure: { 
             en: "Roger Joseph Boscovich (1711-1787)", 
             vi: "Roger Joseph Boscovich (1711-1787)" 

@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "142 $\\times$ 68 mm",
+        size: "142 \u00D7 68 mm",
         figure: [
             {
                 en: "Mustafa Kemal Atatürk (1881?-1938)",
@@ -70,7 +70,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 $\\times$ 64 mm",
+    size: "130 \u00D7 64 mm",
     figure: [
         {
             en: "Mustafa Kemal Atatürk (1881?-1938)",

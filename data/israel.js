@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "129 $\\times$ 71 mm",
+        size: "129 \u00D7 71 mm",
         figure: { 
             en: "Rachel Bluwstein (1890-1931)", 
             vi: "Rachel Bluwstein (1890-1931)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "136 $\\times$ 71 mm",
+    size: "136 \u00D7 71 mm",
     figure: { 
         en: "Shaul Tchernichovsky (1875-1943)", 
         vi: "Shaul Tchernichovsky (1875-1943)" 
@@ -98,7 +98,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "150 $\\times$ 20 mm",
+    size: "150 \u00D7 20 mm",
     figure: { 
         en: "Nathan Alterman (1910-1970)", 
         vi: "Nathan Alterman (1910-1970)" 

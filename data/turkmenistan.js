@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "126 $\\times$ 63 mm",
+        size: "126 \u00D7 63 mm",
         figure: { 
             en: "Ahmad Sanjar (1086-1157)", 
             vi: "Ahmad Sanjar (1086-1157)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 $\\times$ 66 mm",
+    size: "132 \u00D7 66 mm",
     figure: { 
         en: "Magtymguly Pyragy (1724?-1807?)", 
         vi: "Magtymguly Pyragy (1724?-1807?)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "120 $\\times$ 60 mm",
+    size: "120 \u00D7 60 mm",
     figure: { 
         en: "Tughril I (993?-1063)", 
         vi: "Tughril I (993?-1063)" 

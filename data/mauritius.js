@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "135 $\\times$ 65 mm",
+        size: "135 \u00D7 65 mm",
         figure: { 
             en: "Moilin Jean Ah-Chuen (1911-1991)", 
             vi: "Moilin Jean Ah-Chuen (1911-1991)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 68 mm",
+    size: "140 \u00D7 68 mm",
     figure: { 
         en: "Joseph Maurice Paturau (1916-1996)", 
         vi: "Joseph Maurice Paturau (1916-1996)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 70 mm",
+    size: "145 \u00D7 70 mm",
     figure: { 
         en: "Renganaden Seeneevassen (1910-1958)", 
         vi: "Renganaden Seeneevassen (1910-1958)" 

@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "128 $\\times$ 66 mm",
+        size: "128 \u00D7 66 mm",
         figure: { 
             en: "Débora Arango Pérez (1907-2005)", 
             vi: "Débora Arango Pérez (1907-2005)" 

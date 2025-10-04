@@ -33,7 +33,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "96 $\\times$ 156 mm",
+        size: "96 \u00D7 156 mm",
         figure: null,
         note: null
     }

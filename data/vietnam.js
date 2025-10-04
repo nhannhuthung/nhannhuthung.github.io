@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "130 $\\times$ 65 mm",
+        size: "130 \u00D7 65 mm",
         figure: { 
             en: "Ho Chi Minh (1890-1969)", 
             vi: "Hồ Chí Minh (1890-1969)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 $\\times$ 65 mm",
+    size: "130 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 $\\times$ 65 mm",
+    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 $\\times$ 65 mm",
+    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 $\\times$ 65 mm",
+    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -188,7 +188,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 $\\times$ 60 mm",
+    size: "132 \u00D7 60 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -219,7 +219,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 66 mm",
+    size: "138 \u00D7 66 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
@@ -250,7 +250,7 @@ slideshowInfo[`${index}`] = {
         en: "Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm" 
     },
-    size: "163 $\\times$ 83 mm",
+    size: "163 \u00D7 83 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 

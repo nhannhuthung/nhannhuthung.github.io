@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "141 $\\times$ 65 mm",
+        size: "141 \u00D7 65 mm",
         figure: { 
             en: "Kapitan Pattimura (1783-1817)", 
             vi: "Kapitan Pattimura (1783-1817)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "141 $\\times$ 65 mm",
+    size: "141 \u00D7 65 mm",
     figure: { 
         en: "Pangeran Antasari (1797-1862)", 
         vi: "Pangeran Antasari (1797-1862)" 

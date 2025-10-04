@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "141 $\\times$ 65 mm",
+        size: "141 \u00D7 65 mm",
         figure: { 
             en: "Kaysone Phomvihane (1920-1992)", 
             vi: "Kaysone Phomvihane (1920-1992)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "152 $\\times$ 68 mm",
+    size: "152 \u00D7 68 mm",
     figure: { 
         en: "Kaysone Phomvihane (1920-1992)", 
         vi: "Kaysone Phomvihane (1920-1992)" 

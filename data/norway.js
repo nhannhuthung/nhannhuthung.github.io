@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "128 $\\times$ 60 mm",
+        size: "128 \u00D7 60 mm",
         figure: { 
             en: "Peter Christen Asbjørnsen (1812-1885)", 
             vi: "Peter Christen Asbjørnsen (1812-1885)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 70 mm",
+    size: "140 \u00D7 70 mm",
     figure: null,
     note: null
 };

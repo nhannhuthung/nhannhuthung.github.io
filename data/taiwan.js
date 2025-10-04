@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "145 $\\times$ 70 mm",
+        size: "145 \u00D7 70 mm",
         figure: { 
             en: "Sun Yat-sen (1866-1925)", 
             vi: "Tôn Trung Sơn (1866-1925)" 

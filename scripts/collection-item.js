@@ -565,7 +565,7 @@ function createNavigationButtons() {
         const prevBtn = document.createElement('button');
         prevBtn.className = 'nav-button prev-button';
         const prevName = nav.prev['short_' + currentLang] || nav.prev[currentLang];
-        prevBtn.innerHTML = `← <span class="country-name">${prevName}</span>`;
+        prevBtn.innerHTML = `\u2190 <span class="country-name">${prevName}</span>`;
         prevBtn.onclick = () => window.location.href = nav.prev.link;
         navContainer.appendChild(prevBtn);
     }
@@ -574,7 +574,7 @@ function createNavigationButtons() {
         const nextBtn = document.createElement('button');
         nextBtn.className = 'nav-button next-button';
         const nextName = nav.next['short_' + currentLang] || nav.next[currentLang];
-        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> →`;
+        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> \u2192`;
         nextBtn.onclick = () => window.location.href = nav.next.link;
         navContainer.appendChild(nextBtn);
     }

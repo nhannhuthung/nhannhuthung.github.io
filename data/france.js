@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "140 $\\times$ 75 mm",
+        size: "140 \u00D7 75 mm",
         figure: { 
             en: "Claude Debussy (1862-1918)", 
             vi: "Claude Debussy (1862-1918)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "123 $\\times$ 80 mm",
+    size: "123 \u00D7 80 mm",
     figure: { 
         en: "Antoine de Saint-Exupéry (1900-1944?)", 
         vi: "Antoine de Saint-Exupéry (1900-1944?)"
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "133 $\\times$ 80 mm",
+    size: "133 \u00D7 80 mm",
     figure: { 
         en: "Paul Cézanne (1839-1906)", 
         vi: "Paul Cézanne (1839-1906)"
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "143 $\\times$ 80 mm",
+    size: "143 \u00D7 80 mm",
     figure: { 
         en: "Gustave Eiffel (1832-1923)", 
         vi: "Gustave Eiffel (1832-1923)"
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 $\\times$ 80 mm",
+    size: "153 \u00D7 80 mm",
     figure: { 
         en: "Marie Curie (1867-1934), Pierre Curie (1859-1906)", 
         vi: "Marie Curie (1867-1934), Pierre Curie (1859-1906)"

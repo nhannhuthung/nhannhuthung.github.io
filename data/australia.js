@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Commemorative Banknote", 
             vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
         },
-        size: "155 $\\times$ 78 mm",
+        size: "155 \u00D7 78 mm",
         figure: null,
         note: { 
             en: "First polymer banknote in the world", 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "144 $\\times$ 65 mm",
+    size: "144 \u00D7 65 mm",
     figure: [
         {
             en: "Mary Reibey (1777-1855)", 
@@ -101,7 +101,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "151 $\\times$ 65 mm",
+    size: "151 \u00D7 65 mm",
     figure: [
         {
             en: "David Unaipon (1872-1967)", 
@@ -138,7 +138,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "158 $\\times$ 65 mm",
+    size: "158 \u00D7 65 mm",
     figure: [
         {
             en: "Nellie Melba (1861-1931)", 
@@ -175,7 +175,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 $\\times$ 65 mm",
+    size: "130 \u00D7 65 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
@@ -209,7 +209,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "137 $\\times$ 65 mm",
+    size: "137 \u00D7 65 mm",
     figure: [
         {
             en: "Banjo Paterson (1864-1941)", 
@@ -249,7 +249,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "158 $\\times$ 65 mm",
+    size: "158 \u00D7 65 mm",
     figure: [
         {
             en: "Nellie Melba (1861-1931)", 

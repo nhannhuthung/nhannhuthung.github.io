@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "135 $\\times$ 70 mm",
+        size: "135 \u00D7 70 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 70 mm",
+    size: "145 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "155 $\\times$ 70 mm",
+    size: "155 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -117,7 +117,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 $\\times$ 70 mm",
+    size: "160 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -145,7 +145,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "165 $\\times$ 70 mm",
+    size: "165 \u00D7 70 mm",
     figure: null,
     note: null
 };
@@ -173,7 +173,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "165 $\\times$ 72 mm",
+    size: "165 \u00D7 72 mm",
     figure: null,
     note: { 
         en: `2007\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
@@ -204,7 +204,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 $\\times$ 69 mm",
+    size: "132 \u00D7 69 mm",
     figure: null,
     note: { 
         en: `2022\'s top 19 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
@@ -235,7 +235,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "137 $\\times$ 69 mm",
+    size: "137 \u00D7 69 mm",
     figure: null,
     note: { 
         en: `2023\'s top 15 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 

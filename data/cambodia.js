@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "138 $\\times$ 64 mm",
+        size: "138 \u00D7 64 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 64 mm",
+    size: "138 \u00D7 64 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 64 mm",
+    size: "138 \u00D7 64 mm",
     figure: { 
         en: "Norodom Sihanouk (1941-1955)", 
         vi: "Norodom Sihanouk (1941-1955)" 
@@ -120,7 +120,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 64 mm",
+    size: "138 \u00D7 64 mm",
     figure: { 
         en: "Norodom Sihamoni (1953-Present)", 
         vi: "Norodom Sihamoni (1953-Present)" 

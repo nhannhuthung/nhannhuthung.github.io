@@ -33,7 +33,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "138 $\\times$ 69 mm",
+        size: "138 \u00D7 69 mm",
         figure: null,
         note: null,
     }
@@ -62,7 +62,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "138 $\\times$ 69 mm",
+    size: "138 \u00D7 69 mm",
     figure: null,
     note: null,
 };

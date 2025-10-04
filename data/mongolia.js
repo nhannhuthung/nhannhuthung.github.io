@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "45 $\\times$ 90 mm",
+        size: "45 \u00D7 90 mm",
         figure: null,
         note: null
     }
@@ -61,7 +61,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "45 $\\times$ 90 mm",
+    size: "45 \u00D7 90 mm",
     figure: null,
     note: null
 };
@@ -89,7 +89,7 @@ slideshowInfo[`${index}`] = {
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "45 $\\times$ 90 mm",
+    size: "45 \u00D7 90 mm",
     figure: null,
     note: null
 };
@@ -117,7 +117,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "115 $\\times$ 57 mm",
+    size: "115 \u00D7 57 mm",
     figure: null,
     note: null
 };
@@ -145,7 +145,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "125 $\\times$ 61 mm",
+    size: "125 \u00D7 61 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
@@ -176,7 +176,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 $\\times$ 64 mm",
+    size: "130 \u00D7 64 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
@@ -207,7 +207,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "135 $\\times$ 66 mm",
+    size: "135 \u00D7 66 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
@@ -238,7 +238,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 68 mm",
+    size: "140 \u00D7 68 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 

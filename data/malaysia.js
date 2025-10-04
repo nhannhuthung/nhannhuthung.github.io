@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "120 $\\times$ 65 mm",
+        size: "120 \u00D7 65 mm",
         figure: { 
             en: "Tunku Abdul Rahman (1895-1960)", 
             vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 65 mm",
+    size: "140 \u00D7 65 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "120 $\\times$ 65 mm",
+    size: "120 \u00D7 65 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "135 $\\times$ 65 mm",
+    size: "135 \u00D7 65 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -160,7 +160,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 $\\times$ 65 mm",
+    size: "140 \u00D7 65 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -191,7 +191,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 65 mm",
+    size: "145 \u00D7 65 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 
@@ -222,7 +222,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 $\\times$ 69 mm",
+    size: "145 \u00D7 69 mm",
     figure: { 
         en: "Tunku Abdul Rahman (1895-1960)", 
         vi: "Tunku Abdul Rahman (1895-1960)" 

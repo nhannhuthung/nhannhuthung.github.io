@@ -28,7 +28,7 @@ const main_trans = {
         remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins across 69 regions, I couldn't display all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
         remark_subpara_1: `<span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
-        remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902).`,
+        remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I displayed them in the highlight.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value. 😁`,
 
         last_update: `Last Updated:`,
@@ -49,15 +49,15 @@ const main_trans = {
         acknowledge_para: `Chào mừng đến với nơi trưng bày bộ sưu tập tiền online của mình! Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
 
         remark: `Tổng Quan`,
-        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – hơn 650 đồng xu của 69 khu vực, mình không thể đưa tất cả lên đây.`,
+        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – tầm 700 đồng xu, mình không thể đưa tất cả lên đây được.`,
         remark_para_2: `Một vài tiêu điểm về bộ sưu tập tiền xu của mình:`,
-        remark_subpara_1: `<span>&#9757;</span> Có khoảng 60 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
-        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902).`,
+        remark_subpara_1: `<span>&#9757;</span> Có khoảng 70 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
+        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tiêu điểm.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn. 😁`,
 
         last_update: `Cập Nhật Lần Cuối:`,
 
-        highlight: `Nổi Bật`,
+        highlight: `Tiêu Điểm`,
         banknote: `Tiền Giấy`,
         norway: `Na Uy`,
         hong_kong: `Hồng Kông`,
@@ -311,7 +311,7 @@ function showContinentDetails(continentKey) {
     // Back button inside container
     let backBtn = document.createElement("button");
     backBtn.className = "back-button";
-    backBtn.innerText = currentLang === "en" ? "← Back" : "← Quay Lại";
+    backBtn.innerText = currentLang === "en" ? "\u2190 Back" : "\u2190 Quay Lại";
     backBtn.onclick = showContinentPanels;
     continentContainer.appendChild(backBtn);
 

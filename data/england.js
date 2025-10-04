@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "132 $\\times$ 69 mm",
+        size: "132 \u00D7 69 mm",
         figure: [
             {
                 en: "Elizabeth II (1952-2022)",

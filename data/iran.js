@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "154 $\\times$ 75 mm",
+        size: "154 \u00D7 75 mm",
         figure: { 
             en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
@@ -64,7 +64,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 $\\times$ 77 mm",
+    size: "160 \u00D7 77 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
@@ -95,7 +95,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "166 $\\times$ 79 mm",
+    size: "166 \u00D7 79 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
@@ -126,7 +126,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "166 $\\times$ 79 mm",
+    size: "166 \u00D7 79 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
@@ -157,7 +157,7 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 $\\times$ 71 mm",
+    size: "142 \u00D7 71 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 

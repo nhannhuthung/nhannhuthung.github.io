@@ -32,7 +32,7 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "139 $\\times$ 65 mm",
+        size: "139 \u00D7 65 mm",
         figure: { 
             en: "Muhammad Ali Jinnah (1876-1948)", 
             vi: "Muhammad Ali Jinnah (1876-1948)" 
