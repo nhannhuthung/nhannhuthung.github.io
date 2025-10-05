@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "Iranian 5,000 Rials", 
             vi: "5.000 Rial Iran" 
         },
-        year: null,
+        issuer: {
+            en: "Central Bank Of The Islamic Republic Of Iran",
+            vi: "Ngân Hàng Trung Ương Cộng Hòa Hồi Giáo Iran"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "154 \u00D7 75 mm",
         figure: { 
             en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
         },
-        note: null
+        size: "154 \u00D7 75 mm",
     }
 };
 
@@ -59,17 +61,19 @@ slideshowInfo[`${index}`] = {
         en: "Iranian 10,000 Rials", 
         vi: "10.000 Rial Iran" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of The Islamic Republic Of Iran",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Hồi Giáo Iran"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 \u00D7 77 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
     },
-    note: null
+    size: "160 \u00D7 77 mm",
 };
 
 index++; //index = 3
@@ -90,17 +94,19 @@ slideshowInfo[`${index}`] = {
         en: "Iranian 50,000 Rials", 
         vi: "50.000 Rial Iran" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of The Islamic Republic Of Iran",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Hồi Giáo Iran"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "166 \u00D7 79 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
     },
-    note: null
+    size: "166 \u00D7 79 mm",
 };
 
 index++; //index = 4
@@ -121,17 +127,19 @@ slideshowInfo[`${index}`] = {
         en: "Iranian 100,000 Rials", 
         vi: "100.000 Rial Iran" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of The Islamic Republic Of Iran",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Hồi Giáo Iran"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "166 \u00D7 79 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
     },
-    note: null
+    size: "166 \u00D7 79 mm",
 };
 
 index++; //index = 5
@@ -152,15 +160,17 @@ slideshowInfo[`${index}`] = {
         en: "Iranian 500,000 Rials", 
         vi: "500.000 Rial Iran" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of The Islamic Republic Of Iran",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Hồi Giáo Iran"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 \u00D7 71 mm",
     figure: { 
         en: "Ruhollah Khomeini ((1900/1902)?-1989)", 
         vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
     },
-    note: null
+    size: "142 \u00D7 71 mm",
 };

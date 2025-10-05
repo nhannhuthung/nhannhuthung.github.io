@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Mauritian 25 Rupees", 
             vi: "25 Rupee Mauritius" 
         },
+        issuer: {
+            en: "Bank Of Mauritius",
+            vi: "Ngân Hàng Mauritius"
+        },
         year: "2003",
         type: { 
             en: "Circulating Standard Banknote", 
@@ -59,17 +63,20 @@ slideshowInfo[`${index}`] = {
         en: "Mauritian 50 Rupees", 
         vi: "50 Rupee Mauritius" 
     },
+    issuer: {
+        en: "Bank Of Mauritius",
+        vi: "Ngân Hàng Mauritius"
+    },
     year: "2001",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 68 mm",
     figure: { 
         en: "Joseph Maurice Paturau (1916-1996)", 
         vi: "Joseph Maurice Paturau (1916-1996)" 
     },
-    note: null
+    size: "140 \u00D7 68 mm",
 };
 
 index++; //index = 3
@@ -90,15 +97,18 @@ slideshowInfo[`${index}`] = {
         en: "Mauritian 100 Rupees", 
         vi: "100 Rupee Mauritius" 
     },
+    issuer: {
+        en: "Bank Of Mauritius",
+        vi: "Ngân Hàng Mauritius"
+    },
     year: "2004",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 \u00D7 70 mm",
     figure: { 
         en: "Renganaden Seeneevassen (1910-1958)", 
         vi: "Renganaden Seeneevassen (1910-1958)" 
     },
-    note: null
+    size: "145 \u00D7 70 mm",
 };

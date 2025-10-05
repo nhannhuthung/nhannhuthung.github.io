@@ -27,14 +27,16 @@ const slideshowInfo = {
             en: "European Union's 5 Euros", 
             vi: "5 Euro Liên Minh Châu Âu" 
         },
-        year: null,
+        issuer: {
+            en: "European Central Bank",
+            vi: "Ngân Hàng Trung Ương Châu Âu"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "120 \u00D7 62 mm",
         figure: null,
-        note: null
+        size: "120 \u00D7 62 mm",
     }
 };
 
@@ -56,14 +58,16 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 10 Euros", 
         vi: "10 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "127 \u00D7 67 mm",
     figure: null,
-    note: null
+    size: "127 \u00D7 67 mm",
 };
 
 index++; //index = 3
@@ -84,14 +88,16 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 20 Euros", 
         vi: "20 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "133 \u00D7 72 mm",
     figure: null,
-    note: null
+    size: "133 \u00D7 72 mm",
 };
 
 index++; //index = 4
@@ -112,13 +118,16 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 5 Euros", 
         vi: "5 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "120 \u00D7 62 mm",
     figure: null,
+    size: "120 \u00D7 62 mm",
     note: { 
         en: `2013\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 12 tờ tiền năm 2013 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
@@ -143,14 +152,16 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 10 Euros", 
         vi: "10 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "127 \u00D7 67 mm",
     figure: null,
-    note: null
+    size: "127 \u00D7 67 mm",
 };
 
 index++; //index = 6
@@ -171,14 +182,20 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 20 Euros", 
         vi: "20 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "133 \u00D7 72 mm",
     figure: null,
-    note: null,
+    size: "133 \u00D7 72 mm",
+    note: {
+        en: `2015\'s top 20 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
+        vi: `Top 20 tờ tiền của năm 2015 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
+    },
     new: true
 };
 
@@ -200,13 +217,15 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 50 Euros", 
         vi: "50 Euro Liên Minh Châu Âu" 
     },
-    year: null,
+    issuer: {
+        en: "European Central Bank",
+        vi: "Ngân Hàng Trung Ương Châu Âu"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 77 mm",
     figure: null,
-    note: null,
+    size: "140 \u00D7 77 mm",
     new: true
 };

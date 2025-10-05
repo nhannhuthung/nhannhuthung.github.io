@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Somali 50 Shillings - Mogadishu Northern Forces", 
             vi: "50 Shilling Somalia - Mogadishu Northern Forces" 
         },
+        issuer: {
+            en: "Central Bank Of Somalia",
+            vi: "Ngân Hàng Trung Ương Somalia"
+        },
         year: "1991",
         type: { 
             en: "? Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn ?" 
         },
-        size: "140 \u00D7 70 mm",
         figure: null,
-        note: null
+        size: "140 \u00D7 70 mm",
     }
 };
 
@@ -56,13 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Somali 1000 Shillings - Puntland", 
         vi: "1000 Shilling Somalia - Puntland" 
     },
+    issuer: {
+        en: "Central Bank Of Somalia",
+        vi: "Ngân Hàng Trung Ương Somalia"
+    },
     year: "1990 (1999)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "155 \u00D7 75 mm",
     figure: null,
+    size: "155 \u00D7 75 mm",
     note: {
         en: "It's been through war ...",
         vi: "Nó đã sống sót qua chiến tranh ..."

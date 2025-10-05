@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Ukrainian 1 Hryvnia", 
             vi: "1 Hryvnia Ukraine" 
         },
+        issuer: {
+            en: "National Bank of Ukraine",
+            vi: "Ngân Hàng Quốc Gia Ukraine"
+        },
         year: "2014",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "118 \u00D7 63 mm",
         figure:  { 
             en: "Volodymyr I Sviatoslavych (958?-1015)", 
             vi: "Volodymyr I Sviatoslavych (958?-1015)"
         },
-        note: null
+        size: "118 \u00D7 63 mm",
     }
 };

@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Taiwanese 100 Dollars", 
             vi: "100 Đài Tệ" 
         },
+        issuer: {
+            en: "Central Bank Of The Republic Of China",
+            vi: "Ngân Hàng Trung Ương Trung Hoa Dân Quốc"
+        },
         year: "2000",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "145 \u00D7 70 mm",
         figure: { 
             en: "Sun Yat-sen (1866-1925)", 
             vi: "Tôn Trung Sơn (1866-1925)" 
         },
-        note: null
+        size: "145 \u00D7 70 mm",
     }
 };

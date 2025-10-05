@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Vietnamese 200 Dong", 
             vi: "200 Đồng Việt Nam" 
         },
+        issuer: {
+            en: "State Bank Of Vietnam",
+            vi: "Ngân Hàng Nhà Nước Việt Nam"
+        },
         year: "1987",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "130 \u00D7 65 mm",
         figure: { 
             en: "Ho Chi Minh (1890-1969)", 
             vi: "Hồ Chí Minh (1890-1969)" 
         },
-        note: null
+        size: "130 \u00D7 65 mm",
     }
 };
 
@@ -59,17 +62,20 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 500 Dong", 
         vi: "500 Đồng Việt Nam" 
     },
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "130 \u00D7 65 mm",
 };
 
 index++; //index = 3
@@ -90,17 +96,20 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 1,000 Dong", 
         vi: "1.000 Đồng Việt Nam" 
     },
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "134 \u00D7 65 mm",
 };
 
 index++; //index = 4
@@ -121,17 +130,20 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 2,000 Dong", 
         vi: "2.000 Đồng Việt Nam" 
     },
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "134 \u00D7 65 mm",
 };
 
 index++; //index = 5
@@ -152,17 +164,20 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 5,000 Dong", 
         vi: "5.000 Đồng Việt Nam" 
     },
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     year: "1991",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "134 \u00D7 65 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "134 \u00D7 65 mm",
 };
 
 index++; //index = 6
@@ -183,17 +198,19 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 10,000 Dong", 
         vi: "10.000 Đồng Việt Nam" 
     },
-    year: null,
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 \u00D7 60 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "132 \u00D7 60 mm",
 };
 
 index++; //index = 7
@@ -214,17 +231,19 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 20,000 Dong", 
         vi: "20.000 Đồng Việt Nam" 
     },
-    year: null,
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 66 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "138 \u00D7 66 mm",
 };
 
 index++; //index = 8
@@ -245,15 +264,18 @@ slideshowInfo[`${index}`] = {
         en: "Vietnamese 100 Dong", 
         vi: "100 Đồng Việt Nam" 
     },
+    issuer: {
+        en: "State Bank Of Vietnam",
+        vi: "Ngân Hàng Nhà Nước Việt Nam"
+    },
     year: "2016",
     type: { 
         en: "Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm" 
     },
-    size: "163 \u00D7 83 mm",
     figure: { 
         en: "Ho Chi Minh (1890-1969)", 
         vi: "Hồ Chí Minh (1890-1969)" 
     },
-    note: null
+    size: "163 \u00D7 83 mm",
 };

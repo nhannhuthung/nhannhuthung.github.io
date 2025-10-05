@@ -27,13 +27,16 @@ const slideshowInfo = {
             en: "Tajikistani 20 Rubles", 
             vi: "20 Rúp Tajikistan" 
         },
+        issuer: {
+            en: "National Bank Of The Republic Of Tajikistan",
+            vi: "Ngân Hàng Quốc Gia Cộng Hòa Tajikistan"
+        },
         year: "1994",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "102 \u00D7 56 mm",
         figure: null,
-        note: null
+        size: "102 \u00D7 56 mm",
     }
 };

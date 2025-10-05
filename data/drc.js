@@ -27,13 +27,16 @@ const slideshowInfo = {
             en: "Congolese 50 Francs", 
             vi: "50 Franc Congo" 
         },
+        issuer: {
+            en: "Central Bank Of The Congo",
+            vi: "Ngân Hàng Trung Ương Congo"
+        },
         year: "2013",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "150 \u00D7 70 mm",
         figure: null,
-        note: null
+        size: "150 \u00D7 70 mm",
     }
 };

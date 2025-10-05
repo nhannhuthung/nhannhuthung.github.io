@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "Canadian 1 Dollar", 
             vi: "1 Đô La Canada" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of Canada",
+            vi: "Ngân Hàng Canada"
+        },
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "153 \u00D7 70 mm",
         figure: { 
             en: "Elizabeth II (1952-2022)", 
             vi: "Elizabeth II (1952-2022)" 
         },
-        note: null
+        size: "153 \u00D7 70 mm",
     }
 };
 
@@ -59,17 +61,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 2 Dollars", 
         vi: "2 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 3
@@ -90,17 +94,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 4
@@ -121,17 +127,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 1 Dollar", 
         vi: "1 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Non-circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 5
@@ -152,17 +160,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 2 Dollars", 
         vi: "2 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 6
@@ -183,17 +193,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 5 Dollars", 
         vi: "5 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 7
@@ -214,17 +226,20 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 5 Dollars", 
         vi: "5 Đô La Canada" 
     },
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     year: "2010",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 8
@@ -245,17 +260,20 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     year: "2007",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891)", 
         vi: "John A. Macdonald (1815-1891)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 9
@@ -276,16 +294,20 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 20 Dollars", 
         vi: "20 Đô La Canada" 
     },
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     year: "2005",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
+    size: "153 \u00D7 70 mm",
     note: {
         en: `Banknote of 2004 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Tờ tiền của năm 2004 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -310,17 +332,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 5 Dollars", 
         vi: "5 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Wilfrid Laurier (1841-1919)", 
         vi: "Wilfrid Laurier (1841-1919)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 11
@@ -341,16 +365,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891)", 
         vi: "John A. Macdonald (1815-1891)" 
     },
+    size: "153 \u00D7 70 mm",
     note: {
         en: `2013\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 12 tờ tiền của năm 2013 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -375,17 +402,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 20 Dollars", 
         vi: "20 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 13
@@ -406,16 +435,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 50 Dollars", 
         vi: "50 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "W. L. Mackenzie King (1874-1950)", 
         vi: "W. L. Mackenzie King (1874-1950)" 
     },
+    size: "153 \u00D7 70 mm",
     note: {
         en: `2012\'s top 13 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 13 tờ tiền của năm 2012 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -440,16 +472,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 100 Dollars", 
         vi: "100 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Robert L. Borden (1854-1937)", 
         vi: "Robert L. Borden (1854-1937)" 
     },
+    size: "153 \u00D7 70 mm",
     note: {
         en: `2011\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 12 tờ tiền của năm 2011 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -474,17 +509,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 20 Dollars", 
         vi: "20 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "Elizabeth II (1952-2022)", 
         vi: "Elizabeth II (1952-2022)" 
     },
-    note: null
+    size: "153 \u00D7 70 mm",
 };
 
 index++; //index = 16
@@ -505,16 +542,20 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     year: "2017",
     type: { 
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "153 \u00D7 70 mm",
     figure: { 
         en: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)", 
         vi: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)" 
     },
+    size: "153 \u00D7 70 mm",
     note: {
         en: `2017\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Top 22 tờ tiền của năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -539,16 +580,19 @@ slideshowInfo[`${index}`] = {
         en: "Canadian 10 Dollars", 
         vi: "10 Đô La Canada" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Canada",
+        vi: "Ngân Hàng Canada"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "70 \u00D7 153 mm",
     figure: { 
         en: "Viola Desmond (1914-1965)", 
         vi: "Viola Desmond (1914-1965)" 
     },
+    size: "70 \u00D7 153 mm",
     note: {
         en: `Banknote of 2018 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Tờ tiền của năm 2018 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`

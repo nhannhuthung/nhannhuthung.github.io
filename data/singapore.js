@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "Singaporean 2 Dollars", 
             vi: "2 Đô La Singapore" 
         },
-        year: null,
+        issuer: {
+            en: "Monetary Authority of Singapore",
+            vi: "Cơ Quan Tiền Tệ Singapore"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "126 \u00D7 63 mm",
         figure: { 
             en: "Yusof Ishak (1910-1970)", 
             vi: "Yusof Ishak (1910-1970)" 
         },
-        note: null
+        size: "126 \u00D7 63 mm",
     }
 };
 
@@ -59,17 +61,19 @@ slideshowInfo[`${index}`] = {
         en: "Singaporean 5 Dollars", 
         vi: "5 Đô La Singapore" 
     },
-    year: null,
+    issuer: {
+        en: "Monetary Authority of Singapore",
+        vi: "Cơ Quan Tiền Tệ Singapore"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "133 \u00D7 66 mm",
     figure: { 
         en: "Yusof Ishak (1910-1970)", 
         vi: "Yusof Ishak (1910-1970)" 
     },
-    note: null
+    size: "133 \u00D7 66 mm",
 };
 
 index++; //index = 3
@@ -90,15 +94,17 @@ slideshowInfo[`${index}`] = {
         en: "Singaporean 10 Dollars", 
         vi: "10 Đô La Singapore" 
     },
-    year: null,
+    issuer: {
+        en: "Monetary Authority of Singapore",
+        vi: "Cơ Quan Tiền Tệ Singapore"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "141 \u00D7 69 mm",
     figure: { 
         en: "Yusof Ishak (1910-1970)", 
         vi: "Yusof Ishak (1910-1970)" 
     },
-    note: null
+    size: "141 \u00D7 69 mm",
 };

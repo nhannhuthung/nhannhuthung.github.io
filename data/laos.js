@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Lao 2,000 Kip", 
             vi: "2.000 Kíp Lào" 
         },
+        issuer: {
+            en: "Bank Of The Lao People's Democratic Republic",
+            vi: "Ngân Hàng Cộng Hòa Dân Chủ Nhân Dân Lào"
+        },
         year: "2011",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "141 \u00D7 65 mm",
         figure: { 
             en: "Kaysone Phomvihane (1920-1992)", 
             vi: "Kaysone Phomvihane (1920-1992)" 
         },
-        note: null
+        size: "141 \u00D7 65 mm",
     }
 };
 
@@ -59,15 +62,18 @@ slideshowInfo[`${index}`] = {
         en: "Lao 5,000 Kip", 
         vi: "5.000 Kíp Lào" 
     },
+    issuer: {
+        en: "Bank Of The Lao People's Democratic Republic",
+        vi: "Ngân Hàng Cộng Hòa Dân Chủ Nhân Dân Lào"
+    },
     year: "2003",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "152 \u00D7 68 mm",
     figure: { 
         en: "Kaysone Phomvihane (1920-1992)", 
         vi: "Kaysone Phomvihane (1920-1992)" 
     },
-    note: null
+    size: "152 \u00D7 68 mm",
 };

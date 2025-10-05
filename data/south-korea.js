@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "South Korean 1,000 Won", 
             vi: "1.000 Won Hàn Quốc" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of Korea",
+            vi: "Ngân Hàng Hàn Quốc"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "136 \u00D7 68 mm",
         figure: { 
             en: "Yi Hwang (1501-1570)", 
             vi: "Lý Hoảng (1501-1570)" 
         },
-        note: null
+        size: "136 \u00D7 68 mm",
     }
 };
 
@@ -59,18 +61,20 @@ slideshowInfo[`${index}`] = {
         en: "South Korean 5,000 Won", 
         vi: "5.000 Won Hàn Quốc" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Korea",
+        vi: "Ngân Hàng Hàn Quốc"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 \u00D7 68 mm",
     figure: { 
         en: "Yi I (1536-1584)", 
         vi: "Lý Nhị (1536-1584)" 
     },
-    note: null
 };
+    size: "142 \u00D7 68 mm",
 
 index++; //index = 3
 images[`${index}`] = [
@@ -90,17 +94,19 @@ slideshowInfo[`${index}`] = {
         en: "South Korean 10,000 Won", 
         vi: "10.000 Won Hàn Quốc" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Korea",
+        vi: "Ngân Hàng Hàn Quốc"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "148 \u00D7 68 mm",
     figure: { 
         en: "Sejong the Great (1397-1450)", 
         vi: "Triều Tiên Thế Tông (1397-1450)" 
     },
-    note: null
+    size: "148 \u00D7 68 mm",
 };
 
 index++; //index = 4
@@ -121,16 +127,19 @@ slideshowInfo[`${index}`] = {
         en: "South Korean 50,000 Won", 
         vi: "50.000 Won Hàn Quốc" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Korea",
+        vi: "Ngân Hàng Hàn Quốc"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "154 \u00D7 68 mm",
     figure: { 
         en: "Shin Saimdang (1504-1551)", 
         vi: "Thân Sư Nhâm Đường (1504-1551)" 
     },
+    size: "154 \u00D7 68 mm",
     note: { 
         en: `2009\'s top 9 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 9 tờ tiền năm 2009 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
@@ -155,12 +164,14 @@ slideshowInfo[`${index}`] = {
         en: "South Korean 2,000 Won", 
         vi: "2.000 Won Hàn Quốc" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Korea",
+        vi: "Ngân Hàng Hàn Quốc"
+    },
     type: { 
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 75 mm",
     figure: null,
-    note: null
+    size: "140 \u00D7 75 mm",
 };

@@ -27,14 +27,16 @@ const slideshowInfo = {
             en: "Japanese 2,000 Yen", 
             vi: "2.000 Yên Nhật Bản" 
         },
-        year: null,
+        issuer: {
+            en: "Bank of Japan",
+            vi: "Ngân Hàng Nhật Bản"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "154 \u00D7 76 mm",
         figure: null,
-        note: null
+        size: "154 \u00D7 76 mm",
     }
 };
 
@@ -56,17 +58,19 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 1,000 Yen", 
         vi: "1.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 76 mm",
     figure: { 
         en: "Hideyo Noguchi (1876-1928)", 
         vi: "Noguchi Hideyo (1876-1928)" 
     },
-    note: null
+    size: "150 \u00D7 76 mm",
 };
 
 index++; //index = 3
@@ -87,17 +91,19 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 5,000 Yen", 
         vi: "5.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 \u00D7 76 mm",
     figure: { 
         en: "Ichiyō Higuchi (1872-1896)", 
         vi: "Higuchi Ichiyō (1872-1896)" 
     },
-    note: null
+    size: "156 \u00D7 76 mm",
 };
 
 index++; //index = 4
@@ -118,17 +124,19 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 10,000 Yen", 
         vi: "10.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 \u00D7 76 mm",
     figure: { 
         en: "Yukichi Fukuzawa (1835-1901)", 
         vi: "Fukuzawa Yukichi (1835-1901)" 
     },
-    note: null,
+    size: "160 \u00D7 76 mm",
 };
 
 index++; //index = 5
@@ -149,16 +157,19 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 1,000 Yen", 
         vi: "1.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 76 mm",
     figure: { 
         en: "Shibasaburō Kitasato (1853-1931)", 
         vi: "Kitasato Shibasaburō (1853-1931)" 
     },
+    size: "150 \u00D7 76 mm",
     note: { 
         en: `2024\'s top 21 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 21 tờ tiền năm 2024 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -183,17 +194,19 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 5,000 Yen", 
         vi: "5.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 \u00D7 76 mm",
     figure: { 
         en: "Umeko Tsuda (1864-1929)", 
         vi: "Tsuda Umeko (1864-1929)" 
     },
-    note: null
+    size: "156 \u00D7 76 mm",
 };
 
 index++; //index = 7
@@ -214,15 +227,17 @@ slideshowInfo[`${index}`] = {
         en: "Japanese 10,000 Yen", 
         vi: "10.000 Yên Nhật Bản" 
     },
-    year: null,
+    issuer: {
+        en: "Bank of Japan",
+        vi: "Ngân Hàng Nhật Bản"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 \u00D7 76 mm",
     figure: { 
         en: "Eiichi Shibusawa (1840-1931)", 
         vi: "Shibusawa Eiichi (1840-1931)" 
     },
-    note: null
+    size: "160 \u00D7 76 mm",
 };

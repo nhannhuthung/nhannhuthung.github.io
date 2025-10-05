@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Rwandan 1,000 Francs", 
             vi: "1.000 Franc Rwanda" 
         },
+        issuer: {
+            en: "National Bank of Rwanda",
+            vi: "Ngân Hàng Nhà Nước Rwanda"
+        },
         year: "2019",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "135 \u00D7 65 mm",
         figure: null,
-        note: null
+        size: "135 \u00D7 65 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Rwandan 2,000 Francs", 
         vi: "2.000 Franc Rwanda" 
     },
+    issuer: {
+        en: "National Bank of Rwanda",
+        vi: "Ngân Hàng Nhà Nước Rwanda"
+    },
     year: "2014",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 68 mm",
     figure: null,
-    note: null
+    size: "140 \u00D7 68 mm",
 };
 
 index++; //index = 3
@@ -84,12 +90,15 @@ slideshowInfo[`${index}`] = {
         en: "Rwandan 5,000 Francs", 
         vi: "5.000 Franc Rwanda" 
     },
+    issuer: {
+        en: "National Bank of Rwanda",
+        vi: "Ngân Hàng Nhà Nước Rwanda"
+    },
     year: "2014",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "155 \u00D7 85 mm",
     figure: null,
-    note: null
+    size: "155 \u00D7 85 mm",
 };

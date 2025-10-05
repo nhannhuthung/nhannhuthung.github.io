@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Kerguelenian 100 Francs", 
             vi: "100 Franc Quần Đảo Kerguelen" 
         },
+        issuer: {
+            en: "Antarctica Overseas Exchange Office",
+            vi: "Antarctica Overseas Exchange Office (Bộ Trao Đổi Nước Ngoài Nam Cực)"
+        },
         year: "2012",
         type: { 
             en: "Fantasy Banknote", 
             vi: "Tiền Sưu Tầm" 
         },
-        size: "159 \u00D7 80 mm",
         figure: { 
             en: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)", 
             vi: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)" 
         },
-        note: null
+        size: "159 \u00D7 80 mm",
     }
 };

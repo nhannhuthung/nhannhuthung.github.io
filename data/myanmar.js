@@ -27,14 +27,16 @@ const slideshowInfo = {
             en: "Myanma 5 Kyats", 
             vi: "5 Kyat Myanmar" 
         },
-        year: null,
+        issuer: {
+            en: "Central Bank Of Myanmar",
+            vi: "Ngân Hàng Trung Ương Myanmar"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "110 \u00D7 55 mm",
         figure: null,
-        note: null
+        size: "110 \u00D7 55 mm",
     }
 };
 
@@ -56,14 +58,16 @@ slideshowInfo[`${index}`] = {
         en: "Myanma 50 Kyats", 
         vi: "50 Kyat Myanmar" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Myanmar",
+        vi: "Ngân Hàng Trung Ương Myanmar"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "145 \u00D7 70 mm",
 };
 
 index++; //index = 3
@@ -84,14 +88,16 @@ slideshowInfo[`${index}`] = {
         en: "Myanma 100 Kyats", 
         vi: "100 Kyat Myanmar" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Myanmar",
+        vi: "Ngân Hàng Trung Ương Myanmar"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "145 \u00D7 70 mm",
 };
 
 index++; //index = 4
@@ -112,14 +118,16 @@ slideshowInfo[`${index}`] = {
         en: "Myanma 200 Kyats", 
         vi: "200 Kyat Myanmar" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Myanmar",
+        vi: "Ngân Hàng Trung Ương Myanmar"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 70 mm",
 };
 
 index++; //index = 5
@@ -140,14 +148,16 @@ slideshowInfo[`${index}`] = {
         en: "Myanma 500 Kyats", 
         vi: "500 Kyat Myanmar" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Myanmar",
+        vi: "Ngân Hàng Trung Ương Myanmar"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 70 mm",
 };
 
 index++; //index = 6
@@ -168,12 +178,14 @@ slideshowInfo[`${index}`] = {
         en: "Myanma 1,000 Kyats", 
         vi: "1.000 Kyat Myanmar" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Myanmar",
+        vi: "Ngân Hàng Trung Ương Myanmar"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 70 mm",
 };

@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Belarusian 50 Rubles", 
             vi: "50 Rúp Belarus" 
         },
+        issuer: {
+            en: "National Bank Of The Republic Of Belarus",
+            vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
+        },
         year: "2000",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "150 \u00D7 69 mm",
         figure: null,
-        note: null
+        size: "150 \u00D7 69 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Belarusian 100 Rubles", 
         vi: "100 Rúp Belarus" 
     },
+    issuer: {
+        en: "National Bank Of The Republic Of Belarus",
+        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
+    },
     year: "2000",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "150 \u00D7 69 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 69 mm",
 };
 
 index++; //index = 3
@@ -84,14 +90,17 @@ slideshowInfo[`${index}`] = {
         en: "Belarusian 500 Rubles", 
         vi: "500 Rúp Belarus" 
     },
+    issuer: {
+        en: "National Bank Of The Republic Of Belarus",
+        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
+    },
     year: "2000",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "150 \u00D7 74 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 74 mm",
 };
 
 index++; //index = 4
@@ -112,12 +121,15 @@ slideshowInfo[`${index}`] = {
         en: "Belarusian 1,000 Rubles", 
         vi: "1.000 Rúp Belarus" 
     },
+    issuer: {
+        en: "National Bank Of The Republic Of Belarus",
+        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
+    },
     year: "2000",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "150 \u00D7 74 mm",
     figure: null,
-    note: null
+    size: "150 \u00D7 74 mm",
 };

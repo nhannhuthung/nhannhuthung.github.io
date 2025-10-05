@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Costa Rican 1,000 Colones", 
             vi: "1.000 Colon Costa Rica" 
         },
+        issuer: {
+            en: "Central Bank Of Costa Rica",
+            vi: "Ngân Hàng Trung Ương Costa Rica"
+        },
         year: "2019",
         type: { 
             en: "Circulating Standard Banknote", 
@@ -37,7 +41,6 @@ const slideshowInfo = {
             en: "Braulio Carrillo Colina (1800-1845)", 
             vi: "Braulio Carrillo Colina (1800-1845)" 
         },
-        note: null
     }
 };
 
@@ -59,6 +62,10 @@ slideshowInfo[`${index}`] = {
         en: "Costa Rican 2,000 Colones", 
         vi: "2.000 Colon Costa Rica" 
     },
+    issuer: {
+        en: "Central Bank Of Costa Rica",
+        vi: "Ngân Hàng Trung Ương Costa Rica"
+    },
     year: "2018",
     type: { 
         en: "Circulating Standard Banknote", 
@@ -69,5 +76,4 @@ slideshowInfo[`${index}`] = {
         en: "Mauro Fernández Acuña (1843-1905)", 
         vi: "Mauro Fernández Acuña (1843-1905)" 
     },
-    note: null
 };

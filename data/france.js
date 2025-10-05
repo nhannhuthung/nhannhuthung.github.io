@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "French 20 Francs", 
             vi: "20 Franc Pháp" 
         },
+        issuer: {
+            en: "Bank Of France",
+            vi: "Ngân Hàng Pháp"
+        },
         year: "1997",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "140 \u00D7 75 mm",
         figure: { 
             en: "Claude Debussy (1862-1918)", 
             vi: "Claude Debussy (1862-1918)" 
         },
-        note: null
+        size: "140 \u00D7 75 mm",
     }
 };
 
@@ -59,17 +62,20 @@ slideshowInfo[`${index}`] = {
         en: "French 50 Francs", 
         vi: "50 Franc Pháp" 
     },
+    issuer: {
+        en: "Bank Of France",
+        vi: "Ngân Hàng Pháp"
+    },
     year: "1994",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "123 \u00D7 80 mm",
     figure: { 
         en: "Antoine de Saint-Exupéry (1900-1944?)", 
         vi: "Antoine de Saint-Exupéry (1900-1944?)"
     },
-    note: null
+    size: "123 \u00D7 80 mm",
 };
 
 index++; //index = 3
@@ -90,17 +96,20 @@ slideshowInfo[`${index}`] = {
         en: "French 100 Francs", 
         vi: "100 Franc Pháp" 
     },
+    issuer: {
+        en: "Bank Of France",
+        vi: "Ngân Hàng Pháp"
+    },
     year: "1998",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "133 \u00D7 80 mm",
     figure: { 
         en: "Paul Cézanne (1839-1906)", 
         vi: "Paul Cézanne (1839-1906)"
     },
-    note: null
+    size: "133 \u00D7 80 mm",
 };
 
 index++; //index = 4
@@ -121,17 +130,20 @@ slideshowInfo[`${index}`] = {
         en: "French 200 Francs", 
         vi: "200 Franc Pháp" 
     },
+    issuer: {
+        en: "Bank Of France",
+        vi: "Ngân Hàng Pháp"
+    },
     year: "1997",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "143 \u00D7 80 mm",
     figure: { 
         en: "Gustave Eiffel (1832-1923)", 
         vi: "Gustave Eiffel (1832-1923)"
     },
-    note: null
+    size: "143 \u00D7 80 mm",
 };
 
 index++; //index = 5
@@ -152,15 +164,18 @@ slideshowInfo[`${index}`] = {
         en: "French 500 Francs", 
         vi: "500 Franc Pháp" 
     },
+    issuer: {
+        en: "Bank Of France",
+        vi: "Ngân Hàng Pháp"
+    },
     year: "1994",
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "153 \u00D7 80 mm",
     figure: { 
         en: "Marie Curie (1867-1934), Pierre Curie (1859-1906)", 
         vi: "Marie Curie (1867-1934), Pierre Curie (1859-1906)"
     },
-    note: null
+    size: "153 \u00D7 80 mm",
 };

@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Turkmen 5 Manat", 
             vi: "5 Manat Turkmenistan" 
         },
+        issuer: {
+            en: "Central Bank Of Turkmenistan",
+            vi: "Ngân Hàng Trung Ương Turkmenistan"
+        },
         year: "2017",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "126 \u00D7 63 mm",
         figure: { 
             en: "Ahmad Sanjar (1086-1157)", 
             vi: "Ahmad Sanjar (1086-1157)" 
         },
-        note: null
+        size: "126 \u00D7 63 mm",
     }
 };
 
@@ -59,17 +62,20 @@ slideshowInfo[`${index}`] = {
         en: "Turkmen 10 Manat", 
         vi: "10 Manat Turkmenistan" 
     },
+    issuer: {
+        en: "Central Bank Of Turkmenistan",
+        vi: "Ngân Hàng Trung Ương Turkmenistan"
+    },
     year: "2017",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 \u00D7 66 mm",
     figure: { 
         en: "Magtymguly Pyragy (1724?-1807?)", 
         vi: "Magtymguly Pyragy (1724?-1807?)" 
     },
-    note: null
+    size: "132 \u00D7 66 mm",
 };
 
 index++; //index = 3
@@ -95,10 +101,9 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "120 \u00D7 60 mm",
     figure: { 
         en: "Tughril I (993?-1063)", 
         vi: "Tughril I (993?-1063)" 
     },
-    note: null
+    size: "120 \u00D7 60 mm",
 };

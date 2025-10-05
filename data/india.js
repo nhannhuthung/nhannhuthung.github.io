@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "Indian 5 Rupees", 
             vi: "5 Rupee Ấn Độ" 
         },
-        year: null,
+        issuer: {
+            en: "Reserve Bank Of India",
+            vi: "Ngân Hàng Dự Trữ Ấn Độ"
+        },
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "117 \u00D7 63 mm",
         figure: { 
             en: "Mahatma Gandhi (1869-1948)", 
             vi: "Mahatma Gandhi (1869-1948)" 
         },
-        note: null
+        size: "117 \u00D7 63 mm",
     }
 };
 
@@ -59,17 +61,19 @@ slideshowInfo[`${index}`] = {
         en: "Indian 10 Rupees", 
         vi: "10 Rupee Ấn Độ" 
     },
-    year: null,
+    issuer: {
+        en: "Reserve Bank Of India",
+        vi: "Ngân Hàng Dự Trữ Ấn Độ"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "117 \u00D7 63 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
     },
-    note: null
+    size: "117 \u00D7 63 mm",
 };
 
 index++; //index = 3
@@ -90,17 +94,19 @@ slideshowInfo[`${index}`] = {
         en: "Indian 100 Rupees", 
         vi: "100 Rupee Ấn Độ" 
     },
-    year: null,
+    issuer: {
+        en: "Reserve Bank Of India",
+        vi: "Ngân Hàng Dự Trữ Ấn Độ"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "157 \u00D7 73 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
     },
-    note: null
+    size: "157 \u00D7 73 mm",
 };
 
 index++; //index = 4
@@ -121,17 +127,20 @@ slideshowInfo[`${index}`] = {
         en: "Indian 10 Rupees", 
         vi: "10 Rupee Ấn Độ" 
     },
+    issuer: {
+        en: "Reserve Bank Of India",
+        vi: "Ngân Hàng Dự Trữ Ấn Độ"
+    },
     year: "2018",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "123 \u00D7 63 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
     },
-    note: null
+    size: "123 \u00D7 63 mm",
 };
 
 index++; //index = 5
@@ -152,17 +161,20 @@ slideshowInfo[`${index}`] = {
         en: "Indian 100 Rupees", 
         vi: "100 Rupee Ấn Độ" 
     },
+    issuer: {
+        en: "Reserve Bank Of India",
+        vi: "Ngân Hàng Dự Trữ Ấn Độ"
+    },
     year: "2019",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 \u00D7 66 mm",
     figure: { 
         en: "Mahatma Gandhi (1869-1948)", 
         vi: "Mahatma Gandhi (1869-1948)" 
     },
-    note: null
+    size: "142 \u00D7 66 mm",
 };
 
 index++; //index = 6
@@ -183,12 +195,15 @@ slideshowInfo[`${index}`] = {
         en: "Indian 1 Rupee", 
         vi: "1 Rupee Ấn Độ" 
     },
+    issuer: {
+        en: "Reserve Bank Of India",
+        vi: "Ngân Hàng Dự Trữ Ấn Độ"
+    },
     year: "2015",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "97 \u00D7 63 mm",
     figure: null,
-    note: null
+    size: "97 \u00D7 63 mm",
 };

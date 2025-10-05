@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Israeli 20 Shekels", 
             vi: "20 Shekel Israeli" 
         },
+        issuer: {
+            en: "Bank Of Israel",
+            vi: "Ngân Hàng Israel"
+        },
         year: "2017",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "129 \u00D7 71 mm",
         figure: { 
             en: "Rachel Bluwstein (1890-1931)", 
             vi: "Rachel Bluwstein (1890-1931)" 
         },
-        note: null
+        size: "129 \u00D7 71 mm",
     }
 };
 
@@ -59,16 +62,20 @@ slideshowInfo[`${index}`] = {
         en: "Israeli 50 Shekels", 
         vi: "50 Shekel Israel" 
     },
+    issuer: {
+        en: "Bank Of Israel",
+        vi: "Ngân Hàng Israel"
+    },
     year: "2014",
     type: { 
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "136 \u00D7 71 mm",
     figure: { 
         en: "Shaul Tchernichovsky (1875-1943)", 
         vi: "Shaul Tchernichovsky (1875-1943)" 
     },
+    size: "136 \u00D7 71 mm",
     note: { 
         en: `2014\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 12 tờ tiền năm 2014 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
@@ -93,16 +100,20 @@ slideshowInfo[`${index}`] = {
         en: "Israeli 200 Shekels", 
         vi: "200 Shekel Israel" 
     },
+    issuer: {
+        en: "Bank Of Israel",
+        vi: "Ngân Hàng Israel"
+    },
     year: "2015",
     type: { 
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 20 mm",
     figure: { 
         en: "Nathan Alterman (1910-1970)", 
         vi: "Nathan Alterman (1910-1970)" 
     },
+    size: "150 \u00D7 20 mm",
     note: { 
         en: `2015\'s top 20 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 20 tờ tiền năm 2015 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 

@@ -25,16 +25,19 @@ const images = {
 const slideshowInfo = {
     [`${index}`]: {
         title: { 
-            en: "Bhutan 1 Ngultrum", 
+            en: "Bhutanese 1 Ngultrum",
             vi: "1 Ngultrum Bhutan" 
+        },
+        issuer: {
+            en: "Royal Monetary Authority Of Bhutan",
+            vi: "Cơ Quan Tiền Tệ Hoàng Gia Bhutan"
         },
         year: "2013",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "120 \u00D7 60 mm",
         figure: null,
-        note: null
+        size: "120 \u00D7 60 mm",
     }
 };

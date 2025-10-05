@@ -27,17 +27,19 @@ const slideshowInfo = {
             en: "Thai 20 Baht", 
             vi: "20 Baht Thái Lan" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of Thailand",
+            vi: "Ngân Hàng Thái Lan"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "138 \u00D7 72 mm",
         figure: { 
             en: "Rama IX (1927-2016)", 
             vi: "Rama IX (1927-2016)" 
         },
-        note: null
+        size: "138 \u00D7 72 mm",
     }
 };
 
@@ -59,17 +61,19 @@ slideshowInfo[`${index}`] = {
         en: "Thai 100 Baht", 
         vi: "100 Baht Thái Lan" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Thailand",
+        vi: "Ngân Hàng Thái Lan"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 72 mm",
     figure: { 
         en: "Rama IX (1927-2016)", 
         vi: "Rama IX (1927-2016)" 
     },
-    note: null
+    size: "150 \u00D7 72 mm",
 };
 
 index++; //index = 3
@@ -90,17 +94,19 @@ slideshowInfo[`${index}`] = {
         en: "Thai 20 Baht", 
         vi: "20 Baht Thái Lan" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Thailand",
+        vi: "Ngân Hàng Thái Lan"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 72 mm",
     figure: { 
         en: "Rama IX (1927-2016)", 
         vi: "Rama IX (1927-2016)" 
     },
-    note: null
+    size: "138 \u00D7 72 mm",
 };
 
 index++; //index = 4
@@ -121,15 +127,17 @@ slideshowInfo[`${index}`] = {
         en: "Thai 100 Baht", 
         vi: "100 Baht Thái Lan" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Thailand",
+        vi: "Ngân Hàng Thái Lan"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "150 \u00D7 72 mm",
     figure: { 
         en: "Rama X (1952-Present)", 
         vi: "Rama X (1952-Present)" 
     },
-    note: null
+    size: "150 \u00D7 72 mm",
 };

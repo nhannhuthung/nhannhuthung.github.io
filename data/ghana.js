@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Ghanaian 1 Cedi", 
             vi: "1 Cedi Ghana" 
         },
+        issuer: {
+            en: "Bank Of Ghana",
+            vi: "Ngân Hàng Ghana"
+        },
         year: "2019",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "137 \u00D7 65 mm",
         figure: { 
             en: "Kwame Nkrumah (1909-1972), Emmanuel Odarkwei Obetsebi Lamptey (1902-1963), William Ofori Atta (1910-1988), Ebenezer Ako Adjei (1916-2002), Joseph Boakye Danquah (1895-1965), Edward Akufo-Addo (1906-1979)", 
             vi: "Kwame Nkrumah (1909-1972), Emmanuel Odarkwei Obetsebi Lamptey (1902-1963), William Ofori Atta (1910-1988), Ebenezer Ako Adjei (1916-2002), Joseph Boakye Danquah (1895-1965), Edward Akufo-Addo (1906-1979)" 
         },
-        note: null
+        size: "137 \u00D7 65 mm",
     }
 };

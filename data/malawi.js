@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Malawian 20 Kwachas", 
             vi: "20 Kwacha Malawi" 
         },
+        issuer: {
+            en: "Reserve Bank Of Malawi",
+            vi: "Ngân Hàng Dự Trữ Malawi"
+        },
         year: "2016",
         type: { 
             en: "Circulating Standard Banknote", 

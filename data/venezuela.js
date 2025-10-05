@@ -28,13 +28,16 @@ const slideshowInfo = {
             en: "Venezuelan 5 Bolivar", 
             vi: "5 Bolivar Venezuela" 
         },
+        issuer: {
+            en: "Central Bank Of Venezuela",
+            vi: "Ngân Hàng Trung Ương Venezuela"
+        },
         year: "2013",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "96 \u00D7 156 mm",
         figure: null,
-        note: null
+        size: "96 \u00D7 156 mm",
     }
 };

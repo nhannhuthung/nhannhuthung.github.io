@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Transnistrian 1 Ruble", 
             vi: "1 Rúp Transnistria" 
         },
+        issuer: {
+            en: "Transnistrian Republican Bank",
+            vi: "Ngân Hàng Cộng Hòa Transnistria"
+        },
         year: "2007",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "129 \u00D7 55 mm",
         figure:  { 
             en: "Alexander Suvorov (1730-1800)", 
             vi: "Alexander Suvorov (1730-1800)"
         },
-        note: null
+        size: "129 \u00D7 55 mm",
     }
 };

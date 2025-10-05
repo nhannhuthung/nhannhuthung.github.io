@@ -27,13 +27,15 @@ const slideshowInfo = {
             en: "Nepalese 5 Rupees", 
             vi: "5 Rupee Nepal" 
         },
-        year: null,
+        issuer: {
+            en: "Nepal Rastra Bank",
+            vi: "Ngân Hàng Rastra Nepal"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "120 \u00D7 70 mm",
         figure: null,
-        note: null
+        size: "120 \u00D7 70 mm",
     }
 };

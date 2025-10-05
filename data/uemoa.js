@@ -28,13 +28,16 @@ const slideshowInfo = {
             en: "West African 500 Francs", 
             vi: "500 Franc Tây Phi" 
         },
+        issuer: {
+            en: "Central Bank Of West African States",
+            vi: "Ngân Hàng Trung Ương Các Quốc Gia Tây Phi"
+        },
         year: "2012",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "114 \u00D7 60 mm",
         figure: null,
-        note: null
+        size: "114 \u00D7 60 mm",
     }
 };

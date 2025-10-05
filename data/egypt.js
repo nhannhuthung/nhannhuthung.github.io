@@ -10,12 +10,12 @@ let index = 1;
 const images = {
     [`${index}`]: [
         {
-            src: "../images/collection/egypt/1985/50-plastre-f.jpg",
+            src: "../images/collection/egypt/1985/50-piastre-f.jpg",
             alt: {en: "Front of the 50 Plastre", vi: "Mặt Trước Tờ 50 Plastre"},
             description: {en: "Obverse", vi: "Trước"}
         },
         {
-            src: "../images/collection/egypt/1985/50-plastre-b.jpg",
+            src: "../images/collection/egypt/1985/50-piastre-b.jpg",
             alt: {en: "Back of the 50 Plastre Bill", vi: "Mặt Sau Tờ 50 Plastre"},
             description: {en: "Reverse", vi: "Sau"}
         }
@@ -24,17 +24,20 @@ const images = {
 const slideshowInfo = {
     [`${index}`]: {
         title: { 
-            en: "Egyptian 50 Plastres", 
-            vi: "50 Plastre Ai Cập" 
+            en: "Egyptian 50 Piastres", 
+            vi: "50 Piastre Ai Cập" 
+        },
+        issuer: {
+            en: "Central Bank Of Egypt",
+            vi: "Ngân Hàng Trung Ương Ai Cập"
         },
         year: "2017",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "135 \u00D7 70 mm",
         figure: null,
-        note: null
+        size: "135 \u00D7 70 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 5 Pounds", 
         vi: "5 Bảng Ai Cập" 
     },
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     year: "2021",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "145 \u00D7 70 mm",
 };
 
 index++; //index = 3
@@ -84,14 +90,17 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 20 Pounds", 
         vi: "20 Bảng Ai Cập" 
     },
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     year: "2017",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "155 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "155 \u00D7 70 mm",
 };
 
 index++; //index = 4
@@ -112,14 +121,17 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 50 Pounds", 
         vi: "50 Bảng Ai Cập" 
     },
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     year: "2022",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "160 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "160 \u00D7 70 mm",
 };
 
 index++; //index = 5
@@ -140,14 +152,17 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 100 Pounds", 
         vi: "100 Bảng Ai Cập" 
     },
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     year: "2023",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "165 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "165 \u00D7 70 mm",
 };
 
 index++; //index = 6
@@ -168,13 +183,17 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 200 Pounds", 
         vi: "200 Bảng Ai Cập" 
     },
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     year: "2018",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "165 \u00D7 72 mm",
     figure: null,
+    size: "165 \u00D7 72 mm",
     note: { 
         en: `2007\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 12 tờ tiền năm 2007 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -199,13 +218,16 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 10 Pounds", 
         vi: "10 Bảng Ai Cập" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "132 \u00D7 69 mm",
     figure: null,
+    size: "132 \u00D7 69 mm",
     note: { 
         en: `2022\'s top 19 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 19 tờ tiền năm 2022 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
@@ -230,13 +252,16 @@ slideshowInfo[`${index}`] = {
         en: "Egyptian 20 Pounds", 
         vi: "20 Bảng Ai Cập" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Egypt",
+        vi: "Ngân Hàng Trung Ương Ai Cập"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "137 \u00D7 69 mm",
     figure: null,
+    size: "137 \u00D7 69 mm",
     note: { 
         en: `2023\'s top 15 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 15 tờ tiền năm 2023 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`

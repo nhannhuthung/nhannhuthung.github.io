@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Norweigian 50 Kroner", 
             vi: "50 Krone Na Uy" 
         },
+        issuer: {
+            en: "Norges Bank",
+            vi: "Ngân Hàng Na Uy"
+        },
         year: "2005",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "128 \u00D7 60 mm",
         figure: { 
             en: "Peter Christen Asbjørnsen (1812-1885)", 
             vi: "Peter Christen Asbjørnsen (1812-1885)" 
         },
-        note: null
+        size: "128 \u00D7 60 mm",
     }
 };
 
@@ -59,12 +62,15 @@ slideshowInfo[`${index}`] = {
         en: "Norweigian 200 Kroner", 
         vi: "200 Krone Na Uy" 
     },
+    issuer: {
+        en: "Norges Bank",
+        vi: "Ngân Hàng Na Uy"
+    },
     year: "2016",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "140 \u00D7 70 mm",
 };

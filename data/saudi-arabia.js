@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Saudi 1 Riyal", 
             vi: "1 Riyal Ả Rập Xê Út" 
         },
+        issuer: {
+            en: "Saudi Arabian Monetary Agency",
+            vi: "Cơ Quan Tiền Tệ Ả Rập Xê Út"
+        },
         year: "1433 (2012)",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "133 \u00D7 63 mm",
         figure: { 
             en: "Abdullah bin Abdulaziz Al Saud (1924-2015)", 
             vi: "Abdullah bin Abdulaziz Al Saud (1924-2015)" 
         },
-        note: null
+        size: "133 \u00D7 63 mm",
     }
 };

@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Indonesian 1,000 Rupiah", 
             vi: "1.000 Rupiah Indonesia" 
         },
+        issuer: {
+            en: "Bank Indonesia",
+            vi: "Ngân Hàng Indonesia"
+        },
         year: "2009",
         type: { 
             en: "Circulating Standard Banknote", 
@@ -59,6 +63,10 @@ slideshowInfo[`${index}`] = {
         en: "Indonesian 2,000 Rupiah", 
         vi: "2.000 Rupiah Indonesia" 
     },
+    issuer: {
+        en: "Bank Indonesia",
+        vi: "Ngân Hàng Indonesia"
+    },
     year: "2015",
     type: { 
         en: "Circulating Standard Banknote", 
@@ -69,5 +77,4 @@ slideshowInfo[`${index}`] = {
         en: "Pangeran Antasari (1797-1862)", 
         vi: "Pangeran Antasari (1797-1862)" 
     },
-    note: null
 };

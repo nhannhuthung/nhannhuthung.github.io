@@ -27,16 +27,18 @@ const slideshowInfo = {
             en: "Zambian 50 Kwachas", 
             vi: "50 Kwacha Zambia" 
         },
-        year: null,
+        issuer: {
+            en: "Bank of Zambia",
+            vi: "Ngân Hàng Zambia"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "153 \u00D7 75 mm",
         figure: { 
             en: "Kenneth Kaunda (1924-2021)", 
             vi: "Kenneth Kaunda (1924-2021)" 
         },
-        note: null
+        size: "153 \u00D7 75 mm",
     }
 };

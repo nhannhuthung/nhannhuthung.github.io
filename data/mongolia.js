@@ -27,14 +27,16 @@ const slideshowInfo = {
             en: "Mongolian 10 Möngö", 
             vi: "10 Möngö Mông Cổ" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of Mongolia",
+            vi: "Ngân Hàng Mongolia"
+        },
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "45 \u00D7 90 mm",
         figure: null,
-        note: null
+        size: "45 \u00D7 90 mm",
     }
 };
 
@@ -56,14 +58,16 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 20 Möngö", 
         vi: "20 Möngö Mông Cổ" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "45 \u00D7 90 mm",
     figure: null,
-    note: null
+    size: "45 \u00D7 90 mm",
 };
 
 index++; //index = 3
@@ -84,14 +88,16 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 50 Möngö", 
         vi: "50 Möngö Mông Cổ" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     type: { 
         en: "Non-circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "45 \u00D7 90 mm",
     figure: null,
-    note: null
+    size: "45 \u00D7 90 mm",
 };
 
 index++; //index = 4
@@ -112,14 +118,16 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 1 Tögrög", 
         vi: "1 Tögrög Mông Cổ" 
     },
-    year: null,
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "115 \u00D7 57 mm",
     figure: null,
-    note: null
+    size: "115 \u00D7 57 mm",
 };
 
 index++; //index = 5
@@ -140,17 +148,20 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 10 Tögrög", 
         vi: "10 Tögrög Mông Cổ" 
     },
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     year: "2017",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "125 \u00D7 61 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
     },
-    note: null
+    size: "125 \u00D7 61 mm",
 };
 
 index++; //index = 6
@@ -171,17 +182,20 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 20 Tögrög", 
         vi: "20 Tögrög Mông Cổ" 
     },
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     year: "2017",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 \u00D7 64 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
     },
-    note: null
+    size: "130 \u00D7 64 mm",
 };
 
 index++; //index = 7
@@ -202,17 +216,20 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 50 Tögrög", 
         vi: "50 Tögrög Mông Cổ" 
     },
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     year: "2016",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "135 \u00D7 66 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
     },
-    note: null
+    size: "135 \u00D7 66 mm",
 };
 
 index++; //index = 8
@@ -233,15 +250,18 @@ slideshowInfo[`${index}`] = {
         en: "Mongolian 100 Tögrög", 
         vi: "100 Tögrög Mông Cổ" 
     },
+    issuer: {
+        en: "Bank Of Mongolia",
+        vi: "Ngân Hàng Mongolia"
+    },
     year: "2014",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "140 \u00D7 68 mm",
     figure: { 
         en: "Damdin Sükhbaatar (1893-1923)", 
         vi: "Damdin Sükhbaatar (1893-1923)" 
     },
-    note: null
+    size: "140 \u00D7 68 mm",
 };

@@ -229,18 +229,18 @@ img {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 10px;
-    overflow-y: auto;
+    overflow-y: auto !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .slideshow-info h3 {
     font-size: 25px;
-    margin-left: 15px;
+    margin: 20px 0 20px 15px;
 }
 
 .slideshow-info p {
     font-size: 18px;
-    margin-left: 30px;
+    margin: 12px 0 12px 30px;
 }
 
 .dashed {

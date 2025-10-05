@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "North Korean 200 Won", 
             vi: "200 Won Triều Tiên" 
         },
+        issuer: {
+            en: "Central Bank Of The Democratic People's Republic of Korea",
+            vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
+        },
         year: "1994 (2005)",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "140 \u00D7 72 mm",
         figure: null,
-        note: null
+        size: "140 \u00D7 72 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "North Korean 500 Won", 
         vi: "500 Won Triều Tiên" 
     },
+    issuer: {
+        en: "Central Bank Of The Democratic People's Republic of Korea",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
+    },
     year: "1996 (2007)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 \u00D7 75 mm",
     figure: null,
-    note: null
+    size: "156 \u00D7 75 mm",
 };
 
 index++; //index = 3
@@ -84,15 +90,18 @@ slideshowInfo[`${index}`] = {
         en: "North Korean 5,000 Won", 
         vi: "5.000 Won Triều Tiên" 
     },
+    issuer: {
+        en: "Central Bank Of The Democratic People's Republic of Korea",
+        vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
+    },
     year: "1995 (2006)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 \u00D7 75 mm",
     figure: { 
         en: "Kim Il Sung (1912-1994)", 
         vi: "Kim Il Sung (1912-1994)" 
     },
-    note: null
+    size: "156 \u00D7 75 mm",
 };

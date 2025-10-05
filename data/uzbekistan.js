@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Uzbekistani 100 Sum", 
             vi: "100 Sum Uzbekistan" 
         },
+        issuer: {
+            en: "Central Bank Of Uzbekistan",
+            vi: "Ngân Hàng Trung Ương Uzbekistan"
+        },
         year: "1994",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "142 \u00D7 69 mm",
         figure: null,
-        note: null
+        size: "142 \u00D7 69 mm",
     }
 };
 
@@ -56,6 +59,10 @@ slideshowInfo[`${index}`] = {
         en: "Uzbekistani 200 Sum", 
         vi: "200 Sum Uzbekistan" 
     },
+    issuer: {
+        en: "Central Bank Of Uzbekistan",
+        vi: "Ngân Hàng Trung Ương Uzbekistan"
+    },
     year: "1997",
     type: { 
         en: "Circulating Standard Banknote", 
@@ -63,7 +70,6 @@ slideshowInfo[`${index}`] = {
     },
     size: "145 \u00D7 77 mm",
     figure: null,
-    note: null
 };
 
 index++; //index = 3
@@ -84,6 +90,10 @@ slideshowInfo[`${index}`] = {
         en: "Uzbekistani 500 Sum", 
         vi: "500 Sum Uzbekistan" 
     },
+    issuer: {
+        en: "Central Bank Of Uzbekistan",
+        vi: "Ngân Hàng Trung Ương Uzbekistan"
+    },
     year: "1999",
     type: { 
         en: "Circulating Standard Banknote", 
@@ -91,5 +101,4 @@ slideshowInfo[`${index}`] = {
     },
     size: "144 \u00D7 78 mm",
     figure: null,
-    note: null
 };

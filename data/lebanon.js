@@ -28,7 +28,10 @@ const slideshowInfo = {
             en: "Lebanese 1,000 Lira", 
             vi: "1.000 Lira Liban" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of Lebanon",
+            vi: "Ngân Hàng Liban"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 

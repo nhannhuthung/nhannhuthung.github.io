@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Kenyan 100 Shillings", 
             vi: "100 Shilling Kenya" 
         },
+        issuer: {
+            en: "Central Bank Of Kenya",
+            vi: "Ngân Hàng Trung Ương Kenya"
+        },
         year: "2019",
         type: { 
             en: "Circulating Standard Banknote", 
@@ -34,7 +38,6 @@ const slideshowInfo = {
         },
         size: "128 \u00D7 64 mm",
         figure: null,
-        note: null
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Kenyan 200 Shillings", 
         vi: "200 Shilling Kenya" 
     },
+    issuer: {
+        en: "Central Bank Of Kenya",
+        vi: "Ngân Hàng Trung Ương Kenya"
+    },
     year: "2019",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "133 \u00D7 67 mm",
     figure: null,
-    note: null
+    size: "133 \u00D7 67 mm",
 };
 
 index++; //index = 3
@@ -84,13 +90,17 @@ slideshowInfo[`${index}`] = {
         en: "Kenyan 500 Shillings", 
         vi: "500 Shilling Kenya" 
     },
+    issuer: {
+        en: "Central Bank Of Kenya",
+        vi: "Ngân Hàng Trung Ương Kenya"
+    },
     year: "2019",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 68 mm",
     figure: null,
+    size: "138 \u00D7 68 mm",
     note: { 
         en: `2019\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
         vi: `Top 22 tờ tiền năm 2019 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
@@ -115,12 +125,15 @@ slideshowInfo[`${index}`] = {
         en: "Kenyan 1,000 Shillings", 
         vi: "1.000 Shilling Kenya" 
     },
+    issuer: {
+        en: "Central Bank Of Kenya",
+        vi: "Ngân Hàng Trung Ương Kenya"
+    },
     year: "2019",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "143 \u00D7 70 mm",
     figure: null,
-    note: null,
+    size: "143 \u00D7 70 mm",
 };

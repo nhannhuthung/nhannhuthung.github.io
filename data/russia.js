@@ -27,13 +27,17 @@ const slideshowInfo = {
             en: "Russian 100 Rubles", 
             vi: "100 Rúp Nga" 
         },
+        issuer: {
+            en: "Central Bank Of Russia",
+            vi: "Ngân Hàng Trung Ương Russia"
+        },
         year: "2018",
         type: { 
             en: "Circulating Commemorative Banknote", 
             vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
         },
-        size: "65 \u00D7 150 mm",
         figure: null,
+        size: "65 \u00D7 150 mm",
         note: { 
             en: `2018\'s top 16 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
             vi: `Top 16 tờ tiền năm 2018 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`

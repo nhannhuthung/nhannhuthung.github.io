@@ -27,17 +27,20 @@ const slideshowInfo = {
             en: "Omani 100 Baisa", 
             vi: "100 Baisa Oman" 
         },
+        issuer: {
+            en: "Central Bank Of Oman",
+            vi: "Ngân Hàng Trung Ương Oman"
+        },
         year: "1416 (1995)",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "140 \u00D7 72 mm",
         figure: { 
             en: "Qaboos bin Said (1940-2020)", 
             vi: "Qaboos bin Said (1940-2020)" 
         },
-        note: null
+        size: "140 \u00D7 72 mm",
     }
 };
 
@@ -59,12 +62,15 @@ slideshowInfo[`${index}`] = {
         en: "Omani 1 Rial", 
         vi: "1 Rial Oman" 
     },
+    issuer: {
+        en: "Central Bank Of Oman",
+        vi: "Ngân Hàng Trung Ương Oman"
+    },
     year: "1441 (2020)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "156 \u00D7 75 mm",
     figure: null,
-    note: null
+    size: "156 \u00D7 75 mm",
 };

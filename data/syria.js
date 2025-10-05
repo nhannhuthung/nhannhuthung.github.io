@@ -27,14 +27,16 @@ const slideshowInfo = {
             en: "Syrian 100 Pounds", 
             vi: "100 Bảng Syria" 
         },
-        year: null,
+        issuer: {
+            en: "Central Bank Of Syria",
+            vi: "Ngân Hàng Trung Ương Syria"
+        },
         type: { 
             en: "Non-Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "155 \u00D7 75 mm",
         figure: null,
-        note: null,
+        size: "155 \u00D7 75 mm",
     }
 };
 
@@ -56,12 +58,14 @@ slideshowInfo[`${index}`] = {
         en: "Syrian 200 Pounds", 
         vi: "200 Bảng Syria" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Costa Rica",
+        vi: "Ngân Hàng Trung Ương Costa Rica"
+    },
     type: { 
         en: "Non-Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    size: "160 \u00D7 75 mm",
     figure: null,
-    note: null,
+    size: "160 \u00D7 75 mm",
 };

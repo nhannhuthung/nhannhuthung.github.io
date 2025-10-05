@@ -27,7 +27,10 @@ const slideshowInfo = {
             en: "Colombian 2,000 Pesos", 
             vi: "2.000 Peso Colombia" 
         },
-        year: null,
+        issuer: {
+            en: "Bank Of The Republic Of Colombia",
+            vi: "Ngân Hàng Cộng Hòa Colombia"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -37,6 +40,5 @@ const slideshowInfo = {
             en: "Débora Arango Pérez (1907-2005)", 
             vi: "Débora Arango Pérez (1907-2005)" 
         },
-        note: null
     }
 };

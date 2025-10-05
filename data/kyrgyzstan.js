@@ -27,13 +27,16 @@ const slideshowInfo = {
             en: "Kyrgyz 1 Tyiyn", 
             vi: "1 Tyiyn Kyrgyzstan" 
         },
+        issuer: {
+            en: "Kyrgyz Bank",
+            vi: "Ngân Hàng Kyrgyzstan"
+        },
         year: "1954",
         type: { 
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        size: "90 \u00D7 70 mm",
         figure: null,
-        note: null
+        size: "90 \u00D7 70 mm",
     }
 };

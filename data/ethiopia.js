@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Ethiopian 10 Birrs", 
             vi: "10 Birr Ethiopia" 
         },
+        issuer: {
+            en: "National Bank Of Ethiopia",
+            vi: "Ngân Hàng Quốc Gia Ethiopia"
+        },
         year: "2012 (2020)",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "142 \u00D7 67 mm",
         figure: null,
-        note: null
+        size: "142 \u00D7 67 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Ethiopian 50 Birrs", 
         vi: "50 Birr Ethiopia" 
     },
+    issuer: {
+        en: "National Bank Of Ethiopia",
+        vi: "Ngân Hàng Quốc Gia Ethiopia"
+    },
     year: "2012 (2020)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "145 \u00D7 70 mm",
     figure: null,
-    note: null
+    size: "145 \u00D7 70 mm",
 };
 
 index++; //index = 3
@@ -84,12 +90,15 @@ slideshowInfo[`${index}`] = {
         en: "Ethiopian 100 Birrs", 
         vi: "100 Birr Ethiopia" 
     },
+    issuer: {
+        en: "National Bank Of Ethiopia",
+        vi: "Ngân Hàng Quốc Gia Ethiopia"
+    },
     year: "2015 (2023)",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "147 \u00D7 72 mm",
     figure: null,
-    note: null
+    size: "147 \u00D7 72 mm",
 };

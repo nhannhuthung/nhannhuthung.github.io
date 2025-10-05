@@ -398,9 +398,25 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
 
     container.innerHTML = ""; // Clear old info
 
+    const isFantasyBanknote = info.type && 
+        ((typeof info.type === "object" && info.type.en === "Fantasy Banknote") || 
+         info.type === "Fantasy Banknote");
+
     const labels = {
-        en: { year: "Year", type: "Type", size: "Size", figure: "Figure" },
-        vi: { year: "Năm", type: "Loại", size: "Kích Thước", figure: "Vĩ Nhân" }
+        en: { 
+            issuer: isFantasyBanknote ? "Issuing Entity" : "Issuing Bank",
+            year: "Year", 
+            type: "Type", 
+            figure: "Figure",
+            size: "Size", 
+        },
+        vi: { 
+            issuer: isFantasyBanknote ? "Tổ Chức Phát Hành" : "Ngân Hàng Phát Hành",
+            year: "Năm", 
+            type: "Loại", 
+            figure: "Vĩ Nhân",
+            size: "Kích Thước", 
+        }
     };
 
     const infoDiv = document.createElement("div");
@@ -433,9 +449,9 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
         infoDiv.appendChild(titleElement);
     }
 
+    addInfoElement("issuer", info.issuer);
     addInfoElement("year", info.year);
     addInfoElement("type", info.type);
-    addInfoElement("size", info.size);
     
     if (info.figure) {
         let figureData;
@@ -447,6 +463,8 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
         }
         addInfoElement("figure", figureData);
     }
+    
+    addInfoElement("size", info.size);
 
     if (info.note) {
         const noteElement = document.createElement("p");

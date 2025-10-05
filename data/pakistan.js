@@ -27,16 +27,19 @@ const slideshowInfo = {
             en: "Pakistani 100 Rupees", 
             vi: "100 Rupee Pakistan" 
         },
+        issuer: {
+            en: "State Bank of Pakistan",
+            vi: "Ngân Hàng Nhà Nước Pakistan"
+        },
         year: "2015",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "139 \u00D7 65 mm",
         figure: { 
             en: "Muhammad Ali Jinnah (1876-1948)", 
             vi: "Muhammad Ali Jinnah (1876-1948)" 
         },
-        note: null
+        size: "139 \u00D7 65 mm",
     }
 };

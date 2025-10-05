@@ -27,6 +27,10 @@ const slideshowInfo = {
             en: "Irish 5 Pounds", 
             vi: "5 Bảng Ireland" 
         },
+        issuer: {
+            en: "Central Bank Of Ireland",
+            vi: "Ngân Hàng Trung Ương Ireland"
+        },
         year: "1995",
         type: { 
             en: "Non-circulating Standard Banknote", 
@@ -37,6 +41,5 @@ const slideshowInfo = {
             en: "Catherine McAuley (1778-1841)", 
             vi: "Catherine McAuley (1778-1841)" 
         },
-        note: null
     }
 };

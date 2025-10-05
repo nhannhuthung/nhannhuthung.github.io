@@ -28,6 +28,10 @@ const slideshowInfo = {
             en: "Moldovan 1 Leu", 
             vi: "1 Leu Moldova" 
         },
+        issuer: {
+            en: "National Bank of Moldova",
+            vi: "Ngân Hàng Quốc Gia Moldova"
+        },
         year: "2015",
         type: { 
             en: "Circulating Standard Banknote", 
@@ -38,6 +42,5 @@ const slideshowInfo = {
             en: "Stephen III ((1433-1440)?-1504)", 
             vi: "Stephen III ((1433-1440)?-1504)" 
         },
-        note: null
     }
 };

@@ -32,12 +32,11 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "100 \u00D7 60 mm",
         figure: { 
             en: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)", 
             vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 
         },
-        note: null
+        size: "100 \u00D7 60 mm",
     }
 };
 
@@ -59,15 +58,18 @@ slideshowInfo[`${index}`] = {
         en: "Bangladeshi 5 Taka", 
         vi: "5 Taka Bangladesh" 
     },
+    issuer: {
+        en: "Bangladesh Bank",
+        vi: "Ngân Hàng Bangladesh"
+    },
     year: "2015",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "142 \u00D7 68 mm",
     figure: { 
         en: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)", 
         vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 
     },
-    note: null
+    size: "142 \u00D7 68 mm",
 };

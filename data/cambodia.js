@@ -27,14 +27,17 @@ const slideshowInfo = {
             en: "Cambodian 500 Riels", 
             vi: "500 Riel Campuchia" 
         },
+        issuer: {
+            en: "National Bank of Cambodia",
+            vi: "Ngân Hàng Quốc Gia Campuchia"
+        },
         year: "2004",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "138 \u00D7 64 mm",
         figure: null,
-        note: null
+        size: "138 \u00D7 64 mm",
     }
 };
 
@@ -56,14 +59,17 @@ slideshowInfo[`${index}`] = {
         en: "Cambodian 1,000 Riels", 
         vi: "1.000 Riel Campuchia" 
     },
+    issuer: {
+        en: "National Bank of Cambodia",
+        vi: "Ngân Hàng Quốc Gia Campuchia"
+    },
     year: "2007",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 64 mm",
     figure: null,
-    note: null
+    size: "138 \u00D7 64 mm",
 };
 
 index++; //index = 3
@@ -84,17 +90,20 @@ slideshowInfo[`${index}`] = {
         en: "Cambodian 100 Riels", 
         vi: "100 Riel Campuchia" 
     },
+    issuer: {
+        en: "National Bank of Cambodia",
+        vi: "Ngân Hàng Quốc Gia Campuchia"
+    },
     year: "2014",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 64 mm",
     figure: { 
         en: "Norodom Sihanouk (1941-1955)", 
         vi: "Norodom Sihanouk (1941-1955)" 
     },
-    note: null
+    size: "138 \u00D7 64 mm",
 };
 
 index++; //index = 4
@@ -115,15 +124,18 @@ slideshowInfo[`${index}`] = {
         en: "Cambodian 500 Riels", 
         vi: "500 Riel Campuchia" 
     },
+    issuer: {
+        en: "National Bank of Cambodia",
+        vi: "Ngân Hàng Quốc Gia Campuchia"
+    },
     year: "2014",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "138 \u00D7 64 mm",
     figure: { 
         en: "Norodom Sihamoni (1953-Present)", 
         vi: "Norodom Sihamoni (1953-Present)" 
     },
-    note: null
+    size: "138 \u00D7 64 mm",
 };

@@ -27,12 +27,14 @@ const slideshowInfo = {
             en: "Turkish 20 Lira", 
             vi: "20 Lira Thổ Nhĩ Kỳ" 
         },
-        year: null,
+        issuer: {
+            en: "Central Bank Of Turkey",
+            vi: "Ngân Hàng Trung Ương Thổ Nhĩ Kỳ"
+        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "142 \u00D7 68 mm",
         figure: [
             {
                 en: "Mustafa Kemal Atatürk (1881?-1938)",
@@ -43,7 +45,7 @@ const slideshowInfo = {
                 vi: "Mimar Kemaleddin (1870-1927)" 
             }
         ],
-        note: null
+        size: "142 \u00D7 68 mm",
     }
 };
 
@@ -65,12 +67,14 @@ slideshowInfo[`${index}`] = {
         en: "Turkish 5 Lira", 
         vi: "5 Lira Thổ Nhĩ Kỳ" 
     },
-    year: null,
+    issuer: {
+        en: "Central Bank Of Turkey",
+        vi: "Ngân Hàng Trung Ương Thổ Nhĩ Kỳ"
+    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    size: "130 \u00D7 64 mm",
     figure: [
         {
             en: "Mustafa Kemal Atatürk (1881?-1938)",
@@ -81,5 +85,5 @@ slideshowInfo[`${index}`] = {
             vi: "Ayd\u0131n Say\u0131l\u0131 (1913-1993)" 
         }
     ],
-    note: null
+    size: "130 \u00D7 64 mm",
 };
