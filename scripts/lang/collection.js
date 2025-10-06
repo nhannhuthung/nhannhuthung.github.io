@@ -50,14 +50,14 @@ const main_trans = {
 
         remark: `Tổng Quan`,
         remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – tầm 700 đồng xu, mình không thể đưa tất cả lên đây được.`,
-        remark_para_2: `Một vài tiêu điểm về bộ sưu tập tiền xu của mình:`,
+        remark_para_2: `Một vài điểm nhấn về bộ sưu tập tiền xu của mình:`,
         remark_subpara_1: `<span>&#9757;</span> Có khoảng 70 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
-        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tiêu điểm.`,
+        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tâm điểm.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn. 😁`,
 
         last_update: `Cập Nhật Lần Cuối:`,
 
-        highlight: `Tiêu Điểm`,
+        highlight: `Tâm Điểm`,
         banknote: `Tiền Giấy`,
         norway: `Na Uy`,
         hong_kong: `Hồng Kông`,
@@ -311,7 +311,7 @@ function showContinentDetails(continentKey) {
     // Back button inside container
     let backBtn = document.createElement("button");
     backBtn.className = "back-button";
-    backBtn.innerText = currentLang === "en" ? "\u2190 Back" : "\u2190 Quay Lại";
+    backBtn.innerText = currentLang === "en" ? "Back" : "Quay Lại";
     backBtn.onclick = showContinentPanels;
     continentContainer.appendChild(backBtn);
 
