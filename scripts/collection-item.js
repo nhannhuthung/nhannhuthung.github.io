@@ -24,6 +24,7 @@ const countryData = {
     "america": {
         "name": { "en": "America", "vi": "Châu Mỹ" },
         "countries": [
+            { "en": "Brazil", "vi": "Brasil", "link": "brazil.html" },
             { "en": "Canada", "vi": "Canada", "link": "canada.html" },
             { "en": "Colombia", "vi": "Colombia", "link": "colombia.html" },
             { "en": "Costa Rica", "vi": "Costa Rica", "link": "costa-rica.html" },

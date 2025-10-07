@@ -36,7 +36,6 @@ const slideshowInfo = {
             en: "Non-circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        figure: null,
         size: "115 \u00D7 52 mm",
     }
 };
@@ -167,7 +166,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "70 \u00D7 145 mm",
 };
 
@@ -198,7 +196,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "70 \u00D7 145 mm",
     note: { 
         en: `2021\'s top 20 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 

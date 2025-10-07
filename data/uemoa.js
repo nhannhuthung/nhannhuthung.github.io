@@ -37,7 +37,6 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        figure: null,
         size: "114 \u00D7 60 mm",
     }
 };

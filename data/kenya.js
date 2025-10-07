@@ -37,7 +37,6 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "128 \u00D7 64 mm",
-        figure: null,
     }
 };
 
@@ -68,7 +67,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "133 \u00D7 67 mm",
 };
 
@@ -99,7 +97,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "138 \u00D7 68 mm",
     note: { 
         en: `2019\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
@@ -134,6 +131,5 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "143 \u00D7 70 mm",
 };

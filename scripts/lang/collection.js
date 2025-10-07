@@ -90,6 +90,7 @@ const countries = {
             "south-america": {
                 "name": { "en": "South America", "vi": "Nam Mỹ" },
                 "countries": [
+                    { "en": "Brazil", "vi": "Brasil", "url": "collection/brazil.html" },
                     { "en": "Colombia", "vi": "Colombia", "url": "collection/colombia.html" },
                     { "en": "Venezuela", "vi": "Venezuela", "url": "collection/venezuela.html" },
                 ]

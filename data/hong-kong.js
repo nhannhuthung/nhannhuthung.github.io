@@ -32,7 +32,6 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        figure: null,
         size: "138 \u00D7 69 mm",
     }
 };
@@ -60,7 +59,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "138 \u00D7 69 mm",
 };
 
@@ -91,7 +89,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "148 \u00D7 74 mm",
 };
 
@@ -122,7 +119,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "148 \u00D7 74 mm",
 };
 
@@ -153,7 +149,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
 };
 
@@ -184,7 +179,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "148 \u00D7 74 mm",
 };
 
@@ -215,7 +209,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "143 \u00D7 72 mm",
 };
 
@@ -246,7 +239,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
 };
 
@@ -277,7 +269,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "143 \u00D7 72 mm",
 };
 
@@ -308,7 +299,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "148 \u00D7 74 mm",
 };
 
@@ -339,7 +329,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
 };
 
@@ -370,7 +359,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "158 \u00D7 79 mm",
 };
 
@@ -401,7 +389,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
 };
 
@@ -432,7 +419,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "158 \u00D7 79 mm",
 };
 
@@ -463,7 +449,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
     note: {
         en: `2019\'s top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
@@ -498,7 +483,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "153 \u00D7 77 mm",
 };
 
@@ -531,7 +515,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "153 \u00D7 77 mm",
-    figure: null,
 };
 
 index++ //index = 18
@@ -561,7 +544,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "143 \u00D7 72 mm",
 };
 
@@ -592,6 +574,5 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "158 \u00D7 79 mm",
 };

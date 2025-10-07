@@ -105,7 +105,6 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    figure: null,
     size: "160 \u00D7 80 mm",
 };
 
@@ -170,7 +169,6 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    figure: null,
     size: "160 \u00D7 80 mm",
 };
 
@@ -235,7 +233,6 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    figure: null,
     size: "160 \u00D7 80 mm",
 };
 
@@ -300,7 +297,6 @@ slideshowInfo[`${index}`] = {
         en: "Fantasy Banknote", 
         vi: "Tiền Sưu Tầm" 
     },
-    figure: null,
     size: "160 \u00D7 80 mm",
 };
 
@@ -332,7 +328,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Sưu Tầm" 
     },
     size: "160 \u00D7 80 mm",
-    figure: null,
 };
 
 index++; //index = 11
@@ -363,7 +358,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Sưu Tầm" 
     },
     size: "160 \u00D7 80 mm",
-    figure: null,
 };
 
 index++; //index = 12
@@ -394,7 +388,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Sưu Tầm" 
     },
     size: "160 \u00D7 80 mm",
-    figure: null,
 };
 
 index++; //index = 13
@@ -425,7 +418,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Sưu Tầm" 
     },
     size: "160 \u00D7 80 mm",
-    figure: null,
 };
 
 index++; //index = 14
@@ -456,5 +448,4 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Sưu Tầm" 
     },
     size: "160 \u00D7 80 mm",
-    figure: null,
 };

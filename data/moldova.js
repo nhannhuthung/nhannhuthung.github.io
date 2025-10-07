@@ -37,10 +37,10 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "114 \u00D7 58 mm",
         figure: { 
             en: "Stephen III ((1433-1440)?-1504)", 
             vi: "Stephen III ((1433-1440)?-1504)" 
         },
+        size: "114 \u00D7 58 mm",
     }
 };

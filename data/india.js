@@ -204,6 +204,5 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "97 \u00D7 63 mm",
 };

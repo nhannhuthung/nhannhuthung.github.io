@@ -37,7 +37,5 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "115 \u00D7 60 mm",
-        figure: null,
-        note: null
     }
 };

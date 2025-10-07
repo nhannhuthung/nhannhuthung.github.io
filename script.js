@@ -52,6 +52,7 @@ const pages = {
 
 // Define country pages with multiple keywords
 const countries_list = {
+  "brazil": ["brazil", "federative republic of brazil", "brasil", "cộng hòa liên bang brasil"],
   "canada": ["canada", "ca na đa"],
   "colombia": ["colombia", "republic of colombia", "cô lôm bi a"],
   "costa-rica": ["costa rica", "republic of costa rica"],
@@ -133,6 +134,7 @@ const displayCountry = {
   "about": { en: "About", vi: "Giới Thiệu" },
   "contact": { en: "Contact", vi: "Liên Hệ" },
 
+  "brazil": { en: "Brazil", vi: "Brasil" },
   "canada": { en: "Canada", vi: "Canada" },
   "colombia": { en: "Colombia", vi: "Colombia" },
   "costa-rica": { en: "Costa Rica", vi: "Costa Rica" },

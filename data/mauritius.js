@@ -36,12 +36,11 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "135 \u00D7 65 mm",
         figure: { 
             en: "Moilin Jean Ah-Chuen (1911-1991)", 
             vi: "Moilin Jean Ah-Chuen (1911-1991)" 
         },
-        note: null
+        size: "135 \u00D7 65 mm",
     }
 };
 

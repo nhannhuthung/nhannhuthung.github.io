@@ -36,7 +36,6 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        figure: null,
         size: "142 \u00D7 69 mm",
     }
 };
@@ -69,7 +68,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "145 \u00D7 77 mm",
-    figure: null,
 };
 
 index++; //index = 3
@@ -100,5 +98,4 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "144 \u00D7 78 mm",
-    figure: null,
 };

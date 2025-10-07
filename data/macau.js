@@ -37,7 +37,6 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        figure: null,
         size: "138 \u00D7 69 mm",
         note: {
             en: `2006\'s top 15 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
@@ -73,7 +72,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "138 \u00D7 69 mm",
     note: {
         en: `2014\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,

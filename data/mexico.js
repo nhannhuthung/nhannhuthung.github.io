@@ -139,7 +139,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard/Commemorative Banknote", 
         vi: "Tiền Tiêu Chuẩn/Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "129 \u00D7 65 mm",
 };
 
@@ -170,7 +169,6 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "65 \u00D7 125 mm",
     note: { 
         en: `Banknote of 2021 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 

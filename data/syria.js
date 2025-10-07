@@ -35,7 +35,6 @@ const slideshowInfo = {
             en: "Non-Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
-        figure: null,
         size: "155 \u00D7 75 mm",
     }
 };
@@ -66,6 +65,5 @@ slideshowInfo[`${index}`] = {
         en: "Non-Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
-    figure: null,
     size: "160 \u00D7 75 mm",
 };

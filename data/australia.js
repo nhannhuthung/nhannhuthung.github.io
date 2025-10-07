@@ -35,7 +35,6 @@ const slideshowInfo = {
             en: "Non-circulating Commemorative Banknote", 
             vi: "Tiền Kỷ Niệm Đã Từng Lưu Hành" 
         },
-        figure: null,
         size: "155 \u00D7 78 mm",
         note: { 
             en: "First polymer banknote in the world", 

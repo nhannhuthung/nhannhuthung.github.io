@@ -36,11 +36,10 @@ const slideshowInfo = {
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
-        size: "128 \u00D7 64 mm",
         figure: { 
             en: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)", 
             vi: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)" 
         },
-        note: null
+        size: "128 \u00D7 64 mm",
     }
 };

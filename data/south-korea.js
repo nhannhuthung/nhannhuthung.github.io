@@ -172,6 +172,5 @@ slideshowInfo[`${index}`] = {
         en: "Circulating Commemorative Banknote", 
         vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
     },
-    figure: null,
     size: "140 \u00D7 75 mm",
 };
