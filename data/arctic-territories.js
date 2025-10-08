@@ -315,7 +315,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Arctic Territories' 25 Dollar", 
+        en: "Arctic Territories' 25 Dollars", 
         vi: "25 Đô La Lãnh Thổ Bắc Cực" 
     },
     issuer: {
@@ -345,7 +345,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Arctic Territories' 50 Dollar", 
+        en: "Arctic Territories' 50 Dollars", 
         vi: "50 Đô La Lãnh Thổ Bắc Cực" 
     },
     issuer: {
@@ -375,7 +375,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Arctic Territories' 100 Dollar", 
+        en: "Arctic Territories' 100 Dollars", 
         vi: "100 Đô La Lãnh Thổ Bắc Cực" 
     },
     issuer: {
@@ -405,7 +405,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Arctic Territories' 250 Dollar", 
+        en: "Arctic Territories' 250 Dollars", 
         vi: "250 Đô La Lãnh Thổ Bắc Cực" 
     },
     issuer: {
@@ -435,7 +435,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Arctic Territories' 500 Dollar", 
+        en: "Arctic Territories' 500 Dollars", 
         vi: "500 Đô La Lãnh Thổ Bắc Cực" 
     },
     issuer: {
