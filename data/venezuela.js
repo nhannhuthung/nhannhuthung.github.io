@@ -25,7 +25,7 @@ const images = {
 const slideshowInfo = {
     [`${index}`]: {
         title: { 
-            en: "Venezuelan 5 Bolivar", 
+            en: "Venezuelan 5 Bolivares", 
             vi: "5 Bolivar Venezuela" 
         },
         issuer: {
