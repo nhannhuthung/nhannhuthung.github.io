@@ -28,7 +28,7 @@ const slideshowInfo = {
             vi: "50 Krone Na Uy" 
         },
         issuer: {
-            en: "Norges Bank",
+            en: "Bank Of Norway",
             vi: "Ngân Hàng Na Uy"
         },
         year: "2005",
@@ -63,7 +63,7 @@ slideshowInfo[`${index}`] = {
         vi: "200 Krone Na Uy" 
     },
     issuer: {
-        en: "Norges Bank",
+        en: "Bank Of Norway",
         vi: "Ngân Hàng Na Uy"
     },
     year: "2016",
