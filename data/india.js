@@ -195,10 +195,6 @@ slideshowInfo[`${index}`] = {
         en: "Indian 1 Rupee", 
         vi: "1 Rupee Ấn Độ" 
     },
-    issuer: {
-        en: "Reserve Bank Of India",
-        vi: "Ngân Hàng Dự Trữ Ấn Độ"
-    },
     year: "2015",
     type: { 
         en: "Circulating Standard Banknote", 
