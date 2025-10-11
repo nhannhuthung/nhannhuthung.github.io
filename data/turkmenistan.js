@@ -96,6 +96,10 @@ slideshowInfo[`${index}`] = {
         en: "Turkmen 1 Manat", 
         vi: "1 Manat Turkmenistan" 
     },
+    issuer: {
+        en: "Central Bank Of Turkmenistan",
+        vi: "Ngân Hàng Trung Ương Turkmenistan"
+    },
     year: "2020",
     type: { 
         en: "Circulating Standard Banknote", 
