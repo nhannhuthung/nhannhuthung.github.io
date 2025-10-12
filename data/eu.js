@@ -27,10 +27,6 @@ const slideshowInfo = {
             en: "European Union's 5 Euros", 
             vi: "5 Euro Liên Minh Châu Âu" 
         },
-        issuer: {
-            en: "European Central Bank",
-            vi: "Ngân Hàng Trung Ương Châu Âu"
-        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
