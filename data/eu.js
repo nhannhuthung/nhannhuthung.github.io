@@ -53,10 +53,6 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 10 Euros", 
         vi: "10 Euro Liên Minh Châu Âu" 
     },
-    issuer: {
-        en: "European Central Bank",
-        vi: "Ngân Hàng Trung Ương Châu Âu"
-    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
