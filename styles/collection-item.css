@@ -44,11 +44,12 @@ html, body {
 
 #back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 9%;
+    right: 1.5%;
     padding: 10px 15px;
     font-size: 18px;
     background-color: #5789be;
+    border: 2px solid rgba(0, 132, 255, 0.3) !important;
     color: white;
     border: none;
     border-radius: 5px;
@@ -60,6 +61,7 @@ html, body {
 
 #back-to-top:hover {
     background-color: #356ca7;
+    box-shadow: 0 6px 15px rgba(0, 89, 255, 0.5);
 }
 
 .container {
@@ -142,15 +144,14 @@ html, body {
 .mySlides img {
     width: 550px;
     height: 100%;
-    transition: transform 0.2s ease;
-    transform-origin: center center;
-}
-
-.mySlides:hover img {
-    transform: scale(3); /* Zoom factor */
+    transition: transform 0.3s ease;
     cursor: zoom-in;
 }
 
+.mySlides.zooming img {
+    transform: scale(3);
+    cursor: zoom-out;
+}
 img {
     vertical-align: middle;
 }
@@ -178,23 +179,10 @@ img {
 .slideshow-container {
     max-width: 1000px;
     position: relative;
-    cursor: pointer;
 }
 
 #slideshow1 {
     margin-bottom: 45px;
-}
-
-.description {
-    color: #f2f2f2;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 15px;
-    padding: 8px 10px;
-    position: absolute;
-    bottom: 5px;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 5px;
 }
 
 .custom-link {
@@ -205,22 +193,44 @@ img {
     color: #00712D;
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 6px 9px;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 5px;
+.global-play-pause-btn {
+    position: fixed;
+    bottom: 3%;
+    right: 1.5%;
+    padding: 6px 12px;
+    color: white;
+    font-size: 20px;
+    background-color: #5789be;
+    border: 2px solid rgba(0, 132, 255, 0.3);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    z-index: 999;
+    user-select: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Fading animation */
+.global-play-pause-btn:hover {
+    background-color: #356ca7;
+    box-shadow: 0 6px 15px rgba(0, 89, 255, 0.5);
+}
+
+.global-play-pause-btn:focus {
+    outline: none;
+}
+
+.global-play-pause-btn:active {
+    transform: scale(0.95);
+}
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
 }
 
 .slideshow-info {
@@ -231,16 +241,97 @@ img {
     border-radius: 10px;
     overflow-y: auto !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .slideshow-info h3 {
     font-size: 25px;
-    margin: 20px 0 20px 15px;
+    margin: 20px 15px 6px 15px;
 }
 
 .slideshow-info p {
     font-size: 18px;
-    margin: 12px 0 12px 30px;
+    margin: 10px 30px;
+}
+
+.slideshow-info p em {
+    font-size: 18px;
+}
+
+.slide-arrow,
+.description,
+.numbertext {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.slideshow-container:hover .slide-arrow,
+.slideshow-container:hover .description,
+.slideshow-container:hover .numbertext {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slideshow-container.zoomed .slide-arrow,
+.slideshow-container.zoomed .description,
+.slideshow-container.zoomed .numbertext {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.description {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    padding: 8px 10px;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 6px 9px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.slide-arrow {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 21px;
+    padding: 6px;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    cursor: pointer;
+    margin-top: -22px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    user-select: none;
+    z-index: 10;
+}
+
+.slide-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-arrow.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.slide-arrow.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .dashed {
@@ -359,22 +450,22 @@ hr {
     padding: 10px 15px;
     font-size: 15px;
     font-weight: 500;
-    border: 2px solid #1c1a1a;
-    background-color: #ffffff;
+    border: 2px solid #088946;
+    background-color: #0aa254;
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 5px;
     white-space: nowrap;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px #00000033;
     font-family: 'Times New Roman', Times, serif;
     width: auto !important;
     display: inline-block;
 }
 
 .nav-button:hover {
-    background-color: #0aa254;
-    color: #fff;
-    border: 2px solid #088946;
+    background-color: #08913c;
+    box-shadow: 0 6px 15px rgba(0, 250, 121, 0.5)
 }
 
 .prev-button,
@@ -412,11 +503,6 @@ hr {
         height: auto;
         width: 100%;
     }
-
-    .mySlides:hover img {
-        transform: none;
-        cursor: default;
-    }    
 
     .slideshow-info {
         width: 100%;
@@ -492,16 +578,21 @@ hr {
     }
 
     #slideshow1 {
-        margin-bottom: 180px;
+        margin-bottom: 36%;
     }
 
     .slideshow-info h3 {
         font-size: 20px;
-        margin: 18px 0px 18px 15px;
+        margin: 10px 0px 10px 15px;
     }
 
     .slideshow-info p {
         font-size: 15px;
+        margin: 8px 25px;
+    }
+
+    .slideshow-info p em {
+        font-size: 15px !important;
     }
 
     .description {
@@ -512,6 +603,10 @@ hr {
     .numbertext {
         font-size: 10px;
         padding: 5px 8px;
+    }
+
+    .slide-arrow {
+        font-size: 15px;
     }
 
     .new-label {
@@ -528,8 +623,20 @@ hr {
         flex-direction: row !important;
     }
     
+    .global-play-pause-btn {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
+
+    #back-to-top {
+        font-size: 16px;
+        padding: 7px 11px;
+        border-radius: 6px;
+    }
+
     .nav-button {
-        padding: 8px 12px;
+        padding: 6px 10px;
         font-size: 16px;
         min-width: 40px;
     }

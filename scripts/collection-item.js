@@ -199,45 +199,15 @@ function toggleLanguage() {
         updateSlideshowDescriptions(index, currentLang);
     });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    currentLang = localStorage.getItem('language') || 'en';
-
-    updatePageLanguage(currentLang);
-    updatePageHeading(currentLang);
-    insertSidebarHTML('SideBar'); 
-    insertSidebarHTML('SideBarCollection'); 
-    createNavigationButtons();
-
-    const mainContent = document.getElementById('main-to-top');
-    const backToTopButton = document.getElementById('back-to-top');
-
-    if (mainContent && backToTopButton) {
-        mainContent.addEventListener('scroll', () => {
-            if (mainContent.scrollTop > 200) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-    }
-
-    Object.keys(images).forEach(index => {
-        // Build the slide images
-        createSlideshow("slide" + index, images[index]);
-
-        // Start the slideshow, and pass info config
-        new Slideshow("slide" + index, 5000, {
-            containerId: "info" + index,
-            data: slideshowInfo[index]
-        });
-    });
-});
 //--// function to print out code for sidebar //--//
 
 
 //--// function to display banknote //--//
 class Slideshow {
+    static allSlideshows = []; // Track all slideshow instances
+    static globalPaused = false; // Global pause state
+    static globalButtonCreated = false; // Track if global button exists
+
     constructor(containerId, interval = 5000, infoConfig = null) {
         this.container = document.getElementById(containerId);
         if (!this.container) {
@@ -249,13 +219,106 @@ class Slideshow {
         this.interval = interval;
         this.autoSlideTimeout = null;
         this.isPausedByHover = false;
+        this.isZoomed = false;
         this.infoConfig = infoConfig;
+
+        // Add this instance to the global array
+        Slideshow.allSlideshows.push(this);
 
         // Start the slideshow
         this.showSlides();
 
-        // Add event listener for manual swapping
-        this.container.addEventListener("click", () => this.swap());
+        // Add navigation arrows
+        this.addNavigationArrows();
+        
+        // Create global play/pause button only once
+        if (!Slideshow.globalButtonCreated) {
+            Slideshow.createGlobalPlayPauseButton();
+            Slideshow.globalButtonCreated = true;
+        }
+    }
+
+    static createGlobalPlayPauseButton() {
+        const playPauseBtn = document.createElement("button");
+        playPauseBtn.id = "global-play-pause-btn";
+        playPauseBtn.className = "global-play-pause-btn";
+        playPauseBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
+        playPauseBtn.title = "Pause all slideshows";
+        
+        playPauseBtn.onclick = () => {
+            Slideshow.toggleGlobalPlayPause(playPauseBtn);
+        };
+
+        document.body.appendChild(playPauseBtn);
+    }
+
+    static toggleGlobalPlayPause(button) {
+        Slideshow.globalPaused = !Slideshow.globalPaused;
+        
+        if (Slideshow.globalPaused) {
+            // Pause all slideshows
+            button.innerHTML = "&#9654;"; // Play icon
+            button.title = "Play all slideshows";
+            Slideshow.allSlideshows.forEach(slideshow => {
+                slideshow.pause();
+            });
+        } else {
+            // Resume all slideshows
+            button.innerHTML = "&#10074;&#10074;"; // Pause icon
+            button.title = "Pause all slideshows";
+            Slideshow.allSlideshows.forEach(slideshow => {
+                slideshow.resume();
+            });
+        }
+    }
+
+    addNavigationArrows() {
+        // Find the slideshow-container div (the actual container with slides)
+        const slideshowContainer = this.container.querySelector('.slideshow-container');
+        if (!slideshowContainer) return;
+
+        // Create previous arrow
+        const prevArrow = document.createElement("a");
+        prevArrow.className = "slide-arrow prev";
+        prevArrow.innerHTML = "&#10094;";
+        prevArrow.onclick = (e) => {
+            e.stopPropagation();
+            this.changeSlide(-1);
+        };
+
+        // Create next arrow
+        const nextArrow = document.createElement("a");
+        nextArrow.className = "slide-arrow next";
+        nextArrow.innerHTML = "&#10095;";
+        nextArrow.onclick = (e) => {
+            e.stopPropagation();
+            this.changeSlide(1);
+        };
+
+        slideshowContainer.appendChild(prevArrow);
+        slideshowContainer.appendChild(nextArrow);
+    }
+
+    changeSlide(direction) {
+        clearTimeout(this.autoSlideTimeout);
+
+        // Hide all slides
+        for (let i = 0; i < this.slides.length; i++) {
+            this.slides[i].style.display = "none";
+        }
+
+        // Calculate new slide index
+        this.slideIndex = (this.slideIndex + direction + this.slides.length) % this.slides.length;
+        this.slides[this.slideIndex].style.display = "block";
+
+        // Re-attach listeners to the new image
+        this.addImageListeners();
+        this.updateInfo();
+
+        // Restart auto-sliding
+        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
+            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
+        }
     }
 
     updateInfo() {
@@ -269,20 +332,59 @@ class Slideshow {
         }
     }
 
-    addHoverListeners() {
+    addImageListeners() {
         const currentSlide = this.slides[this.slideIndex];
         const img = currentSlide.querySelector("img");
         if (!img) return;
 
+        // Click to zoom/unzoom
+        img.onclick = (e) => {
+            e.stopPropagation();
+            this.toggleZoom();
+        };
+
+        // Hover effects only when not zoomed
         img.onmouseenter = () => {
-            this.isPausedByHover = true;
-            this.pause();
+            if (!this.isZoomed) {
+                this.isPausedByHover = true;
+                this.pause();
+            }
         };
 
         img.onmouseleave = () => {
-            this.isPausedByHover = false;
-            this.resume();
+            if (!this.isZoomed) {
+                this.isPausedByHover = false;
+                this.resume();
+            }
         };
+
+        // Mouse move for zoom origin - works both when zoomed and not zoomed
+        img.onmousemove = (e) => {
+            const rect = e.target.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            img.style.transformOrigin = `${x}% ${y}%`;
+        };
+    }
+
+    toggleZoom() {
+        const currentSlide = this.slides[this.slideIndex];
+        const slideshowContainer = this.container.querySelector('.slideshow-container');
+        const arrows = slideshowContainer ? slideshowContainer.querySelectorAll('.slide-arrow') : [];
+
+        if (this.isZoomed) {
+            // Exit zoom mode
+            currentSlide.classList.remove("zooming");
+            slideshowContainer.classList.remove("zoomed");
+            this.isZoomed = false;
+            this.resume();
+        } else {
+            // Enter zoom mode
+            currentSlide.classList.add("zooming");
+            slideshowContainer.classList.add("zoomed");
+            this.isZoomed = true;
+            this.pause();
+        }
     }
 
     pause() {
@@ -290,7 +392,9 @@ class Slideshow {
     }
 
     resume() {
-        this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
+        if (!this.isZoomed && !this.isPausedByHover && !Slideshow.globalPaused) {
+            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
+        }
     }
 
     showSlides() {
@@ -300,15 +404,14 @@ class Slideshow {
         }
 
         // Show the current slide
-        //this.slideIndex = (this.slideIndex + 1) % this.slides.length;     // display the second image first
         this.slides[this.slideIndex].style.display = "block";
 
-        // Attach hover listeners to the current image
-        this.addHoverListeners();
+        // Attach listeners to the current image
+        this.addImageListeners();
         this.updateInfo();
 
         // Automatically transition to the next slide
-        if (!this.isPausedByHover) {
+        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
             this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
         }
     }
@@ -326,12 +429,12 @@ class Slideshow {
         this.slideIndex = (this.slideIndex + 1) % this.slides.length;
         this.slides[this.slideIndex].style.display = "block";
 
-        // Re-attach hover listeners to the new image
-        this.addHoverListeners();
+        // Re-attach listeners to the new image
+        this.addImageListeners();
         this.updateInfo();
 
         // Restart auto-sliding
-        if (!this.isPausedByHover) {
+        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
             this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
         }
     }
@@ -349,51 +452,29 @@ function createSlideshow(containerId, images) {
         const slide = document.createElement("div");
         slide.classList.add("mySlides", "fade");
 
-        const numberText = document.createElement("div");
-        numberText.classList.add("numbertext");
-        numberText.textContent = `${index + 1} / ${images.length}`;
-        slide.appendChild(numberText);
-
         const img = document.createElement("img");
         img.src = image.src;
         img.alt = image.alt[currentLang] || image.alt["en"];
-
-        img.addEventListener("mouseenter", () => {
-            slide.classList.add("zooming");
-        });
-
-        img.addEventListener("mousemove", (e) => {
-            const rect = e.target.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            img.style.transformOrigin = `${x}% ${y}%`;
-        });
-        
-        img.addEventListener("mouseleave", () => {
-            img.style.transformOrigin = "center center";
-            slide.classList.remove("zooming");
-        });
+        img.style.cursor = "pointer";
         
         slide.appendChild(img);
 
+        // Store data attributes for later use
+        slide.setAttribute("data-index", index);
+        slide.setAttribute("data-total", images.length);
         if (image.description) {
-            const description = document.createElement("div");
-            description.classList.add("description");
-            description.textContent = image.description[currentLang] || image.description.en;
-            slide.appendChild(description);
+            slide.setAttribute("data-description-en", image.description.en || "");
+            slide.setAttribute("data-description-vi", image.description.vi || "");
         }
 
         slideshowContainer.appendChild(slide);
     });
 
-    slideshowContainer.setAttribute("onclick", "swap()");
     container.appendChild(slideshowContainer);
 }
-//--// function to display banknote //--//
 
-//--// function to display information of banknote //--//
 function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
-    currentLang = localStorage.getItem("language") || "en";  // Retrieve stored language
+    currentLang = localStorage.getItem("language") || "en";
     const container = document.getElementById(containerId);
     if (!container) return;
 
@@ -422,8 +503,8 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
 
     const infoDiv = document.createElement("div");
     infoDiv.className = "slideshow-info";
-    infoDiv.style.position = "relative"; // Add this line for positioning context
-    infoDiv.style.overflow = "hidden"; // Prevent the label from overflowing
+    infoDiv.style.position = "relative";
+    infoDiv.style.overflow = "hidden";
 
     // Add NEW label if the item is marked as new
     if (info.new) {
@@ -435,12 +516,12 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
 
     function addInfoElement(labelKey, value) {
         if (value !== null && value !== undefined) {
-        const localized = typeof value === "object" && !Array.isArray(value)
-            ? (value[currentLang] || value["en"])
-            : value;
-        const p = document.createElement("p");
-        p.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${localized}`;
-        infoDiv.appendChild(p);
+            const localized = typeof value === "object" && !Array.isArray(value)
+                ? (value[currentLang] || value["en"])
+                : value;
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${localized}`;
+            infoDiv.appendChild(p);
         }
     }
 
@@ -457,7 +538,6 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
     if (info.figure) {
         let figureData;
         if (Array.isArray(info.figure)) {
-            // Use slideIndex if available, fallback to first entry
             figureData = info.figure[slideIndex] || info.figure[0] || null;
         } else {
             figureData = info.figure;
@@ -476,25 +556,45 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
         infoDiv.appendChild(noteElement);
     }
 
+    const parentContainer = container.parentElement;
+    const slideshowContainerForInfo = parentContainer ? parentContainer.querySelector('.slideshow-container') : null;
+
+    if (slideshowContainerForInfo) {
+        // Clear old overlay elements (avoid stacking)
+        const oldDesc = slideshowContainerForInfo.querySelector('.description');
+        const oldNumber = slideshowContainerForInfo.querySelector('.numbertext');
+        if (oldDesc) oldDesc.remove();
+        if (oldNumber) oldNumber.remove();
+
+        const currentSlide = slideshowContainerForInfo.querySelector('.mySlides[style*="display: block"]');
+        const slides = slideshowContainerForInfo.querySelectorAll('.mySlides');
+
+        // Description (bottom-left overlay)
+        if (currentSlide) {
+            const descriptionText = currentSlide.getAttribute(`data-description-${currentLang}`) || 
+                                   currentSlide.getAttribute('data-description-en');
+            if (descriptionText) {
+                const descriptionDiv = document.createElement("div");
+                descriptionDiv.className = "description";
+                descriptionDiv.textContent = descriptionText;
+                slideshowContainerForInfo.appendChild(descriptionDiv);
+            }
+        }
+
+        // Number text (bottom-right overlay)
+        if (slides.length > 0) {
+            const numberTextDiv = document.createElement("div");
+            numberTextDiv.className = "numbertext";
+            numberTextDiv.textContent = `${slideIndex + 1} / ${slides.length}`;
+            slideshowContainerForInfo.appendChild(numberTextDiv);
+        }
+    }
+
     container.appendChild(infoDiv);
 
     if (window.MathJax) {
         MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
     }
-}
-
-
-function updateSlideshowDescriptions(slideIndex, currentLang) {
-    currentLang = localStorage.getItem("language") || "en";  // Use stored language
-    const slides = images[slideIndex];
-    const slideDivs = document.querySelectorAll(`#slide${slideIndex} .mySlides`);
-    
-    slides.forEach((slide, index) => {
-        const descriptionDiv = slideDivs[index].querySelector(".description");
-        if (descriptionDiv) {
-            descriptionDiv.textContent = slide.description[currentLang] || slide.description["en"];
-        }
-    });
 }
 //--// function to display information of banknote //--//
 
@@ -532,19 +632,14 @@ function toggleMenuCollection() {
 const mainContent = document.getElementById('main-to-top');
 const backToTopButton = document.getElementById('back-to-top');
 
-mainContent.addEventListener('scroll', () => {
-    if (mainContent.scrollTop > 200) { // Button appears after 200px of scrolling
-        backToTopButton.style.display = 'block';
-    } else {
-        backToTopButton.style.display = 'none';
-    }
-});
-
 // top button for the money pages
 function scrollToTop() {
-    mainContent.scrollTo({
-        top: 0,
-    });
+    const mainContent = document.getElementById('main-to-top');
+    if (mainContent) {
+        mainContent.scrollTo({
+            top: 0,
+        });
+    }
 }
 
 function getPageNavigation() {
@@ -598,3 +693,39 @@ function createNavigationButtons() {
         navContainer.appendChild(nextBtn);
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    currentLang = localStorage.getItem('language') || 'en';
+
+    updatePageLanguage(currentLang);
+    updatePageHeading(currentLang);
+    insertSidebarHTML('SideBar'); 
+    insertSidebarHTML('SideBarCollection'); 
+    createNavigationButtons();
+
+    const mainContent = document.getElementById('main-to-top');
+    const backToTopButton = document.getElementById('back-to-top');
+
+    if (mainContent && backToTopButton) {
+        mainContent.addEventListener('scroll', () => {
+            if (mainContent.scrollTop > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    }
+
+    if (typeof images !== 'undefined') {
+        Object.keys(images).forEach(index => {
+            // Build the slide images
+            createSlideshow("slide" + index, images[index]);
+
+            // Start the slideshow, and pass info config
+            new Slideshow("slide" + index, 5000, {
+                containerId: "info" + index,
+                data: slideshowInfo[index]
+            });
+        });
+    }
+});
