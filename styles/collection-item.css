@@ -474,8 +474,7 @@ hr {
     flex: 0 0 auto;
 }
 
-/* On smaller screens, decrease text size */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .text {
         font-size: 15px
     }

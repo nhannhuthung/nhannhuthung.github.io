@@ -43,10 +43,6 @@ header {
   position: relative;
 }
 
-/* footer {
-    height: 15px;
-} */
-
 nav {
     grid-column: col-start/span 12;
     grid-row: 1;
@@ -81,7 +77,7 @@ nav {
 
 .hamburger-nav {
     display: none;
-    font-size: 30px;
+    font-size: 27px;
     position: absolute;
     text-decoration: none;
     padding: 10px;
@@ -211,7 +207,7 @@ p {
     font-family: 'Times New Roman', Times, serif;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     header {
         align-items: center;
         min-height: 60px;
@@ -309,7 +305,7 @@ p {
     }
 
     .language-toggle a {
-        font-size: 21px;
+        font-size: 18px;
         margin-right: 5px;
     }
 

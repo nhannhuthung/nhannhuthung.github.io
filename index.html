@@ -21,12 +21,12 @@
 </head>
 <body>
     <canvas id="particles"></canvas>
-    <section class="intro">
-        <div class="intro-logo">
+    <div class="menu-box">
+        <div class="content-container">
             <div class="howl-group-wrapper">
                 <div class="howl-group">
                     <div class="letter-group">
-                        <div class="label" style="visibility: hidden; ">.</div>
+                        <div class="label" style="visibility: hidden;">.</div>
                         <div class="howl layered-letter">
                             <div class="letter-bg"></div>
                             <span class="big-h">H</span>
@@ -45,34 +45,22 @@
                         <div class="howl"><span class="rest">l</span></div>
                     </div>
                 </div>
-
                 <div class="divider-container">
                     <div class="divider"></div>
-                        <a href="#navigator">
-                            <img src="images/logo/owl.png" class="owl">
-                        </a>
+                        <img src="images/logo/owl.png" class="owl">
                     <div class="divider"></div>
                 </div>
-
-                <div id="owl-text">
-                    <p id="owl-message">Click the owl!</p>
-                </div>
-                
-                <div class="language-toggle">
-                    <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
-                </div>
+            </div>
+            <nav class="nav-pos-menu">
+                <a href="collection.html" id="collection-nav">Collection</a>
+                <a href="about.html" id="about-nav">About</a>
+                <a href="contact.html" id="contact-nav">Contact</a>
+            </nav>
+            <div class="language-toggle">
+                <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
             </div>
         </div>
-    </section>
-
-    <section id="navigator" class="nav-menu-box">
-        <nav class="nav-pos-menu"> 
-            <a href="index.html" id="home-nav">Home</a>
-            <a href="collection.html" id="collection-nav">Collection</a>
-            <a href="about.html" id="about-nav">About</a>
-            <a href="contact.html" id="contact-nav">Contact</a>
-        </nav>
-    </section>
+    </div>
     <script src="scripts/particles.js"></script>
 </body>
 

@@ -55,6 +55,7 @@
 
 body {
     background-color: #4b628d;
+    overflow: hidden;
 }
 
 #media {
@@ -124,7 +125,7 @@ body {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     #header-nav {
         background-color: rgb(40,48,51);   
         z-index: 1000;
