@@ -196,7 +196,6 @@ function toggleLanguage() {
 
     Object.keys(images).forEach(index => {
         generateSlideShowInfo("info" + index, slideshowInfo[index]);
-        updateSlideshowDescriptions(index, currentLang);
     });
 }
 //--// function to print out code for sidebar //--//
