@@ -36,7 +36,6 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
         size: "121 \u00D7 65 mm",
-        new: true,
     }
 };
 
@@ -67,7 +66,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
     size: "135 \u00D7 65 mm",
-    new: true,
 };
 
 index++; //index = 3
@@ -97,5 +95,4 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
     },
     size: "149 \u00D7 70 mm",
-    new: true,
 };
