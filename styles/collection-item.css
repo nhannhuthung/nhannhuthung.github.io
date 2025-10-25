@@ -77,6 +77,9 @@ html, body {
     max-width: 300px;
     padding: 15px;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+    background-color: #f2f2f2;
 }
 
 .sidebar h2 {
@@ -477,6 +480,10 @@ hr {
 @media (max-width: 700px) {
     .text {
         font-size: 15px
+    }
+
+    .sidebar {
+        background-color: rgb(40, 48, 51);
     }
 
     .main-content h1 {
