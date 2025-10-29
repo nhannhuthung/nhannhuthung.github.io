@@ -186,10 +186,6 @@ slideshowInfo[`${index}`] = {
         en: "European Union's 50 Euros", 
         vi: "50 Euro Liên Minh Châu Âu" 
     },
-    issuer: {
-        en: "European Central Bank",
-        vi: "Ngân Hàng Trung Ương Châu Âu"
-    },
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
