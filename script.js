@@ -84,6 +84,7 @@ const countries_list = {
   "norway": ["norway", "kingdom of norway", "na uy"],
   "russia": ["russia", "russian federation", "nga"],
   "scotland": ["scotland", "kingdom of scotland"],
+  "switzerland": ["switzerland", "swiss confederation", "thụy sĩ", "liên bang thụy sĩ"],
   "transnistria": ["transnistria"],
   "ukraine": ["ukraine"],
 
@@ -166,6 +167,7 @@ const displayCountry = {
   "norway": { en: "Norway", vi: "Na Uy" },
   "russia": { en: "Russia", vi: "Nga" },
   "scotland": { en: "Scotland", vi: "Scotland" },
+  "switzerland": { en: "Switzerland", vi: "Thụy Sĩ" },
   "transnistria": { en: "Transnistria", vi: "Transnistria" },
   "ukraine": { en: "Ukraine", vi: "Ukraine" },
 

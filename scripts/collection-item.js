@@ -64,6 +64,7 @@ const countryData = {
             { "en": "Norway", "vi": "Na Uy", "link": "norway.html" },
             { "en": "Russia", "vi": "Nga", "link": "russia.html" },
             { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
+            { "en": "Switzerland", "vi": "Thụy Sĩ", "link": "switzerland.html" },
             { "en": "Transnistria", "vi": "Transnistria", "link": "transnistria.html" },
             { "en": "Ukraine", "vi": "Ukraine", "link": "ukraine.html" },
         ]
