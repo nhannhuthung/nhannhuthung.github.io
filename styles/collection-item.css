@@ -359,6 +359,35 @@ img {
     line-height: 1.2;
 }
 
+.rainbow-text {
+    background: linear-gradient(
+        to right,
+        #ff0080,
+        #ff8c00,
+        #ffed00,
+        #00ff00,
+        #00bfff,
+        #8a2be2,
+        #ff0080
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow-slide 3s linear infinite;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@keyframes rainbow-slide {
+    0% {
+        background-position: 200% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}

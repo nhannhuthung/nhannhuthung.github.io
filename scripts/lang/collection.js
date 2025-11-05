@@ -156,6 +156,7 @@ const countries = {
                 "name": {"en": "Western Europe", "vi": "Tây Âu"},
                 "countries": [
                     { "en": "France", "vi": "Pháp", "url": "collection/france.html"},
+                    { "en": "Netherlands", "vi": "Hà Lan", "url": "collection/netherlands.html"},
                     { "en": "Switzerland", "vi": "Thụy Sĩ", "url": "collection/switzerland.html"},
                 ]
             },

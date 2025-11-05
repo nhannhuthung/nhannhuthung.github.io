@@ -484,6 +484,10 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "153 \u00D7 77 mm",
+    special: {
+        en: "My favorite banknotes.",
+        vi: "Tờ tiền mình yêu thích."
+    }
 };
 
 

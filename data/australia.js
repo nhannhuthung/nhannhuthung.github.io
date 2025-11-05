@@ -40,6 +40,10 @@ const slideshowInfo = {
             en: "First polymer banknote in the world", 
             vi: "Tiền polymer đầu tiên trên thế giới" 
         },
+        special: {
+            en: "My favorite banknotes.",
+            vi: "Tờ tiền mình yêu thích."
+        }
     }
 };
 

@@ -9,6 +9,8 @@ const fixed_trans = {
         contact: `Contact`,
         search_placeholder: `Enter page name...`,
         back_to_top: `Top`,
+        play_all: `Play all slideshows`,
+        pause_all: `Pause all slideshows`,
     },
     vi: {
         home: `Trang Chủ`,
@@ -17,6 +19,8 @@ const fixed_trans = {
         contact: `Liên Hệ`,
         search_placeholder: `Nhập tên trang...`,
         back_to_top: `Đầu`,
+        play_all: `Phát tất cả`,
+        pause_all: `Dừng tất cả`,
     }
 };
 
@@ -61,6 +65,7 @@ const countryData = {
             { "en": "Ireland", "vi": "Ireland", "link": "ireland.html" },
             { "en": "Italy", "vi": "Ý", "link": "italy.html" },
             { "en": "Moldova", "vi": "Moldova", "link": "moldova.html" },
+            { "en": "Netherlands", "vi": "Hà Lan", "link": "netherlands.html" },
             { "en": "Norway", "vi": "Na Uy", "link": "norway.html" },
             { "en": "Russia", "vi": "Nga", "link": "russia.html" },
             { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
@@ -193,6 +198,13 @@ function toggleLanguage() {
     createNavigationButtons();
 
     // Remove old slideshow info before regenerating
+    const playPauseBtn = document.getElementById('global-play-pause-btn');
+    if (playPauseBtn) {
+        playPauseBtn.title = Slideshow.globalPaused ? 
+            fixed_trans[currentLang].play_all : 
+            fixed_trans[currentLang].pause_all;
+    }
+
     document.querySelectorAll(".slideshow-info").forEach(el => el.remove());
 
     Object.keys(images).forEach(index => {
@@ -205,7 +217,7 @@ function toggleLanguage() {
 //--// function to display banknote //--//
 class Slideshow {
     static allSlideshows = []; // Track all slideshow instances
-    static globalPaused = false; // Global pause state
+    static globalPaused = true; // Global pause state (NOW DEFAULT TO FALSE - NO AUTO-PLAY)
     static globalButtonCreated = false; // Track if global button exists
 
     constructor(containerId, interval = 5000, infoConfig = null) {
@@ -221,11 +233,12 @@ class Slideshow {
         this.isPausedByHover = false;
         this.isZoomed = false;
         this.infoConfig = infoConfig;
+        this.isAutoPlaying = false; // NEW: Track if this slideshow is auto-playing
 
         // Add this instance to the global array
         Slideshow.allSlideshows.push(this);
 
-        // Start the slideshow
+        // Start the slideshow (but don't auto-play)
         this.showSlides();
 
         // Add navigation arrows
@@ -242,8 +255,8 @@ class Slideshow {
         const playPauseBtn = document.createElement("button");
         playPauseBtn.id = "global-play-pause-btn";
         playPauseBtn.className = "global-play-pause-btn";
-        playPauseBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
-        playPauseBtn.title = "Pause all slideshows";
+        playPauseBtn.innerHTML = "&#9654;"; // Play icon (default is paused)
+        playPauseBtn.title = fixed_trans[currentLang].play_all;
         
         playPauseBtn.onclick = () => {
             Slideshow.toggleGlobalPlayPause(playPauseBtn);
@@ -258,14 +271,14 @@ class Slideshow {
         if (Slideshow.globalPaused) {
             // Pause all slideshows
             button.innerHTML = "&#9654;"; // Play icon
-            button.title = "Play all slideshows";
+            button.title = fixed_trans[currentLang].play_all;
             Slideshow.allSlideshows.forEach(slideshow => {
                 slideshow.pause();
             });
         } else {
             // Resume all slideshows
             button.innerHTML = "&#10074;&#10074;"; // Pause icon
-            button.title = "Pause all slideshows";
+            button.title = fixed_trans[currentLang].pause_all;
             Slideshow.allSlideshows.forEach(slideshow => {
                 slideshow.resume();
             });
@@ -315,7 +328,7 @@ class Slideshow {
         this.addImageListeners();
         this.updateInfo();
 
-        // Restart auto-sliding
+        // Restart auto-sliding only if global play is active
         if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
             this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
         }
@@ -389,10 +402,12 @@ class Slideshow {
 
     pause() {
         clearTimeout(this.autoSlideTimeout);
+        this.isAutoPlaying = false;
     }
 
     resume() {
         if (!this.isZoomed && !this.isPausedByHover && !Slideshow.globalPaused) {
+            this.isAutoPlaying = true;
             this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
         }
     }
@@ -410,10 +425,7 @@ class Slideshow {
         this.addImageListeners();
         this.updateInfo();
 
-        // Automatically transition to the next slide
-        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
-            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
-        }
+        // DON'T auto-play by default - user must click play button
     }
 
     swap() {
@@ -433,7 +445,7 @@ class Slideshow {
         this.addImageListeners();
         this.updateInfo();
 
-        // Restart auto-sliding
+        // Restart auto-sliding only if still in auto-play mode
         if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
             this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
         }
@@ -547,6 +559,7 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
     
     addInfoElement("size", info.size);
 
+    // Add regular note
     if (info.note) {
         const noteElement = document.createElement("p");
         const noteContent = document.createElement("em");
@@ -554,6 +567,17 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
         noteContent.innerHTML = typeof info.note === "object" ? info.note[currentLang] : info.note;
         noteElement.appendChild(noteContent);
         infoDiv.appendChild(noteElement);
+    }
+
+    // Add special note with rainbow effect
+    if (info.special) {
+        const specialElement = document.createElement("p");
+        const specialContent = document.createElement("em");
+        specialContent.className = "rainbow-text";
+        specialContent.style.fontSize = "17px";
+        specialContent.innerHTML = typeof info.special === "object" ? info.special[currentLang] : info.special;
+        specialElement.appendChild(specialContent);
+        infoDiv.appendChild(specialElement);
     }
 
     const parentContainer = container.parentElement;
@@ -673,8 +697,7 @@ function createNavigationButtons() {
     
     if (!navContainer) return;
     
-    navContainer.innerHTML = '';
-    
+    navContainer.innerHTML = '';   
     if (nav.prev) {
         const prevBtn = document.createElement('button');
         prevBtn.className = 'nav-button prev-button';
