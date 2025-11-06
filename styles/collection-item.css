@@ -263,7 +263,8 @@ img {
 
 .slide-arrow,
 .description,
-.numbertext {
+.numbertext,
+.banknote-counter {
   opacity: 0;
   transition: opacity 0.25s ease;
   pointer-events: none;
@@ -271,14 +272,16 @@ img {
 
 .slideshow-container:hover .slide-arrow,
 .slideshow-container:hover .description,
-.slideshow-container:hover .numbertext {
+.slideshow-container:hover .numbertext,
+.slideshow-container:hover .banknote-counter {
   opacity: 1;
   pointer-events: auto;
 }
 
 .slideshow-container.zoomed .slide-arrow,
 .slideshow-container.zoomed .description,
-.slideshow-container.zoomed .numbertext {
+.slideshow-container.zoomed .numbertext,
+.slideshow-container.zoomed .banknote-counter {
   opacity: 0 !important;
   pointer-events: none !important;
 }
@@ -305,6 +308,18 @@ img {
     border-radius: 10px;
     margin-top: 5px;
     margin-left: 5px;
+}
+
+.banknote-counter {
+    color: white;
+    font-size: 12px;
+    padding: 6px 9px;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 5px;
 }
 
 .slide-arrow {

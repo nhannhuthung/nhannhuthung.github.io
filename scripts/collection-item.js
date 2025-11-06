@@ -424,8 +424,6 @@ class Slideshow {
         // Attach listeners to the current image
         this.addImageListeners();
         this.updateInfo();
-
-        // DON'T auto-play by default - user must click play button
     }
 
     swap() {
@@ -459,6 +457,9 @@ function createSlideshow(containerId, images) {
 
     const slideshowContainer = document.createElement("div");
     slideshowContainer.classList.add("slideshow-container");
+
+    const banknoteIndex = containerId.replace("slide", "");
+    slideshowContainer.setAttribute("data-banknote-index", banknoteIndex);
 
     images.forEach((image, index) => {
         const slide = document.createElement("div");
@@ -587,8 +588,10 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
         // Clear old overlay elements (avoid stacking)
         const oldDesc = slideshowContainerForInfo.querySelector('.description');
         const oldNumber = slideshowContainerForInfo.querySelector('.numbertext');
+        const oldBanknote = slideshowContainerForInfo.querySelector('.banknote-counter');
         if (oldDesc) oldDesc.remove();
         if (oldNumber) oldNumber.remove();
+        if (oldBanknote) oldBanknote.remove();
 
         const currentSlide = slideshowContainerForInfo.querySelector('.mySlides[style*="display: block"]');
         const slides = slideshowContainerForInfo.querySelectorAll('.mySlides');
@@ -611,6 +614,15 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
             numberTextDiv.className = "numbertext";
             numberTextDiv.textContent = `${slideIndex + 1} / ${slides.length}`;
             slideshowContainerForInfo.appendChild(numberTextDiv);
+        }
+
+        // Banknote counter (top-right overlay)
+        const banknoteIndex = slideshowContainerForInfo.getAttribute("data-banknote-index");
+        if (banknoteIndex) {
+            const banknoteDiv = document.createElement("div");
+            banknoteDiv.className = "banknote-counter";
+            banknoteDiv.textContent = `#${banknoteIndex}`;
+            slideshowContainerForInfo.appendChild(banknoteDiv);
         }
     }
 
