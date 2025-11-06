@@ -24,8 +24,8 @@ const images = {
 const slideshowInfo = {
     [`${index}`]: {
         title: { 
-            en: "Scottish 1 Pound - Royal Bank", 
-            vi: "1 Bảng Scotland - Royal Bank" 
+            en: "Scottish 1 Pound", 
+            vi: "1 Bảng Scotland" 
         },
         issuer: {
             en: "Royal Bank Of Scotland",
@@ -59,8 +59,8 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Scottish 5 Pounds - Clydesdale Bank", 
-        vi: "5 Bảng Scotland - Clydesdale Bank" 
+        en: "Scottish 5 Pounds", 
+        vi: "5 Bảng Scotland" 
     },
     issuer: {
         en: "Clydesdale Bank",
