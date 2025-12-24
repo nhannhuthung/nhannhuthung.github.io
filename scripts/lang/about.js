@@ -22,7 +22,7 @@ const main_trans = {
         name_intro: `My name is Hưng. If you are unfamiliar with that name, please call me Howl. It is the name from the movie - Howl's Moving Castle.`,
         study_intro: `I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. I finished my first bachelor and I'm starting a new journey. New but old, old but new!!!`,
         math_intro: `If you are wonder what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.`,
-        resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`
+        resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 24/12/2025.`
     },
     vi: {
         title: `Bản Thân`,
@@ -30,7 +30,7 @@ const main_trans = {
         name_intro: `Tên mình là Hưng. Mình có tên tiếng Anh là Howl và mình lấy tên này trong bộ phim - Lâu Đài Bay Của Pháp Sư Howl.`,
         study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán Ứng Dụng. Mình đã tốt nghiệp với bằng cử nhân đầu tiên và mình bắt đầu một hình trình mới. Mới mà cũ, cũ mà mới!!!`,
         math_intro: `Nếu bạn thắc mắc mình đang học gì về toán, bạn có thể xem ở <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">đây</a> và <a href="pdf/math/honours-project.pdf" target="_blank">đây</a>.`,
-        resume_intro: `Đây là sơ yếu lý lịch về mình đề phòng bạn thắc mắc: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a>`
+        resume_intro: `Đây là sơ yếu lý lịch về mình đề phòng bạn thắc mắc: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 24/12/2025.`
     }
 };
 

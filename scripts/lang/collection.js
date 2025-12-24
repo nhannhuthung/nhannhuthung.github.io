@@ -183,7 +183,7 @@ const countries = {
         "name": { "en": "Asia", "vi": "Châu Á"},
         "regions": {
             "mid-east-asia": {
-                "name": { "en": "Middle East Asia", "vi": "Trung Đông" },
+                "name": { "en": "West Asia (Middle East)", "vi": "Tây Á (Trung Đông)" },
                 "countries": [
                     { "en": "Iran", "vi": "Iran", "url": "collection/iran.html" },
                     { "en": "Israel", "vi": "Israel", "url": "collection/israel.html" },
