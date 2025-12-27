@@ -37,7 +37,6 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
         size: "76 \u00D7 148 mm",
-        new: true,
         special: {
             en: "My favorite banknotes.",
             vi: "Tờ tiền mình yêu thích."

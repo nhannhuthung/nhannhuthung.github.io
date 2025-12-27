@@ -1,3 +1,4 @@
+// Navigation to other pagaes
 function navigateTo(page) {
     window.location.href = page;
 }
@@ -85,9 +86,11 @@ const countries_list = {
   "norway": ["norway", "kingdom of norway", "na uy"],
   "russia": ["russia", "russian federation", "nga"],
   "scotland": ["scotland", "kingdom of scotland"],
+  "serbia": ["serbia", "republic of serbia", "cộng hòa serbia"],
   "switzerland": ["switzerland", "swiss confederation", "thụy sĩ", "liên bang thụy sĩ"],
   "transnistria": ["transnistria"],
   "ukraine": ["ukraine"],
+  "yugoslavia": ["yugoslavia", "nam tư"],
 
   "bangladesh": ["bangladesh", "people's republic of bangladesh", "băng la đét"],
   "bhutan": ["bhutan", "kingdom of bhutan", "bu tan"],
@@ -169,9 +172,11 @@ const displayCountry = {
   "norway": { en: "Norway", vi: "Na Uy" },
   "russia": { en: "Russia", vi: "Nga" },
   "scotland": { en: "Scotland", vi: "Scotland" },
+  "serbia": { en: "Serbia", vi: "Serbia" },
   "switzerland": { en: "Switzerland", vi: "Thụy Sĩ" },
   "transnistria": { en: "Transnistria", vi: "Transnistria" },
   "ukraine": { en: "Ukraine", vi: "Ukraine" },
+  "yugoslavia": { en: "Yugoslavia", vi: "Nam Tư" },
 
   "bangladesh": { en: "Bangladesh", vi: "Băng La Đét" },
   "bhutan": { en: "Bhutan", vi: "Bhutan" },

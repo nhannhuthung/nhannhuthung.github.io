@@ -40,7 +40,6 @@ const slideshowInfo = {
             en: `Banknote of 2017 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
             vi: `Tờ tiền của năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
         },
-        new: true,
     }
 };
 
@@ -71,7 +70,6 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "70 \u00D7 130 mm",
-    new: true,
 };
 
 index++; //index = 3
@@ -105,5 +103,4 @@ slideshowInfo[`${index}`] = {
         en: `Banknote of 2016 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
         vi: `Tờ tiền của năm 2016 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
     },
-    new: true,
 };

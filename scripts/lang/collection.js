@@ -25,9 +25,9 @@ const main_trans = {
         acknowledge_para: `Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.`,
 
         remark: `Remark`,
-        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - more than 650 coins across 69 regions, I couldn't display all of them here.`,
+        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - around 700 coins, I couldn't display all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
-        remark_subpara_1: `<span>&#9757;</span> There are around 60 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
+        remark_subpara_1: `<span>&#9757;</span> There are around 70 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
         remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I displayed them in the highlight.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value. 😁`,
 
@@ -175,6 +175,8 @@ const countries = {
                 "countries": [
                     { "en": "Croatia", "vi": "Croatia", "url": "collection/croatia.html" },
                     { "en": "Italy", "vi": "Ý", "url": "collection/italy.html" },
+                    { "en": "Serbia", "vi": "Serbia", "url": "collection/serbia.html" },
+                    { "en": "Yugoslavia", "vi": "Nam Tư", "url": "collection/yugoslavia.html" },
                 ]
             },
         }

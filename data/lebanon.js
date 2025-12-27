@@ -67,5 +67,4 @@ slideshowInfo[`${index}`] = {
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "120 \u00D7 62 mm",
-    new: true,
 };

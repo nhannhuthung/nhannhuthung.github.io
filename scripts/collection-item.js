@@ -69,9 +69,11 @@ const countryData = {
             { "en": "Norway", "vi": "Na Uy", "link": "norway.html" },
             { "en": "Russia", "vi": "Nga", "link": "russia.html" },
             { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
+            { "en": "Serbia", "vi": "Serbia", "link": "serbia.html" },
             { "en": "Switzerland", "vi": "Thụy Sĩ", "link": "switzerland.html" },
             { "en": "Transnistria", "vi": "Transnistria", "link": "transnistria.html" },
             { "en": "Ukraine", "vi": "Ukraine", "link": "ukraine.html" },
+            { "en": "Yugoslavia", "vi": "Nam Tư", "link": "yugoslavia.html" },
         ]
     },
     "asia": {
@@ -503,7 +505,7 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
             year: "Year", 
             type: "Type", 
             figure: "Figure",
-            size: "Size", 
+            size: "Dimension", 
         },
         vi: { 
             issuer: isFantasyBanknote ? "Tổ Chức Phát Hành" : "Ngân Hàng Phát Hành",
