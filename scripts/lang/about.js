@@ -21,7 +21,7 @@ const main_trans = {
         greeting: `Hello! 🦉😀`,
         name_intro: `My name is Hưng. If you are unfamiliar with that name, please call me Howl. It is the name from the movie - Howl's Moving Castle.`,
         study_intro: `I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. I finished my first bachelor and I'm starting a new journey. New but old, old but new!!!`,
-        math_intro: `If you are wonder what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.`,
+        math_intro: `If you are wondering what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.`,
         resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 24/12/2025.`
     },
     vi: {
