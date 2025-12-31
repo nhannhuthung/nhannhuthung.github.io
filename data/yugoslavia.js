@@ -25,11 +25,11 @@ const slideshowInfo = {
     [`${index}`]: {
         title: { 
             en: "Yugoslav 100,000,000 Dinara", 
-            vi: "100.000.000 Dinar Yugoslavia" 
+            vi: "100.000.000 Dinar Nam Tư" 
         },
         issuer: {
             en: "National Bank of Yugoslavia",
-            vi: "Ngân Hàng Nhà Nước Yugoslavia"
+            vi: "Ngân Hàng Nhà Nước Nam Tư"
         },
         year: "1993",
         type: { 
@@ -57,11 +57,11 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Yugoslav 500,000,000 Dinara", 
-        vi: "500.000.000 Dinar Yugoslavia" 
+        vi: "500.000.000 Dinar Nam Tư" 
     },
     issuer: {
         en: "National Bank of Yugoslavia",
-        vi: "Ngân Hàng Nhà Nước Yugoslavia"
+        vi: "Ngân Hàng Nhà Nước Nam Tư"
     },
     year: "1993",
     type: { 
@@ -92,11 +92,11 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Yugoslav 10 Dinara", 
-        vi: "10 Dinar Yugoslavia" 
+        vi: "10 Dinar Nam Tư" 
     },
     issuer: {
         en: "National Bank of Yugoslavia",
-        vi: "Ngân Hàng Nhà Nước Yugoslavia"
+        vi: "Ngân Hàng Nhà Nước Nam Tư"
     },
     year: "1994",
     type: { 
@@ -127,11 +127,11 @@ images[`${index}`] = [
 slideshowInfo[`${index}`] = {
     title: { 
         en: "Yugoslav 5 Dinara", 
-        vi: "5 Dinar Yugoslavia" 
+        vi: "5 Dinar Nam Tư" 
     },
     issuer: {
         en: "National Bank of Yugoslavia",
-        vi: "Ngân Hàng Nhà Nước Yugoslavia"
+        vi: "Ngân Hàng Nhà Nước Nam Tư"
     },
     year: "1994",
     type: { 
