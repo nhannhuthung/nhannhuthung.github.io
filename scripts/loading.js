@@ -3,6 +3,20 @@ document.body.classList.add('loading');
 
 var loader = document.querySelector(".preloader");
 
+// Generate loading content inside preloader with individual letters
+if (loader) {
+    var loadingText = "LOADING...";
+    var letters = loadingText.split('').map((letter, index) => {
+        return `<span style="animation-delay: ${index * 0.1}s">${letter}</span>`;
+    }).join('');
+    
+    loader.innerHTML = `
+        <div class="loading-content">
+            <div class="loading-text">${letters}</div>
+        </div>
+    `;
+}
+
 // Disable scrolling and interactions
 document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = 'hidden';
