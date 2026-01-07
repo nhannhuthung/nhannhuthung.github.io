@@ -28,14 +28,10 @@ const slideshowInfo = {
             vi: "100 Franc Guinea" 
         },
         issuer: {
-            en: "Central Bank Of The Republic of Guinea ",
+            en: "Central Bank Of The Republic of Guinea",
             vi: "Ngân Hàng Trung Ương Cộng Hòa Guinea"
         },
         year: "2015",
-        type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-        },
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 

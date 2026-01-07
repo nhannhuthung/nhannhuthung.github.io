@@ -31,7 +31,6 @@ const slideshowInfo = {
             en: "State Bank Of Vietnam",
             vi: "Ngân Hàng Nhà Nước Việt Nam"
         },
-        year: "1987",
         type: { 
             en: "Circulating Standard Banknote", 
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -66,7 +65,6 @@ slideshowInfo[`${index}`] = {
         en: "State Bank Of Vietnam",
         vi: "Ngân Hàng Nhà Nước Việt Nam"
     },
-    year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -100,7 +98,6 @@ slideshowInfo[`${index}`] = {
         en: "State Bank Of Vietnam",
         vi: "Ngân Hàng Nhà Nước Việt Nam"
     },
-    year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -134,7 +131,6 @@ slideshowInfo[`${index}`] = {
         en: "State Bank Of Vietnam",
         vi: "Ngân Hàng Nhà Nước Việt Nam"
     },
-    year: "1988",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
@@ -168,7 +164,6 @@ slideshowInfo[`${index}`] = {
         en: "State Bank Of Vietnam",
         vi: "Ngân Hàng Nhà Nước Việt Nam"
     },
-    year: "1991",
     type: { 
         en: "Circulating Standard Banknote", 
         vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 

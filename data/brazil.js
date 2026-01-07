@@ -24,7 +24,7 @@ const images = {
 const slideshowInfo = {
     [`${index}`]: {
         title: { 
-            en: "Brazilian 2 Reais", 
+            en: "Brazilian 2 Reals", 
             vi: "2 Real Brasil" 
         },
         issuer: {
@@ -33,7 +33,7 @@ const slideshowInfo = {
         },
         type: { 
             en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "121 \u00D7 65 mm",
     }
@@ -54,7 +54,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Brazilian 10 Reais", 
+        en: "Brazilian 10 Reals", 
         vi: "10 Real Brasil" 
     },
     issuer: {
@@ -63,7 +63,7 @@ slideshowInfo[`${index}`] = {
     },
     type: { 
         en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "135 \u00D7 65 mm",
 };
@@ -83,7 +83,7 @@ images[`${index}`] = [
 ];
 slideshowInfo[`${index}`] = {
     title: { 
-        en: "Brazilian 50 Reais", 
+        en: "Brazilian 50 Reals", 
         vi: "50 Real Brasil" 
     },
     issuer: {
@@ -92,7 +92,7 @@ slideshowInfo[`${index}`] = {
     },
     type: { 
         en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
     },
     size: "149 \u00D7 70 mm",
 };

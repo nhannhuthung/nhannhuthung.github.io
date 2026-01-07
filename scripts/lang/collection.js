@@ -85,6 +85,13 @@ const countries = {
                 "name": { "en": "Central America", "vi": "Trung Mỹ" },
                 "countries": [
                     { "en": "Costa Rica", "vi": "Costa Rica", "url": "collection/costa-rica.html" },
+                    { "en": "Honduras", "vi": "Honduras", "url": "collection/honduras.html" },
+                ]
+            },
+            "caribbean": {
+                "name": { "en": "Caribbean", "vi": "Caribe" },
+                "countries": [
+                    { "en": "Dominican Republic", "vi": "Cộng Hòa Dominica", "url": "collection/dominican-republic.html" },
                 ]
             },
             "south-america": {

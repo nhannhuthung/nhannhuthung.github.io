@@ -32,6 +32,8 @@ const countryData = {
             { "en": "Canada", "vi": "Canada", "link": "canada.html" },
             { "en": "Colombia", "vi": "Colombia", "link": "colombia.html" },
             { "en": "Costa Rica", "vi": "Costa Rica", "link": "costa-rica.html" },
+            { "en": "Dominican Republic", "vi": "Cộng Hòa Dominica", "link": "dominican-republic.html" },
+            { "en": "Honduras", "vi": "Honduras", "link": "honduras.html"},
             { "en": "Mexico", "vi": "Mexico", "link": "mexico.html" },
             { "en": "United States", "vi": "Hoa Kỳ", "link": "usa.html" },
             { "en": "Venezuela", "vi": "Venezuela", "link": "venezuela.html" },
