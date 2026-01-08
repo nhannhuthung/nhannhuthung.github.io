@@ -41,5 +41,41 @@ const slideshowInfo = {
             vi: "Lempira (1499-1537)"
         },
         size: "156 \u00D7 67 mm",
+        new: true,
     }
+};
+
+index++ //index = 2
+images[`${index}`] = [
+    {
+        src: "../images/collection/honduras/2-lempira-f.jpg",
+        alt: {en: "Front of the 2 Lempira Bill", vi: "Mặt Trước Tờ 2 Lempira"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/honduras/2-lempira-b.jpg",
+        alt: {en: "Back of the 2 Lempira Bill", vi: "Mặt Sau Tờ 2 Lempira"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Honduran 2 Lempiras", 
+        vi: "2 Lempira Honduras" 
+    },
+    issuer: {
+        en: "Central Bank Of Honduras",
+        vi: "Ngân Hàng Trung Ương Honduras"
+    },
+    year: "2019",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    figure: {
+        en: "Marco Aurelio Soto (1846-1908)", 
+        vi: "Marco Aurelio Soto (1846-1908)"
+    },
+    size: "156 \u00D7 67 mm",
+    new: true,
 };
