@@ -37,7 +37,6 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
         },
         size: "159 \u00D7 76 mm",
-        new: true,
     }
 };
 
@@ -73,7 +72,6 @@ slideshowInfo[`${index}`] = {
         vi: "Jovan Cvijić (1865-1927)"
     },
     size: "139 \u00D7 66 mm",
-    new: true,
 };
 
 index++; //index = 3
@@ -108,7 +106,6 @@ slideshowInfo[`${index}`] = {
         vi: "Josif Pančić (1814-1888)"
     },
     size: "116 \u00D7 55 mm",
-    new: true,
 };
 
 index++; //index = 4
@@ -143,5 +140,4 @@ slideshowInfo[`${index}`] = {
         vi: "Nikola Tesla (1856-1943)"
     },
     size: "131 \u00D7 62 mm",
-    new: true,
 };

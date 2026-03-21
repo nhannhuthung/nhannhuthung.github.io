@@ -41,7 +41,6 @@ const slideshowInfo = {
             vi: "Lempira (1499-1537)"
         },
         size: "156 \u00D7 67 mm",
-        new: true,
     }
 };
 
@@ -77,5 +76,4 @@ slideshowInfo[`${index}`] = {
         vi: "Marco Aurelio Soto (1846-1908)"
     },
     size: "156 \u00D7 67 mm",
-    new: true,
 };

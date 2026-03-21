@@ -73,8 +73,8 @@ slideshowInfo[`${index}`] = {
         en: "Yi I (1536-1584)", 
         vi: "Lý Nhị (1536-1584)" 
     },
-};
     size: "142 \u00D7 68 mm",
+};
 
 index++; //index = 3
 images[`${index}`] = [

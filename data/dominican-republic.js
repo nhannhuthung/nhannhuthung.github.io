@@ -37,7 +37,6 @@ const slideshowInfo = {
             vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
         },
         size: "158 \u00D7 67 mm",
-        new: true,
     }
 };
 
@@ -73,5 +72,4 @@ slideshowInfo[`${index}`] = {
         vi: "Francisco del Rosario Sánchez (1817-1861), Juan Pablo Duarte (1813-1876), Matías Ramón Mella (1816-1864)"
     },
     size: "158 \u00D7 67 mm",
-    new: true,
 };

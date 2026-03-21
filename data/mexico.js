@@ -81,6 +81,41 @@ slideshowInfo[`${index}`] = {
 index++; //index = 3
 images[`${index}`] = [
     {
+        src: "../images/collection/mexico/f/20-peso-f.jpg",
+        alt: {en: "Front of the 20 Peso Bill", vi: "Mặt Trước Tờ 20 Peso"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/mexico/f/20-peso-b.jpg",
+        alt: {en: "Back of the 20 Peso Bill", vi: "Mặt Sau Tờ 20 Peso"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "Mexican 20 Pesos", 
+        vi: "20 Peso Mexico" 
+    },
+    issuer: {
+        en: "Bank Of Mexico",
+        vi: "Ngân Hàng Mexico"
+    },
+    year: "2015",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    figure: { 
+        en: "Benito Juárez (1858-1872)", 
+        vi: "Benito Juárez (1858-1872)" 
+    },
+    size: "120 \u00D7 66 mm",
+    new: true
+};
+
+index++; //index = 4
+images[`${index}`] = [
+    {
         src: "../images/collection/mexico/f/50-peso-f.jpg",
         alt: {en: "Front of the 50 Peso Bill", vi: "Mặt Trước Tờ 50 Peso"},
         description: {en: "Obverse", vi: "Trước"}
@@ -112,7 +147,7 @@ slideshowInfo[`${index}`] = {
     size: "127 \u00D7 66 mm",
 };
 
-index++; //index = 4
+index++; //index = 5
 images[`${index}`] = [
     {
         src: "../images/collection/mexico/g/20-peso-f.jpg",
@@ -142,7 +177,7 @@ slideshowInfo[`${index}`] = {
     size: "129 \u00D7 65 mm",
 };
 
-index++; //index = 5
+index++; //index = 6
 images[`${index}`] = [
     {
         src: "../images/collection/mexico/g/50-peso-f.jpg",
@@ -176,7 +211,7 @@ slideshowInfo[`${index}`] = {
     },
 };
 
-index++; //index = 6
+index++; //index = 7
 images[`${index}`] = [
     {
         src: "../images/collection/mexico/g/100-peso-f.jpg",

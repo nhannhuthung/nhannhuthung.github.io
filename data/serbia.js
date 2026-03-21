@@ -41,7 +41,6 @@ const slideshowInfo = {
             vi: "Petar II Petrović-Njegoš (1813-1851)",
         },
         size: "135 \u00D7 64 mm",
-        new: true,
     }
 };
 
@@ -77,7 +76,6 @@ slideshowInfo[`${index}`] = {
         vi: "Stevan Stojanović Mokranjac (1856-1914)"
     },
     size: "139 \u00D7 66 mm",
-    new: true,
 };
 
 index++; //index = 3
@@ -112,5 +110,4 @@ slideshowInfo[`${index}`] = {
         vi: "Nadežda Petrović (1873-1915)"
     },
     size: "147 \u00D7 70 mm",
-    new: true,
 };
