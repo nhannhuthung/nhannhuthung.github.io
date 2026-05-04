@@ -110,7 +110,6 @@ slideshowInfo[`${index}`] = {
         en: "Alfredo González Flores (1877-1962)", 
         vi: "Alfredo González Flores (1877-1962)" 
     },
-    new: true
 };
 
 index++; //index = 4
@@ -145,5 +144,4 @@ slideshowInfo[`${index}`] = {
         en: "José Figueres Ferrer (1906-1990)", 
         vi: "José Figueres Ferrer (1906-1990)" 
     },
-    new: true
 };

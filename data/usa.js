@@ -220,7 +220,38 @@ slideshowInfo[`${index}`] = {
     size: "156 \u00D7 67 mm",
 };
 
-index++; //index = 8
+index++; //index = 9
+images[`${index}`] = [
+    {
+        src: "../images/collection/usa/100-series/1996-f.jpg",
+        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
+        description: {en: "Obverse", vi: "Trước"}
+    },
+    {
+        src: "../images/collection/usa/100-series/1996-b.jpg",
+        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
+        description: {en: "Reverse", vi: "Sau"}
+    }
+];
+slideshowInfo[`${index}`] = {
+    title: { 
+        en: "American 100 Dollars", 
+        vi: "100 Đô La Mỹ" 
+    },
+    year: "1996",
+    type: { 
+        en: "Circulating Standard Banknote", 
+        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+    },
+    figure: { 
+        en: "Benjamin Franklin (1706-1790)", 
+        vi: "Benjamin Franklin (1706-1790)" 
+    },
+    size: "156 \u00D7 67 mm",
+    new: true
+};
+
+index++; //index = 9
 images[`${index}`] = [
     {
         src: "../images/collection/usa/100-series/2009A-f.jpg",

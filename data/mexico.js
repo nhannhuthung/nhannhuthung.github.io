@@ -110,7 +110,6 @@ slideshowInfo[`${index}`] = {
         vi: "Benito Juárez (1858-1872)" 
     },
     size: "120 \u00D7 66 mm",
-    new: true
 };
 
 index++; //index = 4
