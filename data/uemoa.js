@@ -5,38 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/west-africa/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/west-africa/2003/500-franc-f.jpg",
-            alt: "Front of the 500 Franc Bill",
-            alt: {en: "Front of the 500 Franc Bill", vi: "Mặt Trước Tờ 500 Franc"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/west-africa/2003/500-franc-b.jpg",
-            alt: {en: "Back of the 500 Franc Bill", vi: "Mặt Sau Tờ 500 Franc"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "West African 500 Francs", 
-            vi: "500 Franc Tây Phi" 
-        },
-        issuer: {
-            en: "Central Bank Of West African States",
-            vi: "Ngân Hàng Trung Ương Các Quốc Gia Tây Phi"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} West African ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Tây Phi` 
+});
+const issuer = { en: "Central Bank Of West African States", vi: "Ngân Hàng Trung Ương Các Quốc Gia Tây Phi" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 500 franc
+images.push([
+    {
+        src: imagePath("2003/500-franc", "f"),
+        alt: altInfo("500", "Francs", "Franc", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2003/500-franc", "b"),
+        alt: altInfo("500", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("500", "500", "Francs ", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2012",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "114 \u00D7 60 mm",
     }
-};
+);
+//#endregion

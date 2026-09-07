@@ -50,6 +50,7 @@ const countryData = {
             { "en": "Kenya", "vi": "Kenya", "link": "kenya.html" },
             { "en": "Malawi", "vi": "Malawi", "link": "malawi.html" },
             { "en": "Mauritius", "vi": "Mauritius", "link": "mauritius.html" },
+            { "en": "Puntland", "vi": "Puntland", "link": "puntland.html" },
             { "en": "Rwanda", "vi": "Rwanda", "link": "rwanda.html" },
             { "en": "Somalia", "vi": "Somalia", "link": "somalia.html" },
             { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi","short_en": "WAEMU", "short_vi": "UEMOA", "link": "uemoa.html" },
@@ -72,6 +73,7 @@ const countryData = {
             { "en": "Russia", "vi": "Nga", "link": "russia.html" },
             { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
             { "en": "Serbia", "vi": "Serbia", "link": "serbia.html" },
+            { "en": "Sweden", "vi": "Thụy Điển", "link": "sweden.html" },
             { "en": "Switzerland", "vi": "Thụy Sĩ", "link": "switzerland.html" },
             { "en": "Transnistria", "vi": "Transnistria", "link": "transnistria.html" },
             { "en": "Ukraine", "vi": "Ukraine", "link": "ukraine.html" },
@@ -87,6 +89,7 @@ const countryData = {
             { "en": "China", "vi": "Trung Quốc", "link": "china.html" },
             { "en": "Hong Kong", "vi": "Hồng Kông", "link": "hong-kong.html" },
             { "en": "India", "vi": "Ấn Độ", "link": "india.html" },
+            { "en": "Indochinese Union", "vi": "Liên Bang Đông Dương", "link": "indochinese-union.html" },
             { "en": "Indonesia", "vi": "Indonesia", "link": "indonesia.html" },
             { "en": "Iran", "vi": "Iran", "link": "iran.html" },
             { "en": "Israel", "vi": "Israel", "link": "israel.html" },
@@ -102,23 +105,27 @@ const countryData = {
             { "en": "North Korea", "vi": "Triều Tiên", "link": "north-korea.html" },
             { "en": "Oman", "vi": "Oman", "link": "oman.html" },
             { "en": "Pakistan", "vi": "Pakistan", "link": "pakistan.html" },
+            { "en": "Philippines", "vi": "Philippines", "link": "philippines.html" },
             { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "link": "saudi-arabia.html" },
             { "en": "Singapore", "vi": "Singapore", "link": "singapore.html" },
             { "en": "South Korea", "vi": "Hàn Quốc", "link": "south-korea.html" },
+            { "en": "South Vietnam", "vi": "Việt Nam Cộng Hòa", "link": "south-vietnam.html" },
             { "en": "Syria", "vi": "Syria", "link": "syria.html" },
             { "en": "Taiwan", "vi": "Đài Loan", "link": "taiwan.html" },
             { "en": "Tajikistan", "vi": "Tajikistan", "link": "tajikistan.html" },
             { "en": "Thailand", "vi": "Thái Lan", "link": "thailand.html" },
-            { "en": "Turkey", "vi": "Thổ Nhĩ Kỳ", "link": "turkey.html" },
+            { "en": "Turkiye", "vi": "Thổ Nhĩ Kỳ", "link": "turkiye.html" },
             { "en": "Turkmenistan", "vi": "Turkmenistan", "link": "turkmenistan.html" },
+            { "en": "United Arab Emirates", "vi": "Các Tiểu Vương Quốc Ả Rập Thống Nhất", "link": "uae.html" },
             { "en": "Uzbekistan", "vi": "Uzbekistan", "link": "uzbekistan.html" },
-            { "en": "Vietnam", "vi": "Việt Nam", "link": "vietnam.html" },
+            { "en": "Viet Nam", "vi": "Việt Nam", "link": "viet-nam.html" },
         ]
     },
     "oceania": {
         "name": { "en": "Oceania", "vi": "Châu Úc" },
         "countries": [
             { "en": "Australia", "vi": "Úc", "link": "australia.html" },
+            { "en": "New Zealand", "vi": "New Zealand", "link": "new-zealand.html" },
         ]
     },
     "arctic": {
@@ -212,6 +219,18 @@ function toggleLanguage() {
     document.querySelectorAll(".slideshow-info").forEach(el => el.remove());
 
     Object.keys(images).forEach(index => {
+        // Re-translate the alt text of each slide image from the data
+        const slideContainer = document.getElementById("slide" + index);
+        if (slideContainer) {
+            const imgs = slideContainer.querySelectorAll(".mySlides img");
+            imgs.forEach((img, i) => {
+                const altData = images[index][i] && images[index][i].alt;
+                if (altData) {
+                    img.alt = altData[currentLang] || altData.en;
+                }
+            });
+        }
+
         generateSlideShowInfo("info" + index, slideshowInfo[index]);
     });
 }
@@ -507,7 +526,7 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
             year: "Year", 
             type: "Type", 
             figure: "Figure",
-            size: "Dimension", 
+            size: "Dimension",
         },
         vi: { 
             issuer: isFantasyBanknote ? "Tổ Chức Phát Hành" : "Ngân Hàng Phát Hành",

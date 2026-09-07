@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/netherlands/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/netherlands/1981-2002/50-guilder-f.jpg",
-            alt: {en: "Front of the 50 Guilder Bill", vi: "Mặt Trước Tờ 50 Guilder"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/netherlands/1981-2002/50-guilder-b.jpg",
-            alt: {en: "Back of the 50 Guilder Bill", vi: "Mặt Sau Tờ 50 Guilder"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Dutch 50 Guilder", 
-            vi: "50 Guilder Hà Lan" 
-        },
-        issuer: {
-            en: "The Dutch Bank",
-            vi: "Ngân Hàng Hà Lan"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Dutch ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Hà Lan` 
+});
+const issuer = { en: "The Dutch Bank", vi: "Ngân Hàng Hà Lan" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 50 guilder
+images.push([
+    {
+        src: imagePath("1981-2002/50-guilder", "f"),
+        alt: altInfo("50", "Guilders", "Guilder", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1981-2002/50-guilder", "b"),
+        alt: altInfo("50", "Guilders", "Guilder", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Guilders", "Guilder"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "1982",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "76 \u00D7 148 mm",
         special: {
@@ -42,4 +58,5 @@ const slideshowInfo = {
             vi: "Tờ tiền mình yêu thích."
         }
     }
-};
+);
+//#endregion

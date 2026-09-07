@@ -5,66 +5,82 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/lebenon/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Lebanese ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Liban` 
+});
+const issuer = { en: "Bank Of Lebanon", vi: "Ngân Hàng Liban" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1000 lira
+images.push([
         {
-            src: "../images/collection/lebanon/2011-2012/1000-lira-f.jpg",
-            alt: "Front of the 1000 Lira Bill",
-            alt: {en: "Front of the 1000 Lira Bill", vi: "Mặt Trước Tờ 1000 Lira"},
-            description: {en: "Obverse", vi: "Trước"}
+            src: imagePath("2011-2012/1000-lira", "f"),
+            alt: altInfo("1000", "Livres", "Lira", "Front", "trước"),
+            description: obverse
         },
         {
-            src: "../images/collection/lebanon/2011-2012/1000-lira-b.jpg",
-            alt: {en: "Back of the 1000 Lira Bill", vi: "Mặt Sau Tờ 1000 Lira"},
-            description: {en: "Reverse", vi: "Sau"}
+            src: imagePath("2011-2012/1000-lira", "b"),
+            alt: altInfo("1000", "Livres", "Lira", "Back", "sau"),
+            description: reverse
         }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Lebanese 1,000 Livres", 
-            vi: "1.000 Lira Liban" 
-        },
-        issuer: {
-            en: "Bank Of Lebanon",
-            vi: "Ngân Hàng Liban"
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1,000", "1.000", "Livres", "Lira"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "115 \u00D7 60 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 5000 lira
+images.push([
     {
-        src: "../images/collection/lebanon/2011-2012/5000-lira-f.jpg",
-        alt: {en: "Front of the 5000 Lira Bill", vi: "Mặt Trước Tờ 5000 Lira"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2011-2012/5000-lira", "f"),
+        alt: altInfo("5000", "Livres", "Lira", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/lebanon/2011-2012/5000-lira-b.jpg",
-        alt: {en: "Back of the 5000 Lira Bill", vi: "Mặt Sau Tờ 5000 Lira"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2011-2012/5000-lira", "b"),
+        alt: altInfo("5000", "Livres", "Lira", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Lebanese 5,000 Livres", 
-        vi: "5.000 Lira Liban" 
-    },
-    issuer: {
-        en: "Bank Of Lebanon",
-        vi: "Ngân Hàng Liban"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "120 \u00D7 62 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5,000", "5.000", "Livres", "Lira"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "120 \u00D7 62 mm",
+    }
+);
+//#endregion

@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Nhan Nhựt Hưng</title>
+
+    <meta name="og:title" content="Nhan Nhựt Hưng">
+    <meta name="og:image" content="https://nhannhuthung.github.io/images/logo/icon.png">
+    <meta name="og:description" content="Welcome to my website! You can check out my money collection around the world.">
+    <meta name="keywords" content="Nhan Nhựt Hưng, Nhan Nhut Hung, Nhut Hung Nhan, Hung Nhut Nhan, Howl, Howl Nhan, Harry, Harry Nhan">
+    <meta name="description" content="Nhan Nhựt Hưng">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="128x128" href="../images/logo/icon.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/collection-item.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script charset="utf-8" src="../script.js"></script>
+    <script charset="utf-8" src="../scripts/collection-item.js" defer></script>
+    <script src="../data/viet-nam.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+    </script>
+</head>
+
+<body style="background-color: #f4f4f4;">
+    <div class="preloader"></div>
+    <header>
+        <div class="header-container">
+            <div class="left-group">
+                <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenuCollection()"><i class="fa fa-bars"></i> <strong>MENU</strong></a>
+
+                <nav id="header-nav">
+                    <a href="../index.html" id="home-nav">Home</a>
+                    <a href="../collection.html" id="collection-nav">Collection</a>
+                    <a href="../about.html" id="about-nav">About</a>
+                    <a href="../contact.html" id="contact-nav">Contact</a>
+                </nav>
+
+                <nav id="header-nav-media">
+                    <a href="../index.html" id="home-nav-media">Home</a>
+                    <a href="javascript:void(0);" onclick="toggleCollection(event)" id="collection-nav-media">Collection</a>
+                    <div id="collection-dropdown" class="collection-content">
+                        <div id="SideBarCollection"></div>
+                    </div>
+                    <a href="../about.html" id="about-nav-media">About</a>
+                    <a href="../contact.html" id="contact-nav=media">Contact</a>
+                </nav>
+            </div>
+
+            <div class="right-group">
+                <div class="language-toggle">
+                    <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="SideBar"></div>
+        <div id="page-navigation" class="page-navigation"></div>
+        <div id= "main-to-top" class="main-content">
+            <button id="back-to-top" onclick="scrollToTop()">Top</button>
+            <h1 style="text-align: center;" id="page-heading">Vietnam</h1>
+
+            <div id="slideshow31" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide31"></div>
+                <div id="info31"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow30" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide30"></div>
+                <div id="info30"></div>
+            </div>
+
+            <div id="slideshow29" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide29"></div>
+                <div id="info29"></div>
+            </div>
+
+            <div id="slideshow28" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide28"></div>
+                <div id="info28"></div>
+            </div>
+
+            <div id="slideshow27" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide27"></div>
+                <div id="info27"></div>
+            </div>
+
+            <div id="slideshow26" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide26"></div>
+                <div id="info26"></div>
+            </div>
+
+            <div id="slideshow25" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide25"></div>
+                <div id="info25"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow24" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide24"></div>
+                <div id="info24"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow23" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide23"></div>
+                <div id="info23"></div>
+            </div>
+
+            <div id="slideshow22" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide22"></div>
+                <div id="info22"></div>
+            </div>
+
+            <div id="slideshow21" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide21"></div>
+                <div id="info21"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow20" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide20"></div>
+                <div id="info20"></div>
+            </div>
+
+            <div id="slideshow19" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide19"></div>
+                <div id="info19"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow18" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide18"></div>
+                <div id="info18"></div>
+            </div>
+
+            <div id="slideshow17" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide17"></div>
+                <div id="info17"></div>
+            </div>
+
+            <div id="slideshow16" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide16"></div>
+                <div id="info16"></div>
+            </div>
+
+            <div id="slideshow15" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide15"></div>
+                <div id="info15"></div>
+            </div>
+
+            <div id="slideshow14" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide14"></div>
+                <div id="info14"></div>
+            </div>
+
+            <div id="slideshow13" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide13"></div>
+                <div id="info13"></div>
+            </div>
+
+            <div id="slideshow12" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide12"></div>
+                <div id="info12"></div>
+            </div>
+
+            <div id="slideshow11" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide11"></div>
+                <div id="info11"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow10" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide10"></div>
+                <div id="info10"></div>
+            </div>
+
+            <div id="slideshow9" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide9"></div>
+                <div id="info9"></div>
+            </div>
+
+            <div id="slideshow8" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide8"></div>
+                <div id="info8"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow7" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide7"></div>
+                <div id="info7"></div>
+            </div>
+
+            <div id="slideshow6" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide6"></div>
+                <div id="info6"></div>
+            </div>
+
+            <div id="slideshow5" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide5"></div>
+                <div id="info5"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow4" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide4"></div>
+                <div id="info4"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow3" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide3"></div>
+                <div id="info3"></div>
+            </div>
+
+            <div id="slideshow2" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide2"></div>
+                <div id="info2"></div>
+            </div>
+
+            <hr width="75%" size="2" style="margin-top: 25px;">
+
+            <div id="slideshow1" class="slideshow-wrapper">
+                <div class="empty-box"></div>
+                <div id="slide1"></div>
+                <div id="info1"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="../scripts/loading.js"></script>
+</body>
+
+
+</html>

@@ -5,102 +5,151 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/switzerland/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/switzerland/9/10-franc-f.jpg",
-            alt: {en: "Front of the 10 Franc Bill", vi: "Mặt Trước Tờ 10 Franc"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/switzerland/9/10-franc-b.jpg",
-            alt: {en: "Back of the 10 Franc Bill", vi: "Mặt Sau Tờ 10 Franc"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Swiss 10 Francs", 
-            vi: "10 Franc Thụy Sĩ" 
-        },
-        issuer: {
-            en: "Swiss National Bank",
-            vi: "Ngân Hàng Nhà Nước Thụy Sĩ"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Swiss ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Thụy Sĩ` 
+});
+const issuer = { en: "Swiss National Bank", vi: "Ngân Hàng Nhà Nước Thụy Sĩ" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+
+const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 10 franc
+images.push([
+    {
+        src: imagePath("9/10-franc", "f"),
+        alt: altInfo("10", "Francs", "Franc", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("9/10-franc", "b"),
+        alt: altInfo("10", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "70 \u00D7 123 mm",
         note: {
-            en: `Banknote of 2017 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
-            vi: `Tờ tiền của năm 2017 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
+            en: `Banknote of 2017 by ${ibnsLink}`,
+            vi: `Tờ tiền của năm 2017 theo ${ibnsLink}`
         },
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 20 franc
+images.push([
     {
-        src: "../images/collection/switzerland/9/20-franc-f.jpg",
-        alt: {en: "Front of the 20 Franc Bill", vi: "Mặt Trước Tờ 20 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("9/20-franc", "f"),
+        alt: altInfo("20", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/switzerland/9/20-franc-b.jpg",
-        alt: {en: "Back of the 20 Franc Bill", vi: "Mặt Sau Tờ 20 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("9/20-franc", "b"),
+        alt: altInfo("20", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Swiss 20 Francs", 
-        vi: "20 Franc Thụy Sĩ" 
-    },
-    issuer: {
-        en: "Swiss National Bank",
-        vi: "Ngân Hàng Nhà Nước Thụy Sĩ"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "70 \u00D7 130 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "70 \u00D7 130 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 50 franc
+images.push([
     {
-        src: "../images/collection/switzerland/9/50-franc-f.jpg",
-        alt: {en: "Front of the 50 Franc Bill", vi: "Mặt Trước Tờ 50 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("9/50-franc", "f"),
+        alt: altInfo("50", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/switzerland/9/50-franc-b.jpg",
-        alt: {en: "Back of the 50 Franc Bill", vi: "Mặt Sau Tờ 50 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("9/50-franc", "b"),
+        alt: altInfo("50", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Swiss 50 Francs", 
-        vi: "50 Franc Thụy Sĩ" 
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "70 \u00D7 137 mm",
+        note: {
+            en: `Banknote of 2016 by ${ibnsLink}`,
+            vi: `Tờ tiền của năm 2016 theo ${ibnsLink}`
+        },
+    }
+);
+//#endregion
+
+//#region 4 - 100 franc
+images.push([
+    {
+        src: imagePath("9/100-franc", "f"),
+        alt: altInfo("100", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
-    issuer: {
-        en: "Swiss National Bank",
-        vi: "Ngân Hàng Nhà Nước Thụy Sĩ"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "70 \u00D7 137 mm",
-    note: {
-        en: `Banknote of 2016 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
-        vi: `Tờ tiền của năm 2016 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
-    },
-};
+    {
+        src: imagePath("9/100-franc", "b"),
+        alt: altInfo("100", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "70 \u00D7 144 mm",
+        new: true,
+    }
+);
+//#endregion

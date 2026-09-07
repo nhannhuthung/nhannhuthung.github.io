@@ -33,10 +33,10 @@
                 </a>
 
                 <nav id="header-nav">
-                    <a href="index.html" id="home-nav">Home</a>
-                    <a href="collection.html" id="collection-nav">Collection</a>
-                    <a href="about.html" id="about-nav">About</a>
-                    <a href="contact.html" id="contact-nav">Contact</a>
+                    <a href="index.html" id="home-nav" data-i18n="home"></a>
+                    <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
+                    <a href="about.html" id="about-nav" data-i18n="about"></a>
+                    <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
                 </nav>
             </div>
 
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
                     <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -56,10 +56,10 @@
         </div>
     </header>
 
-    <h5 class="big-title" id="main-title" style="background-color: #AFCBFF; color: #283033;">Contact Me</h5>
-    <div id="media" class="page">  
-        <h1 class="title" id="sub-title-1" style="color: #29241E;">Social Media</h1>
-        <b id="sentence-1">I am active on the following platforms. You are welcome to connect with me through any of these channels.</b>
+    <h5 class="big-title" id="main-title" data-i18n="title" style="background-color: #AFCBFF; color: #283033;"></h5>
+    <div id="media" class="page">
+        <h1 class="title" id="sub-title-1" data-i18n="sub_title_1" style="color: #29241E;"></h1>
+        <b id="sentence-1" data-i18n="sentence_1"></b>
         <nav>
             <a href="https://www.facebook.com/nhannhuthung" target="_blank" class="fa fa-facebook"></a>
             <a href="https://www.instagram.com/nnh.v.nov/" target="_blank" class="fa fa-instagram"></a>
@@ -69,14 +69,47 @@
     </div>
 
     <div id="work" class="page">
-        <h1 class="title" id="sub-title-2" style="color: #F5FEFD;">Work</h1>
-        <b id="sentence-2" style="color: #F5FEFD;">For business inquiries, please feel free to contact me through the following platforms.</b>
+        <h1 class="title" id="sub-title-2" data-i18n="sub_title_2" style="color: #F5FEFD;"></h1>
+        <b id="sentence-2" data-i18n="sentence_2" style="color: #F5FEFD;"></b>
         <nav>
             <a href="mailto: hg5ejd1mj@mozmail.com" target="_blank" class="fa fa-google"></a>
             <a href="https://www.linkedin.com/in/howlnhan/" target="_blank" class="fa fa-linkedin"></a>
             <a href="https://github.com/nhannhuthung" target="_blank" class="fa fa-github"></a>
         </nav>
     </div>
+
+    <div id="contact-form-section" class="page">
+        <h1 class="title" id="form-title" data-i18n="form_title"></h1>
+        <b id="form-intro" data-i18n="form_intro"></b>
+        <form id="contact-form" class="contact-form">
+            <!-- TRIAL: leave this value as-is to use demo mode (no real emails sent).
+                 To go live: get a free key at https://web3forms.com (enter your email,
+                 they send you an access key), then paste it below. -->
+            <input type="hidden" name="access_key" value="774459fe-e44c-4387-9f14-0eaf67ad6e11">
+
+            <div class="form-field">
+                <label for="cf-name" data-i18n="form_name"></label>
+                <input id="cf-name" type="text" name="name" data-i18n-placeholder="form_name_ph" required>
+            </div>
+
+            <div class="form-field">
+                <label for="cf-email" data-i18n="form_email"></label>
+                <input id="cf-email" type="email" name="email" data-i18n-placeholder="form_email_ph" required>
+            </div>
+
+            <div class="form-field">
+                <label for="cf-message" data-i18n="form_message"></label>
+                <textarea id="cf-message" name="message" data-i18n-placeholder="form_message_ph" required></textarea>
+            </div>
+
+            <!-- spam honeypot: bots fill this, humans never see it -->
+            <input type="checkbox" name="botcheck" class="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+            <button type="submit" data-i18n="form_submit"></button>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+    </div>
+
     <script src="scripts/loading.js"></script>
 </body>
 

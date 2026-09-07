@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/taiwan/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/taiwan/1999/100-dollar-f.jpg",
-            alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Tệ"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/taiwan/1999/100-dollar-b.jpg",
-            alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Tệ"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Taiwanese 100 Dollars", 
-            vi: "100 Đài Tệ" 
-        },
-        issuer: {
-            en: "Central Bank Of The Republic Of China",
-            vi: "Ngân Hàng Trung Ương Trung Hoa Dân Quốc"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Taiwanese ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Đài Loan` 
+});
+const issuer = { en: "Central Bank Of The Republic Of China", vi: "Ngân Hàng Trung Ương Trung Hoa Dân Quốc" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 100 dollar
+images.push([
+    {
+        src: imagePath("1999/100-dollar", "f"),
+        alt: altInfo("100", "Dollars", "Tệ", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("9/10-franc", "b"),
+        alt: altInfo("100", "Dollars", "Tệ", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Dollars", "Tệ"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2000",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Sun Yat-sen (1866-1925)", 
@@ -42,4 +58,5 @@ const slideshowInfo = {
         },
         size: "145 \u00D7 70 mm",
     }
-};
+);
+//#endregion

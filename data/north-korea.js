@@ -5,101 +5,145 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/north-korea/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/north-korea/1992/200-won-f.jpg",
-            alt: {en: "Front of the 200 Won Bill", vi: "Mặt Trước Tờ 200 Won"},
-            description: {en: "Obverse", vi: "Trước"}
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} North Korean ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Triều Tiên` 
+});
+const issuer = { en: "Central Bank Of The Democratic People's Republic of Korea", vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 5 won
+images.push([
+    {
+        src: imagePath("1992/5-won", "f"),
+        alt: altInfo("5", "Won", "Won", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1992/5-won", "b"),
+        alt: altInfo("5", "Won", "Won", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5", "5", "Won", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
-        {
-            src: "../images/collection/north-korea/1992/200-won-b.jpg",
-            alt: {en: "Back of the 200 Won Bill", vi: "Mặt Sau Tờ 200 Won"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "North Korean 200 Won", 
-            vi: "200 Won Triều Tiên" 
-        },
-        issuer: {
-            en: "Central Bank Of The Democratic People's Republic of Korea",
-            vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
-        },
-        year: "1994 (2005)",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "126 \u00D7 60 mm",
+        new: true
+    }
+);
+//#endregion
+
+//#region 2 - 200 won
+images.push([
+    {
+        src: imagePath("1992/200-won", "f"),
+        alt: altInfo("200", "Won", "Won", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1992/200-won", "b"),
+        alt: altInfo("200", "Won", "Won", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("200", "200", "Won", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: {
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "140 \u00D7 72 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 3 - 500 won
+images.push([
     {
-        src: "../images/collection/north-korea/1992/500-won-f.jpg",
-        alt: {en: "Front of the 500 Won Bill", vi: "Mặt Trước Tờ 500 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1992/500-won", "f"),
+        alt: altInfo("500", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/north-korea/1992/500-won-b.jpg",
-        alt: {en: "Back of the 500 Won Bill", vi: "Mặt Sau Tờ 500 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1992/500-won", "b"),
+        alt: altInfo("500", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "North Korean 500 Won", 
-        vi: "500 Won Triều Tiên" 
-    },
-    issuer: {
-        en: "Central Bank Of The Democratic People's Republic of Korea",
-        vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
-    },
-    year: "1996 (2007)",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "156 \u00D7 75 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("500", "500", "Won", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: {
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "156 \u00D7 75 mm"
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 4 - 5000 won
+images.push([
     {
-        src: "../images/collection/north-korea/1992/5000-won-f.jpg",
-        alt: {en: "Front of the 5000 Won Bill", vi: "Mặt Trước Tờ 5000 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1992/5000-won", "f"),
+        alt: altInfo("5000", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/north-korea/1992/5000-won-b.jpg",
-        alt: {en: "Back of the 5000 Won Bill", vi: "Mặt Sau Tờ 5000 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1992/5000-won", "b"),
+        alt: altInfo("5000", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "North Korean 5,000 Won", 
-        vi: "5.000 Won Triều Tiên" 
-    },
-    issuer: {
-        en: "Central Bank Of The Democratic People's Republic of Korea",
-        vi: "Ngân Hàng Trung Ương Cộng Hòa Dân Chủ Nhân Dân Triều Tiên"
-    },
-    year: "1995 (2006)",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Kim Il Sung (1912-1994)", 
-        vi: "Kim Il Sung (1912-1994)" 
-    },
-    size: "156 \u00D7 75 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5,000", "5.000", "Won", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: {
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        figure: { 
+            en: "Kim Il Sung (1912-1994)", 
+            vi: "Kim Il Sung (1912-1994)" 
+        },
+        size: "156 \u00D7 75 mm",
+    }
+);
+//#endregion

@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/malawi/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Malawian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Malawi` 
+});
+const issuer = { en: "Reserve Bank Of Malawi", vi: "Ngân Hàng Dự Trữ Malawi" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 20 kwacha
+images.push([
         {
-            src: "../images/collection/malawi/2012/20-kwacha-f.jpg",
-            alt: {en: "Front of the 20 Kwacha Bill", vi: "Mặt Trước Tờ 20 Kwacha"},
-            description: {en: "Obverse", vi: "Trước"}
+            src: imagePath("2012/20-kwacha", "f"),
+            alt: altInfo("20", "Kwachas", "Kwacha", "Front", "trước"),
+            description: obverse
         },
         {
-            src: "../images/collection/malawi/2012/20-kwacha-b.jpg",
-            alt: {en: "Back of the 20 Kwacha Bill", vi: "Mặt Sau Tờ 20 Kwacha"},
-            description: {en: "Reverse", vi: "Sau"}
+            src: imagePath("2012/20-kwacha", "b"),
+            alt: altInfo("20", "Kwachas", "Kwacha", "Back", "sau"),
+            description: reverse
         }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Malawian 20 Kwachas", 
-            vi: "20 Kwacha Malawi" 
-        },
-        issuer: {
-            en: "Reserve Bank Of Malawi",
-            vi: "Ngân Hàng Dự Trữ Malawi"
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Kwachas", "Kwacha"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2016",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)", 
@@ -42,4 +58,5 @@ const slideshowInfo = {
         },
         size: "128 \u00D7 64 mm",
     }
-};
+);
+//#endregion

@@ -20,22 +20,31 @@ function toggleLanguage() {
     updatePageLanguage(currentLang);
 }
 
-function updatePageLanguage(currentLang) {
-    const foundationToUpdate = [
-        { id: "collection-nav", key: "collection" },
-        { id: "about-nav", key: "about" },
-        { id: "contact-nav", key: "contact" },
-    ];
+// Look up a key in main_trans first (page content), then fixed_trans (shared nav/UI).
+function getTranslation(lang, key) {
+    if (typeof main_trans !== "undefined" && main_trans[lang] && main_trans[lang][key] != null) {
+        return main_trans[lang][key];
+    }
+    if (typeof fixed_trans !== "undefined" && fixed_trans[lang] && fixed_trans[lang][key] != null) {
+        return fixed_trans[lang][key];
+    }
+    return null;
+}
 
-    foundationToUpdate.forEach(({ id, key, attr }) => {
-        const element = document.getElementById(id);
-        if (element) {
-            if (attr) {
-                element.setAttribute(attr, fixed_trans[currentLang][key]);
-            } else {
-                element.textContent = fixed_trans[currentLang][key];
-            }
-        }
+// Auto-discover every element tagged with data-i18n* and translate it.
+// data-i18n -> innerHTML, data-i18n-placeholder -> placeholder, data-i18n-title -> title.
+function updatePageLanguage(currentLang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18n);
+        if (value != null) el.innerHTML = value;
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nPlaceholder);
+        if (value != null) el.placeholder = value;
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nTitle);
+        if (value != null) el.title = value;
     });
 }
 

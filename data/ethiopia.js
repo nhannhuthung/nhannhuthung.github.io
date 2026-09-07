@@ -5,97 +5,111 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/ethiopia/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/ethiopia/2020/10-birr-f.jpg",
-            alt: {en: "Front of the 10 Birr", vi: "Mặt Trước Tờ 10 Birr"},
-            description: {en: "Obverse", vi: "Trước"}
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Ethiopian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Ethiopia` 
+});
+const issuer   = { en: "National Bank Of Ethiopia", vi: "Ngân Hàng Quốc Gia Ethiopia" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 10 birr
+images.push([
+    {
+        src: imagePath("2020/10-birr", "f"),
+        alt: altInfo("10", "Birrs", "Birr", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2020/10-birr", "b"),
+        alt: altInfo("10", "Birrs", "Birr", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Birrs", "Birr"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
-        {
-            src: "../images/collection/ethiopia/2020/10-birr-b.jpg",
-            alt: {en: "Back of the 10 Birr Bill", vi: "Mặt Sau Tờ 10 Birr"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Ethiopian 10 Birrs", 
-            vi: "10 Birr Ethiopia" 
-        },
-        issuer: {
-            en: "National Bank Of Ethiopia",
-            vi: "Ngân Hàng Quốc Gia Ethiopia"
-        },
-        year: "2012 (2020)",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "142 \u00D7 67 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 50 birr
+images.push([
     {
-        src: "../images/collection/ethiopia/2020/50-birr-f.jpg",
-        alt: {en: "Front of the 50 Birr", vi: "Mặt Trước Tờ 50 Birr"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2020/50-birr", "f"),
+        alt: altInfo("50", "Birrs", "Birr", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/ethiopia/2020/50-birr-b.jpg",
-        alt: {en: "Back of the 50 Birr Bill", vi: "Mặt Sau Tờ 50 Birr"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2020/50-birr", "b"),
+        alt: altInfo("50", "Birrs", "Birr", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Ethiopian 50 Birrs", 
-        vi: "50 Birr Ethiopia" 
-    },
-    issuer: {
-        en: "National Bank Of Ethiopia",
-        vi: "Ngân Hàng Quốc Gia Ethiopia"
-    },
-    year: "2012 (2020)",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "145 \u00D7 70 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Birrs", "Birr"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "145 \u00D7 70 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 100 birr
+images.push([
     {
-        src: "../images/collection/ethiopia/2020/100-birr-f.jpg",
-        alt: {en: "Front of the 100 Birr", vi: "Mặt Trước Tờ 100 Birr"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2020/100-birr", "f"),
+        alt: altInfo("100", "Birrs", "Birr", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/ethiopia/2020/100-birr-b.jpg",
-        alt: {en: "Back of the 100 Birr Bill", vi: "Mặt Sau Tờ 100 Birr"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2020/100-birr", "b"),
+        alt: altInfo("100", "Birrs", "Birr", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Ethiopian 100 Birrs", 
-        vi: "100 Birr Ethiopia" 
-    },
-    issuer: {
-        en: "National Bank Of Ethiopia",
-        vi: "Ngân Hàng Quốc Gia Ethiopia"
-    },
-    year: "2015 (2023)",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "147 \u00D7 72 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Birrs", "Birr"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "147 \u00D7 72 mm",
+    }
+);
+//#endregion

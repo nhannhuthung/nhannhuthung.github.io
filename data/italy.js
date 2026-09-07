@@ -5,34 +5,49 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/italy/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Italian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Ý` 
+});
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 500 lira
+images.push([
         {
-            src: "../images/collection/italy/1971/500-lire-f.jpg",
-            alt: "Front of the 500 Lire Bill",
-            alt: {en: "Front of the 500 Lire Bill", vi: "Mặt Trước Tờ 500 Lire"},
-            description: {en: "Obverse", vi: "Trước"}
+            src: imagePath("1971/500-lira", "f"),
+            alt: altInfo("500", "Lire", "Lira", "Front", "trước"),
+            description: obverse
         },
         {
-            src: "../images/collection/italy/1971/500-lire-b.jpg",
-            alt: {en: "Back of the 500 Lire Bill", vi: "Mặt Sau Tờ 500 Lira"},
-            description: {en: "Reverse", vi: "Sau"}
+            src: imagePath("1971/500-lira", "b"),
+            alt: altInfo("500", "Lire", "Lira", "Back", "sau"),
+            description: reverse
         }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Italian 500 Lire", 
-            vi: "500 Lira Ý" 
-        },
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("500", "500", "Lire", "Lira"),
         year: "1966",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "110 \u00D7 55 mm",
     }
-};
+);
+//#endregion

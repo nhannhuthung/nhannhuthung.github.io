@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/mauritius/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/mauritius/1999/25-rupee-f.jpg",
-            alt: {en: "Front of the 25 Rupee Bill", vi: "Mặt Trước Tờ 25 Rupee"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/mauritius/1999/25-rupee-b.jpg",
-            alt: {en: "Back of the 25 Rupee Bill", vi: "Mặt Sau Tờ 25 Rupee"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Mauritian 25 Rupees", 
-            vi: "25 Rupee Mauritius" 
-        },
-        issuer: {
-            en: "Bank Of Mauritius",
-            vi: "Ngân Hàng Mauritius"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Mauritian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Mauritius` 
+});
+const issuer = { en: "Bank Of Mauritius", vi: "Ngân Hàng Mauritius" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 25 rupee
+images.push([
+    {
+        src: imagePath("1999/25-rupee", "f"),
+        alt: altInfo("25", "Rupees", "Rupee", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1999/25-rupee", "b"),
+        alt: altInfo("25", "Rupees", "Rupee", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("25", "25", "Rupees", "Rupee"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2003",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Moilin Jean Ah-Chuen (1911-1991)", 
@@ -42,72 +58,73 @@ const slideshowInfo = {
         },
         size: "135 \u00D7 65 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 50 rupee
+images.push([
     {
-        src: "../images/collection/mauritius/1999/50-rupee-f.jpg",
-        alt: {en: "Front of the 50 Rupee Bill", vi: "Mặt Trước Tờ 50 Rupee"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1999/50-rupee", "f"),
+        alt: altInfo("50", "Rupees", "Rupee", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mauritius/1999/50-rupee-b.jpg",
-        alt: {en: "Back of the 50 Rupee Bill", vi: "Mặt Sau Tờ 50 Rupee"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1999/50-rupee", "b"),
+        alt: altInfo("50", "Rupees", "Rupee", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mauritian 50 Rupees", 
-        vi: "50 Rupee Mauritius" 
-    },
-    issuer: {
-        en: "Bank Of Mauritius",
-        vi: "Ngân Hàng Mauritius"
-    },
-    year: "2001",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Joseph Maurice Paturau (1916-1996)", 
-        vi: "Joseph Maurice Paturau (1916-1996)" 
-    },
-    size: "140 \u00D7 68 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Rupees", "Rupee"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2001",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Joseph Maurice Paturau (1916-1996)", 
+            vi: "Joseph Maurice Paturau (1916-1996)" 
+        },
+        size: "140 \u00D7 68 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 100 rupee
+images.push([
     {
-        src: "../images/collection/mauritius/1999/100-rupee-f.jpg",
-        alt: {en: "Front of the 100 Rupee Bill", vi: "Mặt Trước Tờ 100 Rupee"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1999/100-rupee", "f"),
+        alt: altInfo("100", "Rupees", "Rupee", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mauritius/1999/100-rupee-b.jpg",
-        alt: {en: "Back of the 100 Rupee Bill", vi: "Mặt Sau Tờ 100 Rupee"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1999/100-rupee", "b"),
+        alt: altInfo("100", "Rupees", "Rupee", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mauritian 100 Rupees", 
-        vi: "100 Rupee Mauritius" 
-    },
-    issuer: {
-        en: "Bank Of Mauritius",
-        vi: "Ngân Hàng Mauritius"
-    },
-    year: "2004",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Renganaden Seeneevassen (1910-1958)", 
-        vi: "Renganaden Seeneevassen (1910-1958)" 
-    },
-    size: "145 \u00D7 70 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Rupees", "Rupee"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2004",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Renganaden Seeneevassen (1910-1958)", 
+            vi: "Renganaden Seeneevassen (1910-1958)" 
+        },
+        size: "145 \u00D7 70 mm",
+    }
+);
+//#endregion

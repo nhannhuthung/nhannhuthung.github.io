@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/oman/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/oman/1995/100-baisa-f.jpg",
-            alt: {en: "Front of the 100 Baisa Bill", vi: "Mặt Trước Tờ 100 Baisa"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/oman/1995/100-baisa-b.jpg",
-            alt: {en: "Back of the 100 Baisa Bill", vi: "Mặt Sau Tờ 100 Baisa"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Omani 100 Baisa", 
-            vi: "100 Baisa Oman" 
-        },
-        issuer: {
-            en: "Central Bank Of Oman",
-            vi: "Ngân Hàng Trung Ương Oman"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Omani ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Oman` 
+});
+const issuer = { en: "Central Bank Of Oman", vi: "Ngân Hàng Trung Ương Oman" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 100 baisa
+images.push([
+    {
+        src: imagePath("1995/100-baisa", "f"),
+        alt: altInfo("100", "Baisas", "Baisa", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1995/100-baisa", "b"),
+        alt: altInfo("100", "Baisas", "Baisa", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Baisas", "Baisa"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "1416 (1995)",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Qaboos bin Said (1940-2020)", 
@@ -42,34 +58,35 @@ const slideshowInfo = {
         },
         size: "140 \u00D7 72 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 1 rial
+images.push([
     {
-        src: "../images/collection/oman/2020/1-rial-f.jpg",
-        alt: {en: "Front of the 1 Rial Bill", vi: "Mặt Trước Tờ 1 Rial"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2020/1-rial", "f"),
+        alt: altInfo("1", "Rial", "Rial", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/oman/2020/1-rial-b.jpg",
-        alt: {en: "Back of the 1 Rial Bill", vi: "Mặt Sau Tờ 1 Rial"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2020/1-rial", "b"),
+        alt: altInfo("1", "Rial", "Rial", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Omani 1 Rial", 
-        vi: "1 Rial Oman" 
-    },
-    issuer: {
-        en: "Central Bank Of Oman",
-        vi: "Ngân Hàng Trung Ương Oman"
-    },
-    year: "1441 (2020)",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "156 \u00D7 75 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Rial", "Rial"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1441 (2020)",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "156 \u00D7 75 mm",
+    }
+);
+//#endregion

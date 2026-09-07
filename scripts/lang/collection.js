@@ -25,11 +25,11 @@ const main_trans = {
         acknowledge_para: `Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.`,
 
         remark: `Remark`,
-        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many - around 700 coins, I couldn't display all of them here.`,
+        remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many, I couldn't display all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
         remark_subpara_1: `<span>&#9757;</span> There are around 70 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
-        remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I displayed them in the highlight.`,
-        remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value. 😁`,
+        remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I display them in the highlight section right below.`,
+        remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value.`,
 
         last_update: `Last Updated:`,
 
@@ -49,11 +49,11 @@ const main_trans = {
         acknowledge_para: `Chào mừng đến với nơi trưng bày bộ sưu tập tiền online của mình! Mình xin bày tỏ lòng biết ơn đến mọi người đã đóng góp vào bộ sưu tập của mình. Nếu không có mọi người, bộ sưu tập sẽ không thể hoàn thiện và ý nghĩa như bây giờ. Mình rất biết ơn sự ủng hộ và đóng góp của mọi người.`,
 
         remark: `Tổng Quan`,
-        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều – tầm 700 đồng xu, mình không thể đưa tất cả lên đây được.`,
+        remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều, mình không thể đưa tất cả lên đây được.`,
         remark_para_2: `Một vài điểm nhấn về bộ sưu tập tiền xu của mình:`,
         remark_subpara_1: `<span>&#9757;</span> Có khoảng 70 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
-        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tâm điểm.`,
-        remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn. 😁`,
+        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tâm điểm ngay bên dưới.`,
+        remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn.`,
 
         last_update: `Cập Nhật Lần Cuối:`,
 
@@ -64,7 +64,7 @@ const main_trans = {
         australia: `Úc`,
         coin: `Tiền Xu`,
         usa_coin: `Mỹ ~ 1881-O ~ 1 Đô La`,
-        indochina_coin: `Đông Dương ~ 1902 ~ 1 Piastre`,
+        indochina_coin: `Đông Dương ~ 1902 ~ 1 Đồng Vàng`,
         canada_coin: `Canada ~ 1967 ~ 1 Đô La`,
     }
 };
@@ -134,6 +134,7 @@ const countries = {
                     { "en": "Kenya", "vi": "Kenya", "url": "collection/kenya.html" },
                     { "en": "Malawi", "vi": "Malawi", "url": "collection/malawi.html"},
                     { "en": "Mauritius", "vi": "Mauritius", "url": "collection/mauritius.html"},
+                    { "en": "Puntland", "vi": "Puntland", "url": "collection/puntland.html"},
                     { "en": "Rwanda", "vi": "Rwanda", "url": "collection/rwanda.html"},
                     { "en": "Somalia", "vi": "Somalia", "url": "collection/somalia.html"},
                 ]
@@ -148,7 +149,7 @@ const countries = {
     },
     "europe": {
         "name": { "en": "Europe", "vi": "Châu Âu" },
-        "eu": { "en": "European Union", "vi": "Liên Minh châu Âu", "url": "collection/eu.html" },
+        "eu": { "en": "European Union", "vi": "Liên Minh Châu Âu", "url": "collection/eu.html" },
         "regions": {
             "northern-europe": {
                 "name": { "en": "Northern Europe", "vi": "Bắc Âu" },
@@ -157,6 +158,7 @@ const countries = {
                     { "en": "Ireland", "vi": "Ireland", "url": "collection/ireland.html" },
                     { "en": "Norway", "vi": "Na Uy", "url": "collection/norway.html" },
                     { "en": "Scotland", "vi": "Scotland", "url": "collection/scotland.html" },
+                    { "en": "Sweden", "vi": "Thụy Điển", "url": "collection/sweden.html" },
                 ]
             },
             "western-europe": {
@@ -200,7 +202,8 @@ const countries = {
                     { "en": "Oman", "vi": "Oman", "url": "collection/oman.html" },
                     { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "url": "collection/saudi-arabia.html" },
                     { "en": "Syria", "vi": "Syria", "url": "collection/syria.html" },
-                    { "en": "Turkey", "vi": "Thổ Nhĩ Kỳ", "url": "collection/turkey.html" },
+                    { "en": "Turkiye", "vi": "Thổ Nhĩ Kỳ", "url": "collection/turkey.html" },
+                    { "en": "United Arab Emirates", "vi": "Các Tiểu Vương Quốc Ả Rập Thống Nhất", "url": "collection/uae.html" },
                 ]
             },
             "central-asia": {
@@ -239,13 +242,16 @@ const countries = {
                 "name": { "en": "South East Asia", "vi": "Đông Nam Á" },
                 "countries": [
                     { "en": "Cambodia", "vi": "Campuchia", "url": "collection/cambodia.html" },
+                    { "en": "Indochinese Union", "vi": "Liên Bang Đông Dương", "url": "collection/indochinese-union.html" },
                     { "en": "Indonesia", "vi": "Indonesia", "url": "collection/indonesia.html" },
                     { "en": "Laos", "vi": "Lào", "url": "collection/laos.html" },
                     { "en": "Malaysia", "vi": "Malaysia", "url": "collection/malaysia.html" },
                     { "en": "Myanmar", "vi": "Myanmar", "url": "collection/myanmar.html" },
+                    { "en": "Philippines", "vi": "Philippines", "url": "collection/philippines.html" },
                     { "en": "Singapore", "vi": "Singapore", "url": "collection/singapore.html" },
+                    { "en": "South Vietnam", "vi": "Việt Nam Cộng Hòa", "url": "collection/south-vietnam.html" },
                     { "en": "Thailand", "vi": "Thái Lan", "url": "collection/thailand.html" },
-                    { "en": "Vietnam", "vi": "Việt Nam", "url": "collection/vietnam.html" },
+                    { "en": "Viet Nam", "vi": "Việt Nam", "url": "collection/viet-nam.html" },
                 ]
             },
         }
@@ -253,6 +259,14 @@ const countries = {
     "oceania": {
         "name": { "en": "Oceania", "vi": "Châu Úc" },
         "australia": { "en": "Australia", "vi": "Úc", "url": "collection/australia.html" },
+        "regions": {
+            "polynesia": {
+                "name": { "en": "Polynesia", "vi": "Đa Đảo"},
+                "countries": [
+                    { "en": "New Zealand", "vi": "New Zealand", "url": "collection/new-zealand.html" },
+                ]
+            },
+        }
     },
     "arctic": {
         "name": { "en": "Arctic", "vi": "Bắc Cực" },
@@ -411,58 +425,31 @@ function navigateTo(url) {
     window.location.href = url;
 }
 
-function updatePageLanguage(lang) {
-    console.log("Language changed to:", lang);
+// Look up a key in main_trans first (page content), then fixed_trans (shared nav/UI).
+function getTranslation(lang, key) {
+    if (typeof main_trans !== "undefined" && main_trans[lang] && main_trans[lang][key] != null) {
+        return main_trans[lang][key];
+    }
+    if (typeof fixed_trans !== "undefined" && fixed_trans[lang] && fixed_trans[lang][key] != null) {
+        return fixed_trans[lang][key];
+    }
+    return null;
 }
 
+// Auto-discover every element tagged with data-i18n* and translate it.
+// data-i18n -> innerHTML, data-i18n-placeholder -> placeholder, data-i18n-title -> title.
 function updatePageLanguage(currentLang) {
-    const foundationToUpdate = [
-        { selector: "home-nav", key: "home" },
-        { selector: "collection-nav", key: "collection" },
-        { selector: "about-nav", key: "about" },
-        { selector: "contact-nav", key: "contact" },
-        { selector: "searchInput", key: "search_placeholder", attr: "placeholder" },
-        { selector: "top_btn", key: "top_btn"},
-        { selector: "top_btn", key: "top_title", attr: "title"}
-    ];
-
-    foundationToUpdate.forEach(({ selector, key, attr }) => {
-        const element = document.getElementById(selector);
-        if (element) {
-            if (attr) {
-                element.setAttribute(attr, fixed_trans[currentLang][key]);
-            } else {
-                element.textContent = fixed_trans[currentLang][key];
-            }
-        }
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18n);
+        if (value != null) el.innerHTML = value;
     });
-
-    const contentsToUpdate = [
-        { id: "acknowledge", key: "acknowledge" },
-        { id: "acknowledge-para", key: "acknowledge_para" },
-
-        { id: "remark", key: "remark" },
-        { id: "remark-para-1", key: "remark_para_1" },
-        { id: "remark-para-2", key: "remark_para_2" },
-        { id: "remark-subpara-1", key: "remark_subpara_1" },
-        { id: "remark-subpara-2", key: "remark_subpara_2" },
-        { id: "remark-para-3", key: "remark_para_3" },
-
-        { id: "last-update", key: "last_update" },
-
-        { id: "highlight", key: "highlight" },
-        { id: "banknote", key: "banknote" },
-        { id: "norway", key: "norway" },
-        { id: "hong-kong", key: "hong_kong" },
-        { id: "australia", key: "australia" },
-        { id: "coin", key: "coin" },
-        { id: "usa-coin", key: "usa_coin" },
-        { id: "indochina-coin", key: "indochina_coin" },
-        { id: "canada-coin", key: "canada_coin" },
-    ];
-
-    contentsToUpdate.forEach(({ id, key }) => {
-        document.getElementById(id).innerHTML = main_trans[currentLang][key];
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nPlaceholder);
+        if (value != null) el.placeholder = value;
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nTitle);
+        if (value != null) el.title = value;
     });
 }
 

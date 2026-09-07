@@ -55,7 +55,8 @@
 
 body {
     background-color: #4b628d;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #media {
@@ -110,6 +111,117 @@ body {
     justify-content: center;
     gap: 5px;
     font-size: 40px;
+}
+
+#contact-form-section {
+    min-height: 60vh;
+    background-color: #7097de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#contact-form-section .title {
+    font-size: 40px;
+    color: #dceeec;
+    margin-bottom: 15px;
+}
+
+#contact-form-section #form-intro {
+    color: #dceeec;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #dceeec;
+    font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #9fb4d8;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    /* background: #2d3b52; */
+    box-sizing: border-box;
+}
+
+/* .contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #2d3b52;
+} */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #4b628d;
+    box-shadow: 0 0 0 2px rgba(75, 98, 141, 0.25);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#cf-message {
+    background: #F2F3F4;
+}
+
+.contact-form button {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #4b628d;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-form button:hover {
+    background: #3d4e77;
+}
+
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-status {
+    min-height: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-status.success {
+    color: #1b7a3d;
+}
+
+.form-status.error {
+    color: #b22222;
 }
 
 ::-webkit-scrollbar {

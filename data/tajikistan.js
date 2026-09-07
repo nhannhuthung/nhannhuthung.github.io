@@ -5,37 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/tajikistan/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/tajikistan/1994/20-ruble-f.jpg",
-            alt: {en: "Front of the 20 Ruble Bill", vi: "Mặt Trước Tờ 20 Rúp"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/tajikistan/1994/20-ruble-b.jpg",
-            alt: {en: "Back of the 20 Ruble Bill", vi: "Mặt Sau Tờ 20 Rúp"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Tajikistani 20 Rubles", 
-            vi: "20 Rúp Tajikistan" 
-        },
-        issuer: {
-            en: "National Bank Of The Republic Of Tajikistan",
-            vi: "Ngân Hàng Quốc Gia Cộng Hòa Tajikistan"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Tajikistani ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Tajikistan` 
+});
+const issuer = { en: "National Bank Of The Republic Of Tajikistan", vi: "Ngân Hàng Quốc Gia Cộng Hòa Tajikistan" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 20 ruble
+images.push([
+    {
+        src: imagePath("1994/20-ruble", "f"),
+        alt: altInfo("20", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1994/20-ruble", "f"),
+        alt: altInfo("20", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Rubles", "Rúp",),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "1994",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "102 \u00D7 56 mm",
     }
-};
+);
+//#endregion

@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/ghana/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/ghana/2007/1-cedi-f.jpg",
-            alt: {en: "Front of the 1 Cedi Bill", vi: "Mặt Trước Tờ 1 Cedi"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/ghana/2007/1-cedi-b.jpg",
-            alt: {en: "Back of the 1 Cedi Bill", vi: "Mặt Sau Tờ 1 Cedi"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Ghanaian 1 Cedi", 
-            vi: "1 Cedi Ghana" 
-        },
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Ghanaian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Ghana` 
+});
+const issuer   = { en: "Bank Of Ghana", vi: "Ngân Hàng Ghana" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1 cedi
+images.push([
+    {
+        src: imagePath("2007/1-cedi", "f"),
+        alt: altInfo("1", "Cedi", "Cedi", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2007/1-cedi", "b"),
+        alt: altInfo("1", "Cedi", "Cedi", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Cedi", "Cedi"),
         issuer: {
-            en: "Bank Of Ghana",
-            vi: "Ngân Hàng Ghana"
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2019",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Kwame Nkrumah (1909-1972), Emmanuel Odarkwei Obetsebi Lamptey (1902-1963), William Ofori Atta (1910-1988), Ebenezer Ako Adjei (1916-2002), Joseph Boakye Danquah (1895-1965), Edward Akufo-Addo (1906-1979)", 
@@ -42,4 +58,5 @@ const slideshowInfo = {
         },
         size: "137 \u00D7 65 mm",
     }
-};
+);
+//#endregion

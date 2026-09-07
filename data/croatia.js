@@ -5,32 +5,47 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/croatia/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/croatia/1991-1993/5-dinar-f.jpg",
-            alt: {en: "Front of the 5 Dinar Bill", vi: "Mặt Trước Tờ 5 Dinar"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/croatia/1991-1993/5-dinar-b.jpg",
-            alt: {en: "Back of the 5 Dinar Bill", vi: "Mặt Sau Tờ 5 Dinar"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Croatian 5 Dinars", 
-            vi: "5 Dinar Croatia" 
-        },
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Croatian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Croatia` 
+});
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 5 dinar
+images.push([
+    {
+        src: imagePath("1991-1993/5-dinar", "f"),
+        alt: altInfo("5", "Dinars", "Dinar", "Front","trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1991-1993/5-dinar", "b"),
+        alt: altInfo("5", "Dinars", "Dinar", "Back","sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5", "5", "Dinars", "Dinar"),
         year: "1991",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         figure: { 
             en: "Roger Joseph Boscovich (1711-1787)", 
@@ -38,4 +53,5 @@ const slideshowInfo = {
         },
         size: "105 \u00D7 55 mm",
     }
-};
+);
+//#endregion

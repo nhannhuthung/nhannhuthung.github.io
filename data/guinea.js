@@ -5,37 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/guinea/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Guinean ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Guinea` 
+});
+const issuer   = { en: "Central Bank Of The Republic of Guinea", vi: "Ngân Hàng Trung Ương Cộng Hòa Guinea" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 100 franc
+images.push([
         {
-            src: "../images/collection/guinea/1998/100-franc-f.jpg",
-            alt: {en: "Front of the 100 Franc Bill", vi: "Mặt Trước Tờ 100 Franc"},
-            description: {en: "Obverse", vi: "Trước"}
+            src: imagePath("1998/100-franc", "f"),
+            alt: altInfo("100", "Francs", "Franc", "Front", "trước"),
+            description: obverse
         },
         {
-            src: "../images/collection/guinea/1998/100-franc-b.jpg",
-            alt: {en: "Back of the 100 Franc Bill", vi: "Mặt Sau Tờ 100 Franc"},
-            description: {en: "Reverse", vi: "Sau"}
+            src: imagePath("1998/100-franc", "b"),
+            alt: altInfo("100", "Francs", "Franc", "Back", "sau"),
+            description: reverse
         }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Guinean 100 Francs", 
-            vi: "100 Franc Guinea" 
-        },
-        issuer: {
-            en: "Central Bank Of The Republic of Guinea",
-            vi: "Ngân Hàng Trung Ương Cộng Hòa Guinea"
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2015",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "124 \u00D7 64 mm",
     }
-};
+);
+//#endregion

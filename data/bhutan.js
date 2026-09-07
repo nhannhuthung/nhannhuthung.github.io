@@ -5,38 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/bhutan/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/bhutan/2006/1-ngultrum-f.jpg",
-            alt: "Front of the 1 Ngultrum Bill",
-            alt: {en: "Front of the 1 Ngultrum Bill", vi: "Mặt Trước Tờ 1 Ngultrum"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/bhutan/2006/1-ngultrum-b.jpg",
-            alt: {en: "Back of the 1 Ngultrum Bill", vi: "Mặt Sau Tờ 1 Ngultrum"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Bhutanese 1 Ngultrum",
-            vi: "1 Ngultrum Bhutan" 
-        },
-        issuer: {
-            en: "Royal Monetary Authority Of Bhutan",
-            vi: "Cơ Quan Tiền Tệ Hoàng Gia Bhutan"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Bhutanese ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Bhutan` 
+});
+const issuer = { en: "Royal Monetary Authority Of Bhutan", vi: "Cơ Quan Tiền Tệ Hoàng Gia Bhutan" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1 ngultrum
+images.push([
+    {
+        src: imagePath("2006/1-ngultrum", "f"),
+        alt: altInfo("1", "Ngultrum", "Ngultrum", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2006/1-ngultrum", "b"),
+        alt: altInfo("1", "Ngultrum", "Ngultrum", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Ngultrum", "Ngultrum"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2013",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "120 \u00D7 60 mm",
     }
-};
+);
+//#endregion

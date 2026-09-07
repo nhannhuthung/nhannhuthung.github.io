@@ -5,127 +5,140 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/belarus/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/belarus/2000/50-ruble-f.jpg",
-            alt: {en: "Front of the 50 Ruble Bill", vi: "Mặt Trước Tờ 50 Rúp"},
-            description: {en: "Obverse", vi: "Trước"}
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Belarusian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Belarus` 
+});
+const issuer = { en: "National Bank Of The Republic Of Belarus", vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 50 ruble
+images.push([
+    {
+        src: imagePath("2000/50-ruble", "f"),
+        alt: altInfo("50", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2000/50-ruble", "b"),
+        alt: altInfo("50", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Rubles", "Rúp"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
-        {
-            src: "../images/collection/belarus/2000/50-ruble-b.jpg",
-            alt: {en: "Back of the 50 Ruble Bill", vi: "Mặt Sau Tờ 50 Rúp"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Belarusian 50 Rubles", 
-            vi: "50 Rúp Belarus" 
-        },
-        issuer: {
-            en: "National Bank Of The Republic Of Belarus",
-            vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
-        },
-        year: "2000",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "150 \u00D7 69 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 100 ruble
+images.push([
     {
-        src: "../images/collection/belarus/2000/100-ruble-f.jpg",
-        alt: {en: "Front of the 100 Ruble Bill", vi: "Mặt Trước Tờ 100 Rúp"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2000/100-ruble", "f"),
+        alt: altInfo("100", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/belarus/2000/100-ruble-b.jpg",
-        alt: {en: "Back of the 100 Ruble Bill", vi: "Mặt Sau Tờ 100 Rúp"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2000/100-ruble", "b"),
+        alt: altInfo("100", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Belarusian 100 Rubles", 
-        vi: "100 Rúp Belarus" 
-    },
-    issuer: {
-        en: "National Bank Of The Republic Of Belarus",
-        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
-    },
-    year: "2000",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "150 \u00D7 69 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Rubles", "Rúp"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "150 \u00D7 69 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 500 ruble
+images.push([
     {
-        src: "../images/collection/belarus/2000/500-ruble-f.jpg",
-        alt: {en: "Front of the 500 Ruble Bill", vi: "Mặt Trước Tờ 500 Rúp"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2000/500-ruble", "f"),
+        alt: altInfo("500", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/belarus/2000/500-ruble-b.jpg",
-        alt: {en: "Back of the 500 Ruble Bill", vi: "Mặt Sau Tờ 500 Rúp"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2000/500-ruble", "b"),
+        alt: altInfo("500", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Belarusian 500 Rubles", 
-        vi: "500 Rúp Belarus" 
-    },
-    issuer: {
-        en: "National Bank Of The Republic Of Belarus",
-        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
-    },
-    year: "2000",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "150 \u00D7 74 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("500", "500", "Rubles", "Rúp"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "150 \u00D7 74 mm",
+    }
+);
+//#endregion
 
-index++; //index = 4
-images[`${index}`] = [
+//#region 4 - 1000 ruble
+images.push([
     {
-        src: "../images/collection/belarus/2000/1000-ruble-f.jpg",
-        alt: {en: "Front of the 1,000 Ruble Bill", vi: "Mặt Trước Tờ 1,000 Rúp"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2000/1000-ruble", "f"),
+        alt: altInfo("1000", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/belarus/2000/1000-ruble-b.jpg",
-        alt: {en: "Back of the 500 Ruble Bill", vi: "Mặt Sau Tờ 500 Rúp"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2000/1000-ruble", "b"),
+        alt: altInfo("1000", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Belarusian 1,000 Rubles", 
-        vi: "1.000 Rúp Belarus" 
-    },
-    issuer: {
-        en: "National Bank Of The Republic Of Belarus",
-        vi: "Ngân Hàng Quốc Gia Cộng Hòa Belarus"
-    },
-    year: "2000",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "150 \u00D7 74 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1,000", "1.000", "Rubles", "Rúp"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "150 \u00D7 74 mm",
+    }
+);
+//#endregion

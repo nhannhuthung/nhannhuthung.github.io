@@ -45,10 +45,10 @@
                 </a>
 
                 <nav id="header-nav">
-                    <a href="index.html" id="home-nav">Home</a>
-                    <a href="collection.html" id="collection-nav">Collection</a>
-                    <a href="about.html" id="about-nav">About</a>
-                    <a href="contact.html" id="contact-nav">Contact</a>
+                    <a href="index.html" id="home-nav" data-i18n="home"></a>
+                    <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
+                    <a href="about.html" id="about-nav" data-i18n="about"></a>
+                    <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
                 </nav>
             </div>
 
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
                     <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -68,14 +68,10 @@
         </div>
     </header>
 
-    <h5 class="big-title" id="title" style="color: #0E4749; background-color: #c4b69c;">About Me</h5>
+    <h5 class="big-title" id="title" data-i18n="title" style="color: #0E4749; background-color: #c4b69c;"></h5>
     <div id="about" class="page">
-        <p id="greeting"> 
-            Hello! 🦉😀
-        </p>
-        <p id="name-intro">
-            My name is Hưng. If you are unfamiliar with that name, please call me Howl. The name comes from the movie - Howl's Moving Castle.
-        </p>
+        <p id="greeting" data-i18n="greeting"></p>
+        <p id="name-intro" data-i18n="name_intro"></p>
 
         <div class="iframe-container">
             <iframe width="446" height="240" src="video/howl.gif"></iframe>
@@ -87,15 +83,9 @@
     </div>
 
     <div id="math" class="page">
-        <p id="study-intro">
-            I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. I finished my first bachelor and I am pursuing a new journey. New but old, old but new!
-        </p>
-        <p id="math-intro">
-            If you are wondering what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.
-        </p>
-        <p id="resume-intro">
-            Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 05/04/2026.
-        </p>
+        <p id="study-intro" data-i18n="study_intro"></p>
+        <p id="math-intro" data-i18n="math_intro"></p>
+        <p id="resume-intro" data-i18n="resume_intro"></p>
     </div>
     <script src="scripts/loading.js"></script>
 </body>

@@ -5,32 +5,49 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/usa/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/usa/1-series/2013-f.jpg",
-            alt: {en: "Front of the 1 Dollar Bill", vi: "Mặt Trước Tờ 1 Đô La"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/usa/1-series/2013-b.jpg",
-            alt: {en: "Back of the 1 Dollar Bill", vi: "Mặt Sau Tờ 1 Đô La"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "American 1 Dollar", 
-            vi: "1 Đô La Mỹ" 
-        },
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} American ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Mỹ` 
+});
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+
+const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1 dollar
+images.push([
+    {
+        src: imagePath("1-series/2013", "f"),
+        alt: altInfo("1", "Dollar", "Đô La", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1-series/2013", "b"),
+        alt: altInfo("1", "Dollar", "Đô La", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Dollar", "Đô La"),
         year: "2013",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "George Washington (1732-1799)", 
@@ -38,249 +55,249 @@ const slideshowInfo = {
         },
         size: "156 \u00D7 67 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 2 dollar
+images.push([
     {
-        src: "../images/collection/usa/2-series/2013-f.jpg",
-        alt: {en: "Front of the 2 Dollar Bill", vi: "Mặt Trước Tờ 2 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2-series/2013", "f"),
+        alt: altInfo("2", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/2-series/2013-b.jpg",
-        alt: {en: "Back of the 2 Dollar Bill", vi: "Mặt Sau Tờ 2 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2-series/2013", "b"),
+        alt: altInfo("2", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 2 Dollars", 
-        vi: "2 Đô La Mỹ" 
-    },
-    year: "2013",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Thomas Jefferson (1743-1826)", 
-        vi: "Thomas Jefferson (1743-1826)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("2", "2", "Dollars", "Đô La"),
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Thomas Jefferson (1743-1826)", 
+            vi: "Thomas Jefferson (1743-1826)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 5 dollar
+images.push([
     {
-        src: "../images/collection/usa/5-series/1988A-f.jpg",
-        alt: {en: "Front of the 5 Dollar Bill", vi: "Mặt Trước Tờ 5 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("5-series/1988A", "f"),
+        alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/5-series/1988A-b.jpg",
-        alt: {en: "Back of the 5 Dollar Bill", vi: "Mặt Sau Tờ 5 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("5-series/1988A", "b"),
+        alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 5 Dollars", 
-        vi: "5 Đô La Mỹ" 
-    },
-    year: "1988",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Abraham Lincoln (1809-1865)", 
-        vi: "Abraham Lincoln (1809-1865)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5", "5", "Dollars", "Đô La"),
+        year: "1988",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Abraham Lincoln (1809-1865)", 
+            vi: "Abraham Lincoln (1809-1865)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 4
-images[`${index}`] = [
+//#region 4 - 5 dollar
+images.push([
     {
-        src: "../images/collection/usa/5-series/2013-f.jpg",
-        alt: {en: "Front of the 5 Dollar Bill", vi: "Mặt Trước Tờ 5 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("5-series/2013", "f"),
+        alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/5-series/2013-b.jpg",
-        alt: {en: "Back of the 5 Dollar Bill", vi: "Mặt Sau Tờ 5 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("5-series/2013", "b"),
+        alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 5 Dollars", 
-        vi: "5 Đô La Mỹ" 
-    },
-    year: "2013",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Abraham Lincoln (1809-1865)", 
-        vi: "Abraham Lincoln (1809-1865)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5", "5", "Dollars", "Đô La"),
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Abraham Lincoln (1809-1865)", 
+            vi: "Abraham Lincoln (1809-1865)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 5
-images[`${index}`] = [
+//#region 5 - 10 dollar
+images.push([
     {
-        src: "../images/collection/usa/10-series/2013-f.jpg",
-        alt: {en: "Front of the 10 Dollar Bill", vi: "Mặt Trước Tờ 10 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("10-series/2013", "f"),
+        alt: altInfo("10", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/10-series/2013-b.jpg",
-        alt: {en: "Back of the 10 Dollar Bill", vi: "Mặt Sau Tờ 10 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("10-series/2013", "b"),
+        alt: altInfo("10", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 10 Dollars", 
-        vi: "10 Đô La Mỹ" 
-    },
-    year: "2013",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Alexander Hamilton (1757-1804)", 
-        vi: "Alexander Hamilton (1757-1804)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Alexander Hamilton (1757-1804)", 
+            vi: "Alexander Hamilton (1757-1804)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 6
-images[`${index}`] = [
+//#region 6 - 20 dollar
+images.push([
     {
-        src: "../images/collection/usa/20-series/2013-f.jpg",
-        alt: {en: "Front of the 20 Dollar Bill", vi: "Mặt Trước Tờ 20 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("20-series/2013", "f"),
+        alt: altInfo("20", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/20-series/2013-b.jpg",
-        alt: {en: "Back of the 20 Dollar Bill", vi: "Mặt Sau Tờ 20 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("20-series/2013", "b"),
+        alt: altInfo("20", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 20 Dollars", 
-        vi: "20 Đô La Mỹ" 
-    },
-    year: "2013",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Andrew Jackson (1767-1845)", 
-        vi: "Andrew Jackson (1767-1845)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Dollars", "Đô La"),
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Andrew Jackson (1767-1845)", 
+            vi: "Andrew Jackson (1767-1845)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 7
-images[`${index}`] = [
+//#region 8 - 50 dollar
+images.push([
     {
-        src: "../images/collection/usa/50-series/2013-f.jpg",
-        alt: {en: "Front of the 50 Dollar Bill", vi: "Mặt Trước Tờ 50 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("50-series/2013", "f"),
+        alt: altInfo("50", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/50-series/2013-b.jpg",
-        alt: {en: "Back of the 50 Dollar Bill", vi: "Mặt Sau Tờ 50 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("50-series/2013", "b"),
+        alt: altInfo("50", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 50 Dollars", 
-        vi: "50 Đô La Mỹ" 
-    },
-    year: "2013",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Ulysses S. Grant (1822-1885)", 
-        vi: "Ulysses S. Grant (1822-1885)"
-    },
-    size: "156 \u00D7 67 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Dollars", "Đô La"),
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Ulysses S. Grant (1822-1885)", 
+            vi: "Ulysses S. Grant (1822-1885)"
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 9
-images[`${index}`] = [
+//#region 9 - 100 dollar
+images.push([
     {
-        src: "../images/collection/usa/100-series/1996-f.jpg",
-        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("100-series/1996", "f"),
+        alt: altInfo("100", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/100-series/1996-b.jpg",
-        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("100-series/1996", "b"),
+        alt: altInfo("100", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 100 Dollars", 
-        vi: "100 Đô La Mỹ" 
-    },
-    year: "1996",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Benjamin Franklin (1706-1790)", 
-        vi: "Benjamin Franklin (1706-1790)" 
-    },
-    size: "156 \u00D7 67 mm",
-    new: true
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Dollars", "Đô La"),
+        year: "1996",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Benjamin Franklin (1706-1790)", 
+            vi: "Benjamin Franklin (1706-1790)" 
+        },
+        size: "156 \u00D7 67 mm",
+    }
+);
+//#endregion
 
-index++; //index = 9
-images[`${index}`] = [
+//#region 10 - 100 dollar
+images.push([
     {
-        src: "../images/collection/usa/100-series/2009A-f.jpg",
-        alt: {en: "Front of the 100 Dollar Bill", vi: "Mặt Trước Tờ 100 Đô La"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("100-series/2009A", "f"),
+        alt: altInfo("100", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/usa/100-series/2009A-b.jpg",
-        alt: {en: "Back of the 100 Dollar Bill", vi: "Mặt Sau Tờ 100 Đô La"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("100-series/2009A", "b"),
+        alt: altInfo("100", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "American 100 Dollars", 
-        vi: "100 Đô La Mỹ" 
-    },
-    year: "2011",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Benjamin Franklin (1706-1790)", 
-        vi: "Benjamin Franklin (1706-1790)" 
-    },
-    size: "156 \u00D7 67 mm",
-    note: {
-        en: `2013\'s top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`,
-        vi: `Top 12 tờ tiền của năm 2013 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Dollars", "Đô La"),
+        year: "2009",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Benjamin Franklin (1706-1790)", 
+            vi: "Benjamin Franklin (1706-1790)" 
+        },
+        size: "156 \u00D7 67 mm",
+        note: {
+            en: `2013\'s top 12 banknotes by ${ibnsLink}`,
+            vi: `Top 12 tờ tiền của năm 2013 theo ${ibnsLink}`
+        }
     }
-};
+);
+//#endregion

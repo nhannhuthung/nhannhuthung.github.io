@@ -5,65 +5,82 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/syria/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/syria/1997-1998/100-pound-f.jpg",
-            alt: {en: "Front of the 100 Pound Bill", vi: "Mặt Trước Tờ 100 Bảng"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/syria/1997-1998/100-pound-b.jpg",
-            alt: {en: "Back of the 1000 Won Bill", vi: "Mặt Sau Tờ 1000 Won"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Syrian 100 Pounds", 
-            vi: "100 Bảng Syria" 
-        },
-        issuer: {
-            en: "Central Bank Of Syria",
-            vi: "Ngân Hàng Trung Ương Syria"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Syrian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Syria` 
+});
+const issuer = { en: "Central Bank Of Syria", vi: "Ngân Hàng Trung Ương Syria" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 100 pound
+images.push([
+    {
+        src: imagePath("1997-1998/100-pound", "f"),
+        alt: altInfo("100", "Pounds", "Bảng", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1997-1998/100-pound", "b"),
+        alt: altInfo("100", "Pounds", "Bảng", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Pounds", "Bảng"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         type: { 
-            en: "Non-Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "155 \u00D7 75 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 200 pound
+images.push([
     {
-        src: "../images/collection/syria/1997-1998/200-pound-f.jpg",
-        alt: {en: "Front of the 200 Pound Bill", vi: "Mặt Trước Tờ 200 Bảng"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1997-1998/200-pound", "f"),
+        alt: altInfo("200", "Pounds", "Bảng", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/syria/1997-1998/200-pound-b.jpg",
-        alt: {en: "Back of the 200 Pound Bill", vi: "Mặt Sau Tờ 200 Bảng"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1997-1998/200-pound", "b"),
+        alt: altInfo("200", "Pounds", "Bảng", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Syrian 200 Pounds", 
-        vi: "200 Bảng Syria" 
-    },
-    issuer: {
-        en: "Central Bank Of Costa Rica",
-        vi: "Ngân Hàng Trung Ương Costa Rica"
-    },
-    type: { 
-        en: "Non-Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "160 \u00D7 75 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("200", "200", "Pounds", "Bảng"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "160 \u00D7 75 mm",
+    }
+);
+//#endregion

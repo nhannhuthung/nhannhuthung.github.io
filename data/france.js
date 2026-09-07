@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/france/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/france/1969-1982/20-franc-f.jpg",
-            alt: {en: "Front of the 20 Franc Bill", vi: "Mặt Trước Tờ 20 Franc"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/france/1969-1982/20-franc-b.jpg",
-            alt: {en: "Back of the 20 Franc Bill", vi: "Mặt Sau Tờ 20 Franc"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "French 20 Francs", 
-            vi: "20 Franc Pháp" 
-        },
-        issuer: {
-            en: "Bank Of France",
-            vi: "Ngân Hàng Pháp"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} French ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Pháp` 
+});
+const issuer   = { en: "Bank Of France", vi: "Ngân Hàng Pháp" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 20 franc
+images.push([
+    {
+        src: imagePath("1969-1982/20-franc", "f"),
+        alt: altInfo("20", "Francs", "Franc", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1969-1982/20-franc", "b"),
+        alt: altInfo("20", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "1997",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         figure: { 
             en: "Claude Debussy (1862-1918)", 
@@ -42,140 +58,141 @@ const slideshowInfo = {
         },
         size: "140 \u00D7 75 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 50 franc
+images.push([
     {
-        src: "../images/collection/france/1993-1998/50-franc-f.jpg",
-        alt: {en: "Front of the 50 Franc Bill", vi: "Mặt Trước Tờ 50 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993-1998/50-franc", "f"),
+        alt: altInfo("50", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/france/1993-1998/50-franc-b.jpg",
-        alt: {en: "Back of the 50 Franc Bill", vi: "Mặt Sau Tờ 50 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993-1998/50-franc", "b"),
+        alt: altInfo("50", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "French 50 Francs", 
-        vi: "50 Franc Pháp" 
-    },
-    issuer: {
-        en: "Bank Of France",
-        vi: "Ngân Hàng Pháp"
-    },
-    year: "1994",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    figure: { 
-        en: "Antoine de Saint-Exupéry (1900-1944?)", 
-        vi: "Antoine de Saint-Exupéry (1900-1944?)"
-    },
-    size: "123 \u00D7 80 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1994",
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        figure: { 
+            en: "Antoine de Saint-Exupéry (1900-1944?)", 
+            vi: "Antoine de Saint-Exupéry (1900-1944?)"
+        },
+        size: "123 \u00D7 80 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 100 franc
+images.push([
     {
-        src: "../images/collection/france/1993-1998/100-franc-f.jpg",
-        alt: {en: "Front of the 100 Franc Bill", vi: "Mặt Trước Tờ 100 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993-1998/100-franc", "f"),
+        alt: altInfo("100", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/france/1993-1998/100-franc-b.jpg",
-        alt: {en: "Back of the 100 Franc Bill", vi: "Mặt Sau Tờ 100 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993-1998/100-franc", "b"),
+        alt: altInfo("100", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "French 100 Francs", 
-        vi: "100 Franc Pháp" 
-    },
-    issuer: {
-        en: "Bank Of France",
-        vi: "Ngân Hàng Pháp"
-    },
-    year: "1998",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    figure: { 
-        en: "Paul Cézanne (1839-1906)", 
-        vi: "Paul Cézanne (1839-1906)"
-    },
-    size: "133 \u00D7 80 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1998",
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        figure: { 
+            en: "Paul Cézanne (1839-1906)", 
+            vi: "Paul Cézanne (1839-1906)"
+        },
+        size: "133 \u00D7 80 mm",
+    }
+);
+//#endregion
 
-index++; //index = 4
-images[`${index}`] = [
+//#region 4 - 200 franc
+images.push([
     {
-        src: "../images/collection/france/1993-1998/200-franc-f.jpg",
-        alt: {en: "Front of the 200 Franc Bill", vi: "Mặt Trước Tờ 200 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993-1998/200-franc", "f"),
+        alt: altInfo("200", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/france/1993-1998/200-franc-b.jpg",
-        alt: {en: "Back of the 200 Franc Bill", vi: "Mặt Sau Tờ 200 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993-1998/200-franc", "b"),
+        alt: altInfo("200", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "French 200 Francs", 
-        vi: "200 Franc Pháp" 
-    },
-    issuer: {
-        en: "Bank Of France",
-        vi: "Ngân Hàng Pháp"
-    },
-    year: "1997",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    figure: { 
-        en: "Gustave Eiffel (1832-1923)", 
-        vi: "Gustave Eiffel (1832-1923)"
-    },
-    size: "143 \u00D7 80 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("200", "200", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1997",
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        figure: { 
+            en: "Gustave Eiffel (1832-1923)", 
+            vi: "Gustave Eiffel (1832-1923)"
+        },
+        size: "143 \u00D7 80 mm",
+    }
+);
+//#endregion
 
-index++; //index = 5
-images[`${index}`] = [
+//#region 5 - 500 franc
+images.push([
     {
-        src: "../images/collection/france/1993-1998/500-franc-f.jpg",
-        alt: {en: "Front of the 500 Franc Bill", vi: "Mặt Trước Tờ 500 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993-1998/500-franc", "f"),
+        alt: altInfo("500", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/france/1993-1998/500-franc-b.jpg",
-        alt: {en: "Back of the 500 Franc Bill", vi: "Mặt Sau Tờ 500 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993-1998/500-franc", "b"),
+        alt: altInfo("500", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "French 500 Francs", 
-        vi: "500 Franc Pháp" 
-    },
-    issuer: {
-        en: "Bank Of France",
-        vi: "Ngân Hàng Pháp"
-    },
-    year: "1994",
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    figure: { 
-        en: "Marie Curie (1867-1934), Pierre Curie (1859-1906)", 
-        vi: "Marie Curie (1867-1934), Pierre Curie (1859-1906)"
-    },
-    size: "153 \u00D7 80 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("500", "500", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1994",
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        figure: { 
+            en: "Marie Curie (1867-1934), Pierre Curie (1859-1906)", 
+            vi: "Marie Curie (1867-1934), Pierre Curie (1859-1906)"
+        },
+        size: "153 \u00D7 80 mm",
+    }
+);
+//#endregion

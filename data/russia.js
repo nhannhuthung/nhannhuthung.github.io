@@ -5,41 +5,60 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/russia/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/russia/2018/100-ruble-f.jpg",
-            alt: {en: "Front of the 100 Ruble Bill", vi: "Mặt Trước Tờ 100 Rúp"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/russia/2018/100-ruble-b.jpg",
-            alt: {en: "Back of the 100 Ruble Bill", vi: "Mặt Sau Tờ 100 Ruble"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Russian 100 Rubles", 
-            vi: "100 Rúp Nga" 
-        },
-        issuer: {
-            en: "Central Bank Of Russia",
-            vi: "Ngân Hàng Trung Ương Russia"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Russian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Nga` 
+});
+const issuer = { en: "Central Bank Of Russia", vi: "Ngân Hàng Trung Ương Russia" };
+const comInType = {  en: "Circulating Commemorative Banknote", vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành"  };
+
+const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 100 ruble
+images.push([
+    {
+        src: imagePath("2018/100-ruble", "f"),
+        alt: altInfo("100", "Rubles", "Rúp", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2018/100-ruble", "b"),
+        alt: altInfo("100", "Rubles", "Rúp", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Rubles", "Rúp"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2018",
         type: { 
-            en: "Circulating Commemorative Banknote", 
-            vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
+            en: comInType.en, 
+            vi: comInType.vi 
         },
         size: "65 \u00D7 150 mm",
         note: { 
-            en: `2018\'s top 16 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
-            vi: `Top 16 tờ tiền năm 2018 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`
+            en: `2018\'s top 16 banknotes by ${ibnsLink}`, 
+            vi: `Top 16 tờ tiền năm 2018 theo ${ibnsLink}`
         },
     }
-};
+);
+//#endregion

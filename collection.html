@@ -34,10 +34,10 @@
                 </a>
 
                 <nav id="header-nav">
-                    <a href="index.html" id="home-nav">Home</a>
-                    <a href="collection.html" id="collection-nav">Collection</a>
-                    <a href="about.html" id="about-nav">About</a>
-                    <a href="contact.html" id="contact-nav">Contact</a>
+                    <a href="index.html" id="home-nav" data-i18n="home"></a>
+                    <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
+                    <a href="about.html" id="about-nav" data-i18n="about"></a>
+                    <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
                 </nav>
             </div>
 
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Enter page name...">
+                    <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
                     <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -57,46 +57,46 @@
         </div>
     </header>
 
-    <button onclick="toTop()" id="top_btn" title="Go to top">Top</button>
+    <button onclick="toTop()" id="top_btn" data-i18n="top_btn" data-i18n-title="top_title"></button>
 
     <div class="container-top">
-        <h3 id="acknowledge" style="margin-top: 10px;">Acknowledgment</h3>
-        <p id="acknowledge-para">Welcome to my online money gallary! I would like to express my gratitude to everyone who has contributed to my collection. It truly wouldn't be as complete and meaningful without each of you. Your support and contributions have made all the difference.</p>
-        <h3 id="remark">Remark</h3>
-        <p id="remark-para-1">I started my collection with only coins and I continue collecting them until now. However, since there are too many - around 700 coins, I couldn't display all of them here.</p>
-        <p id="remark-para-2">A few highlights about my coin collection:
-        <ul> 
+        <h3 id="acknowledge" data-i18n="acknowledge" style="margin-top: 10px;"></h3>
+        <p id="acknowledge-para" data-i18n="acknowledge_para"></p>
+        <h3 id="remark" data-i18n="remark"></h3>
+        <p id="remark-para-1" data-i18n="remark_para_1"></p>
+        <p id="remark-para-2" data-i18n="remark_para_2"></p>
+        <ul>
             <!--customize the bullet here
             https://www.toptal.com/designers/htmlarrows/symbols/-->
-            <li id="remark-subpara-1"><span>&#9757;</span> There are around 70 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina etc.).</li>
-            <li id="remark-subpara-2"><span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I displayed them in the highlight.</li>
+            <li id="remark-subpara-1" data-i18n="remark_subpara_1"></li>
+            <li id="remark-subpara-2" data-i18n="remark_subpara_2"></li>
         </ul>
-        <p id="remark-para-3">My collection is extending with banknotes.</p>
+        <p id="remark-para-3" data-i18n="remark_para_3"></p>
         <br>
-        <h4 id="last-update" style="text-align: right;">Last Updated:</h4>
-        <h5 style="text-align: right;">05/04/2026</h5>
+        <h4 id="last-update" data-i18n="last_update" style="text-align: right;"></h4>
+        <h5 style="text-align: right;">??/??/2026</h5>
     </div>
 
     <div class="container-highlight">
-        <h1 id="highlight" style="color: whitesmoke;">Highlight</h1>
+        <h1 id="highlight" data-i18n="highlight" style="color: whitesmoke;"></h1>
 
-        <h2 id="banknote" style="color: whitesmoke;">Banknote</h2>
+        <h2 id="banknote" data-i18n="banknote" style="color: whitesmoke;"></h2>
         <div class="highlight-banknote">
             <div class="box" id="box-1">
                 <img src="images/highlight/banknote/mexico.jpg" alt="Mexico">
                 <div class="overlay">Mexico</div>
             </div>
             <div class="box" id="box-2">
-                <img src="images/collection/norway/8/200-kroner-f.jpg" alt="Norway">
-                <div id="norway" class="overlay">Norway</div>
+                <img src="images/collection/norway/8/200-krone-f.jpg" alt="Norway">
+                <div id="norway" data-i18n="norway" class="overlay"></div>
             </div>
             <div class="box" id="box-3">
                 <img src="images/highlight/banknote/hong-kong.jpg" alt="Hong Kong">
-                <div id="hong-kong" class="overlay">Hong Kong</div>
+                <div id="hong-kong" data-i18n="hong_kong" class="overlay"></div>
             </div>
             <div class="box" id="box-4">
                 <img src="images/collection/australia/1988/10-dollar-b.jpg" alt="Australia">
-                <div id="australia" class="overlay">Australia</div>
+                <div id="australia" data-i18n="australia" class="overlay"></div>
             </div>
             <div class="box" id="box-5">
                 <img src="images/collection/venezuela/2008/5-bolivar-b.jpg" alt="Hong Kong">
@@ -112,22 +112,22 @@
             </div>
         </div>
 
-        <h2 id="coin" style="color: whitesmoke;">Coin</h2>
+        <h2 id="coin" data-i18n="coin" style="color: whitesmoke;"></h2>
         <div class="highlight-coin">
             <div class="coin-box" data-info="USA ~ 1881-O ~ 1 Dollar">
                 <img src="images/highlight/coin/usa-f.jpg" alt="1 Dollar Front">
                 <img src="images/highlight/coin/usa-b.jpg" alt="1 Dollar Back">
-                <div id="usa-coin" class="coin-overlay">USA ~ 1881-O ~ 1 Dollar</div>
+                <div id="usa-coin" data-i18n="usa_coin" class="coin-overlay"></div>
             </div>
             <div class="coin-box" data-info="Indochinese Union ~ 1902 ~ 1 Piastre">
                 <img src="images/highlight/coin/indochina-f.jpg" alt="1 Piastre Front">
                 <img src="images/highlight/coin/indochina-b.jpg" alt="1 Piastre Back">
-                <div id="indochina-coin" class="coin-overlay">Indochinese Union ~ 1902 ~ 1 Piastre</div>
+                <div id="indochina-coin" data-i18n="indochina_coin" class="coin-overlay"></div>
             </div>
             <div class="coin-box" data-info="Canada ~ 1967 ~ 1 Dollar">
                 <img src="images/highlight/coin/canada-f.jpg" alt="1 Dollar Front">
                 <img src="images/highlight/coin/canada-b.jpg" alt="1 Dollar Back">
-                <div id="canada-coin" class="coin-overlay">Canada ~ 1967 ~ 1 Dollar</div>
+                <div id="canada-coin" data-i18n="canada_coin" class="coin-overlay"></div>
             </div>
         </div>
     </div>

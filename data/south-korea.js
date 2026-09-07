@@ -5,35 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/south-korea/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/south-korea/2006/1000-won-f.jpg",
-            alt: {en: "Front of the 1000 Won Bill", vi: "Mặt Trước Tờ 1000 Won"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/south-korea/2006/1000-won-b.jpg",
-            alt: {en: "Back of the 1000 Won Bill", vi: "Mặt Sau Tờ 1000 Won"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "South Korean 1,000 Won", 
-            vi: "1.000 Won Hàn Quốc" 
-        },
-        issuer: {
-            en: "Bank Of Korea",
-            vi: "Ngân Hàng Hàn Quốc"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Korean ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Hàn Quốc` 
+});
+const issuer = { en: "Bank Of Korea", vi: "Ngân Hàng Hàn Quốc" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+const comInType = { en: "Circulating Commemorative Banknote", vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" }
+
+const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1000 won
+images.push([
+    {
+        src: imagePath("2006/1000-won", "f"),
+        alt: altInfo("1000", "Won", "Won", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2006/1000-won", "b"),
+        alt: altInfo("1000", "Won", "Won", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1.000", "1,000", "Won ", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Yi Hwang (1501-1570)", 
@@ -41,136 +60,137 @@ const slideshowInfo = {
         },
         size: "136 \u00D7 68 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 5000 won
+images.push([
     {
-        src: "../images/collection/south-korea/2006/5000-won-f.jpg",
-        alt: {en: "Front of the 5000 Won Bill", vi: "Mặt Trước Tờ 5000 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2006/5000-won", "f"),
+        alt: altInfo("5000", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/south-korea/2006/5000-won-b.jpg",
-        alt: {en: "Back of the 5000 Won Bill", vi: "Mặt Sau Tờ 5000 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2006/5000-won", "b"),
+        alt: altInfo("5000", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "South Korean 5,000 Won", 
-        vi: "5.000 Won Hàn Quốc" 
-    },
-    issuer: {
-        en: "Bank Of Korea",
-        vi: "Ngân Hàng Hàn Quốc"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Yi I (1536-1584)", 
-        vi: "Lý Nhị (1536-1584)" 
-    },
-    size: "142 \u00D7 68 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5.000", "5,000", "Won ", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Yi I (1536-1584)", 
+            vi: "Lý Nhị (1536-1584)" 
+        },
+        size: "142 \u00D7 68 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 10000 won
+images.push([
     {
-        src: "../images/collection/south-korea/2006/10000-won-f.jpg",
-        alt: {en: "Front of the 10000 Won Bill", vi: "Mặt Trước Tờ 10000 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2006/10000-won", "f"),
+        alt: altInfo("10000", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/south-korea/2006/10000-won-b.jpg",
-        alt: {en: "Back of the 10000 Won Bill", vi: "Mặt Sau Tờ 10000 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2006/10000-won", "b"),
+        alt: altInfo("10000", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "South Korean 10,000 Won", 
-        vi: "10.000 Won Hàn Quốc" 
-    },
-    issuer: {
-        en: "Bank Of Korea",
-        vi: "Ngân Hàng Hàn Quốc"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Sejong the Great (1397-1450)", 
-        vi: "Triều Tiên Thế Tông (1397-1450)" 
-    },
-    size: "148 \u00D7 68 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10.000", "10,000", "Won ", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Sejong the Great (1397-1450)", 
+            vi: "Triều Tiên Thế Tông (1397-1450)" 
+        },
+        size: "148 \u00D7 68 mm",
+    }
+);
+//#endregion
 
-index++; //index = 4
-images[`${index}`] = [
+//#region 4 - 50000 won
+images.push([
     {
-        src: "../images/collection/south-korea/2006/50000-won-f.jpg",
-        alt: {en: "Front of the 50000 Won Bill", vi: "Mặt Trước Tờ 50000 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2006/50000-won", "f"),
+        alt: altInfo("50000", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/south-korea/2006/50000-won-b.jpg",
-        alt: {en: "Back of the 50000 Won Bill", vi: "Mặt Sau Tờ 50000 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2006/50000-won", "b"),
+        alt: altInfo("50000", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "South Korean 50,000 Won", 
-        vi: "50.000 Won Hàn Quốc" 
-    },
-    issuer: {
-        en: "Bank Of Korea",
-        vi: "Ngân Hàng Hàn Quốc"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Shin Saimdang (1504-1551)", 
-        vi: "Thân Sư Nhâm Đường (1504-1551)" 
-    },
-    size: "154 \u00D7 68 mm",
-    note: { 
-        en: `2009\'s top 9 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`, 
-        vi: `Top 9 tờ tiền năm 2009 theo <a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>` 
-    },
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50.000", "50,000", "Won ", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Shin Saimdang (1504-1551)", 
+            vi: "Thân Sư Nhâm Đường (1504-1551)" 
+        },
+        size: "154 \u00D7 68 mm",
+        note: { 
+            en: `2009\'s top 9 banknotes by ${ibnsLink}`, 
+            vi: `Top 9 tờ tiền năm 2009 theo ${ibnsLink}` 
+        },
+    }
+);
+//#endregion
 
-index++; //index = 5
-images[`${index}`] = [
+//#region 5 - 2000 won
+images.push([
     {
-        src: "../images/collection/south-korea/2018/2000-won-f.jpg",
-        alt: {en: "Front of the 2000 Won Bill", vi: "Mặt Trước Tờ 2000 Won"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2018/2000-won", "f"),
+        alt: altInfo("2000", "Won", "Won", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/south-korea/2018/2000-won-b.jpg",
-        alt: {en: "Back of the 2000 Won Bill", vi: "Mặt Sau Tờ 2000 Won"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2018/2000-won", "b"),
+        alt: altInfo("2000", "Won", "Won", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "South Korean 2,000 Won", 
-        vi: "2.000 Won Hàn Quốc" 
-    },
-    issuer: {
-        en: "Bank Of Korea",
-        vi: "Ngân Hàng Hàn Quốc"
-    },
-    type: { 
-        en: "Circulating Commemorative Banknote", 
-        vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" 
-    },
-    size: "140 \u00D7 75 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("2.000", "2,000", "Won ", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "140 \u00D7 75 mm",
+    }
+);
+//#endregion

@@ -5,37 +5,54 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/kyrgyzstan/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Kyrgyz ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Kyrgyzstan` 
+});
+const issuer = { en: "Kyrgyz Bank", vi: "Ngân Hàng Kyrgyzstan" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1 tyiyn
+images.push([
         {
-            src: "../images/collection/kyrgyzstan/1/1-tyiyn-f.jpg",
-            alt: {en: "Front of the 1 Tyiyn Bill", vi: "Mặt Trước Tờ 1 Tyiyn"},
-            description: {en: "Obverse", vi: "Trước"}
+            src: imagePath("1/1-tyiyn", "f"),
+            alt: altInfo("1", "Tyiyn", "Tyiyn", "Front", "trước"),
+            description: obverse
         },
         {
-            src: "../images/collection/kyrgyzstan/1/1-tyiyn-b.jpg",
-            alt: {en: "Back of the 1 Tyiyn Bill", vi: "Mặt Sau Tờ 1 Tyiyn"},
-            description: {en: "Reverse", vi: "Sau"}
+            src: imagePath("1/1-tyiyn", "b"),
+            alt: altInfo("1", "Tyiyn", "Tyiyn", "Back", "sau"),
+            description: reverse
         }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Kyrgyz 1 Tyiyn", 
-            vi: "1 Tyiyn Kyrgyzstan" 
-        },
-        issuer: {
-            en: "Kyrgyz Bank",
-            vi: "Ngân Hàng Kyrgyzstan"
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Tyiyn", "Tyiyn"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "1954",
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "90 \u00D7 70 mm",
     }
-};
+);
+//#endregion

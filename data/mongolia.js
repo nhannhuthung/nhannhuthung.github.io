@@ -5,259 +5,277 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/mongolia/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/mongolia/1993/10-mongo-f.jpg",
-            alt: {en: "Front of the 10 Möngö Bill", vi: "Mặt Trước Tờ 10 Möngö"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/mongolia/1993/10-mongo-b.jpg",
-            alt: {en: "Back of the 10 Möngö Bill", vi: "Mặt Sau Tờ 10 Möngö"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Mongolian 10 Möngö", 
-            vi: "10 Möngö Mông Cổ" 
-        },
-        issuer: {
-            en: "Bank Of Mongolia",
-            vi: "Ngân Hàng Mongolia"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Mongolian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Mông Cổ` 
+});
+const issuer = { en: "Bank Of Mongolia", vi: "Ngân Hàng Mông Cổ" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 10 mongo
+images.push([
+    {
+        src: imagePath("1993/10-mongo", "f"),
+        alt: altInfo("10", "Mongo", "Mongo", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1993/10-mongo", "b"),
+        alt: altInfo("10", "Mongo", "Mongo", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Mongo", "Mongo"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         type: { 
-            en: "Non-circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "45 \u00D7 90 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 20 mongo
+images.push([
     {
-        src: "../images/collection/mongolia/1993/20-mongo-f.jpg",
-        alt: {en: "Front of the 20 Möngö Bill", vi: "Mặt Trước Tờ 20 Möngö"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/20-mongo", "f"),
+        alt: altInfo("20", "Mongo", "Mongo", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/20-mongo-b.jpg",
-        alt: {en: "Back of the 20 Möngö Bill", vi: "Mặt Sau Tờ 20 Möngö"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/20-mongo", "b"),
+        alt: altInfo("20", "Mongo", "Mongo", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 20 Möngö", 
-        vi: "20 Möngö Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "45 \u00D7 90 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Mongo", "Mongo"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "45 \u00D7 90 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 50 mongo
+images.push([
     {
-        src: "../images/collection/mongolia/1993/50-mongo-f.jpg",
-        alt: {en: "Front of the 50 Möngö Bill", vi: "Mặt Trước Tờ 50 Möngö"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/50-mongo", "f"),
+        alt: altInfo("50", "Mongo", "Mongo", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/50-mongo-b.jpg",
-        alt: {en: "Back of the 50 Möngö Bill", vi: "Mặt Sau Tờ 50 Möngö"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/50-mongo", "b"),
+        alt: altInfo("50", "Mongo", "Mongo", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 50 Möngö", 
-        vi: "50 Möngö Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    type: { 
-        en: "Non-circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" 
-    },
-    size: "45 \u00D7 90 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Mongo", "Mongo"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "45 \u00D7 90 mm",
+    }
+);
+//#endregion
 
-index++; //index = 4
-images[`${index}`] = [
+//#region 4 - 1 togrog
+images.push([
     {
-        src: "../images/collection/mongolia/1993/1-togrog-f.jpg",
-        alt: {en: "Front of the 1 Tögrög Bill", vi: "Mặt Trước Tờ 1 Tögrög"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/1-togrog", "f"),
+        alt: altInfo("1", "Togrog", "Togrog", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/1-togrog-b.jpg",
-        alt: {en: "Back of the 1 Tögrög Bill", vi: "Mặt Sau Tờ 1 Tögrög"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/1-togrog", "b"),
+        alt: altInfo("1", "Togrog", "Togrog", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 1 Tögrög", 
-        vi: "1 Tögrög Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "115 \u00D7 57 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "Togrog", "Togrog"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "115 \u00D7 57 mm",
+    }
+);
+//#endregion
 
-index++; //index = 5
-images[`${index}`] = [
+//#region 5 - 10 togrog
+images.push([
     {
-        src: "../images/collection/mongolia/1993/10-togrog-f.jpg",
-        alt: {en: "Front of the 10 Tögrög Bill", vi: "Mặt Trước Tờ 10 Tögrög"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/10-togrog", "f"),
+        alt: altInfo("10", "Togrog", "Togrog", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/10-togrog-b.jpg",
-        alt: {en: "Back of the 10 Tögrög Bill", vi: "Mặt Sau Tờ 10 Tögrög"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/10-togrog", "b"),
+        alt: altInfo("10", "Togrog", "Togrog", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 10 Tögrög", 
-        vi: "10 Tögrög Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    year: "2017",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Damdin Sükhbaatar (1893-1923)", 
-        vi: "Damdin Sükhbaatar (1893-1923)" 
-    },
-    size: "125 \u00D7 61 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Togrog", "Togrog"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2017",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Damdin Sükhbaatar (1893-1923)", 
+            vi: "Damdin Sükhbaatar (1893-1923)" 
+        },
+        size: "125 \u00D7 61 mm",
+    }
+);
+//#endregion
 
-index++; //index = 6
-images[`${index}`] = [
+//#region 6 - 20 togrog
+images.push([
     {
-        src: "../images/collection/mongolia/1993/20-togrog-f.jpg",
-        alt: {en: "Front of the 20 Tögrög Bill", vi: "Mặt Trước Tờ 20 Tögrög"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/20-togrog", "f"),
+        alt: altInfo("20", "Togrog", "Togrog", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/20-togrog-b.jpg",
-        alt: {en: "Back of the 20 Tögrög Bill", vi: "Mặt Sau Tờ 20 Tögrög"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/20-togrog", "b"),
+        alt: altInfo("20", "Togrog", "Togrog", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 20 Tögrög", 
-        vi: "20 Tögrög Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    year: "2017",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Damdin Sükhbaatar (1893-1923)", 
-        vi: "Damdin Sükhbaatar (1893-1923)" 
-    },
-    size: "130 \u00D7 64 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Togrog", "Togrog"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2017",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Damdin Sükhbaatar (1893-1923)", 
+            vi: "Damdin Sükhbaatar (1893-1923)" 
+        },
+        size: "130 \u00D7 64 mm",
+    }
+);
+//#endregion
 
-index++; //index = 7
-images[`${index}`] = [
+//#region 7 - 50 togrog
+images.push([
     {
-        src: "../images/collection/mongolia/1993/50-togrog-f.jpg",
-        alt: {en: "Front of the 50 Tögrög Bill", vi: "Mặt Trước Tờ 50 Tögrög"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/50-togrog", "f"),
+        alt: altInfo("50", "Togrog", "Togrog", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/50-togrog-b.jpg",
-        alt: {en: "Back of the 50 Tögrög Bill", vi: "Mặt Sau Tờ 50 Tögrög"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/50-togrog", "b"),
+        alt: altInfo("50", "Togrog", "Togrog", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 50 Tögrög", 
-        vi: "50 Tögrög Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    year: "2016",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Damdin Sükhbaatar (1893-1923)", 
-        vi: "Damdin Sükhbaatar (1893-1923)" 
-    },
-    size: "135 \u00D7 66 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Togrog", "Togrog"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2016",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Damdin Sükhbaatar (1893-1923)", 
+            vi: "Damdin Sükhbaatar (1893-1923)" 
+        },
+        size: "135 \u00D7 66 mm",
+    }
+);
+//#endregion
 
-index++; //index = 8
-images[`${index}`] = [
+//#region 8 - 100 togrog
+images.push([
     {
-        src: "../images/collection/mongolia/1993/100-togrog-f.jpg",
-        alt: {en: "Front of the 100 Tögrög Bill", vi: "Mặt Trước Tờ 100 Tögrög"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("1993/100-togrog", "f"),
+        alt: altInfo("100", "Togrog", "Togrog", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/mongolia/1993/100-togrog-b.jpg",
-        alt: {en: "Back of the 100 Tögrög Bill", vi: "Mặt Sau Tờ 100 Tögrög"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("1993/100-togrog", "b"),
+        alt: altInfo("100", "Togrog", "Togrog", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Mongolian 100 Tögrög", 
-        vi: "100 Tögrög Mông Cổ" 
-    },
-    issuer: {
-        en: "Bank Of Mongolia",
-        vi: "Ngân Hàng Mongolia"
-    },
-    year: "2014",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: { 
-        en: "Damdin Sükhbaatar (1893-1923)", 
-        vi: "Damdin Sükhbaatar (1893-1923)" 
-    },
-    size: "140 \u00D7 68 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("100", "100", "Togrog", "Togrog"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2014",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Damdin Sükhbaatar (1893-1923)", 
+            vi: "Damdin Sükhbaatar (1893-1923)" 
+        },
+        size: "140 \u00D7 68 mm",
+    }
+);
+//#endregion

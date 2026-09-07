@@ -5,36 +5,52 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/serbia/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/serbia/3/20-dinar-f.jpg",
-            alt: {en: "Front of the 20 Dinar Bill", vi: "Mặt Trước Tờ 20 Dinar"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/serbia/3/20-dinar-b.jpg",
-            alt: {en: "Back of the 20 Dinar Bill", vi: "Mặt Sau Tờ 20 Dinar"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Serbian 20 Dinara", 
-            vi: "20 Dinar Serbia" 
-        },
-        issuer: {
-            en: "National Bank of Serbia",
-            vi: "Ngân Hàng Nhà Nước Serbia"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Serbian ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Serbia` 
+});
+const issuer = { en: "National Bank of Serbia", vi: "Ngân Hàng Nhà Nước Serbia" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 20 dinar
+images.push([
+    {
+        src: imagePath("3/20-dinar", "f"),
+        alt: altInfo("20", "Dinara", "Dinar", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("3/20-dinar", "b"),
+        alt: altInfo("20", "Dinara", "Dinar", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Dinara", "Dinar"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2013",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: {
             en: "Petar II Petrović-Njegoš (1813-1851)",
@@ -42,72 +58,73 @@ const slideshowInfo = {
         },
         size: "135 \u00D7 64 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 50 dinar
+images.push([
     {
-        src: "../images/collection/serbia/3/50-dinar-f.jpg",
-        alt: {en: "Front of the 50 Dinar Bill", vi: "Mặt Trước Tờ 50 Dinar"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("3/50-dinar", "f"),
+        alt: altInfo("50", "Dinara", "Dinar", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/serbia/3/50-dinar-b.jpg",
-        alt: {en: "Back of the 50 Dinar Bill", vi: "Mặt Sau Tờ 50 Dinar"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("3/50-dinar", "b"),
+        alt: altInfo("50", "Dinara", "Dinar", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Serbian 50 Dinara", 
-        vi: "50 Dinar Serbia" 
-    },
-    issuer: {
-        en: "National Bank of Serbia",
-        vi: "Ngân Hàng Nhà Nước Serbia"
-    },
-    year: "2005",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: {
-        en: "Stevan Stojanović Mokranjac (1856-1914)",
-        vi: "Stevan Stojanović Mokranjac (1856-1914)"
-    },
-    size: "139 \u00D7 66 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Dinara", "Dinar"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2005",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: {
+            en: "Stevan Stojanović Mokranjac (1856-1914)",
+            vi: "Stevan Stojanović Mokranjac (1856-1914)"
+        },
+        size: "139 \u00D7 66 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 200 dinar
+images.push([
     {
-        src: "../images/collection/serbia/3/200-dinar-f.jpg",
-        alt: {en: "Front of the 200 Dinar Bill", vi: "Mặt Trước Tờ 200 Dinar"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("3/200-dinar", "f"),
+        alt: altInfo("200", "Dinara", "Dinar", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/serbia/3/200-dinar-b.jpg",
-        alt: {en: "Back of the 200 Dinar Bill", vi: "Mặt Sau Tờ 200 Dinar"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("3/200-dinar", "b"),
+        alt: altInfo("200", "Dinara", "Dinar", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Serbian 200 Dinara", 
-        vi: "200 Dinar Serbia" 
-    },
-    issuer: {
-        en: "National Bank of Serbia",
-        vi: "Ngân Hàng Nhà Nước Serbia"
-    },
-    year: "2011",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    figure: {
-        en: "Nadežda Petrović (1873-1915)",
-        vi: "Nadežda Petrović (1873-1915)"
-    },
-    size: "147 \u00D7 70 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("200", "200", "Dinara", "Dinar"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2011",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: {
+            en: "Nadežda Petrović (1873-1915)",
+            vi: "Nadežda Petrović (1873-1915)"
+        },
+        size: "147 \u00D7 70 mm",
+    }
+);
+//#endregion

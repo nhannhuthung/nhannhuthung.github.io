@@ -18,19 +18,19 @@ const fixed_trans = {
 const main_trans = {
     en: {
         title: `About Me`,
-        greeting: `Hello! 🦉😀`,
+        greeting: `Hello! 🦉`,
         name_intro: `My name is Hưng. If you are unfamiliar with that name, please call me Howl. The name comes from the movie - Howl's Moving Castle.`,
         study_intro: `I am Vietnamese and currently studying in Canada. My background is in Applied Mathematics. I finished my first bachelor and I'm pursuing a new journey. New but old, old but new!!!`,
         math_intro: `If you are wondering what am I studying in math, you can browse around <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">here</a> and <a href="pdf/math/honours-project.pdf" target="_blank">here</a>.`,
-        resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 24/12/2025.`
+        resume_intro: `Here is my resume in case you are curious: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> ??/??/2026.`
     },
     vi: {
         title: `Bản Thân`,
-        greeting: `Xin chào! 🦉😀`,
+        greeting: `Xin chào! 🦉`,
         name_intro: `Tên mình là Hưng. Mình có tên tiếng Anh là Howl và mình lấy tên này trong bộ phim - Lâu Đài Bay Của Pháp Sư Howl.`,
         study_intro: `Mình là người Việt Nam và hiện đang du học tại Canada. Chuyên ngành của mình là Toán Ứng Dụng. Mình đã tốt nghiệp với bằng cử nhân đầu tiên và mình đang theo đuổi một hình trình mới. Mới mà cũ, cũ mà mới!!!`,
         math_intro: `Nếu bạn thắc mắc mình đang học gì về toán, bạn có thể xem ở <a href="https://www.researchgate.net/profile/Howl-Nhan?ev=hdr_xprf" target="_blank">đây</a> và <a href="pdf/math/honours-project.pdf" target="_blank">đây</a>.`,
-        resume_intro: `Đây là sơ yếu lý lịch về mình đề phòng bạn thắc mắc: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> 24/12/2025.`
+        resume_intro: `Đây là sơ yếu lý lịch về mình đề phòng bạn thắc mắc: <a href="pdf/resume.pdf" class="fa fa-file-pdf-o" target="_blank"></a> ??/??/2026.`
     }
 };
 
@@ -43,37 +43,31 @@ function toggleLanguage() {
     updatePageLanguage(currentLang);
 }
 
+// Look up a key in main_trans first (page content), then fixed_trans (shared nav/UI).
+function getTranslation(lang, key) {
+    if (typeof main_trans !== "undefined" && main_trans[lang] && main_trans[lang][key] != null) {
+        return main_trans[lang][key];
+    }
+    if (typeof fixed_trans !== "undefined" && fixed_trans[lang] && fixed_trans[lang][key] != null) {
+        return fixed_trans[lang][key];
+    }
+    return null;
+}
+
+// Auto-discover every element tagged with data-i18n* and translate it.
+// data-i18n -> innerHTML, data-i18n-placeholder -> placeholder, data-i18n-title -> title.
 function updatePageLanguage(currentLang) {
-    const foundationToUpdate = [
-        { id: "home-nav", key: "home" },
-        { id: "collection-nav", key: "collection" },
-        { id: "about-nav", key: "about" },
-        { id: "contact-nav", key: "contact" },
-        { id: "searchInput", key: "search_placeholder", attr: "placeholder" },
-    ];
-
-    foundationToUpdate.forEach(({ id, key, attr }) => {
-        const element = document.getElementById(id);
-        if (element) {
-            if (attr) {
-                element.setAttribute(attr, fixed_trans[currentLang][key]);
-            } else {
-                element.textContent = fixed_trans[currentLang][key];
-            }
-        }
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18n);
+        if (value != null) el.innerHTML = value;
     });
-
-    const contentsToUpdate = [
-        { id: "title", key: "title" },
-        { id: "greeting", key: "greeting" },
-        { id: "name-intro", key: "name_intro" },
-        { id: "study-intro", key: "study_intro" },
-        { id: "math-intro", key: "math_intro" },
-        { id: "resume-intro", key: "resume_intro" }
-    ];
-
-    contentsToUpdate.forEach(({ id, key }) => {
-        document.getElementById(id).innerHTML = main_trans[currentLang][key];
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nPlaceholder);
+        if (value != null) el.placeholder = value;
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const value = getTranslation(currentLang, el.dataset.i18nTitle);
+        if (value != null) el.title = value;
     });
 
     if (window.MathJax) {

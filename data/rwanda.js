@@ -5,97 +5,114 @@ const translations = {
     }
 };
 
-let index = 1;
+//#region input info
+const imagePath = (name, side) => (
+    `../images/collection/rwanda/${name}-${side}.jpg`
+);
+const obverse = { en: "Obverse", vi: "Trước" };
+const reverse = { en: "Reverse", vi: "Sau" };
+const altInfo = (denom, currencyEng, currencyViet, sideEng, sideViet) => ({
+    en: `${sideEng} of ${denom} ${currencyEng} Bill`,
+    vi: `Mặt ${sideViet} Tờ ${denom} ${currencyViet}`
+});
 
-const images = {
-    [`${index}`]: [
-        {
-            src: "../images/collection/rwanda/2013/1000-franc-f.jpg",
-            alt: {en: "Front of the 1000 Franc Bill", vi: "Mặt Trước Tờ 1000 Franc"},
-            description: {en: "Obverse", vi: "Trước"}
-        },
-        {
-            src: "../images/collection/rwanda/2013/1000-franc-b.jpg",
-            alt: {en: "Back of the 1000 Franc Bill", vi: "Mặt Sau Tờ 1000 Franc"},
-            description: {en: "Reverse", vi: "Sau"}
-        }
-    ]
-};
-const slideshowInfo = {
-    [`${index}`]: {
-        title: { 
-            en: "Rwandan 1,000 Francs", 
-            vi: "1.000 Franc Rwanda" 
-        },
-        issuer: {
-            en: "National Bank of Rwanda",
-            vi: "Ngân Hàng Nhà Nước Rwanda"
+const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({ 
+    en: `${denomEng} Rwandan ${currencyEng}`,  
+    vi: `${denomViet} ${currencyViet} Rwanda` 
+});
+const issuer = { en: "National Bank of Rwanda", vi: "Ngân Hàng Nhà Nước Rwanda" };
+const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+//#endregion
+
+const images = [null];
+const slideshowInfo = [null];
+
+//#region 1 - 1000 franc
+images.push([
+    {
+        src: imagePath("2013/1000-franc", "f"),
+        alt: altInfo("1000", "Francs", "Franc", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2013/1000-franc", "b"),
+        alt: altInfo("1000", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1,000", "1.000", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
         },
         year: "2019",
         type: { 
-            en: "Circulating Standard Banknote", 
-            vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         size: "135 \u00D7 65 mm",
     }
-};
+);
+//#endregion
 
-index++; //index = 2
-images[`${index}`] = [
+//#region 2 - 2000 franc
+images.push([
     {
-        src: "../images/collection/rwanda/2013/2000-franc-f.jpg",
-        alt: {en: "Front of the 2000 Franc Bill", vi: "Mặt Trước Tờ 2000 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2013/2000-franc", "f"),
+        alt: altInfo("2000", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/rwanda/2013/2000-franc-b.jpg",
-        alt: {en: "Back of the 2000 Franc Bill", vi: "Mặt Sau Tờ 2000 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2013/2000-franc", "b"),
+        alt: altInfo("2000", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Rwandan 2,000 Francs", 
-        vi: "2.000 Franc Rwanda" 
-    },
-    issuer: {
-        en: "National Bank of Rwanda",
-        vi: "Ngân Hàng Nhà Nước Rwanda"
-    },
-    year: "2014",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "140 \u00D7 68 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("2,000", "2.000", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2014",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "140 \u00D7 68 mm",
+    }
+);
+//#endregion
 
-index++; //index = 3
-images[`${index}`] = [
+//#region 3 - 5000 franc
+images.push([
     {
-        src: "../images/collection/rwanda/2013/5000-franc-f.jpg",
-        alt: {en: "Front of the 5000 Franc Bill", vi: "Mặt Trước Tờ 5000 Franc"},
-        description: {en: "Obverse", vi: "Trước"}
+        src: imagePath("2013/5000-franc", "f"),
+        alt: altInfo("5000", "Francs", "Franc", "Front", "trước"),
+        description: obverse
     },
     {
-        src: "../images/collection/rwanda/2013/5000-franc-b.jpg",
-        alt: {en: "Back of the 5000 Franc Bill", vi: "Mặt Sau Tờ 5000 Franc"},
-        description: {en: "Reverse", vi: "Sau"}
+        src: imagePath("2013/5000-franc", "b"),
+        alt: altInfo("5000", "Francs", "Franc", "Back", "sau"),
+        description: reverse
     }
-];
-slideshowInfo[`${index}`] = {
-    title: { 
-        en: "Rwandan 5,000 Francs", 
-        vi: "5.000 Franc Rwanda" 
-    },
-    issuer: {
-        en: "National Bank of Rwanda",
-        vi: "Ngân Hàng Nhà Nước Rwanda"
-    },
-    year: "2014",
-    type: { 
-        en: "Circulating Standard Banknote", 
-        vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" 
-    },
-    size: "155 \u00D7 85 mm",
-};
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5,000", "5.000", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2014",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "155 \u00D7 85 mm",
+    }
+);
+//#endregion
