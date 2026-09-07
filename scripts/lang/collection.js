@@ -28,7 +28,7 @@ const main_trans = {
         remark_para_1: `I started my collection with only coins and I continue collecting them until now. However, since there are too many, I couldn't display all of them here.`,
         remark_para_2: `A few highlights about my coin collection:`,
         remark_subpara_1: `<span>&#9757;</span> There are around 70 regions, including no longer exsited regions (Yugoslavia, Czechslovakia, French Indochina, etc.).`,
-        remark_subpara_2: `<span>&#9996;</span> The oldest coins I own are American 1-dollar (1881) and French Indochinese 1-piastre (1902), I display them in the highlight section right below.`,
+        remark_subpara_2: `<span>&#9996;</span> I have a few silver coins and I display them in the highlight section right below.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value.`,
 
         last_update: `Last Updated:`,
@@ -52,7 +52,7 @@ const main_trans = {
         remark_para_1: `Mình bắt đầu bộ sưu tập chỉ với những đồng xu và vẫn tiếp tục sưu tầm cho đến bây giờ. Tuy nhiên, vì số lượng quá nhiều, mình không thể đưa tất cả lên đây được.`,
         remark_para_2: `Một vài điểm nhấn về bộ sưu tập tiền xu của mình:`,
         remark_subpara_1: `<span>&#9757;</span> Có khoảng 70 khu vực, bao gồm những khu vực không còn tồn tại (Nam Tư, Tiệp Khắc, Liên Bang Đông Dương, ...).`,
-        remark_subpara_2: `<span>&#9996;</span> Đồng tiền cổ nhất mà mình có bao gồm đồng 1 đô la Mỹ (1881) và đồng 1 piastre Đông Dương (1902), mình có để ở phần tâm điểm ngay bên dưới.`,
+        remark_subpara_2: `<span>&#9996;</span> Mình có vài đồng tiền bằng bạc và mình có để ở phần tâm điểm ngay bên dưới.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn.`,
 
         last_update: `Cập Nhật Lần Cuối:`,
