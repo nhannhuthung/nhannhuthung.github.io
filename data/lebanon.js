@@ -7,7 +7,7 @@ const translations = {
 
 //#region input info
 const imagePath = (name, side) => (
-    `../images/collection/lebenon/${name}-${side}.jpg`
+    `../images/collection/lebanon/${name}-${side}.jpg`
 );
 const obverse = { en: "Obverse", vi: "Trước" };
 const reverse = { en: "Reverse", vi: "Sau" };

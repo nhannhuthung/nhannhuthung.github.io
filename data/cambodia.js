@@ -485,36 +485,6 @@ slideshowInfo.push(
 //#region 16 - 500 riel
 images.push([
     {
-        src: imagePath("2001-2014/500-riel", "f"),
-        alt: altInfo("500", "Riels", "Riel", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("2001-2014/500-riel", "b"),
-        alt: altInfo("500", "Riels", "Riel", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("500", "500", "Riels", "Riel"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        year: "2004",
-        type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
-        },
-        size: "138 \u00D7 64 mm",
-    }
-);
-//#endregion
-
-//#region 17 - 500 riel
-images.push([
-    {
         src: imagePath("2001-2004/500-riel", "f"),
         alt: altInfo("500", "Riels", "Riel", "Front", "trước"),
         description: obverse
@@ -537,12 +507,12 @@ slideshowInfo.push(
             en: standInType.en, 
             vi: standInType.vi 
         },
-        size: "140 \u00D7 65 mm",
+        size: "138 \u00D7 64 mm",
     }
 );
 //#endregion
 
-//#region 18 - 1000 riel
+//#region 17 - 1000 riel
 images.push([
     {
         src: imagePath("2005/1000-riel", "f"),
@@ -572,7 +542,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 19 - 50000 riel
+//#region 18 - 50000 riel
 images.push([
     {
         src: imagePath("2005/50000-riel", "f"),
@@ -607,7 +577,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 20 - 100 riel
+//#region 19 - 100 riel
 images.push([
     {
         src: imagePath("2014/100-riel", "f"),
@@ -633,15 +603,15 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         figure: { 
-            en: "Norodom Sihanouk (1941-1955)", 
-            vi: "Norodom Sihanouk (1941-1955)" 
+            en: "Norodom Sihanouk (1922-2012)", 
+            vi: "Norodom Sihanouk (1922-2012)" 
         },
         size: "140 \u00D7 65 mm",
     }
 );
 //#endregion
 
-//#region 21 - 500 riel
+//#region 20 - 500 riel
 images.push([
     {
         src: imagePath("2014/500-riel", "f"),
@@ -675,7 +645,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 22 - 1000 riel
+//#region 21 - 1000 riel
 images.push([
     {
         src: imagePath("2014/1000-riel", "f"),
