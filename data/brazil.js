@@ -27,22 +27,22 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 const images = [null];
 const slideshowInfo = [null];
 
-//#region 1 - 2 reai
+//#region 2 - 2 real
 images.push([
     {
-        src: imagePath("2/2-reai", "f"),
-        alt: altInfo("2", "Reais", "Reai", "Front", "trước"),
+        src: imagePath("2003/2-real", "f"),
+        alt: altInfo("2", "reais", "real", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2/2-reai", "b"),
-        alt: altInfo("2", "Reais", "Reai", "Back", "sau"),
+        src: imagePath("2003/2-real", "b"),
+        alt: altInfo("2", "reais", "real", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("2", "2", "Reais", "Reai"),
+        title: currencyInfo("2", "2", "reais", "real"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -56,22 +56,22 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 2 - 10 reai
+//#region 3 - 10 real
 images.push([
     {
-        src: imagePath("2/10-reai", "f"),
-        alt: altInfo("10", "Reais", "Reai", "Front", "trước"),
+        src: imagePath("2003/10-real", "f"),
+        alt: altInfo("10", "reais", "real", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2/10-reai", "b"),
-        alt: altInfo("10", "Reais", "Reai", "Back", "sau"),
+        src: imagePath("2003/10-real", "b"),
+        alt: altInfo("10", "reais", "real", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("10", "10", "Reais", "Reai"),
+        title: currencyInfo("10", "10", "reais", "real"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -85,22 +85,22 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 3 - 50 reai
+//#region 4 - 50 real
 images.push([
     {
-        src: imagePath("2/50-reai", "f"),
-        alt: altInfo("50", "Reais", "Reai", "Front", "trước"),
+        src: imagePath("2003/50-real", "f"),
+        alt: altInfo("50", "reais", "real", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2/50-reai", "b"),
-        alt: altInfo("50", "Reais", "Reai", "Back", "sau"),
+        src: imagePath("2003/50-real", "b"),
+        alt: altInfo("50", "reais", "real", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("50", "50", "Reais", "Reai"),
+        title: currencyInfo("50", "50", "reais", "real"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 

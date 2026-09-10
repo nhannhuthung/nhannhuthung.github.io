@@ -117,12 +117,12 @@ slideshowInfo.push(
 //#region 4 - 200 kyat
 images.push([
     {
-        src: imagePath("1990/200-kyat", "f"),
+        src: imagePath("2004/200-kyat", "f"),
         alt: altInfo("200", "Kyats", "Kyat", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1990/200-kyat", "b"),
+        src: imagePath("2004/200-kyat", "b"),
         alt: altInfo("200", "Kyats", "Kyat", "Back", "sau"),
         description: reverse
     }
@@ -146,12 +146,12 @@ slideshowInfo.push(
 //#region 5 - 500 kyat
 images.push([
     {
-        src: imagePath("1990/500-kyat", "f"),
+        src: imagePath("2004/500-kyat", "f"),
         alt: altInfo("500", "Kyats", "Kyat", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1990/500-kyat", "b"),
+        src: imagePath("2004/500-kyat", "b"),
         alt: altInfo("500", "Kyats", "Kyat", "Back", "sau"),
         description: reverse
     }
@@ -175,12 +175,12 @@ slideshowInfo.push(
 //#region 6 - 1000 kyat
 images.push([
     {
-        src: imagePath("1990/1000-kyat", "f"),
+        src: imagePath("2004/1000-kyat", "f"),
         alt: altInfo("1000", "Kyats", "Kyat", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1990/1000-kyat", "b"),
+        src: imagePath("2004/1000-kyat", "b"),
         alt: altInfo("1000", "Kyats", "Kyat", "Back", "sau"),
         description: reverse
     }
@@ -204,12 +204,12 @@ slideshowInfo.push(
 //#region 7 - 10000 kyat
 images.push([
     {
-        src: imagePath("1990/10000-kyat", "f"),
+        src: imagePath("2015/10000-kyat", "f"),
         alt: altInfo("10000", "Kyats", "Kyat", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1990/10000-kyat", "b"),
+        src: imagePath("2015/10000-kyat", "b"),
         alt: altInfo("10000", "Kyats", "Kyat", "Back", "sau"),
         description: reverse
     }
