@@ -35,6 +35,7 @@ const countryData = {
             { "en": "Dominican Republic", "vi": "Cộng Hòa Dominica", "link": "dominican-republic.html" },
             { "en": "Honduras", "vi": "Honduras", "link": "honduras.html"},
             { "en": "Mexico", "vi": "Mexico", "link": "mexico.html" },
+            { "en": "Uruguay", "vi": "Uruguay", "link": "uruguay.html" },
             { "en": "United States", "vi": "Hoa Kỳ", "link": "usa.html" },
             { "en": "Venezuela", "vi": "Venezuela", "link": "venezuela.html" },
         ]       
@@ -240,7 +241,7 @@ function toggleLanguage() {
 //--// function to display banknote //--//
 class Slideshow {
     static allSlideshows = []; // Track all slideshow instances
-    static globalPaused = true; // Global pause state (NOW DEFAULT TO FALSE - NO AUTO-PLAY)
+    static globalPaused = false; // Global pause state (default: playing / auto-play on load)
     static globalButtonCreated = false; // Track if global button exists
 
     constructor(containerId, interval = 5000, infoConfig = null) {
@@ -261,8 +262,11 @@ class Slideshow {
         // Add this instance to the global array
         Slideshow.allSlideshows.push(this);
 
-        // Start the slideshow (but don't auto-play)
+        // Start the slideshow
         this.showSlides();
+
+        // Auto-play by default (resume() starts the timer unless globally paused)
+        this.resume();
 
         // Add navigation arrows
         this.addNavigationArrows();
@@ -278,8 +282,9 @@ class Slideshow {
         const playPauseBtn = document.createElement("button");
         playPauseBtn.id = "global-play-pause-btn";
         playPauseBtn.className = "global-play-pause-btn";
-        playPauseBtn.innerHTML = "&#9654;"; // Play icon (default is paused)
-        playPauseBtn.title = fixed_trans[currentLang].play_all;
+        // Reflect the current play state (default is playing)
+        playPauseBtn.innerHTML = Slideshow.globalPaused ? "&#9654;" : "&#10074;&#10074;";
+        playPauseBtn.title = Slideshow.globalPaused ? fixed_trans[currentLang].play_all : fixed_trans[currentLang].pause_all;
         
         playPauseBtn.onclick = () => {
             Slideshow.toggleGlobalPlayPause(playPauseBtn);

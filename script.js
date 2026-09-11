@@ -59,8 +59,9 @@ const countries_list = {
   "costa-rica": ["costa rica", "republic of costa rica"],
   "dominican-republic": ["dominican republic", "cộng hòa dominica"],
   "honduras": ["honduras", "republic of honduras", "cộng hòa honduras"],
-  "mexico": ["mexico", "united mexican states", "mê hi cô"],
-  "usa": ["usa", "united states of america", "united states", "america", "mỹ", "mĩ", "hoa kì", "hợp chủng quốc hoa kì"],
+  "mexico": ["mexico", "united mexican states", "méxico", "hợp chúng quốc méxico", "mê hi cô"],
+  "uruguay": ["uruguay", "oriental republic of uruguay", "cộng hòa đông uruguay"],
+  "usa": ["usa", "united states of america", "united states", "america", "mỹ", "mĩ", "hoa kì", "hoa kỳ", "hợp chủng quốc hoa kì", "hợp chủng quốc hoa kỳ"],
   "venezuela": ["venezuela", "bolivarian republic of venezuela"],
 
   "drc": ["drc", "democratic republic of congo", "dr congo", "congo"],
@@ -155,6 +156,7 @@ const displayCountry = {
   "dominican-republic": { en: "Dominican Republic", vi: "Cộng Hòa Dominica"},
   "honduras": {en: "Honduras", vi: "Honduras"},
   "mexico": { en: "Mexico", vi: "Mexico" },
+  "uruguay": { en: "Uruguay", vi: "Uruguay"},
   "usa": { en: "United States", vi: "Hoa Kỳ"},
   "venezuela": { en: "Venezuela", vi: "Venezuela" },
 
@@ -344,10 +346,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Enter key listener
+    // Enter key listener - go to the first suggestion if the popup is showing, else search
     inputField.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
-            searchPage();
+            const firstSuggestion = (suggestionBox && suggestionBox.style.display !== "none")
+                ? suggestionBox.querySelector(".suggestion-item")
+                : null;
+            if (firstSuggestion) {
+                firstSuggestion.click();
+            } else {
+                searchPage();
+            }
         }
     });
 

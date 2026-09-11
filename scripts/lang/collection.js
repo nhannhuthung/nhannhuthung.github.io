@@ -99,6 +99,7 @@ const countries = {
                 "countries": [
                     { "en": "Brazil", "vi": "Brasil", "url": "collection/brazil.html" },
                     { "en": "Colombia", "vi": "Colombia", "url": "collection/colombia.html" },
+                    { "en": "Uruguay", "vi": "Uruguay", "url": "collection/uruguay.html" },
                     { "en": "Venezuela", "vi": "Venezuela", "url": "collection/venezuela.html" },
                 ]
             },

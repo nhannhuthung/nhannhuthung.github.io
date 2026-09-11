@@ -27,6 +27,36 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 const images = [null];
 const slideshowInfo = [null];
 
+//#region 1 - 1 real
+images.push([
+    {
+        src: imagePath("1994/1-real", "f"),
+        alt: altInfo("1", "real", "real", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("1994/1-real", "b"),
+        alt: altInfo("1", "real", "real", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1", "1", "reais", "real"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "140 \u00D7 65 mm",
+        new: true,
+    }
+);
+//#endregion
+
 //#region 2 - 2 real
 images.push([
     {
