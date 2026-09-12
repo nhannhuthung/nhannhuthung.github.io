@@ -247,7 +247,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 6 - 20 baht
+//#region 7 - 50 baht
 images.push([
     {
         src: imagePath("17/50-baht", "f"),
@@ -287,7 +287,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 7 - 100 baht
+//#region 8 - 100 baht
 images.push([
     {
         src: imagePath("17/100-baht", "f"),
@@ -326,7 +326,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 8 - 1000 baht
+//#region 9 - 1000 baht
 images.push([
     {
         src: imagePath("17/1000-baht", "f"),
@@ -366,7 +366,7 @@ slideshowInfo.push(
 );
 //#endregion
 
-//#region 9 - 20 baht plastic
+//#region 10 - 20 baht plastic
 images.push([
     {
         src: imagePath("17/20-baht-plastic", "f"),
