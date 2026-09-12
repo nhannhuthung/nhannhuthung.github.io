@@ -35,7 +35,7 @@ images.push([
         description: obverse
     },
     {
-        src: imagePath("9/10-franc", "b"),
+        src: imagePath("1999/100-dollar", "b"),
         alt: altInfo("100", "Dollars", "Tệ", "Back", "sau"),
         description: reverse
     }

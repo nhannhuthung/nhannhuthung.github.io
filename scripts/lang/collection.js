@@ -35,14 +35,27 @@ const main_trans = {
 
         highlight: `Highlight`,
         banknote: `Banknote`,
-        norway: `Norway`,
-        hong_kong: `Hong Kong`,
-        australia: `Australia`,
-        south_korea: `South Korea`,
+
+        // Highlight motif captions — edit each to name what's in that square crop (examples below)
+        hl_1: `part of "Portrait of a wife with flowers and fruits"`,
+        hl_2: `a banana tree and a flower tree`,
+        hl_3: `a swallowtail butterfly on a hibiscus flower`,
+        hl_4: `a VIA Rail crossing the Canadian Rockies`,
+        hl_5: `a sunflower with a bee`,
+        hl_6: `a vessel of the First Fleet`,
+        hl_7: `an axolotl`,
+        hl_8: `the Hawksbill Turtle (Eretmochelys imbricata)`,
+        hl_9: `Halong Bay`,
+
         coin: `Coin`,
-        usa_coin: `USA ~ 1881-O ~ 1 Dollar`,
+        usa_coin: `USA ~ 1881 ~ 1 Dollar`,
         indochina_coin: `Indochina ~ 1902 ~ 1 Piastre`,
         canada_coin: `Canada ~ 1967 ~ 1 Dollar`,
+
+        value_label: `Total Circulating Face Value`,
+        value_notes: `banknotes`,
+        value_loading: `Calculating total value...`,
+        value_error: `Total value unavailable`,
     },
     vi: {
         acknowledge: `Lời Cảm Ơn`,
@@ -59,13 +72,27 @@ const main_trans = {
 
         highlight: `Tâm Điểm`,
         banknote: `Tiền Giấy`,
-        norway: `Na Uy`,
-        hong_kong: `Hồng Kông`,
-        australia: `Úc`,
+
+        // Highlight motif captions — edit each to name what's in that square crop
+        hl_1: `một phần của "Chân dung người vợ với hoa và trái cây"`,
+        hl_2: `cây chuối và cây hoa`,
+        hl_3: `bướm phượng đậu trên hoa dâm bụt`,
+        hl_4: `đoàn tàu VIA Rail băng qua dãy Rocky Canada`,
+        hl_5: `hoa hướng dương và con ong`,
+        hl_6: `một con tàu của Hạm Đội Đầu Tiên`,
+        hl_7: `kỳ giông Axolotl`,
+        hl_8: `rùa đồi mồi (Eretmochelys imbricata)`,
+        hl_9: `Vịnh Hạ Long`,
+
         coin: `Tiền Xu`,
-        usa_coin: `Mỹ ~ 1881-O ~ 1 Đô La`,
+        usa_coin: `Mỹ ~ 1881 ~ 1 Đô La`,
         indochina_coin: `Đông Dương ~ 1902 ~ 1 Đồng Vàng`,
         canada_coin: `Canada ~ 1967 ~ 1 Đô La`,
+
+        value_label: `Tổng Giá Trị Đang Lưu Hành`,
+        value_notes: `tờ tiền`,
+        value_loading: `Đang tính tổng giá trị...`,
+        value_error: `Không thể tính tổng giá trị`,
     }
 };
 
@@ -452,9 +479,88 @@ function updatePageLanguage(currentLang) {
         const value = getTranslation(currentLang, el.dataset.i18nTitle);
         if (value != null) el.title = value;
     });
+
+    // The collection total is built from numbers, so it needs an explicit re-render
+    renderCollectionValue();
+}
+
+/* ---------------------------------------------------------------
+   Total USD face value of the circulating banknotes.
+
+   Face-value totals per currency come from scripts/collection-value.js
+   (regenerate with tools/generate-collection-value.ps1 after adding
+   banknotes). Exchange rates are fetched live, falling back to the
+   rates captured when that file was generated.
+   --------------------------------------------------------------- */
+const valueState = { status: "loading", totalUsd: 0, noteCount: 0 };
+
+function renderCollectionValue() {
+    const el = document.getElementById("collection-value");
+    if (!el) return;
+
+    const t = (key) => getTranslation(currentLang, key) || "";
+
+    if (valueState.status === "loading") {
+        el.textContent = t("value_loading");
+        return;
+    }
+    if (valueState.status === "error") {
+        el.textContent = t("value_error");
+        return;
+    }
+
+    const locale = currentLang === "vi" ? "vi-VN" : "en-US";
+    const amount = valueState.totalUsd.toLocaleString(locale, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+    const count = valueState.noteCount.toLocaleString(locale);
+    el.textContent = `${t("value_label")}: $${amount} USD (${count} ${t("value_notes")})`;
+}
+
+async function computeCollectionValue() {
+    if (typeof collectionValue === "undefined") {
+        valueState.status = "error";
+        renderCollectionValue();
+        return;
+    }
+
+    // Live rates: how many units of each currency equal 1 USD.
+    let liveRates = null;
+    try {
+        const res = await fetch("https://open.er-api.com/v6/latest/USD");
+        const data = await res.json();
+        if (data && data.result === "success" && data.rates) liveRates = data.rates;
+    } catch (err) {
+        // offline or API down - fall back to the captured rates
+    }
+
+    let total = 0;
+    let notes = 0;
+    const unpriced = [];
+
+    for (const [code, amount] of Object.entries(collectionValue.amounts)) {
+        const rate = (liveRates && liveRates[code]) || collectionValue.fallbackRates[code];
+        if (!rate || rate <= 0) {
+            unpriced.push(code);
+            continue;
+        }
+        total += amount / rate;
+        notes += collectionValue.notes[code] || 0;
+    }
+
+    if (unpriced.length) {
+        console.warn("No exchange rate for:", unpriced.join(", ") + " - excluded from the total.");
+    }
+
+    valueState.totalUsd = total;
+    valueState.noteCount = notes;
+    valueState.status = "ok";
+    renderCollectionValue();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     updatePageLanguage(currentLang);
     showContinentPanels();
+    computeCollectionValue();
 });
