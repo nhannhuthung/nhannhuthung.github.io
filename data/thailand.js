@@ -181,7 +181,7 @@ images.push([
         description: obverse
     },
     {
-        src: imagePath("16/20-baht", "b"),
+        src: imagePath("16-speical/20-baht", "b"),
         alt: altInfo("20", "Baht", "Baht", "Back", "sau"),
         description: reverse
     }
@@ -239,6 +239,46 @@ slideshowInfo.push(
             { 
                 en: "Rama I (1737-1809), Rama II ((1767-1768)?-1824)", 
                 vi: "Rama I (1737-1809), Rama II ((1767-1768)?-1824)"
+            }
+        ],
+        size: "138 \u00D7 72 mm",
+        new: true,
+    }
+);
+//#endregion
+
+//#region 6 - 20 baht
+images.push([
+    {
+        src: imagePath("17/50-baht", "f"),
+        alt: altInfo("50", "Baht", "Baht", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("17/50-baht", "b"),
+        alt: altInfo("50", "Baht", "Baht", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("50", "50", "Baht", "Baht"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: [
+            { 
+                en: "Rama X (1952-Present)", 
+                vi: "Rama X (1952-Present)"
+            },
+            { 
+                en: "Rama III (1788-1851), Rama IV (1804-1868)", 
+                vi: "Rama III (1788-1851), Rama IV (1804-1868)"
             }
         ],
         size: "138 \u00D7 72 mm",

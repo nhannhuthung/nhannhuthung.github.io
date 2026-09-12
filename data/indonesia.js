@@ -66,7 +66,7 @@ images.push([
         description: obverse
     },
     {
-        src: imagePath("1965-1967/10-sen", "f"),
+        src: imagePath("1965-1967/10-sen", "b"),
         alt: altInfo("10", "Sen", "Sen", "Back", "sau"),
         description: reverse
     }

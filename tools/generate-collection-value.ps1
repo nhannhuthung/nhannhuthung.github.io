@@ -28,6 +28,7 @@ $currencyByCountry = @{
     'philippines' = 'PHP'; 'puntland' = 'SOS'; 'russia' = 'RUB'; 'rwanda' = 'RWF'
     'saudi-arabia' = 'SAR'; 'scotland' = 'GBP'; 'serbia' = 'RSD'; 'singapore' = 'SGD'
     'south-korea' = 'KRW'; 'sweden' = 'SEK'; 'switzerland' = 'CHF'; 'taiwan' = 'TWD'
+    'tajikistan' = 'TJS'   # modern somoni; the 1990s ruble notes are non-circulating
     'thailand' = 'THB'; 'transnistria' = 'PRB'; 'turkiye' = 'TRY'; 'turkmenistan' = 'TMT'
     'uae' = 'AED'; 'uemoa' = 'XOF'; 'ukraine' = 'UAH'; 'usa' = 'USD'
     'uzbekistan' = 'UZS'; 'viet-nam' = 'VND'; 'zambia' = 'ZMW'
@@ -50,7 +51,9 @@ function Parse-Denom([string]$raw) {
     return $null
 }
 
-$titleRe    = [regex]'title:\s*currencyInfo\(\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*\)'
+# NOTE: the trailing ,? tolerates a stray comma after the last argument, e.g.
+# currencyInfo("20", "20", "Baht", "Baht",) - valid JS, and present in a few files.
+$titleRe    = [regex]'title:\s*currencyInfo\(\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,?\s*\)'
 $typeDeclRe = [regex]'const\s+(\w+)\s*=\s*\{\s*en:\s*"([^"]*Banknote[^"]*)"'
 $inlineRe   = [regex]'type:\s*\{\s*en:\s*"([^"]*)"'
 
@@ -132,6 +135,7 @@ $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine('const collectionValue = {')
 [void]$sb.AppendLine("    generated: `"$((Get-Date).ToString('yyyy-MM-dd'))`",")
 [void]$sb.AppendLine("    noteCount: $circulatingNotes,")
+[void]$sb.AppendLine("    totalNotes: $totalNotes,   // every banknote in the collection, circulating or not")
 [void]$sb.AppendLine('    // total face value held, per currency')
 [void]$sb.AppendLine('    amounts: {')
 foreach ($k in ($amounts.Keys | Sort-Object)) {

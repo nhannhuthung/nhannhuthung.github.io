@@ -22,6 +22,7 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
 });
 const issuer = { en: "National Bank Of The Republic Of Tajikistan", vi: "Ngân Hàng Quốc Gia Cộng Hòa Tajikistan" };
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
 
 const images = [null];
@@ -35,7 +36,7 @@ images.push([
         description: obverse
     },
     {
-        src: imagePath("1994/20-ruble", "f"),
+        src: imagePath("1994/20-ruble", "b"),
         alt: altInfo("20", "Rubles", "Rúp", "Back", "sau"),
         description: reverse
     }
@@ -49,8 +50,8 @@ slideshowInfo.push(
         },
         year: "1994",
         type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
+            en: standOutType.en, 
+            vi: standOutType.vi 
         },
         size: "102 \u00D7 56 mm",
     }

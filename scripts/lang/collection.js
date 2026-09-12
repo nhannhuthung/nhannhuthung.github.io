@@ -44,8 +44,8 @@ const main_trans = {
         hl_5: `a sunflower with a bee`,
         hl_6: `a vessel of the First Fleet`,
         hl_7: `an axolotl`,
-        hl_8: `the Hawksbill Turtle (Eretmochelys imbricata)`,
-        hl_9: `Halong Bay`,
+        hl_8: `a hawksbill turtle (Eretmochelys imbricata)`,
+        hl_9: `Ha Long Bay`,
 
         coin: `Coin`,
         usa_coin: `USA ~ 1881 ~ 1 Dollar`,
@@ -492,7 +492,7 @@ function updatePageLanguage(currentLang) {
    banknotes). Exchange rates are fetched live, falling back to the
    rates captured when that file was generated.
    --------------------------------------------------------------- */
-const valueState = { status: "loading", totalUsd: 0, noteCount: 0 };
+const valueState = { status: "loading", totalUsd: 0, noteCount: 0, totalNotes: 0 };
 
 function renderCollectionValue() {
     const el = document.getElementById("collection-value");
@@ -515,7 +515,8 @@ function renderCollectionValue() {
         maximumFractionDigits: 2
     });
     const count = valueState.noteCount.toLocaleString(locale);
-    el.textContent = `${t("value_label")}: $${amount} USD (${count} ${t("value_notes")})`;
+    const total = valueState.totalNotes.toLocaleString(locale);
+    el.textContent = `${t("value_label")}: $${amount} USD (${count} / ${total} ${t("value_notes")})`;
 }
 
 async function computeCollectionValue() {
@@ -555,6 +556,7 @@ async function computeCollectionValue() {
 
     valueState.totalUsd = total;
     valueState.noteCount = notes;
+    valueState.totalNotes = collectionValue.totalNotes;
     valueState.status = "ok";
     renderCollectionValue();
 }
