@@ -53,14 +53,14 @@ html, body {
     margin-bottom: 20px;
     font-family: var(--font-display);
     font-weight: normal;
-    font-size: 23px;
+    font-size: 24px;
     color: var(--ink);
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease-out;
 }
 
 .sidebar h2:hover {
-    color: var(--a5);
+    color: var(--region-accent);
     transform: scale(1.05);
 }
 
@@ -80,7 +80,7 @@ html, body {
 }
 
 .sidebar ul li:hover {
-    color: var(--a5);
+    color: var(--region-accent);
     transform: translateX(3px);
 }
 
@@ -323,12 +323,13 @@ img {
     border-radius: 3px 0 0 3px;
 }
 
+/* same colour as the solid hr in theme.css, just broken into dashes */
 .dashed {
     margin-top: 25px;
     border: none;
     height: 1px;
     background: repeating-linear-gradient(90deg,
-        var(--rule), var(--rule) 6px, transparent 6px, transparent 12px);
+        var(--ink-soft), var(--ink-soft) 6px, transparent 6px, transparent 12px);
 }
 
 .new-label {

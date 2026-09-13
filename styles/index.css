@@ -1,5 +1,9 @@
+/* ============================================================
+   LANDING PAGE
+   Palette tokens and shared chrome live in styles/theme.css.
+   ============================================================ */
+
 body {
-    background-color: #d5d0c5;
     overflow: hidden;
 }
 
@@ -41,7 +45,7 @@ body {
 
 .label {
     font-size: 30px;
-    color: #2f3537;
+    color: var(--ink);
     margin: 0;
     line-height: 0.1;
     font-family: 'Didot', serif;
@@ -57,7 +61,7 @@ body {
 .howl .big-h {
     position: relative;
     font-size: 240px;
-    color: #2f3537;
+    color: var(--ink);
     line-height: 0.9;
     z-index: 3;
 }
@@ -67,6 +71,9 @@ body {
     display: inline-block;
 }
 
+/* the block behind the H is matting, the same surface the collection
+   uses behind its images - so it inverts with the theme instead of
+   staying a fixed slate colour */
 .letter-bg {
     position: absolute;
     top: -8px;
@@ -79,7 +86,7 @@ body {
 
 .howl .rest {
     font-size: 180px;
-    color: #2f3537;
+    color: var(--ink);
     line-height: 0.9;
     z-index: 2;
 }
@@ -96,7 +103,7 @@ body {
 
 .divider {
     flex: 1;
-    border-top: 3px solid #2f3537;
+    border-top: 3px solid var(--ink);
     max-width: 450px;
     z-index: 10;
 }
@@ -106,9 +113,21 @@ body {
     margin: 0 30px;
 }
 
+/* the owl is a flat dark silhouette; flip it so it reads on the
+   midnight ground instead of disappearing into it */
+[data-theme="dark"] .owl {
+    filter: invert(1) brightness(1.08);
+}
+
+/* the sunflower photograph sits under a theme wash: a light warm veil
+   on paper, a heavy dusk veil on midnight, so the same image belongs
+   to both palettes */
 .menu-box {
     height: 100vh;
-    background-image: url(../images/background/sunflower-background.png);
+    background-color: var(--paper);
+    background-image:
+        linear-gradient(var(--photo-veil), var(--photo-veil)),
+        url(../images/background/sunflower-background.png);
     background-size: cover;
     background-position-y: 65%;
     background-repeat: no-repeat;
@@ -121,16 +140,20 @@ body {
 .menu-box nav a,
 .menu-box nav a:link,
 .menu-box nav a:visited {
-    color: #283033;
+    /* theme.css puts a sans face on <body>; the landing page is set in
+       serif throughout, so keep the nav with the display family */
+    font-family: var(--font-display);
+    color: var(--ink);
     padding: 6px;
     letter-spacing: 2px;
     font-size: 36px;
     text-decoration: none;
     z-index: 2;
+    transition: color 0.25s ease;
 }
 
-.menu-box nav a:visited:hover {
-    color: #e48b17;
+.menu-box nav a:hover {
+    color: var(--a2);
 }
 
 .nav-pos-menu {
@@ -140,32 +163,31 @@ body {
     text-align: center;
 }
 
-.language-toggle {
+/* language switch and theme switch share one centred row */
+.foot-controls {
     position: relative;
-    text-align: center;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     margin-top: 20px;
 }
 
+.language-toggle {
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
 .language-toggle a {
+    font-family: var(--font-display);
     font-size: 21px;
-    color: #283033;
+    color: var(--ink);
 }
 
 .language-toggle a:hover {
-    color: #e48b17;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: #ccc9c4;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #f7af20;
-    border-radius: 10px;
+    color: var(--a2);
 }
 
 @media (max-width: 700px) {
@@ -176,12 +198,12 @@ body {
     .letter-group {
         margin: 0 6px;
     }
-    
+
     .label {
         font-size: 20px;
         line-height: 1;
     }
-    
+
     .howl .big-h {
         font-size: 120px;
     }
@@ -189,29 +211,29 @@ body {
     .letter-bg {
         top: -4px;
     }
-    
+
     .howl .rest {
         font-size: 90px;
     }
-    
+
     .divider-container {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: -10px;
     }
-    
+
     .divider {
-        border-top: 2px solid #2f3537;
+        border-top: 2px solid var(--ink);
         max-width: 200px;
     }
-    
+
     .owl {
         width: 60px;
         margin: 0 15px;
     }
 
-    .language-toggle {
+    .foot-controls {
         margin-top: 10px;
     }
 
@@ -236,5 +258,5 @@ body {
         padding: 3px 1px;
         font-size: 24px;
         letter-spacing: 0.5px;
-    } 
+    }
 }

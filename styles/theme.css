@@ -21,7 +21,11 @@
     --a1: #c0392b;  --a2: #cf6a1a;  --a3: #a98613;  --a4: #2f7d52;
     --a5: #2b6ca3;  --a6: #4e448f;  --a7: #7f4a99;
 
-    --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    /* landing page: wash over the photograph, and the floating motes */
+    --photo-veil: rgba(242, 236, 224, 0.22);
+    --particle:   rgba(255, 255, 255, 0.85);
+
+    --font-display: 'Iowan Old Style', 'Times New Roman', serif;
     --font-body: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
 }
 
@@ -36,6 +40,9 @@
 
     --a1: #ff6b6b;  --a2: #ff9f43;  --a3: #ffd166;  --a4: #4ade80;
     --a5: #60a5fa;  --a6: #a78bfa;  --a7: #e879f9;
+
+    --photo-veil: rgba(21, 23, 27, 0.74);
+    --particle:   rgba(233, 230, 224, 0.60);
 }
 
 /* ---- shared chrome ---- */
@@ -161,11 +168,14 @@ header {
     border-radius: 10px;
 }
 
-/* the loading splash should not flash white on the dark theme */
-.preloader {
-    background-color: var(--paper);
-}
+/* The loading splash stays white in BOTH themes on purpose: the cat gif
+   has a baked-in white background, so any other ground would show as a
+   rectangle around it. Colours come from styles/style.css. */
 
-.loading-text {
-    color: var(--ink);
+/* Horizontal rules, solid and dashed, share one colour.
+   The dashed variant is drawn as a gradient in collection-item.css. */
+hr {
+    border: none;
+    height: 1px;
+    background: var(--ink-soft);
 }

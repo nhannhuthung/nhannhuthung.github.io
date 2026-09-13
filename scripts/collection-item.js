@@ -26,7 +26,7 @@ const fixed_trans = {
 
 const countryData = {
     "america": {
-        "name": { "en": "America", "vi": "Châu Mỹ" },
+        "name": { "en": "Americas", "vi": "Châu Mỹ" },
         "countries": [
             { "en": "Brazil", "vi": "Brasil", "link": "brazil.html" },
             { "en": "Canada", "vi": "Canada", "link": "canada.html" },
@@ -143,17 +143,31 @@ const countryData = {
     },
 };
 
+// one accent per continent, matching the region-bar order in theme.css
+const regionAccent = {
+    america: "--a1",
+    africa: "--a2",
+    europe: "--a3",
+    asia: "--a4",
+    oceania: "--a5",
+    arctic: "--a6",
+    antartica: "--a7",
+};
+
 function createCategory(categoryKey) {
     const category = countryData[categoryKey];
     const title = category.name[currentLang];
     const sortedCountries = category.countries.sort((a, b) => a[currentLang].localeCompare(b[currentLang]));
+    const accentVar = regionAccent[categoryKey] || "--a5";
     
-    let categoryHTML = `<h2 onclick="toggleCategories('${categoryKey}')">${title}</h2>`;
+    let categoryHTML = `<div class="region-group" style="--region-accent: var(${accentVar})">`;
+    categoryHTML += `<h2 onclick="toggleCategories('${categoryKey}')">${title}</h2>`;
     categoryHTML += `<ul id="${categoryKey}">`;
     sortedCountries.forEach(item => {
         categoryHTML += `<li onclick="navigateTo('${item.link}')">${item[currentLang]}</li>`;
     });
     categoryHTML += `</ul>`;
+    categoryHTML += `</div>`;
     return categoryHTML;
 }
 

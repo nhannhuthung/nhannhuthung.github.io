@@ -15,8 +15,10 @@
 
     <link rel="icon" type="image/png" sizes="128x128" href="images/logo/icon.png">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/index.css">
     
+    <script src="scripts/theme.js"></script>
     <script src="scripts/lang/index.js"></script>
 </head>
 <body>
@@ -57,8 +59,13 @@
                 <a href="about.html" id="about-nav" data-i18n="about"></a>
                 <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
             </nav>
-            <div class="language-toggle">
-                <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
+            <div class="foot-controls">
+                <div class="language-toggle">
+                    <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;">Eng | Vie</a>
+                </div>
+
+                <button type="button" id="theme-toggle" class="theme-toggle"
+                        onclick="toggleTheme()" aria-label="Switch light/dark theme"></button>
             </div>
         </div>
     </div>

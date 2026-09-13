@@ -2,6 +2,23 @@ const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let particles = [];
 
+// The mote colour comes from the --particle token so it follows the theme.
+// Reading it is a layout-flushing call, so cache it and refresh only when
+// the toggle actually flips data-theme.
+let particleColor = '#F4F7F5';
+
+function readParticleColor() {
+  const value = getComputedStyle(document.documentElement)
+    .getPropertyValue('--particle').trim();
+  if (value) particleColor = value;
+}
+readParticleColor();
+
+new MutationObserver(readParticleColor).observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['data-theme']
+});
+
 // Resize canvas to full scrollable height
 function resizeCanvas() {
   canvas.width = document.documentElement.scrollWidth;
@@ -35,7 +52,7 @@ class Particle {
   }
 
   draw() {
-    ctx.fillStyle = '#F4F7F5';
+    ctx.fillStyle = particleColor;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
