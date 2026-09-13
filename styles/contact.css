@@ -1,137 +1,102 @@
-.fa:not(.fa-bars) {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0%;
-    background: transparent;
-}
-
-#media .fa {
-    color: #2c2927;
-}
-
-#media .fa:hover {
-    color: #3d4e77;
-}
-
-#work .fa {
-    color: #F9FBF2;
-}
-
-#work .fa:hover {
-    color: #919597;
-}
+/* ============================================================
+   CONTACT PAGE
+   Palette tokens and shared chrome live in styles/theme.css.
+   ============================================================ */
 
 .hamburger-nav .fa-bars {
     font-family: var(--fa-style-family, "Font Awesome 6 Free");
     font-weight: var(--fa-style, 900);
-}  
-
-#header-nav,
-#header-nav a,
-#header-nav a:link,
-#header-nav a:visited {
-    color: #283033;
-    z-index: 998;
 }
 
-#header-nav a:hover {
-    color: #4131D1;
-}
-
-.hamburger-nav {
-    color: #030027;
-}
-
-.language-toggle a {
-    color: #030027;
-}
-
-.language-toggle a:hover {
-    color: #4131D1;
-}
-
-body {
-    background-color: #4b628d;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-#media {
-    height: 40vh;
-    position: relative;
-    background-color: #c8d9fa;
+.big-title {
+    font-family: var(--font-display);
+    font-weight: normal;
+    font-size: 42px;
+    letter-spacing: 0.015em;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--ink);
+    margin: 34px 0 6px;
 }
 
-#media nav {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-#media .title {
-    position: absolute;
-    top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 40px;
-}
-
-#work {
-    height: 40vh;
-    position:relative;
-    background-color: #4b628d;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#work nav {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-#work .title {
-    position: absolute;
-    top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    font-size: 40px;
-}
-
-#contact-form-section {
-    min-height: 60vh;
-    background-color: #7097de;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
+/* each section is a sheet on the paper ground (they used to be
+   full-bleed colour bands with absolutely-positioned contents) */
+.page {
     box-sizing: border-box;
+    width: min(1120px, 92%);
+    margin: 26px auto 0;
+    padding: 38px 42px;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    box-shadow: 0 1px 4px var(--shadow);
+    text-align: center;
 }
 
-#contact-form-section .title {
-    font-size: 40px;
-    color: #dceeec;
-    margin-bottom: 15px;
+#media,
+#work {
+    position: static;
+    display: block;
+    height: auto;
 }
 
+.page .title {
+    position: static;
+    display: block;
+    font-family: var(--font-display);
+    font-weight: normal;
+    font-size: 34px;
+    letter-spacing: 0.015em;
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+
+#media b,
+#work b {
+    display: block;
+    max-width: 620px;
+    margin: 0 auto 20px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+}
+
+#media nav,
+#work nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* ---- social / work icons ---- */
+.fa:not(.fa-bars) {
+    padding: 14px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    color: var(--ink-soft);
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+#media .fa:not(.fa-bars):hover {
+    color: var(--a5);
+    transform: translateY(-3px);
+}
+
+#work .fa:not(.fa-bars):hover {
+    color: var(--a4);
+    transform: translateY(-3px);
+}
+
+/* ---- message form ---- */
 #contact-form-section #form-intro {
-    color: #dceeec;
+    display: block;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: normal;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -139,6 +104,7 @@ body {
 .contact-form {
     width: 100%;
     max-width: 480px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -153,7 +119,7 @@ body {
 
 .contact-form label {
     font-weight: bold;
-    color: #dceeec;
+    color: var(--ink);
     font-size: 18px;
 }
 
@@ -161,24 +127,28 @@ body {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #9fb4d8;
-    border-radius: 8px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
     font-size: 16px;
     font-family: inherit;
-    /* background: #2d3b52; */
+    /* same surface as the sheet the form sits on, so the field reads as
+       one colour with its box - only the hairline border separates them */
+    background: var(--sheet);
+    color: var(--ink);
     box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* .contact-form input::placeholder,
+.contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #2d3b52;
-} */
+    color: var(--ink-soft);
+}
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #4b628d;
-    box-shadow: 0 0 0 2px rgba(75, 98, 141, 0.25);
+    border-color: var(--a5);
+    box-shadow: 0 0 0 2px var(--shadow);
 }
 
 .contact-form textarea {
@@ -186,27 +156,26 @@ body {
     resize: vertical;
 }
 
-#cf-message {
-    background: #F2F3F4;
-}
-
 .contact-form button {
     padding: 13px;
-    border: none;
-    border-radius: 8px;
-    background: #4b628d;
-    color: #fff;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: inherit;
     font-size: 17px;
+    letter-spacing: 0.03em;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 .contact-form button:hover {
-    background: #3d4e77;
+    background: transparent;
+    color: var(--ink);
 }
 
 .contact-form button:disabled {
-    opacity: 0.6;
+    opacity: 0.55;
     cursor: not-allowed;
 }
 
@@ -217,77 +186,44 @@ body {
 }
 
 .form-status.success {
-    color: #1b7a3d;
+    color: var(--a4);
 }
 
 .form-status.error {
-    color: #b22222;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: #d1e5ff;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(142, 139, 139);
-    border-radius: 10px;
+    color: var(--a1);
 }
 
 @media (max-width: 700px) {
     #header-nav {
-        background-color: rgb(40,48,51);   
         z-index: 1000;
-    }
-
-    #header-nav,
-    #header-nav a,
-    #header-nav a:link,
-    #header-nav a:visited {
-        color: #657fc0;
+        background-color: var(--sheet);
+        border: 1px solid var(--rule);
+        box-shadow: 0 4px 14px var(--shadow);
     }
 
     .big-title {
-        margin-top: 10px;
+        font-size: 31px;
+        margin-top: 14px;
     }
 
-    body {
-        background-color: #AFCBFF;
+    .page {
+        padding: 24px 20px;
+        margin-top: 18px;
     }
 
-    #about {
-        padding: 10px;
-    }
-
-    .fa:not(.fa-bars) {
-        padding: 15px;
+    .page .title {
         font-size: 27px;
     }
 
-    #media .title {
-        top: 20px;
-        gap: 3px;
-        font-size: 33px;
+    #media b,
+    #work b,
+    .contact-form label {
+        font-size: 16px;
     }
 
-    #work .title {
-        top: 20px;
-        gap: 3px;
-        font-size: 33px;
-    }
-
-    #media {
-        height: 45vh;
-    }
-
-    #work {
-        height: 45vh;
-    }
-
-    b {
-        padding: 15px;
+    .fa:not(.fa-bars) {
+        padding: 10px;
+        font-size: 26px;
+        width: 40px;
     }
 }

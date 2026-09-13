@@ -1,0 +1,171 @@
+/* ============================================================
+   SHARED THEME  (every page except index.html)
+
+   Two palettes driven by tokens on <html data-theme="...">:
+     light  = "archival paper"   warm cream, matted images, hairline rules
+     dark   = "midnight gallery" neutral charcoal, images lit like exhibits
+
+   Load this AFTER style.css and BEFORE the page's own stylesheet.
+   Re-theming the whole site means editing only the two blocks below.
+   ============================================================ */
+:root {
+    --paper:    #f2ece0;   /* page ground */
+    --sheet:    #fbf7ef;   /* raised surface: sheets, menu panels */
+    --mat:      #eae2d3;   /* matting behind images */
+    --ink:      #2b2620;   /* primary text (warm near-black, not #000) */
+    --ink-soft: #6d6154;   /* secondary text */
+    --rule:     #d8ccb7;   /* hairlines */
+    --shadow:   rgba(74, 58, 36, 0.13);
+
+    /* one accent per continent, in region-bar order */
+    --a1: #c0392b;  --a2: #cf6a1a;  --a3: #a98613;  --a4: #2f7d52;
+    --a5: #2b6ca3;  --a6: #4e448f;  --a7: #7f4a99;
+
+    --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+[data-theme="dark"] {
+    --paper:    #15171b;
+    --sheet:    #1c1f25;
+    --mat:      #23272e;
+    --ink:      #e9e6e0;
+    --ink-soft: #9b958a;
+    --rule:     #343942;
+    --shadow:   rgba(0, 0, 0, 0.55);
+
+    --a1: #ff6b6b;  --a2: #ff9f43;  --a3: #ffd166;  --a4: #4ade80;
+    --a5: #60a5fa;  --a6: #a78bfa;  --a7: #e879f9;
+}
+
+/* ---- shared chrome ---- */
+body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* keep the main navigator above page content / dropdowns */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+#header-nav,
+#header-nav a,
+#header-nav a:link,
+#header-nav a:visited,
+#header-nav-media,
+#header-nav-media a,
+#header-nav-media a:link,
+#header-nav-media a:visited,
+.hamburger-nav,
+.language-toggle a {
+    color: var(--ink);
+}
+
+#header-nav,
+#header-nav a,
+#header-nav-media,
+#header-nav-media a {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#header-nav a:hover,
+#header-nav-media a:hover,
+.language-toggle a:hover {
+    color: var(--a5);
+}
+
+/* light/dark switch, sits beside the language toggle */
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    color: var(--ink);
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    line-height: 1;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--a3);
+    border-color: var(--a3);
+}
+
+/* ---- search bar ---- */
+.search-container {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    box-shadow: 0 1px 3px var(--shadow);
+}
+
+/* transparent so the field and its pill read as one surface */
+.search-container input {
+    background: transparent;
+    color: var(--ink);
+}
+
+.search-container input::placeholder {
+    color: var(--ink-soft);
+}
+
+.search-button {
+    color: var(--ink-soft);
+    transition: color 0.25s ease;
+}
+
+.search-button:hover {
+    color: var(--a5);
+}
+
+.suggestions-box {
+    background-color: var(--sheet);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    box-shadow: 0 4px 14px var(--shadow);
+}
+
+.suggestion-item:hover {
+    background-color: var(--mat);
+}
+
+#top_btn,
+#back-to-top {
+    background-color: var(--sheet);
+    color: var(--ink);
+    border: 1px solid var(--rule);
+}
+
+#top_btn:hover,
+#back-to-top:hover {
+    background-color: var(--ink);
+    color: var(--paper);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--rule);
+    border-radius: 10px;
+}
+
+/* the loading splash should not flash white on the dark theme */
+.preloader {
+    background-color: var(--paper);
+}
+
+.loading-text {
+    color: var(--ink);
+}

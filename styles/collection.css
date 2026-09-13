@@ -1,121 +1,187 @@
-body {
-    background-color: #2573c0;
-}
-
+/* ============================================================
+   COLLECTION PAGE
+   Palette tokens and shared chrome live in styles/theme.css.
+   ============================================================ */
 footer {
     height: 90px;
 }
 
-#header-nav,
-#header-nav a,
-#header-nav a:link,
-#header-nav a:visited {
-    color: #F0F7EE;
+/* ============================================================
+   The sheet - one surface holding acknowledgment, remark, highlight
+   ============================================================ */
+.container-top,
+.container {
+    width: min(1120px, 92%);
+    margin: 30px auto 0;
+    padding: 38px 42px;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    box-shadow: 0 1px 4px var(--shadow);
 }
 
-#header-nav a:hover {
-    color: #251605;
-}
-
-.hamburger-nav {
-    color: #F0F7EE;
-}
-
-.language-toggle a {
-    color: #F0F7EE;
-}
-
-.language-toggle a:hover {
-    color: #251605;
-}
-
-.category {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 18px;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 30px;
-
-}
-
-.category-item {
-    padding: 20px;
-    border: 2px solid #b7d7fc;
-    border-radius: 10px;
+/* ---- typography ---- */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: normal;
+    color: var(--ink);
     text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    color: #b7d7fc;
-    font-size: 20px;
 }
 
-.category-item:hover {
-    background-color: #e7e4e4;
-    color: #8aa1bb;
-    box-shadow: 0 0 20px #e7e4e4,
-                0 0 80px #e7e4e4,
-                0 0 160px #e7e4e4;
-    border: 2px solid #e7e4e4;
-    transition-delay: .2s;
-    transform: scale(1.05);
+h1 { font-size: 44px; }
+
+/* section headings carry a short centred hairline */
+h2 {
+    position: relative;
+    font-size: 36px;
+    letter-spacing: 0.015em;
+    margin: 46px 0 22px;
+    padding-bottom: 16px;
 }
 
-/* Desktop: 3-column grid; each tile shows the image with its caption below */
+h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 66px;
+    height: 1px;
+    background: var(--rule);
+}
+
+h3 {
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 34px 0 14px;
+}
+
+h4 {
+    font-family: var(--font-display);
+    font-weight: normal;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 18px 0 0;
+}
+
+h5 {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin: 8px 0 18px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+
+ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 14px;
+    padding: 0 0 0 28px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+ul li::before {
+    left: -1em;
+    position: relative;
+}
+
+/* total face value - deliberately plain, reads as part of the Remark text */
+.collection-value {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+
+#last-update {
+    margin: 22px 0 0;
+}
+
+/* ============================================================
+   Highlight - banknote motifs and coins, matted like exhibits
+   ============================================================ */
 .highlight-banknote {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
-    gap: 21px 36px;
-    margin-top: 10px;
+    gap: 30px 38px;
+    margin-top: 18px;
 }
 
 .hl-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-align: center;
 }
 
 .hl-tile img {
+    box-sizing: border-box;
     width: 270px;
     height: 270px;
     flex-shrink: 0;
     object-fit: contain;
-    border-radius: 3px;
     display: block;
+    padding: 10px;
+    background: var(--mat);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.hl-tile:hover img {
+    transform: translateY(-3px);
+    border-color: var(--ink-soft);
 }
 
 .hl-caption {
-    color: white;
-    font-size: 16px;
-    line-height: 1.4;
+    max-width: 270px;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.5;
+    font-style: italic;
 }
 
 .highlight-coin {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 26px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
-/* Desktop: front/back side by side, caption shown below */
 .coin-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .coin-imgs {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    gap: 2px;
+    gap: 6px;
     width: 400px;
     height: 200px;
+    padding: 10px;
+    background: var(--mat);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
 }
 
 .coin-imgs img {
@@ -126,234 +192,193 @@ footer {
 }
 
 .coin-overlay {
-    color: white;
-    font-size: 16px;
+    color: var(--ink-soft);
+    font-size: 15px;
+    font-style: italic;
     text-align: center;
 }
 
-/* Total USD face value line - matches the Remark paragraphs */
-.collection-value {
-    font-size: 21px;
-    margin: 10px 15px;
-    color: rgb(230, 226, 226);
+/* ============================================================
+   Region navigator (mega-menu)
+   Desktop: hover a continent -> panel fades in below the bar.
+   Mobile:  tap a continent   -> panel expands as an accordion.
+   ============================================================ */
+.region-nav {
+    position: relative;      /* panels anchor to this, so they never overflow */
+    width: min(1120px, 92%);
+    margin: 22px auto 0;
+    z-index: 500;
 }
 
-.container-top {
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #8CC1FE,
-                0 0 20px #8CC1FE,
-                0 0 30px #8CC1FE;
-    margin-top: 25px;
-    backdrop-filter: blur(0px);
-    background-color: rgba(12, 12, 12, 0.8);
-}
-
-.container-highlight {
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #8CC1FE,
-                0 0 20px #8CC1FE,
-                0 0 30px #8CC1FE;
-    margin-top: 25px;
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #B6D8FF,
-                0 0 20px #B6D8FF,
-                0 0 30px #B6D8FF;
-    margin-top: 25px;
-    backdrop-filter: blur(3px);
-    background-color: rgba(7, 47, 95, 0.5);
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: #d1e5ff;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #1f2733;
-    border-radius: 10px;
-}
-
-h1 {
-    text-align: center; 
-    font-size: 42px; 
-    color: #b7d7fc;
-}
-
-h2 {
-    text-align: center; 
-    font-size: 33px;
-    color: #b7d7fc;
-}
-
-h3 {
-    text-align: center; 
-    font-size: 30px;
-    margin-top: 35px;
-    margin-bottom: 5px;
-    color: #468fcb;
-}
-
-h4 {
-    margin-right: 15px;
-    font-size: 21px;
-    color: rgb(230, 226, 226);
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-h5 {
-    margin-right: 15px;
-    font-size: 18px;
-    color: rgb(230, 226, 226);
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 21px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: rgb(230, 226, 226);
-}
-
-ul {
+.region-bar {
     list-style: none;
-    font-size: 21px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    padding: 0 0 0 30px;
-    color: rgb(230, 226, 226);
-}
-
-ul li::before {
-    left: -1em;
-    position: relative;
-}
-
-#top_btn {
-    color: #072F5F;
-}
-
-#top_btn:hover {
-    background-color: #072F5F;
-    color: whitesmoke;
-}
-
-.regions-wrapper {
-    width: 90%;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #B6D8FF, 
-                0 0 20px #B6D8FF, 
-                0 0 30px #B6D8FF;
-    margin-top: 30px;
-    backdrop-filter: blur(3px);
-    background: rgba(7, 47, 95, 0.5);
-}
-
-.regions-heading {
-    text-align: center;
-    font-size: 42px;
-}
-
-.regions-wrapper h2:first-of-type {
-    margin-top: 0;
-}
-
-.continent-panels {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 30px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 6px;
 }
 
-.continent-panel {
-    padding: 30px;
-    color: #b7d7fc;
-    border: 2px solid #b7d7fc;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 21px;
-    font-weight: bold;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.region-item {
+    position: static;
 }
 
-.continent-panel:hover {
-    background: #e7e4e4;
-    color: #8aa1bb;
-    box-shadow: 0 0 20px #e7e4e4,
-                0 0 80px #e7e4e4,
-                0 0 160px #e7e4e4;
-    border: 2px solid #e7e4e4;
-    transition-delay: .2s;
-    transform: scale(1.05);
-}
-
-.back-button {
-    margin-bottom: 20px;
-    padding: 12px 24px;
+.region-trigger {
+    --pad-x: 18px;
+    position: relative;
+    padding: 12px var(--pad-x);
     border: none;
-    border-radius: 8px;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 23px;
+    letter-spacing: 0.02em;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    position: absolute;
-    z-index: 10;
-    margin-left: 3%;
-    margin-top: 2.5%;
-    transition: all 0.3s;
-    font-family: 'Times New Roman', Times, serif;
+    transition: color 0.3s ease;
 }
 
-.back-button:hover {
-    background: black;
-    color: white;
-    transition-delay: .2s;
-    transform: scale(1.05);
+/* underline wipes in from the left, and wipes out to the right */
+.region-trigger::after {
+    content: "";
+    position: absolute;
+    left: var(--pad-x);
+    right: var(--pad-x);
+    bottom: 6px;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;   /* leaving: collapse toward the right */
+    transition: transform 0.3s ease;
+}
+
+.region-trigger:hover::after,
+.region-trigger.active::after {
+    transform: scaleX(1);
+    transform-origin: left center;    /* entering: grow from the left */
+}
+
+/* One accent per continent. The same value is set on the button AND on its
+   panel (they sit in matching order), so subregion titles and country links
+   inside pick it up through var(--accent). */
+.region-item:nth-child(1), .region-panel:nth-child(1) { --accent: var(--a1); }
+.region-item:nth-child(2), .region-panel:nth-child(2) { --accent: var(--a2); }
+.region-item:nth-child(3), .region-panel:nth-child(3) { --accent: var(--a3); }
+.region-item:nth-child(4), .region-panel:nth-child(4) { --accent: var(--a4); }
+.region-item:nth-child(5), .region-panel:nth-child(5) { --accent: var(--a5); }
+.region-item:nth-child(6), .region-panel:nth-child(6) { --accent: var(--a6); }
+.region-item:nth-child(7), .region-panel:nth-child(7) { --accent: var(--a7); }
+
+.region-trigger:hover,
+.region-trigger.active {
+    color: var(--accent, var(--ink));
+}
+
+/* Hidden by default; each breakpoint below decides how it opens */
+.region-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 36px;
+    border-radius: 2px;
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    box-shadow: 0 6px 22px var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* One subregion = one column; every column is the same fixed width so a long
+   country name wraps inside its column instead of stretching it */
+.subregion {
+    flex: 0 0 180px;
+    width: 180px;
+    text-align: left;
+}
+
+.subregion-title {
+    font-family: var(--font-display);
+    font-weight: normal;
+    margin: 0 0 10px;
+    font-size: 19px;
+    text-align: left;
+    color: var(--accent, var(--ink));
+}
+
+.subregion-countries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.subregion-countries li {
+    margin: 7px 0;
+}
+
+.subregion-countries a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.subregion-countries a:hover {
+    color: var(--accent, var(--ink));
+    text-decoration: underline;
+}
+
+/* ---- Desktop: dropdown panel that slowly fades in on hover ---- */
+@media (min-width: 701px) {
+    .region-panels {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+    }
+
+    .region-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 24px 28px;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+    }
+
+    .region-panel.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 700px) {
+    .container-top,
+    .container {
+        padding: 24px 20px;
+        margin-top: 20px;
+    }
+
     #header-nav {
-        background-color: #141618;  
+        background-color: var(--sheet);
+        border: 1px solid var(--rule);
+        box-shadow: 0 4px 14px var(--shadow);
     }
 
     #header-nav,
     #header-nav a,
     #header-nav a:link,
     #header-nav a:visited {
-        color: whitesmoke;
+        color: var(--ink);
     }
 
     /* Mobile: 3-col square grid; caption hidden until hover/tap */
     .highlight-banknote {
         grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
+        gap: 8px;
     }
 
     .hl-tile {
@@ -361,18 +386,20 @@ ul li::before {
         position: relative;
         aspect-ratio: 1 / 1;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 2px;
     }
 
     .hl-tile img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        padding: 0;
+        border: 1px solid var(--rule);
     }
 
     .hl-tile:hover img,
     .hl-tile:active img {
-        filter: brightness(0.5);
+        transform: none;
     }
 
     /* Caption fills the whole tile so long motif descriptions have room */
@@ -382,16 +409,17 @@ ul li::before {
         right: 0;
         bottom: 0;
         left: 0;
+        max-width: none;
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        background: rgba(0, 0, 0, 0.82);
+        background: var(--sheet);
+        color: var(--ink);
         padding: 6px;
         font-size: 10px;
         line-height: 1.3;
-        text-align: center;
-        border-radius: 8px;
+        border-radius: 2px;
         overflow: hidden;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -400,7 +428,7 @@ ul li::before {
 
     .hl-tile:hover .hl-caption,
     .hl-tile:active .hl-caption {
-        opacity: 1;
+        opacity: 0.96;
     }
 
     /* Mobile coins: caption hidden until hover/tap */
@@ -426,12 +454,14 @@ ul li::before {
     .coin-overlay {
         position: absolute;
         left: 50%;
-        bottom: 5px;
+        bottom: 10px;
         transform: translateX(-50%) translateY(20px);
-        background: rgba(0, 0, 0, 0.75);
+        background: var(--sheet);
+        border: 1px solid var(--rule);
+        color: var(--ink);
         padding: 6px 10px;
         font-size: 14px;
-        border-radius: 8px;
+        border-radius: 2px;
         opacity: 0;
         transition: all 0.6s ease;
         pointer-events: none;
@@ -444,62 +474,101 @@ ul li::before {
         transform: translateX(-50%) translateY(0);
     }
 
-    .collection-value {
-        font-size: 18px;
-        margin: 10px 15px;
-    }
+    h1 { font-size: 33px; }
 
-    h1 {
-        font-size: 33px; 
-        margin: 18px 0px;
-    }
-    
     h2 {
-        font-size: 27px;
-        margin: 15px 0px;
+        font-size: 28px;
+        margin: 32px 0 18px;
     }
 
     h3 {
-        font-size: 27px;
-        margin-top: 25px;
-    }
-    
-    h4 {
-        font-size: 18px;
-        margin: 10px;
+        font-size: 20px;
+        margin: 26px 0 12px;
     }
 
-    h5 {
-        font-size: 15px;
-        margin: 10px;
+    p, ul, .collection-value {
+        font-size: 16px;
     }
 
-    p {
-        font-size: 18px;
-        margin: 10px 15px;
-    }
-    
-    ul {
-        font-size: 18px;
-        margin-bottom: 10px;
-        margin-right: 5px;
-        padding: 0 0 0 30px;
+    /* ---- Region navigator on touch ----
+       Continents sit in a horizontal strip you swipe through; tapping one
+       expands its panel below, whose subregion columns also swipe sideways. */
+    .region-nav {
+        width: 92%;
+        margin-top: 15px;
     }
 
-    .category-item {
-        padding: 15px;
-        font-size: 18px;
+    .region-bar {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 4px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .continent-panel {
-        padding: 15px;
-        font-size: 18px;
+    .region-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
     }
 
-    .back-button {
-        padding: 9px 15px;
-        font-size: 12px;
-        margin-left: 0;
-        margin-top: 0.5%;
+    .region-trigger {
+        --pad-x: 14px;
+        padding: 10px var(--pad-x);
+        font-size: 20px;
+        white-space: nowrap;
     }
-} 
+
+    /* Panel expands in normal flow, pushing the page down */
+    .region-panels {
+        position: static;
+    }
+
+    /* A collapsed panel must occupy NO space: max-height only zeroes the
+       content box, so the border and margin have to go too - otherwise all
+       seven closed panels stack up into a gap under the bar. */
+    .region-panel {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 22px;
+        margin-top: 0;
+        padding: 0 16px;
+        max-height: 0;
+        overflow: hidden;
+        border: none;
+        box-shadow: none;
+        transition: max-height 0.4s ease, opacity 0.4s ease,
+                    padding 0.4s ease, margin-top 0.4s ease, visibility 0.4s;
+    }
+
+    .region-panel.open {
+        opacity: 1;
+        visibility: visible;
+        max-height: 1200px;
+        margin-top: 8px;
+        padding: 16px;
+        border: 1px solid var(--rule);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* fixed-width columns that scroll sideways instead of squashing */
+    .subregion {
+        flex: 0 0 160px;
+        width: 160px;
+    }
+
+    /* swipe strips scroll, but without a visible scrollbar */
+    .region-bar,
+    .region-panel {
+        scrollbar-width: none;          /* Firefox */
+        -ms-overflow-style: none;       /* old Edge/IE */
+    }
+
+    .region-bar::-webkit-scrollbar,
+    .region-panel::-webkit-scrollbar {
+        display: none;                  /* Chrome / Safari */
+    }
+}

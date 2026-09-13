@@ -1,3 +1,27 @@
+/* ---------------------------------------------------------------
+   Theme: "light" = archival paper, "dark" = midnight gallery.
+   Applied immediately (this file loads in <head>) so the page never
+   paints in the wrong theme, then kept in sync by the toggle button.
+   --------------------------------------------------------------- */
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    const btn = document.getElementById("theme-toggle");
+    if (btn) btn.textContent = theme === "dark" ? "☀" : "☾";
+}
+
+function toggleTheme() {
+    const next =
+        document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", next);
+    applyTheme(next);
+}
+
+// run now (before paint) for the attribute, and again on load for the button
+applyTheme(localStorage.getItem("theme") || "light");
+document.addEventListener("DOMContentLoaded", function () {
+    applyTheme(localStorage.getItem("theme") || "light");
+});
+
 // Navigation to other pagaes
 function navigateTo(page) {
     window.location.href = page;

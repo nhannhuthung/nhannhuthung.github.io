@@ -15,6 +15,7 @@
 
     <link rel="icon" type="image/png" sizes="128x128" href="images/logo/icon.png">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +26,7 @@
 
 <body>
     <div class="preloader"></div>
-    <header style="background-color: #AFCBFF;">
+    <header>
         <div class="header-container">
             <div class="left-group">
                 <a href="javascript:void(0);" class="hamburger-nav" onclick="toggleMenu()">
@@ -45,6 +46,9 @@
                     <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
                 </div>
 
+                <button type="button" id="theme-toggle" class="theme-toggle"
+                        onclick="toggleTheme()" aria-label="Switch light/dark theme"></button>
+
                 <div class="search-container">
                     <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
                     <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
@@ -56,9 +60,9 @@
         </div>
     </header>
 
-    <h5 class="big-title" id="main-title" data-i18n="title" style="background-color: #AFCBFF; color: #283033;"></h5>
+    <h5 class="big-title" id="main-title" data-i18n="title"></h5>
     <div id="media" class="page">
-        <h1 class="title" id="sub-title-1" data-i18n="sub_title_1" style="color: #29241E;"></h1>
+        <h1 class="title" id="sub-title-1" data-i18n="sub_title_1"></h1>
         <b id="sentence-1" data-i18n="sentence_1"></b>
         <nav>
             <a href="https://www.facebook.com/nhannhuthung" target="_blank" class="fa fa-facebook"></a>
@@ -69,8 +73,8 @@
     </div>
 
     <div id="work" class="page">
-        <h1 class="title" id="sub-title-2" data-i18n="sub_title_2" style="color: #F5FEFD;"></h1>
-        <b id="sentence-2" data-i18n="sentence_2" style="color: #F5FEFD;"></b>
+        <h1 class="title" id="sub-title-2" data-i18n="sub_title_2"></h1>
+        <b id="sentence-2" data-i18n="sentence_2"></b>
         <nav>
             <a href="mailto: hg5ejd1mj@mozmail.com" target="_blank" class="fa fa-google"></a>
             <a href="https://www.linkedin.com/in/howlnhan/" target="_blank" class="fa fa-linkedin"></a>

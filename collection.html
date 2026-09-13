@@ -15,11 +15,18 @@
 
     <link rel="icon" type="image/png" sizes="128x128" href="images/logo/icon.png">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme.css">
     <link rel="stylesheet" href="styles/collection.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <!-- set the theme before first paint so there is no flash of the wrong one -->
+    <script>
+        document.documentElement.setAttribute(
+            "data-theme", localStorage.getItem("theme") || "light");
+    </script>
+
     <script charset="utf-8" src="script.js" defer></script>
     <script src="scripts/collection-value.js" defer></script>
     <script src="scripts/lang/collection.js" defer></script>
@@ -47,6 +54,9 @@
                     <a href="javascript:void(0);" onclick="toggleLanguage()">Eng | Vie</a>
                 </div>
 
+                <button type="button" id="theme-toggle" class="theme-toggle"
+                        onclick="toggleTheme()" aria-label="Switch light/dark theme"></button>
+
                 <div class="search-container">
                     <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
                     <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
@@ -60,10 +70,13 @@
 
     <button onclick="toTop()" id="top_btn" data-i18n="top_btn" data-i18n-title="top_title"></button>
 
+    <!-- Region navigator: built by buildRegionNav() in scripts/lang/collection.js -->
+    <div id="country-list"></div>
+
     <div class="container-top">
-        <h3 id="acknowledge" data-i18n="acknowledge" style="margin-top: 10px;"></h3>
+        <h2 id="acknowledge" data-i18n="acknowledge" style="margin-top: 10px;"></h2>
         <p id="acknowledge-para" data-i18n="acknowledge_para"></p>
-        <h3 id="remark" data-i18n="remark"></h3>
+        <h2 id="remark" data-i18n="remark"></h2>
         <p id="remark-para-1" data-i18n="remark_para_1"></p>
         <p id="remark-para-2" data-i18n="remark_para_2"></p>
         <ul>
@@ -78,15 +91,12 @@
              Data comes from scripts/collection-value.js (regenerate with
              tools/generate-collection-value.ps1); rates are fetched live. -->
         <div id="collection-value" class="collection-value"></div>
-        <br>
-        <h4 id="last-update" data-i18n="last_update" style="text-align: right;"></h4>
-        <h5 style="text-align: right;">12/09/2026</h5>
-    </div>
 
-    <div class="container-highlight">
-        <h1 id="highlight" data-i18n="highlight" style="color: whitesmoke;"></h1>
+        <h4 id="last-update" data-i18n="last_update"></h4>
 
-        <h2 id="banknote" data-i18n="banknote" style="color: whitesmoke;"></h2>
+        <h2 id="highlight" data-i18n="highlight"></h2>
+
+        <h3 id="banknote" data-i18n="banknote"></h3>
         <!-- Each tile is a square corner-crop of a banknote motif.
              To add/change a tile: set src to your snipped square image, and edit
              the matching hl_* caption (en + vi) in scripts/lang/collection.js. -->
@@ -129,7 +139,7 @@
             </div>
         </div>
 
-        <h2 id="coin" data-i18n="coin" style="color: whitesmoke;"></h2>
+        <h3 id="coin" data-i18n="coin"></h3>
         <div class="highlight-coin">
             <div class="coin-box" data-info="USA ~ 1881-O ~ 1 Dollar">
                 <div class="coin-imgs">
@@ -155,8 +165,6 @@
         </div>
     </div>
 
-    <div id="country-list"></div>
-    
     <footer>
 
     </footer>

@@ -1,4 +1,4 @@
-const fixed_trans = {
+﻿const fixed_trans = {
     en: {
         home: `Home`,
         collection: `Collection`,
@@ -31,7 +31,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> I have a few silver coins and I display them in the highlight section right below.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value.`,
 
-        last_update: `Last Updated:`,
+        last_update: `Last Updated: 12/09/2026`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -68,7 +68,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> Mình có vài đồng tiền bằng bạc và mình có để ở phần tâm điểm ngay bên dưới.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn.`,
 
-        last_update: `Cập Nhật Lần Cuối:`,
+        last_update: `Cập Nhật Lần Cuối: 12/09/2026`,
 
         highlight: `Tâm Điểm`,
         banknote: `Tiền Giấy`,
@@ -313,141 +313,152 @@ function toggleLanguage() {
     localStorage.setItem('language', currentLang); // Save the current language in localStorage
     
     updatePageLanguage(currentLang);
-    // generateCountryList(currentLang)
 
-    if (selectedContinent) {
-        showContinentDetails(selectedContinent);
-    } else {
-        showContinentPanels();
-    }
+    // The region navigator is built from data, so rebuild it in the new language
+    buildRegionNav();
 }
 
-function showContinentPanels() {
-    selectedContinent = null;
-    let container = document.getElementById("country-list");
-    container.innerHTML = "";
+/* ---------------------------------------------------------------
+   Region navigator (mega-menu).
 
-    // Create regions wrapper with title
-    let regionsWrapper = document.createElement("div");
-    regionsWrapper.className = "regions-wrapper";
-    
-    let regionsHeading = document.createElement("h1");
-    regionsHeading.className = "regions-heading";
-    regionsHeading.innerText = currentLang === "en" ? "Regions" : "Các Khu Vực";
-    regionsWrapper.appendChild(regionsHeading);
+   Desktop: hovering a continent slowly reveals a panel where each
+   subregion is a horizontal column and its countries run vertically.
+   Mobile:  hover is unreliable on touch, so the panel becomes a
+            tap-to-expand accordion (one continent open at a time).
+   --------------------------------------------------------------- */
 
-    let panelsContainer = document.createElement("div");
-    panelsContainer.className = "continent-panels";
+function isRegionMobile() {
+    return window.matchMedia("(max-width: 700px)").matches;
+}
 
-    Object.entries(countries).forEach(([key, continent]) => {
-        let panel = document.createElement("div");
-        panel.className = "continent-panel";
-        panel.innerText = continent.name[currentLang];
-        panel.onclick = () => showContinentDetails(key);
-        panelsContainer.appendChild(panel);
+// One subregion column: optional heading + a vertical list of countries.
+function buildSubregion(title, list) {
+    const col = document.createElement("div");
+    col.className = "subregion";
+
+    if (title) {
+        const heading = document.createElement("h3");
+        heading.className = "subregion-title";
+        heading.textContent = title;
+        col.appendChild(heading);
+    }
+
+    const ul = document.createElement("ul");
+    ul.className = "subregion-countries";
+    list.forEach(country => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = country.url;
+        a.textContent = country[currentLang];
+        li.appendChild(a);
+        ul.appendChild(li);
     });
+    col.appendChild(ul);
 
-    regionsWrapper.appendChild(panelsContainer);
-    container.appendChild(regionsWrapper);
+    return col;
 }
 
-function showContinentDetails(continentKey) {
-    selectedContinent = continentKey;
-    let container = document.getElementById("country-list");
+function buildRegionNav() {
+    const container = document.getElementById("country-list");
+    if (!container) return;
     container.innerHTML = "";
 
-    let continent = countries[continentKey];
+    const nav = document.createElement("nav");
+    nav.className = "region-nav";
 
-    // Continent container
-    let continentContainer = document.createElement("div");
-    continentContainer.className = "container";
+    const bar = document.createElement("ul");
+    bar.className = "region-bar";
 
-    // Back button inside container
-    let backBtn = document.createElement("button");
-    backBtn.className = "back-button";
-    backBtn.innerText = currentLang === "en" ? "Back" : "Quay Lại";
-    backBtn.onclick = showContinentPanels;
-    continentContainer.appendChild(backBtn);
+    // Panels live OUTSIDE the bar: on mobile the bar scrolls sideways, and a
+    // panel nested inside it would be trapped in that scrolling strip.
+    const panels = document.createElement("div");
+    panels.className = "region-panels";
 
-    // Continent title
-    let continentTitle = document.createElement("h1");
-    continentTitle.innerText = continent.name[currentLang];
-    continentContainer.appendChild(continentTitle);
+    const entries = [];
+    let closeTimer = null;
 
-    // Handle special cases
-    if (continent.eu) {
-        let div = document.createElement("div");
-        div.className = "category";
-        let item = document.createElement("div");
-        item.className = "category-item";
-        item.innerText = continent.eu[currentLang];
-        item.onclick = () => navigateTo(continent.eu.url);
-        div.appendChild(item);
-        continentContainer.appendChild(div);
-    }
-
-    if (continent.australia) {
-        let div = document.createElement("div");
-        div.className = "category";
-        let item = document.createElement("div");
-        item.className = "category-item";
-        item.innerText = continent.australia[currentLang];
-        item.onclick = () => navigateTo(continent.australia.url);
-        div.appendChild(item);
-        continentContainer.appendChild(div);
-    }
-
-    if (continent.arctic_territories) {
-        let div = document.createElement("div");
-        div.className = "category";
-        let item = document.createElement("div");
-        item.className = "category-item";
-        item.innerText = continent.arctic_territories[currentLang];
-        item.onclick = () => navigateTo(continent.arctic_territories.url);
-        div.appendChild(item);
-        continentContainer.appendChild(div);
-    }
-
-    if (continent.kerguelen_islands) {
-        let div = document.createElement("div");
-        div.className = "category";
-        let item = document.createElement("div");
-        item.className = "category-item";
-        item.innerText = continent.kerguelen_islands[currentLang];
-        item.onclick = () => navigateTo(continent.kerguelen_islands.url);
-        div.appendChild(item);
-        continentContainer.appendChild(div);
-    }
-
-
-    // Handle regions
-    if (continent.regions) {
-        Object.values(continent.regions).forEach(region => {
-            let regionTitle = document.createElement("h2");
-            regionTitle.innerText = region.name[currentLang];
-            continentContainer.appendChild(regionTitle);
-
-            let categoryDiv = document.createElement("div");
-            categoryDiv.className = "category";
-
-            let countryList = [...region.countries].sort((a, b) => 
-                a[currentLang].localeCompare(b[currentLang])
-            );
-
-            countryList.forEach(country => {
-                let countryDiv = document.createElement("div");
-                countryDiv.className = "category-item";
-                countryDiv.innerText = country[currentLang];
-                countryDiv.onclick = () => navigateTo(country.url);
-                categoryDiv.appendChild(countryDiv);
-            });
-
-            continentContainer.appendChild(categoryDiv);
+    function closeAll() {
+        entries.forEach(({ trigger, panel }) => {
+            panel.classList.remove("open");
+            trigger.classList.remove("active");
+            trigger.setAttribute("aria-expanded", "false");
         });
     }
 
-    container.appendChild(continentContainer);
+    function openEntry(index) {
+        closeAll();
+        const { trigger, panel } = entries[index];
+        panel.classList.add("open");
+        trigger.classList.add("active");
+        trigger.setAttribute("aria-expanded", "true");
+    }
+
+    Object.values(countries).forEach((continent, index) => {
+        const item = document.createElement("li");
+        item.className = "region-item";
+
+        const trigger = document.createElement("button");
+        trigger.type = "button";
+        trigger.className = "region-trigger";
+        trigger.textContent = continent.name[currentLang];
+        trigger.setAttribute("aria-expanded", "false");
+        item.appendChild(trigger);
+        bar.appendChild(item);
+
+        const panel = document.createElement("div");
+        panel.className = "region-panel";
+
+        // Standalone entries that sit outside "regions" (eu, australia,
+        // arctic_territories, kerguelen_islands, ...) get their own column.
+        Object.entries(continent).forEach(([key, value]) => {
+            if (key === "name" || key === "regions") return;
+            if (!value || !value.url) return;
+            panel.appendChild(buildSubregion(null, [value]));
+        });
+
+        // Arctic / Antarctica have no "regions" key at all.
+        if (continent.regions) {
+            Object.values(continent.regions).forEach(region => {
+                const sorted = [...region.countries].sort((a, b) =>
+                    a[currentLang].localeCompare(b[currentLang])
+                );
+                panel.appendChild(buildSubregion(region.name[currentLang], sorted));
+            });
+        }
+        panels.appendChild(panel);
+
+        entries.push({ trigger, panel });
+
+        // Desktop: open on hover.
+        item.addEventListener("mouseenter", () => {
+            if (isRegionMobile()) return;
+            clearTimeout(closeTimer);
+            openEntry(index);
+        });
+
+        // Mobile: tap to toggle.
+        trigger.addEventListener("click", () => {
+            if (!isRegionMobile()) return;
+            if (panel.classList.contains("open")) closeAll();
+            else openEntry(index);
+        });
+    });
+
+    // Only close once the cursor leaves the WHOLE navigator, and even then
+    // after a short grace period - so moving down from a button into its
+    // panel (across the small gap) keeps the panel open.
+    nav.addEventListener("mouseleave", () => {
+        if (isRegionMobile()) return;
+        clearTimeout(closeTimer);
+        closeTimer = setTimeout(closeAll, 260);
+    });
+    nav.addEventListener("mouseenter", () => clearTimeout(closeTimer));
+
+    nav.appendChild(bar);
+    nav.appendChild(panels);
+    container.appendChild(nav);
 }
+
 
 function navigateTo(url) {
     window.location.href = url;
@@ -563,6 +574,6 @@ async function computeCollectionValue() {
 
 document.addEventListener("DOMContentLoaded", function() {
     updatePageLanguage(currentLang);
-    showContinentPanels();
+    buildRegionNav();
     computeCollectionValue();
 });

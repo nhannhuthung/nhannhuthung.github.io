@@ -23,10 +23,18 @@
 }
 
 
+html {
+    /* nothing on this site is meant to be wider than the screen, so never
+       let a stray element turn the page into a horizontal scroller */
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .preloader {
@@ -98,10 +106,13 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   padding: 10px 20px 10px 0;
   position: relative;
+  /* keep padding inside the width, otherwise "width:100%" on mobile
+     overflows the viewport and the whole page scrolls sideways */
+  box-sizing: border-box;
 }
 
 nav {
@@ -162,10 +173,6 @@ nav {
     padding: 5px 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     overflow: visible;
-}
-
-::placeholder {
-    background: #F2F3F4;
 }
 
 .suggestions-box {
