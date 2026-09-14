@@ -44,7 +44,7 @@ const main_trans = {
         hl_5: `a sunflower with a bee`,
         hl_6: `a vessel of the First Fleet`,
         hl_7: `an axolotl`,
-        hl_8: `a hawksbill turtle (Eretmochelys imbricata)`,
+        hl_8: `a yellow-eyed penguin (hoiho)`,
         hl_9: `Ha Long Bay`,
 
         coin: `Coin`,
@@ -81,7 +81,7 @@ const main_trans = {
         hl_5: `hoa hướng dương và con ong`,
         hl_6: `một con tàu của Hạm Đội Đầu Tiên`,
         hl_7: `kỳ giông Axolotl`,
-        hl_8: `rùa đồi mồi (Eretmochelys imbricata)`,
+        hl_8: `chim cánh cụt mắt vàng (hoiho)`,
         hl_9: `Vịnh Hạ Long`,
 
         coin: `Tiền Xu`,
