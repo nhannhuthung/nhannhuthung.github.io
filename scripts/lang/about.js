@@ -5,6 +5,8 @@ const fixed_trans = {
         about: `About`,
         contact: `Contact`,
         search_placeholder: `Enter page name...`,
+        // the toggle names the language you switch TO first
+        lang_toggle: `Vie | Eng`,
     },
     vi: {
         home: `Trang Chủ`,
@@ -12,6 +14,7 @@ const fixed_trans = {
         about: `Giới Thiệu`,
         contact: `Liên Hệ`,
         search_placeholder: `Nhập tên trang...`,
+        lang_toggle: `Eng | Vie`,
     }
 };
 

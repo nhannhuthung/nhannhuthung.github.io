@@ -11,6 +11,8 @@ const fixed_trans = {
         back_to_top: `Top`,
         play_all: `Play all slideshows`,
         pause_all: `Pause all slideshows`,
+        // the toggle names the language you switch TO first
+        lang_toggle: `Vie | Eng`,
     },
     vi: {
         home: `Trang Chủ`,
@@ -21,6 +23,7 @@ const fixed_trans = {
         back_to_top: `Đầu`,
         play_all: `Phát tất cả`,
         pause_all: `Dừng tất cả`,
+        lang_toggle: `Eng | Vie`,
     }
 };
 
@@ -192,6 +195,7 @@ function updatePageLanguage(currentLang) {
         { selector: "contact-nav-media", key: "contact" },
         { selector: "searchInput", key: "search_placeholder", attr: "placeholder" },
         { selector: "back-to-top", key: "back_to_top"},
+        { selector: "lang-toggle", key: "lang_toggle"},
     ];
 
     foundationToUpdate.forEach(({ selector, key, attr }) => {

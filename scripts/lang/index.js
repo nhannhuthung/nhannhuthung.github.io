@@ -3,11 +3,14 @@ const fixed_trans = {
         collection: `Collection`,
         about: `About`,
         contact: `Contact`,
+        // the toggle names the language you switch TO first
+        lang_toggle: `Vie | Eng`,
     },
     vi: {
         collection: `Bộ Sưu Tập`,
         about: `Giới Thiệu`,
         contact: `Liên Hệ`,
+        lang_toggle: `Eng | Vie`,
     }
 };
 

@@ -79,12 +79,6 @@ header {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#header-nav a:hover,
-#header-nav-media a:hover,
-.language-toggle a:hover {
-    color: var(--a5);
-}
-
 /* light/dark switch, sits beside the language toggle */
 .theme-toggle {
     background: transparent;

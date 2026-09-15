@@ -7,6 +7,8 @@
         search_placeholder: `Enter page name...`,
         top_btn: `Top`,
         top_title: `Go to top`,
+        // the toggle names the language you switch TO first
+        lang_toggle: `Vie | Eng`,
     },
     vi: {
         home: `Trang Chủ`,
@@ -16,6 +18,7 @@
         search_placeholder: `Nhập tên trang...`,
         top_btn: `Đầu`,
         top_title: `Quay lại đầu trang`,
+        lang_toggle: `Eng | Vie`,
     }
 };
 

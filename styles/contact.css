@@ -8,6 +8,12 @@
     font-weight: var(--fa-style, 900);
 }
 
+#header-nav a:hover,
+#header-nav-media a:hover,
+.language-toggle a:hover {
+    color: var(--a7);
+}
+
 .big-title {
     font-family: var(--font-display);
     font-weight: normal;
@@ -58,7 +64,8 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 1.7;
-    color: var(--ink);
+    color: var(--ink-soft);
+    font-style: italic;
 }
 
 #media nav,
@@ -99,6 +106,7 @@
     font-weight: normal;
     text-align: center;
     margin-bottom: 25px;
+    font-size: 18px;
 }
 
 .contact-form {
@@ -217,6 +225,7 @@
 
     #media b,
     #work b,
+    #contact-form-section #form-intro,
     .contact-form label {
         font-size: 16px;
     }

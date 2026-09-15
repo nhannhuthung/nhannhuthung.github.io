@@ -181,7 +181,7 @@ body {
 }
 
 .language-toggle a {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 21px;
     color: var(--ink);
 }
