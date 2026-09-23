@@ -84,6 +84,12 @@ html, body {
     transform: translateX(3px);
 }
 
+#header-nav a:hover,
+#header-nav-media a:hover,
+.language-toggle a:hover {
+    color: var(--a5);
+}
+
 .main-content {
     padding: 20px;
     overflow-y: auto;
