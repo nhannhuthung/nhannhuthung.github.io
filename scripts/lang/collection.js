@@ -34,7 +34,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> I have a few silver coins and I display them in the highlight section right below.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater, and basically have higher value.`,
 
-        last_update: `Last Updated: 12/09/2026`,
+        last_update: `Last Updated: 30/09/2026`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -57,6 +57,7 @@ const main_trans = {
 
         value_label: `Total Circulating Face Value`,
         value_notes: `banknotes`,
+        value_regions: `across {n} regions`,   // {n} is filled in with the region count
         value_loading: `Calculating total value...`,
         value_error: `Total value unavailable`,
     },
@@ -71,7 +72,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> Mình có vài đồng tiền bằng bạc và mình có để ở phần tâm điểm ngay bên dưới.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và cơ bản chúng có giá trị cao hơn.`,
 
-        last_update: `Cập Nhật Lần Cuối: 12/09/2026`,
+        last_update: `Cập Nhật Lần Cuối: 30/09/2026`,
 
         highlight: `Tâm Điểm`,
         banknote: `Tiền Giấy`,
@@ -83,7 +84,7 @@ const main_trans = {
         hl_4: `đoàn tàu VIA Rail băng qua dãy Rocky Canada`,
         hl_5: `hoa hướng dương và con ong`,
         hl_6: `một con tàu của Hạm Đội Đầu Tiên`,
-        hl_7: `kỳ giông Axolotl`,
+        hl_7: `kỳ giông axolotl`,
         hl_8: `chim cánh cụt mắt vàng (hoiho)`,
         hl_9: `Vịnh Hạ Long`,
 
@@ -94,6 +95,7 @@ const main_trans = {
 
         value_label: `Tổng Giá Trị Đang Lưu Hành`,
         value_notes: `tờ tiền`,
+        value_regions: `thuộc {n} khu vực`,
         value_loading: `Đang tính tổng giá trị...`,
         value_error: `Không thể tính tổng giá trị`,
     }
@@ -506,7 +508,7 @@ function updatePageLanguage(currentLang) {
    banknotes). Exchange rates are fetched live, falling back to the
    rates captured when that file was generated.
    --------------------------------------------------------------- */
-const valueState = { status: "loading", totalUsd: 0, noteCount: 0, totalNotes: 0 };
+const valueState = { status: "loading", totalUsd: 0, noteCount: 0, totalNotes: 0, regions: 0 };
 
 function renderCollectionValue() {
     const el = document.getElementById("collection-value");
@@ -530,7 +532,9 @@ function renderCollectionValue() {
     });
     const count = valueState.noteCount.toLocaleString(locale);
     const total = valueState.totalNotes.toLocaleString(locale);
-    el.textContent = `${t("value_label")}: $${amount} USD (${count} / ${total} ${t("value_notes")})`;
+    const regions = t("value_regions").replace("{n}", valueState.regions.toLocaleString(locale));
+    el.textContent =
+        `${t("value_label")}: $${amount} USD (${count} / ${total} ${t("value_notes")} ${regions})`;
 }
 
 async function computeCollectionValue() {
@@ -571,6 +575,7 @@ async function computeCollectionValue() {
     valueState.totalUsd = total;
     valueState.noteCount = notes;
     valueState.totalNotes = collectionValue.totalNotes;
+    valueState.regions = collectionValue.regionCount;
     valueState.status = "ok";
     renderCollectionValue();
 }

@@ -62,9 +62,11 @@ $noteCounts = @{}  # ISO -> number of notes
 $skipped   = @()
 $warnings  = @()
 $totalNotes = 0
+$regionCount = 0   # one data/*.js file per region (1:1 with collection/*.html)
 
 foreach ($f in Get-ChildItem (Join-Path $dataDir '*.js')) {
     $country = $f.BaseName
+    $regionCount++
     $c = Get-Content $f.FullName -Raw
 
     $typeMap = @{}
@@ -136,6 +138,7 @@ $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine("    generated: `"$((Get-Date).ToString('yyyy-MM-dd'))`",")
 [void]$sb.AppendLine("    noteCount: $circulatingNotes,")
 [void]$sb.AppendLine("    totalNotes: $totalNotes,   // every banknote in the collection, circulating or not")
+[void]$sb.AppendLine("    regionCount: $regionCount,   // one data/*.js file per region")
 [void]$sb.AppendLine('    // total face value held, per currency')
 [void]$sb.AppendLine('    amounts: {')
 foreach ($k in ($amounts.Keys | Sort-Object)) {
@@ -159,7 +162,7 @@ Set-Content -Path $outFile -Value $sb.ToString() -Encoding utf8
 
 # ---- report ---------------------------------------------------------------
 ""
-"Parsed $totalNotes banknote entries."
+"Parsed $totalNotes banknote entries across $regionCount regions."
 "Circulating notes counted: $circulatingNotes across $($amounts.Count) currencies."
 "Wrote: $outFile"
 if ($unpriced.Count) {

@@ -188,6 +188,14 @@ ul li::before {
     background: var(--mat);
     border: 1px solid var(--rule);
     border-radius: 2px;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+/* same lift as .hl-tile:hover img, so both halves of the highlight
+   section behave identically on desktop */
+.coin-box:hover .coin-imgs {
+    transform: translateY(-3px);
+    border-color: var(--ink-soft);
 }
 
 .coin-imgs img {
@@ -451,6 +459,12 @@ ul li::before {
     .coin-imgs {
         width: 100%;
         height: auto;
+    }
+
+    /* the desktop lift would fight the overlay sliding up, same as .hl-tile */
+    .coin-box:hover .coin-imgs,
+    .coin-box:active .coin-imgs {
+        transform: none;
     }
 
     .coin-imgs img {

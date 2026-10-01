@@ -259,7 +259,9 @@ function toggleLanguage() {
 //--// function to display banknote //--//
 class Slideshow {
     static allSlideshows = []; // Track all slideshow instances
-    static globalPaused = false; // Global pause state (default: playing / auto-play on load)
+    // Global pause state, remembered across pages like the language and theme
+    // choices, so it survives navigating to another region (default: playing).
+    static globalPaused = localStorage.getItem("slideshowPaused") === "true";
     static globalButtonCreated = false; // Track if global button exists
 
     constructor(containerId, interval = 5000, infoConfig = null) {
@@ -313,7 +315,9 @@ class Slideshow {
 
     static toggleGlobalPlayPause(button) {
         Slideshow.globalPaused = !Slideshow.globalPaused;
-        
+        localStorage.setItem("slideshowPaused", Slideshow.globalPaused);
+
+
         if (Slideshow.globalPaused) {
             // Pause all slideshows
             button.innerHTML = "&#9654;"; // Play icon

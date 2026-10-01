@@ -132,7 +132,9 @@ header {
     box-shadow: 0 4px 14px var(--shadow);
 }
 
-.suggestion-item:hover {
+/* .active is the arrow-key selection, so it reads the same as a mouse hover */
+.suggestion-item:hover,
+.suggestion-item.active {
     background-color: var(--mat);
 }
 

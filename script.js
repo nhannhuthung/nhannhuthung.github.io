@@ -349,24 +349,68 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Enter key listener - go to the first suggestion if the popup is showing, else search
-    inputField.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            const firstSuggestion = (suggestionBox && suggestionBox.style.display !== "none")
-                ? suggestionBox.querySelector(".suggestion-item")
-                : null;
-            if (firstSuggestion) {
-                firstSuggestion.click();
-            } else {
-                searchPage();
-            }
-        }
-    });
+    /* ---- walking the suggestions with the arrow keys ----
+       activeIndex -1 means "nothing highlighted", and the field still holds
+       what was typed. The arrows walk -1 .. last and back, writing the
+       highlighted label into the field as they go, so Enter always submits
+       whatever the bar is currently showing. */
+    let activeIndex = -1;
+    let typedValue = "";
 
-    // Escape key listener - close search
+    function suggestionItems() {
+        return suggestionBox
+            ? Array.from(suggestionBox.querySelectorAll(".suggestion-item"))
+            : [];
+    }
+
+    function setActive(index) {
+        const items = suggestionItems();
+        items.forEach(el => el.classList.remove("active"));
+
+        if (index < 0 || index >= items.length) {
+            activeIndex = -1;
+            inputField.value = typedValue;   // stepped back off the list
+            return;
+        }
+
+        activeIndex = index;
+        const item = items[index];
+        item.classList.add("active");
+        item.scrollIntoView({ block: "nearest" });  // the box scrolls past 250px
+        inputField.value = item.textContent;
+    }
+
+    function moveActive(step) {
+        const items = suggestionItems();
+        if (!items.length || suggestionBox.style.display === "none") return;
+
+        // positions 0..items.length, where 0 is "what you typed"; wrap at both ends
+        const span = items.length + 1;
+        setActive(((activeIndex + 1 + step) % span + span) % span - 1);
+    }
+
     inputField.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             closeSearch();
+            return;
+        }
+
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+            e.preventDefault();   // stop the caret jumping to either end of the field
+            moveActive(e.key === "ArrowDown" ? 1 : -1);
+            return;
+        }
+
+        if (e.key === "Enter") {
+            const open = suggestionBox && suggestionBox.style.display !== "none";
+            const items = suggestionItems();
+            // the highlighted suggestion, or the first one when none is highlighted
+            const target = open ? (items[activeIndex] || items[0]) : null;
+            if (target) {
+                target.click();
+            } else {
+                searchPage();
+            }
         }
     });
 
@@ -374,6 +418,10 @@ document.addEventListener("DOMContentLoaded", function () {
     inputField.addEventListener("input", function () {
         const input = this.value.trim().toLowerCase();
         if (!suggestionBox) return;
+
+        // typing replaces any arrow-key selection
+        typedValue = this.value;
+        activeIndex = -1;
 
         if (input === "") {
             suggestionBox.style.display = "none";
