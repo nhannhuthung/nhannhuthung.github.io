@@ -27,147 +27,21 @@ const fixed_trans = {
     }
 };
 
-const countryData = {
-    "america": {
-        "name": { "en": "Americas", "vi": "Châu Mỹ" },
-        "countries": [
-            { "en": "Brazil", "vi": "Brasil", "link": "brazil.html" },
-            { "en": "Canada", "vi": "Canada", "link": "canada.html" },
-            { "en": "Colombia", "vi": "Colombia", "link": "colombia.html" },
-            { "en": "Costa Rica", "vi": "Costa Rica", "link": "costa-rica.html" },
-            { "en": "Dominican Republic", "vi": "Cộng Hòa Dominica", "link": "dominican-republic.html" },
-            { "en": "Honduras", "vi": "Honduras", "link": "honduras.html"},
-            { "en": "Mexico", "vi": "Mexico", "link": "mexico.html" },
-            { "en": "Uruguay", "vi": "Uruguay", "link": "uruguay.html" },
-            { "en": "United States", "vi": "Hoa Kỳ", "link": "usa.html" },
-            { "en": "Venezuela", "vi": "Venezuela", "link": "venezuela.html" },
-        ]       
-    },
-    "africa": {
-        "name": { "en": "Africa", "vi": "Châu Phi" },
-        "countries": [
-            { "en": "Democratic Republic of the Congo", "vi": "Cộng Hòa Dân Chủ Congo", "short_en": "DR Congo", "short_vi": "CH Congo", "link": "drc.html" },
-            { "en": "Egypt", "vi": "Ai Cập", "link": "egypt.html" },
-            { "en": "Ethiopia", "vi": "Ethiopia", "link": "ethiopia.html" },
-            { "en": "Ghana", "vi": "Ghana", "link": "ghana.html" },
-            { "en": "Guinea", "vi": "Guinea", "link": "guinea.html" },
-            { "en": "Kenya", "vi": "Kenya", "link": "kenya.html" },
-            { "en": "Malawi", "vi": "Malawi", "link": "malawi.html" },
-            { "en": "Mauritius", "vi": "Mauritius", "link": "mauritius.html" },
-            { "en": "Puntland", "vi": "Puntland", "link": "puntland.html" },
-            { "en": "Rwanda", "vi": "Rwanda", "link": "rwanda.html" },
-            { "en": "Somalia", "vi": "Somalia", "link": "somalia.html" },
-            { "en": "West African Economic And Monetary Union", "vi": "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi","short_en": "WAEMU", "short_vi": "UEMOA", "link": "uemoa.html" },
-            { "en": "Zambia", "vi": "Zambia", "link": "zambia.html" },
-        ]
-    },
-    "europe": {
-        "name": { "en": "Europe", "vi": "Châu Âu" },
-        "countries": [
-            { "en": "Belarus", "vi": "Belarus", "link": "belarus.html" },
-            { "en": "Croatia", "vi": "Croatia", "link": "croatia.html" },
-            { "en": "England", "vi": "Anh", "link": "england.html" },
-            { "en": "European Union", "vi": "Liên Minh Châu Âu", "short_en": "EU", "short_vi": "EU", "link": "eu.html" },
-            { "en": "France", "vi": "Pháp", "link": "france.html" },
-            { "en": "Ireland", "vi": "Ireland", "link": "ireland.html" },
-            { "en": "Italy", "vi": "Ý", "link": "italy.html" },
-            { "en": "Moldova", "vi": "Moldova", "link": "moldova.html" },
-            { "en": "Netherlands", "vi": "Hà Lan", "link": "netherlands.html" },
-            { "en": "Norway", "vi": "Na Uy", "link": "norway.html" },
-            { "en": "Russia", "vi": "Nga", "link": "russia.html" },
-            { "en": "Scotland", "vi": "Scotland", "link": "scotland.html" },
-            { "en": "Serbia", "vi": "Serbia", "link": "serbia.html" },
-            { "en": "Sweden", "vi": "Thụy Điển", "link": "sweden.html" },
-            { "en": "Switzerland", "vi": "Thụy Sĩ", "link": "switzerland.html" },
-            { "en": "Transnistria", "vi": "Transnistria", "link": "transnistria.html" },
-            { "en": "Ukraine", "vi": "Ukraine", "link": "ukraine.html" },
-            { "en": "Yugoslavia", "vi": "Nam Tư", "link": "yugoslavia.html" },
-        ]
-    },
-    "asia": {
-        "name": { "en": "Asia", "vi": "Châu Á"},
-        "countries": [
-            { "en": "Bangladesh", "vi": "Bangladesh", "link": "bangladesh.html" },
-            { "en": "Bhutan", "vi": "Bhutan", "link": "bhutan.html" },
-            { "en": "Cambodia", "vi": "Campuchia", "link": "cambodia.html" },
-            { "en": "China", "vi": "Trung Quốc", "link": "china.html" },
-            { "en": "Hong Kong", "vi": "Hồng Kông", "link": "hong-kong.html" },
-            { "en": "India", "vi": "Ấn Độ", "link": "india.html" },
-            { "en": "Indochinese Union", "vi": "Liên Bang Đông Dương", "link": "indochinese-union.html" },
-            { "en": "Indonesia", "vi": "Indonesia", "link": "indonesia.html" },
-            { "en": "Iran", "vi": "Iran", "link": "iran.html" },
-            { "en": "Israel", "vi": "Israel", "link": "israel.html" },
-            { "en": "Japan", "vi": "Nhật Bản", "link": "japan.html" },
-            { "en": "Kyrgyzstan", "vi": "Kyrgyzstan", "link": "kyrgyzstan.html" },
-            { "en": "Laos", "vi": "Lào", "link": "laos.html" },
-            { "en": "Lebanon", "vi": "Liban", "link": "lebanon.html" },
-            { "en": "Macau", "vi": "Ma Cao", "link": "macau.html" },
-            { "en": "Malaysia", "vi": "Malaysia", "link": "malaysia.html" },
-            { "en": "Mongolia", "vi": "Mông Cổ", "link": "mongolia.html" },
-            { "en": "Myanmar", "vi": "Myanmar", "link": "myanmar.html" },
-            { "en": "Nepal", "vi": "Nepal", "link": "nepal.html" },
-            { "en": "North Korea", "vi": "Triều Tiên", "link": "north-korea.html" },
-            { "en": "Oman", "vi": "Oman", "link": "oman.html" },
-            { "en": "Pakistan", "vi": "Pakistan", "link": "pakistan.html" },
-            { "en": "Philippines", "vi": "Philippines", "link": "philippines.html" },
-            { "en": "Saudi Arabia", "vi": "Ả Rập Xê Út", "link": "saudi-arabia.html" },
-            { "en": "Singapore", "vi": "Singapore", "link": "singapore.html" },
-            { "en": "South Korea", "vi": "Hàn Quốc", "link": "south-korea.html" },
-            { "en": "South Vietnam", "vi": "Việt Nam Cộng Hòa", "link": "south-vietnam.html" },
-            { "en": "Syria", "vi": "Syria", "link": "syria.html" },
-            { "en": "Taiwan", "vi": "Đài Loan", "link": "taiwan.html" },
-            { "en": "Tajikistan", "vi": "Tajikistan", "link": "tajikistan.html" },
-            { "en": "Thailand", "vi": "Thái Lan", "link": "thailand.html" },
-            { "en": "Turkiye", "vi": "Thổ Nhĩ Kỳ", "link": "turkiye.html" },
-            { "en": "Turkmenistan", "vi": "Turkmenistan", "link": "turkmenistan.html" },
-            { "en": "United Arab Emirates", "vi": "Các Tiểu Vương Quốc Ả Rập Thống Nhất", "link": "uae.html" },
-            { "en": "Uzbekistan", "vi": "Uzbekistan", "link": "uzbekistan.html" },
-            { "en": "Viet Nam", "vi": "Việt Nam", "link": "viet-nam.html" },
-        ]
-    },
-    "oceania": {
-        "name": { "en": "Oceania", "vi": "Châu Úc" },
-        "countries": [
-            { "en": "Australia", "vi": "Úc", "link": "australia.html" },
-            { "en": "New Zealand", "vi": "New Zealand", "link": "new-zealand.html" },
-        ]
-    },
-    "arctic": {
-        "name": { "en": "Arctic", "vi": "Bắc Cực" },
-        "countries": [
-            { "en": "Arctic Territories", "vi": "Các Lãnh Thổ Bắc Cực", "link": "arctic-territories.html" },
-        ]
-    },
-    "antartica": {
-        "name": { "en": "Antarctica", "vi": "Nam Cực" },
-        "countries": [
-            { "en": "Kerguelen Islands", "vi": "Quần Đảo Kerguelen", "link": "kerguelen-islands.html"},
-        ]
-    },
-};
-
-// one accent per continent, matching the region-bar order in theme.css
-const regionAccent = {
-    america: "--a1",
-    africa: "--a2",
-    europe: "--a3",
-    asia: "--a4",
-    oceania: "--a5",
-    arctic: "--a6",
-    antartica: "--a7",
-};
+// The sidebar is built from REGIONS / COUNTRIES in scripts/regions.js,
+// which this page loads first. The per-continent accent colour lives on
+// each REGIONS record, so there is no separate map here any more.
 
 function createCategory(categoryKey) {
-    const category = countryData[categoryKey];
-    const title = category.name[currentLang];
-    const sortedCountries = category.countries.sort((a, b) => a[currentLang].localeCompare(b[currentLang]));
-    const accentVar = regionAccent[categoryKey] || "--a5";
-    
+    const region = REGIONS[categoryKey];
+    const title = region[currentLang];
+    const accentVar = region.accent || "--a5";
+
     let categoryHTML = `<div class="region-group" style="--region-accent: var(${accentVar})">`;
     categoryHTML += `<h2 onclick="toggleCategories('${categoryKey}')">${title}</h2>`;
     categoryHTML += `<ul id="${categoryKey}">`;
-    sortedCountries.forEach(item => {
-        categoryHTML += `<li onclick="navigateTo('${item.link}')">${item[currentLang]}</li>`;
+    // the sidebar lists a continent flat, so subregions are ignored here
+    countriesIn(categoryKey, currentLang).forEach(slug => {
+        categoryHTML += `<li onclick="navigateTo('${slug}.html')">${COUNTRIES[slug][currentLang]}</li>`;
     });
     categoryHTML += `</ul>`;
     categoryHTML += `</div>`;
@@ -176,7 +50,7 @@ function createCategory(categoryKey) {
 
 function insertSidebarHTML(id) {
     let sidebarHTML = '<div class="sidebar">';
-    Object.keys(countryData).forEach(categoryKey => {
+    Object.keys(REGIONS).forEach(categoryKey => {
         sidebarHTML += createCategory(categoryKey);
     });
     sidebarHTML += '</div>';
@@ -731,26 +605,20 @@ function scrollToTop() {
 function getPageNavigation() {
     // Get current page filename
     const currentPage = window.location.pathname.split('/').pop();
-    
-    // Flatten all countries into a single array
-    const allPages = [];
-    Object.keys(countryData).forEach(categoryKey => {
-        countryData[categoryKey].countries.forEach(country => {
-            allPages.push(country);
-        });
-    });
-    
-    // Find current page index
-    const currentIndex = allPages.findIndex(page => page.link === currentPage);
-    
+
+    // COUNTRIES is already in reading order: continent by continent
+    const allSlugs = Object.keys(COUNTRIES);
+    const currentIndex = allSlugs.indexOf(currentPage.replace(/\.html$/, ''));
+
     if (currentIndex === -1) {
         return { prev: null, next: null };
     }
-    
-    return {
-        prev: currentIndex > 0 ? allPages[currentIndex - 1] : null,
-        next: currentIndex < allPages.length - 1 ? allPages[currentIndex + 1] : null
-    };
+
+    const at = i => (i >= 0 && i < allSlugs.length)
+        ? Object.assign({ slug: allSlugs[i], link: `${allSlugs[i]}.html` }, COUNTRIES[allSlugs[i]])
+        : null;
+
+    return { prev: at(currentIndex - 1), next: at(currentIndex + 1) };
 }
 
 function createNavigationButtons() {

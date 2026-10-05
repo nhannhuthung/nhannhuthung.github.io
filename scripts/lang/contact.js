@@ -26,7 +26,7 @@ const main_trans = {
         sub_title_2: `Work`,
         sentence_2: `For business inquiries, please feel free to contact me through the following platforms.`,
 
-        form_title: `Mail Me`,
+        form_title: `Email Me`,
         form_intro: `I'm happy to take any feedback from you for a better experience in my website.`,
         form_name: `Name`,
         form_name_ph: `Your name`,
@@ -37,7 +37,7 @@ const main_trans = {
         form_submit: `Send`,
         form_sending: `Sending...`,
         form_success: `Thanks! Your message has been sent.`,
-        form_error: `Oops, something went wrong. Please try again.`,
+        form_error: `Sorry, something went wrong. Please try again.`,
     },
     vi: {
         title: `Liên Hệ Mình`,
@@ -46,12 +46,12 @@ const main_trans = {
         sub_title_2: `Công Việc`,
         sentence_2: `Đối với các yêu cầu công việc, xin vui lòng liên hệ với mình qua các nền tảng sau.`,
 
-        form_title: `Gửi Thư Cho Mình`,
+        form_title: `Email Mình`,
         form_intro: `Mình rất sẵn lòng tiếp nhận mọi góp ý để mọi người có trải nghiệm trên trang web của mình tốt hơn.`,
         form_name: `Tên`,
         form_name_ph: `Tên của bạn`,
         form_email: `Email`,
-        form_email_ph: `ten@domain.com`,
+        form_email_ph: `tên@domain.com`,
         form_message: `Lời Nhắn`,
         form_message_ph: `Viết lời nhắn của bạn...`,
         form_submit: `Gửi`,
