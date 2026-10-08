@@ -222,6 +222,10 @@ slideshowInfo.push(
             vi: "Emilio Prud'Homme (1856-1932), José Rufino Reyes y Siancas (1836-1905)"
         },
         size: "158 \u00D7 67 mm",
+        note: {
+            en: `2014\'s top 12 banknotes by ${ibnsLink}`, 
+            vi: `Top 12 tờ tiền năm 2014 theo ${ibnsLink}`
+        },
         new: true,
     }
 );

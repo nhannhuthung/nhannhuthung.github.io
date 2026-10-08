@@ -3,8 +3,21 @@
    Palette tokens and shared chrome live in styles/theme.css.
    ============================================================ */
 
+/* This page is exactly one screen, so it must never scroll.
+
+   `overflow: hidden` has to be on <html>, not only on <body>. The viewport
+   takes body's value only while html's own overflow is `visible`, and
+   style.css sets html { overflow-x: hidden } - which computes the other
+   axis to `auto`. So body's `hidden` was being ignored for scrolling and
+   the page stayed scrollable; it simply had nothing to scroll to on
+   desktop, where the content is exactly 100vh.
+
+   overscroll-behavior stops the rubber-band bounce and pull-to-refresh. */
+html,
 body {
+    height: 100%;
     overflow: hidden;
+    overscroll-behavior: none;
 }
 
 #particles {
@@ -123,7 +136,12 @@ body {
    on paper, a heavy dusk veil on midnight, so the same image belongs
    to both palettes */
 .menu-box {
+    /* 100vh is the viewport as if the phone's address bar were hidden, so
+       on mobile it is TALLER than what you can actually see and the page
+       gains something to scroll. dvh tracks the visible viewport instead;
+       the vh line stays as the fallback for browsers without dvh. */
     height: 100vh;
+    height: 100dvh;
     background-color: var(--paper);
     background-image:
         linear-gradient(var(--photo-veil), var(--photo-veil)),

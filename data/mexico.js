@@ -129,6 +129,10 @@ slideshowInfo.push(
             vi: "Benito Juárez (1858-1872)" 
         },
         size: "120 \u00D7 66 mm",
+        note: {
+            en: `2007\'s top 12 banknotes by ${ibnsLink}`, 
+            vi: `Top 12 tờ tiền năm 2007 theo ${ibnsLink}`
+        },
     }
 );
 //#endregion
