@@ -3,6 +3,7 @@ const fixed_trans = {
         collection: `Collection`,
         about: `About`,
         contact: `Contact`,
+        search_placeholder: `Enter page name...`,
         // the toggle names the language you switch TO first
         lang_toggle: `Vie | Eng`,
     },
@@ -10,6 +11,7 @@ const fixed_trans = {
         collection: `Bộ Sưu Tập`,
         about: `Giới Thiệu`,
         contact: `Liên Hệ`,
+        search_placeholder: `Nhập tên trang...`,
         lang_toggle: `Eng | Vie`,
     }
 };

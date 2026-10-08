@@ -84,10 +84,10 @@ html, body {
     transform: translateX(3px);
 }
 
-#header-nav a:hover,
-#header-nav-media a:hover,
-.language-toggle a:hover {
-    color: var(--a5);
+/* the whole navigator, search icon included, hovers this colour
+   (theme.css reads --nav-accent) */
+:root {
+    --nav-accent: var(--a5);
 }
 
 .main-content {

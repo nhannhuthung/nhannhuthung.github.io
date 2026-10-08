@@ -14,6 +14,10 @@ window.onscroll = function () { scrollFunction() };
 
 // Function for showing the top button
 function scrollFunction() {
+  // index.html has a search bar but no #top_btn, and focusing an input can
+  // fire a scroll event - so bail out instead of throwing on a null.
+  if (!top_button) return;
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     top_button.style.display = "block";
   } else {
@@ -274,8 +278,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (suggestionBox) {
                 suggestionBox.style.display = "none";
             }
-            // On small screens close the entire search
-            if (window.innerWidth <= 768) {
+            // Collapse an expanded bar: on small screens that is the header
+            // overlay, on index.html it is the field covering the nav links.
+            // Leaving it open there would keep the links hidden.
+            if (searchContainer.classList.contains("active") || window.innerWidth <= 768) {
                 closeSearch();
             }
         }

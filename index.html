@@ -39,6 +39,8 @@
     <link rel="stylesheet" href="styles/index.css">
     
     <script src="scripts/theme.js"></script>
+    <script src="scripts/regions.js"></script>
+    <script src="scripts/script.js"></script>
     <script src="scripts/lang/index.js"></script>
 </head>
 <body>
@@ -76,11 +78,32 @@
                     <div class="divider"></div>
                 </div>
             </div>
-            <nav class="nav-pos-menu">
-                <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
-                <a href="about.html" id="about-nav" data-i18n="about"></a>
-                <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
-            </nav>
+            <!-- The links and the search icon share one row; opening the
+                 search lays the field across that row, over the links. -->
+            <div class="nav-row">
+                <nav class="nav-pos-menu">
+                    <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
+                    <a href="about.html" id="about-nav" data-i18n="about"></a>
+                    <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
+                </nav>
+
+                <!-- Inline SVG rather than the Font Awesome icon the other
+                     pages use: this is the only page that does not already
+                     load that stylesheet, and a render-blocking CDN request
+                     for one glyph is not worth it on the landing page. -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="">
+                    <button type="button" class="search-button" onclick="toggleSearch(event)" aria-label="Search">
+                        <!-- stroke 3 matches the weight of the Font Awesome
+                             solid (900) glyph the other pages use -->
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                            <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="3"></circle>
+                            <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="currentColor" stroke-width="3" stroke-linecap="round"></line>
+                        </svg>
+                    </button>
+                    <div id="suggestions" class="suggestions-box"></div>
+                </div>
+            </div>
             <div class="foot-controls">
                 <div class="language-toggle">
                     <a href="#" id="lang-toggle" onclick="toggleLanguage(); return false;"

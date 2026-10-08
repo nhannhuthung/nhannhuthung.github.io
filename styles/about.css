@@ -32,10 +32,10 @@
   margin: 34px 0 6px;
 }
 
-#header-nav a:hover,
-#header-nav-media a:hover,
-.language-toggle a:hover {
-    color: var(--a4);
+/* the whole navigator, search icon included, hovers this colour
+   (theme.css reads --nav-accent) */
+:root {
+    --nav-accent: var(--a4);
 }
 
 /* each section is a sheet on the paper ground */

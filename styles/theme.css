@@ -25,6 +25,9 @@
     --photo-veil: rgba(242, 236, 224, 0.22);
     --particle:   rgba(255, 255, 255, 0.85);
 
+    /* hover tint for the navigator; each page's stylesheet overrides it */
+    --nav-accent: var(--a5);
+
     --font-display: 'Iowan Old Style', 'Times New Roman', serif;
     --font-body: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
 }
@@ -79,6 +82,15 @@ header {
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* The navigator's hover tint. Each page's stylesheet sets --nav-accent once
+   (index --a2, about --a4, contact --a7, collection and the country pages
+   --a5) so the links and the search icon always agree. */
+#header-nav a:hover,
+#header-nav-media a:hover,
+.language-toggle a:hover {
+    color: var(--nav-accent);
+}
+
 /* light/dark switch, sits beside the language toggle */
 .theme-toggle {
     background: transparent;
@@ -99,10 +111,30 @@ header {
     border-color: var(--a3);
 }
 
-/* ---- search bar ---- */
+/* ---- search bar ----
+   Collapsed is the shared default: a bare magnifier, no pill around it.
+   Clicking it adds .active and the field slides out to the LEFT of the
+   icon, so the bar appears to come in from the right edge.
+
+   A width is what animates, never a position - a position change cannot be
+   transitioned. On a wide screen the field's own width grows; on a phone
+   the whole container is anchored right and its width grows instead, so
+   BOTH are listed here. Leaving `width` out is what kept every page but
+   index from animating.
+
+   The header on a wide screen has room, so it opts out at the bottom of
+   this block and stays permanently open. */
 .search-container {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    transition: width 0.3s ease, padding 0.3s ease,
+                background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-container.active {
     background: var(--sheet);
-    border: 1px solid var(--rule);
+    border-color: var(--rule);
     box-shadow: 0 1px 3px var(--shadow);
 }
 
@@ -110,6 +142,68 @@ header {
 .search-container input {
     background: transparent;
     color: var(--ink);
+    /* collapsed: no width, no padding - the icon is all that shows */
+    width: 0;
+    padding: 10px 0;
+    opacity: 0;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.22s ease;
+}
+
+.search-container.active input {
+    width: 200px;
+    padding: 10px;
+    opacity: 1;
+}
+
+/* the header bar has room on a wide screen, so there it is always open */
+@media (min-width: 701px) {
+    .header-container .search-container {
+        background: var(--sheet);
+        border-color: var(--rule);
+        box-shadow: 0 1px 3px var(--shadow);
+    }
+
+    .header-container .search-container input {
+        width: 200px;
+        padding: 10px;
+        opacity: 1;
+    }
+}
+
+/* On a phone there is no room to grow in flow - the field would widen
+   .right-group until it ran into the MENU button. So the bar is taken out
+   of flow and anchored to the right edge, and grows leftward OVER the
+   toggles: the same overlay the header always had, but reached by a width
+   transition instead of a jump.
+   This lives here rather than in style.css because style.css loads first
+   and would lose to the rules above at equal specificity. */
+@media (max-width: 700px) {
+    .right-group {
+        position: relative;
+        padding-right: 45px;   /* the icon's slot, reserved */
+    }
+
+    .search-container {
+        position: absolute;
+        right: 0;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 32px;
+        padding: 3px;
+        z-index: 999;
+    }
+
+    .search-container.active {
+        width: 76vw;
+        padding: 3px 10px;
+    }
+
+    .search-container.active input {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        padding: 7px;
+    }
 }
 
 .search-container input::placeholder {
@@ -121,8 +215,11 @@ header {
     transition: color 0.25s ease;
 }
 
+/* Every page tints its own navigator: index --a2, about --a4, contact --a7,
+   collection and the country pages --a5. Each stylesheet sets --nav-accent
+   once, so the icon always matches the links beside it. */
 .search-button:hover {
-    color: var(--a5);
+    color: var(--nav-accent);
 }
 
 .suggestions-box {

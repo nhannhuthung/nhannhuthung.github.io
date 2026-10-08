@@ -356,31 +356,8 @@ p {
         margin: 0;
     }
 
-    .search-container {
-        transition: width 0.3s ease;
-        padding: 3px;
-    }
-
-    .search-container input {
-        display: none;
-    }
-
-
-    .search-container.active {
-        width: 55%;
-        position: absolute;
-        top: 8px;
-        right: 15px;
-        padding: 3px 10px;
-        z-index: 999;
-    }
-
-    .search-container.active input {
-        display: block;
-        flex: 1;
-        min-width: 0;
-    }
-
+    /* The collapsed icon and the slide-out are in theme.css, which loads
+       after this file and so can override the sizes set above. */
     .search-container.active .suggestions-box {
         display: block;
         position: absolute;

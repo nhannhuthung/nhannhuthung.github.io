@@ -8,10 +8,10 @@
     font-weight: var(--fa-style, 900);
 }
 
-#header-nav a:hover,
-#header-nav-media a:hover,
-.language-toggle a:hover {
-    color: var(--a7);
+/* the whole navigator, search icon included, hovers this colour
+   (theme.css reads --nav-accent) */
+:root {
+    --nav-accent: var(--a7);
 }
 
 .big-title {

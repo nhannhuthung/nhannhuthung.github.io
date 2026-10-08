@@ -170,8 +170,14 @@ body {
     transition: color 0.25s ease;
 }
 
+/* the whole navigator, search icon included, hovers this colour
+   (theme.css reads --nav-accent) */
+:root {
+    --nav-accent: var(--a2);
+}
+
 .menu-box nav a:hover {
-    color: var(--a2);
+    color: var(--nav-accent);
 }
 
 .nav-pos-menu {
@@ -179,6 +185,63 @@ body {
     flex-direction: row;
     gap: 20px;
     text-align: center;
+}
+
+/* ---- search bar ----
+   Closed, it is only the magnifier sitting at the end of the link row.
+   Open, the field is laid across that whole row so it covers the links -
+   which is why .nav-row is the positioning context and the open bar is
+   absolute rather than part of the flow: the row keeps its width and
+   nothing shifts when it opens or closes.
+
+   Colours come from theme.css; the closed state has to strip the pill
+   back to a bare icon, so it overrides them. */
+.nav-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* room for the icon, which is taken out of flow so the bar can grow
+       over the links instead of pushing them aside */
+    padding-right: 46px;
+}
+
+/* The icon is pinned to the right of the row and the row reserves its
+   width, so opening the bar widens it leftward across the links without
+   shifting anything. Collapsed/expanded colours come from theme.css. */
+.search-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    box-sizing: border-box;
+    width: 38px;
+    padding: 4px;
+    /* the transition itself is shared, in theme.css */
+}
+
+.search-container.active {
+    width: 100%;
+    padding: 5px 12px;
+}
+
+.search-container.active input {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    font-family: var(--font-body);
+}
+
+.search-container .search-button {
+    padding: 0 4px;
+    flex-shrink: 0;
+}
+
+/* the page cannot scroll, so a tall dropdown would be clipped by the
+   bottom edge rather than scrolled to */
+.search-container .suggestions-box {
+    max-height: 38vh;
 }
 
 /* language switch and theme switch share one centred row */
@@ -205,7 +268,7 @@ body {
 }
 
 .language-toggle a:hover {
-    color: var(--a2);
+    color: var(--nav-accent);
 }
 
 @media (max-width: 700px) {
@@ -249,6 +312,28 @@ body {
     .owl {
         width: 60px;
         margin: 0 15px;
+    }
+
+    /* style.css sizes the open field for the header bar (46vw); here it
+       just fills whatever width the row gives it. */
+    .nav-row {
+        padding-right: 38px;
+    }
+
+    .search-container {
+        width: 32px;
+        padding: 3px;
+    }
+
+    .search-container.active {
+        width: 100%;
+        padding: 4px 10px;
+    }
+
+    .search-container.active input {
+        width: auto;
+        font-size: 15px;
+        padding: 7px;
     }
 
     .foot-controls {
