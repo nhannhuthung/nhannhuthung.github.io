@@ -25,6 +25,9 @@ const issuer1975 = { en: "Bank of Vietnam", vi: "Ngân Hàng Việt Nam" };
 const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "17 | 16 15 14 13 12 | 11 10 9 8 7 | 6 | 5 4 3 | 2 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

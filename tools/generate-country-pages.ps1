@@ -1,0 +1,38 @@
+# Builds every collection/<slug>.html from tools/country-template.html.
+#
+# Each country page is the same shell; only the slug and the name differ.
+# The name comes from `heading.en` in data/<slug>.js, and the banknote slots
+# are added in the browser from that file's `layout` line - so this only needs
+# re-running after editing the template or adding a new country.
+#
+# To add a country: add it to scripts/regions.js, create data/<slug>.js
+# (copy an existing one), then run from the repo root:
+#     Windows:  powershell -ExecutionPolicy Bypass -File tools/generate-country-pages.ps1
+#     Ubuntu:   pwsh tools/generate-country-pages.ps1
+#
+# Paths go through Join-Path so the same script runs on both: .NET file calls
+# on Linux treat "\" as part of a file name, not a folder separator.
+
+$root = Split-Path -Parent $PSScriptRoot
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+$template = [IO.File]::ReadAllText((Join-Path $root 'tools/country-template.html'), $utf8)
+$outDir = Join-Path $root 'collection'
+
+$written = 0
+foreach ($data in Get-ChildItem (Join-Path $root 'data') -Filter '*.js') {
+    $slug = $data.BaseName
+    $source = [IO.File]::ReadAllText($data.FullName, $utf8)
+
+    $match = [regex]::Match($source, 'heading:\s*\{\s*en:\s*"([^"]+)"')
+    if (-not $match.Success) {
+        Write-Warning "data/$slug.js has no heading.en - skipped"
+        continue
+    }
+    $name = [System.Net.WebUtility]::HtmlEncode($match.Groups[1].Value)
+
+    $page = $template.Replace('{{SLUG}}', $slug).Replace('{{NAME}}', $name)
+    [IO.File]::WriteAllText((Join-Path $outDir "$slug.html"), $page, $utf8)
+    $written++
+}
+
+"Wrote $written pages to collection/"

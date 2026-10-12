@@ -24,6 +24,9 @@ const issuer = {  en: "National Bank of Ukraine", vi: "Ngân Hàng Quốc Gia Uk
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "1";
+
 const images = [null];
 const slideshowInfo = [null];
 

@@ -24,6 +24,9 @@ const issuer = { en: "National Bank of Serbia", vi: "Ngân Hàng Nhà Nước Se
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "3 2 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

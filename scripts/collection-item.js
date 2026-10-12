@@ -551,10 +551,6 @@ function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
     }
 
     container.appendChild(infoDiv);
-
-    if (window.MathJax) {
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-    }
 }
 //--// function to display information of banknote //--//
 
@@ -647,8 +643,45 @@ function createNavigationButtons() {
     }
 }
 
+// Adds one empty slot per banknote to the page, in the order and with the
+// dividers given by `layout` in the country's data file ("|" solid, ":" dashed).
+// Banknotes the layout leaves out go on top, newest first, so a newly added
+// note still shows up before the layout is updated.
+function buildSlots() {
+    const main = document.getElementById('main-to-top');
+    if (!main || typeof images === 'undefined') return;
+
+    const tokens = (typeof layout === 'string' ? layout : '').split(/\s+/).filter(Boolean);
+    const listed = new Set(tokens.map(Number));
+    const missing = [];
+    for (let i = images.length - 1; i >= 1; i--) {
+        if (!listed.has(i)) missing.push(String(i));
+    }
+
+    const placed = new Set();
+    missing.concat(tokens).forEach(token => {
+        if (token === '|' || token === ':') {
+            const hr = document.createElement('hr');
+            if (token === ':') hr.className = 'dashed';
+            main.appendChild(hr);
+            return;
+        }
+        const n = Number(token);
+        // skip typos, notes that no longer exist, and repeats
+        if (!images[n] || placed.has(n)) return;
+        placed.add(n);
+
+        const wrapper = document.createElement('div');
+        wrapper.id = 'slideshow' + n;
+        wrapper.className = 'slideshow-wrapper';
+        wrapper.innerHTML = `<div class="empty-box"></div><div id="slide${n}"></div><div id="info${n}"></div>`;
+        main.appendChild(wrapper);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     currentLang = localStorage.getItem('language') || 'en';
+    buildSlots();
 
     updatePageLanguage(currentLang);
     updatePageHeading(currentLang);

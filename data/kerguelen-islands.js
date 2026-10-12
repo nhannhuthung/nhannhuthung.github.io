@@ -24,6 +24,9 @@ const issuer = { en: "Antarctica Overseas Exchange Office", vi: "Bộ Trao Đổ
 const fanType = { en: "Fantasy Banknote", vi: "Tiền Sưu Tầm" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "1";
+
 const images = [null];
 const slideshowInfo = [null];
 

@@ -26,6 +26,9 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "1";
+
 const images = [null];
 const slideshowInfo = [null];
 

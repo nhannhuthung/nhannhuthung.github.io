@@ -24,6 +24,9 @@ const issuer = { en: "National Bank of Yugoslavia", vi: "Ngân Hàng Nhà Nướ
 const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "4 | 3 | 2 | 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

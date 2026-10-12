@@ -24,6 +24,9 @@ const issuer   = { en: "Bank Of The Lao People's Democratic Republic", vi: "Ngâ
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "3 | 2 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

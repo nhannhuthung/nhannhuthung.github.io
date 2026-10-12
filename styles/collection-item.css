@@ -458,7 +458,12 @@ img {
 }
 
 hr {
+    width: 75%;
     margin-top: 25px;
+}
+
+#page-heading {
+    text-align: center;
 }
 
 .page-navigation {

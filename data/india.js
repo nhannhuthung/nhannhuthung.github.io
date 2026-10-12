@@ -27,6 +27,9 @@ const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiê
 
 let index = 1;
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "7 6 | 5 | 4 | 3 | 2 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

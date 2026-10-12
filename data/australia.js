@@ -27,6 +27,9 @@ const comOutType = { en: "Non-circulating Commemorative Banknote", vi: "Tiền K
 const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "8 7 6 5 | 4 3 2 | 1";
+
 const images = [null];
 const slideshowInfo = [null];
 

@@ -24,6 +24,9 @@ const issuer   = { en: "Bank Of The Republic Of Colombia", vi: "Ngân Hàng Cộ
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "1";
+
 const images = [null];
 const slideshowInfo = [null];
 

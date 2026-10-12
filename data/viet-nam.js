@@ -28,6 +28,9 @@ const comType = { en: "Commemorative Banknote", vi: "Tiền Kỷ Niệm" };
 const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
 //#endregion
 
+// Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
+const layout = "31 | 30 29 28 27 26 25 | 24 | 23 22 21 | 20 19 | 18 17 16 15 14 13 12 11 | 10 9 8 | 7 6 5 | 4 | 3 2 | 1";
+
 const images = [null];
 const slideshowInfo = [null];
 
