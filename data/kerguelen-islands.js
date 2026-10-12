@@ -56,8 +56,8 @@ slideshowInfo.push(
             vi: fanType.vi 
         },
         figure: { 
-            en: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)", 
-            vi: "Yves-Joseph de Kerguelen-Tremarec (1734-1797)" 
+            en: "Yves-Joseph de Kerguelen-Trémarec (1734-1797)", 
+            vi: "Yves-Joseph de Kerguelen-Trémarec (1734-1797)" 
         },
         size: "159 \u00D7 80 mm",
     }

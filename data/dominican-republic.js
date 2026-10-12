@@ -22,6 +22,8 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
 });
 const issuer   = { en: "Central Bank Of The Dominican Republic", vi: "Ngân Hàng Trung Ương Cộng Hòa Dominica" };
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+
+const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
