@@ -22,6 +22,7 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
 });
 const issuer = { en: "Bank of Japan", vi: "Ngân Hàng Nhật Bản" };
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
+const comInType = { en: "Circulating Commemorative Banknote", vi: "Tiền Kỷ Niệm Còn Đang Lưu Hành" };
 
 const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_content&view=article&id=138&Itemid=51" target="_blank" class="custom-link">IBNS</a>`;
 //#endregion
@@ -35,12 +36,12 @@ const slideshowInfo = [null];
 //#region 1 - 2000 yen
 images.push([
     {
-        src: imagePath("d/2000-yen", "f"),
+        src: imagePath("2000/2000-yen", "f"),
         alt: altInfo("2000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("d/2000-yen", "b"),
+        src: imagePath("2000/2000-yen", "b"),
         alt: altInfo("2000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -48,15 +49,20 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("2,000", "2.000", "Yen", "Yên"),
+        subtitle: {
+            en: "End of 2nd Millennium & G-8 Economic Summit in Okinawa",
+            vi: "Sự kiện kết thúc Thiên niên kỷ thứ 2 & Hội nghị Thượng đỉnh Kinh tế G-8 tại Okinawa"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
         },
         type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
+            en: comInType.en, 
+            vi: comInType.vi 
         },
         size: "154 \u00D7 76 mm",
+        reference: refLink("P-103b", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAP0103.htm#103b"),
     }
 );
 //#endregion
@@ -64,12 +70,12 @@ slideshowInfo.push(
 //#region 2 - 1000 yen
 images.push([
     {
-        src: imagePath("e/1000-yen", "f"),
+        src: imagePath("2004/1000-yen", "f"),
         alt: altInfo("1000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("e/1000-yen", "b"),
+        src: imagePath("2004/1000-yen", "b"),
         alt: altInfo("1000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -90,6 +96,7 @@ slideshowInfo.push(
             vi: "Noguchi Hideyo (1876-1928)" 
         },
         size: "150 \u00D7 76 mm",
+        reference: refLink("P-104b", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAP0104.htm#104b"),
     }
 );
 //#endregion
@@ -97,12 +104,12 @@ slideshowInfo.push(
 //#region 3 - 5000 yen
 images.push([
     {
-        src: imagePath("e/5000-yen", "f"),
+        src: imagePath("2004/5000-yen", "f"),
         alt: altInfo("5000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("e/5000-yen", "b"),
+        src: imagePath("2004/5000-yen", "b"),
         alt: altInfo("5000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -123,6 +130,7 @@ slideshowInfo.push(
             vi: "Higuchi Ichiyō (1872-1896)" 
         },
         size: "156 \u00D7 76 mm",
+        reference: refLink("P-105d", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAP0105.htm#105d"),
     }
 );
 //#endregion
@@ -130,12 +138,12 @@ slideshowInfo.push(
 //#region 4 - 10000 yen
 images.push([
     {
-        src: imagePath("e/10000-yen", "f"),
+        src: imagePath("2004/10000-yen", "f"),
         alt: altInfo("10000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("e/10000-yen", "b"),
+        src: imagePath("2004/10000-yen", "b"),
         alt: altInfo("10000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -156,6 +164,7 @@ slideshowInfo.push(
             vi: "Fukuzawa Yukichi (1835-1901)" 
         },
         size: "160 \u00D7 76 mm",
+        reference: refLink("P-106d", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAP0106.htm#106d"),
     }
 );
 //#endregion
@@ -163,12 +172,12 @@ slideshowInfo.push(
 //#region 5 - 1000 yen
 images.push([
     {
-        src: imagePath("f/1000-yen", "f"),
+        src: imagePath("2024/1000-yen", "f"),
         alt: altInfo("1000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("f/1000-yen", "b"),
+        src: imagePath("2024/1000-yen", "b"),
         alt: altInfo("1000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -189,6 +198,7 @@ slideshowInfo.push(
             vi: "Kitasato Shibasaburō (1853-1931)" 
         },
         size: "150 \u00D7 76 mm",
+        reference: refLink("P-W107", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAPW0107.htm"),
         note: { 
             en: `2024\'s top 21 banknotes by ${ibnsLink}`, 
             vi: `Top 21 tờ tiền năm 2024 theo ${ibnsLink}`
@@ -200,12 +210,12 @@ slideshowInfo.push(
 //#region 6 - 5000 yen
 images.push([
     {
-        src: imagePath("f/5000-yen", "f"),
+        src: imagePath("2024/5000-yen", "f"),
         alt: altInfo("5000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("f/5000-yen", "b"),
+        src: imagePath("2024/5000-yen", "b"),
         alt: altInfo("5000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -226,6 +236,7 @@ slideshowInfo.push(
             vi: "Tsuda Umeko (1864-1929)" 
         },
         size: "156 \u00D7 76 mm",
+        reference: refLink("P-W108", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAPW0108.htm"),
     }
 );
 //#endregion
@@ -233,12 +244,12 @@ slideshowInfo.push(
 //#region 7 - 10000 yen
 images.push([
     {
-        src: imagePath("f/10000-yen", "f"),
+        src: imagePath("2024/10000-yen", "f"),
         alt: altInfo("10000", "Yen", "Yên", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("f/10000-yen", "b"),
+        src: imagePath("2024/10000-yen", "b"),
         alt: altInfo("10000", "Yen", "Yên", "Back", "sau"),
         description: reverse
     }
@@ -259,6 +270,7 @@ slideshowInfo.push(
             vi: "Shibusawa Eiichi (1840-1931)" 
         },
         size: "160 \u00D7 76 mm",
+        reference: refLink("P-W109", "http://www.banknote.ws/COLLECTION/countries/ASI/JAP/JAPW0109.htm"),
     }
 );
 //#endregion

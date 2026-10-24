@@ -59,6 +59,7 @@ slideshowInfo.push(
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
         },
         size: "154 \u00D7 75 mm",
+        reference: refLink("P-152b", "http://www.banknote.ws/COLLECTION/countries/ASI/IRN/IRN0152.htm#152-2"),
     }
 );
 //#endregion
@@ -92,6 +93,7 @@ slideshowInfo.push(
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
         },
         size: "160 \u00D7 77 mm",
+        reference: refLink("P-146h", "http://www.banknote.ws/COLLECTION/countries/ASI/IRN/IRN0146.htm#146h"),
     }
 );
 //#endregion
@@ -125,6 +127,7 @@ slideshowInfo.push(
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
         },
         size: "166 \u00D7 79 mm",
+        reference: refLink("P-149e", "http://www.banknote.ws/COLLECTION/countries/ASI/IRN/IRN0149.htm#149d"),
     }
 );
 //#endregion
@@ -158,6 +161,7 @@ slideshowInfo.push(
             vi: "Ruhollah Khomeini ((1900/1902)?-1989)" 
         },
         size: "166 \u00D7 79 mm",
+        reference: refLink("P-151a", "http://www.banknote.ws/COLLECTION/countries/ASI/IRN/IRN0151.htm"),
     }
 );
 //#endregion
@@ -187,6 +191,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "142 \u00D7 71 mm",
+        reference: refLink("P-154", "http://www.banknote.ws/COLLECTION/countries/ASI/IRN/IRN0154A2.htm"),
     }
 );
 //#endregion

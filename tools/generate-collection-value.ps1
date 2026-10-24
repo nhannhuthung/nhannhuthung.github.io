@@ -24,7 +24,7 @@ $currencyByCountry = @{
     'kenya' = 'KES'; 'laos' = 'LAK'; 'lebanon' = 'LBP'; 'macau' = 'MOP'
     'malawi' = 'MWK'; 'malaysia' = 'MYR'; 'mauritius' = 'MUR'; 'mexico' = 'MXN'
     'moldova' = 'MDL'; 'mongolia' = 'MNT'; 'myanmar' = 'MMK'; 'nepal' = 'NPR'
-    'new-zealand' = 'NZD'; 'norway' = 'NOK'; 'oman' = 'OMR'; 'pakistan' = 'PKR'
+    'new-zealand' = 'NZD'; 'north-macedonia' = 'MKD'; 'norway' = 'NOK'; 'oman' = 'OMR'; 'pakistan' = 'PKR'
     'philippines' = 'PHP'; 'puntland' = 'SOS'; 'russia' = 'RUB'; 'rwanda' = 'RWF'
     'saudi-arabia' = 'SAR'; 'scotland' = 'GBP'; 'serbia' = 'RSD'; 'singapore' = 'SGD'
     'south-korea' = 'KRW'; 'sweden' = 'SEK'; 'switzerland' = 'CHF'; 'taiwan' = 'TWD'
@@ -32,6 +32,9 @@ $currencyByCountry = @{
     'thailand' = 'THB'; 'transnistria' = 'PRB'; 'turkiye' = 'TRY'; 'turkmenistan' = 'TMT'
     'uae' = 'AED'; 'uemoa' = 'XOF'; 'ukraine' = 'UAH'; 'usa' = 'USD'
     'uzbekistan' = 'UZS'; 'viet-nam' = 'VND'; 'zambia' = 'ZMW'
+    # pegged 1:1 to another currency and with no ISO code of its own,
+    # so its face value is counted in the currency it is tied to
+    'cook-islands' = 'NZD'
 }
 
 # Sub-units: "<country>|<unit>" => how many of that unit make one main currency unit.

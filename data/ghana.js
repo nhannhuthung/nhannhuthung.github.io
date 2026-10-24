@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Kwame Nkrumah (1909-1972), Emmanuel Odarkwei Obetsebi Lamptey (1902-1963), William Ofori Atta (1910-1988), Ebenezer Ako Adjei (1916-2002), Joseph Boakye Danquah (1895-1965), Edward Akufo-Addo (1906-1979)" 
         },
         size: "137 \u00D7 65 mm",
+        reference: refLink("P-37 2019", "http://www.banknote.ws/COLLECTION/countries/AFR/GHA/GHA0037.htm"),
     }
 );
 //#endregion

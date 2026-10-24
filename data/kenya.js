@@ -58,6 +58,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "128 \u00D7 64 mm",
+        reference: refLink("P-W53 2019", "http://www.banknote.ws/COLLECTION/countries/AFR/KEN/KENW2019-0100.htm"),
     }
 );
 //#endregion
@@ -88,6 +89,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "133 \u00D7 67 mm",
+        reference: refLink("P-W54 2019", "http://www.banknote.ws/COLLECTION/countries/AFR/KEN/KENW2019-0100.htm"),
     }
 );
 //#endregion
@@ -118,6 +120,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "138 \u00D7 68 mm",
+        reference: refLink("P-W55 2019", "http://www.banknote.ws/COLLECTION/countries/AFR/KEN/KENW2019-0500.htm"),
         note: { 
             en: `2019\'s top 22 banknotes by ${ibnsLink}`, 
             vi: `Top 22 tờ tiền năm 2019 theo ${ibnsLink}` 
@@ -152,6 +155,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "143 \u00D7 70 mm",
+        reference: refLink("P-W56 2019", "http://www.banknote.ws/COLLECTION/countries/AFR/KEN/KENW2019-1000.htm"),
     }
 );
 //#endregion

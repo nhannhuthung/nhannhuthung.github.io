@@ -50,6 +50,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2022",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
@@ -59,6 +60,7 @@ slideshowInfo.push(
             vi: "Débora Arango Pérez (1907-2005)" 
         },
         size: "128 \u00D7 66 mm",
+        reference: refLink("P-458 10-2022", "https://banknote.ws/COLLECTION/countries/AME/COL/COL0458.htm#25102022"),
     }
 );
 //#endregion

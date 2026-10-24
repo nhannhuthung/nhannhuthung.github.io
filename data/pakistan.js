@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Muhammad Ali Jinnah (1876-1948)" 
         },
         size: "139 \u00D7 65 mm",
+        reference: refLink("P-48j", "https://banknote.ws/COLLECTION/countries/ASI/PAK/PAK0048.htm#48j"),
     }
 );
 //#endregion

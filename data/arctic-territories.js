@@ -34,18 +34,18 @@ const slideshowInfo = [null];
 images.push([
     {
         src: imagePath("2010/2-polar-dollar", "f"),
-        alt: altInfo("2", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("2", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2010/2-polar-dollar", "b"),
-        alt: altInfo("2", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("2", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("2", "2", "Dollars", "Đô La"),
+        title: currencyInfo("2", "2", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -67,18 +67,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2010/10-polar-dollar", "f"),
-        alt: altInfo("10", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("10", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2010/10-polar-dollar", "b"),
-        alt: altInfo("10", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("10", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        title: currencyInfo("10", "10", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -100,18 +100,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/1-polar-dollar", "f"),
-        alt: altInfo("1", "Dollar", "Đô La", "Front", "trước"),
+        alt: altInfo("1", "Dollar", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/1-polar-dollar", "b"),
-        alt: altInfo("1", "Dollar", "Đô La", "Back", "sau"),
+        alt: altInfo("1", "Dollar", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("1", "1", "Dollar", "Đô La"),
+        title: currencyInfo("1", "1", "Dollar", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -129,18 +129,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/3-polar-dollar", "f"),
-        alt: altInfo("3", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("3", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/3-polar-dollar", "b"),
-        alt: altInfo("3", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("3", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("3", "3", "Dollars", "Đô La"),
+        title: currencyInfo("3", "3", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -162,18 +162,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/5-polar-dollar", "f"),
-        alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("5", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/5-polar-dollar", "b"),
-        alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("5", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("5", "5", "Dollars", "Đô La"),
+        title: currencyInfo("5", "5", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -191,18 +191,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/8-polar-dollar", "f"),
-        alt: altInfo("8", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("8", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/8-polar-dollar", "b"),
-        alt: altInfo("8", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("8", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("8", "8", "Dollars", "Đô La"),
+        title: currencyInfo("8", "8", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -224,18 +224,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/9-polar-dollar", "f"),
-        alt: altInfo("9", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("9", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/9-polar-dollar", "b"),
-        alt: altInfo("9", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("9", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("9", "9", "Dollars", "Đô La"),
+        title: currencyInfo("9", "9", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -253,18 +253,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2011-2012/15-polar-dollar", "f"),
-        alt: altInfo("15", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("15", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2011-2012/15-polar-dollar", "b"),
-        alt: altInfo("15", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("15", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("15", "15", "Dollars", "Đô La"),
+        title: currencyInfo("15", "15", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -286,18 +286,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2013/6-polar-dollar", "f"),
-        alt: altInfo("6", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("6", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2013/6-polar-dollar", "b"),
-        alt: altInfo("6", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("6", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("6", "6", "Dollars", "Đô La"),
+        title: currencyInfo("6", "6", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -315,18 +315,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2017/25-polar-dollar", "f"),
-        alt: altInfo("25", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("25", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2017/25-polar-dollar", "b"),
-        alt: altInfo("25", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("25", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("25", "25", "Dollars", "Đô La"),
+        title: currencyInfo("25", "25", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -344,18 +344,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2017/50-polar-dollar", "f"),
-        alt: altInfo("50", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("50", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2017/50-polar-dollar", "b"),
-        alt: altInfo("50", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("50", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("50", "50", "Dollars", "Đô La"),
+        title: currencyInfo("50", "50", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -373,18 +373,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2017/100-polar-dollar", "f"),
-        alt: altInfo("100", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("100", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2017/100-polar-dollar", "b"),
-        alt: altInfo("100", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("100", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("100", "100", "Dollars", "Đô La"),
+        title: currencyInfo("100", "100", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -402,18 +402,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2017/250-polar-dollar", "f"),
-        alt: altInfo("250", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("250", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2017/250-polar-dollar", "b"),
-        alt: altInfo("250", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("250", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("250", "250", "Dollars", "Đô La"),
+        title: currencyInfo("250", "250", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -431,18 +431,18 @@ slideshowInfo.push(
 images.push([
     {
         src: imagePath("2017/500-polar-dollar", "f"),
-        alt: altInfo("500", "Dollars", "Đô La", "Front", "trước"),
+        alt: altInfo("500", "Polar Dollars", "Đô La Bắc Cực", "Front", "trước"),
         description: obverse
     },
     {
         src: imagePath("2017/500-polar-dollar", "b"),
-        alt: altInfo("500", "Dollars", "Đô La", "Back", "sau"),
+        alt: altInfo("500", "Polar Dollars", "Đô La Bắc Cực", "Back", "sau"),
         description: reverse
     }
 ]);
 slideshowInfo.push(
     {
-        title: currencyInfo("500", "500", "Dollars", "Đô La"),
+        title: currencyInfo("500", "500", "Polar Dollars", "Đô La Bắc Cực"),
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 

@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "90 \u00D7 70 mm",
+        reference: refLink("P-1a", "http://www.banknote.ws/COLLECTION/countries/ASI/KYR/KYR0001.htm"),
     }
 );
 //#endregion

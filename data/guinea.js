@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "124 \u00D7 64 mm",
+        reference: refLink("P-A47", "http://www.banknote.ws/COLLECTION/countries/AFR/GUI/GUIA0047.htm"),
     }
 );
 //#endregion

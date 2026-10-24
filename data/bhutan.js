@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "120 \u00D7 60 mm",
+        reference: refLink("P-27b", "https://banknote.ws/COLLECTION/countries/ASI/BHU/BHU0027.htm#2013"),
     }
 );
 //#endregion

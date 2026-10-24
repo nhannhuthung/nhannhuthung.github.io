@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "150 \u00D7 69 mm",
+        reference: refLink("P-25b", "https://banknote.ws/COLLECTION/countries/EUR/BLR/BLR0025.htm#2010"),
     }
 );
 //#endregion
@@ -84,6 +85,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "150 \u00D7 69 mm",
+        reference: refLink("P-26b", "https://banknote.ws/COLLECTION/countries/EUR/BLR/BLR0026.htm#26-2"),
     }
 );
 //#endregion
@@ -113,6 +115,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "150 \u00D7 74 mm",
+        reference: refLink("P-27b", "https://banknote.ws/COLLECTION/countries/EUR/BLR/BLR0027.htm#27-2"),
     }
 );
 //#endregion
@@ -142,6 +145,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "150 \u00D7 74 mm",
+        reference: refLink("P-28b", "https://banknote.ws/COLLECTION/countries/EUR/BLR/BLR0028.htm#28-2"),
     }
 );
 //#endregion

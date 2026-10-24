@@ -58,6 +58,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "135 \u00D7 70 mm",
+        reference: refLink("P-70b", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0070.htm#08012017"),
     }
 );
 //#endregion
@@ -88,6 +89,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-72f", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0072.htm#06082020"),
     }
 );
 //#endregion
@@ -118,6 +120,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "155 \u00D7 70 mm",
+        reference: refLink("P-74e", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0074.htm#27102016"),
     }
 );
 //#endregion
@@ -148,6 +151,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "160 \u00D7 70 mm",
+        reference: refLink("P-75[e]", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0075.htm#75e"),
     }
 );
 //#endregion
@@ -178,6 +182,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "165 \u00D7 70 mm",
+        reference: refLink("P-76[f]", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0076.htm#76f"),
     }
 );
 //#endregion
@@ -208,6 +213,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "165 \u00D7 72 mm",
+        reference: refLink("P-77j", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGY0077.htm#05082018"),
         note: { 
             en: `2007\'s top 12 banknotes by ${ibnsLink}`, 
             vi: `Top 12 tờ tiền năm 2007 theo ${ibnsLink}`
@@ -241,6 +247,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "132 \u00D7 69 mm",
+        reference: refLink("P-W81(1)", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGYW2021-0010.htm"),
         note: { 
             en: `2022\'s top 19 banknotes by ${ibnsLink}`, 
             vi: `Top 19 tờ tiền năm 2022 theo ${ibnsLink}`
@@ -274,6 +281,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "137 \u00D7 69 mm",
+        reference: refLink("P-W82", "http://www.banknote.ws/COLLECTION/countries/AFR/EGY/EGYW2021-0020.htm"),
         note: { 
             en: `2023\'s top 15 banknotes by ${ibnsLink}`, 
             vi: `Top 15 tờ tiền năm 2023 theo ${ibnsLink}`

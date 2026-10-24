@@ -83,8 +83,32 @@
         <div id="page-navigation" class="page-navigation"></div>
         <div id="main-to-top" class="main-content">
             <button id="back-to-top" onclick="scrollToTop()">Top</button>
-            <h1 id="page-heading">Japan</h1>
-            <!-- one slideshow per banknote is added here from data/japan.js -->
+            <div class="ledger" id="ledger">
+                <div class="ledger-top">
+                    <div>
+                        <h1 id="page-heading">Japan</h1>
+                        <p id="page-subtitle" class="page-subtitle" hidden></p>
+                        <p id="note-count" class="note-count"></p>
+                    </div>
+                    <div class="view-switch" role="group" aria-label="View">
+                        <button type="button" id="view-compact" aria-pressed="true">Compact</button>
+                        <button type="button" id="view-album" aria-pressed="false">Album</button>
+                    </div>
+                </div>
+                <div class="ledger-table">
+                    <div class="ledger-cols ledger-head" aria-hidden="true">
+                        <span id="col-no">No.</span>
+                        <span id="col-photos">Photos</span>
+                        <span id="col-note">Banknote</span>
+                        <span id="col-year">Year</span>
+                        <span id="col-type">Type</span>
+                        <span id="col-ref">Reference</span>
+                        <span></span>
+                    </div>
+                    <!-- one row per banknote is added here from data/japan.js -->
+                    <ol id="notes" class="notes"></ol>
+                </div>
+            </div>
         </div>
     </div>
 

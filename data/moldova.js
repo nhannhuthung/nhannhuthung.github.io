@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Stephen III ((1433-1440)?-1504)" 
         },
         size: "114 \u00D7 58 mm",
+        reference: refLink("P-21", "https://banknote.ws/COLLECTION/countries/EUR/MOL/MOL0021.htm"),
     }
 );
 //#endregion

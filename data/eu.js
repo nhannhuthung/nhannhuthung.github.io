@@ -52,6 +52,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "120 \u00D7 62 mm",
+        reference: refLink("P-8x(1)", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EUR0008.htm#8x1"),
     }
 );
 //#endregion
@@ -77,6 +78,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "127 \u00D7 67 mm",
+        reference: refLink("P-9p(1)", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EUR0009.htm#9p1"),
     }
 );
 //#endregion
@@ -102,6 +104,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "133 \u00D7 72 mm",
+        reference: refLink("P-10p", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EUR0010.htm#10p"),
     }
 );
 //#endregion
@@ -127,6 +130,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "120 \u00D7 62 mm",
+        reference: refLink("P-W26m", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EURW2020-005.htm#NEWm"),
         note: { 
             en: `2013\'s top 12 banknotes by ${ibnsLink}`, 
             vi: `Top 12 tờ tiền năm 2013 theo ${ibnsLink}` 
@@ -156,6 +160,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "127 \u00D7 67 mm",
+        reference: refLink("P-W27y", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EURW2020-010.htm#W27y"),
     }
 );
 //#endregion
@@ -181,6 +186,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "133 \u00D7 72 mm",
+        reference: refLink("P-W28u", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EURW2020-020.htm#NEWu"),
         note: {
             en: `2015\'s top 20 banknotes by ${ibnsLink}`,
             vi: `Top 20 tờ tiền của năm 2015 theo ${ibnsLink}`
@@ -210,6 +216,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "140 \u00D7 77 mm",
+        reference: refLink("P-W29v", "http://www.banknote.ws/COLLECTION/countries/EUR/EUR/EURW2020-050.htm#29v"),
     }
 );
 //#endregion

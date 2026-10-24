@@ -18,7 +18,7 @@ html, body {
 /* colours come from theme.css; only layout lives here */
 #back-to-top {
     position: fixed;
-    bottom: 9%;
+    bottom: 3%;
     right: 1.5%;
     padding: 10px 15px;
     font-size: 18px;
@@ -96,68 +96,12 @@ html, body {
     position: relative;
 }
 
-.main-content h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.main-content p {
-    font-size: 16px;
-}
-
 #SideBar {
     overflow-y: auto;
 }
 
-.mySlides {
-    position: relative;
-    overflow: hidden;
-    display: none;
-}
-
-.mySlides img {
-    width: 550px;
-    height: 100%;
-    transition: transform 0.3s ease;
-    cursor: zoom-in;
-}
-
-.mySlides.zooming img {
-    transform: scale(3);
-    cursor: zoom-out;
-}
 img {
     vertical-align: middle;
-}
-
-.mySlides.zooming .description {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-}
-
-.mySlides .description {
-    transition: opacity 0.2s ease;
-}
-
-.slideshow-wrapper {
-    margin-top: 25px;
-    display: grid;
-    align-items: center;
-    gap: 30px;
-    grid-template-columns: 1fr 2fr 1.5fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "empty-box slideshow-container slideshow-info .";
-}
-
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-}
-
-#slideshow1 {
-    margin-bottom: 45px;
 }
 
 .custom-link {
@@ -169,188 +113,571 @@ img {
     color: var(--a1);
 }
 
-.global-play-pause-btn {
-    position: fixed;
-    bottom: 3%;
-    right: 1.5%;
-    padding: 6px 12px;
-    color: var(--ink);
-    font-size: 20px;
-    background-color: var(--sheet);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 0.2s ease;
-    z-index: 999;
-    user-select: none;
-    box-shadow: 0 2px 6px var(--shadow);
+/* ============================================================
+   BANKNOTE LIST
+   Every banknote is a compact ledger row; clicking it opens an
+   album sleeve with both sides large. The column header and the
+   rows share one grid, so the columns line up. Sizes respond to
+   the list's own width (container queries), so they adapt to the
+   sidebar as well as the screen.
+   ============================================================ */
+.ledger {
+    --note-accent: var(--a5);   /* the continent's colour, set in collection-item.js */
+    container: ledger / inline-size;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
 }
 
-.global-play-pause-btn:hover {
-    background-color: var(--ink);
+.ledger-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#page-heading {
+    font-family: var(--font-display);
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.page-subtitle {
+    margin: 6px 0 0;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink-soft);
+}
+
+.page-subtitle[hidden] {
+    display: none;
+}
+
+.note-count {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+/* Compact / Album */
+.view-switch {
+    display: inline-flex;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.view-switch button {
+    font: inherit;
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 0;
+    background: var(--sheet);
+    color: var(--ink-soft);
+    cursor: pointer;
+}
+
+.view-switch button + button {
+    border-left: 1px solid var(--rule);
+}
+
+.view-switch button[aria-pressed="true"] {
+    background: var(--ink);
     color: var(--paper);
 }
 
-.global-play-pause-btn:focus {
-    outline: none;
+.ledger-cols {
+    display: grid;
+    grid-template-columns: 3.2rem 196px minmax(0, 1fr) 5rem minmax(0, 12rem) 8.5rem 1.2rem;
+    gap: 14px;
+    align-items: center;
 }
 
-.global-play-pause-btn:active {
-    transform: scale(0.95);
+.ledger-head {
+    padding: 0 10px 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.notes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--ink-soft);
 }
 
-@keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
+.note {
+    border-bottom: 1px solid var(--rule);
 }
 
-.slideshow-info {
-    width: 500px;
-    height: 250px;
-    background-color: var(--sheet);
-    color: var(--ink);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    overflow-y: auto !important;
-    box-shadow: 0 1px 4px var(--shadow);
-    position: relative;
-}
-
-.slideshow-info h3 {
-    font-family: var(--font-display);
-    font-weight: normal;
-    font-size: 25px;
-    color: var(--ink);
-    margin: 20px 15px 6px 15px;
-}
-
-.slideshow-info p {
-    font-size: 18px;
-    margin: 10px 30px;
-}
-
-.slideshow-info p em {
-    font-size: 18px;
-}
-
-.slide-arrow,
-.description,
-.numbertext,
-.banknote-counter {
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
-}
-
-.slideshow-container:hover .slide-arrow,
-.slideshow-container:hover .description,
-.slideshow-container:hover .numbertext,
-.slideshow-container:hover .banknote-counter {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.slideshow-container.zoomed .slide-arrow,
-.slideshow-container.zoomed .description,
-.slideshow-container.zoomed .numbertext,
-.slideshow-container.zoomed .banknote-counter {
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-.description {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 15px;
+.note-row {
     padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.note-row:hover,
+.note.open .note-row {
+    background-color: var(--sheet);
+}
+
+.note-num {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+}
+
+.note-minis {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+/* Thumbnails share a height and take their width from the photo, so a
+   vertical side shows as a narrow upright thumbnail instead of being cropped. */
+.note-mini {
+    --mini-h: 43px;
+    position: relative;
+    flex: none;
+    height: var(--mini-h);
+    max-width: calc(50% - 2px);
+    background: var(--mat);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.note-mini img {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* a vertical side's width matches a horizontal side's height, so both
+   thumbnails show the note's short edge at the same size
+   (collection-item.js adds .portrait once the photo has loaded) */
+.note-mini.portrait {
+    width: var(--mini-h);
+    height: auto;
+    max-width: none;
+}
+
+.note-mini.portrait img {
+    width: 100%;
+    height: auto;
+}
+
+/* "+1" on the second thumbnail when a note has more than two photos */
+.note-more {
     position: absolute;
-    bottom: 5px;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 13px;
+}
+
+/* the title alone sits in the middle of the row; a subtitle, when the
+   data has one, goes underneath it */
+.note-name {
+    display: grid;
+    gap: 2px;
+    align-content: center;
+    min-width: 0;
+}
+
+.note-toggle {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    align-items: baseline;
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.25;
+    color: var(--ink);
+}
+
+.note-toggle:focus-visible {
+    outline: 2px solid var(--note-accent);
+    outline-offset: 2px;
+}
+
+.note-subtitle {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink);
+}
+
+/* year, type and reference are grid columns on wide screens
+   and one wrapped line on narrow ones */
+.note-facts {
+    display: contents;
+}
+
+.note-year {
+    font-variant-numeric: tabular-nums;
+}
+
+.note-year.missing,
+.note-type {
+    color: var(--ink-soft);
+}
+
+.note-type {
+    font-size: 14px;
+}
+
+.note-ref {
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    overflow-wrap: anywhere;
+}
+
+.note-chev {
+    justify-self: end;
+    font-size: 12px;
+    color: var(--ink-soft);
+    transition: transform 0.2s ease;
+}
+
+.note.open .note-chev {
+    transform: rotate(90deg);
+}
+
+.note-new {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #fff;
+    background: var(--note-accent);
+}
+
+/* group breaks from the `layout` line: "|" solid, ":" dashed */
+.note-break {
+    height: 0;
+    margin-top: -1px;
+    border-top: 2px solid var(--ink-soft);
+}
+
+.note-break.dashed {
+    border-top-style: dashed;
+}
+
+/* ---- the album sleeve a row opens into ---- */
+.sleeve {
+    display: grid;
+    gap: 16px;
+    padding: 6px 10px 28px;
+    background: var(--sheet);
+}
+
+.sleeve[hidden] {
+    display: none;
+}
+
+/* Every photo is sized by its long edge (--long), so a vertical side stands
+   as tall as a horizontal side is wide: the same note, turned upright. */
+.sleeve {
+    --long: min(460px, 44cqw);
+}
+
+.sleeve-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the photo sets the frame's width; a longer caption wraps underneath
+   instead of stretching the mat past the banknote */
+.sleeve-pair figure {
+    margin: 0;
+    min-width: 0;
+    width: min-content;
+}
+
+.sleeve-mat {
+    background: var(--mat);
+    padding: 8px;
+    border-radius: 2px;
+}
+
+/* a photo is a button that opens the full-window viewer */
+.sleeve-open {
+    all: unset;
+    display: block;
+    cursor: zoom-in;
+}
+
+.sleeve-open:focus-visible {
+    outline: 2px solid var(--note-accent);
+    outline-offset: 4px;
+}
+
+.sleeve-open img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: var(--long);
+    max-height: var(--long);
+    transition: opacity 0.2s ease;
+}
+
+.sleeve-open:hover img {
+    opacity: 0.88;
+}
+
+.sleeve-side {
+    overflow-wrap: break-word;
+    margin-top: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+}
+
+.sleeve-label {
+    display: grid;
+    gap: 4px;
+    justify-items: center;
+    max-width: 75ch;
+    margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
-    margin-left: 5px;
 }
 
-.numbertext {
-    color: white;
-    font-size: 12px;
-    padding: 6px 9px;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-left: 5px;
+/* style.css sets every <p> to 27px, so the label states its own size */
+.sleeve-label p {
+    margin: 0;
+    font-size: 15px;
 }
 
-.banknote-counter {
-    color: white;
-    font-size: 12px;
-    padding: 6px 9px;
-    position: absolute;
-    top: 0;
-    right: 6px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin-top: 5px;
+.sleeve-label .sleeve-meta {
+    font-size: 14px;
+    color: var(--ink-soft);
 }
 
-.slide-arrow {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 21px;
-    padding: 6px;
+.sleeve-key {
+    color: var(--ink-soft);
+}
+
+.sleeve-label .sleeve-remark {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--ink-soft);
+}
+
+/* a medium-width list: tighter columns */
+@container ledger (max-width: 900px) {
+    .ledger-cols {
+        grid-template-columns: 2.6rem 152px minmax(0, 1fr) 3.6rem minmax(0, 9rem) 6.5rem 1rem;
+        gap: 10px;
+    }
+    .note-mini {
+        --mini-h: 33px;
+    }
+}
+
+/* a narrow list: each row stacks, and the facts become one line */
+@container ledger (max-width: 640px) {
+    .ledger-head {
+        display: none;
+    }
+    .note-row.ledger-cols {
+        grid-template-columns: 2.2rem minmax(0, 1fr) 1rem;
+        grid-template-areas:
+            "num   minis chev"
+            "num   name  chev"
+            "num   facts chev";
+        gap: 6px 10px;
+        align-items: start;
+    }
+    .note-num   { grid-area: num; padding-top: 2px; }
+    .note-minis { grid-area: minis; width: 100%; max-width: 300px; }
+    .note-name  { grid-area: name; }
+    .note-chev  { grid-area: chev; align-self: center; }
+    .note-facts {
+        grid-area: facts;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+    }
+    .note-facts > * {
+        font-size: 13px;
+    }
+    .note-mini {
+        --mini-h: 64px;
+    }
+    .sleeve {
+        --long: min(460px, 86cqw);
+    }
+}
+
+/* ---- full-window viewer ----
+   Dark in both themes, like a lightbox, so the note is the only bright thing. */
+.note-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    background: rgba(14, 14, 16, 0.94);
+    color: #f1ede6;
+    animation: viewer-in 0.18s ease;
+}
+
+.note-viewer[hidden] {
+    display: none;
+}
+
+@keyframes viewer-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.viewer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 18px 8px 24px;
+}
+
+.viewer-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.viewer-count {
+    margin-left: 10px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #b9b3a8;
+    font-variant-numeric: tabular-nums;
+}
+
+.viewer-close,
+.viewer-arrow {
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f1ede6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.viewer-close:hover,
+.viewer-arrow:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.viewer-close:focus-visible,
+.viewer-arrow:focus-visible {
+    outline: 2px solid #f1ede6;
+    outline-offset: 2px;
+}
+
+.viewer-close {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.viewer-stage {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 0;
+    padding: 0 76px;
+}
+
+.viewer-stage img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
+    width: auto;
+    height: auto;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+.viewer-arrow {
     position: absolute;
     top: 50%;
-    width: auto;
-    cursor: pointer;
-    margin-top: -22px;
-    font-weight: bold;
-    transition: 0.3s ease;
-    user-select: none;
-    z-index: 10;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
 }
 
-.slide-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.viewer-arrow.prev { left: 14px; }
+.viewer-arrow.next { right: 14px; }
+
+.viewer-arrow[hidden] {
+    display: none;
 }
 
-.slide-arrow.prev {
-    left: 0;
-    border-radius: 0 3px 3px 0;
+.viewer-caption {
+    margin: 0;
+    padding: 10px 24px 18px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #b9b3a8;
 }
 
-.slide-arrow.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+@media (max-width: 700px) {
+    .viewer-bar {
+        padding: 10px 10px 6px 16px;
+    }
+    .viewer-title {
+        font-size: 18px;
+    }
+    /* arrows sit over the photo's edges; swiping also works */
+    .viewer-stage {
+        padding: 0 10px;
+    }
+    .viewer-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.45);
+    }
+    .viewer-arrow.prev { left: 6px; }
+    .viewer-arrow.next { right: 6px; }
 }
 
-/* same colour as the solid hr in theme.css, just broken into dashes */
-.dashed {
-    margin-top: 25px;
-    border: none;
-    height: 1px;
-    background: repeating-linear-gradient(90deg,
-        var(--ink-soft), var(--ink-soft) 6px, transparent 6px, transparent 12px);
-}
-
-.new-label {
-    position: absolute;
-    top: 12px;
-    right: -15px;
-    background-color: var(--a1);
-    color: #ffffff;
-    padding: 3px 40px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transform: rotate(35deg);
-    line-height: 1.2;
+@media (prefers-reduced-motion: reduce) {
+    .note-row,
+    .note-chev,
+    .sleeve-open img {
+        transition: none;
+    }
+    .note-viewer {
+        animation: none;
+    }
 }
 
 .rainbow-text {
@@ -380,11 +707,6 @@ img {
     100% {
         background-position: 0% 0%;
     }
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
 }
 
 #collection-dropdown {
@@ -453,17 +775,8 @@ img {
     background: rgba(40,48,51, 0.75);
 }
 
-#collection-dropdown::-webkit-scrollbar-thumb {    
+#collection-dropdown::-webkit-scrollbar-thumb {
     border-radius: 10px;
-}
-
-hr {
-    width: 75%;
-    margin-top: 25px;
-}
-
-#page-heading {
-    text-align: center;
 }
 
 .page-navigation {
@@ -514,35 +827,6 @@ hr {
         background-color: var(--sheet);
     }
 
-    .main-content h1 {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    .slideshow-wrapper {
-        margin-top: 5px;
-        width: 100%;
-        gap: 15px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "slideshow-container" 
-                             "slideshow-info";
-    }
-
-    .mySlides {
-        width: 100%;
-    }
-
-    .mySlides img {
-        height: auto;
-        width: 100%;
-    }
-
-    .slideshow-info {
-        width: 100%;
-        height: 200px;
-    }
-
     .container #SideBar {
         display: none;
         width: 0px;
@@ -557,6 +841,15 @@ hr {
     .main-content {
         padding: 0;
         margin-top: 20px;
+    }
+
+    /* the list keeps a gutter, and room at the bottom for the floating buttons */
+    .ledger {
+        padding: 0 12px 80px;
+    }
+
+    #page-heading {
+        font-size: 36px;
     }
 
     #header-nav {
@@ -609,61 +902,11 @@ hr {
         color: var(--a5);
     }
 
-    .main-content h1 {
-        font-size: 36px;
-    }
-
-    #slideshow1 {
-        margin-bottom: 36%;
-    }
-
-    .slideshow-info h3 {
-        font-size: 20px;
-        margin: 10px 0px 10px 15px;
-    }
-
-    .slideshow-info p {
-        font-size: 15px;
-        margin: 8px 25px;
-    }
-
-    .slideshow-info p em {
-        font-size: 15px !important;
-    }
-
-    .description {
-        font-size: 12px;
-        padding: 6px 8px;
-    }
-
-    .numbertext {
-        font-size: 10px;
-        padding: 5px 8px;
-    }
-
-    .slide-arrow {
-        font-size: 15px;
-    }
-
-    .new-label {
-        top: 6px;
-        right: -30px;
-        padding: 3px 40px;
-        font-size: 11px;
-    }
-
     .page-navigation {
         right: 10px;
         bottom: 22px;
         gap: 8px;
         flex-direction: row !important;
-    }
-    
-    .global-play-pause-btn {
-        right: 5%;
-        font-size: 16px;
-        padding: 5px 10px;
-        border-radius: 6px;
     }
 
     #back-to-top {

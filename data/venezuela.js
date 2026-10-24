@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "96 \u00D7 156 mm",
+        reference: refLink("P-89e", "https://banknote.ws/COLLECTION/countries/AME/VEN/VEN0089.htm#29102013"),
     }
 );
 //#endregion

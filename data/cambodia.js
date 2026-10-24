@@ -20,7 +20,9 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
     en: `${denomEng} Cambodian ${currencyEng}`,  
     vi: `${denomViet} ${currencyViet} Campuchia` 
 });
-const issuer = { en: "National Bank of Cambodia", vi: "Ngân Hàng Quốc Gia Campuchia" };
+const issuer1 = { en: "National Bank of Cambodia", vi: "Ngân Hàng Quốc Gia Campuchia" };
+const issuer2 = { en: "Bank of Kampuchea", vi: "Ngân Hàng Campuchia" };
+const issuer3 = { en: "State Bank of of Democratic Cambodia/Kampuchea", vi: "Ngân Hàng Nhà Nước Campuchia" };
 const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Còn Đang Lưu Hành" };
 const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
@@ -48,15 +50,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("1", "1", "Riel", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "128 \u00D7 64 mm",
-        new: true,
+        reference: refLink("P-4c", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0004.htm#4c"),
     }
 );
 //#endregion
@@ -78,15 +80,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("20", "20", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "156 \u00D7 72 mm",
-        new: true,
+        reference: refLink("P-5d", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0005.htm#5d"),
     }
 );
 //#endregion
@@ -108,15 +110,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("50", "50", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "162 \u00D7 74 mm",
-        new: true,
+        reference: refLink("P-7d", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0007.htm#7d"),
     }
 );
 //#endregion
@@ -138,15 +140,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("100", "100", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "175 \u00D7 77 mm",
-        new: true,
+        reference: refLink("P-8c(2)", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0008.htm#8c2"),
     }
 );
 //#endregion
@@ -168,15 +170,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("5", "5", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "134 \u00D7 67 mm",
-        new: true,
+        reference: refLink("P-10c", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0010.htm#10c"),
     }
 );
 //#endregion
@@ -198,15 +200,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "145 \u00D7 69 mm",
-        new: true,
+        reference: refLink("P-11c", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0011.htm#11c"),
     }
 );
 //#endregion
@@ -228,15 +230,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("100", "100", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "175 \u00D7 77 mm",
-        new: true,
+        reference: refLink("P-13b", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0013.htm#13b"),
     }
 );
 //#endregion
@@ -258,15 +260,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("500", "500", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "179 \u00D7 96 mm",
-        new: true,
+        reference: refLink("P-14x3", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0014.htm#14x3"),
     }
 );
 //#endregion
@@ -288,15 +290,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("100", "100", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "172 \u00D7 77 mm",
-        new: true,
+        reference: refLink("P-15a", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0015.htm"),
     }
 );
 //#endregion
@@ -318,15 +320,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("500", "500", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "183 \u00D7 86 mm",
-        new: true,
+        reference: refLink("P-16a2", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0016.htm#16a2"),
     }
 );
 //#endregion
@@ -348,15 +350,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("1,000", "1.000", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "186 \u00D7 89 mm",
-        new: true,
+        reference: refLink("P-17", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0017.htm"),
     }
 );
 //#endregion
@@ -378,15 +380,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("1", "1", "Riel", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer2.en, 
+            vi: issuer2.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "120 \u00D7 58 mm",
-        new: true,
+        reference: refLink("P-20", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0020.htm"),
     }
 );
 //#endregion
@@ -408,15 +410,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer2.en, 
+            vi: issuer2.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "133 \u00D7 69 mm",
-        new: true,
+        reference: refLink("P-22", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0022.htm"),
     }
 );
 //#endregion
@@ -438,15 +440,15 @@ slideshowInfo.push(
     {
         title: currencyInfo("50", "50", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer2.en, 
+            vi: issuer2.vi 
         },
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "140 \u00D7 72 mm",
-        new: true,
+        reference: refLink("P-23", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0023.htm"),
     }
 );
 //#endregion
@@ -468,8 +470,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("100", "100", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer3.en, 
+            vi: issuer3.vi 
         },
         type: { 
             en: standOutType.en, 
@@ -480,7 +482,7 @@ slideshowInfo.push(
             vi: "Sơn Ngọc Minh (1920-1972)" 
         },
         size: "138 \u00D7 63 mm",
-        new: true,
+        reference: refLink("P-36", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0036.htm"),
     }
 );
 //#endregion
@@ -502,8 +504,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("500", "500", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2004",
         type: { 
@@ -511,6 +513,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "138 \u00D7 64 mm",
+        reference: refLink("P-54c", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0054.htm#54b"),
     }
 );
 //#endregion
@@ -532,8 +535,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("1,000", "1.000", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2007",
         type: {
@@ -541,6 +544,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "140 \u00D7 65 mm",
+        reference: refLink("P-58b", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0058.htm#58b"),
     }
 );
 //#endregion
@@ -562,8 +566,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("50,000", "50.000", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2013",
         type: {
@@ -575,7 +579,7 @@ slideshowInfo.push(
             vi: "Norodom Sihanouk (1941-1955)" 
         },
         size: "155 \u00D7 72 mm",
-        new: true,
+        reference: refLink("P-61a", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0061.htm"),
     }
 );
 //#endregion
@@ -597,8 +601,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("100", "100", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2014",
         type: {
@@ -610,6 +614,7 @@ slideshowInfo.push(
             vi: "Norodom Sihanouk (1922-2012)" 
         },
         size: "140 \u00D7 65 mm",
+        reference: refLink("P-65", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0065.htm"),
     }
 );
 //#endregion
@@ -631,8 +636,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("500", "500", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2014",
         type: {
@@ -644,6 +649,7 @@ slideshowInfo.push(
             vi: "Norodom Sihamoni (1953-Present)" 
         },
         size: "140 \u00D7 65 mm",
+        reference: refLink("P-66", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0066.htm"),
     }
 );
 //#endregion
@@ -665,8 +671,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("1,000", "1.000", "Riels", "Riel"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer1.en, 
+            vi: issuer1.vi 
         },
         year: "2016",
         type: {
@@ -678,7 +684,7 @@ slideshowInfo.push(
             vi: "Norodom Sihanouk (1953-2012)" 
         },
         size: "142 \u00D7 68 mm",
-        new: true,
+        reference: refLink("P-67a", "https://banknote.ws/COLLECTION/countries/ASI/CMB/CMB0067.htm"),
     }
 );
 //#endregion

@@ -56,7 +56,7 @@ slideshowInfo.push(
             vi: standardType.vi 
         },
         size: "143 \u00D7 66 mm",
-        new: true,
+        reference: refLink("P-W36 2022", "https://banknote.ws/COLLECTION/countries/ASI/UAE/UAEW0036.htm"),
     }
 );
 //#endregion
@@ -87,7 +87,7 @@ slideshowInfo.push(
             vi: standardType.vi 
         },
         size: "147 \u00D7 66 mm",
-        new: true,
+        reference: refLink("P-W37 2022", "https://banknote.ws/COLLECTION/countries/ASI/UAE/UAEW0037.htm"),
     }
 );
 //#endregion

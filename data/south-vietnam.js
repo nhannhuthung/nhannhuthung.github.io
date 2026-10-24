@@ -56,7 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "134 \u00D7 84 mm",
-        new: true,
+        reference: refLink("P-2", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0002.htm"),
     }
 );
 //#endregion
@@ -86,7 +86,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "144 \u00D7 90 mm",
-        new: true,
+        reference: refLink("P-4", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0004.htm"),
     }
 );
 //#endregion
@@ -116,7 +116,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "110 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-11", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0011.htm"),
     }
 );
 //#endregion
@@ -146,7 +146,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "120 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-12", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0012.htm"),
     }
 );
 //#endregion
@@ -176,7 +176,6 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "165 \u00D7 92 mm",
-        new: true,
     }
 );
 //#endregion
@@ -210,7 +209,7 @@ slideshowInfo.push(
             vi: "Trần Hưng Đạo (1228?-1300)" 
         },
         size: "150 \u00D7 74 mm",
-        new: true,
+        reference: refLink("P-23", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0023.htm"),
     }
 );
 //#endregion
@@ -240,7 +239,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "141 \u00D7 70 mm",
-        new: true,
+        reference: refLink("P-24", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0024.htm"),
     }
 );
 //#endregion
@@ -270,7 +269,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "142 \u00D7 70 mm",
-        new: true,
+        reference: refLink("P-25", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0025.htm"),
     }
 );
 //#endregion
@@ -300,7 +299,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "146 \u00D7 73 mm",
-        new: true,
+        reference: refLink("P-26", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0026.htm"),
     }
 );
 //#endregion
@@ -330,7 +329,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "150 \u00D7 75 mm",
-        new: true,
+        reference: refLink("P-28", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0028.htm"),
     }
 );
 //#endregion
@@ -360,7 +359,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "153 \u00D7 76 mm",
-        new: true,
+        reference: refLink("P-29", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0029.htm"),
     }
 );
 //#endregion
@@ -390,7 +389,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "138 \u00D7 68 mm",
-        new: true,
+        reference: refLink("P-30", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0030.htm"),
     }
 );
 //#endregion
@@ -420,7 +419,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "146 \u00D7 73 mm",
-        new: true,
+        reference: refLink("P-31", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0031.htm"),
     }
 );
 //#endregion
@@ -450,7 +449,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "147 \u00D7 73 mm",
-        new: true,
+        reference: refLink("P-32", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0032.htm"),
     }
 );
 //#endregion
@@ -480,7 +479,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "152 \u00D7 76 mm",
-        new: true,
+        reference: refLink("P-33", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0033.htm"),
     }
 );
 //#endregion
@@ -510,7 +509,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "152 \u00D7 76 mm",
-        new: true,
+        reference: refLink("P-34", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0034.htm"),
     }
 );
 //#endregion
@@ -540,7 +539,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "100 \u00D7 50 mm",
-        new: true,
+        reference: refLink("P-37", "https://banknote.ws/COLLECTION/countries/ASI/VIS/VIS0037.htm"),
     }
 );
 //#endregion

@@ -59,7 +59,7 @@ slideshowInfo.push(
             vi: "Joaquín Torres-García (1874-1949)"
         },
         size: "159 \u00D7 74 mm",
-        new: true,
+        reference: refLink("P-80", "https://banknote.ws/COLLECTION/countries/AME/URU/URU0080.htm"),
     }
 );
 //#endregion

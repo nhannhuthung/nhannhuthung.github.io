@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "142 \u00D7 67 mm",
+        reference: refLink("P-W55", "http://www.banknote.ws/COLLECTION/countries/AFR/ETH/ETHW2020-010.htm"),
     }
 );
 //#endregion
@@ -84,6 +85,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-W56", "http://www.banknote.ws/COLLECTION/countries/AFR/ETH/ETHW2020-050.htm"),
     }
 );
 //#endregion
@@ -113,6 +115,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "147 \u00D7 72 mm",
+        reference: refLink("P-W57 2023(1)", "http://www.banknote.ws/COLLECTION/countries/AFR/ETH/ETHW2020-100.htm#2023"),
     }
 );
 //#endregion

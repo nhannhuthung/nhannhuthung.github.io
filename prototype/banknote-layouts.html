@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!-- Layout prototype for the country pages. Open it in a browser; not linked from the site. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Banknote Layout Studies</title>
+<style>
+/* Layout: a stack of option panels; each panel's stage is a slice of the
+   real country page, drawn with the site's own theme.css tokens. */
+:root {
+    --paper: #f2ece0;
+    --sheet: #fbf7ef;
+    --mat: #eae2d3;
+    --ink: #2b2620;
+    --ink-soft: #6d6154;
+    --rule: #d8ccb7;
+    --shadow: rgba(74, 58, 36, 0.13);
+    --accent: #c0392b;            /* Americas accent (--a1), as in the sidebar */
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --paper: #15171b; --sheet: #1c1f25; --mat: #23272e; --ink: #e9e6e0;
+        --ink-soft: #9b958a; --rule: #343942; --shadow: rgba(0, 0, 0, 0.55);
+        --accent: #ff6b6b; color-scheme: dark;
+    }
+}
+:root[data-theme="dark"] {
+    --paper: #15171b; --sheet: #1c1f25; --mat: #23272e; --ink: #e9e6e0;
+    --ink-soft: #9b958a; --rule: #343942; --shadow: rgba(0, 0, 0, 0.55);
+    --accent: #ff6b6b; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--sheet);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 64px;
+}
+main { max-width: 1040px; margin: 0 auto; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- intro ---- */
+.intro { display: grid; gap: 14px; max-width: 68ch; }
+.intro h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.1; }
+.intro p { color: var(--ink-soft); }
+.verdict {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 16px;
+    color: var(--ink);
+}
+.jump { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.jump a {
+    display: inline-flex; gap: 8px; align-items: center;
+    padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px;
+    text-decoration: none; font-size: 14px; background: var(--paper);
+}
+.jump a b { font-family: var(--font-display); font-weight: 400; color: var(--accent); }
+
+/* ---- option panel ---- */
+.option { display: grid; gap: 18px; scroll-margin-top: 16px; }
+.opt-head { display: flex; gap: 16px; align-items: baseline; }
+.opt-letter {
+    font-family: var(--font-display); font-size: 34px; line-height: 1;
+    color: var(--accent); min-width: 1ch;
+}
+.opt-head h2 { font-size: 26px; line-height: 1.2; }
+.opt-head p { color: var(--ink-soft); max-width: 66ch; margin-top: 4px; }
+.stage {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: clamp(14px, 3vw, 32px);
+    min-width: 0;
+}
+.tradeoffs { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0; }
+.tradeoffs dt {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ink-soft); margin-bottom: 2px;
+}
+.tradeoffs dd { margin: 0; }
+
+/* ---- shared bits inside the mockups ---- */
+.matted { background: var(--mat); padding: 8px; border-radius: 2px; }
+.ref {
+    font-size: 13px; font-variant-numeric: tabular-nums;
+    padding: 1px 8px; border: 1px solid var(--rule); border-radius: 4px;
+    text-decoration: none; white-space: nowrap; background: var(--sheet);
+}
+.ref:hover { border-color: var(--accent); color: var(--accent); }
+.chip {
+    font-size: 12px; padding: 2px 9px; border-radius: 999px;
+    background: var(--mat); color: var(--ink-soft); white-space: nowrap;
+}
+.chip.accent { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.note { font-style: italic; color: var(--ink-soft); font-size: 14px; }
+.note a { color: var(--accent); }
+.side-tag {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--ink-soft); margin-top: 6px;
+}
+
+/* ---- A: album page ---- */
+.album { display: grid; gap: 32px; }
+.sleeve { display: grid; gap: 14px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pair figure { margin: 0; min-width: 0; }
+.label {
+    display: grid; gap: 4px; justify-self: center; text-align: center;
+    max-width: 62ch;
+}
+.label-top { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; justify-content: center; }
+.label h3 { font-size: 22px; }
+.label .yr { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.label .meta { font-size: 14px; color: var(--ink-soft); }
+.album hr { border: none; height: 1px; background: var(--rule); width: 60%; margin: 0 auto; }
+
+/* ---- B: flip-card gallery ---- */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; }
+.card { display: grid; gap: 10px; align-content: start; }
+.flip {
+    all: unset; cursor: pointer; display: block; perspective: 1200px;
+    border-radius: 3px;
+}
+.flip:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.flip-inner {
+    display: block; position: relative; aspect-ratio: 720 / 324;
+    transform-style: preserve-3d; transition: transform 0.6s ease;
+    box-shadow: 0 2px 8px var(--shadow);
+}
+.card.flipped .flip-inner { transform: rotateY(180deg); }
+.face {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.face.back { transform: rotateY(180deg); }
+.cap { display: grid; gap: 4px; }
+.cap-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.cap h3 { font-size: 19px; }
+.cap h3 span { font-family: var(--font-body); font-size: 14px; color: var(--ink-soft); margin-left: 6px; font-variant-numeric: tabular-nums; }
+.cap .who { font-size: 14px; color: var(--ink-soft); overflow-wrap: anywhere; }
+.hint { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+.new {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--sheet);
+    background: var(--accent); padding: 1px 7px; border-radius: 3px;
+}
+
+/* ---- C: catalogue sheet ---- */
+.sheetview { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.viewer { display: grid; gap: 12px; justify-items: center; }
+.viewer .matted { width: 100%; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button {
+    font: inherit; font-size: 14px; padding: 6px 16px; border: 0; cursor: pointer;
+    background: var(--sheet); color: var(--ink-soft);
+}
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.spec { display: grid; gap: 12px; min-width: 0; }
+.eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); }
+.spec h3 { font-size: 30px; line-height: 1.1; }
+.specs { display: grid; grid-template-columns: auto minmax(0, 1fr); margin: 0; border-top: 1px solid var(--rule); }
+.specs dt, .specs dd { padding: 8px 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.specs dt { color: var(--ink-soft); font-size: 14px; padding-right: 18px; }
+.specs dd { font-variant-numeric: tabular-nums; }
+
+/* ---- D: timeline ---- */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.t-row { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; }
+.t-year {
+    font-family: var(--font-display); font-size: 22px; color: var(--ink);
+    text-align: right; padding-top: 10px; font-variant-numeric: tabular-nums;
+}
+.t-body { border-left: 2px solid var(--rule); padding: 8px 0 22px 22px; position: relative; display: grid; gap: 12px; }
+.t-body::before {
+    content: ""; position: absolute; left: -7px; top: 18px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--paper); border: 2px solid var(--accent);
+}
+.t-row:last-child .t-body { padding-bottom: 4px; }
+.t-card { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; align-items: center; }
+.thumb { position: relative; aspect-ratio: 720 / 324; border-radius: 2px; overflow: hidden; box-shadow: 0 1px 4px var(--shadow); }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease; }
+.thumb img.b { opacity: 0; }
+.thumb:hover img.b, .thumb:focus-visible img.b { opacity: 1; }
+.t-text { display: grid; gap: 4px; min-width: 0; }
+.t-text h3 { font-size: 19px; }
+.t-text p { font-size: 14px; color: var(--ink-soft); }
+.t-group-note { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+
+/* ---- E: ledger ---- */
+.ledger-wrap { overflow-x: auto; }
+.ledger { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+.ledger th {
+    text-align: left; font-weight: 400; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--ink-soft); padding: 0 10px 8px; border-bottom: 1px solid var(--ink-soft);
+}
+.ledger td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.ledger td.num { font-variant-numeric: tabular-nums; }
+.ledger .mini { width: 88px; aspect-ratio: 720 / 324; object-fit: cover; border-radius: 2px; }
+.row-btn {
+    all: unset; cursor: pointer; font-family: var(--font-display); font-size: 16px;
+    display: inline-flex; gap: 8px; align-items: center;
+}
+.row-btn::before { content: "\25B8"; font-size: 12px; color: var(--ink-soft); transition: transform 0.2s ease; }
+.row-btn[aria-expanded="true"]::before { transform: rotate(90deg); }
+.row-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ledger tr.detail td { background: var(--sheet); padding: 16px; }
+.ledger tr.detail .pair { max-width: 760px; }
+
+@media (max-width: 720px) {
+    .tradeoffs { grid-template-columns: 1fr; gap: 12px; }
+    .pair { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr; }
+    .sheetview { grid-template-columns: 1fr; }
+    .t-row { grid-template-columns: 1fr; gap: 0; }
+    .t-year { text-align: left; padding: 0 0 6px; }
+    .t-card { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .flip-inner, .thumb img, .row-btn::before { transition: none; }
+}
+</style>
+
+</head>
+<body>
+<main>
+    <header class="intro">
+        <h1>Banknote Layout Studies</h1>
+        <p>Five ways to lay out a country page, each built with five of your real Canadian notes and the site's own colors and fonts. Everything is clickable: turn cards over, switch sides, open rows. Use the button to compare the light and dark palettes.</p>
+        <p><button type="button" id="theme-btn" class="theme-btn">Switch to dark theme</button></p>
+        <p class="verdict"><strong>My pick:</strong> the gallery (B) for the page itself, grouped by the year headings from the timeline (D), with the catalogue sheet (C) opening when you click a card. Countries with many notes, like Viet Nam with 31, get about half as long, and no information is lost.</p>
+        <ul class="jump" aria-label="Options">
+            <li><a href="#album"><b>A</b> Album page</a></li>
+            <li><a href="#gallery"><b>B</b> Flip-card gallery</a></li>
+            <li><a href="#sheet"><b>C</b> Catalogue sheet</a></li>
+            <li><a href="#timeline"><b>D</b> Timeline</a></li>
+            <li><a href="#ledger"><b>E</b> Ledger</a></li>
+        </ul>
+    </header>
+
+    <!-- A -->
+    <section class="option" id="album">
+        <div class="opt-head">
+            <span class="opt-letter">A</span>
+            <div>
+                <h2>Album page</h2>
+                <p>Front and back sit side by side like a note in a collector's sleeve, with a museum-style label underneath. No slideshow: both sides are always visible.</p>
+            </div>
+        </div>
+        <div class="stage">
+            <div class="album">
+                <article class="sleeve">
+                    <div class="pair">
+                        <figure><div class="matted"><img src="../images/collection/canada/2017/10-dollar-f.jpg" alt="Front of the 2017 Canadian 10 dollar note"></div><figcaption class="side-tag">Front</figcaption></figure>
+                        <figure><div class="matted"><img src="../images/collection/canada/2017/10-dollar-b.jpg" alt="Back of the 2017 Canadian 10 dollar note"></div><figcaption class="side-tag">Back</figcaption></figure>
+                    </div>
+                    <div class="label">
+                        <div class="label-top"><h3>10 Canadian Dollars</h3><span class="yr">2017</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0112.htm" target="_blank" rel="noopener">P-112</a></div>
+                        <p class="meta">Bank of Canada · Circulating commemorative · 153 × 70 mm</p>
+                        <p>John A. Macdonald, George-Étienne Cartier, Agnes Macphail, James Gladstone</p>
+                        <p class="note">2017's top 22 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&amp;view=article&amp;id=138&amp;Itemid=51" target="_blank" rel="noopener">IBNS</a></p>
+                    </div>
+                </article>
+                <hr>
+                <article class="sleeve">
+                    <div class="pair">
+                        <figure><div class="matted"><img src="../images/collection/canada/2011-2013/100-dollar-f.jpg" alt="Front of the 2011 Canadian 100 dollar note"></div><figcaption class="side-tag">Front</figcaption></figure>
+                        <figure><div class="matted"><img src="../images/collection/canada/2011-2013/100-dollar-b.jpg" alt="Back of the 2011 Canadian 100 dollar note"></div><figcaption class="side-tag">Back</figcaption></figure>
+                    </div>
+                    <div class="label">
+                        <div class="label-top"><h3>100 Canadian Dollars</h3><span class="yr">2011</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0110.htm#110c" target="_blank" rel="noopener">P-110c</a></div>
+                        <p class="meta">Bank of Canada · Circulating standard · 153 × 70 mm</p>
+                        <p>Robert L. Borden (1854–1937)</p>
+                        <p class="note">2011's top 12 banknotes by <a href="https://www.theibns.org/joomla/index.php?option=com_content&amp;view=article&amp;id=138&amp;Itemid=51" target="_blank" rel="noopener">IBNS</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <dl class="tradeoffs">
+            <div><dt>Good for</dt><dd>Seeing both sides at once and comparing them. Nothing moves on its own, so it's calm to read.</dd></div>
+            <div><dt>Costs</dt><dd>Each note still takes the full width, so long pages stay long. Notes with three or more photos need a third column or a strip.</dd></div>
+        </dl>
+    </section>
+
+    <!-- B -->
+    <section class="option" id="gallery">
+        <div class="opt-head">
+            <span class="opt-letter">B</span>
+            <div>
+                <h2>Flip-card gallery</h2>
+                <p>Two notes per row (one on phones). Click a note to turn it over and see the back. The card keeps only the essentials; the full details live one click away.</p>
+            </div>
+        </div>
+        <div class="stage">
+            <div class="gallery">
+                <article class="card">
+                    <button class="flip" type="button" aria-pressed="false" aria-label="Turn over the 2018 10 dollar note">
+                        <span class="flip-inner">
+                            <img class="face front" src="../images/collection/canada/2018/10-dollar-f.jpg" alt="Front of the 2018 Canadian 10 dollar note">
+                            <img class="face back" src="../images/collection/canada/2018/10-dollar-b.jpg" alt="Back of the 2018 Canadian 10 dollar note">
+                        </span>
+                    </button>
+                    <div class="cap">
+                        <div class="cap-top"><h3>10 Dollars<span>2018</span></h3><span class="new">NEW</span></div>
+                        <p class="who">Viola Desmond (1914–1965)</p>
+                        <div class="chips"><span class="chip accent">Commemorative</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CANW2018-010.htm" target="_blank" rel="noopener">P-W113(1)</a><span class="hint">Click to turn over</span></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <button class="flip" type="button" aria-pressed="false" aria-label="Turn over the 2017 10 dollar note">
+                        <span class="flip-inner">
+                            <img class="face front" src="../images/collection/canada/2017/10-dollar-f.jpg" alt="Front of the 2017 Canadian 10 dollar note">
+                            <img class="face back" src="../images/collection/canada/2017/10-dollar-b.jpg" alt="Back of the 2017 Canadian 10 dollar note">
+                        </span>
+                    </button>
+                    <div class="cap">
+                        <div class="cap-top"><h3>10 Dollars<span>2017</span></h3></div>
+                        <p class="who">Macdonald, Cartier, Macphail, Gladstone</p>
+                        <div class="chips"><span class="chip accent">Commemorative</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0112.htm" target="_blank" rel="noopener">P-112</a></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <button class="flip" type="button" aria-pressed="false" aria-label="Turn over the 2015 20 dollar note">
+                        <span class="flip-inner">
+                            <img class="face front" src="../images/collection/canada/2015/20-dollar-f.jpg" alt="Front of the 2015 Canadian 20 dollar note">
+                            <img class="face back" src="../images/collection/canada/2015/20-dollar-b.jpg" alt="Back of the 2015 Canadian 20 dollar note">
+                        </span>
+                    </button>
+                    <div class="cap">
+                        <div class="cap-top"><h3>20 Dollars<span>2015</span></h3></div>
+                        <p class="who">Elizabeth II (1952–2022)</p>
+                        <div class="chips"><span class="chip accent">Commemorative</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0111.htm" target="_blank" rel="noopener">P-111</a></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <button class="flip" type="button" aria-pressed="false" aria-label="Turn over the 2011 100 dollar note">
+                        <span class="flip-inner">
+                            <img class="face front" src="../images/collection/canada/2011-2013/100-dollar-f.jpg" alt="Front of the 2011 Canadian 100 dollar note">
+                            <img class="face back" src="../images/collection/canada/2011-2013/100-dollar-b.jpg" alt="Back of the 2011 Canadian 100 dollar note">
+                        </span>
+                    </button>
+                    <div class="cap">
+                        <div class="cap-top"><h3>100 Dollars<span>2011</span></h3></div>
+                        <p class="who">Robert L. Borden (1854–1937)</p>
+                        <div class="chips"><span class="chip">Standard</span><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0110.htm#110c" target="_blank" rel="noopener">P-110c</a></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <dl class="tradeoffs">
+            <div><dt>Good for</dt><dd>Big countries. Two notes per row roughly halves the scrolling, and turning a note over is more fun than waiting for a slideshow.</dd></div>
+            <div><dt>Costs</dt><dd>The card shortens the details (issuer, size and notes are hidden), so it works best with C as the detail view. On phones it's one column, like today.</dd></div>
+        </dl>
+    </section>
+
+    <!-- C -->
+    <section class="option" id="sheet">
+        <div class="opt-head">
+            <span class="opt-letter">C</span>
+            <div>
+                <h2>Catalogue sheet</h2>
+                <p>One note at a time, laid out like a catalogue entry: a large photo with a Front / Back switch, and every field in a tidy table. The type is split into two chips: what kind of note it is, and whether it still circulates.</p>
+            </div>
+        </div>
+        <div class="stage">
+            <div class="sheetview">
+                <div class="viewer">
+                    <div class="matted"><img id="sheet-img" src="../images/collection/canada/2018/10-dollar-f.jpg" alt="Front of the 2018 Canadian 10 dollar note"></div>
+                    <div class="seg" role="group" aria-label="Side">
+                        <button type="button" id="sheet-front" aria-pressed="true" data-src="../images/collection/canada/2018/10-dollar-f.jpg" data-alt="Front of the 2018 Canadian 10 dollar note">Front</button>
+                        <button type="button" id="sheet-back" aria-pressed="false" data-src="../images/collection/canada/2018/10-dollar-b.jpg" data-alt="Back of the 2018 Canadian 10 dollar note">Back</button>
+                    </div>
+                </div>
+                <div class="spec">
+                    <p class="eyebrow">Canada · No. 17 of 17</p>
+                    <h3>10 Canadian Dollars</h3>
+                    <div class="chips"><span class="chip accent">Commemorative</span><span class="chip">In circulation</span><span class="new">NEW</span></div>
+                    <dl class="specs">
+                        <dt>Issuer</dt><dd>Bank of Canada</dd>
+                        <dt>Year</dt><dd>2018</dd>
+                        <dt>Figure</dt><dd>Viola Desmond (1914–1965)</dd>
+                        <dt>Size</dt><dd>70 × 153 mm</dd>
+                        <dt>Orientation</dt><dd>Vertical front, horizontal back</dd>
+                        <dt>Reference</dt><dd><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CANW2018-010.htm" target="_blank" rel="noopener">P-W113(1)</a></dd>
+                    </dl>
+                    <p class="note">Banknote of 2018 by <a href="https://www.theibns.org/joomla/index.php?option=com_content&amp;view=article&amp;id=138&amp;Itemid=51" target="_blank" rel="noopener">IBNS</a></p>
+                </div>
+            </div>
+        </div>
+        <dl class="tradeoffs">
+            <div><dt>Good for</dt><dd>Showing everything about a note in a structured way. It's the closest to today's layout, so it's the least rework, and the orientation idea slots in as one more row.</dd></div>
+            <div><dt>Costs</dt><dd>Each note takes about a screen of height. On its own it makes long pages longer, so it shines as the view that opens from B or E.</dd></div>
+        </dl>
+    </section>
+
+    <!-- D -->
+    <section class="option" id="timeline">
+        <div class="opt-head">
+            <span class="opt-letter">D</span>
+            <div>
+                <h2>Timeline</h2>
+                <p>Notes hang off a rail grouped by year or series, newest at the top. Hover or focus a photo to see its back. The year groups take over the job of the solid and dashed dividers in your <code>layout</code> lines.</p>
+            </div>
+        </div>
+        <div class="stage">
+            <ol class="timeline">
+                <li class="t-row">
+                    <div class="t-year">2018</div>
+                    <div class="t-body">
+                        <div class="t-card">
+                            <div class="thumb" tabindex="0" aria-label="10 dollars 2018, hover to see the back"><img class="f" src="../images/collection/canada/2018/10-dollar-f.jpg" alt=""><img class="b" src="../images/collection/canada/2018/10-dollar-b.jpg" alt=""></div>
+                            <div class="t-text"><h3>10 Dollars</h3><p>Viola Desmond · Commemorative</p><div class="chips"><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CANW2018-010.htm" target="_blank" rel="noopener">P-W113(1)</a><span class="new">NEW</span></div></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="t-row">
+                    <div class="t-year">2017</div>
+                    <div class="t-body">
+                        <div class="t-card">
+                            <div class="thumb" tabindex="0" aria-label="10 dollars 2017, hover to see the back"><img class="f" src="../images/collection/canada/2017/10-dollar-f.jpg" alt=""><img class="b" src="../images/collection/canada/2017/10-dollar-b.jpg" alt=""></div>
+                            <div class="t-text"><h3>10 Dollars</h3><p>Canada 150 · Commemorative</p><div class="chips"><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0112.htm" target="_blank" rel="noopener">P-112</a></div></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="t-row">
+                    <div class="t-year">2015</div>
+                    <div class="t-body">
+                        <div class="t-card">
+                            <div class="thumb" tabindex="0" aria-label="20 dollars 2015, hover to see the back"><img class="f" src="../images/collection/canada/2015/20-dollar-f.jpg" alt=""><img class="b" src="../images/collection/canada/2015/20-dollar-b.jpg" alt=""></div>
+                            <div class="t-text"><h3>20 Dollars</h3><p>Elizabeth II · Commemorative</p><div class="chips"><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0111.htm" target="_blank" rel="noopener">P-111</a></div></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="t-row">
+                    <div class="t-year">2011</div>
+                    <div class="t-body">
+                        <p class="t-group-note">Frontier series, 2011–2013</p>
+                        <div class="t-card">
+                            <div class="thumb" tabindex="0" aria-label="100 dollars 2011, hover to see the back"><img class="f" src="../images/collection/canada/2011-2013/100-dollar-f.jpg" alt=""><img class="b" src="../images/collection/canada/2011-2013/100-dollar-b.jpg" alt=""></div>
+                            <div class="t-text"><h3>100 Dollars</h3><p>Robert L. Borden · Standard</p><div class="chips"><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0110.htm#110c" target="_blank" rel="noopener">P-110c</a></div></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="t-row">
+                    <div class="t-year">1954</div>
+                    <div class="t-body">
+                        <div class="t-card">
+                            <div class="thumb" tabindex="0" aria-label="10 dollars 1954, hover to see the back"><img class="f" src="../images/collection/canada/1954/10-dollar-f.jpg" alt=""><img class="b" src="../images/collection/canada/1954/10-dollar-b.jpg" alt=""></div>
+                            <div class="t-text"><h3>10 Dollars</h3><p>Elizabeth II · Withdrawn</p><div class="chips"><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0079.htm#79b" target="_blank" rel="noopener">P-79b</a></div></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <dl class="tradeoffs">
+            <div><dt>Good for</dt><dd>Showing how a country's money changed over time. Series and eras become visible instead of being hinted at by a dashed line.</dd></div>
+            <div><dt>Costs</dt><dd>Every note needs a year in its data. In <code>canada.js</code>, 13 of the 17 notes have no <code>year</code> field today; for most of them the year only appears in the image folder name.</dd></div>
+        </dl>
+    </section>
+
+    <!-- E -->
+    <section class="option" id="ledger">
+        <div class="opt-head">
+            <span class="opt-letter">E</span>
+            <div>
+                <h2>Ledger</h2>
+                <p>A collector's checklist: one row per note with a small photo and the key fields in columns. Click a note's name to open both sides full size.</p>
+            </div>
+        </div>
+        <div class="stage">
+            <div class="ledger-wrap">
+                <table class="ledger">
+                    <thead><tr><th scope="col"><span class="sr">Photo</span></th><th scope="col">Note</th><th scope="col">Year</th><th scope="col">Type</th><th scope="col">Figure</th><th scope="col">Ref.</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="mini" src="../images/collection/canada/2018/10-dollar-f.jpg" alt=""></td>
+                            <td><button class="row-btn" type="button" aria-expanded="true" aria-controls="ld-1">10 Dollars</button></td>
+                            <td class="num">2018</td><td>Commemorative</td><td>Viola Desmond</td>
+                            <td><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CANW2018-010.htm" target="_blank" rel="noopener">P-W113(1)</a></td>
+                        </tr>
+                        <tr class="detail" id="ld-1"><td colspan="6"><div class="pair"><div class="matted"><img src="../images/collection/canada/2018/10-dollar-f.jpg" alt="Front of the 2018 Canadian 10 dollar note"></div><div class="matted"><img src="../images/collection/canada/2018/10-dollar-b.jpg" alt="Back of the 2018 Canadian 10 dollar note"></div></div></td></tr>
+                        <tr>
+                            <td><img class="mini" src="../images/collection/canada/2017/10-dollar-f.jpg" alt=""></td>
+                            <td><button class="row-btn" type="button" aria-expanded="false" aria-controls="ld-2">10 Dollars</button></td>
+                            <td class="num">2017</td><td>Commemorative</td><td>Macdonald, Cartier, Macphail, Gladstone</td>
+                            <td><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0112.htm" target="_blank" rel="noopener">P-112</a></td>
+                        </tr>
+                        <tr class="detail" id="ld-2" hidden><td colspan="6"><div class="pair"><div class="matted"><img src="../images/collection/canada/2017/10-dollar-f.jpg" alt="Front of the 2017 Canadian 10 dollar note"></div><div class="matted"><img src="../images/collection/canada/2017/10-dollar-b.jpg" alt="Back of the 2017 Canadian 10 dollar note"></div></div></td></tr>
+                        <tr>
+                            <td><img class="mini" src="../images/collection/canada/2015/20-dollar-f.jpg" alt=""></td>
+                            <td><button class="row-btn" type="button" aria-expanded="false" aria-controls="ld-3">20 Dollars</button></td>
+                            <td class="num">2015</td><td>Commemorative</td><td>Elizabeth II</td>
+                            <td><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0111.htm" target="_blank" rel="noopener">P-111</a></td>
+                        </tr>
+                        <tr class="detail" id="ld-3" hidden><td colspan="6"><div class="pair"><div class="matted"><img src="../images/collection/canada/2015/20-dollar-f.jpg" alt="Front of the 2015 Canadian 20 dollar note"></div><div class="matted"><img src="../images/collection/canada/2015/20-dollar-b.jpg" alt="Back of the 2015 Canadian 20 dollar note"></div></div></td></tr>
+                        <tr>
+                            <td><img class="mini" src="../images/collection/canada/2011-2013/100-dollar-f.jpg" alt=""></td>
+                            <td><button class="row-btn" type="button" aria-expanded="false" aria-controls="ld-4">100 Dollars</button></td>
+                            <td class="num">2011</td><td>Standard</td><td>Robert L. Borden</td>
+                            <td><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0110.htm#110c" target="_blank" rel="noopener">P-110c</a></td>
+                        </tr>
+                        <tr class="detail" id="ld-4" hidden><td colspan="6"><div class="pair"><div class="matted"><img src="../images/collection/canada/2011-2013/100-dollar-f.jpg" alt="Front of the 2011 Canadian 100 dollar note"></div><div class="matted"><img src="../images/collection/canada/2011-2013/100-dollar-b.jpg" alt="Back of the 2011 Canadian 100 dollar note"></div></div></td></tr>
+                        <tr>
+                            <td><img class="mini" src="../images/collection/canada/1954/10-dollar-f.jpg" alt=""></td>
+                            <td><button class="row-btn" type="button" aria-expanded="false" aria-controls="ld-5">10 Dollars</button></td>
+                            <td class="num">1954</td><td>Standard, withdrawn</td><td>Elizabeth II</td>
+                            <td><a class="ref" href="https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0079.htm#79b" target="_blank" rel="noopener">P-79b</a></td>
+                        </tr>
+                        <tr class="detail" id="ld-5" hidden><td colspan="6"><div class="pair"><div class="matted"><img src="../images/collection/canada/1954/10-dollar-f.jpg" alt="Front of the 1954 Canadian 10 dollar note"></div><div class="matted"><img src="../images/collection/canada/1954/10-dollar-b.jpg" alt="Back of the 1954 Canadian 10 dollar note"></div></div></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <dl class="tradeoffs">
+            <div><dt>Good for</dt><dd>Scanning and comparing: denominations, years and references line up in columns. The most compact option by far.</dd></div>
+            <div><dt>Costs</dt><dd>Photos are tiny until a row is opened, so it feels like a catalogue rather than an exhibit. Wide tables need sideways scrolling on phones.</dd></div>
+        </dl>
+    </section>
+</main>
+
+<style>
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.theme-btn { font: inherit; font-size: 14px; padding: 6px 14px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); color: var(--ink); cursor: pointer; }
+code { font-size: 0.92em; background: var(--mat); padding: 0 4px; border-radius: 3px; }
+</style>
+
+<script>
+// light / dark, starting from the system setting
+const themeBtn = document.getElementById("theme-btn");
+function currentTheme() {
+    return document.documentElement.dataset.theme ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+}
+function labelThemeButton() {
+    themeBtn.textContent = currentTheme() === "dark" ? "Switch to light theme" : "Switch to dark theme";
+}
+themeBtn.addEventListener("click", () => {
+    document.documentElement.dataset.theme = currentTheme() === "dark" ? "light" : "dark";
+    labelThemeButton();
+});
+labelThemeButton();
+
+// B: turn a card over
+document.querySelectorAll(".flip").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const card = btn.closest(".card");
+        const flipped = card.classList.toggle("flipped");
+        btn.setAttribute("aria-pressed", String(flipped));
+    });
+});
+
+// C: front / back switch
+const sheetImg = document.getElementById("sheet-img");
+document.querySelectorAll(".seg button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+        sheetImg.src = btn.dataset.src;
+        sheetImg.alt = btn.dataset.alt;
+    });
+});
+
+// E: open a row
+document.querySelectorAll(".row-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") !== "true";
+        btn.setAttribute("aria-expanded", String(open));
+        document.getElementById(btn.getAttribute("aria-controls")).hidden = !open;
+    });
+});
+</script>
+
+</body>
+</html>

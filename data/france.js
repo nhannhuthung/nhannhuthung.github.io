@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Claude Debussy (1862-1918)" 
         },
         size: "140 \u00D7 75 mm",
+        reference: refLink("P-151i", "http://www.banknote.ws/COLLECTION/countries/EUR/FRA/FRA0151.htm#151i"),
     }
 );
 //#endregion
@@ -94,6 +95,7 @@ slideshowInfo.push(
             vi: "Antoine de Saint-Exupéry (1900-1944?)"
         },
         size: "123 \u00D7 80 mm",
+        reference: refLink("P-157Aa", "http://www.banknote.ws/COLLECTION/countries/EUR/FRA/FRA0157A2.htm"),
     }
 );
 //#endregion
@@ -128,6 +130,7 @@ slideshowInfo.push(
             vi: "Paul Cézanne (1839-1906)"
         },
         size: "133 \u00D7 80 mm",
+        reference: refLink("P-158a 1998", "http://www.banknote.ws/COLLECTION/countries/EUR/FRA/FRA0158.htm#1998"),
     }
 );
 //#endregion
@@ -162,6 +165,7 @@ slideshowInfo.push(
             vi: "Gustave Eiffel (1832-1923)"
         },
         size: "143 \u00D7 80 mm",
+        reference: refLink("P-159b 1997", "http://www.banknote.ws/COLLECTION/countries/EUR/FRA/FRA0159.htm#1997"),
     }
 );
 //#endregion
@@ -196,6 +200,7 @@ slideshowInfo.push(
             vi: "Marie Curie (1867-1934), Pierre Curie (1859-1906)"
         },
         size: "153 \u00D7 80 mm",
+        reference: refLink("P-160a 1994", "http://www.banknote.ws/COLLECTION/countries/EUR/FRA/FRA0160.htm"),
     }
 );
 //#endregion

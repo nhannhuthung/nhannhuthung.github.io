@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "155 \u00D7 75 mm",
+        reference: refLink("P-R10 C", "https://banknote.ws/COLLECTION/countries/AFR/SOM/SOMR0010.htm#1990-C"),
     }
 );
 //#endregion

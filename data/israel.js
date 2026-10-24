@@ -62,6 +62,7 @@ slideshowInfo.push(
             vi: "Rachel Bluwstein (1890-1931)" 
         },
         size: "129 \u00D7 71 mm",
+        reference: refLink("P-65 2017", "http://www.banknote.ws/COLLECTION/countries/ASI/ISR/ISR0065.htm"),
     }
 );
 //#endregion
@@ -96,6 +97,7 @@ slideshowInfo.push(
             vi: "Shaul Tchernichovsky (1875-1943)" 
         },
         size: "136 \u00D7 71 mm",
+        reference: refLink("P-66b", "http://www.banknote.ws/COLLECTION/countries/ASI/ISR/ISR0066.htm#2014"),
         note: { 
             en: `2014\'s top 12 banknotes by ${ibnsLink}`, 
             vi: `Top 12 tờ tiền năm 2014 theo ${ibnsLink}` 
@@ -134,6 +136,7 @@ slideshowInfo.push(
             vi: "Nathan Alterman (1910-1970)" 
         },
         size: "150 \u00D7 20 mm",
+        reference: refLink("P-68 2015", "http://www.banknote.ws/COLLECTION/countries/ASI/ISR/ISR0068.htm"),
         note: { 
             en: `2015\'s top 20 banknotes by ${ibnsLink}`, 
             vi: `Top 20 tờ tiền năm 2015 theo ${ibnsLink}` 

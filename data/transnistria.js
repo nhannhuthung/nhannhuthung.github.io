@@ -60,7 +60,7 @@ slideshowInfo.push(
             vi: "Alexander Suvorov (1730-1800)"
         },
         size: "125 \u00D7 57 mm",
-        new: true
+        reference: refLink("P-17", "https://banknote.ws/COLLECTION/countries/EUR/TDN/TDN0017.htm"),
     }
 );
 //#endregion
@@ -95,6 +95,7 @@ slideshowInfo.push(
             vi: "Alexander Suvorov (1730-1800)"
         },
         size: "129 \u00D7 55 mm",
+        reference: refLink("P-42b", "https://banknote.ws/COLLECTION/countries/EUR/TDN/TDN0042.htm#2012"),
     }
 );
 //#endregion

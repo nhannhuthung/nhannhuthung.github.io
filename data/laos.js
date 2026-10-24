@@ -55,7 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi
         },
         size: "150 \u00D7 69 mm",
-        new: true
+        reference: refLink("P-WA41", "http://www.banknote.ws/COLLECTION/countries/ASI/LAO/LAOWA0041.htm"),
     }
 );
 //#endregion
@@ -89,6 +89,7 @@ slideshowInfo.push(
             vi: "Kaysone Phomvihane (1920-1992)" 
         },
         size: "152 \u00D7 68 mm",
+        reference: refLink("P-W41A", "http://www.banknote.ws/COLLECTION/countries/ASI/LAO/LAOW0041A2.htm"),
     }
 );
 //#endregion
@@ -122,6 +123,7 @@ slideshowInfo.push(
             vi: "Kaysone Phomvihane (1920-1992)" 
         },
         size: "141 \u00D7 65 mm",
+        reference: refLink("P-41a", "http://www.banknote.ws/COLLECTION/countries/ASI/LAO/LAO0041.htm"),
     }
 );
 //#endregion

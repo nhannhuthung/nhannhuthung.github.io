@@ -35,12 +35,12 @@ const slideshowInfo = [null];
 //#region 1 - 2 taka
 images.push([
     {
-        src: imagePath("2011-2024/2-taka", "f"),
+        src: imagePath("2011/2-taka", "f"),
         alt: altInfo("2", "Taka", "Taka", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2011-2024/2-taka", "b"),
+        src: imagePath("2011/2-taka", "b"),
         alt: altInfo("2", "Taka", "Taka", "Back", "sau"),
         description: reverse
     }
@@ -48,6 +48,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("2", "2", "Taka", "Taka"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
         year: "2013",
         type: { 
             en: standInType.en, 
@@ -58,6 +62,7 @@ slideshowInfo.push(
             vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 
         },
         size: "100 \u00D7 60 mm",
+        reference: refLink("P-52c", "https://banknote.ws/COLLECTION/countries/ASI/BDE/BDE0052.htm#2013"),
     }
 );
 //#endregion
@@ -65,12 +70,12 @@ slideshowInfo.push(
 //#region 2 - 5 taka a
 images.push([
     {
-        src: imagePath("2011-2024/5-taka-a", "f"),
+        src: imagePath("2011/5-taka-a", "f"),
         alt: altInfo("5", "Taka", "Taka", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2011-2024/5-taka-a", "b"),
+        src: imagePath("2011/5-taka-a", "b"),
         alt: altInfo("5", "Taka", "Taka", "Back", "sau"),
         description: reverse
     }
@@ -92,6 +97,7 @@ slideshowInfo.push(
             vi: "Bangabandhu Sheikh Mujibur Rahman (1920-1975)" 
         },
         size: "142 \u00D7 68 mm",
+        reference: refLink("P-53Ab", "https://banknote.ws/COLLECTION/countries/ASI/BDE/BDE0053A2.htm#53Ab"),
     }
 );
 //#endregion

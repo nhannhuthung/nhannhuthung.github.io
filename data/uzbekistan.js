@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "142 \u00D7 69 mm",
+        reference: refLink("P-79a(1)", "https://banknote.ws/COLLECTION/countries/ASI/UZB/UZB0079.htm"),
     }
 );
 //#endregion
@@ -86,6 +87,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "145 \u00D7 77 mm",
+        reference: refLink("P-80", "https://banknote.ws/COLLECTION/countries/ASI/UZB/UZB0080.htm"),
     }
 );
 //#endregion
@@ -116,6 +118,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "144 \u00D7 78 mm",
+        reference: refLink("P-81(2)", "https://banknote.ws/COLLECTION/countries/ASI/UZB/UZB0081.htm#81-2"),
     }
 );
 //#endregion

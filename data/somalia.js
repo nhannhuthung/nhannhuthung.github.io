@@ -20,7 +20,8 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
     en: `${denomEng} Somali ${currencyEng}`,  
     vi: `${denomViet} ${currencyViet} Somalia` 
 });
-const issuer = { en: "Central Bank Of Somalia", vi: "Ngân Hàng Trung Ương Somalia" };
+const issuer1 = { en: "Central Bank Of Somalia", vi: "Ngân Hàng Trung Ương Somalia" };
+const issuer2 = { en: "Mogadishu Northern Forces", vi: "Lực Lượng Miền Bắc Mogadishu" };
 const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
 
@@ -47,8 +48,8 @@ slideshowInfo.push(
     {
         title: currencyInfo("50", "50", "Shillings", "Shilling"),
         issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
+            en: issuer2.en, 
+            vi: issuer2.vi 
         },
         year: "1991",
         type: { 
@@ -56,10 +57,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "140 \u00D7 70 mm",
-        note: {
-            en: "This banknote was intended for circulation in areas controlled by the Mogadishu Northern Forces during the civil war.",
-            vi: "Tờ tiền này được lưu hành bởi Lực lượng miền Bắc Mogadishu trong thời gian nội chiến."
-        },
+        reference: refLink("P-R2(3)", "https://banknote.ws/COLLECTION/countries/AFR/SOM/SOMR0002.htm#R2-3"),
     }
 );
 //#endregion

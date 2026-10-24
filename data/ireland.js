@@ -60,6 +60,7 @@ slideshowInfo.push(
             en: "Catherine McAuley (1778-1841)", 
             vi: "Catherine McAuley (1778-1841)" 
         },
+        reference: refLink("P-53Aa", "https://en.numista.com/catalogue/note206543.html"),
     }
 );
 //#endregion

@@ -1,6 +1,11 @@
 # nhannhuthung.github.io
 
-Source for gathering the information: wikipedia, numista.com, atsnotes.com, banknote.ws, ibns.com
+Source for gathering the information: 
+    wikipedia       (general) 
+    numista.com     (information) 
+    atsnotes.com    (series) 
+    banknote.ws     (reference/pick code) 
+    ibns.com        (banknote nomination)
 
 For "country name".html file, use these codes to separate the series of banknote:
     <hr width="75%" size="2" style="margin-top: 25px;">

@@ -58,6 +58,7 @@ slideshowInfo.push(
             vi: comInType.vi 
         },
         size: "65 \u00D7 150 mm",
+        reference: refLink("P-280x", "https://banknote.ws/COLLECTION/countries/EUR/RUS/RUS-GENERAL/RUS0280.htm#280x"),
         note: { 
             en: `2018\'s top 16 banknotes by ${ibnsLink}`, 
             vi: `Top 16 tờ tiền năm 2018 theo ${ibnsLink}`

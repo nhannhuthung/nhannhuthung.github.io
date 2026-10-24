@@ -59,6 +59,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "138 \u00D7 69 mm",
+        reference: refLink("P-80a", "https://banknote.ws/COLLECTION/countries/ASI/MAC/MAC0080.htm"),
         note: {
             en: `2006\'s top 15 banknotes by ${ibnsLink}`,
             vi: `Top 15 tờ tiền của năm 2006 theo ${ibnsLink}`
@@ -70,12 +71,12 @@ slideshowInfo.push(
 //#region 2 - 10 pataca
 images.push([
     {
-        src: imagePath("new-year/10-pataca", "f"),
+        src: imagePath("2012-2023/10-pataca", "f"),
         alt: altInfo("10", "Patacas", "Pataca", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("new-year/10-pataca", "b"),
+        src: imagePath("2012-2023/10-pataca", "b"),
         alt: altInfo("10", "Patacas", "Pataca", "Back", "sau"),
         description: reverse
     }
@@ -83,6 +84,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Patacas", "Pataca"),
+        subtitle: {
+            en: "Year Of The Horse 2014",
+            vi: "Năm Giáp Ngọ 2014"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -93,6 +98,7 @@ slideshowInfo.push(
             vi: comInType.vi 
         },
         size: "138 \u00D7 69 mm",
+        reference: refLink("P-87", "https://banknote.ws/COLLECTION/countries/ASI/MAC/MAC0087.htm"),
         note: {
             en: `2014\'s top 12 banknotes by ${ibnsLink}`,
             vi: `Top 12 tờ tiền của năm 2014 theo ${ibnsLink}`

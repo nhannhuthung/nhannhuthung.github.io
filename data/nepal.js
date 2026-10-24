@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "120 \u00D7 70 mm",
+        reference: refLink("P-60b", "https://banknote.ws/COLLECTION/countries/ASI/NEP/NEP0060.htm#60-2"),
     }
 );
 //#endregion
@@ -85,7 +86,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "133 \u00D7 70 mm",
-        new: true,   
+        reference: refLink("P-77 2024", "https://banknote.ws/COLLECTION/countries/ASI/NEP/NEP0077.htm#2024"),   
     }
 );
 //#endregion

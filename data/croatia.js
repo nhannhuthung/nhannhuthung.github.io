@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: "Roger Joseph Boscovich (1711-1787)" 
         },
         size: "105 \u00D7 55 mm",
+        reference: refLink("P-17", "https://banknote.ws/COLLECTION/countries/EUR/CRO/CRO0017.htm"),
     }
 );
 //#endregion

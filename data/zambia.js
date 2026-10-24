@@ -59,6 +59,7 @@ slideshowInfo.push(
             vi: "Kenneth Kaunda (1924-2021)" 
         },
         size: "153 \u00D7 75 mm",
+        reference: refLink("P-28", "https://banknote.ws/COLLECTION/countries/AFR/ZAM/ZAM0028.htm"),
     }
 );
 //#endregion

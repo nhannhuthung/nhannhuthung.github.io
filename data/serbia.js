@@ -25,54 +25,20 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "3 2 1";
+const layout = "3 2 | 1";
 
 const images = [null];
 const slideshowInfo = [null];
 
-//#region 1 - 20 dinar
+//#region 1 - 50 dinar
 images.push([
     {
-        src: imagePath("3/20-dinar", "f"),
-        alt: altInfo("20", "Dinara", "Dinar", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("3/20-dinar", "b"),
-        alt: altInfo("20", "Dinara", "Dinar", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("20", "20", "Dinara", "Dinar"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        year: "2013",
-        type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
-        },
-        figure: {
-            en: "Petar II Petrović-Njegoš (1813-1851)",
-            vi: "Petar II Petrović-Njegoš (1813-1851)",
-        },
-        size: "135 \u00D7 64 mm",
-    }
-);
-//#endregion
-
-//#region 2 - 50 dinar
-images.push([
-    {
-        src: imagePath("3/50-dinar", "f"),
+        src: imagePath("2003/50-dinar", "f"),
         alt: altInfo("50", "Dinara", "Dinar", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("3/50-dinar", "b"),
+        src: imagePath("2003/50-dinar", "b"),
         alt: altInfo("50", "Dinara", "Dinar", "Back", "sau"),
         description: reverse
     }
@@ -94,6 +60,42 @@ slideshowInfo.push(
             vi: "Stevan Stojanović Mokranjac (1856-1914)"
         },
         size: "139 \u00D7 66 mm",
+        reference: refLink("P-40a", "https://banknote.ws/COLLECTION/countries/EUR/SER/SER0040.htm"),
+    }
+);
+//#endregion
+
+//#region 2 - 20 dinar
+images.push([
+    {
+        src: imagePath("2011/20-dinar", "f"),
+        alt: altInfo("20", "Dinara", "Dinar", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2011/20-dinar", "b"),
+        alt: altInfo("20", "Dinara", "Dinar", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("20", "20", "Dinara", "Dinar"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2013",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: {
+            en: "Petar II Petrović-Njegoš (1813-1851)",
+            vi: "Petar II Petrović-Njegoš (1813-1851)",
+        },
+        size: "135 \u00D7 64 mm",
+        reference: refLink("P-55b", "https://banknote.ws/COLLECTION/countries/EUR/SER/SER0055.htm#2013"),
     }
 );
 //#endregion
@@ -101,12 +103,12 @@ slideshowInfo.push(
 //#region 3 - 200 dinar
 images.push([
     {
-        src: imagePath("3/200-dinar", "f"),
+        src: imagePath("2011/200-dinar", "f"),
         alt: altInfo("200", "Dinara", "Dinar", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("3/200-dinar", "b"),
+        src: imagePath("2011/200-dinar", "b"),
         alt: altInfo("200", "Dinara", "Dinar", "Back", "sau"),
         description: reverse
     }
@@ -128,6 +130,7 @@ slideshowInfo.push(
             vi: "Nadežda Petrović (1873-1915)"
         },
         size: "147 \u00D7 70 mm",
+        reference: refLink("P-58a", "https://banknote.ws/COLLECTION/countries/EUR/SER/SER0058.htm"),
     }
 );
 //#endregion

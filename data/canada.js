@@ -30,7 +30,7 @@ const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_c
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "17 | 16 | 15 : 14 13 12 11 10 | 9 8 7 | 6 5 | 4 : 3 2 1";
+const layout = "17 | 16 | 15 | 14 13 12 11 10 | 9 8 : 7 | 6 5 | 4 | 3 2 1";
 
 const images = [null];
 const slideshowInfo = [null];
@@ -38,12 +38,12 @@ const slideshowInfo = [null];
 //#region 1 - 1 dollar
 images.push([
     {
-        src: imagePath("1954/1-dollar-1954", "f"),
+        src: imagePath("1954/1-dollar", "f"),
         alt: altInfo("1", "Dollar", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1954/1-dollar-1954", "b"),
+        src: imagePath("1954/1-dollar", "b"),
         alt: altInfo("1", "Dollar", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -64,6 +64,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-74b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0074.htm#74b"),
     }
 );
 //#endregion
@@ -97,6 +98,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-76b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0076.htm#76b"),
     }
 );
 //#endregion
@@ -130,6 +132,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-79b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0079.htm#79b"),
     }
 );
 //#endregion
@@ -137,12 +140,12 @@ slideshowInfo.push(
 //#region 4 - 1 dollar
 images.push([
     {
-        src: imagePath("1954/1-dollar-1967", "f"),
+        src: imagePath("1967/1-dollar", "f"),
         alt: altInfo("1", "Dollar", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("1954/1-dollar-1967", "b"),
+        src: imagePath("1967/1-dollar", "b"),
         alt: altInfo("1", "Dollar", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -150,6 +153,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("1", "1", "Dollar", "Đô La"),
+        subtitle: {
+            en: "Centennial of Canadian Confederation (1867-1967)",
+            vi: "Kỷ niệm bách niên Liên bang Canada (1867-1967)"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -163,6 +170,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-84b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0084.htm#84b"),
     }
 );
 //#endregion
@@ -196,6 +204,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-86b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0086.htm#86b"),
     }
 );
 //#endregion
@@ -229,79 +238,12 @@ slideshowInfo.push(
             vi: "Wilfrid Laurier (1841-1919)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-87b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0087.htm#87b"),
     }
 );
 //#endregion
 
-//#region 7 - 5 dollar
-images.push([
-    {
-        src: imagePath("2001-2006/5-dollar", "f"),
-        alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("2001-2006/5-dollar", "b"),
-        alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("5", "5", "Dollars", "Đô La"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        year: "2010",
-        type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
-        },
-        figure: { 
-            en: "Wilfrid Laurier (1841-1919)", 
-            vi: "Wilfrid Laurier (1841-1919)" 
-        },
-        size: "153 \u00D7 70 mm",
-    }
-);
-//#endregion
-
-//#region 8 - 10 dollar
-images.push([
-    {
-        src: imagePath("2001-2006/10-dollar", "f"),
-        alt: altInfo("10", "Dollars", "Đô La", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("2001-2006/10-dollar", "b"),
-        alt: altInfo("10", "Dollars", "Đô La", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("10", "10", "Dollars", "Đô La"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        year: "2007",
-        type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
-        },
-        figure: { 
-            en: "John A. Macdonald (1815-1891)", 
-            vi: "John A. Macdonald (1815-1891)" 
-        },
-        size: "153 \u00D7 70 mm",
-    }
-);
-//#endregion
-
-//#region 9 - 20 dollar
+//#region 7 - 20 dollar
 images.push([
     {
         src: imagePath("2001-2006/20-dollar", "f"),
@@ -331,10 +273,81 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-103b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0103.htm#103b"),
         note: {
             en: `Banknote of 2004 by ${ibnsLink}`,
             vi: `Tờ tiền của năm 2004 theo ${ibnsLink}`
         }
+    }
+);
+//#endregion
+
+//#region 8 - 5 dollar
+images.push([
+    {
+        src: imagePath("2001-2006/5-dollar", "f"),
+        alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2001-2006/5-dollar", "b"),
+        alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("5", "5", "Dollars", "Đô La"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2010",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "Wilfrid Laurier (1841-1919)", 
+            vi: "Wilfrid Laurier (1841-1919)" 
+        },
+        size: "153 \u00D7 70 mm",
+        reference: refLink("P-101Ad", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0101A2.htm#101Ad"),
+    }
+);
+//#endregion
+
+//#region 9 - 10 dollar
+images.push([
+    {
+        src: imagePath("2001-2006/10-dollar", "f"),
+        alt: altInfo("10", "Dollars", "Đô La", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2001-2006/10-dollar", "b"),
+        alt: altInfo("10", "Dollars", "Đô La", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2007",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        figure: { 
+            en: "John A. Macdonald (1815-1891)", 
+            vi: "John A. Macdonald (1815-1891)" 
+        },
+        size: "153 \u00D7 70 mm",
+        reference: refLink("P-102Ab", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0102A2.htm#102Ab"),
     }
 );
 //#endregion
@@ -368,6 +381,7 @@ slideshowInfo.push(
             vi: "Wilfrid Laurier (1841-1919)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-106[f]", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0106.htm#106f"),
     }
 );
 //#endregion
@@ -401,6 +415,7 @@ slideshowInfo.push(
             vi: "John A. Macdonald (1815-1891)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-107c", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0107.htm#107c"),
         note: {
             en: `2013\'s top 12 banknotes by ${ibnsLink}`,
             vi: `Top 12 tờ tiền của năm 2013 theo ${ibnsLink}`
@@ -438,6 +453,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-108b", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0108.htm#108b"),
     }
 );
 //#endregion
@@ -471,6 +487,7 @@ slideshowInfo.push(
             vi: "W. L. Mackenzie King (1874-1950)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-109[d]", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0109.htm#109d"),
         note: {
             en: `2012\'s top 13 banknotes by ${ibnsLink}`,
             vi: `Top 13 tờ tiền của năm 2012 theo ${ibnsLink}`
@@ -508,6 +525,7 @@ slideshowInfo.push(
             vi: "Robert L. Borden (1854-1937)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-110c", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0110.htm#110c"),
         note: {
             en: `2011\'s top 12 banknotes by ${ibnsLink}`,
             vi: `Top 12 tờ tiền của năm 2011 theo ${ibnsLink}`
@@ -519,12 +537,12 @@ slideshowInfo.push(
 //#region 15 - 20 dollar
 images.push([
     {
-        src: imagePath("2011-2013/20-dollar-com", "f"),
+        src: imagePath("2015/20-dollar", "f"),
         alt: altInfo("20", "Dollars", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("2011-2013/20-dollar-com", "b"),
+        src: imagePath("2015/20-dollar", "b"),
         alt: altInfo("20", "Dollars", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -532,6 +550,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("20", "20", "Dollars", "Đô La"),
+        subtitle: {
+            en: "Queen Elizabeth II Becoming The Longest-reigning Sovereign In Britain's History",
+            vi: "Nữ Hoàng Elizabeth II Trở Thành Vị Quân Chủ Trị Vì Lâu Nhất Trong Lịch Sử Anh"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -545,6 +567,7 @@ slideshowInfo.push(
             vi: "Elizabeth II (1952-2022)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-111", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0111.htm"),
     }
 );
 //#endregion
@@ -565,6 +588,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        subtitle: {
+            en: "Canada's 150th Anniversary",
+            vi: "Kỷ Niệm 150 Năm Canada"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
@@ -579,6 +606,7 @@ slideshowInfo.push(
             vi: "John A. Macdonald (1815-1891), George-Étienne Cartier (1814-1873), Agnes Macphail (1890-1954), James Gladstone (1887-1971)" 
         },
         size: "153 \u00D7 70 mm",
+        reference: refLink("P-112", "https://banknote.ws/COLLECTION/countries/AME/CAN/CAN0112.htm"),
         note: {
             en: `2017\'s top 22 banknotes by ${ibnsLink}`,
             vi: `Top 22 tờ tiền của năm 2017 theo ${ibnsLink}`
@@ -608,14 +636,15 @@ slideshowInfo.push(
             vi: issuer.vi 
         },
         type: { 
-            en: comInType.en, 
-            vi: comInType.vi 
+            en: standInType.en, 
+            vi: standInType.vi 
         },
         figure: { 
             en: "Viola Desmond (1914-1965)", 
             vi: "Viola Desmond (1914-1965)" 
         },
         size: "70 \u00D7 153 mm",
+        reference: refLink("P-W113(1)", "https://banknote.ws/COLLECTION/countries/AME/CAN/CANW2018-010.htm"),
         note: {
             en: `Banknote of 2018 by ${ibnsLink}`,
             vi: `Tờ tiền của năm 2018 theo ${ibnsLink}`

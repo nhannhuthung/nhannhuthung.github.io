@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "155 \u00D7 75 mm",
+        reference: refLink("P-108", "https://banknote.ws/COLLECTION/countries/ASI/SYR/SYR0108.htm"),
     }
 );
 //#endregion
@@ -84,6 +85,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "160 \u00D7 75 mm",
+        reference: refLink("P-109", "https://banknote.ws/COLLECTION/countries/ASI/SYR/SYR0109.htm"),
     }
 );
 //#endregion

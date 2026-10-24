@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Qaboos bin Said (1940-2020)" 
         },
         size: "140 \u00D7 72 mm",
+        reference: refLink("P-31", "https://banknote.ws/COLLECTION/countries/ASI/OMA/OMA0031.htm"),
     }
 );
 //#endregion
@@ -90,6 +91,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "156 \u00D7 75 mm",
+        reference: refLink("P-W51", "https://banknote.ws/COLLECTION/countries/ASI/OMA/OMAW2020-01.htm"),
     }
 );
 //#endregion

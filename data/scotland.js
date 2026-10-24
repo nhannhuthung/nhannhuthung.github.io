@@ -63,6 +63,7 @@ slideshowInfo.push(
             vi: "Ilay Campbell (1734-1823)"
         },
         size: "128 \u00D7 65 mm",
+        reference: refLink("P-351c", "https://banknote.ws/COLLECTION/countries/EUR/SCO/SCO0351.htm#24031992"),
     }
 );
 //#endregion
@@ -97,6 +98,7 @@ slideshowInfo.push(
             vi: "William Arol (1839-1913)" 
         },
         size: "125 \u00D7 65 mm",
+        reference: refLink("P-229Na", "https://banknote.ws/COLLECTION/countries/EUR/SCO/SCO0229N2.htm"),
         note: { 
             en: `2015\'s top 20 banknotes by ${ibnsLink}`, 
             vi: `Top 20 tờ tiền năm 2015 theo ${ibnsLink}` 

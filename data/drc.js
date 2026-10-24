@@ -1,6 +1,6 @@
 const translations = {
     heading: {
-        en: "Democratic Republic of the Congo",
+        en: "Democratic Republic Of The Congo",
         vi: "Cộng Hòa Dân Chủ Congo"
     }
 };
@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "150 \u00D7 70 mm",
+        reference: refLink("P-97A(1)", "https://banknote.ws/COLLECTION/countries/AFR/CDR/CDR0097A2.htm"),
     }
 );
 //#endregion

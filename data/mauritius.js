@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Moilin Jean Ah-Chuen (1911-1991)" 
         },
         size: "135 \u00D7 65 mm",
+        reference: refLink("P-49b", "https://banknote.ws/COLLECTION/countries/AFR/MRS/MRS0049.htm#49b"),
     }
 );
 //#endregion
@@ -94,6 +95,7 @@ slideshowInfo.push(
             vi: "Joseph Maurice Paturau (1916-1996)" 
         },
         size: "140 \u00D7 68 mm",
+        reference: refLink("P-50b", "https://banknote.ws/COLLECTION/countries/AFR/MRS/MRS0050.htm#50b"),
     }
 );
 //#endregion
@@ -128,6 +130,7 @@ slideshowInfo.push(
             vi: "Renganaden Seeneevassen (1910-1958)" 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-56a", "https://banknote.ws/COLLECTION/countries/AFR/MRS/MRS0056.htm"),
     }
 );
 //#endregion

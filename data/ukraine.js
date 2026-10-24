@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Volodymyr I Sviatoslavych (958?-1015)"
         },
         size: "118 \u00D7 63 mm",
+        reference: refLink("P-116Ac", "https://banknote.ws/COLLECTION/countries/EUR/UKR/UKR0116A2.htm#2014"),
     }
 );
 //#endregion

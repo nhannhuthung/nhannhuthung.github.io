@@ -34,7 +34,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> I have a few silver coins and I display them in the highlight section right below.`,
         remark_para_3: `My collection is expanding with banknotes. Right now, I prefer collecting banknotes over coins because they are lighter, neater and have higher value.`,
 
-        last_update: `Last Updated: 30/09/2026`,
+        last_update: `Last Updated: 24/10/2026`,
 
         highlight: `Highlight`,
         banknote: `Banknote`,
@@ -72,7 +72,7 @@ const main_trans = {
         remark_subpara_2: `<span>&#9996;</span> Mình có vài đồng tiền bằng bạc và mình có để ở phần tâm điểm ngay bên dưới.`,
         remark_para_3: `Mình cũng mở rộng bộ sưu tập với tiền giấy. Hiện tại, mình tập trung vào sưu tầm tiền giấy nhiều hơn tiền xu tại vì nó nhẹ, gọn và có giá trị cao hơn.`,
 
-        last_update: `Cập Nhật Lần Cuối: 30/09/2026`,
+        last_update: `Cập Nhật Lần Cuối: 24/10/2026`,
 
         highlight: `Tâm Điểm`,
         banknote: `Tiền Giấy`,

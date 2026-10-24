@@ -58,6 +58,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "158 \u00D7 67 mm",
+        reference: refLink("P-189 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0189.htm#2024"),
     }
 );
 //#endregion
@@ -92,6 +93,7 @@ slideshowInfo.push(
             vi: "Francisco del Rosario Sánchez (1817-1861), Juan Pablo Duarte (1813-1876), Matías Ramón Mella (1816-1864)"
         },
         size: "158 \u00D7 67 mm",
+        reference: refLink("P-190 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0190.htm#2024"),
     }
 );
 //#endregion
@@ -126,6 +128,7 @@ slideshowInfo.push(
             vi: "Patria Mirabal (1926-1960), Minerva Mirabal (1926-1960), María Teresa Mirabal (1935-1960)"
         },
         size: "158 \u00D7 67 mm",
+        reference: refLink("P-191 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0191.htm#2024"),
         new: true,
     }
 );
@@ -161,6 +164,7 @@ slideshowInfo.push(
             vi: "Salomé Ureña (1850-1897), Pedro Henríquez Ureña (1884-1946)"
         },
         size: "158 \u00D7 67 mm",
+        reference: refLink("P-192 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0192.htm#2024"),
         new: true,
     }
 );
@@ -192,6 +196,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "158 \u00D7 67 mm",
+        reference: refLink("P-193 2025", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0193.htm#2025"),
         new: true,
     }
 );
@@ -231,6 +236,7 @@ slideshowInfo.push(
             en: `2014\'s top 12 banknotes by ${ibnsLink}`, 
             vi: `Top 12 tờ tiền năm 2014 theo ${ibnsLink}`
         },
+        reference: refLink("P-194 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0194.htm#2024"),
         new: true,
     }
 );

@@ -20,6 +20,7 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
     en: `${denomEng} Hongkongese ${currencyEng}`,  
     vi: `${denomViet} ${currencyViet} Hồng Kông` 
 });
+const issuer = { en: "Government Of Hong Kong", vi: "Chính Phủ Hồng Kông" };
 const issuerBochk = { en: "Bank Of China", vi: "Ngân Hàng Trung Quốc" };
 const issuerHsbc = { en: "HSBC", vi: "HSBC" };
 const issuerScbhk = { en: "Standard Chartered Bank", vi: "Ngân Hàng Standard Chartered"}
@@ -50,12 +51,17 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
         year: "2002",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
         },
         size: "138 \u00D7 69 mm",
+        reference: refLink("P-400a", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0400.htm"),
     }
 );
 //#endregion
@@ -76,12 +82,17 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("10", "10", "Dollars", "Đô La"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
         year: "2014",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
         },
         size: "138 \u00D7 69 mm",
+        reference: refLink("P-401d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0401.htm#2014"),
     }
 );
 //#endregion
@@ -112,6 +123,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "148 \u00D7 74 mm",
+        reference: refLink("P-336d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0336.htm#336d"),
     }
 );
 //#endregion
@@ -142,6 +154,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "148 \u00D7 74 mm",
+        reference: refLink("P-208f", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0208.htm#208f"),
     }
 );
 //#endregion
@@ -172,6 +185,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-209e", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0209.htm#209e"),
     }
 );
 //#endregion
@@ -202,6 +216,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "148 \u00D7 74 mm",
+        reference: refLink("P-292", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0292.htm"),
     }
 );
 //#endregion
@@ -232,6 +247,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "143 \u00D7 72 mm",
+        reference: refLink("P-341d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0341.htm#2014"),
     }
 );
 //#endregion
@@ -262,6 +278,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-343d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0343.htm#2014"),
     }
 );
 //#endregion
@@ -292,6 +309,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "143 \u00D7 72 mm",
+        reference: refLink("P-212c", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0212.htm#2013"),
     }
 );
 //#endregion
@@ -322,6 +340,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "148 \u00D7 74 mm",
+        reference: refLink("P-213b", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0213.htm#2012"),
     }
 );
 //#endregion
@@ -352,6 +371,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-214b", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0214.htm#2012"),
     }
 );
 //#endregion
@@ -382,6 +402,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "158 \u00D7 79 mm",
+        reference: refLink("P-215d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0215.htm#2014"),
     }
 );
 //#endregion
@@ -412,6 +433,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-299 2016", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0299.htm#2016"),
     }
 );
 //#endregion
@@ -442,6 +464,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "158 \u00D7 79 mm",
+        reference: refLink("P-300d", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKG0300.htm#2014"),
     }
 );
 //#endregion
@@ -472,6 +495,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-W350 2018", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKGW2018-0100-BOC.htm"),
         note: {
             en: `2019\'s top 22 banknotes by ${ibnsLink}`,
             vi: `Top 22 tờ tiền của năm 2019 theo ${ibnsLink}`
@@ -506,9 +530,10 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-W219 2018", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKGW2018-0050-HSB.htm"),
         special: {
-            en: "My favorite banknotes.",
-            vi: "Tờ tiền mình yêu thích."
+            en: "My favorite banknotes",
+            vi: "Tờ tiền mình yêu thích"
         },
     }
 );
@@ -540,6 +565,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "153 \u00D7 77 mm",
+        reference: refLink("P-W220 2018", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKGW2018-0100-HSB.htm"),
     }
 );
 //#endregion
@@ -570,6 +596,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "143 \u00D7 72 mm",
+        reference: refLink("P-W302 2020", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKGW2018-0020-SCB.htm#2020"),
     }
 );
 //#endregion
@@ -600,6 +627,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "158 \u00D7 79 mm",
+        reference: refLink("P-W305 2020", "http://www.banknote.ws/COLLECTION/countries/ASI/HKG/HKGW2018-0500-SCB.htm#2020"),
     }
 );
 //#endregion

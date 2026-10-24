@@ -9,10 +9,28 @@ const fixed_trans = {
         contact: `Contact`,
         search_placeholder: `Enter page name...`,
         back_to_top: `Top`,
-        play_all: `Play all slideshows`,
-        pause_all: `Pause all slideshows`,
         // the toggle names the language you switch TO first
         lang_toggle: `Vie | Eng`,
+
+        // banknote list
+        compact: `Compact`,
+        album: `Album`,
+        banknote_one: `banknote`,
+        banknote_many: `banknotes`,
+        col_no: `No.`,
+        col_photos: `Photos`,
+        col_note: `Banknote`,
+        col_year: `Year`,
+        col_type: `Type`,
+        col_ref: `Reference`,
+        issuer: `Issuer`,
+        size: `Dimension`,
+        reference: `Reference`,
+        new_tag: `NEW`,
+        view_larger: `View larger`,
+        viewer_close: `Close`,
+        viewer_prev: `Previous side`,
+        viewer_next: `Next side`,
     },
     vi: {
         home: `Trang Chủ`,
@@ -21,9 +39,26 @@ const fixed_trans = {
         contact: `Liên Hệ`,
         search_placeholder: `Nhập tên trang...`,
         back_to_top: `Đầu`,
-        play_all: `Phát tất cả`,
-        pause_all: `Dừng tất cả`,
         lang_toggle: `Eng | Vie`,
+
+        compact: `Gọn`,
+        album: `Album`,
+        banknote_one: `tờ tiền`,
+        banknote_many: `tờ tiền`,
+        col_no: `Số`,
+        col_photos: `Ảnh`,
+        col_note: `Tờ Tiền`,
+        col_year: `Năm`,
+        col_type: `Loại`,
+        col_ref: `Mã Tham Chiếu`,
+        issuer: `Đơn Vị Phát Hành`,
+        size: `Kích Thước`,
+        reference: `Mã Tham Chiếu`,
+        new_tag: `MỚI`,
+        view_larger: `Xem lớn hơn`,
+        viewer_close: `Đóng`,
+        viewer_prev: `Mặt trước đó`,
+        viewer_next: `Mặt tiếp theo`,
     }
 };
 
@@ -70,6 +105,14 @@ function updatePageLanguage(currentLang) {
         { selector: "searchInput", key: "search_placeholder", attr: "placeholder" },
         { selector: "back-to-top", key: "back_to_top"},
         { selector: "lang-toggle", key: "lang_toggle"},
+        { selector: "view-compact", key: "compact" },
+        { selector: "view-album", key: "album" },
+        { selector: "col-no", key: "col_no" },
+        { selector: "col-photos", key: "col_photos" },
+        { selector: "col-note", key: "col_note" },
+        { selector: "col-year", key: "col_year" },
+        { selector: "col-type", key: "col_type" },
+        { selector: "col-ref", key: "col_ref" },
     ];
 
     foundationToUpdate.forEach(({ selector, key, attr }) => {
@@ -84,475 +127,369 @@ function updatePageLanguage(currentLang) {
     });
 }
 
+// The heading comes from `translations.heading` in the data file. An optional
+// `translations.subtitle` ({ en, vi }) shows in italics underneath.
 function updatePageHeading(currentLang) {
     const headingElement = document.getElementById('page-heading');
     if (headingElement && typeof translations !== 'undefined' && translations.heading) {
         headingElement.textContent = translations.heading[currentLang] || translations.heading.en;
     }
+
+    const subtitleElement = document.getElementById('page-subtitle');
+    if (subtitleElement) {
+        const subtitle = (typeof translations !== 'undefined') ? noteText(translations.subtitle) : "";
+        subtitleElement.innerHTML = subtitle;
+        subtitleElement.hidden = !subtitle;
+    }
 }
 
 function toggleLanguage() {
-    currentLang = currentLang === "en" ? "vi" : "en"; 
-    localStorage.setItem("language", currentLang); 
+    currentLang = currentLang === "en" ? "vi" : "en";
+    localStorage.setItem("language", currentLang);
 
     updatePageLanguage(currentLang);
     updatePageHeading(currentLang);
-    insertSidebarHTML('SideBar'); 
-    insertSidebarHTML('SideBarCollection'); 
+    insertSidebarHTML('SideBar');
+    insertSidebarHTML('SideBarCollection');
     createNavigationButtons();
-
-    // Remove old slideshow info before regenerating
-    const playPauseBtn = document.getElementById('global-play-pause-btn');
-    if (playPauseBtn) {
-        playPauseBtn.title = Slideshow.globalPaused ? 
-            fixed_trans[currentLang].play_all : 
-            fixed_trans[currentLang].pause_all;
-    }
-
-    document.querySelectorAll(".slideshow-info").forEach(el => el.remove());
-
-    Object.keys(images).forEach(index => {
-        // Re-translate the alt text of each slide image from the data
-        const slideContainer = document.getElementById("slide" + index);
-        if (slideContainer) {
-            const imgs = slideContainer.querySelectorAll(".mySlides img");
-            imgs.forEach((img, i) => {
-                const altData = images[index][i] && images[index][i].alt;
-                if (altData) {
-                    img.alt = altData[currentLang] || altData.en;
-                }
-            });
-        }
-
-        generateSlideShowInfo("info" + index, slideshowInfo[index]);
-    });
+    // rebuilt in the new language; the notes that were open stay open
+    renderNotes();
+    if (viewerNote !== null) showNoteViewerPhoto();
 }
 //--// function to print out code for sidebar //--//
 
 
-//--// function to display banknote //--//
-class Slideshow {
-    static allSlideshows = []; // Track all slideshow instances
-    // Global pause state, remembered across pages like the language and theme
-    // choices, so it survives navigating to another region (default: playing).
-    static globalPaused = localStorage.getItem("slideshowPaused") === "true";
-    static globalButtonCreated = false; // Track if global button exists
-
-    constructor(containerId, interval = 5000, infoConfig = null) {
-        this.container = document.getElementById(containerId);
-        if (!this.container) {
-            console.error(`Container with id "${containerId}" not found.`);
-            return;
-        }
-        this.slides = this.container.getElementsByClassName("mySlides");
-        this.slideIndex = 0;
-        this.interval = interval;
-        this.autoSlideTimeout = null;
-        this.isPausedByHover = false;
-        this.isZoomed = false;
-        this.infoConfig = infoConfig;
-        this.isAutoPlaying = false; // NEW: Track if this slideshow is auto-playing
-
-        // Add this instance to the global array
-        Slideshow.allSlideshows.push(this);
-
-        // Start the slideshow
-        this.showSlides();
-
-        // Auto-play by default (resume() starts the timer unless globally paused)
-        this.resume();
-
-        // Add navigation arrows
-        this.addNavigationArrows();
-        
-        // Create global play/pause button only once
-        if (!Slideshow.globalButtonCreated) {
-            Slideshow.createGlobalPlayPauseButton();
-            Slideshow.globalButtonCreated = true;
-        }
-    }
-
-    static createGlobalPlayPauseButton() {
-        const playPauseBtn = document.createElement("button");
-        playPauseBtn.id = "global-play-pause-btn";
-        playPauseBtn.className = "global-play-pause-btn";
-        // Reflect the current play state (default is playing)
-        playPauseBtn.innerHTML = Slideshow.globalPaused ? "&#9654;" : "&#10074;&#10074;";
-        playPauseBtn.title = Slideshow.globalPaused ? fixed_trans[currentLang].play_all : fixed_trans[currentLang].pause_all;
-        
-        playPauseBtn.onclick = () => {
-            Slideshow.toggleGlobalPlayPause(playPauseBtn);
-        };
-
-        document.body.appendChild(playPauseBtn);
-    }
-
-    static toggleGlobalPlayPause(button) {
-        Slideshow.globalPaused = !Slideshow.globalPaused;
-        localStorage.setItem("slideshowPaused", Slideshow.globalPaused);
-
-
-        if (Slideshow.globalPaused) {
-            // Pause all slideshows
-            button.innerHTML = "&#9654;"; // Play icon
-            button.title = fixed_trans[currentLang].play_all;
-            Slideshow.allSlideshows.forEach(slideshow => {
-                slideshow.pause();
-            });
-        } else {
-            // Resume all slideshows
-            button.innerHTML = "&#10074;&#10074;"; // Pause icon
-            button.title = fixed_trans[currentLang].pause_all;
-            Slideshow.allSlideshows.forEach(slideshow => {
-                slideshow.resume();
-            });
-        }
-    }
-
-    addNavigationArrows() {
-        // Find the slideshow-container div (the actual container with slides)
-        const slideshowContainer = this.container.querySelector('.slideshow-container');
-        if (!slideshowContainer) return;
-
-        // Create previous arrow
-        const prevArrow = document.createElement("a");
-        prevArrow.className = "slide-arrow prev";
-        prevArrow.innerHTML = "&#10094;";
-        prevArrow.onclick = (e) => {
-            e.stopPropagation();
-            this.changeSlide(-1);
-        };
-
-        // Create next arrow
-        const nextArrow = document.createElement("a");
-        nextArrow.className = "slide-arrow next";
-        nextArrow.innerHTML = "&#10095;";
-        nextArrow.onclick = (e) => {
-            e.stopPropagation();
-            this.changeSlide(1);
-        };
-
-        slideshowContainer.appendChild(prevArrow);
-        slideshowContainer.appendChild(nextArrow);
-    }
-
-    changeSlide(direction) {
-        clearTimeout(this.autoSlideTimeout);
-
-        // Hide all slides
-        for (let i = 0; i < this.slides.length; i++) {
-            this.slides[i].style.display = "none";
-        }
-
-        // Calculate new slide index
-        this.slideIndex = (this.slideIndex + direction + this.slides.length) % this.slides.length;
-        this.slides[this.slideIndex].style.display = "block";
-
-        // Re-attach listeners to the new image
-        this.addImageListeners();
-        this.updateInfo();
-
-        // Restart auto-sliding only if global play is active
-        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
-            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
-        }
-    }
-
-    updateInfo() {
-        if (this.infoConfig && this.infoConfig.containerId && this.infoConfig.data) {
-            generateSlideShowInfo(
-                this.infoConfig.containerId,
-                this.infoConfig.data,
-                localStorage.getItem("language") || "en",
-                this.slideIndex
-            );
-        }
-    }
-
-    addImageListeners() {
-        const currentSlide = this.slides[this.slideIndex];
-        const img = currentSlide.querySelector("img");
-        if (!img) return;
-
-        // Click to zoom/unzoom
-        img.onclick = (e) => {
-            e.stopPropagation();
-            this.toggleZoom();
-        };
-
-        // Hover effects only when not zoomed
-        img.onmouseenter = () => {
-            if (!this.isZoomed) {
-                this.isPausedByHover = true;
-                this.pause();
-            }
-        };
-
-        img.onmouseleave = () => {
-            if (!this.isZoomed) {
-                this.isPausedByHover = false;
-                this.resume();
-            }
-        };
-
-        // Mouse move for zoom origin - works both when zoomed and not zoomed
-        img.onmousemove = (e) => {
-            const rect = e.target.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            img.style.transformOrigin = `${x}% ${y}%`;
-        };
-    }
-
-    toggleZoom() {
-        const currentSlide = this.slides[this.slideIndex];
-        const slideshowContainer = this.container.querySelector('.slideshow-container');
-        const arrows = slideshowContainer ? slideshowContainer.querySelectorAll('.slide-arrow') : [];
-
-        if (this.isZoomed) {
-            // Exit zoom mode
-            currentSlide.classList.remove("zooming");
-            slideshowContainer.classList.remove("zoomed");
-            this.isZoomed = false;
-            this.resume();
-        } else {
-            // Enter zoom mode
-            currentSlide.classList.add("zooming");
-            slideshowContainer.classList.add("zoomed");
-            this.isZoomed = true;
-            this.pause();
-        }
-    }
-
-    pause() {
-        clearTimeout(this.autoSlideTimeout);
-        this.isAutoPlaying = false;
-    }
-
-    resume() {
-        if (!this.isZoomed && !this.isPausedByHover && !Slideshow.globalPaused) {
-            this.isAutoPlaying = true;
-            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
-        }
-    }
-
-    showSlides() {
-        // Hide all slides
-        for (let i = 0; i < this.slides.length; i++) {
-            this.slides[i].style.display = "none";
-        }
-
-        // Show the current slide
-        this.slides[this.slideIndex].style.display = "block";
-
-        // Attach listeners to the current image
-        this.addImageListeners();
-        this.updateInfo();
-    }
-
-    swap() {
-        // Clear the timeout for auto-sliding
-        clearTimeout(this.autoSlideTimeout);
-
-        // Hide all slides
-        for (let i = 0; i < this.slides.length; i++) {
-            this.slides[i].style.display = "none";
-        }
-
-        // Show the next slide
-        this.slideIndex = (this.slideIndex + 1) % this.slides.length;
-        this.slides[this.slideIndex].style.display = "block";
-
-        // Re-attach listeners to the new image
-        this.addImageListeners();
-        this.updateInfo();
-
-        // Restart auto-sliding only if still in auto-play mode
-        if (!this.isPausedByHover && !this.isZoomed && !Slideshow.globalPaused) {
-            this.autoSlideTimeout = setTimeout(() => this.swap(), this.interval);
-        }
-    }
+// Link for a banknote's `reference` field, used in the data files:
+//     reference: refLink("P-53Aa", "https://en.numista.com/catalogue/note206543.html"),
+// This file loads before data/<country>.js, so every country can use it.
+function refLink(code, url) {
+    return `<a href="${url}" target="_blank" rel="noopener" class="custom-link">${code}</a>`;
 }
 
-function createSlideshow(containerId, images) {
-    currentLang = localStorage.getItem("language") || "en"; 
-    const container = document.getElementById(containerId);
-    if (!container) return;
 
-    const slideshowContainer = document.createElement("div");
-    slideshowContainer.classList.add("slideshow-container");
+//--// banknote list: compact rows that open into album sleeves //--//
+// Names here start with "note" because the data file's own consts
+// (images, issuer, index...) share the same global scope.
 
-    const banknoteIndex = containerId.replace("slide", "");
-    slideshowContainer.setAttribute("data-banknote-index", banknoteIndex);
+// which banknotes are open, and whether the page opens compact or as an album
+// (the view is remembered across pages, like the language and theme)
+const openNotes = new Set();
+let noteView = localStorage.getItem("noteView") === "album" ? "album" : "compact";
 
-    images.forEach((image, index) => {
-        const slide = document.createElement("div");
-        slide.classList.add("mySlides", "fade");
+// a data field is either plain text or { en, vi }
+function noteText(value) {
+    if (value === null || value === undefined) return "";
+    if (typeof value === "object" && !Array.isArray(value)) return value[currentLang] || value.en || "";
+    return String(value);
+}
 
-        const img = document.createElement("img");
-        img.src = image.src;
-        img.alt = image.alt[currentLang] || image.alt["en"];
-        img.style.cursor = "pointer";
-        
-        slide.appendChild(img);
+function noteAttr(value) {
+    return noteText(value).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
 
-        // Store data attributes for later use
-        slide.setAttribute("data-index", index);
-        slide.setAttribute("data-total", images.length);
-        if (image.description) {
-            slide.setAttribute("data-description-en", image.description.en || "");
-            slide.setAttribute("data-description-vi", image.description.vi || "");
-        }
+// Page order from `layout` in the data file: banknote numbers, with "|" for a
+// solid break and ":" for a dashed one. Banknotes the layout leaves out go on
+// top, newest first, so a newly added note shows up before the layout is updated.
+function noteOrder() {
+    if (typeof images === "undefined") return [];
+    const tokens = (typeof layout === "string" ? layout : "").split(/\s+/).filter(Boolean);
+    const listed = new Set(tokens.map(Number));
+    const missing = [];
+    for (let i = images.length - 1; i >= 1; i--) {
+        if (!listed.has(i)) missing.push(String(i));
+    }
 
-        slideshowContainer.appendChild(slide);
+    const placed = new Set();
+    return missing.concat(tokens).filter(token => {
+        if (token === "|" || token === ":") return true;
+        const n = Number(token);
+        // skip typos, notes that no longer exist, and repeats
+        if (!images[n] || placed.has(n)) return false;
+        placed.add(n);
+        return true;
+    });
+}
+
+function noteNumbers() {
+    return noteOrder().filter(token => token !== "|" && token !== ":").map(Number);
+}
+
+// the type column drops the trailing "Banknote" to stay on one line
+function noteShortType(info) {
+    const type = noteText(info.type);
+    return currentLang === "en" ? type.replace(/ Banknote$/, "") : type;
+}
+
+// The figure for each photo, shown in its caption. `figure` is either a list
+// with one entry per photo, or a single figure that belongs to the front.
+function noteFigures(info) {
+    if (Array.isArray(info.figure)) return info.figure;
+    return info.figure ? [info.figure] : [];
+}
+
+function noteRowHTML(n) {
+    const t = fixed_trans[currentLang];
+    const info = slideshowInfo[n] || {};
+    const pics = images[n] || [];
+    const figures = noteFigures(info);
+    const subtitle = noteText(info.subtitle);
+    const year = noteText(info.year);
+    const isOpen = openNotes.has(n);
+
+    const minis = pics.slice(0, 2).map((pic, i) => `
+        <span class="note-mini"><img src="${pic.src}" alt="" loading="lazy">${
+            i === 1 && pics.length > 2 ? `<span class="note-more">+${pics.length - 2}</span>` : ""
+        }</span>`).join("");
+
+    const photos = pics.map((pic, i) => `
+        <figure>
+            <div class="sleeve-mat">
+                <button type="button" class="sleeve-open" data-i="${i}" aria-label="${t.view_larger}: ${noteAttr(pic.description)}">
+                    <img src="${pic.src}" alt="${noteAttr(pic.alt)}" loading="lazy">
+                </button>
+            </div>
+            <figcaption class="sleeve-side">${noteText(pic.description)}${
+                figures[i] ? ` · ${noteText(figures[i])}` : ""
+            }</figcaption>
+        </figure>`).join("");
+
+    const meta = [noteText(info.issuer), noteText(info.type), noteText(info.size)].filter(Boolean).join(" · ");
+
+    return `
+    <li class="note${isOpen ? " open" : ""}" data-n="${n}">
+        <div class="note-row ledger-cols">
+            <span class="note-num">#${n}</span>
+            <span class="note-minis">${minis}</span>
+            <span class="note-name">
+                <button type="button" class="note-toggle" aria-expanded="${isOpen}" aria-controls="sleeve-${n}">
+                    ${noteText(info.title)}${info.new ? `<span class="note-new">${t.new_tag}</span>` : ""}
+                </button>
+                ${subtitle ? `<span class="note-subtitle">${subtitle}</span>` : ""}
+            </span>
+            <span class="note-facts">
+                <span class="note-year${year ? "" : " missing"}">${year || "—"}</span>
+                <span class="note-type">${noteShortType(info)}</span>
+                <span class="note-ref">${noteText(info.reference)}</span>
+            </span>
+            <span class="note-chev" aria-hidden="true">&#9654;</span>
+        </div>
+        <div class="sleeve" id="sleeve-${n}"${isOpen ? "" : " hidden"}>
+            <div class="sleeve-pair">${photos}</div>
+            <div class="sleeve-label">
+                ${meta ? `<p class="sleeve-meta">${meta}</p>` : ""}
+                ${info.reference ? `<p><span class="sleeve-key">${t.reference}:</span> ${noteText(info.reference)}</p>` : ""}
+                ${info.note ? `<p class="sleeve-remark">${noteText(info.note)}</p>` : ""}
+                ${info.special ? `<p class="sleeve-remark rainbow-text">${noteText(info.special)}</p>` : ""}
+            </div>
+        </div>
+    </li>`;
+}
+
+function renderNotes() {
+    const list = document.getElementById("notes");
+    if (!list || typeof images === "undefined") return;
+
+    const t = fixed_trans[currentLang];
+    const total = noteNumbers().length;
+    const count = document.getElementById("note-count");
+    if (count) count.textContent = `${total} ${total === 1 ? t.banknote_one : t.banknote_many}`;
+
+    list.innerHTML = noteOrder().map(token =>
+        token === "|" ? `<li class="note-break" aria-hidden="true"></li>`
+        : token === ":" ? `<li class="note-break dashed" aria-hidden="true"></li>`
+        : noteRowHTML(Number(token))
+    ).join("");
+
+    // photos already in the cache may be ready before their load event is heard
+    list.querySelectorAll(".note-mini img").forEach(img => {
+        if (img.complete) markNoteMini(img);
+    });
+}
+
+// a thumbnail of a vertical photo is sized by its width instead of its height
+function markNoteMini(img) {
+    const mini = img.closest(".note-mini");
+    if (mini && img.naturalWidth) mini.classList.toggle("portrait", img.naturalHeight > img.naturalWidth);
+}
+
+function setNoteOpen(li, isOpen) {
+    const n = Number(li.dataset.n);
+    if (isOpen) openNotes.add(n); else openNotes.delete(n);
+    li.classList.toggle("open", isOpen);
+    li.querySelector(".note-toggle").setAttribute("aria-expanded", String(isOpen));
+    li.querySelector(".sleeve").hidden = !isOpen;
+}
+
+// Compact closes every banknote, Album opens them all
+function setNoteView(view) {
+    noteView = view;
+    localStorage.setItem("noteView", view);
+    document.getElementById("view-compact").setAttribute("aria-pressed", String(view === "compact"));
+    document.getElementById("view-album").setAttribute("aria-pressed", String(view === "album"));
+    document.querySelectorAll("#notes .note").forEach(li => setNoteOpen(li, view === "album"));
+}
+
+//--// full-window viewer: one banknote's photos, ← → between its sides //--//
+let viewerNote = null;      // banknote number on show, null when closed
+let viewerIndex = 0;        // which of its photos
+let viewerReturnFocus = null;
+
+function buildNoteViewer() {
+    const viewer = document.createElement("div");
+    viewer.id = "note-viewer";
+    viewer.className = "note-viewer";
+    viewer.hidden = true;
+    viewer.setAttribute("role", "dialog");
+    viewer.setAttribute("aria-modal", "true");
+    viewer.setAttribute("aria-labelledby", "viewer-title");
+    viewer.innerHTML = `
+        <div class="viewer-bar">
+            <p class="viewer-title" id="viewer-title"></p>
+            <button type="button" class="viewer-close" id="viewer-close">&times;</button>
+        </div>
+        <div class="viewer-stage" id="viewer-stage">
+            <button type="button" class="viewer-arrow prev" id="viewer-prev">&#10094;</button>
+            <img id="viewer-img" alt="">
+            <button type="button" class="viewer-arrow next" id="viewer-next">&#10095;</button>
+        </div>
+        <p class="viewer-caption" id="viewer-caption"></p>`;
+    document.body.appendChild(viewer);
+
+    document.getElementById("viewer-close").addEventListener("click", closeNoteViewer);
+    document.getElementById("viewer-prev").addEventListener("click", () => stepNoteViewer(-1));
+    document.getElementById("viewer-next").addEventListener("click", () => stepNoteViewer(1));
+
+    // clicking the dark area around the photo also closes it
+    viewer.addEventListener("click", event => {
+        if (event.target === viewer || event.target.id === "viewer-stage") closeNoteViewer();
     });
 
-    container.appendChild(slideshowContainer);
+    document.addEventListener("keydown", event => {
+        if (viewerNote === null) return;
+        if (event.key === "Escape") closeNoteViewer();
+        else if (event.key === "ArrowLeft") stepNoteViewer(-1);
+        else if (event.key === "ArrowRight") stepNoteViewer(1);
+        else if (event.key === "Tab") {
+            // keep keyboard focus inside the viewer while it is open
+            const buttons = Array.from(viewer.querySelectorAll("button")).filter(b => !b.hidden);
+            const at = buttons.indexOf(document.activeElement);
+            const next = (at + (event.shiftKey ? -1 : 1) + buttons.length) % buttons.length;
+            buttons[next].focus();
+            event.preventDefault();
+        }
+    });
+
+    // swipe left / right on phones
+    let touchX = null, touchY = null;
+    const stage = document.getElementById("viewer-stage");
+    stage.addEventListener("touchstart", event => {
+        touchX = event.touches[0].clientX;
+        touchY = event.touches[0].clientY;
+    }, { passive: true });
+    stage.addEventListener("touchend", event => {
+        if (touchX === null) return;
+        const dx = event.changedTouches[0].clientX - touchX;
+        const dy = event.changedTouches[0].clientY - touchY;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) stepNoteViewer(dx < 0 ? 1 : -1);
+        touchX = null;
+    });
 }
 
-function generateSlideShowInfo(containerId, info, currentLang, slideIndex = 0) {
-    currentLang = localStorage.getItem("language") || "en";
-    const container = document.getElementById(containerId);
-    if (!container) return;
+function showNoteViewerPhoto() {
+    const t = fixed_trans[currentLang];
+    const info = slideshowInfo[viewerNote] || {};
+    const pics = images[viewerNote];
+    const pic = pics[viewerIndex];
+    const figures = noteFigures(info);
 
-    container.innerHTML = ""; // Clear old info
+    const img = document.getElementById("viewer-img");
+    img.src = pic.src;
+    img.alt = noteText(pic.alt);
 
-    const isFantasyBanknote = info.type && 
-        ((typeof info.type === "object" && info.type.en === "Fantasy Banknote") || 
-         info.type === "Fantasy Banknote");
+    document.getElementById("viewer-title").innerHTML =
+        `${noteText(info.title)}<span class="viewer-count">#${viewerNote} · ${viewerIndex + 1} / ${pics.length}</span>`;
+    document.getElementById("viewer-caption").textContent =
+        noteText(pic.description) + (figures[viewerIndex] ? ` · ${noteText(figures[viewerIndex])}` : "");
 
-    const labels = {
-        en: { 
-            issuer: isFantasyBanknote ? "Issuing Entity" : "Issuing Bank",
-            year: "Year", 
-            type: "Type", 
-            figure: "Figure",
-            size: "Dimension",
-        },
-        vi: { 
-            issuer: isFantasyBanknote ? "Tổ Chức Phát Hành" : "Ngân Hàng Phát Hành",
-            year: "Năm", 
-            type: "Loại", 
-            figure: "Vĩ Nhân",
-            size: "Kích Thước", 
-        }
-    };
-
-    const infoDiv = document.createElement("div");
-    infoDiv.className = "slideshow-info";
-    infoDiv.style.position = "relative";
-    infoDiv.style.overflow = "hidden";
-
-    // Add NEW label if the item is marked as new
-    if (info.new) {
-        const newLabel = document.createElement("div");
-        newLabel.className = "new-label";
-        newLabel.textContent = currentLang === "en" ? "NEW" : "MỚI";        
-        infoDiv.appendChild(newLabel);
-    }
-
-    function addInfoElement(labelKey, value) {
-        if (value !== null && value !== undefined) {
-            const localized = typeof value === "object" && !Array.isArray(value)
-                ? (value[currentLang] || value["en"])
-                : value;
-            const p = document.createElement("p");
-            p.innerHTML = `<strong>${labels[currentLang][labelKey]}:</strong> ${localized}`;
-            infoDiv.appendChild(p);
-        }
-    }
-
-    if (info.title) {
-        const titleElement = document.createElement("h3");
-        titleElement.textContent = info.title[currentLang] || info.title["en"];
-        infoDiv.appendChild(titleElement);
-    }
-
-    addInfoElement("issuer", info.issuer);
-    addInfoElement("year", info.year);
-    addInfoElement("type", info.type);
-    
-    if (info.figure) {
-        let figureData;
-        if (Array.isArray(info.figure)) {
-            figureData = info.figure[slideIndex] || info.figure[0] || null;
-        } else {
-            figureData = info.figure;
-        }
-        addInfoElement("figure", figureData);
-    }
-    
-    addInfoElement("size", info.size);
-
-    // Add regular note
-    if (info.note) {
-        const noteElement = document.createElement("p");
-        const noteContent = document.createElement("em");
-        noteContent.style.fontSize = "17px";
-        noteContent.innerHTML = typeof info.note === "object" ? info.note[currentLang] : info.note;
-        noteElement.appendChild(noteContent);
-        infoDiv.appendChild(noteElement);
-    }
-
-    // Add special note with rainbow effect
-    if (info.special) {
-        const specialElement = document.createElement("p");
-        const specialContent = document.createElement("em");
-        specialContent.className = "rainbow-text";
-        specialContent.style.fontSize = "17px";
-        specialContent.innerHTML = typeof info.special === "object" ? info.special[currentLang] : info.special;
-        specialElement.appendChild(specialContent);
-        infoDiv.appendChild(specialElement);
-    }
-
-    const parentContainer = container.parentElement;
-    const slideshowContainerForInfo = parentContainer ? parentContainer.querySelector('.slideshow-container') : null;
-
-    if (slideshowContainerForInfo) {
-        // Clear old overlay elements (avoid stacking)
-        const oldDesc = slideshowContainerForInfo.querySelector('.description');
-        const oldNumber = slideshowContainerForInfo.querySelector('.numbertext');
-        const oldBanknote = slideshowContainerForInfo.querySelector('.banknote-counter');
-        if (oldDesc) oldDesc.remove();
-        if (oldNumber) oldNumber.remove();
-        if (oldBanknote) oldBanknote.remove();
-
-        const currentSlide = slideshowContainerForInfo.querySelector('.mySlides[style*="display: block"]');
-        const slides = slideshowContainerForInfo.querySelectorAll('.mySlides');
-
-        // Description (bottom-left overlay)
-        if (currentSlide) {
-            const descriptionText = currentSlide.getAttribute(`data-description-${currentLang}`) || 
-                                   currentSlide.getAttribute('data-description-en');
-            if (descriptionText) {
-                const descriptionDiv = document.createElement("div");
-                descriptionDiv.className = "description";
-                descriptionDiv.textContent = descriptionText;
-                slideshowContainerForInfo.appendChild(descriptionDiv);
-            }
-        }
-
-        // Number text (bottom-right overlay)
-        if (slides.length > 0) {
-            const numberTextDiv = document.createElement("div");
-            numberTextDiv.className = "numbertext";
-            numberTextDiv.textContent = `${slideIndex + 1} / ${slides.length}`;
-            slideshowContainerForInfo.appendChild(numberTextDiv);
-        }
-
-        // Banknote counter (top-right overlay)
-        const banknoteIndex = slideshowContainerForInfo.getAttribute("data-banknote-index");
-        if (banknoteIndex) {
-            const banknoteDiv = document.createElement("div");
-            banknoteDiv.className = "banknote-counter";
-            banknoteDiv.textContent = `#${banknoteIndex}`;
-            slideshowContainerForInfo.appendChild(banknoteDiv);
-        }
-    }
-
-    container.appendChild(infoDiv);
+    const single = pics.length < 2;
+    document.getElementById("viewer-prev").hidden = single;
+    document.getElementById("viewer-next").hidden = single;
+    document.getElementById("viewer-close").setAttribute("aria-label", t.viewer_close);
+    document.getElementById("viewer-prev").setAttribute("aria-label", t.viewer_prev);
+    document.getElementById("viewer-next").setAttribute("aria-label", t.viewer_next);
 }
-//--// function to display information of banknote //--//
+
+function openNoteViewer(n, index, trigger) {
+    if (!images[n] || !images[n][index]) return;
+    viewerNote = n;
+    viewerIndex = index;
+    viewerReturnFocus = trigger || null;
+    showNoteViewerPhoto();
+    document.getElementById("note-viewer").hidden = false;
+    document.getElementById("viewer-close").focus();
+}
+
+function stepNoteViewer(step) {
+    if (viewerNote === null) return;
+    const count = images[viewerNote].length;
+    if (count < 2) return;
+    viewerIndex = (viewerIndex + step + count) % count;
+    showNoteViewerPhoto();
+}
+
+function closeNoteViewer() {
+    if (viewerNote === null) return;
+    viewerNote = null;
+    document.getElementById("note-viewer").hidden = true;
+    // back to the photo that opened it (it may have been rebuilt meanwhile)
+    if (viewerReturnFocus && document.contains(viewerReturnFocus)) viewerReturnFocus.focus();
+    viewerReturnFocus = null;
+}
+
+function initNotes() {
+    const list = document.getElementById("notes");
+    if (!list) return;
+
+    // the list takes the continent's colour, like the sidebar
+    const country = COUNTRIES[pageSlug()];
+    const region = country && REGIONS[country.region];
+    if (region && region.accent) {
+        document.getElementById("ledger").style.setProperty("--note-accent", `var(${region.accent})`);
+    }
+
+    // Album opens everything; Compact opens just the newest banknote
+    const numbers = noteNumbers();
+    if (noteView === "album") numbers.forEach(n => openNotes.add(n));
+    else if (numbers.length) openNotes.add(numbers[0]);
+    renderNotes();
+    document.getElementById("view-compact").setAttribute("aria-pressed", String(noteView === "compact"));
+    document.getElementById("view-album").setAttribute("aria-pressed", String(noteView === "album"));
+
+    buildNoteViewer();
+
+    // load events don't bubble, so listen while they travel down (capture)
+    list.addEventListener("load", event => {
+        if (event.target.tagName === "IMG") markNoteMini(event.target);
+    }, true);
+
+    list.addEventListener("click", event => {
+        // a photo in an open sleeve opens the full-window viewer
+        const photo = event.target.closest(".sleeve-open");
+        if (photo) {
+            openNoteViewer(Number(photo.closest(".note").dataset.n), Number(photo.dataset.i), photo);
+            return;
+        }
+        // anywhere else on a row opens or closes it, except its links
+        if (event.target.closest("a")) return;
+        const row = event.target.closest(".note-row");
+        if (row) setNoteOpen(row.parentElement, !row.parentElement.classList.contains("open"));
+    });
+
+    document.getElementById("view-compact").addEventListener("click", () => setNoteView("compact"));
+    document.getElementById("view-album").addEventListener("click", () => setNoteView("album"));
+}
+//--// banknote list //--//
+
 
 // expand the box of each category in the side bar of the collection (different box has different height)
 function toggleCategories(id) {
@@ -584,10 +521,6 @@ function toggleMenuCollection() {
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// Show or hide the Back to Top button based on scroll position within .main-content for the money pages
-const mainContent = document.getElementById('main-to-top');
-const backToTopButton = document.getElementById('back-to-top');
-
 // top button for the money pages
 function scrollToTop() {
     const mainContent = document.getElementById('main-to-top');
@@ -598,13 +531,15 @@ function scrollToTop() {
     }
 }
 
-function getPageNavigation() {
-    // Get current page filename
-    const currentPage = window.location.pathname.split('/').pop();
+// this page's slug, e.g. "canada" for collection/canada.html
+function pageSlug() {
+    return window.location.pathname.split('/').pop().replace(/\.html$/, '');
+}
 
+function getPageNavigation() {
     // COUNTRIES is already in reading order: continent by continent
     const allSlugs = Object.keys(COUNTRIES);
-    const currentIndex = allSlugs.indexOf(currentPage.replace(/\.html$/, ''));
+    const currentIndex = allSlugs.indexOf(pageSlug());
 
     if (currentIndex === -1) {
         return { prev: null, next: null };
@@ -620,74 +555,38 @@ function getPageNavigation() {
 function createNavigationButtons() {
     const nav = getPageNavigation();
     const navContainer = document.getElementById('page-navigation');
-    
+
     if (!navContainer) return;
-    
-    navContainer.innerHTML = '';   
+
+    navContainer.innerHTML = '';
     if (nav.prev) {
         const prevBtn = document.createElement('button');
         prevBtn.className = 'nav-button prev-button';
         const prevName = nav.prev['short_' + currentLang] || nav.prev[currentLang];
-        prevBtn.innerHTML = `\u2190 <span class="country-name">${prevName}</span>`;
+        prevBtn.innerHTML = `← <span class="country-name">${prevName}</span>`;
         prevBtn.onclick = () => window.location.href = nav.prev.link;
         navContainer.appendChild(prevBtn);
     }
-    
+
     if (nav.next) {
         const nextBtn = document.createElement('button');
         nextBtn.className = 'nav-button next-button';
         const nextName = nav.next['short_' + currentLang] || nav.next[currentLang];
-        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> \u2192`;
+        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> →`;
         nextBtn.onclick = () => window.location.href = nav.next.link;
         navContainer.appendChild(nextBtn);
     }
 }
 
-// Adds one empty slot per banknote to the page, in the order and with the
-// dividers given by `layout` in the country's data file ("|" solid, ":" dashed).
-// Banknotes the layout leaves out go on top, newest first, so a newly added
-// note still shows up before the layout is updated.
-function buildSlots() {
-    const main = document.getElementById('main-to-top');
-    if (!main || typeof images === 'undefined') return;
-
-    const tokens = (typeof layout === 'string' ? layout : '').split(/\s+/).filter(Boolean);
-    const listed = new Set(tokens.map(Number));
-    const missing = [];
-    for (let i = images.length - 1; i >= 1; i--) {
-        if (!listed.has(i)) missing.push(String(i));
-    }
-
-    const placed = new Set();
-    missing.concat(tokens).forEach(token => {
-        if (token === '|' || token === ':') {
-            const hr = document.createElement('hr');
-            if (token === ':') hr.className = 'dashed';
-            main.appendChild(hr);
-            return;
-        }
-        const n = Number(token);
-        // skip typos, notes that no longer exist, and repeats
-        if (!images[n] || placed.has(n)) return;
-        placed.add(n);
-
-        const wrapper = document.createElement('div');
-        wrapper.id = 'slideshow' + n;
-        wrapper.className = 'slideshow-wrapper';
-        wrapper.innerHTML = `<div class="empty-box"></div><div id="slide${n}"></div><div id="info${n}"></div>`;
-        main.appendChild(wrapper);
-    });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     currentLang = localStorage.getItem('language') || 'en';
-    buildSlots();
 
     updatePageLanguage(currentLang);
     updatePageHeading(currentLang);
-    insertSidebarHTML('SideBar'); 
-    insertSidebarHTML('SideBarCollection'); 
+    insertSidebarHTML('SideBar');
+    insertSidebarHTML('SideBarCollection');
     createNavigationButtons();
+    initNotes();
 
     const mainContent = document.getElementById('main-to-top');
     const backToTopButton = document.getElementById('back-to-top');
@@ -699,19 +598,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 backToTopButton.style.display = 'none';
             }
-        });
-    }
-
-    if (typeof images !== 'undefined') {
-        Object.keys(images).forEach(index => {
-            // Build the slide images
-            createSlideshow("slide" + index, images[index]);
-
-            // Start the slideshow, and pass info config
-            new Slideshow("slide" + index, 5000, {
-                containerId: "info" + index,
-                data: slideshowInfo[index]
-            });
         });
     }
 });

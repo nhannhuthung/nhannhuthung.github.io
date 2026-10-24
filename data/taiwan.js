@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Tôn Trung Sơn (1866-1925)" 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-1991", "https://banknote.ws/COLLECTION/countries/ASI/TWN/TWN1991.htm"),
     }
 );
 //#endregion

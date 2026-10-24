@@ -56,9 +56,10 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "76 \u00D7 148 mm",
+        reference: refLink("P-96", "https://banknote.ws/COLLECTION/countries/EUR/NDL/NDL0096.htm"),
         special: {
-            en: "My favorite banknotes.",
-            vi: "Tờ tiền mình yêu thích."
+            en: "My favorite banknotes",
+            vi: "Tờ tiền mình yêu thích"
         }
     }
 );

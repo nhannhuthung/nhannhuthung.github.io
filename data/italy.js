@@ -20,6 +20,7 @@ const currencyInfo = (denomEng, denomViet, currencyEng, currencyViet) => ({
     en: `${denomEng} Italian ${currencyEng}`,  
     vi: `${denomViet} ${currencyViet} Ý` 
 });
+const issuer   = { en: "Italian Ministry Of The Treasury", vi: "Bộ Tài Chính Ý" };
 const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiêu Chuẩn Đã Từng Lưu Hành" };
 //#endregion
 
@@ -45,12 +46,17 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("500", "500", "Lire", "Lira"),
-        year: "1966",
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "1970",
         type: { 
             en: standOutType.en, 
             vi: standOutType.vi 
         },
         size: "110 \u00D7 55 mm",
+        reference: refLink("P-93a 1970(2)", "http://www.banknote.ws/COLLECTION/countries/EUR/ITA/ITA0093.htm#1970"),
     }
 );
 //#endregion

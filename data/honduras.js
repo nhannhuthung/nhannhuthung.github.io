@@ -70,6 +70,7 @@ slideshowInfo.push(
             vi: "Lempira (1499-1537)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-96 2022", "http://www.banknote.ws/COLLECTION/countries/AME/HON/HON0096.htm#2022"),
     }
 );
 //#endregion
@@ -104,6 +105,7 @@ slideshowInfo.push(
             vi: "Marco Aurelio Soto (1846-1908)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-97 2019", "http://www.banknote.ws/COLLECTION/countries/AME/HON/HON0097.htm#2019"),
     }
 );
 //#endregion

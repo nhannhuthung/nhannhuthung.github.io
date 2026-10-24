@@ -50,6 +50,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2012",
         type: { 
             en: standardType.en, 
             vi: standardType.vi 
@@ -59,7 +60,7 @@ slideshowInfo.push(
             vi: "Manuel L. Quezon (1935-1944)"
         },
         size: "160 \u00D7 66 mm",
-        new: true,
+        reference: refLink("P-206a", "https://banknote.ws/COLLECTION/countries/ASI/PIL/PIL0206.htm#2012"),
     }
 );
 //#endregion

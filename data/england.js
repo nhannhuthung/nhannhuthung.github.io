@@ -67,6 +67,7 @@ slideshowInfo.push(
             }
         ],
         size: "132 \u00D7 69 mm",
+        reference: refLink("P-395(1)", "http://www.banknote.ws/COLLECTION/countries/EUR/GBR/GBR0395.htm"),
         note: { 
             en: `2017\'s top 22 banknotes by ${ibnsLink}`, 
             vi: `Top 22 tờ tiền năm 2017 theo ${ibnsLink}` 

@@ -25,7 +25,7 @@ const standOutType = { en: "Non-circulating Standard Banknote", vi: "Tiền Tiê
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "4 3 2 1";
+const layout = "4 | 3 2 1";
 
 const images = [null];
 const slideshowInfo = [null];
@@ -55,41 +55,12 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "126 \u00D7 60 mm",
-        new: true
+        reference: refLink("P-40b(3)", "https://banknote.ws/COLLECTION/countries/ASI/KON/KON0040.htm#40b3"),
     }
 );
 //#endregion
 
-//#region 2 - 200 won
-images.push([
-    {
-        src: imagePath("1992/200-won", "f"),
-        alt: altInfo("200", "Won", "Won", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("1992/200-won", "b"),
-        alt: altInfo("200", "Won", "Won", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("200", "200", "Won", "Won"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        type: {
-            en: standOutType.en, 
-            vi: standOutType.vi 
-        },
-        size: "140 \u00D7 72 mm",
-    }
-);
-//#endregion
-
-//#region 3 - 500 won
+//#region 2 - 500 won
 images.push([
     {
         src: imagePath("1992/500-won", "f"),
@@ -113,12 +84,13 @@ slideshowInfo.push(
             en: standOutType.en, 
             vi: standOutType.vi 
         },
-        size: "156 \u00D7 75 mm"
+        size: "156 \u00D7 75 mm",
+        reference: refLink("P-44a(2)", "https://banknote.ws/COLLECTION/countries/ASI/KON/KON0044.htm#44a2"),
     }
 );
 //#endregion
 
-//#region 4 - 5000 won
+//#region 3 - 5000 won
 images.push([
     {
         src: imagePath("1992/5000-won", "f"),
@@ -147,6 +119,37 @@ slideshowInfo.push(
             vi: "Kim Il Sung (1912-1994)" 
         },
         size: "156 \u00D7 75 mm",
+        reference: refLink("P-46c(4)", "https://banknote.ws/COLLECTION/countries/ASI/KON/KON0046.htm#46c4"),
+    }
+);
+//#endregion
+
+//#region 4 - 200 won
+images.push([
+    {
+        src: imagePath("2005/200-won", "f"),
+        alt: altInfo("200", "Won", "Won", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2005/200-won", "b"),
+        alt: altInfo("200", "Won", "Won", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("200", "200", "Won", "Won"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        type: {
+            en: standOutType.en, 
+            vi: standOutType.vi 
+        },
+        size: "140 \u00D7 72 mm",
+        reference: refLink("P-48a(2)", "https://banknote.ws/COLLECTION/countries/ASI/KON/KON0048.htm#48a2"),
     }
 );
 //#endregion

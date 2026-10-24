@@ -35,12 +35,12 @@ const slideshowInfo = [null];
 //#region 1 - 10 franc
 images.push([
     {
-        src: imagePath("9/10-franc", "f"),
+        src: imagePath("2015/10-franc", "f"),
         alt: altInfo("10", "Francs", "Franc", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("9/10-franc", "b"),
+        src: imagePath("2015/10-franc", "b"),
         alt: altInfo("10", "Francs", "Franc", "Back", "sau"),
         description: reverse
     }
@@ -57,6 +57,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "70 \u00D7 123 mm",
+        reference: refLink("P-75b", "https://banknote.ws/COLLECTION/countries/EUR/SUI/SUI0075.htm#2016-2"),
         note: {
             en: `Banknote of 2017 by ${ibnsLink}`,
             vi: `Tờ tiền của năm 2017 theo ${ibnsLink}`
@@ -68,12 +69,12 @@ slideshowInfo.push(
 //#region 2 - 20 franc
 images.push([
     {
-        src: imagePath("9/20-franc", "f"),
+        src: imagePath("2015/20-franc", "f"),
         alt: altInfo("20", "Francs", "Franc", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("9/20-franc", "b"),
+        src: imagePath("2015/20-franc", "b"),
         alt: altInfo("20", "Francs", "Franc", "Back", "sau"),
         description: reverse
     }
@@ -90,6 +91,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "70 \u00D7 130 mm",
+        reference: refLink("P-76a", "https://banknote.ws/COLLECTION/countries/EUR/SUI/SUI0076.htm"),
     }
 );
 //#endregion
@@ -97,12 +99,12 @@ slideshowInfo.push(
 //#region 3 - 50 franc
 images.push([
     {
-        src: imagePath("9/50-franc", "f"),
+        src: imagePath("2015/50-franc", "f"),
         alt: altInfo("50", "Francs", "Franc", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("9/50-franc", "b"),
+        src: imagePath("2015/50-franc", "b"),
         alt: altInfo("50", "Francs", "Franc", "Back", "sau"),
         description: reverse
     }
@@ -119,6 +121,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "70 \u00D7 137 mm",
+        reference: refLink("P-77b", "https://banknote.ws/COLLECTION/countries/EUR/SUI/SUI0077.htm#2015-2"),
         note: {
             en: `Banknote of 2016 by ${ibnsLink}`,
             vi: `Tờ tiền của năm 2016 theo ${ibnsLink}`
@@ -130,12 +133,12 @@ slideshowInfo.push(
 //#region 4 - 100 franc
 images.push([
     {
-        src: imagePath("9/100-franc", "f"),
+        src: imagePath("2015/100-franc", "f"),
         alt: altInfo("100", "Francs", "Franc", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("9/100-franc", "b"),
+        src: imagePath("2015/100-franc", "b"),
         alt: altInfo("100", "Francs", "Franc", "Back", "sau"),
         description: reverse
     }
@@ -152,7 +155,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "70 \u00D7 144 mm",
-        new: true,
+        reference: refLink("P-77A(2)", "https://banknote.ws/COLLECTION/countries/EUR/SUI/SUIW2017-0100.htm#2017-2"),
     }
 );
 //#endregion

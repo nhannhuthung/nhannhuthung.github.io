@@ -57,6 +57,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "102 \u00D7 56 mm",
+        reference: refLink("P-4", "https://banknote.ws/COLLECTION/countries/ASI/TAJ/TAJ0004.htm"),
     }
 );
 //#endregion

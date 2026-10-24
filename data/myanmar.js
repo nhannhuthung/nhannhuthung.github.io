@@ -55,6 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "110 \u00D7 55 mm",
+        reference: refLink("P-70b(2-1)", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0070.htm#70b2"),
     }
 );
 //#endregion
@@ -84,6 +85,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-73b(2)", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0073.htm#73b2"),
     }
 );
 //#endregion
@@ -113,6 +115,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "145 \u00D7 70 mm",
+        reference: refLink("P-74b", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0074.htm#74b"),
     }
 );
 //#endregion
@@ -142,6 +145,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "150 \u00D7 70 mm",
+        reference: refLink("P-78", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0078.htm"),
     }
 );
 //#endregion
@@ -171,6 +175,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "150 \u00D7 70 mm",
+        reference: refLink("P-79", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0079.htm"),
     }
 );
 //#endregion
@@ -200,6 +205,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "150 \u00D7 70 mm",
+        reference: refLink("P-80", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0080.htm"),
     }
 );
 //#endregion
@@ -229,6 +235,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "150 \u00D7 70 mm",
+        reference: refLink("P-84", "https://banknote.ws/COLLECTION/countries/ASI/MYA/MYA0084.htm"),
         new: true
     }
 );

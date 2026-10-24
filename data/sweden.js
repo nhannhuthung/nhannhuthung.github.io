@@ -61,6 +61,7 @@ slideshowInfo.push(
             vi: "Astrid Lindgren (1907-2002)"
         },
         size: "120 \u00D7 66 mm",
+        reference: refLink("P-69b", "https://banknote.ws/COLLECTION/countries/EUR/SWE/SWE0069.htm#69-2"),
         note: {
             en: `2015\'s top 20 banknotes by ${ibnsLink}`,
             vi: `Top 20 tờ tiền của năm 2015 theo ${ibnsLink}`
@@ -99,7 +100,7 @@ slideshowInfo.push(
             vi: "Evert Taube (1890-1976)"
         },
         size: "126 \u00D7 66 mm",
-        new: true,
+        reference: refLink("P-70", "https://banknote.ws/COLLECTION/countries/EUR/SWE/SWE0070.htm"),
     }
 );
 //#endregion
@@ -133,11 +134,11 @@ slideshowInfo.push(
             vi: "Greta Garbo (1905-1990)"
         },
         size: "133 \u00D7 66 mm",
+        reference: refLink("P-71[c]", "https://banknote.ws/COLLECTION/countries/EUR/SWE/SWE0071.htm#71c"),
         note: {
             en: `2016\'s top 19 banknotes by ${ibnsLink}`,
             vi: `Top 19 tờ tiền của năm 2016 theo ${ibnsLink}`
         },
-        new: true,
     }
 );
 //#endregion
@@ -171,7 +172,7 @@ slideshowInfo.push(
             vi: "Ingmar Bergman (1918-2007)"
         },
         size: "140 \u00D7 66 mm",
-        new: true,
+        reference: refLink("P-72", "https://banknote.ws/COLLECTION/countries/EUR/SWE/SWE0072.htm"),
     }
 );
 //#endregion
@@ -205,7 +206,7 @@ slideshowInfo.push(
             vi: "Birgit Nilsson (1918-2005)"
         },
         size: "147 \u00D7 70 mm",
-        new: true,
+        reference: refLink("P-73(2)", "https://banknote.ws/COLLECTION/countries/EUR/SWE/SWE0073.htm#73-2"),
     }
 );
 //#endregion

@@ -34,12 +34,12 @@ const slideshowInfo = [null];
 //#region 1 - 2 dollar
 images.push([
     {
-        src: imagePath("3/2-dollar", "f"),
+        src: imagePath("1990/2-dollar", "f"),
         alt: altInfo("2", "Dollars", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("3/2-dollar", "b"),
+        src: imagePath("1990/2-dollar", "b"),
         alt: altInfo("2", "Dollars", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -52,7 +52,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "133 \u00D7 63 mm",
-        new: true
+        reference: refLink("P-34", "https://banknote.ws/COLLECTION/countries/ASI/SIN/SIN0034.htm"),
     }
 );
 //#endregion
@@ -60,12 +60,12 @@ slideshowInfo.push(
 //#region 2 - 2 dollar
 images.push([
     {
-        src: imagePath("4/2-dollar", "f"),
+        src: imagePath("2005/2-dollar", "f"),
         alt: altInfo("2", "Dollars", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("4/2-dollar", "b"),
+        src: imagePath("2005/2-dollar", "b"),
         alt: altInfo("2", "Dollars", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -86,6 +86,7 @@ slideshowInfo.push(
             vi: "Yusof Ishak (1910-1970)" 
         },
         size: "126 \u00D7 63 mm",
+        reference: refLink("P-46", "https://banknote.ws/COLLECTION/countries/ASI/SIN/SIN0046.htm#46n"),
     }
 );
 //#endregion
@@ -93,12 +94,12 @@ slideshowInfo.push(
 //#region 3 - 5 dollar
 images.push([
     {
-        src: imagePath("4/5-dollar", "f"),
+        src: imagePath("2005/5-dollar", "f"),
         alt: altInfo("5", "Dollars", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("4/5-dollar", "b"),
+        src: imagePath("2005/5-dollar", "b"),
         alt: altInfo("5", "Dollars", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -119,6 +120,7 @@ slideshowInfo.push(
             vi: "Yusof Ishak (1910-1970)" 
         },
         size: "133 \u00D7 66 mm",
+        reference: refLink("P-47a", "https://banknote.ws/COLLECTION/countries/ASI/SIN/SIN0047.htm"),
     }
 );
 //#endregion
@@ -126,12 +128,12 @@ slideshowInfo.push(
 //#region 4 - 10 dollar
 images.push([
     {
-        src: imagePath("4/10-dollar", "f"),
+        src: imagePath("2005/10-dollar", "f"),
         alt: altInfo("10", "Dollars", "Đô La", "Front", "trước"),
         description: obverse
     },
     {
-        src: imagePath("4/10-dollar", "b"),
+        src: imagePath("2005/10-dollar", "b"),
         alt: altInfo("10", "Dollars", "Đô La", "Back", "sau"),
         description: reverse
     }
@@ -152,6 +154,7 @@ slideshowInfo.push(
             vi: "Yusof Ishak (1910-1970)" 
         },
         size: "141 \u00D7 69 mm",
+        reference: refLink("P-48", "https://banknote.ws/COLLECTION/countries/ASI/SIN/SIN0048.htm#48n"),
     }
 );
 //#endregion

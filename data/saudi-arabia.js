@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Abdullah bin Abdulaziz Al Saud (1924-2015)" 
         },
         size: "133 \u00D7 63 mm",
+        reference: refLink("P-31c", "https://banknote.ws/COLLECTION/countries/ASI/SAR/SAR0031.htm#2012"),
     }
 );
 //#endregion

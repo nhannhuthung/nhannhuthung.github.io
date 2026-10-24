@@ -18,6 +18,8 @@ $site = 'https://nhannhuthung.github.io'
 # Pages that should not appear in search results.
 $exclude = @(
     'google*.html'    # Search Console ownership token, not content
+    'tools/*'         # the country-page template, not a real page
+    'prototype/*'     # layout experiments
 )
 
 # index.html is served at the bare domain, and that is what its canonical
@@ -26,7 +28,9 @@ $homePage = 'index.html'
 
 function Should-Exclude([string]$relative) {
     foreach ($pattern in $exclude) {
-        if ((Split-Path $relative -Leaf) -like $pattern) { return $true }
+        # a pattern with a slash matches the path, one without matches the file name
+        $target = if ($pattern.Contains('/')) { $relative } else { Split-Path $relative -Leaf }
+        if ($target -like $pattern) { return $true }
     }
     return $false
 }

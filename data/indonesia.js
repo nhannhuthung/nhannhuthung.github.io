@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "104 \u00D7 52 mm",
+        reference: refLink("P-91", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0091.htm"),
         new: true
     }
 );
@@ -86,6 +87,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "104 \u00D7 52 mm",
+        reference: refLink("P-92", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0092.htm"),
         new: true
     }
 );
@@ -121,6 +123,7 @@ slideshowInfo.push(
             vi: "Kapitan Pattimura (1783-1817)" 
         },
         size: "141 \u00D7 65 mm",
+        reference: refLink("P-141j", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0141.htm#2009"),
     }
 );
 //#endregion
@@ -155,6 +158,7 @@ slideshowInfo.push(
             vi: "Pangeran Antasari (1797-1862)" 
         },
         size: "141 \u00D7 65 mm",
+        reference: refLink("P-148g", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0148.htm#2015"),
     }
 );
 //#endregion
@@ -179,6 +183,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2021",
         type: {
             en: standInType.en, 
             vi: standInType.vi 
@@ -188,7 +193,7 @@ slideshowInfo.push(
             vi: "Mohammad Husni Thamrin (1894-1941)" 
         },
         size: "141 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-155 2021", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0155.htm#2021"),
     }
 );
 //#endregion
@@ -213,6 +218,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2019",
         type: {
             en: standInType.en, 
             vi: standInType.vi 
@@ -222,7 +228,7 @@ slideshowInfo.push(
             vi: "Idham Chalid (1921-2010)" 
         },
         size: "143 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-156 2019", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0156.htm#2019"),
     }
 );
 //#endregion
@@ -247,6 +253,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2021",
         type: {
             en: standInType.en, 
             vi: standInType.vi 
@@ -256,7 +263,7 @@ slideshowInfo.push(
             vi: "Frans Kaisiepo (1921-1979)" 
         },
         size: "145 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-157 2021", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0157.htm#2021"),
     }
 );
 //#endregion
@@ -281,6 +288,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2018",
         type: {
             en: standInType.en, 
             vi: standInType.vi 
@@ -290,7 +298,7 @@ slideshowInfo.push(
             vi: "Sam Ratulangi (1890-1949)" 
         },
         size: "147 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-158 2018(2)", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0158.htm#2018-2"),
     }
 );
 //#endregion
@@ -315,6 +323,7 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2020",
         type: {
             en: standInType.en, 
             vi: standInType.vi 
@@ -324,7 +333,7 @@ slideshowInfo.push(
             vi: "Djuanda Kartawidjaja (1911-1963)" 
         },
         size: "149 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-159 2020", "http://www.banknote.ws/COLLECTION/countries/ASI/INO/INO0159.htm#2020"),
     }
 );
 //#endregion

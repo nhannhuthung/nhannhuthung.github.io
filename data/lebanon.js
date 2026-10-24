@@ -50,11 +50,13 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2012",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
         },
         size: "115 \u00D7 60 mm",
+        reference: refLink("P-90b", "http://www.banknote.ws/COLLECTION/countries/ASI/LEB/LEB0090.htm#2012"),
     }
 );
 //#endregion
@@ -79,11 +81,13 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2021",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
         },
         size: "120 \u00D7 62 mm",
+        reference: refLink("P-91 2021", "http://www.banknote.ws/COLLECTION/countries/ASI/LEB/LEB0091.htm#2021"),
     }
 );
 //#endregion

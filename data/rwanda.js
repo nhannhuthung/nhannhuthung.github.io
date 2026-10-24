@@ -25,42 +25,12 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "3 2 1";
+const layout = "3 | 2 1";
 
 const images = [null];
 const slideshowInfo = [null];
 
-//#region 1 - 1000 franc
-images.push([
-    {
-        src: imagePath("2013/1000-franc", "f"),
-        alt: altInfo("1000", "Francs", "Franc", "Front", "trước"),
-        description: obverse
-    },
-    {
-        src: imagePath("2013/1000-franc", "b"),
-        alt: altInfo("1000", "Francs", "Franc", "Back", "sau"),
-        description: reverse
-    }
-]);
-slideshowInfo.push(
-    {
-        title: currencyInfo("1,000", "1.000", "Francs", "Franc"),
-        issuer: { 
-            en: issuer.en, 
-            vi: issuer.vi 
-        },
-        year: "2019",
-        type: { 
-            en: standInType.en, 
-            vi: standInType.vi 
-        },
-        size: "135 \u00D7 65 mm",
-    }
-);
-//#endregion
-
-//#region 2 - 2000 franc
+//#region 1 - 2000 franc
 images.push([
     {
         src: imagePath("2013/2000-franc", "f"),
@@ -86,11 +56,12 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "140 \u00D7 68 mm",
+        reference: refLink("P-W40", "https://banknote.ws/COLLECTION/countries/AFR/RWA/RWA0040.htm"),
     }
 );
 //#endregion
 
-//#region 3 - 5000 franc
+//#region 2 - 5000 franc
 images.push([
     {
         src: imagePath("2013/5000-franc", "f"),
@@ -116,6 +87,38 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "155 \u00D7 85 mm",
+        reference: refLink("P-W41", "https://banknote.ws/COLLECTION/countries/AFR/RWA/RWA0041.htm"),
+    }
+);
+//#endregion
+
+//#region 3 - 1000 franc
+images.push([
+    {
+        src: imagePath("2019/1000-franc", "f"),
+        alt: altInfo("1000", "Francs", "Franc", "Front", "trước"),
+        description: obverse
+    },
+    {
+        src: imagePath("2019/1000-franc", "b"),
+        alt: altInfo("1000", "Francs", "Franc", "Back", "sau"),
+        description: reverse
+    }
+]);
+slideshowInfo.push(
+    {
+        title: currencyInfo("1,000", "1.000", "Francs", "Franc"),
+        issuer: { 
+            en: issuer.en, 
+            vi: issuer.vi 
+        },
+        year: "2019",
+        type: { 
+            en: standInType.en, 
+            vi: standInType.vi 
+        },
+        size: "135 \u00D7 65 mm",
+        reference: refLink("P-W43", "https://banknote.ws/COLLECTION/countries/AFR/RWA/RWAW0043.htm"),
     }
 );
 //#endregion

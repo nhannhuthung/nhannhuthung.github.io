@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "114 \u00D7 60 mm",
+        reference: refLink("P-719Kb", "https://banknote.ws/COLLECTION/countries/AFR/WAS/WAS0719K2.htm#2013"),
     }
 );
 //#endregion

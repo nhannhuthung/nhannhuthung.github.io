@@ -87,11 +87,14 @@ const COUNTRIES = {
     "dominican-republic": { en: "Dominican Republic", vi: "Cộng Hòa Dominica", region: "americas", sub: "caribbean" },
     "honduras": { en: "Honduras", vi: "Honduras", region: "americas", sub: "central-america", also: ["republic of honduras", "cộng hòa honduras"] },
     "mexico": { en: "Mexico", vi: "Mexico", region: "americas", sub: "north-america", also: ["united mexican states", "méxico", "hợp chúng quốc méxico", "mê hi cô"] },
+    "netherlands-antilles": { en: "Netherlands Antilles", vi: "Antilles Hà Lan", region: "americas", sub: "caribbean", also: ["dutch antilles", "antille thuộc hà lan", "quần đảo antille thuộc hà lan"]},
     "uruguay": { en: "Uruguay", vi: "Uruguay", region: "americas", sub: "south-america", also: ["oriental republic of uruguay", "cộng hòa đông uruguay"] },
     "usa": { en: "United States", vi: "Hoa Kỳ", region: "americas", sub: "north-america", also: ["usa", "united states of america", "america", "mỹ", "mĩ", "hoa kì", "hợp chủng quốc hoa kì", "hợp chủng quốc hoa kỳ"] },
     "venezuela": { en: "Venezuela", vi: "Venezuela", region: "americas", sub: "south-america", also: ["bolivarian republic of venezuela"] },
+
     // ---- Africa ----
-    "drc": { en: "Democratic Republic of the Congo", vi: "Cộng Hòa Dân Chủ Congo", short_en: "DR Congo", short_vi: "CH Congo", region: "africa", sub: "central-africa", also: ["drc", "democratic republic of congo", "dr congo", "congo"] },
+    "djibouti": { en: "Djibouti", vi: "Djibouti", region: "africa", sub: "east-africa", also: ["republic of djibouti", "cộng hòa djibouti"]},
+    "drc": { en: "Democratic Republic Of The Congo", vi: "Cộng Hòa Dân Chủ Congo", short_en: "DR Congo", short_vi: "CH Congo", region: "africa", sub: "central-africa", also: ["drc", "democratic republic of congo", "dr congo", "congo"] },
     "egypt": { en: "Egypt", vi: "Ai Cập", region: "africa", sub: "north-africa", also: ["arab republic of egypt"] },
     "ethiopia": { en: "Ethiopia", vi: "Ethiopia", region: "africa", sub: "east-africa", also: ["federal democratic republic of ethiopia"] },
     "ghana": { en: "Ghana", vi: "Ghana", region: "africa", sub: "west-africa", also: ["republic of ghana"] },
@@ -104,6 +107,7 @@ const COUNTRIES = {
     "somalia": { en: "Somalia", vi: "Somalia", region: "africa", sub: "east-africa", also: ["federal republic of somalia"] },
     "uemoa": { en: "West African Economic And Monetary Union", vi: "Liên Minh Kinh Tế Và Tiền Tệ Tây Phi", short_en: "WAEMU", short_vi: "UEMOA", region: "africa", sub: "west-africa", also: ["uemoa", "waemu", "west africa, western africa", "tây phi"] },
     "zambia": { en: "Zambia", vi: "Zambia", region: "africa", sub: "southern-africa", also: ["republic of zambia", "dăm bi a"] },
+
     // ---- Europe ----
     "belarus": { en: "Belarus", vi: "Belarus", region: "europe", sub: "eastern-europe", also: ["republic of belarus", "bê la rút"] },
     "croatia": { en: "Croatia", vi: "Croatia", region: "europe", sub: "southern-europe", also: ["republic of croatia"] },
@@ -114,6 +118,7 @@ const COUNTRIES = {
     "italy": { en: "Italy", vi: "Ý", region: "europe", sub: "southern-europe" },
     "moldova": { en: "Moldova", vi: "Moldova", region: "europe", sub: "eastern-europe", also: ["republic of moldova"] },
     "netherlands": { en: "Netherlands", vi: "Hà Lan", region: "europe", sub: "western-europe", also: ["kingdom of the netherlands", "vương quốc hà lan"] },
+    "north-macedonia": { en: "North Macedonia", vi: "Bắc Macedonia", region: "europe", sub: "southern-europe", also: ["republic of north macedonia", "cộng hòa bắc macedonia"] },
     "norway": { en: "Norway", vi: "Na Uy", region: "europe", sub: "northern-europe", also: ["kingdom of norway"] },
     "russia": { en: "Russia", vi: "Nga", region: "europe", sub: "eastern-europe", also: ["russian federation"] },
     "scotland": { en: "Scotland", vi: "Scotland", region: "europe", sub: "northern-europe", also: ["kingdom of scotland"] },
@@ -123,14 +128,15 @@ const COUNTRIES = {
     "transnistria": { en: "Transnistria", vi: "Transnistria", region: "europe", sub: "eastern-europe" },
     "ukraine": { en: "Ukraine", vi: "Ukraine", region: "europe", sub: "eastern-europe" },
     "yugoslavia": { en: "Yugoslavia", vi: "Nam Tư", region: "europe", sub: "southern-europe" },
+
     // ---- Asia ----
     "bangladesh": { en: "Bangladesh", vi: "Bangladesh", region: "asia", sub: "south-asia", also: ["people's republic of bangladesh", "băng la đét"] },
     "bhutan": { en: "Bhutan", vi: "Bhutan", region: "asia", sub: "south-asia", also: ["kingdom of bhutan", "bu tan"] },
     "cambodia": { en: "Cambodia", vi: "Campuchia", region: "asia", sub: "south-east-asia", also: ["kingdom of cambodia", "cam pu chia"] },
     "china": { en: "China", vi: "Trung Quốc", region: "asia", sub: "east-asia", also: ["people's republic of china", "trung"] },
+    "french-indochina": { en: "French Indochina", vi: "Liên Bang Đông Dương", region: "asia", sub: "south-east-asia", also: ["french indochina", "indochina", "indochinese peninsula", "mainland southeast asia", "msea", "đông dương", "bán đảo ấn trung", "bán đảo hoa ấn", "đông nam á lục địa", "đông dương thuộc pháp"] },
     "hong-kong": { en: "Hong Kong", vi: "Hồng Kông", region: "asia", sub: "east-asia" },
     "india": { en: "India", vi: "Ấn Độ", region: "asia", sub: "south-asia", also: ["republic of india", "ấn"] },
-    "indochinese-union": { en: "Indochinese Union", vi: "Liên Bang Đông Dương", region: "asia", sub: "south-east-asia", also: ["french indochina", "indochina", "indochinese peninsula", "mainland southeast asia", "msea", "đông dương", "bán đảo ấn trung", "bán đảo hoa ấn", "đông nam á lục địa", "đông dương thuộc pháp"] },
     "indonesia": { en: "Indonesia", vi: "Indonesia", region: "asia", sub: "south-east-asia", also: ["indo", "republic of indonesia"] },
     "iran": { en: "Iran", vi: "Iran", region: "asia", sub: "mid-east-asia", also: ["islamic republic of iran"] },
     "israel": { en: "Israel", vi: "Israel", region: "asia", sub: "mid-east-asia", also: ["state of israel"] },
@@ -160,11 +166,15 @@ const COUNTRIES = {
     "uae": { en: "United Arab Emirates", vi: "Các Tiểu Vương Quốc Ả Rập Thống Nhất", region: "asia", sub: "mid-east-asia", also: ["uae", "emirates"] },
     "uzbekistan": { en: "Uzbekistan", vi: "Uzbekistan", region: "asia", sub: "central-asia", also: ["republic of uzbekistan"] },
     "viet-nam": { en: "Viet Nam", vi: "Việt Nam", region: "asia", sub: "south-east-asia", also: ["vietnam", "socialist republic of vietnam", "cộng hòa xã hội chủ nghĩa việt nam"] },
+
     // ---- Oceania ----
     "australia": { en: "Australia", vi: "Úc", region: "oceania", sub: null, also: ["commonwealth of australia"] },
+    "cook-islands": { en: "Cook Islands", vi: "Quần Đảo Cook", region: "oceania", sub: "polynesia" },
     "new-zealand": { en: "New Zealand", vi: "New Zealand", region: "oceania", sub: "polynesia" },
+
     // ---- Arctic ----
     "arctic-territories": { en: "Arctic Territories", vi: "Lãnh Thổ Bắc Cực", region: "arctic", sub: null, also: ["các lãnh thổ bắc cực"] },
+
     // ---- Antarctica ----
     "kerguelen-islands": { en: "Kerguelen Islands", vi: "Quần Đảo Kerguelen", region: "antartica", sub: null, also: ["kerguelen"] },
 };

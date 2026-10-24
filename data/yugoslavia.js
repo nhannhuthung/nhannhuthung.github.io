@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "159 \u00D7 76 mm",
+        reference: refLink("P-119", "https://banknote.ws/COLLECTION/countries/EUR/YUG/YUG0119.htm"),
     }
 );
 //#endregion
@@ -90,6 +91,7 @@ slideshowInfo.push(
             vi: "Jovan Cvijić (1865-1927)"
         },
         size: "139 \u00D7 66 mm",
+        reference: refLink("P-134", "https://banknote.ws/COLLECTION/countries/EUR/YUG/YUG0134.htm"),
     }
 );
 //#endregion
@@ -124,6 +126,7 @@ slideshowInfo.push(
             vi: "Josif Pančić (1814-1888)"
         },
         size: "116 \u00D7 55 mm",
+        reference: refLink("P-138", "https://banknote.ws/COLLECTION/countries/EUR/YUG/YUG0138.htm"),
     }
 );
 //#endregion
@@ -158,6 +161,7 @@ slideshowInfo.push(
             vi: "Nikola Tesla (1856-1943)"
         },
         size: "131 \u00D7 62 mm",
+        reference: refLink("P-148", "https://banknote.ws/COLLECTION/countries/EUR/YUG/YUG0148.htm"),
     }
 );
 //#endregion

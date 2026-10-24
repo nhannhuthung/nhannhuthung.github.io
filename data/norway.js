@@ -62,6 +62,7 @@ slideshowInfo.push(
             vi: "Peter Christen Asbjørnsen (1812-1885)" 
         },
         size: "128 \u00D7 60 mm",
+        reference: refLink("P-46c", "https://banknote.ws/COLLECTION/countries/EUR/NOR/NOR0046.htm#46c"),
     }
 );
 //#endregion
@@ -92,11 +93,11 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "133 \u00D7 70 mm",
+        reference: refLink("P-54", "https://banknote.ws/COLLECTION/countries/EUR/NOR/NOR0054.htm"),
         note: {
             en: `2017\'s top 22 banknotes by ${ibnsLink}`,
             vi: `Top 22 tờ tiền của năm 2017 theo ${ibnsLink}`
         },
-        new: true,
     }
 );
 //#endregion
@@ -127,6 +128,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "140 \u00D7 70 mm",
+        reference: refLink("P-55", "https://banknote.ws/COLLECTION/countries/EUR/NOR/NOR0055.htm"),
     }
 );
 //#endregion
@@ -157,11 +159,11 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "147 \u00D7 70 mm",
+        reference: refLink("P-56", "https://banknote.ws/COLLECTION/countries/EUR/NOR/NOR0056.htm"),
         note: { 
             en: `2018\'s top 16 banknotes by ${ibnsLink}`, 
             vi: `Top 16 tờ tiền năm 2018 theo ${ibnsLink}`
         },
-        new: true,
     }
 );
 //#endregion

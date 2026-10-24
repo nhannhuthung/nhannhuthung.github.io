@@ -61,11 +61,11 @@ slideshowInfo.push(
             vi: "Edmund Hillary (1919-2008)" 
         },
         size: "135 \u00D7 66 mm",
+        reference: refLink("P-191 2015", "https://banknote.ws/COLLECTION/countries/AUS/NZL/NZL0191.htm"),
         note: {
             en: `Banknote of 2015 by ${ibnsLink}`,
             vi: `Tờ tiền của năm 2015 theo ${ibnsLink}`
         },
-        new: true,
     }
 );
 //#endregion

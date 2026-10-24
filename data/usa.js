@@ -1,6 +1,6 @@
 const translations = {
     heading: {
-        en: "United States of America",
+        en: "United States Of America",
         vi: "Hợp Chúng Quốc Hoa Kỳ"
     }
 };
@@ -26,7 +26,7 @@ const ibnsLink = `<a href="https://www.theibns.org/joomla/index.php?option=com_c
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "9 8 7 6 5 4 3 2 1";
+const layout = "9 8 | 7 | 6 | 5 | 4 3 | 2 | 1";
 
 const images = [null];
 const slideshowInfo = [null];
@@ -57,6 +57,7 @@ slideshowInfo.push(
             vi: "George Washington (1732-1799)" 
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-537", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0537.htm"),
     }
 );
 //#endregion
@@ -87,6 +88,7 @@ slideshowInfo.push(
             vi: "Thomas Jefferson (1743-1826)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-538", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0538.htm"),
     }
 );
 //#endregion
@@ -117,6 +119,7 @@ slideshowInfo.push(
             vi: "Abraham Lincoln (1809-1865)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-481b", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0481.htm#481b"),
     }
 );
 //#endregion
@@ -147,6 +150,7 @@ slideshowInfo.push(
             vi: "Abraham Lincoln (1809-1865)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-539", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0539.htm"),
     }
 );
 //#endregion
@@ -177,6 +181,7 @@ slideshowInfo.push(
             vi: "Alexander Hamilton (1757-1804)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-540", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0540.htm"),
     }
 );
 //#endregion
@@ -207,6 +212,7 @@ slideshowInfo.push(
             vi: "Andrew Jackson (1767-1845)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-541", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0541.htm"),
     }
 );
 //#endregion
@@ -237,6 +243,7 @@ slideshowInfo.push(
             vi: "Ulysses S. Grant (1822-1885)"
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-542", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0542.htm"),
     }
 );
 //#endregion
@@ -267,6 +274,7 @@ slideshowInfo.push(
             vi: "Benjamin Franklin (1706-1790)" 
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-503", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0503.htm"),
     }
 );
 //#endregion
@@ -297,6 +305,7 @@ slideshowInfo.push(
             vi: "Benjamin Franklin (1706-1790)" 
         },
         size: "156 \u00D7 67 mm",
+        reference: refLink("P-536", "https://banknote.ws/COLLECTION/countries/AME/USA/USA-FEDRES/USA0536.htm"),
         note: {
             en: `2013\'s top 12 banknotes by ${ibnsLink}`,
             vi: `Top 12 tờ tiền của năm 2013 theo ${ibnsLink}`

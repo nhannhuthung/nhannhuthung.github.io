@@ -56,6 +56,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "45 \u00D7 90 mm",
+        reference: refLink("P-49", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0049.htm"),
     }
 );
 //#endregion
@@ -85,6 +86,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "45 \u00D7 90 mm",
+        reference: refLink("P-50", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0050.htm"),
     }
 );
 //#endregion
@@ -114,6 +116,7 @@ slideshowInfo.push(
             vi: standOutType.vi 
         },
         size: "45 \u00D7 90 mm",
+        reference: refLink("P-51", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0051.htm"),
     }
 );
 //#endregion
@@ -143,6 +146,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "115 \u00D7 57 mm",
+        reference: refLink("P-52", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0052.htm"),
     }
 );
 //#endregion
@@ -177,6 +181,7 @@ slideshowInfo.push(
             vi: "Damdin Sükhbaatar (1893-1923)" 
         },
         size: "125 \u00D7 61 mm",
+        reference: refLink("P-62i", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0062.htm#2017"),
     }
 );
 //#endregion
@@ -211,6 +216,7 @@ slideshowInfo.push(
             vi: "Damdin Sükhbaatar (1893-1923)" 
         },
         size: "130 \u00D7 64 mm",
+        reference: refLink("P-63i", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0063.htm#2017"),
     }
 );
 //#endregion
@@ -245,6 +251,7 @@ slideshowInfo.push(
             vi: "Damdin Sükhbaatar (1893-1923)" 
         },
         size: "135 \u00D7 66 mm",
+        reference: refLink("P-64d", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0064.htm#2016"),
     }
 );
 //#endregion
@@ -279,6 +286,7 @@ slideshowInfo.push(
             vi: "Damdin Sükhbaatar (1893-1923)" 
         },
         size: "140 \u00D7 68 mm",
+        reference: refLink("P-65c", "https://banknote.ws/COLLECTION/countries/ASI/MON/MON0065.htm#2014"),
     }
 );
 //#endregion

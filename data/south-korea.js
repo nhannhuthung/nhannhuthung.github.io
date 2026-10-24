@@ -62,6 +62,7 @@ slideshowInfo.push(
             vi: "Lý Hoảng (1501-1570)" 
         },
         size: "136 \u00D7 68 mm",
+        reference: refLink("P-54", "https://banknote.ws/COLLECTION/countries/ASI/KOS/KOS0054.htm"),
     }
 );
 //#endregion
@@ -95,6 +96,7 @@ slideshowInfo.push(
             vi: "Lý Nhị (1536-1584)" 
         },
         size: "142 \u00D7 68 mm",
+        reference: refLink("P-55", "https://banknote.ws/COLLECTION/countries/ASI/KOS/KOS0055.htm"),
     }
 );
 //#endregion
@@ -128,6 +130,7 @@ slideshowInfo.push(
             vi: "Triều Tiên Thế Tông (1397-1450)" 
         },
         size: "148 \u00D7 68 mm",
+        reference: refLink("P-56", "https://banknote.ws/COLLECTION/countries/ASI/KOS/KOS0056.htm"),
     }
 );
 //#endregion
@@ -161,6 +164,7 @@ slideshowInfo.push(
             vi: "Thân Sư Nhâm Đường (1504-1551)" 
         },
         size: "154 \u00D7 68 mm",
+        reference: refLink("P-57", "https://banknote.ws/COLLECTION/countries/ASI/KOS/KOS0057.htm"),
         note: { 
             en: `2009\'s top 9 banknotes by ${ibnsLink}`, 
             vi: `Top 9 tờ tiền năm 2009 theo ${ibnsLink}` 
@@ -189,11 +193,13 @@ slideshowInfo.push(
             en: issuer.en, 
             vi: issuer.vi 
         },
+        year: "2018",
         type: { 
             en: standInType.en, 
             vi: standInType.vi 
         },
         size: "140 \u00D7 75 mm",
+        reference: refLink("P-58", "https://banknote.ws/COLLECTION/countries/ASI/KOS/KOS0058.htm"),
     }
 );
 //#endregion

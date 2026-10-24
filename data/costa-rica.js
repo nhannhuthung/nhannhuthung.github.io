@@ -62,6 +62,7 @@ slideshowInfo.push(
             vi: "Braulio Carrillo Colina (1800-1845)" 
         },
         size: "125 \u00D7 67 mm",
+        reference: refLink("P-W280", "https://banknote.ws/COLLECTION/countries/AME/CRI/CRIW2019-01000.htm"),
     }
 );
 //#endregion
@@ -96,6 +97,7 @@ slideshowInfo.push(
             en: "Mauro Fernández Acuña (1843-1905)", 
             vi: "Mauro Fernández Acuña (1843-1905)" 
         },
+        reference: refLink("P-W281 2018", "https://banknote.ws/COLLECTION/countries/AME/CRI/CRIW2018-02000.htm"),
     }
 );
 //#endregion
@@ -130,6 +132,7 @@ slideshowInfo.push(
             en: "Alfredo González Flores (1877-1962)", 
             vi: "Alfredo González Flores (1877-1962)" 
         },
+        reference: refLink("P-W282", "https://banknote.ws/COLLECTION/countries/AME/CRI/CRIW2018-05000.htm"),
         note: { 
             en: `2020\'s top 24 banknotes by ${ibnsLink}`, 
             vi: `Top 24 tờ tiền năm 2020 theo ${ibnsLink}`
@@ -168,6 +171,7 @@ slideshowInfo.push(
             en: "José Figueres Ferrer (1906-1990)", 
             vi: "José Figueres Ferrer (1906-1990)" 
         },
+        reference: refLink("P-W283 2019", "https://banknote.ws/COLLECTION/countries/AME/CRI/CRIW2019-10000.htm"),
         note: { 
             en: `2021\'s top 20 banknotes by ${ibnsLink}`, 
             vi: `Top 20 tờ tiền năm 2021 theo ${ibnsLink}`

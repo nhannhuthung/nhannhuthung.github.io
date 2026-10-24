@@ -65,6 +65,7 @@ slideshowInfo.push(
             }
         ],
         size: "142 \u00D7 68 mm",
+        reference: refLink("P-224b", "https://banknote.ws/COLLECTION/countries/ASI/TUR/TUR0224.htm#224-2"),
     }
 );
 //#endregion
@@ -104,6 +105,7 @@ slideshowInfo.push(
             }
         ],
         size: "130 \u00D7 64 mm",
+        reference: refLink("P-222[f]", "https://banknote.ws/COLLECTION/countries/ASI/TUR/TUR0222.htm#222f"),
     }
 );
 //#endregion

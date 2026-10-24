@@ -60,6 +60,7 @@ slideshowInfo.push(
             vi: "Inkosi Ya Makhosi M'mbelwa II (1860-1959)" 
         },
         size: "128 \u00D7 64 mm",
+        reference: refLink("P-57b", "https://banknote.ws/COLLECTION/countries/AFR/MLW/MLW0057.htm#6-2012"),
     }
 );
 //#endregion

@@ -55,7 +55,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "140 \u00D7 65 mm",
-        new: true,
+        reference: refLink("P-243Ab", "https://banknote.ws/COLLECTION/countries/AME/BRA/BRA0243A2.htm#243Ab"),
     }
 );
 //#endregion
@@ -85,6 +85,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "121 \u00D7 65 mm",
+        reference: refLink("P-252[f]", "https://banknote.ws/COLLECTION/countries/AME/BRA/BRA0252.htm#252e"),
     }
 );
 //#endregion
@@ -114,6 +115,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "135 \u00D7 65 mm",
+        reference: refLink("P-254[f]", "https://banknote.ws/COLLECTION/countries/AME/BRA/BRA0254.htm#254f"),
     }
 );
 //#endregion
@@ -143,6 +145,7 @@ slideshowInfo.push(
             vi: standInType.vi 
         },
         size: "149 \u00D7 70 mm",
+        reference: refLink("P-256b", "https://banknote.ws/COLLECTION/countries/AME/BRA/BRA0256.htm#256b"),
     }
 );
 //#endregion
