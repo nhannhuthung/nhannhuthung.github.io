@@ -25,7 +25,7 @@ const standInType = { en: "Circulating Standard Banknote", vi: "Tiền Tiêu Chu
 //#endregion
 
 // Page order, newest first. "|" draws a solid line between banknotes, ":" a dashed one.
-const layout = "2 : 1";
+const layout = "2 | 1";
 
 const images = [null];
 const slideshowInfo = [null];

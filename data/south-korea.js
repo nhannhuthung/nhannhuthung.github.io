@@ -189,6 +189,10 @@ images.push([
 slideshowInfo.push(
     {
         title: currencyInfo("2.000", "2,000", "Won ", "Won"),
+        subtitle: {
+            en: "Olympic Winter Games Pyeong Chang 2018",
+            vi: "Thế Vận Hội Mùa Đông Pyeong Chang 2018"
+        },
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
