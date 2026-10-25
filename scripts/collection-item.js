@@ -578,6 +578,82 @@ function createNavigationButtons() {
     }
 }
 
+//--// phones: swipe sideways on the list to go to the previous / next country //--//
+// Swipe left for the next country, right for the previous one. Only a clear
+// sideways swipe counts, so scrolling the list never changes page, and a
+// label shows where the swipe leads before you let go.
+const SWIPE_DISTANCE = 80;   // px the finger must travel sideways
+const SWIPE_EDGE = 24;       // px at each screen edge left to the phone's own back/forward gesture
+
+function initCountrySwipe() {
+    const area = document.getElementById("main-to-top");
+    if (!area || !window.matchMedia("(pointer: coarse)").matches) return;
+
+    const hint = document.createElement("div");
+    hint.className = "swipe-hint";
+    hint.setAttribute("aria-hidden", "true");
+    document.body.appendChild(hint);
+
+    let startX = 0, startY = 0;
+    let tracking = false;     // a touch that might become a swipe
+    let sideways = null;      // decided after the first few px of movement
+
+    const targetFor = dx => {
+        const nav = getPageNavigation();
+        return dx < 0 ? nav.next : nav.prev;
+    };
+    const hideHint = () => { hint.style.opacity = "0"; };
+
+    area.addEventListener("touchstart", event => {
+        tracking = false;
+        // the full-window viewer has its own swipe, between a note's sides
+        if (viewerNote !== null || event.touches.length !== 1) return;
+        const touch = event.touches[0];
+        if (touch.clientX < SWIPE_EDGE || touch.clientX > window.innerWidth - SWIPE_EDGE) return;
+        startX = touch.clientX;
+        startY = touch.clientY;
+        sideways = null;
+        tracking = true;
+    }, { passive: true });
+
+    area.addEventListener("touchmove", event => {
+        if (!tracking) return;
+        const dx = event.touches[0].clientX - startX;
+        const dy = event.touches[0].clientY - startY;
+        if (sideways === null) {
+            if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+            sideways = Math.abs(dx) > Math.abs(dy) * 1.5;
+        }
+        if (!sideways) { tracking = false; return; }
+
+        const target = targetFor(dx);
+        if (!target) { hideHint(); return; }
+        const progress = Math.min(Math.abs(dx) / SWIPE_DISTANCE, 1);
+        const name = target['short_' + currentLang] || target[currentLang];
+        hint.textContent = dx < 0 ? `${name} →` : `← ${name}`;
+        hint.className = `swipe-hint ${dx < 0 ? "next" : "prev"}${progress === 1 ? " ready" : ""}`;
+        hint.style.opacity = String(progress);
+        // slides in from its own side as the finger moves
+        hint.style.setProperty("--hint-shift", `${(1 - progress) * (dx < 0 ? 40 : -40)}px`);
+    }, { passive: true });
+
+    area.addEventListener("touchend", event => {
+        if (!tracking) return;
+        tracking = false;
+        hideHint();
+        const dx = event.changedTouches[0].clientX - startX;
+        const dy = event.changedTouches[0].clientY - startY;
+        if (!sideways || Math.abs(dx) < SWIPE_DISTANCE || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+        const target = targetFor(dx);
+        if (target) window.location.href = target.link;
+    });
+
+    area.addEventListener("touchcancel", () => {
+        tracking = false;
+        hideHint();
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     currentLang = localStorage.getItem('language') || 'en';
 
@@ -587,6 +663,7 @@ document.addEventListener("DOMContentLoaded", function () {
     insertSidebarHTML('SideBarCollection');
     createNavigationButtons();
     initNotes();
+    initCountrySwipe();
 
     const mainContent = document.getElementById('main-to-top');
     const backToTopButton = document.getElementById('back-to-top');

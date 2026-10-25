@@ -671,6 +671,34 @@ img {
     .viewer-arrow.next { right: 6px; }
 }
 
+/* ---- phones: label that slides in while swiping to another country ----
+   It follows the finger, and turns dark once letting go would change page. */
+.swipe-hint {
+    position: fixed;
+    top: 50%;
+    z-index: 2000;
+    padding: 10px 16px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--sheet);
+    color: var(--ink);
+    box-shadow: 0 4px 14px var(--shadow);
+    font-size: 15px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(var(--hint-shift, 0px), -50%);
+}
+
+.swipe-hint.next { right: 12px; }
+.swipe-hint.prev { left: 12px; }
+
+.swipe-hint.ready {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .note-row,
     .note-chev,
@@ -904,8 +932,10 @@ img {
         color: var(--a5);
     }
 
+    /* `left` comes from the desktop rule; setting `right` as well stretched
+       the bar into an invisible strip across the screen that caught taps */
     .page-navigation {
-        right: 10px;
+        right: auto;
         bottom: 22px;
         gap: 8px;
         flex-direction: row !important;
@@ -913,7 +943,7 @@ img {
 
     #back-to-top {
         bottom: 3%;
-        right: 18%;
+        right: 3%;
         font-size: 16px;
         padding: 7px 11px;
         border-radius: 6px;
@@ -926,6 +956,15 @@ img {
     }
 
     .nav-button .country-name {
+        display: none;
+    }
+}
+
+/* Phones swipe between countries instead (initCountrySwipe in
+   collection-item.js runs on touch screens), so the buttons go. A narrow
+   desktop window has no swipe, so it keeps them. */
+@media (max-width: 700px) and (pointer: coarse) {
+    .page-navigation {
         display: none;
     }
 }
