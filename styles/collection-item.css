@@ -834,7 +834,19 @@ img {
     box-shadow: 0 2px 5px var(--shadow);
     font-family: inherit;
     width: auto !important;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* the chevron beside the country name, on the buttons and the swipe label */
+.nav-icon {
+    font-size: 0.95em;
+    opacity: 0.7;
+}
+
+.swipe-hint .nav-icon {
+    margin: 0 6px;
 }
 
 .nav-button:hover {

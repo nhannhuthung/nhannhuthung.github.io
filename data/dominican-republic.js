@@ -129,7 +129,6 @@ slideshowInfo.push(
         },
         size: "158 \u00D7 67 mm",
         reference: refLink("P-191 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0191.htm#2024"),
-        new: true,
     }
 );
 //#endregion
@@ -165,7 +164,6 @@ slideshowInfo.push(
         },
         size: "158 \u00D7 67 mm",
         reference: refLink("P-192 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0192.htm#2024"),
-        new: true,
     }
 );
 //#endregion
@@ -197,7 +195,6 @@ slideshowInfo.push(
         },
         size: "158 \u00D7 67 mm",
         reference: refLink("P-193 2025", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0193.htm#2025"),
-        new: true,
     }
 );
 //#endregion
@@ -237,7 +234,6 @@ slideshowInfo.push(
             vi: `Top 12 tờ tiền năm 2014 theo ${ibnsLink}`
         },
         reference: refLink("P-194 2024", "https://banknote.ws/COLLECTION/countries/AME/DOR/DOR0194.htm#2024"),
-        new: true,
     }
 );
 //#endregion

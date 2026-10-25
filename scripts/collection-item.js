@@ -552,6 +552,11 @@ function getPageNavigation() {
     return { prev: at(currentIndex - 1), next: at(currentIndex + 1) };
 }
 
+// slim chevrons (Font Awesome, like the search icon) for the previous / next
+// country buttons and the label shown while swiping between countries
+const NAV_ICON_PREV = `<i class="fa-solid fa-angle-left nav-icon" aria-hidden="true"></i>`;
+const NAV_ICON_NEXT = `<i class="fa-solid fa-angle-right nav-icon" aria-hidden="true"></i>`;
+
 function createNavigationButtons() {
     const nav = getPageNavigation();
     const navContainer = document.getElementById('page-navigation');
@@ -563,7 +568,8 @@ function createNavigationButtons() {
         const prevBtn = document.createElement('button');
         prevBtn.className = 'nav-button prev-button';
         const prevName = nav.prev['short_' + currentLang] || nav.prev[currentLang];
-        prevBtn.innerHTML = `← <span class="country-name">${prevName}</span>`;
+        prevBtn.innerHTML = `${NAV_ICON_PREV}<span class="country-name">${prevName}</span>`;
+        prevBtn.setAttribute('aria-label', prevName);
         prevBtn.onclick = () => window.location.href = nav.prev.link;
         navContainer.appendChild(prevBtn);
     }
@@ -572,7 +578,8 @@ function createNavigationButtons() {
         const nextBtn = document.createElement('button');
         nextBtn.className = 'nav-button next-button';
         const nextName = nav.next['short_' + currentLang] || nav.next[currentLang];
-        nextBtn.innerHTML = `<span class="country-name">${nextName}</span> →`;
+        nextBtn.innerHTML = `<span class="country-name">${nextName}</span>${NAV_ICON_NEXT}`;
+        nextBtn.setAttribute('aria-label', nextName);
         nextBtn.onclick = () => window.location.href = nav.next.link;
         navContainer.appendChild(nextBtn);
     }
@@ -630,7 +637,7 @@ function initCountrySwipe() {
         if (!target) { hideHint(); return; }
         const progress = Math.min(Math.abs(dx) / SWIPE_DISTANCE, 1);
         const name = target['short_' + currentLang] || target[currentLang];
-        hint.textContent = dx < 0 ? `${name} →` : `← ${name}`;
+        hint.innerHTML = dx < 0 ? `${name}${NAV_ICON_NEXT}` : `${NAV_ICON_PREV}${name}`;
         hint.className = `swipe-hint ${dx < 0 ? "next" : "prev"}${progress === 1 ? " ready" : ""}`;
         hint.style.opacity = String(progress);
         // slides in from its own side as the finger moves
