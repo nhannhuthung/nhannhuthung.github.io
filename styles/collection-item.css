@@ -395,12 +395,14 @@ img {
     --long: min(460px, 44cqw);
 }
 
+/* photos line up along their top edge; centring would also count each
+   caption, so a longer caption would push its photo out of line */
 .sleeve-pair {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* the photo sets the frame's width; a longer caption wraps underneath

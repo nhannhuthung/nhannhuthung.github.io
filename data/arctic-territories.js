@@ -54,10 +54,13 @@ slideshowInfo.push(
             en: fanType.en, 
             vi: fanType.vi 
         },
-        figure: {
-            en: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)", 
-            vi: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)" 
-        },
+        figure: [
+            null,
+            {
+                en: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)",
+                vi: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)"
+            }
+        ],
         size: "160 \u00D7 80 mm",
     }
 );
@@ -87,10 +90,13 @@ slideshowInfo.push(
             en: fanType.en, 
             vi: fanType.vi 
         },
-        figure: {
-            en: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)", 
-            vi: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)" 
-        },
+        figure: [
+            null,
+            {
+                en: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)",
+                vi: "Fridtjof Wedel-Jarlsberg Nansen (1861-1930)"
+            }
+        ],
         size: "160 \u00D7 80 mm",
     }
 );
@@ -149,10 +155,13 @@ slideshowInfo.push(
             en: fanType.en, 
             vi: fanType.vi 
         },
-        figure: {
-            en: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-            vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-        },
+        figure: [
+            null,
+            {
+                en: "Roald Engelbregt Gravning Amundsen (1872-1928?)",
+                vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)"
+            }
+        ],
         size: "160 \u00D7 80 mm",
     }
 );
@@ -211,10 +220,13 @@ slideshowInfo.push(
             en: fanType.en, 
             vi: fanType.vi 
         },
-        figure: {
-            en: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-            vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-        },
+        figure: [
+            null,
+            {
+                en: "Roald Engelbregt Gravning Amundsen (1872-1928?)",
+                vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)"
+            }
+        ],
         size: "160 \u00D7 80 mm",
     }
 );
@@ -273,10 +285,13 @@ slideshowInfo.push(
             en: fanType.en, 
             vi: fanType.vi 
         },
-        figure: {
-            en: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-            vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)", 
-        },
+        figure: [
+            null,
+            {
+                en: "Roald Engelbregt Gravning Amundsen (1872-1928?)",
+                vi: "Roald Engelbregt Gravning Amundsen (1872-1928?)"
+            }
+        ],
         size: "160 \u00D7 80 mm",
     }
 );

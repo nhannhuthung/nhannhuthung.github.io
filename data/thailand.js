@@ -372,8 +372,8 @@ slideshowInfo.push(
             en: "Rama IX (1927-2016), Sirikit (1932-2025)", 
             vi: "Rama IX (1927-2016), Sirikit (1932-2025)"
         },
-        size: "162 \u00D7 80 mm",
-        reference: refLink("P-125", "https://banknote.ws/COLLECTION/countries/ASI/THL/THL0125.htm"),
+        size: "89 \u00D7 162 mm",
+        reference: refLink("P-128", "https://banknote.ws/COLLECTION/countries/ASI/THL/THL0128.htm"),
         new: true,
     }
 );
