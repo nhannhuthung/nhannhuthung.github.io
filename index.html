@@ -11,8 +11,10 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nhannhuthung.github.io/">
     <meta property="og:image" content="https://nhannhuthung.github.io/images/logo/icon-192.png">
-    <meta property="og:description" content="Nhan Nhựt Hưng - Howl Nhan">
-    <meta name="description" content="Nhan Nhựt Hưng - Howl Nhan">
+    <!-- A description that only repeats the title is usually ignored, and Google then
+         builds the snippet from page text instead (here, the scattered HOWL letters). -->
+    <meta property="og:description" content="Nhan Nhựt Hưng (Howl Nhan): a personal collection of banknotes and coins from around the world. Bộ sưu tập tiền giấy và tiền xu của Nhan Nhựt Hưng.">
+    <meta name="description" content="Nhan Nhựt Hưng (Howl Nhan): a personal collection of banknotes and coins from around the world. Bộ sưu tập tiền giấy và tiền xu của Nhan Nhựt Hưng.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://nhannhuthung.github.io/">
 
@@ -27,7 +29,7 @@
           "@id": "https://nhannhuthung.github.io/#website",
           "name": "Nhan Nhựt Hưng - Howl Nhan",
           "alternateName": [
-            "Howl Nhan", "Howl", "Nhan Nhut Hung", "Nhựt Hưng Nhan", "Nhut Hung Nhan", "Hưng Nhựt Nhan", "Hung Nhut Nhan", "Nhựt Hưng", "Hưng", "Harry", "Harry Nhan, H Nhan"
+            "Nhan Nhựt Hưng", "Howl Nhan", "Nhan Nhut Hung", "nhannhuthung"
           ],
           "url": "https://nhannhuthung.github.io/",
           "about": { "@id": "https://nhannhuthung.github.io/#person" }
@@ -35,13 +37,20 @@
         {
           "@type": "Person",
           "@id": "https://nhannhuthung.github.io/#person",
-          "name": "Nhan Nhựt Hưng - Howl Nhan",
+          "name": "Nhan Nhựt Hưng",
           "alternateName": [
-            "Howl Nhan", "Howl", "Nhan Nhut Hung", "Nhựt Hưng Nhan", "Nhut Hung Nhan", "Hưng Nhựt Nhan", "Hung Nhut Nhan", "Nhựt Hưng", "Hưng", "Harry", "Harry Nhan, H Nhan"
+            "Howl Nhan", "Howl", "Nhan Nhut Hung", "Nhựt Hưng Nhan", "Nhut Hung Nhan", "Hưng Nhựt Nhan", "Hung Nhut Nhan", "Nhựt Hưng", "Hưng", "Harry", "Harry Nhan", "H Nhan"
           ],
           "url": "https://nhannhuthung.github.io/",
           "image": "https://nhannhuthung.github.io/images/logo/icon-192.png",
-          "description": "Collector of banknotes and coins from around the world."
+          "description": "Collector of banknotes and coins from around the world.",
+          "sameAs": [
+            "https://www.facebook.com/nhannhuthung",
+            "https://www.instagram.com/nnh.v.nov/",
+            "https://www.youtube.com/@NhanNhutHung",
+            "https://www.linkedin.com/in/howlnhan/",
+            "https://github.com/nhannhuthung"
+          ]
         }
       ]
     }
@@ -98,9 +107,11 @@
                  search lays the field across that row, over the links. -->
             <div class="nav-row">
                 <nav class="nav-pos-menu">
-                    <a href="collection.html" id="collection-nav" data-i18n="collection"></a>
-                    <a href="about.html" id="about-nav" data-i18n="about"></a>
-                    <a href="contact.html" id="contact-nav" data-i18n="contact"></a>
+                    <!-- English text in the file so search engines see real link
+                         names; scripts/lang/index.js swaps in the chosen language -->
+                    <a href="collection.html" id="collection-nav" data-i18n="collection">Collection</a>
+                    <a href="about.html" id="about-nav" data-i18n="about">About</a>
+                    <a href="contact.html" id="contact-nav" data-i18n="contact">Contact</a>
                 </nav>
 
                 <!-- Inline SVG rather than the Font Awesome icon the other

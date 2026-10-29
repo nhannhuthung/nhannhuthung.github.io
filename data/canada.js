@@ -157,6 +157,7 @@ slideshowInfo.push(
             en: "Centennial of Canadian Confederation (1867-1967)",
             vi: "Kỷ niệm bách niên Liên bang Canada (1867-1967)"
         },
+        year: "1967",
         issuer: { 
             en: issuer.en, 
             vi: issuer.vi 
